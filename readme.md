@@ -18,6 +18,7 @@ Use this [mockup](#) for development.
 * card's width is 200px
 * use images from [src/images](src/images)
 * change link styles on :hover
+* image's width is 80% of the entire card's width
 * add attribute `data-qa="card"` to the card block
 * add attribute `data-qa="hover"` to the link
 
