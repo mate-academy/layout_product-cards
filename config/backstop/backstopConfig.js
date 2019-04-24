@@ -36,14 +36,14 @@ module.exports = {
     {
       ...basicScenario,
       label: 'test-card-default',
-      selectors: ['[data-qa-card]']
+      selectors: ['[data-qa="card"]']
     },
     {
       ...basicScenario,
       label: 'test-card-hover',
-      hoverSelector: '[data-qa-hover]',
+      hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
-      selectors: ['[data-qa-card]']
+      selectors: ['[data-qa="card"]']
     }
     // define here scenarios for testing
   ],
