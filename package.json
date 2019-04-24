@@ -1,0 +1,56 @@
+{
+  "name": "layout-task-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for layout tasks with visual regression testing",
+  "main": "src/main.js",
+  "scripts": {
+    "css:test": "rimraf ./backstop_data/bitmaps_test && backstop test --config=config/backstop/backstopConfig",
+    "css:reference": "rimraf ./backstop_data/bitmaps_reference && backstop reference --config=config/backstop/backstopConfig",
+    "deploy": "bash ./config/hooks/deploy.sh",
+    "lint": "stylelint src/**/*.css && eslint src/**/*.js && htmllint src/*.html",
+    "start": "http-server ./src -p 8080 -c-1"
+  },
+  "keywords": [],
+  "author": "Mate Academy",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@mate-academy/eslint-config": "^0.0.5",
+    "@mate-academy/stylelint-config": "^0.0.5",
+    "backstopjs": "^4.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "htmllint": "^0.7.3",
+    "htmllint-cli": "0.0.7",
+    "http-server": "^0.11.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "rimraf": "^2.6.3",
+    "stylelint": "^10.0.0"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.css": [
+        "stylelint",
+        "git add"
+      ],
+      "*.js": [
+        "eslint",
+        "git add"
+      ],
+      "*.html": [
+        "htmllint",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/backstop_data/**",
+      "**/report/**"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "git update-index --again",
+      "pre-commit": "lint-staged"
+    }
+  }
+}
