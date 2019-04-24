@@ -4,7 +4,8 @@
 const basicScenario = {
   label: 'test', // name of the test
   url: 'http://localhost:8080',
-  referenceUrl: '', // put here reference to github-pages with ready project
+  referenceUrl:
+    'https://mate-academy.github.io/layout_solutions/product-cards/',
   readyEvent: '',
   readySelector: '',
   delay: 1000,
@@ -32,7 +33,18 @@ module.exports = {
     }
   ],
   scenarios: [
-    { ...basicScenario }
+    {
+      ...basicScenario,
+      label: 'test-card-default',
+      selectors: ['[data-qa-card]']
+    },
+    {
+      ...basicScenario,
+      label: 'test-card-hover',
+      hoverSelector: '[data-qa-hover]',
+      postInteractionWait: 1000,
+      selectors: ['[data-qa-card]']
+    }
     // define here scenarios for testing
   ],
   paths: {
