@@ -26,12 +26,6 @@ Use this [mockup](#) for development.
 Screenshot of the card:
 ![screenshot](./references/card-example.png)
 
-## catalog.html / cards list
-* cards in catalog.html have width 30% of document
-* cards are aligned with next pattern:
-* horizontal distance between cards is not set. It calculates automatically in 
-dependence on screen width.
-
 ---
 **Read the guideline before start**
 
