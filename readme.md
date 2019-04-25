@@ -4,7 +4,11 @@
 Create HTML pages with product card catalog. Understand `flexbox` usage. Create
 HTML layout from the mockup.
 
-Use this [mockup](#) for development.
+Use this [mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1) 
+for development.
+
+If you don't want to see other users cursors you can disable `Multiplayer 
+Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors)
 
 ## Common mistakes
 * Do not use tabs. Use 2 spaces for indentation.
@@ -18,7 +22,7 @@ Use this [mockup](#) for development.
 * card's width is 200px
 * use images from [src/images](src/images)
 * change link styles on :hover
-* image's width is 80% of the entire card's width
+* follow styles from the mock
 * add attribute `data-qa="card"` to the card block
 * add attribute `data-qa="hover"` to the link
 
