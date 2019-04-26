@@ -7,7 +7,7 @@
     "css:test": "rimraf ./backstop_data/bitmaps_test && backstop test --config=config/backstop/backstopConfig",
     "css:reference": "rimraf ./backstop_data/bitmaps_reference && backstop reference --config=config/backstop/backstopConfig",
     "deploy": "bash ./config/hooks/deploy.sh",
-    "lint": "stylelint src/**/*.css && eslint src/**/*.js && htmllint src/*.html",
+    "lint": "stylelint src/**/*.css && eslint src/**/*.js && htmllint --rc ./node_modules/@mate-academy/htmllint-config/.htmllintrc src/*.html",
     "start": "http-server ./src -p 8080 -c-1"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "*",
+    "@mate-academy/htmllint-config": "*",
     "@mate-academy/stylelint-config": "*",
     "backstopjs": "^4.0.3",
     "eslint": "^5.16.0",
@@ -38,7 +39,7 @@
         "git add"
       ],
       "*.html": [
-        "htmllint",
+        "htmllint --rc  ./node_modules/@mate-academy/htmllint-config/.htmllintrc",
         "git add"
       ]
     },
