@@ -1,7 +1,9 @@
 body, html
 {
 	margin: 0;
-	/* font-family: 'Roboto', sans-serif; */
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: normal;
 }
 
 .card 
@@ -13,22 +15,29 @@ body, html
 	border: 1px solid #F3F3F3;
 	box-sizing: border-box;
 	border-radius: 5px;
-	padding: 30px 15px 0 15px;
+	/*padding: 29px 15px 0 15px;*/
 }
 
 .card .preview
 {
 	display: block;
-    width: 160px;
-    margin: 0 auto;
-    height: 134px;
+    width: 158px;
+    margin: 31px auto 46px;
+    height: 132px;
+}
+
+.card .card-content
+{
+	margin: 0px 0 0 15px;
+	display: block;
+	width: 168px;
 }
 
 .card .card-content .title
 {
-	margin: 45px 0 0 0;
+	margin: 0 0 0 0;
 	display: block;
-	font-family: Roboto;
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 12px;
@@ -37,43 +46,36 @@ body, html
 
 .card .card-content .description
 {
-	/* font-family: Roboto; */
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 13px;
-	margin: 6px 0 0 0;
+	margin: 5px 0 0 0;
 }
 
 .card .card-content .stars
 {
 	display: flex;
-	flex-direction: row;
+	/*flex-direction: row;
 	justify-content: flex-start;
-	margin: 0;
-}
-
-.card .card-content .stars .star
-{
-	height: 15px;
-	width: 15px;
-	margin: 0 4px 0 0;
+	margin: 0;*/
 }
 
 .card .card-content .stars .star.last-star
 {
-	margin: 0;
+	/*margin: 0;*/
 }
 
 .card .card-content .count
 {
-	/* font-family: Roboto; */
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 11px;
-	line-height: 15px;
+	line-height: 13px;
 	text-align: right;
-	margin: 0;
+	margin: 1px 0 0;
 }
 
 .card .card-content .stars-row
@@ -92,8 +94,8 @@ body, html
 
 .card .card-content .price-row .price-name
 {	
-	margin: 0;
-	/* font-family: Roboto; */
+	margin: 2px 0px;
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 11px;
@@ -104,7 +106,7 @@ body, html
 .card .card-content .price-row .price
 {
 	margin: 0;
-	/* font-family: Roboto; */
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 16px;
@@ -114,19 +116,19 @@ body, html
 
 .card .button
 {
-	/* font-family: Roboto; */
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 16px;
 	text-align: center;
 	text-transform: uppercase;
 	display: block;
-	padding: 10px;
+	padding: 12px;
 	background: #00ACDC;
 	color: #fff;
 	border-radius: 5px;
-	margin: 20px 0 15px 0;
+	margin: 16px 0 15px 0;
 	border: 1px solid #00ACDC;
 	text-decoration: none;
 }
@@ -135,6 +137,23 @@ body, html
 {
 	color: black;
 	background: white;
-	box-sizing: border-box;	
-	duration
+	box-sizing: border-box;
+}
+
+.star
+{
+	width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    display: inline-block;
+    background: url(images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+}
+
+.star.last-star
+{
+	background: url(images/star.svg);
+	background-repeat: no-repeat;
+    background-position: 1px 2px;
 }
