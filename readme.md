@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://Mykytyi.github.io/repo/)
-- [UPDATE TEST REPORT LINK](https://Mykytyi.github.io/repo/report/html_report/)
+- [UPDATE DEMO LINK](https://Mykytyi.github.io/layout_product-cards/)
+- [UPDATE TEST REPORT LINK](https://Mykytyi.github.io/layout_product-cards/report/html_report/)
