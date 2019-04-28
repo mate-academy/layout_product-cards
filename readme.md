@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://valeraonisko.github.io/layout_task-guideline/)
-- [UPDATE TEST REPORT LINK](https://valeraonisko.github.io/layout_task-guideline/report/html_report/)
+- [UPDATE DEMO LINK](https://valeraonisko.github.io/layout_product-cards/)
+- [UPDATE TEST REPORT LINK](https://valeraonisko.github.io/layout_product-cards/report/html_report/)
