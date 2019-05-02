@@ -1,14 +1,16 @@
-/* No passed !!! */
-
 body {
   margin: 0;
-  font-family: "Roboto", "sans-serif";
+  font-family: "Roboto", sans-serif;
 }
 
-button {
+.link {
+  text-decoration: none;
+}
+
+.buy {
   font-weight: bold;
   font-size: 16px;
-  line-height: 16px;/* identical to box height */
+  line-height: 16px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -21,21 +23,25 @@ button {
   margin-top: 20px;
 }
 
-button:hover {
+.buy:hover {
   color: #00acdc;
   background: #fff;
-  box-sizing: border-box;
 }
 
 .card {
-  width: 198px;
+  width: 200px;
+  box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.product {
+.wrap-img {
   padding: 30px 20px;
   width: 158px;
+}
+
+.product {
+  width: 100%;
 }
 
 .wrap {
@@ -49,36 +55,63 @@ button:hover {
   margin: 0;
 }
 
+.article > span {
+  padding-left: 12px;
+}
+
 .code {
   font-size: 11px;
-  line-height: 13px;/* identical to box height */
+  line-height: 13px;
   margin: 6px 0 15px;
 }
 
-.review > img {
-  float: left;
-  width: 13px;
-  height: 14px;
-  padding: 0 5px 0 1px;
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 24px;
+}
+
+.review > .wrap-stars {
+  display: flex;
+  justify-content: space-between;
+  width: 91px;
+  height: 15px;
+}
+
+.wrap-stars > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+}
+
+.review > div > img {
+  height: 13px;
+  width: 14px;
 }
 
 .review > p {
   font-size: 11px;
-  line-height: 13px;/* identical to box height */
-  text-align: right;
+  line-height: 13px;
   padding-top: 1px;
-  margin-bottom: 25px;
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .left {
   font-size: 11px;
-  line-height: 15px;/* identical to box height */
-  float: left;
+  line-height: 15px;
 }
 
 .right {
   font-weight: bold;
   font-size: 16px;
-  line-height: 11px;/* identical to box height */
-  float: right;
+  line-height: 11px;
 }
