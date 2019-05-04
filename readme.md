@@ -25,7 +25,7 @@ Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guidel
 * follow styles from the mock
 * add attribute `data-qa="card"` to the card block
 * add attribute `data-qa="hover"` to the link
-
+  
 
 Screenshot of the card:
 ![screenshot](./references/card-example.png)
@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [UPDATE DEMO LINK](https://annakondr.github.io/layout_product-cards/)
+- [UPDATE TEST REPORT LINK](https://annakondr.github.io/layout_product-cards/report/html_report/)
