@@ -19,7 +19,7 @@ Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guidel
 ## Requirements:
 
 * reset browser's default margins
-* card's width is 200px
+* card's width is 200px without border
 * use images from [src/images](src/images)
 * change link styles on :hover
 * follow styles from the mock
