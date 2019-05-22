@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://golotamishka.github.io/layout_product-cards/<repo_name>/)
+- [UPDATE DEMO LINK](https://golotamishka.github.io/layout_product-cards/)
 - [UPDATE TEST REPORT LINK](https://golotamishka.github.io/layout_product-cards/report/html_report/)
