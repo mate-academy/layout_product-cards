@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [DEMO LINK](https://artyomkav.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://artyomkav.github.io/layout_product-cards/report/html_report/)
+- [ DEMO LINK](https://artyomkav.github.io/layout_product-cards/)
+- [ TEST REPORT LINK](https://artyomkav.github.io/layout_product-cards/report/html_report/)
