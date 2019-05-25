@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [DEMO LINK](https://tarasprocishin.github.io/layout_task-guideline/)
-- [TEST REPORT LINK](https://tarasprocishin.github.io/layout_task-guideline/report/html_report/)
+- [DEMO LINK](https://tarasprocishin.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://tarasprocishin.github.io/layout_product-cards/report/html_report/)
