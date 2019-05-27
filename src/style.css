@@ -14,7 +14,7 @@ body {
   height: 100vh;
 }
 
-.block__card {
+.card {
   position: relative;
   width: 202px;
   height: 403px;
@@ -24,27 +24,20 @@ body {
   padding: 15px;
 }
 
-.block__card_img {
+.card__img {
   width: 160px;
   height: 134px;
-  margin: 15px 5px 45px;
+  margin: 15px 5px 41px;
 }
 
-.card_img {
-  width: 100%;
-  height: 100%;
-}
-
-.text {
+.card__text {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin-bottom: 5px;
 }
 
-.subtext {
+.card__sub-text {
   font-size: 11px;
-  line-height: 13px;
 }
 
 .rating {
@@ -53,27 +46,36 @@ body {
   cursor: pointer;
   font-size: 11px;
   line-height: 13px;
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
-.rating-img img {
-  margin-left: 4px;
-  padding-top: 1px;
-  width: 13px;
+.rating__star {
+  display: flex;
+  margin-bottom: 1px;
 }
 
-.rating-img img:nth-child(1) {
-  margin: 0;
+.star_active {
+  flex: 0 0 19px;
+  background: url(./images/star-active.svg) no-repeat center center;
 }
 
-.text-price {
+.star_non-active {
+  flex: 0 0 19px;
+  background: url(./images/star.svg) no-repeat center center;
+}
+
+.rating__text {
+  padding-bottom: 1px;
+}
+
+.price {
   position: relative;
-  margin-top: 18px;
+  margin-top: 20px;
   font-weight: bold;
   font-size: 16px;
 }
 
-.price {
+.price__text {
   position: absolute;
   top: 5px;
   font-weight: normal;
@@ -81,43 +83,34 @@ body {
   line-height: 13px;
 }
 
-.sum {
+.price__sum {
   position: absolute;
-  right: 1px;
+  right: 0;
 }
 
-.block-button {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 15px;
-  width: 170px;
-  height: 40px;
-  background: #00acdc;
-  border-radius: 5px;
-}
-
-.button {
+.link__button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  line-height: 38px;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  width: 170px;
   text-align: center;
   text-transform: uppercase;
+  background-color: #00acdc;
   color: #fff;
+  border: 1px solid #00acdc;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 5px;
 }
 
-.block-button:hover {
-  background: #fff;
-  border: 1px solid #00acdc;
-  box-sizing: border-box;
-  -webkit-transition: all 0.2s ease-in-out;
-}
-
-.button:hover {
+.link__button:hover {
   color: #00acdc;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
 }
