@@ -1,4 +1,4 @@
 **Result**
 
-- [DEMO LINK](https://github.com/greencodeio/layout_product-cards)
-- [TEST REPORT LINK](https://github.com/greencodeio/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://greencodeio.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://greencodeio.github.io/layout_product-cards/html_report/)
