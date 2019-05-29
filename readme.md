@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://mariyahubko04.github.io/layout_product-cards/)
-- [UPDATE TEST REPORT LINK](https://mariyahubko04.github.io/layout_product-cards/report/html_report/)
+- [UPDATE DEMO LINK](https://mariyahubko04.github.io/layout_product-card/)
+- [UPDATE TEST REPORT LINK](https://mariyahubko04.github.io/layout_product-card/report/html_report/)
