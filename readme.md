@@ -39,3 +39,4 @@ Screenshot of the card:
 
 - [DEMO LINK](https://nikitaushenko.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://nikitaushenko.github.io/layout_product-cards/report/html_report/)
+
