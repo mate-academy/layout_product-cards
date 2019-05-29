@@ -4,58 +4,65 @@
   font-family: "Roboto", sans-serif;
 }
 
-.card,
-.card > div,
-.stars,
-.star,
-.button {
-  display: flex;
-}
-
 .card {
   width: 200px;
   border: 1px solid #f3f3f3;
-  flex-direction: column;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .photo > img {
-  margin: 30px 20px 45px;
   width: 160px;
   height: 134px;
 }
 
 .info {
   flex-direction: column;
-  margin: 0 15px;
+  margin: 45px 15px 14px;
 }
 
 .headline {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
-  margin-bottom: 6px;
 }
 
 .rating {
+  display: flex;
   justify-content: space-between;
-  margin: 17px 15px;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.stars {
+  display: flex;
 }
 
 .star {
-  justify-content: center;
-  align-items: center;
-  margin-left: 4px;
   width: 15px;
+  height: 15px;
+  background: url("./images/star.svg") center no-repeat;
+  cursor: pointer;
+  margin-left: 4px;
 }
 
 .star:first-child {
   margin-left: 0;
 }
 
+.star[class*="active"] {
+  background: url("./images/star-active.svg") center no-repeat;
+}
+
 .price {
+  display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 4px 15px 20px;
+  margin: 20px 15px;
 }
 
 .small {
@@ -69,8 +76,8 @@
 }
 
 .button {
+  display: flex;
   justify-content: center;
-  align-self: center;
   align-items: center;
   width: 170px;
   height: 40px;
@@ -81,6 +88,7 @@
   text-transform: uppercase;
   line-height: 16px;
   font-size: 14px;
+  margin: 0 15px;
 }
 
 .button:hover {
