@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [DEMO LINK](https://ovchinnikovs.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://ovchinnikovs.github.io/layout_product-cards/report/html_report/)
