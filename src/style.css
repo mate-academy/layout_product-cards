@@ -43,16 +43,6 @@ h1 {
   /* text-shadow: 0 4px 4px rgba(0, 0, 0, 25%); */
 }
 
-/* .product-info {
-  display: flex;
-  flex-direction: row;
-  margin-top: 9px;
-  border: 1px solid red;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 128.9%;
-} */
-
 .product-info {
   margin-top: 6px;
   display: flex;
@@ -70,10 +60,6 @@ ul {
   list-style-position: outside;
   margin: 0;
   padding: 0;
-  /* flex-direction: row; */
-  /* border: 1px solid red; */
-  /* display: inline-block; */
-
 }
 
 .feedback {
@@ -103,7 +89,6 @@ ul {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
-
 }
 
 .product-price {
@@ -113,7 +98,6 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .price-title {
@@ -122,46 +106,58 @@ ul {
   padding-top: 3px;
   font-size: 11px;
   line-height: 13px;
-  /* border: 1px solid red; */
 }
 
 .price {
   margin: 0;
   padding: 0;
-
-  /* margin-left: auto; */
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
   color: #000;
-
-  /* border: 1px solid red; */
 }
 
 .button {
+  box-sizing: border-box;
   margin: auto;
   position: relative;
-  display: block;
-  padding: 11px 0;
+  display: flex;
   margin-top: 21px;
-  width: 168px;
-  /* height: 40px; */
+  width: 170px;
+  height: 40px;
   background-color: #00acdc;
   border: 1px solid #00acdc;
-  border-radius: 5px;
+  border-radius: 4.32px;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  margin: auto;
+  margin-top: -2px;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
-  text-align: center;
+  line-height: 14px;
   text-transform: uppercase;
-  text-decoration: none;
   color: #fff;
 }
 
 .button:hover {
   border: 1px solid #00acdc;
-  color: #00acdc;
-  cursor: pointer;
+  border-radius: 5px;
   background: #fff;
   outline: none;
+}
+
+/* Не могу решить проблему: при наведении на кнопку текст не виден*/
+a:hover {
+  color: #00acdc;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
