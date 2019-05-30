@@ -1,135 +1,94 @@
 body {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  margin: 0;
 }
 
 .card {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  width: 200px;
-  height: 403px;
-  background: #fff;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  width: 202px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-}
-
-.card:hover {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-  border-radius: 5px;
+  padding: 30px 15px 15px;
 }
 
 .img {
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 7.44%;
-  bottom: 59.31%;
-  max-width: 160px;
+  display: block;
+  width: 160px;
   height: 134px;
+  margin: 0 auto 45px;
+
 }
 
-.goods {
-  position: absolute;
-  left: 7.5%;
-  right: 7.5%;
-  top: 51.86%;
-  bottom: 40.45%;
+.title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #000;
+  margin-bottom: 5px;
 }
 
-.article {
-  position: absolute;
-  left: 7.5%;
-  right: 42%;
-  top: 244px;
-  font-size: 11px;
-  color: #000;
-}
-
-.group {
-  height: 15px;
-  width: 91px;
-  position: absolute;
-  left: 7.5%;
-  right: 47%;
-  top: 270px;
-  display: flex ;
-}
-
-.reviews {
-  position: absolute;
-  left: 63.5%;
-  right: 7.5%;
-  top: 262px;
+.code {
   font-size: 11px;
   line-height: 13px;
-  text-align: right;
-  color: #000;
+  margin-bottom: 15px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
 }
 
 .star {
-  display: flexbox;
-  height: 15px ;
-  width: 15px ;
-  padding: 1px ;
-  box-sizing: border-box ;
-  margin-right: 4px ;
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background: url(images/star.svg) center no-repeat;
+
+}
+
+.active {
+  background-image: url(images/star-active.svg);
 }
 
 .price {
-  position: absolute;
-  left: 7.5%;
-  right: 78%;
-  top: 312px;
-  bottom: 18.86%;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: right;
-  color: #000;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .value {
-  position: absolute;
-  right: 7.5%;
-  top: 307px;
-  bottom: 18.61%;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  text-align: right;
-  color: #000;
-}
-
-button {
-  position: absolute;
-  height: 40px;
-  width: 170px;
-  left: 7.5%;
-  right: 7.5%;
-  bottom: 17px;
-  border-radius: 5px;
-  background: #00acdc;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: 0;
-}
-
-button:hover {
-  background: #fff;
-  border: 1px solid #00acdc;
 }
 
 .buy {
-  position: absolute;
-  left: 7.5%;
-  right: 7.5%;
-  bottom: 13px;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
+  width: 170px;
+  height: 40px;
+  color: #fff;
+  background: #00acdc;
+  font-size: 14px;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buy:hover {
+  background: #fff;
+  color: #00acdc;
 }
