@@ -1,11 +1,11 @@
 
 body {
   color: #000;
-  background-color: #e5e5e5;
-  font-family: "Roboto", "Helvetica", sans-serif;
+  background-color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 11px;
   font-weight: 400;
-  line-height: 12px;
+  line-height: 13px;
   margin: 0;
 }
 
@@ -19,13 +19,16 @@ body {
   background-color: #fff;
   width: 202px;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 30px 15px 15px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product__image {
-  margin: 15px 5px 42px;
+  margin: 0 auto;
+  margin-bottom: 45px;
   width: 160px;
   height: 134px;
 }
@@ -40,7 +43,7 @@ body {
   line-height: 15px;
   margin: 0;
   padding: 0;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .product__raiting-and-review {
@@ -55,6 +58,17 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  cursor: pointer;
+}
+
+.product__rates--three-active .product__rate:nth-child(-n+3) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.product__rates--four-active .product__rate:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
 }
 
 .product__rate {
@@ -66,9 +80,8 @@ body {
   background-position: center;
 }
 
-.product__rate--active {
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
+.product__review {
+  cursor: pointer;
 }
 
 .product__price {
