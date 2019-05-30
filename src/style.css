@@ -1,21 +1,15 @@
 body {
   font-family: Roboto, sans-serif;
   font-size: 11px;
-  background-color: #e5e5e5;
-}
-
-img {
-  width: auto;
-  max-width: 100%;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 202px;
   min-height: 403px;
   border-radius: 5px;
-  padding: 30px 14px 15px;
+  padding: 30px 15px 15px;
   background-color: white;
   border: 1px solid #f3f3f3;
 }
@@ -23,6 +17,11 @@ img {
 .product-card .photo-product {
   width: 160px;
   margin: 0 5px 43px;
+}
+
+.product-card .photo-product img {
+
+  max-width: 100%;
 }
 
 .product-card h2.name-product {
@@ -37,16 +36,29 @@ img {
 }
 
 .product-card .comments-block {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .product-card .comments-block .stars {
-  width: 90px;
+  width: 91px;
   display: flex;
   justify-content: space-between;
+}
+
+.product-card .comments-block .stars * {
+  width: 15px;
+  height: 15px;
+}
+
+.product-card .comments-block .stars .active {
+  background: url("images/star-active.svg")  1px 2px no-repeat;
+}
+
+.product-card .comments-block .stars .inactive {
+  background: url("images/star.svg") 1px 2px no-repeat;
 }
 
 .product-card .product-price {
