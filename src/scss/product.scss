@@ -1,0 +1,65 @@
+@mixin font($size: 12px, $weight: 400, $hight: 15px) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $hight;
+}
+
+.product {
+  color: #000;
+  background-color: #fff;
+  width: 202px;
+  box-sizing: border-box;
+  padding: 30px 15px 15px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__paragraph-clear {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__image {
+    margin: 0 auto;
+    margin-bottom: 45px;
+    width: 160px;
+    height: 134px;
+    display: block;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @include font(12px, 500, 15px);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+
+  &__review {
+    cursor: pointer;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+
+  &__price-size {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+

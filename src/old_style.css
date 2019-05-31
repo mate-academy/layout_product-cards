@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
+.paragraph--clear {
+  margin: 0;
+  padding: 0;
+}
+
 .product {
   color: #000;
   background-color: #fff;
@@ -16,11 +21,6 @@ body {
   padding: 30px 15px 15px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-}
-
-.product__paragraph-clear {
-  margin: 0;
-  padding: 0;
 }
 
 .product__image {
@@ -51,6 +51,31 @@ body {
   margin-bottom: 21px;
 }
 
+.rates {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rates--three-active .product__rate:nth-child(-n+3) {
+  background-image: url(images/star-active.svg);
+}
+
+.rates--four-active .rate:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.rate {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .product__review {
   cursor: pointer;
 }
@@ -73,10 +98,12 @@ body {
   text-align: center;
   box-sizing: border-box;
   width: 170px;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-radius: 5px;
   background-color: #00acdc;
   border: 1px solid #00acdc;
+
   color: #fff;
   font-size: 14px;
   line-height: 14px;
@@ -89,42 +116,3 @@ body {
   color: #00acdc;
   background-color: #fff;
 }
-
-.rates {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
-.rates .rate {
-  margin-right: 4px;
-  width: 15px;
-  height: 15px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.rates--1-active .rate:nth-child(-n+1) {
-  background-image: url(images/star-active.svg);
-}
-
-.rates--2-active .rate:nth-child(-n+2) {
-  background-image: url(images/star-active.svg);
-}
-
-.rates--3-active .rate:nth-child(-n+3) {
-  background-image: url(images/star-active.svg);
-}
-
-.rates--4-active .rate:nth-child(-n+4) {
-  background-image: url(images/star-active.svg);
-}
-
-.rates--5-active .rate:nth-child(-n+5) {
-  background-image: url(images/star-active.svg);
-}
-
-/*# sourceMappingURL=style.css.map */

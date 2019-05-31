@@ -1,0 +1,22 @@
+.rates {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  .rate {
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    background-image: url(images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i}-active .rate:nth-child(-n + #{$i}) {
+      background-image: url(images/star-active.svg);
+    }
+  }
+}
