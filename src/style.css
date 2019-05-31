@@ -1,41 +1,38 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
 }
 
-.card {
-  width: 200px;
+.product-card {
+  width: 202px;
   border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 30px 15px 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
 }
 
-.photo {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.photo > img {
-  width: 160px;
+.card-image {
+  display: block;
+  margin: 0 auto 45px;
   height: 134px;
+  width: 160px;
 }
 
-.info {
-  flex-direction: column;
-  margin: 45px 15px 14px;
-}
-
-.headline {
-  font-size: 12px;
+.card-header {
   font-weight: 500;
+  font-size: 12px;
   line-height: 15px;
+  margin-bottom: 5px;
 }
 
-.rating {
+.card-rating {
+  margin: 15px 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 15px;
 }
 
 .stars {
@@ -43,57 +40,48 @@
 }
 
 .star {
-  width: 15px;
+  margin-right: 4px;
   height: 15px;
-  background: url("./images/star.svg") center no-repeat;
-  cursor: pointer;
-  margin-left: 4px;
+  width: 15px;
+  background: url(images/star.svg) center no-repeat;
 }
 
-.star:first-child {
-  margin-left: 0;
-}
-
-.star[class*="active"] {
-  background: url("./images/star-active.svg") center no-repeat;
+.active {
+  background-image: url(images/star-active.svg);
 }
 
 .price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 20px 15px;
+  margin-bottom: 20px;
 }
 
-.small {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 12px;
-}
-
-.bold {
+.price-value {
   font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 40px;
-  background: #00aadc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
-  text-decoration: none;
+  background: #00acdc;
   color: white;
-  text-transform: uppercase;
-  line-height: 16px;
+  height: 40px;
+  font-weight: bold;
   font-size: 14px;
-  margin: 0 15px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .button:hover {
-  cursor: pointer;
-  background: white;
-  border: 1px solid #00aadc;
-  color: #00aadc;
+  background: #fff;
+  color: #00acdc;
 }
