@@ -8,83 +8,89 @@
 }
 
 .card {
-  width: 200px;
+  width: 202px;
   border: 1px solid #f3f3f3;
+  box-sizing: border-box;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
   font-size: 11px;
   line-height: 13px;
+  padding: 30px 15px 15px;
 }
 
-.imac {
+.card__img {
   width: 160px;
   height: 134px;
-  margin: 30px 20px 43px;
+  margin: 0 auto 45px;
+  display: block;
 }
 
-.name {
+.card__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin: 0 15px 5px;
-}
-
-.code {
-  font-size: 11px;
-  line-height: 13px;
-  margin: 0 15px 16px;
-}
-
-.stars div {
-  height: 15px;
-  width: 15px;
-  padding: 1px;
-  margin-right: 2px;
   margin-bottom: 5px;
 }
 
-.star-active {
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
+.card__code {
+  margin-bottom: 15px;
+}
+
+.card__rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.star-rating {
+  display: flex;
 }
 
 .star {
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background: url(images/star.svg) center no-repeat;
+
 }
 
-.rating {
-  margin: 0 15px 13px;
+.star_active {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .price {
-  align-items: baseline;
-  margin: 0 15px 21px;
-}
-
-.price_right {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
 }
 
-.button {
+.card__add-to-cart {
   border: 1px solid #00acdc;
+  box-sizing: border-box;
   width: 170px;
   height: 40px;
-  background-color: #00acdc;
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  background: #00acdc;
+  text-decoration: none;
+  display: block;
+  text-align: center;
   border-radius: 5px;
-  margin: 0 15px 15px;
   text-transform: uppercase;
   font-weight: bold;
-  text-align: center;
-  font-size: 14px;
-  vertical-align: middle;
-  text-decoration: none;
-  color: #fff;
+  cursor: pointer;
 }
 
-.button:hover {
-  background-color: #fff;
+.card__add-to-cart:hover {
+  background: #fff;
   color: #00acdc;
 }
