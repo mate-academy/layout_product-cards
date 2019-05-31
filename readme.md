@@ -37,7 +37,7 @@ Screenshot of the card:
 
 **Result**
 
-'BEM and SASS refactoring'
+`BEM and SASS refactoring`
 
 - [DEMO LINK](https://sviatoslv.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://sviatoslv.github.io/layout_product-cards/report/html_report/)
