@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://tearfulmerlin.github.io/layout_product-cards/)
-- [UPDATE TEST REPORT LINK](https://tearfulmerlin.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://tearfulmerlin.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://tearfulmerlin.github.io/layout_product-cards/report/html_report/)
