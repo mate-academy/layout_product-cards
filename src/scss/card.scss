@@ -1,0 +1,82 @@
+$card-color: #00acdc;
+$button-height: 40px;
+
+@mixin font($size: 11px, $height: 13px) {
+  font-size: $size;
+  line-height: $height;
+}
+
+.card {
+  width: 202px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 15px 15px;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+
+  @include font;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 45px;
+    display: block;
+  }
+
+  &__title {
+    font-weight: 500;
+    @include font(12px, 15px);
+    margin-bottom: 5px;
+  }
+
+  &__code {
+    margin-bottom: 15px;
+  }
+
+  &__review-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__price-value {
+    font-weight: bold;
+    @include font(16px, 19px);
+  }
+
+  &__add-button {
+    display: block;
+
+    box-sizing: border-box;
+    width: 170px;
+    height: $button-height;
+
+    border: 1px solid $card-color;
+    border-radius: 5px;
+    background: $card-color;
+
+
+    @include font(14px, $button-height);
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  &__add-button:hover {
+    background: #fff;
+    color: $card-color;
+  }
+
+}
