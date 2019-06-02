@@ -4,10 +4,10 @@
 Create HTML pages with product card catalog. Understand `flexbox` usage. Create
 HTML layout from the mockup.
 
-Use this [mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1) 
+Use this [mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1)
 for development.
 
-If you don't want to see other users cursors you can disable `Multiplayer 
+If you don't want to see other users cursors you can disable `Multiplayer
 Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors)
 
 ## Common mistakes
