@@ -4,7 +4,6 @@
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 170px;
-  height: 403px;
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -32,10 +31,6 @@
   margin: 4px 0 0;
 }
 
-.m {
-  font-family: "Roboto Condensed", sans-serif;
-}
-
 .item_code {
   font-size: 11px;
   line-height: 13px;
@@ -57,15 +52,21 @@
 }
 
 .item_price {
-  font-weight: 900;
   font-size: 16px;
   line-height: 19px;
   display: flex;
-  margin: 0;
+  margin: 4px 1px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cyrillic {
+  font-family: Roboto Consensed, sans-serif;
+  font-style: normal;
 }
 
 .rating_container {
-  margin: 16px 0 11px;
+  margin: 16px 0 10px;
 }
 
 .rating {
@@ -76,10 +77,15 @@
   width: 13px;
   height: 13px;
   margin: 1px;
+  display: inline-block;
+  background: url("./images/star.svg") no-repeat;
 }
 
-.item_buyBTN {
-  font-family: "Roboto", sans-serif;
+.star_active {
+  background-image: url("./images/star-active.svg");
+}
+
+.item_buy-btn {
   font-size: 14px;
   font-weight: bold;
   background: #00acdc;
@@ -109,17 +115,7 @@
 .price_container {
   display: flex;
   justify-content: space-between;
-}
-
-.item_priceName {
-  float: left;
-}
-
-.item_price {
-  float: right;
-  margin: 3px 0;
-  font-size: 16px;
-  font-weight: 700;
+  padding-top: 1px;
 }
 
 .item_resp {
