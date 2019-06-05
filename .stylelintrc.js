@@ -1,4 +1,4 @@
-module.exports = {
-  extends: "@mate-academy/stylelint-config",
-  rules: {}
-}
+// module.exports = {
+//   extends: "@mate-academy/stylelint-config",
+//   rules: {}
+// }
