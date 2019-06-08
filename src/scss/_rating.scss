@@ -8,10 +8,9 @@
     background: url(images/star.svg) center no-repeat;
   }
 
-  &--1 .rating__star:nth-child(-n + 1),
-  &--2 .rating__star:nth-child(-n + 2),
-  &--3 .rating__star:nth-child(-n + 3),
-  &--4 .rating__star:nth-child(-n + 4) {
-    background-image: url(images/star-active.svg);
+  @for $i from 1 through 5 {
+    &--#{$i} .rating__star:nth-child(-n + #{$i}) {
+      background-image: url(images/star-active.svg);
+    }
   }
 }
