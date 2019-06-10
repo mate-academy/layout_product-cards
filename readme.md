@@ -38,4 +38,4 @@ Screenshot of the card:
 **Result**
 
 - [DEMO LINK](https://neitiris.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://neitiris.github.io/layout_product-cards//report/html_report/)
+- [TEST REPORT LINK](https://neitiris.github.io/layout_product-cards/report/html_report/)
