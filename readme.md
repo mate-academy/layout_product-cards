@@ -1,3 +1,8 @@
+### [Demo link](https://onefun1.github.io/layout_product-cards/)
+
+### [Test report](https://onefun1.github.io/layout_product-cards/report/html_report/)
+
+
 # Frontend practice with product cards
 
 ## Main goal:
