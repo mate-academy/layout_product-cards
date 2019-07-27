@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [DEMO LINK]( https://deman250.github.io/layout_product-cards/)
-- [TEST REPORT LINK]( https://deman250.github.io/layout_product-cards/html_report/)
+- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+- [ TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
