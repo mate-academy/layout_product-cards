@@ -38,4 +38,4 @@ Screenshot of the card:
 **Result**
 
 - [UPDATE DEMO LINK](https://deman250.github.io/layout_product-cards/)
-- [ TEST REPORT LINK](https://deman250.github.io/layout_product-cards/g)
+- [ TEST REPORT LINK](https://deman250.github.io/layout_product-cards/report/html_report/)
