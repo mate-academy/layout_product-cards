@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://kseniiamazan.github.io/layout_product-cards/)
-- [UPDATE TEST REPORT LINK](https://kseniiamazan.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://kseniiamazan.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://kseniiamazan.github.io/layout_product-cards/report/html_report/)
