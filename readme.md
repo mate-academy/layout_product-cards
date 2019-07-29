@@ -39,3 +39,4 @@ Screenshot of the card:
 
 - [UPDATE DEMO LINK](https://igaryok.github.io/layout_product-cards/)
 - [UPDATE TEST REPORT LINK](https://igaryok.github.io/layout_product-cards/report/html_report/)
+- [PR](https://github.com/mate-academy/layout_product-cards/pull/135)
