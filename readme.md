@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [DATE DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [DATE TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DATE DEMO LINK](https://aleks-mos.github.io/layout_product-cards/)
+- [DATE TEST REPORT LINK](https://aleks-mos.github.io/layout_product-cards/report/html_report/)
