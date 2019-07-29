@@ -37,5 +37,5 @@ Screenshot of the card:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://ivansafiulin.github.io/layout_moyo-header/)
-- [UPDATE TEST REPORT LINK](https://ivansafiulin.github.io/layout_moyo-header/report/html_report/)
+- [UPDATE DEMO LINK](https://ivansafiulin.github.io/layout_product-cards/)
+- [UPDATE TEST REPORT LINK](https://ivansafiulin.github.io/layout_product-cards/report/html_report/)
