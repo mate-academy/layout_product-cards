@@ -38,4 +38,4 @@ Screenshot of the card:
 **Result**
 
 - [DEMO LINK](https://drop777.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://drop777.github.io/layout_product-cards/report/html_report/)
+- [REPORT LINK](https://drop777.github.io/layout_product-cards/report/html_report/)
