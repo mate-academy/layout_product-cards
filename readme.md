@@ -1,3 +1,9 @@
+**Result**
+
+- [DEMO LINK](https://tolyaruban.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://tolyaruban.github.io/layout_product-cards/report/html_report/)
+
+
 # Frontend practice with product cards
 
 ## Main goal:
@@ -34,8 +40,3 @@ Screenshot of the card:
 **Read the guideline before start**
 
 [Guideline](https://mate-academy.github.io/layout_task-guideline/)
-
-**Result**
-
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
