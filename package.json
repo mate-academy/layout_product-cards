@@ -8,12 +8,13 @@
     "css:reference": "rimraf ./backstop_data/bitmaps_reference && backstop reference --config=config/backstop/backstopConfig",
     "deploy": "bash ./config/hooks/deploy.sh",
     "lint": "stylelint src/**/*.css && eslint src/**/*.js && htmllint --rc ./node_modules/@mate-academy/htmllint-config/.htmllintrc src/*.html",
-    "start": "http-server ./src -p 8080 -c-1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Mate Academy",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@mate-academy/browsersync-config": "*",
     "@mate-academy/eslint-config": "*",
     "@mate-academy/htmllint-config": "*",
     "@mate-academy/stylelint-config": "*",
@@ -23,7 +24,7 @@
     "eslint-plugin-node": "^8.0.1",
     "htmllint": "^0.7.3",
     "htmllint-cli": "0.0.7",
-    "http-server": "^0.11.1",
+    "browser-sync": "^2.1.6",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "rimraf": "^2.6.3",
