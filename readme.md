@@ -38,4 +38,4 @@ Screenshot of the card:
 **Result**
 
 - [DEMO LINK](https://anisimovv.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://anisimovv.github.io/layout_product-cards/<repo_name>/report/html_report/)
+- [TEST REPORT LINK](https://anisimovv.github.io/layout_product-cards/report/html_report/)
