@@ -39,5 +39,3 @@ Screenshot of the card:
 
 - [DEMO LINK](https://anisimovv.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://anisimovv.github.io/layout_product-cards/<repo_name>/report/html_report/)
-
-Тесты ведут себя странно и не проходят. Все отступы и размеры ставил как на фигме.
