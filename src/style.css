@@ -16,29 +16,36 @@ body * {
   width: 200px;
   display: flex;
   flex-direction: column;
-  padding: 30px 14px 14px;
 }
 
 .imac-img {
+  padding: 30px 19px 45px;
+  width: 160px;
   height: 134px;
-  margin: 0 auto 45px;
+  box-sizing: content-box;
+}
+
+.conten-box {
+  padding: 0 14px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-name {
-  font-size: 12px;
   font-weight: 500;
-  margin-bottom: 5px;
+  font-size: 12px;
   line-height: 15px;
+  margin-bottom: 6px;
 }
 
 .product-code {
   font-size: 11px;
-  line-height: 13px;
+  line-height: 12px;
   font-weight: 400;
+  margin-bottom: 15px;
 }
 
 .otzivi-box {
-  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,18 +54,24 @@ body * {
 
 .stars {
   display: flex;
-  padding: 1px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .star-icon {
+  width: 15px;
+  height: 15px;
   margin-right: 4px;
+}
+
+.star-icon:last-child {
+  margin-right: 0;
 }
 
 .otzivi-words {
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
-  text-align: right;
 }
 
 .prise-box {
@@ -75,28 +88,33 @@ body * {
 }
 
 .prise-num {
-  font-weight: bold;
   font-size: 16px;
   line-height: 19px;
+  font-weight: 700;
 }
 
-.button-buy {
+.button {
+  background: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  background: #00acdc;
   height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  width: 170px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
 }
 
-.button-buy:hover {
+.button-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.button:hover {
   background-color: #fff;
+}
+
+.button:hover .button-link {
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
