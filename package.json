@@ -6,9 +6,12 @@
   "scripts": {
     "css:test": "rimraf ./backstop_data/bitmaps_test && backstop test --config=config/backstop/backstopConfig",
     "css:reference": "rimraf ./backstop_data/bitmaps_reference && backstop reference --config=config/backstop/backstopConfig",
-    "deploy": "bash ./config/hooks/deploy.sh",
+    "deploy": "npm run publish && git push origin develop",
     "lint": "stylelint src/**/*.css && eslint src/**/*.js && htmllint --rc ./node_modules/@mate-academy/htmllint-config/.htmllintrc src/*.html",
-    "start": "node server.js"
+    "postinstall": "npm run css:reference && git checkout -b develop",
+    "publish": "bash ./config/hooks/deploy.sh",
+    "start": "node server.js",
+    "test": "npm run lint && npm run css:test"
   },
   "keywords": [],
   "author": "Mate Academy",
