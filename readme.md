@@ -1,4 +1,4 @@
-# Frontend practice with product cards
+# Product cards
 1. Replace `<your_account>` with your Github username in the links
     - [DEMO LINK](https://<your_account>.github.io/layout_product-cards/) <br>
     - [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
@@ -11,6 +11,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
 
 ### Common mistakes
+- Add **ALL** `data-qa` attributes required in the task
 - Do not use `tabs`. Use `2 spaces` for indentation.
 - Don't use repeated styles.
 - Item with text 'Купить' should be a link.
