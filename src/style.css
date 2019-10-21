@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
 }
 
 a {
@@ -12,18 +11,23 @@ p {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   color: #000;
+
 }
 
 .card__img {
-  padding: 30px 19px 40px;
   height: 134px;
   width: 160px;
+  margin: 30px 0 45px;
 }
 
 .card__content {
@@ -35,10 +39,10 @@ p {
   font-weight: 400;
 }
 
-.card__main-text {
+.card__label {
   font-size: 12px;
   font-weight: 500;
-  margin: 1px 0 5px;
+  margin: 0 0 5px;
   line-height: 15px;
 }
 
@@ -64,6 +68,17 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("images/star-active.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card__rating-star-inactive {
+  width: 15px;
+  height: 15px;
+  background-image: url("images/star.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card__price {
@@ -80,7 +95,7 @@ p {
 
 .card__buy-button {
   display: block;
-  padding: 11px 10px;
+  padding: 11px;
   background-color: #00acdc;
   border: 1px solid transparent;
   border-radius: 5px;
