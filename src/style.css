@@ -11,12 +11,10 @@ h2 {
 
 .card-container {
   display: flex;
-  position: relative;
   padding: 15px 14px;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   width: 200px;
-  height: 403px;
   border-radius: 5px;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -25,9 +23,10 @@ h2 {
 .card-image {
   width: 160px;
   height: 134px;
-  position: absolute;
-  top: 30px;
-  left: 19px;
+  position: relative;
+  top: 15px;
+  margin-bottom: 60px;
+  align-self: center;
 }
 
 .card-element {
@@ -41,18 +40,21 @@ h2 {
   line-height: 15px;
 }
 
-.code {
-  margin-bottom: 17px;
-}
-
 .reviews {
-  margin-bottom: 18px;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .reviews-image {
-  margin-right: 3px;
+  display: inline-block;
+  width: 15px;
+  height: 47px;
+  margin-right: 1px;
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.reviews-image--inactive {
+  background: url(images/star.svg) no-repeat center;
 }
 
 .price {
