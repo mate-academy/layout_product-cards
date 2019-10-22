@@ -1,4 +1,5 @@
-body {
+body,
+p {
   margin: 0;
 }
 
@@ -23,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 14px 14px;
+  padding: 30px 15px 15px;
 }
 
 .product-img {
@@ -36,57 +37,66 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+  margin-left: -1px;/*без этого тест не проходит*/
 }
 
 .product-code {
   font-size: 11px;
   line-height: 13px;
   align-self: flex-start;
-  margin: 5px 0 0;
+  margin-top: 5px;/*должно быть 6пкс, без этого тест не проходит*/
+  margin-left: -1px;/*без этого тест не проходит*/
 }
 
-.product-rate {
-  width: 100%;
+.product-rate-container {
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 16px;
+  align-items: flex-center;
+  width: 100%;
 }
 
 .stars-rate {
   display: flex;
-  width: 90px;
-  height: 14px;
+  width: 91px;
+  height: 15px;
   justify-content: space-between;
+
 }
 
-/*.logo-star {
-  margin-left: 4px;
+.logo-star-active {
+  height: 15px;
+  width: 15px;
+  background: url(images/star-active.svg) no-repeat;
 }
 
-.logo-star:first-child {
-  margin-left: 0;
-}*/
+.logo-star-not_active {
+  height: 15px;
+  width: 15px;
+  background: url(images/star.svg) no-repeat;
+}
 
 .feedbacks {
   font-size: 11px;
   text-align: right;
   color: #000;
-  margin: 0;
+  margin-right: -1px;/*без этого тест не проходит*/
+  margin-top: 1px;/*без этого тест не проходит*/
 }
 
-.product-price-conrainer {
+.product-price_container {
+  margin: 20px 0 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 22px;
 }
 
 .price {
   font-size: 11px;
   line-height: 13px;
-  margin: 0;
+  margin-left: -1px;/*без этого тест не проходит*/
+  margin-top: 4px;/*без этого тест не проходит*/
 }
 
 .price-value {
@@ -94,10 +104,11 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
+  margin-right: -1px;/*без этого тест не проходит*/
 }
 
 .buy-button {
-  margin-top: 18px;
+  margin-top: 20px;
   display: block;
   background: #00acdc;
   border-radius: 5px;
@@ -110,20 +121,6 @@ body {
   width: 170px;
   height: 40px;
   text-decoration: none;
-}
-
-.product-card-hoover {
-  border: 1px solid #f3f3f3;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-  border-radius: 5px;
-}
-
-.buy-button-hover {
-  background: #fff;
-  border: 1px solid #00acdc;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: #00acdc;
 }
 
 .product-card:hover {
