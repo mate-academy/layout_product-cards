@@ -7,3 +7,9 @@
 //     this.innerText='Buying...'
 //   }
 // }
+
+// .ProductsBuy_button--hover {
+//   background-color: #fff;
+//   color: #00acdc;
+//   cursor: progress;
+// }
