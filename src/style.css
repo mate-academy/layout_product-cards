@@ -19,9 +19,15 @@ body {
 }
 
 .card__img-box {
+  padding: 30px 0 45px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.img__wrap {
   width: 160px;
   height: 134px;
-  padding: 30px 20px 45px;
 }
 
 .card__img {
@@ -29,17 +35,18 @@ body {
   height: 100%;
 }
 
-.card__description-box {
+.card__description {
   padding: 0 15px;
 }
 
-.card__description {
+.card__description-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+  margin: 0;
 }
 
-.card__product-code {
+.card____description-product-code {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
@@ -55,15 +62,20 @@ body {
 
 .card__rating-stars {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__rating-star {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 4px;
   height: 15px;
   width: 15px;
+  margin-right: 4px;
+  background-image: url("../images/star-active.svg");
+  background-repeat: no-repeat;
+}
+
+.card__rating-star--gray {
+  background-image: url("../images/star.svg");
 }
 
 .card__rating-reviews {
