@@ -3,7 +3,21 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.Products {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.cards {
   box-sizing: border-box;
   width: 200px;
   height: 403px;
@@ -12,13 +26,13 @@ body {
   border-radius: 5px;
 }
 
-.ProductsItem {
+.cards__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ProductsItem__img {
+.cards__item-img {
   width: 160px;
   height: 134px;
   background-image: url("images/imac.jpeg");
@@ -26,7 +40,7 @@ body {
   margin-top: 16px;
 }
 
-.ProductsItem__description {
+.cards__item-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -34,65 +48,46 @@ body {
 
 }
 
-.ProductsItem__productCode {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.ProductsItem__productCode {
+.cards__item-code {
   width: 101px;
   height: 13px;
   align-self: start;
   margin-bottom: 15px;
 }
 
-.imgItems {
+.rate__details-stars {
   display: flex;
   flex-direction: row;
-}
-
-.imgItems {
   width: 91px;
-  display: flex;
   justify-content: space-between;
   align-self: start;
-
 }
 
-.imgItems__Item {
+.rate__details-star {
   width: 13px;
   height: 12px;
   background-image: url("/images/star.svg");
   background-size: cover;
 }
 
-.imgItems__Item--isActive {
+.rate__details-star--isActive {
   background-image: url("/images/star-active.svg");
   cursor: pointer;
 }
 
-.imgItems__Item:not(.imgItems__Item--isActive):hover {
+.rate__details-star--isActive:not(.rate__details-star--isActive):hover {
   background-image: url("/images/star-active.svg");
   cursor: pointer;
 }
 
-.RateDetails__title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.ProductsItem__productRate {
+.cards__item-rate {
   align-self: start;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.PriceDetails {
+.cards__item-price {
   display: flex;
   width: 100%;
   margin-top: 21px;
@@ -100,14 +95,7 @@ body {
   align-items: baseline;
 }
 
-.PriceDetails__title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.PriceDetails__price {
+.price__details-title {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -134,4 +122,11 @@ body {
 .ProductsBuy_button:hover {
   background-color: #fff;
   color: #00acdc;
+}
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
 }
