@@ -1,12 +1,14 @@
-body {
+body,
+p {
   margin: 0;
 }
 
-.card-container {
+.item {
   display: flex;
   flex-direction: column;
-  max-width: 200px;
-  min-width: 200px;
+  width: 200px;
+  height: 403px;
+  padding: 30px 14px 15px;
   font-family: Roboto, sans-serif;
   color: #000;
   font-style: normal;
@@ -17,63 +19,70 @@ body {
   border-radius: 5px;
 }
 
-.item-photo img {
+.item__photo {
   width: 160px;
   height: 134px;
-  margin: 30px 19px 41px;
+  align-self: center;
 }
 
-.item-title {
-  margin: 0 14px 5px;
+.item__title {
+  margin-top: 45px;
+  margin-bottom: 5px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
-.item-code {
-  margin: 0 0 16px 14px;
+.item__code {
   font-size: 11px;
   line-height: 13px;
 }
 
-.item-rating {
-  margin: 0 14px 17px;
+.item__rating {
+  margin-top: 16px;
   font-size: 11px;
   line-height: 13px;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.item-rating--stars img {
-  width: 14px;
-  height: 14px;
-  margin-right: 3px;
+.item__rating--starsblock {
+  display: flex;
+  width: 91px;
+  height: 15px;
+  justify-content: space-between;
 }
 
-.item-price {
-  margin: 0 14px 20px;
-  font-size: 11px;
-  line-height: 13px;
+.item__rating--activestar {
+  width: 15px;
+  background: url(images/star-active.svg) no-repeat;
+}
+
+.item__rating--notactivestar {
+  width: 15px;
+  background: url(images/star.svg) no-repeat;
+}
+
+.item__price {
+  margin-top: 19px;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.item-price--word {
-  margin: 0;
+.item__price--word {
+  font-size: 11px;
+  line-height: 13px;
 }
 
-.item-price--number {
+.item__price--number {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  margin: 0;
 }
 
-.item-buy--button {
-  margin: 0 14px;
+.item__buy--button {
+  margin-top: 20px                    ;
   border-radius: 5px;
   width: 170px;
   height: 40px;
@@ -87,7 +96,7 @@ body {
   text-transform: uppercase;
 }
 
-.item-buy--button:hover {
+.item__buy--button:hover {
   background: #fff;
   color: #00acdc;
   border: 1px solid #00acdc;
