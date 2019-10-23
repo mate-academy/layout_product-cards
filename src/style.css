@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+.headline {
+  display: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -30,7 +34,7 @@ body {
 .info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .name {
@@ -48,12 +52,19 @@ body {
   line-height: 13px;
 }
 
-.star {
-  margin-left: 1px;
+.reviews-image,
+.reviews-image-not-active {
+  height: 15px;
+  width: 15px;
+  
 }
 
-.star img {
-  margin-right: 2px;
+.reviews-image {
+  background: url("images/star-active.svg") no-repeat;
+}
+
+.reviews-image-not-active {
+  background: url("images/star.svg") no-repeat;
 }
 
 .reviews,
@@ -69,13 +80,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
+}
+
+.card-img {
+  display: flex;
+  justify-content: space-between;
+  width: 91px;
+  height: 15px;
 }
 
 .price {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  margin-top: 6px;
 }
 
 .price__name {
@@ -107,7 +126,7 @@ body {
   color: #fff;
 }
 
-.button > a {
+.button-link {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
