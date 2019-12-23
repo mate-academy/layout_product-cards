@@ -3,24 +3,24 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-}
-
 .row__item {
   width: 200px;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
   margin-right: 45px;
   padding: 15px;
+  padding-left: 14px;
+}
+
+.row__item:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
 .row__img {
   width: 160px;
   height: 134px;
+  margin: 0;
   background-size: cover;
   padding: 15px 5px 41px;
 }
@@ -34,14 +34,11 @@ body {
   line-height: 15px;
   font-size: 12px;
   font-weight: 500;
-  font-style: normal;
 }
 
 .row__code {
   font-size: 11px;
   line-height: 13px;
-  font-style: normal;
-  font-weight: normal;
 }
 
 .row__feedback {
@@ -49,10 +46,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
+  height: 16px;
+  margin-left: 1px; /* нужно что бы stars и price не прыгали*/
+  margin-right: -1px; /* нужно что бы stars и price не прыгали*/
 }
 
 .row__stars {
   display: flex;
+  align-self: flex-end;
 }
 
 .row__star {
@@ -61,32 +62,33 @@ body {
   background: url("images/star.svg");
   background-repeat: no-repeat;
   border-radius: 0.5px;
+  margin-right: 4px;
 }
 
 .row__star:nth-child(-n+4) {
   background: url("images/star-active.svg");
   background-repeat: no-repeat;
-  margin-right: 4px;
 }
 
 .row__review {
   font-size: 11px;
   line-height: 13px;
   margin: 0;
+  align-self: flex-start;
 }
 
 .row__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .row__word {
   font-size: 11px;
   line-height: 13px;
   margin: 0;
-
+  align-self: flex-end;
 }
 
 .row__number {
@@ -94,39 +96,28 @@ body {
   line-height: 19px;
   font-weight: bold;
   margin: 0;
-
+  align-self: flex-start;
 }
 
-.row__buy {
+.row__link {
   width: 170px;
   height: 40px;
-  display: flex;
   justify-content: center;
+  display: flex;
   align-items: center;
-  margin: auto;
   border: 1px solid #00acdc;
   background-color: #00acdc;
   border-radius: 5px;
   box-sizing: border-box;
-}
-
-.row__buy:hover {
-  background-color: #fff;
-  color: #00acdc;
-}
-
-.row__link {
   text-decoration: none;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  line-height: 40px;
-  text-align: center;
+  line-height: 16px;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .row__link:hover {
   color: #00acdc;
+  background-color: #fff;
 }
