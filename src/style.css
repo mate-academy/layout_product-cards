@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+span,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars div {
+  width: 15px;
+  height: 15px;
+  background: url(./images/star.svg) center no-repeat;
+
+  margin-right: 4px;
+}
+
+.stars--1 div:nth-child(1),
+.stars--2 div:nth-child(-n+2),
+.stars--3 div:nth-child(-n+3),
+.stars--4 div:nth-child(-n+4),
+.stars--5 div {
+  background: url(./images/star-active.svg) center no-repeat;
+}
+
+.product-card {
+  width: 200px;
+  height: 403px;
+  padding: 0 14px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card-logo_img {
+  display: block;
+  width: 160px;
+  height: 134px;
+
+  margin: 30px auto 0;
+  margin-bottom: 45px;
+}
+
+.product-card-title_name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.product-card-number {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 15px;
+}
+
+.product-card-rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 23px;
+}
+
+.product-card-feedback_link {
+  font-size: 11px;
+  text-decoration: none;
+  color: #000;
+}
+
+.product-card-price {
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 20px;
+}
+
+.product-card-price_total-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-card_btn {
+  padding: 0;
+
+  width: 170px;
+  height: 40px;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: none;
+
+  margin-bottom: 15px;
+}
+
+.product-card_link {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  height: 100%;
+
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product-card_link:hover {
+
+  border: 1px solid #00acdc;
+  background-color: #fff;
+  border-radius: 5px;
+
+  color: #00acdc;
+}
