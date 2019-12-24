@@ -5,30 +5,35 @@
 
 .card {
   width: 200px;
-  height: 403px;
+  height: 402px;
   font-family: Roboto, sans-serif;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 30px 15px 15px;
+  padding: 30px 14px 14px;
 }
 
 .card__photo {
-  width: 160px;
-  height: 134px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 45px;
 }
 
-.card__description > *:first-child {
+.card__photo-img {
+  width: 160px;
+  height: 134px;
+}
+
+.card__description-name {
   width: 170px;
-  height: 31px;
+  height: 30px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
-.card__description > *:last-child {
+.card__description-code {
   width: 101px;
   height: 13px;
   font-weight: normal;
@@ -40,12 +45,17 @@
 .card__feedback {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: center;
+  width: 170px;
+  height: 15px;
+  margin-bottom: 20px;
 }
 
 .card__feedback-rate {
   display: flex;
   flex-direction: row;
+  width: 95px;
+  height: 15px;
 }
 
 .star {
@@ -71,10 +81,13 @@
 .card__price {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  width: 170px;
+  height: 19px;
   margin-bottom: 20px;
 }
 
-.card__price:first-child {
+.card__price-caption {
   width: 29px;
   height: 13px;
   font-weight: normal;
@@ -83,7 +96,7 @@
   text-align: right;
 }
 
-.card__price:last-child {
+.card__price-value {
   width: 79px;
   height: 19px;
   font-weight: bold;
