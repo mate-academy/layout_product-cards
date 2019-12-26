@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+h3,
+p {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
@@ -31,19 +33,16 @@ body {
 
 .card__picture {
   width: 100%;
+  height: 134px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.picture--1 {
-  height: 134px;
-}
-
 .card__name {
+  display: inline-block;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin-bottom: 5px;
 }
 
 .card-font {
@@ -54,6 +53,7 @@ body {
 }
 
 .card__code {
+  display: inline-block;
   margin-bottom: 15px;
 }
 
@@ -64,13 +64,13 @@ body {
   margin-bottom: 20px;
 }
 
-.card__rating {
+.stars {
   display: flex;
   align-items: baseline;
   height: 15px;
 }
 
-.card__rating-star {
+.stars__star {
   height: 15px;
   width: 15px;
   background-image: url("images/star-active.svg");
@@ -82,7 +82,7 @@ body {
   box-sizing: content-box;
 }
 
-.card__rating-star:last-child {
+.stars__star:last-child {
   background-image: url("images/star.svg");
 }
 
