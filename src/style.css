@@ -16,7 +16,7 @@ body {
   width: 200px;
   padding: 30px 14px 14px;
   border: 1px solid #f3f3f3;
-  background-repeat: 5px;
+  border-radius: 5px;
 }
 
 .card:hover {
@@ -50,25 +50,25 @@ body {
   align-items: center;
 }
 
-.card__stars {
+.stars {
   display: flex;
   align-items: center;
 }
 
-.card__star {
+.stars__item {
   width: 15px;
   height: 15px;
 }
 
-.card__star:not(:last-child) {
+.stars__item:not(:last-child) {
   margin-right: 4px;
 }
 
-.card__star:nth-child(-n + 4) {
+.stars__item:nth-child(-n + 4) {
   background: url("images/star-active.svg") no-repeat center;
 }
 
-.card__star:nth-child(5) {
+.stars__item:nth-child(5) {
   background: url("images/star.svg") no-repeat center;
 }
 
@@ -85,19 +85,22 @@ body {
   font-weight: bold;
 }
 
-.card__button {
+.button {
   width: 100%;
   font-size: 14px;
   font-weight: bold;
   color: #fff;
+
   text-transform: uppercase;
+  line-height: 36px;
   border: 1px solid #00acdc;
   border-radius: 5px;
   background-color: #00acdc;
-  line-height: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.card__button:hover {
+.button:hover {
   color: #00acdc;
   background-color: #fff;
 }
