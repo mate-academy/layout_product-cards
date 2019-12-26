@@ -1,14 +1,14 @@
 # Product cards
 1. Replace `<your_account>` with your Github username in the links
-    - [DEMO LINK](https://<your_account>.github.io/layout_product-cards/) <br>
-    - [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+    - [DEMO LINK](https://oksanaDaniluk.github.io/layout_product-cards/) <br>
+    - [TEST REPORT LINK](https://oksanaDaniluk.github.io/layout_product-cards/report/html_report/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
 ___
 
 ## The task
 Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1).
 
-> Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
+> Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how]())
 
 ### Common mistakes
 - Add **ALL** `data-qa` attributes required in the task
