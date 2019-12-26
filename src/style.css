@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  color: #000;
+  font-family: Roboto, sans-serif;
 }
 
 * {
@@ -26,8 +22,7 @@ body {
 
 .product-card__image {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 160px;
   height: 134px;
 }
@@ -46,21 +41,19 @@ body {
 .product-card__rate {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
-.product-rate__mark {
+.product-rate__stars {
   display: flex;
-  margin-left: 1px;
-  margin-top: 1px;
+  /* margin-left: 1px;
+  margin-top: 1px; */
 }
 
 .product-mark__star {
-  background-image: url("./images/star-active.svg");
+  background: url("./images/star-active.svg") center no-repeat;
   height: 15px;
   width: 15px;
-  background-repeat: no-repeat;
-  background-size: center;
   margin-right: 4px;
 }
 
@@ -68,11 +61,15 @@ body {
   background-image: url("./images/star.svg");
 }
 
+.product-rate__response {
+  margin-top: 1px;
+}
+
 .product-card__price-stroke {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .price-name {
@@ -87,7 +84,7 @@ body {
   line-height: 19px;
 }
 
-.product-card__select-buy {
+.product-card__link {
   display: flex;
   box-sizing: border-box;
   background-color: #00acdc;
@@ -104,7 +101,7 @@ body {
   cursor: pointer;
 }
 
-.product-card__select-buy:hover {
+.product-card__link:hover {
   background-color: #fff;
   color: #00acdc;
   border: 1px solid #00acdc;
