@@ -1,18 +1,22 @@
-* {
+body,
+div,
+h3,
+p {
   margin: 0;
 }
 
-.product {
+.product-card {
   padding: 15px 14px 16px;
-  max-height: 403px;
+  /*max-height: 403px;*/
   max-width: 200px;
+  /*width: 200px;*/
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.product__photo {
+.product-card__photo {
   display: block;
   height: 134px;
   margin: 0 auto;
@@ -20,47 +24,42 @@
   margin-top: 15px;
 }
 
-.product__title {
+.product-card__title {
   padding-bottom: 5px;
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
 }
 
-.product__code {
+.product-card__code {
   padding-bottom: 15px;
 }
 
-.product_text-size {
+.product-card_text_size_s {
   font-size: 11px;
 }
 
-.product-flex {
+.product-card__feedback {
+  padding-bottom: 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.product__feedback {
-  padding-bottom: 21px;
-}
-
-.product__price {
+.product-card__price {
   margin-bottom: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.product__price-text {
-  text-align: right;
-}
-
-.product__price-value {
+.product-card__price-value {
   font-weight: 700;
   font-size: 16px;
-  text-align: right;
   line-height: 19px;
 }
 
-.product__link {
+.product-card__link {
   background: #00acdc;
   font-weight: 700;
   font-size: 14px;
@@ -77,22 +76,38 @@
   border: 1px solid #00acdc;
 }
 
-.product__link:hover {
+.product-card__link:hover {
   background: #fff;
   color: #00acdc;
 }
 
-.row__stars-size > div {
+.product-card__star {
   background: url("images/star.svg") no-repeat center;
   height: 15px;
   width: 15px;
   margin-right: 4px;
 }
 
-.row__stars-size {
+.product-card__stars {
   display: flex;
 }
 
-.stars--4 div:nth-child(-n+4) {
+.product-card__stars_5 .product-card__star:nth-child(-n+5) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.product-card__stars_4 .product-card__star:nth-child(-n+4) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.product-card__stars_3 .product-card__star:nth-child(-n+3) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.product-card__stars_2 .product-card__star:nth-child(-n+2) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.product-card__stars_1 .product-card__star:nth-child(-n+1) {
   background: url("images/star-active.svg") no-repeat center;
 }
