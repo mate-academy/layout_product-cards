@@ -1,15 +1,23 @@
 body {
   margin: 0;
-  font-family: "Roboto", "Georgia", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
   color: #000;
 }
 
-.product-card {
+* {
   box-sizing: border-box;
-  padding: 30px 15px 15px;
+}
+
+.product-card {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+  box-sizing: border-box;
+  padding: 30px 14px 14px;
   width: 200px;
   height: 403px;
   border: 1px #f3f3f3 solid;
@@ -24,27 +32,27 @@ body {
   height: 134px;
 }
 
-.product-card__product-name {
-  margin-left: -1px;
+.product-card__name {
   margin-top: 45px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
-.product-card__product-id {
+.product-card__code {
   margin-top: 5px;
-  margin-left: -1px;
 }
 
-.product-card__product-rate {
+.product-card__rate {
   display: flex;
   justify-content: space-between;
-  margin-top: 17px;
+  margin-top: 16px;
 }
 
-.product-rate__product-mark {
+.product-rate__mark {
   display: flex;
+  margin-left: 1px;
+  margin-top: 1px;
 }
 
 .product-mark__star {
@@ -60,21 +68,15 @@ body {
   background-image: url("./images/star.svg");
 }
 
-.product-rate__product-response {
-  margin-top: -1px;
-  margin-right: -1px;
-
-}
-
 .product-card__price-stroke {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 23px;
+  margin-top: 18px;
 }
 
-.price-stroke__price-name {
-  margin-left: -1px;
+.price-name {
+  margin-top: 6px;
 }
 
 .price-stroke__price-number {
@@ -83,8 +85,6 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 19px;
-  margin-right: -1.5px;
-  margin-top: -6px;
 }
 
 .product-card__select-buy {
@@ -101,6 +101,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  cursor: pointer;
 }
 
 .product-card__select-buy:hover {
