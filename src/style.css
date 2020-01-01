@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+.card {
+  width: 200px;
+  padding: 30px 0 15px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__img {
+  background: center no-repeat url(./images/imac.jpeg);
+  background-size: 100% 100%;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  width: 170px;
+  margin-top: 45px;
+}
+
+.card__code {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  align-self: flex-start;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.review,
+.price {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
+
+.review {
+  margin-top: 15px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-size: 13px;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+
+.stars__star:not(:last-of-type) {
+  margin-right: 4px;
+}
+
+.stars__star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.review__amount {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  align-self: center;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.price__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  align-self: flex-end;
+}
+
+.price__amount {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00acdc;
+  border-radius: 5px;
+  width: 170px;
+  height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  margin-top: 20px;
+  transition: background 0.5s, color 0.3s ease-in-out;
+}
+
+.card__link:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  color: #00acdc;
+}
