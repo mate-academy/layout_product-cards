@@ -36,7 +36,6 @@ body {
 }
 
 .card__content--title {
-  display: inline-block;
   color: #000;
   font-weight: 500;
   font-size: 12px;
@@ -48,25 +47,39 @@ body {
   margin-top: 6px;
 }
 
-.card__contant--rating {
+.rating {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-top: 15px;
 }
 
-.card__contant--rating-stars {
+.rating__stars {
   display: flex;
-  justify-content: flex-start;
 }
 
-.card__contant--rating-star {
+.rating__stars--star {
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   height: 15px;
   width: 15px;
   margin-right: 4px;
 }
 
-.card__content--link {
+.rating__stars--star:last-child {
+  margin-right: 0;
+}
+
+.rating__stars--1 .rating__stars--star:nth-child(-n+1),
+.rating__stars--2 .rating__stars--star:nth-child(-n+2),
+.rating__stars--3 .rating__stars--star:nth-child(-n+3),
+.rating__stars--4 .rating__stars--star:nth-child(-n+4),
+.rating__stars--5 .rating__stars--star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.rating__reviews {
+  line-height: 15px;
   text-decoration: none;
   color: #000;
 }
@@ -99,6 +112,7 @@ body {
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .card__button:hover {
