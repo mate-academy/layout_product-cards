@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic");
+
+:root {
+  --btn-color: #00acdc;
+}
+
+body,
+h3,
+p {
+  margin: 0;
+}
+
+.product-card {
+  font-family: "Roboto", sans-serif;
+  width: 200px;
+  padding: 30px 15px 15px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+}
+
+.product-card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-top: 46px;
+}
+
+.product-card__code {
+  margin-top: 5px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url("./images/star-active.svg");
+}
+
+.product-card__rating {
+  margin-top: 16px;
+}
+
+.product-card__rating,
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__price {
+  align-items: flex-end;
+}
+
+.product-card__price-number {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.product-card__code,
+.product-card__reviews,
+.product-card__price-tag {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.product-card__price,
+.product-card__buy-btn {
+  margin-top: 19px;
+}
+
+.product-card__buy-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--btn-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product-card__buy-btn:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid var(--btn-color);
+}
