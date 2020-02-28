@@ -8,18 +8,28 @@ html {
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 200px;
-  padding: 30px 14px 20px;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+.card__title,
+.card__review,
+.card__sku,
+.card__price-area {
+  flex-basis: 170px;
 }
 
 .card__image {
+  margin-top: 30px;
+  align-self: center;
   width: 160px;
   height: 134px;
-  margin: 0 auto;
 }
 
 .card__title {
@@ -30,6 +40,7 @@ html {
 }
 
 .card__review {
+
   padding-top: 15px;
   padding-bottom: 21px;
   display: flex;
@@ -95,10 +106,6 @@ html {
   display: flex;
 }
 
-.stars--1 span.rate__star:nth-child(-n+1),
-.stars--2 span.rate__star:nth-child(-n+2),
-.stars--3 span.rate__star:nth-child(-n+3),
-.stars--4 span.rate__star:nth-child(-n+4),
-.stars--5 span.rate__star:nth-child(-n+5) {
+.stars--4 span.rate__star:nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
 }
