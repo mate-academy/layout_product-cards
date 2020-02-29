@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic");
 
 :root {
-  --btn-color: #00acdc;
+  --buy-btn-color: #00acdc;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
 .product-card__image {
   display: block;
   width: 160px;
+  height: 134px;
   margin: 0 auto;
 }
 
@@ -27,7 +28,7 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
-  margin: 46px 0 0;
+  margin: 45px 0 0;
 }
 
 .product-card__code {
@@ -50,8 +51,27 @@ body {
   background-image: url("./images/star-active.svg");
 }
 
+.product-card__code,
+.product-card__reviews,
+.product-card__price-tag {
+  font-size: 11px;
+}
+
+.product-card__price-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .product-card__rating {
   margin-top: 15px;
+}
+
+.product-card__price {
+  margin-top: 19px;
+}
+
+.product-card__buy-btn {
+  margin-top: 20px;
 }
 
 .product-card__rating,
@@ -61,23 +81,7 @@ body {
 }
 
 .product-card__price {
-  align-items: flex-end;
-}
-
-.product-card__price-number {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.product-card__code,
-.product-card__reviews,
-.product-card__price-tag {
-  font-size: 11px;
-}
-
-.product-card__price,
-.product-card__buy-btn {
-  margin-top: 19px;
+  align-items: baseline;
 }
 
 .product-card__buy-btn {
@@ -91,15 +95,15 @@ body {
   line-height: 16px;
   font-weight: 500;
   color: #fff;
-  background-color: var(--btn-color);
+  background-color: var(--buy-btn-color);
   text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid var(--btn-color);
+  border: 1px solid var(--buy-btn-color);
   border-radius: 5px;
   transition: all 0.1s ease-in;
 }
 
 .product-card__buy-btn:hover {
-  color: #00acdc;
+  color: var(--buy-btn-color);
   background-color: #fff;
 }
