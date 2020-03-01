@@ -1,0 +1,120 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product-card {
+  box-sizing: border-box;
+  height: 403px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 30px auto 45px;
+}
+
+.product-card__text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 15px;
+  width: 170px;
+  margin: 0 auto 34px;
+  position: relative;
+}
+
+.product-card__text::after {
+  content: "Код товара: 195434";
+  position: absolute;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  bottom: -18px;
+  left: 0;
+}
+
+.product-card__rating {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 170px;
+  margin-bottom: 20px;
+}
+
+.product-card__reviews {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.product-card__stars {
+  display: flex;
+  margin-top: -1px;
+}
+
+.block__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.product-card__stars div:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.product-card__price {
+  max-width: 170px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__price--sum {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 19px;
+}
+
+.product-card__price--title {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  margin-bottom: -3px;
+}
+
+.product-card__button {
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 170px;
+  height: 40px;
+  padding: 11px;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.product-card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
