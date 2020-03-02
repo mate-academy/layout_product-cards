@@ -27,7 +27,6 @@ body {
 }
 
 .wrapper__discription {
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -38,9 +37,7 @@ body {
 }
 
 .wrapper__code,
-.wrapper__cost__text {
-  font-style: normal;
-  font-weight: normal;
+.cost__text {
   font-size: 11px;
   line-height: 13px;
 }
@@ -48,13 +45,23 @@ body {
 .wrapper__rating {
   display: flex;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 16px;
+  padding-bottom: 25px;
   align-items: center;
 }
 
-.wrapper__rating__group {
+.rating__star--active,
+.rating__star {
   display: flex;
+  background: url(./images/star-active.svg);
+  width: 13px;
+  height: 13px;
+  background-size: contain;
   margin: 0;
+}
+
+.rating__star {
+  background: url(./images/star.svg);
 }
 
 .wrapper__rating__views {
@@ -63,13 +70,7 @@ body {
   margin-left: 18px;
 }
 
-.wrapper__cost {
-  margin-top: 22px;
-}
-
-.wrapper__cost__num {
-  font-family: Roboto;
-  font-style: normal;
+.cost__num {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -83,7 +84,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 170px;
-  height: 38px;
+  height: 40px;
   border-radius: 5px;
   background-color: #00acdc;
   margin-top: 20px;
@@ -94,10 +95,8 @@ body {
   border: 1px solid #00acdc;
 }
 
-.wrapper__cost__btn a {
+.cost__btn {
   display: block;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -105,6 +104,6 @@ body {
   text-decoration: none;
 }
 
-.wrapper__cost__btn a:hover {
+.cost__btn:hover {
   color: #00acdc;
 }
