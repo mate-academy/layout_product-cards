@@ -15,43 +15,51 @@ body {
   font-style: normal;
 }
 
-.reviews {
-  margin: 0;
+.starContainer__reviews {
+  margin: 0 0 0 15px;
   font-weight: normal;
   display: block;
 }
 
-.starContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.star {
+.starContainer__star {
   display: block;
   width: 15px;
   height: 15px;
   object-fit: contain;
   margin-right: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  justify-self: end;
 }
 
-.wrapper {
-  justify-content: space-between;
+.starContainer__star_active {
+  content: url(images/star-active.svg);
+  alt: "star";
+}
+
+.starContainer__star_notactive {
+  content: url(images/star.svg);
+  alt: "no star";
+}
+
+.card__starContainer {
+  justify-content: start ;
   align-items: center;
   display: flex;
   font-size: 11px;
   line-height: 13px;
   margin: 15px 14px;
+
 }
 
-.imac {
+.card__photo {
   display: block;
   width: 160px;
   height: 134px;
   margin: 30px auto;
 }
 
-.productName {
+.card__productName {
   display: block;
   font-size: 12px;
   line-height: 15px;
@@ -60,7 +68,7 @@ body {
   margin-bottom: 0;
 }
 
-.productCode {
+.card__productCode {
   font-size: 11px;
   line-height: 13px;
   margin: 5px 0 0 14px;
@@ -68,14 +76,14 @@ body {
 
 }
 
-.priceContainer {
+.card__priceContainer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 5px 14px;
 }
 
-.wordPrice {
+.priceContainer__wordPrice {
   display: block;
   font-size: 11px;
   line-height: 13px;
@@ -83,7 +91,7 @@ body {
   margin: 0;
 }
 
-.price {
+.priceContainer__price {
   display: block;
   font-size: 16px;
   font-weight: bold;
@@ -91,7 +99,7 @@ body {
   margin: 0;
 }
 
-.buy {
+.card__buy {
   width: 170px;
   height: 40px;
   background-color: #00acdc;
@@ -108,7 +116,7 @@ body {
   box-sizing: border-box;
 }
 
-.card:hover .buy {
+.card:hover .card__buy {
   background-color: white;
   color: #00acdc;
 }
