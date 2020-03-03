@@ -1,151 +1,122 @@
 body {
   margin: 0;
-  padding: 0;
+  font-family: "Roboto", serif;
+  font-weight: normal;
+  font-size: 11px;
 }
 
-.data_card {
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   width: 200px;
   height: 403px;
-  box-sizing: border-box;
-  background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 0;
 }
 
-.card_image {
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+
+.product_image {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+.product_image img {
   width: 160px;
   height: 134px;
-  margin-left: 19px;
-  margin-top: 30px;
-  padding: 0;
 }
 
-.card_text {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
+.card__description {
+  box-sizing: border-box;
+  margin: 0 14px 5px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: black;
-  margin: 41px 0 0 14px;
+  color: #000;
 }
 
-.card_code {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
+.card__content {
+  box-sizing: border-box;
+  margin: 0 14px 14px;
+}
+
+.card__code {
   line-height: 13px;
-  margin: 5px 0 0 14px;
 }
 
-.star_rating {
+.card__rating {
   display: flex;
-  position: absolute;
-  left: 0;
-}
-
-.star_rating div {
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
-  margin-top: 15px;
-}
-
-.star_rating div:nth-child(1) {
-  margin-left: 15px;
-}
-
-.star_rating div:nth-child(5) {
-  margin-right: 0;
-}
-
-.star_rating div:nth-child(1),
-.star_rating div:nth-child(2),
-.star_rating div:nth-child(3),
-.star_rating div:nth-child(4) {
-  background-image: url("images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.star_rating div:nth-child(5) {
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.card_review {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: right;
+  justify-content: space-between;
   margin-top: 16px;
-  margin-right: 14px;
 }
 
-.card_price_text {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 15px;
-  position: absolute;
-  left: 15px;
-  top: 301px;
+.card__stars {
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.card_price {
-  font-family: Roboto;
-  font-style: normal;
+.star {
+  margin-left: 5px;
+}
+
+.card__stars .star {
+  background: url("images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 14px;
+}
+
+.star:first-child {
+  margin-left: 0;
+}
+
+.star:last-child {
+  background: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.price_text {
+  line-height: 13px;
+}
+
+.price_numeric {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  text-align: right;
-  margin-right: 15px;
-  position: absolute;
-  top: 292px;
-  left: 106px;
 }
 
-.card_link {
+.card__purchase {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 11px 0;
+  background: #00acdc;
+  border-radius: 5px;
+  color: white;
   text-decoration: none;
-  background: #00acdc;
-  border-radius: 5px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  color: #fff;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
-.purchase {
-  height: 40px;
-  width: 170px;
-  margin-left: 15px;
-  box-sizing: border-box;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  background: #00acdc;
-  position: absolute;
-  top: 347px;
-  left: 0;
-}
-
-.purchase:hover {
+.card__purchase:hover {
   color: #00acdc;
-  background: #fff;
+  box-sizing: border-box;
+  background-color: #fff;
   border: 1px solid #00acdc;
 }
