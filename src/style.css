@@ -2,34 +2,50 @@
   --active-color: #00acdc;
 }
 
+body {
+  margin: 0;
+}
+
 html {
   font-family: Roboto;
 }
 
 .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  width: 200px;
-  padding: 15px;
+  padding: 30px 0 15px;
   box-sizing: border-box;
   font-size: 11px;
 }
 
+.cards:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.cards__header,
+.cards__content {
+  width: 170px;
+}
+
 .cards__image {
+  display: block;
   width: 160px;
   height: 134px;
-  padding: 15px 4px 42px;
+  margin: 0 auto 45px;
 }
 
 .cards__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .cards__code {
-  margin-top: 5px;
   margin-bottom: 15px;
 }
 
@@ -50,30 +66,24 @@ html {
   background-image: url("images/star-active.svg");
 }
 
+.cards__price-tag,
 .cards__reviews {
-  margin-left: 15px;
-  margin-top: 1px;
-}
-
-.cards__price__tag p {
-  margin: 0;
-}
-
-.cards__price__tag {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 20px;
+  align-items: center;
   margin-bottom: 20px;
+}
+
+.cards__price-tag {
+  align-items: flex-end;
 }
 
 .cards__money {
   font-weight: bold;
   font-size: 16px;
-  margin: 0;
 }
 
-.cards__buy__button {
+.cards__buy-button {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -82,17 +92,17 @@ html {
   height: 40px;
   text-transform: uppercase;
   color: white;
-  border: none;
   background: var(--active-color);
   border-radius: 5px;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-decoration: none;
+  border: 1px solid var(--active-color);
 }
 
-.cards__buy__button:hover {
+.cards__buy-button:hover {
   color: var(--active-color);
   background-color: white;
-  border: 1px solid var(--active-color);
+
 }
