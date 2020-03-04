@@ -1,29 +1,40 @@
-body {
-  margin: 0;
+html {
   font-family: Roboto;
   font-size: 11px;
   font-weight: 400;
   color: #000;
 }
 
-.product-card {
-  background: #fff;
-  width: 200px;
-  border: 1px solid #f3f3f3;
-  box-sizing: border-box;
-  border-radius: 5px;
+body,
+p,
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
-.product-card__content {
-  padding: 0 14px 15px;
+.product-card {
+  width: 200px;
+  height: 403px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 14px;
+}
+
+.product-card__img-content {
+  padding: 16px 5px 0;
 }
 
 .product-card__img {
-  display: block;
-  padding: 30px 19px 45px;
+  display: flex;
+  justify-content: center;
   height: 134px;
   width: 160px;
-  line-height: 162px;
+}
+
+.product-card__content {
+  margin-top: 45px;
 }
 
 .product-card__title {
@@ -46,35 +57,34 @@ body {
   margin-bottom: 20px;
 }
 
-.product-card__stars {
+.stars {
   display: flex;
   box-sizing: border-box;
 }
 
-.product-card__star {
+.stars__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
-  background-image: url(../../images/star-active.svg);
+  background-image: url(../../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.product-card__star:nth-child(5) {
-  background-image: url(../../images/star.svg) no-repeat;
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url("./images/star-active.svg");
 }
 
 .product-card__info {
+  display: inline-block;
   font-size: 11px;
   line-height: 12px;
-  display: inline-block;
   text-align: right;
 }
 
 .product-card__price-panel {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -82,19 +92,15 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  width: 100%;
-  display: inline-block;
-  text-align: right;
-}
-
-.product-card__price-name {
-  font-size: 11px;
-  line-height: 19px;
-  display: inline-block;
 }
 
 .product-card__btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  width: 170px;
   padding: 9px 15px;
   background-color: #00acdc;
   border: 1px solid #00acdc;
@@ -102,13 +108,11 @@ body {
   box-sizing: border-box;
   color: #fff;
   font-size: 14px;
-  line-height: 16px;
-  height: 40px;
-  width: 170px;
+  line-height: 20px;
+  font-weight: 500;
+  text-decoration: none;
   text-transform: uppercase;
   transition: background 0.3s ease-in, color  0.3s ease-in;
-  font-weight: 500;
-  text-align: center;
 }
 
 .product-card__btn:hover {
