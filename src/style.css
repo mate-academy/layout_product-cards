@@ -1,0 +1,106 @@
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+.products {
+  display: flex;
+}
+
+.products__card {
+  flex: 200px 0 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.products__card-image {
+  margin-top: 15px;
+  align-self: center;
+}
+
+.products__card-description {
+  margin-top: 45px;
+}
+
+.products__card-description-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.products__card-description-code {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.products__card-description-rate {
+  margin-top: 15px;
+  height: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.star {
+  display: inline-block;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+}
+
+.star--4 .star:nth-child(-n+4) {
+  background-image: url("images/star-active.svg");
+}
+
+.products__card-vote {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.products__card-description-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: baseline;
+}
+
+.products__card-description-price-sum {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 900;
+}
+
+.products__card-button-link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #00acdc;
+}
+
+.products__card-button-link:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
