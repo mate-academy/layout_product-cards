@@ -1,7 +1,5 @@
 html {
   font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
 }
 
 body {
@@ -9,11 +7,11 @@ body {
 }
 
 .goods {
-  margin-left: 0;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  width: 200px;
+  justify-content: space-between;
+  width: 202px;
   height: 403px;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
@@ -45,12 +43,10 @@ body {
 }
     
 .review {
-  width: 102.1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
-  margin-left: -2px;
 }
 
 .stars {
@@ -65,15 +61,17 @@ body {
   background-position: center;
 }
   
-.stars--4 .star:nth-child(-n+4) {
+.stars--1 .star:first-child,
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
 .review__comment {
   padding-bottom: 0;
   font-size: 11px;
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .price {
@@ -92,30 +90,26 @@ body {
   font-size: 16px;
 }
     
-button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
 .btn-buy {
-  color: none;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  height: 40px;
   padding: 0;
   margin-top: 20px;
-}
-
-.btn-buy__label {
-  padding: 11px 56px;
-  display: inline-block;
   font-weight: bold;
   font-size: 14px;
   color: #00acdc;
-  background-color: white;
-  border: 1px solid #00acdc;
-  box-sizing: border-box;
-  border-radius: 5px;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.btn-buy__label {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
 }
 
 .btn-buy__label:hover {
