@@ -1,0 +1,37 @@
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.product-card {
+  width: 200px;
+  height: 403px;
+  padding: 30px 15px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 45px;
+}
+
+.product-card__stars {
+  width: 91px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__stars__star {
+  width: 15px;
+  height: 15px;
+  background: url("images/star-active.svg") center no-repeat;
+}
+
+.product-card__stars--4 > .product-card__stars__star:nth-child(1n+5) {
+  background-image: url("images/star.svg");
+}
