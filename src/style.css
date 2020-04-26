@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --star: url(images/star.svg);
+  --active_star: url(images/star-active.svg);
+}
+
+body {
+  margin: 0;
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/* <---product img---> */
+
+.card__pic {
+  margin: 30px 20px 42px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+}
+
+/* >---product img---< */
+
+/* <---description---> */
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description__model {
+  width: 170px;
+  
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.description__number {
+  font-weight: 400;
+  line-height: 13px;
+  margin-bottom: 15px;
+}
+
+/* >---description---< */
+
+/* <---rate---> */
+
+.rate {
+  display: flex;
+  width: 170px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rate__stars {
+  display: flex;
+}
+
+.rate__item {
+  width: 15px;
+  height: 15px;
+  background: var(--star) no-repeat center;
+}
+
+.rate__item:not(:first-child) {
+  margin-left: 4px;
+}
+
+.stars--1 > :nth-child(-n+1),
+.stars--2 > :nth-child(-n+2),
+.stars--3 > :nth-child(-n+3),
+.stars--4 > :nth-child(-n+4),
+.stars--5 > :nth-child(-n+5) {
+  background: var(--active_star) no-repeat center;
+}
+
+/* --->rate<--- */
+
+/* <---price---> */
+
+.price {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.price__number,
+.price__currancy {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* --->price<--- */
+
+/* <---btn---> */
+
+.btn {
+  width: 170px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+
+.btn__link {
+  display: block;
+  box-sizing: border-box;
+
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+
+  padding: 12px 0 11px;
+
+  background: #00acdc;
+  border-radius: 5px;
+}
+
+.btn__link:hover {
+  padding: 11px 0;
+
+  color: #00acdc;
+  background: #fff;
+  
+  line-height: 16px;
+  border: 1px solid #00acdc;
+}
+
+/* --->btn<--- */
