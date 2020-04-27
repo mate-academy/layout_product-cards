@@ -1,3 +1,8 @@
+:root {
+  --not_active-star: url(./images/star.svg);
+  --active-star: url(./images/star-active.svg);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -46,15 +51,28 @@ body {
   margin-top: 15px;
 }
 
-.product_rating-stars img + img {
-  margin-left: 4px;
+.star {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: var(--active-star) no-repeat center;
+}
+
+.product_rating-stars .star:last-child {
+  width: 15px;
+  height: 15px;
+  background: var(--not_active-star) no-repeat center;
+}
+
+.star + .star {
+  margin-left: 2px;
 }
 
 .product_aboutPrice {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 17px 0 20px;
 }
 
 .product_aboutPrice-cost {
