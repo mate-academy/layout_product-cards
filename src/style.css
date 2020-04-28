@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
+
+.product-card {
+  font-family: Roboto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 30px 14px 14px;
+}
+
+.product-card__image-container {
+  display: flex;
+  margin: auto;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 45px;
+}
+
+.product-card__description {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  margin: 0;
+}
+
+.product-card__item-code {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-top: 5px;
+}
+
+.stars {
+  display: flex;
+  margin-top: 4px;
+}
+
+.stars__star {
+  --star: url(./images/star.svg);
+  --star-active: url(./images/star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--0 .stars__star:nth-child(n+1),
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:nth-child(n+5) {
+  background-image: var(--star);
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: var(--star-active);
+}
+
+.product-card__reviews {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-top: 5px;
+}
+
+.product-card__price-description {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-top: 15px;
+}
+
+.product-card__price-tag {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 8px;
+}
+
+.product-card__buy-button-link {
+  /* display: flex; */
+  width: 170px;
+  height: 40px;
+  margin-top: 9px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #00acdc;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.product-card__buy-button-link:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #00acdc;
+  line-height: 11px;
+}
