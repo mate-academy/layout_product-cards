@@ -1,40 +1,12 @@
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url("fonts/Roboto-Regular.svg#Roboto-Regular") format("svg"),
-    url("fonts/Roboto-Regular.ttf") format("truetype"),
-    url("fonts/Roboto-Regular.woff") format("woff"),
-    url("fonts/Roboto-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto-Medium";
-  src: url("fonts/Roboto-Medium.svg#Roboto-Medium") format("svg"),
-    url("fonts/Roboto-Medium.ttf") format("truetype"),
-    url("fonts/Roboto-Medium.woff") format("woff"),
-    url("fonts/Roboto-Medium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("fonts/Roboto-Bold.svg#Roboto-Bold") format("svg"),
-    url("fonts/Roboto-Bold.ttf") format("truetype"),
-    url("fonts/Roboto-Bold.woff") format("woff"),
-    url("fonts/Roboto-Bold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
-  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
   font-size: 11px;
 }
 
 body,
-p {
+p,
+h3 {
   margin: 0;
 }
 
@@ -61,7 +33,8 @@ p {
 }
 
 .product-card__description {
-  font-family: "Roboto-Medium", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15px;
   margin-bottom: 5px;
@@ -78,19 +51,18 @@ p {
   margin-bottom: 20px;
 }
 
-.product-card__stars {
-  width: 91px;
+.product-card__stars--4 {
   display: flex;
-  justify-content: space-between;
 }
 
-.product-card__stars__star {
+.product-card__star {
   width: 15px;
   height: 15px;
+  margin-right: 4px;
   background: url("images/star-active.svg") center no-repeat;
 }
 
-.product-card__stars--4 > .product-card__stars__star:nth-child(1n+5) {
+.product-card__stars--4 > .product-card__star:nth-child(1n+5) {
   background-image: url("images/star.svg");
 }
 
@@ -105,7 +77,8 @@ p {
 .product-card__price-value {
   font-size: 16px;
   line-height: 19px;
-  font-family: "Roboto-Bold", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
 }
 
 .product-card__buy-button {
