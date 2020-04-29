@@ -12,6 +12,10 @@ body {
   color: #000;
 }
 
+p {
+  margin: 0;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -24,27 +28,15 @@ body {
   border-radius: 5px;
 }
 
-/* <---product img---> */
-
-.card__pic {
-  margin: 30px 20px 42px;
-}
+/* <---card---> */
 
 .card__img {
   width: 160px;
   height: 134px;
+  margin: 30px 20px 45px;
 }
 
-/* >---product img---< */
-
-/* <---description---> */
-
-.description {
-  display: flex;
-  flex-direction: column;
-}
-
-.description__model {
+.card__model {
   width: 170px;
   
   font-weight: 500;
@@ -53,13 +45,14 @@ body {
   margin: 0 0 5px;
 }
 
-.description__number {
+.card__text {
+  align-self: start;
   font-weight: 400;
   line-height: 13px;
-  margin-bottom: 15px;
+  margin: 0 0 15px 14px;
 }
 
-/* >---description---< */
+/* >---card---< */
 
 /* <---rate---> */
 
@@ -105,8 +98,11 @@ body {
   margin-bottom: 20px;
 }
 
-.price__number,
-.price__currancy {
+.price__text {
+  line-height: 14px;
+}
+
+.price__sum--font {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -119,34 +115,23 @@ body {
 .btn {
   width: 170px;
   height: 40px;
-  text-align: center;
   margin-bottom: 15px;
-  
-}
-
-.btn__link {
-  display: block;
-  box-sizing: border-box;
 
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
-  text-decoration: none;
   color: #fff;
 
-  padding: 12px 0 11px;
+  padding: 11px 0;
 
   background: #00acdc;
   border-radius: 5px;
+  border: 0;
 }
 
-.btn__link:hover {
-  padding: 11px 0;
-
+.btn:hover {
   color: #00acdc;
   background: #fff;
-  
-  line-height: 16px;
   border: 1px solid #00acdc;
 }
 
