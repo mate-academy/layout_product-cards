@@ -9,7 +9,7 @@ body {
   font-family: Roboto;
 }
 
-.product__card__row__item {
+.card {
   margin: 0 auto;
   width: 200px;
   padding: 15px 14px;
@@ -20,68 +20,65 @@ body {
   justify-content: center;
 }
 
-.product__card__photo {
+.card__image {
   width: 160px;
   height: 134px;
   margin: 15px 5px;
 }
 
-.product__card__title {
+.card__title {
   margin: 30px auto 5px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
-.product__card__review__amount {
+.card__review__amount {
   margin: 0;
 }
 
-.product__card__cod__tovaru {
+.card__code {
   margin-bottom: 15px;
   margin-top: 0;
 }
 
-.product__card__rating {
+.card__rating {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.product__card__rating__stars {
-  height: 15px;
-  width: 91px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.product__card__rating__star {
-  width: 15px;
-  height: 15px;
+.card__rating__star {
   display: inline-block;
-  background-image: url(./images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: space-between;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background: url(./images/star.svg) center no-repeat;
 }
 
-.product__card__rating__star:nth-child(-n + 4) {
+.stars--4 {
+  display: flex;
+}
+
+.stars--4 .card__rating__star:nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
 }
 
-.product__card__price {
+.card__price {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.product__card__price__number {
+.card__price__amount {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
 }
 
-.product__card__button__buy {
+.card__button__buy {
   width: 170px;
   height: 40px;
   display: flex;
@@ -98,13 +95,13 @@ body {
   text-align: center;
 }
 
-.product__card__button__buy:hover {
+.card__button__buy:hover {
   background: #fff;
   border: 1px solid #00acdc;
   color: #00acdc;
 }
 
-.product__card__small__text {
+.card__small__text {
   font-size: 11px;
   line-height: 13px;
 }
