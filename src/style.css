@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+html {
+  font-family: Roboto, Arial;
+}
+
+h3,
+h4,
+body,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  max-width: 200px;
+  padding: 30px 14px 14px;
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  margin: 0 5px 45px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.card__small-text {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__rating {
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.stars__wrapper {
+  height: 15px;
+}
+
+.rating__star {
+  height: 15px;
+  width: 15px;
+  background-image: url(./images/star.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rating__stars--1 .rating__star:first-child,
+.rating__stars--2 .rating__star:nth-child(-n+2),
+.rating__stars--3 .rating__star:nth-child(-n+3),
+.rating__stars--4 .rating__star:nth-child(-n+4),
+.rating__stars--5 .rating__star {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.price__value {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__button {
+  text-align: center;
+  line-height: 40px;
+  display: block;
+  width: 170px;
+  height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #00acdb;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
