@@ -22,11 +22,11 @@ body {
   width: 200px;
 }
 
-.product__images {
+.product__image {
   margin: 15px 5px 42px;
 }
 
-.product__monitor {
+.product__picture {
   text-align: center;
   max-width: 160px;
   height: 134px;
@@ -54,15 +54,19 @@ body {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: var(--active-star) no-repeat center;
-}
-
-.product__stars .product__star:last-child {
   background: var(--not_active-star) no-repeat center;
 }
 
 .product__star:not(:last-child) {
   margin-right: 2px;
+}
+
+.stars--1 .product__star:nth-child(1),
+.stars--2 .product__star:nth-child(-n+2),
+.stars--3 .product__star:nth-child(-n+3),
+.stars--4 .product__star:nth-child(-n+4),
+.stars--5 .product__star:nth-child(-n+5) {
+  background: var(--active-star) no-repeat center;
 }
 
 .product__price {
