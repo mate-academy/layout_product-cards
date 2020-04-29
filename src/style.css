@@ -7,7 +7,7 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-.cards {
+.card {
   width: 200px;
   padding: 30px 14px 14px;
   background-color: #fff;
@@ -17,17 +17,18 @@ html {
   transition: box-shadow 0.25s ease;
 }
 
-.cards--img {
+.card--img {
   width: 160px;
   height: 134px;
   margin-left: 5px;
+  margin-bottom: 41px;
 }
 
-.cards--info {
-  margin-top: 41px;
+.card--info {
+  margin-bottom: 15px;
 }
 
-.cards--description {
+.card--description__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -39,36 +40,44 @@ html {
   line-height: 13px;
 }
 
-.cards--rate {
+.card--rate {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-bottom: 19px;
 }
 
-.cards--stars {
+.card--star {
   display: flex;
 }
 
-.stars {
+.card--star__item {
   height: 15px;
   width: 15px;
   margin-right: 4px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
 }
 
-.stars:last-child {
-  background-image: url(images/star.svg);
+.card--star__item:last-child {
+  margin-right: 0;
 }
 
-.cards-price {
+.card--star__item:nth-child(1),
+.card--star__item:nth-child(2),
+.card--star__item:nth-child(3),
+.card--star__item:nth-child(4) {
+  background-image: url(images/star-active.svg);
+}
+
+.card--price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 19px;
+
+  margin-bottom: 20px;
 }
 
-.price {
+.card--price__value {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -80,8 +89,7 @@ html {
 
   width: 170px;
   height: 40px;
-
-  margin-top: 20px;
+  
   padding-top: 11px;
   border-radius: 5px;
 
