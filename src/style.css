@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --star: url(images/star.svg);
+  --active_star: url(images/star-active.svg);
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #000;
+}
+
+.card {
+  box-sizing: border-box;
+  height: 403px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 14px 14px;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  padding: 0 4.5px;
+  margin-bottom: 45px;
+}
+
+.card__description {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__code {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__row_comment-position {
+  margin-bottom: 22px;
+}
+
+.comment__plate {
+  display: flex;
+}
+
+.comment__star {
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background: var(--star) no-repeat center;
+}
+
+.comment__review {
+  padding-bottom: 1px;
+}
+
+.comment__plate_stars--4 .comment__star:nth-child(-n+4) {
+  background-image: var(--active_star);
+}
+
+.card__row_price-position {
+  margin-bottom: 18px;
+}
+
+.price__value {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.card__button {
+  display: block;
+  width: 170px;
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  transition: all 0.25s;
+}
+
+.card__button:hover {
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
+  background-color: #fff;
+  color: #00acdc;
+}
