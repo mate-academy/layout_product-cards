@@ -53,20 +53,6 @@ body {
   justify-content: center;
 }
 
-.rating__star {
-  display: inline-block;
-  background-image: url(./images/star-active.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 15px;
-  width: 15px;
-  margin-right: 4px;
-}
-
-.rating__star:last-child {
-  background-image: url(./images/star.svg);
-}
-
 .card__price {
   display: flex;
   justify-content: space-between;
@@ -104,4 +90,22 @@ body {
   background: #fff;
   border: 1px solid #00acdc;
   color: #00acdc;
+}
+
+.rating__star {
+  display: inline-block;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+}
+
+.stars--1 .rating__star:first-child,
+.stars--2 .rating__star:nth-child(-n+2),
+.stars--3 .rating__star:nth-child(-n+3),
+.stars--4 .rating__star:nth-child(-n+4),
+.stars--5 .rating__star {
+  background-image: url(./images/star-active.svg);
 }
