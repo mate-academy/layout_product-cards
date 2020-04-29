@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
@@ -18,6 +17,7 @@ body {
 }
 
 .product_card {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 1px solid #f3f3f3;
@@ -33,25 +33,35 @@ body {
 }
 
 .product_card__text {
+  line-height: 15px;
+  font-weight: 500;
   margin-top: 11px;
   margin-left: 14px;
   font-size: 12px;
 }
 
 .product_card__code {
+  font-size: 11px;
+  line-height: 13px;
   margin: 5px 14px;
   font-weight: 400;
 }
 
 .product_card__price {
+  display: flex;
+  margin-left: -1px;
+  justify-content: space-between;
   margin-top: 0;
 }
 
 .product_card__info {
+  font-size: 11px;
+  line-height: 13px;
   margin: 25px 15px;
 }
 
 .product_card__price-item {
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   margin-top: 21px;
@@ -59,14 +69,24 @@ body {
 }
 
 .product_card__button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
   margin-top: -4px;
 }
 
 .product_card__rate {
+  display: flex;
+  margin-left: -1px;
+  justify-content: space-between;
   margin-top: 15px;
 }
 
 .product_card__button-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   line-height: 40px;
   font-weight: bold;
   text-decoration: none;
@@ -86,6 +106,8 @@ body {
 }
 
 .product_card__respond {
+  font-size: 11px;
+  line-height: 13px;
   margin-top: 1px;
   margin-right: 14px;
 }
@@ -112,43 +134,6 @@ body {
   background-image: var(--starGold);
 }
 
-.product_card__button-item,
-.product_card {
-  box-sizing: border-box;
-}
-
-.product_card__price-item,
-.product_card__text {
-  font-weight: 500;
-}
-
-.product_card__text {
-  line-height: 15px;
-}
-
-.product_card__respond,
-.product_card__info,
-.product_card__code {
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.product_card__rate,
-.product_card__price {
-  margin-left: -1px;
-  justify-content: space-between;
-}
-
-.rating,
-.product_card__button-item,
-.product_card__rate,
-.product_card__button,
-.product_card__price {
+.rating {
   display: flex;
-}
-
-.product_card__button-item,
-.product_card__button {
-  justify-content: center;
-  align-items: center;
 }
