@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --star: url(./images/star.svg);
+  --star-active: url(./images/star-active.svg);
+}
+
 .product-card {
   font-family: Roboto;
   display: flex;
@@ -43,9 +48,9 @@
   margin-top: 4px;
 }
 
-.stars__star {
-  --star: url(./images/star.svg);
-  --star-active: url(./images/star-active.svg);
+.stars__star,
+.stars--0 .stars__star:nth-child(n+1) {
+  background-image: var(--star);
   background-position: center;
   background-repeat: no-repeat;
   width: 15px;
@@ -56,13 +61,13 @@
   margin-right: 4px;
 }
 
-.stars--0 .stars__star:nth-child(n+1),
+/* ,
 .stars--1 .stars__star:nth-child(n+2),
 .stars--2 .stars__star:nth-child(n+3),
 .stars--3 .stars__star:nth-child(n+4),
 .stars--4 .stars__star:nth-child(n+5) {
-  background-image: var(--star);
-}
+
+} */
 
 .stars--1 .stars__star:nth-child(-n+1),
 .stars--2 .stars__star:nth-child(-n+2),
