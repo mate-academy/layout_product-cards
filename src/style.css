@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --black: hsl(0, 0%, 0%);
+  --shadow-black: hsla(0, 0%, 0%, 0.07);
+  --white: hsl(0, 0%, 100%);
+  --border-white: hsl(0, 0%, 95%);
+  --button-blue: hsl(193, 100%, 43%);
+}
+
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+body,
+h3 {
+  margin: 0;
+}
+
+span {
+  display: inline-block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 200px;
+  padding: 30px 14px 15px;
+
+  background: var(--white);
+  border: 1px solid var(--border-white);
+  border-radius: 5px;
+
+  color: var(--black);
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px var(--shadow-black);
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  object-fit: contain;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+
+  line-height: 15px;
+  margin: 45px 0 5px;
+}
+
+.card__item-code {
+  margin: 0 auto 15px 0;
+}
+
+.card__stretch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  min-width: 170px;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__star {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background: url(./images/star.svg) center no-repeat;
+}
+
+.stars--1 .card__star:nth-child(-n+1),
+.stars--2 .card__star:nth-child(-n+2),
+.stars--3 .card__star:nth-child(-n+3),
+.stars--4 .card__star:nth-child(-n+4),
+.stars--5 .card__star:nth-child(-n+5) {
+  background: url(./images/star-active.svg) center no-repeat;
+}
+
+.card__price {
+  position: absolute;
+  top: 5px;
+}
+
+.card__price-tag {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 19px;
+}
+
+.card__button {
+  width: 170px;
+  height: 40px;
+  background: var(--button-blue);
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+
+  font-weight: 700;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.card__button:hover {
+  background-color: var(--white);
+  color: var(--button-blue);
+  border: 1px solid var(--button-blue);
+  border-radius: 5px;
+}
