@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --star: url(images/star.svg);
+  --active_star: url(images/star-active.svg);
+}
+
+body {
+  margin: 0;
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/* <---card---> */
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 30px 20px 45px;
+}
+
+.card__model {
+  width: 170px;
+  
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 5px;
+}
+
+.card__text {
+  align-self: start;
+  font-weight: 400;
+  line-height: 13px;
+  margin: 0 0 15px 14px;
+}
+
+/* >---card---< */
+
+/* <---rate---> */
+
+.rate {
+  display: flex;
+  width: 170px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rate__stars {
+  display: flex;
+}
+
+.rate__item {
+  width: 15px;
+  height: 15px;
+  background: var(--star) no-repeat center;
+}
+
+.rate__item:not(:first-child) {
+  margin-left: 4px;
+}
+
+.stars--1 > :nth-child(-n+1),
+.stars--2 > :nth-child(-n+2),
+.stars--3 > :nth-child(-n+3),
+.stars--4 > :nth-child(-n+4),
+.stars--5 > :nth-child(-n+5) {
+  background-image: var(--active_star);
+}
+
+/* --->rate<--- */
+
+/* <---price---> */
+
+.price {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.price__text {
+  line-height: 14px;
+}
+
+.price__sum--font {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* --->price<--- */
+
+/* <---btn---> */
+
+.btn {
+  width: 170px;
+  height: 40px;
+  margin-bottom: 15px;
+
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+
+  padding: 11px 0;
+
+  background: #00acdc;
+  border-radius: 5px;
+  border: 0;
+}
+
+.btn:hover {
+  color: #00acdc;
+  background: #fff;
+  border: 1px solid #00acdc;
+}
+
+/* --->btn<--- */
