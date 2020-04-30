@@ -1,0 +1,105 @@
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+body,
+p,
+h3 {
+  margin: 0;
+}
+
+.product-card {
+  width: 200px;
+  height: 403px;
+  box-sizing: border-box;
+  padding: 30px 14px 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  padding: 0 5px;
+  margin-bottom: 45px;
+}
+
+.product-card__description {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.product-card__code {
+  margin-bottom: 15px;
+}
+
+.product-card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-card__stars {
+  display: flex;
+}
+
+.product-card__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background: url("images/star-active.svg") center no-repeat;
+}
+
+.product-card__stars--0 > .product-card__star,
+.product-card__stars--1 > .product-card__star:nth-child(1n+2),
+.product-card__stars--2 > .product-card__star:nth-child(1n+3),
+.product-card__stars--3 > .product-card__star:nth-child(1n+4),
+.product-card__stars--4 > .product-card__star:nth-child(1n+5) {
+  background-image: url("images/star.svg");
+}
+
+.product-card__price-descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  line-height: 14px;
+}
+
+.product-card__price-value {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.product-card__buy-button {
+  color: #fff;
+  background-color: #00acdc;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Roboto-Bold", Arial, sans-serif;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.product-card__buy-button:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  line-height: 38px;
+}
