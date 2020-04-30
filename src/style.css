@@ -9,7 +9,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.card {
+.goods {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -21,34 +21,34 @@ body {
   border-radius: 5px;
 }
 
-.card__imac {
+.goods__imac {
   width: 160px;
   height: 134px;
   margin: 0 5px 45px;
 }
 
-.card__photo {
+.goods__photo {
   width: 100%;
   height: 100%;
 }
 
-.card__about {
+.goods__about {
   margin-bottom: 15px;
   height: 48px;
 }
 
-.card__product {
+.goods__product {
   margin: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
-.card__zipcode {
+.goods__zipcode {
   margin: 4px 0 0;
 }
 
-.card__rate {
+.goods__rate {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,29 +62,31 @@ body {
   height: 15px;
   width: 15px;
   margin-right: 4px;
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("images/star.svg") no-repeat center;
 }
 
-.stars__star:nth-child(-n + 4) {
-  background-image: url("images/star-active.svg");
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
 }
 
-.card__value {
+.goods__value {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 20px 0;
 }
 
-.card__price {
+.goods__price {
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
 }
 
-.card__btn {
+.goods__btn {
   display: block;
   box-sizing: border-box;
   text-align: center;
@@ -101,7 +103,7 @@ body {
   background-color: #00acdc;
 }
 
-.card__btn:hover {
+.goods__btn:hover {
   background-color: #fff;
   color: #00acdc;
 }
