@@ -1,7 +1,7 @@
 body {
   margin: 0;
 
-  font-family: Roboto;
+  font-family: Roboto, Helvetica;
   font-size: 11px;
   line-height: 13px;
 }
@@ -18,6 +18,9 @@ body {
 }
 
 .product-card__image {
+  width: 160px;
+  height: 134px;
+
   margin: 16px 5px 42px;
 }
 
@@ -59,7 +62,11 @@ body {
   background-position: center;
 }
 
-.product-card__star:nth-child(-n + 4) {
+.stars--1 .product-card__star:first-child,
+.stars--2 .product-card__star:nth-child(-n + 2),
+.stars--3 .product-card__star:nth-child(-n + 3),
+.stars--4 .product-card__star:nth-child(-n + 4),
+.stars--5 .product-card__star:nth-child(n) {
   background-image: url("images/star-active.svg");
 }
 
@@ -75,7 +82,7 @@ body {
   align-items: baseline;
 }
 
-.product-card__price span {
+.product-card__price--number {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
