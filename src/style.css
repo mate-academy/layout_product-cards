@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --inactive-star: url(./images/star.svg);
+  --active-star: url(./images/star-active.svg);
+}
+
+html {
+  font-family: "Roboto";
+}
+
+body {
+  margin: 0;
+}
+
+.product-box {
+  position: relative;
+  height: 403px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.product-box:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+img {
+  margin: 30px 20px 45px;
+  height: 134px;
+  width: 160px;
+}
+
+.product-name {
+  margin: 0 15px 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.product-num {
+  height: 13px;
+  margin-left: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.star {
+  display: inline-block;
+  background: var(--inactive-star);
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div {
+  height: 15px;
+}
+
+.stars--1 .star:first-child,
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star {
+  background-image: var(--active-star);
+}
+
+.wrapper {
+  display: inline-block;
+  width: 91px;
+  height: 15px;
+  justify-content: space-between;
+}
+
+.quality-container {
+  justify-content: space-between;
+  display: flex;
+  margin: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+}
+
+.price-num {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.price-container {
+  align-items: flex-end;
+  display: flex;
+  flex-basis: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  justify-content: space-between;
+  margin: 5px 15px 20px;
+}
+
+.button-buy {
+  margin: 0 15px 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #00acdc;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.button-buy:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  line-height: 38px;
+}
