@@ -3,8 +3,10 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   font-family: Roboto, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
 }
 
 .card {
@@ -21,23 +23,19 @@ html {
   width: 160px;
   height: 134px;
   margin-left: 5px;
-  margin-bottom: 41px;
+  margin-bottom: 42px;
 }
 
 .card__info {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
-.card--description {
+.card__description {
+  margin-bottom: 5px;
+
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-}
-
-.small {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 13px;
 }
 
 .rate {
@@ -46,11 +44,11 @@ html {
   margin-bottom: 19px;
 }
 
-.stars {
+.rate__stars {
   display: flex;
 }
 
-.star--item {
+.rate__stars--item {
   height: 15px;
   width: 15px;
   margin-right: 4px;
@@ -58,15 +56,15 @@ html {
   background-repeat: no-repeat;
 }
 
-.stars--item:last-child {
+.rate__stars--item:last-child {
   margin-right: 0;
 }
 
-.star--1 .star--item:nth-child(-n + 1),
-.star--2 .star--item:nth-child(-n + 2),
-.star--3 .star--item:nth-child(-n + 3),
-.star--4 .star--item:nth-child(-n + 4),
-.star--5 .star--item {
+.rate__stars--1 .rate__stars--item:nth-child(-n + 1),
+.rate__stars--2 .rate__stars--item:nth-child(-n + 2),
+.rate__stars--3 .rate__stars--item:nth-child(-n + 3),
+.rate__stars--4 .rate__stars--item:nth-child(-n + 4),
+.rate__stars--5 .rate__stars--item {
   background-image: url(images/star-active.svg);
 }
 
@@ -78,13 +76,13 @@ html {
   margin-bottom: 20px;
 }
 
-.price--value {
+.price__value {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
 }
 
-.price--btn {
+.price__btn {
   display: flex;
   justify-content: center;
 
@@ -103,7 +101,7 @@ html {
   font-size: 14px;
 }
 
-.price--btn:hover {
+.price__btn:hover {
   background-color: #fff;
   border: 1px solid #00acdc;
   color: #00acdc;
