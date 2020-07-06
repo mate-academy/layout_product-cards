@@ -21,11 +21,6 @@ body {
   object-fit: contain;
 }
 
-.product-card p {
-  margin: 0;
-  user-select: none;
-}
-
 .product-card {
   width: 200px;
   padding: 30px 14px 15px;
@@ -51,7 +46,8 @@ body {
 }
 
 .product-card__code {
-  padding-bottom: 15px; /* why it dont work with margin property? */
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 .product-details-row {
@@ -72,7 +68,23 @@ body {
   background: url(/images/star.svg) center no-repeat;
 }
 
-.product-stars__star:nth-child(-n+4) {
+.product-stars_one .product-stars__star:nth-child(-n+1) {
+  background-image: url(/images/star-active.svg);
+}
+
+.product-stars_two .product-stars__star:nth-child(-n+2) {
+  background-image: url(/images/star-active.svg);
+}
+
+.product-stars_three .product-stars__star:nth-child(-n+3) {
+  background-image: url(/images/star-active.svg);
+}
+
+.product-stars_four .product-stars__star:nth-child(-n+4) {
+  background-image: url(/images/star-active.svg);
+}
+
+.product-stars_five .product-stars__star:nth-child(-n+5) {
   background-image: url(/images/star-active.svg);
 }
 
