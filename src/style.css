@@ -6,13 +6,14 @@ body {
   margin: 0;
   font-family: Roboto, serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   color: #000;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  align-content: center;
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
@@ -36,15 +37,13 @@ body {
 .card__code {
   font-size: 11px;
   line-height: 13px;
-  margin: 6px 15px;
+  margin: 6px 15px 0;
 }
 
 .card__rating {
   margin: 15px 15px 0;
-}
-
-.card__stars {
-  float: left;
+  display: inherit;
+  justify-content: space-between;
 }
 
 .card__star {
@@ -66,7 +65,6 @@ body {
 }
 
 .card__reviews {
-  float: right;
   font-size: 11px;
   line-height: 13px;
   text-align: right;
@@ -74,13 +72,14 @@ body {
 
 .card__price {
   margin: 15px 15px 0;
-  line-height: 13px;
+  display: inherit;
+  justify-content: space-between;
 }
 
 .card__price-label {
   font-size: 11px;
-  text-align: right;
-  float: left;
+  line-height: 13px;
+  padding-top: 4px;
 }
 
 .card__price-amount {
@@ -88,7 +87,6 @@ body {
   font-size: 16px;
   line-height: 19px;
   text-align: right;
-  float: right;
 }
 
 .card__button {
@@ -103,4 +101,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+}
+
+.card__button:hover {
+  color: #00acdc;
+  background: #fff;
+  border: 1px solid #00acdc;
 }
