@@ -1,0 +1,129 @@
+:root {
+  --card-bg-color: #fff;
+  --card-brdr-color: #f3f3f3;
+  --btn-main-color: #00acdc;
+  --btn-text-color: #fff;
+  --btn-hover-bg-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  height: 403px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-brdr-color);
+  border-radius: 5px;
+}
+
+.card__photo {
+  margin: 16px 0 41px;
+}
+
+.card__photo-image {
+  height: 134px;
+  width: 160px;
+}
+
+.card__name {
+  display: inline;
+  margin: 0 0 5px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__code {
+  display: inline;
+  text-align: left;
+  width: 100%;
+
+}
+
+.card__code,
+.card__rate-feedback,
+.card__price-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__rate {
+  width: 100%;
+  height: 15px;
+  margin: 16px 0 19px;
+  display: inherit;
+  justify-content: space-between;
+}
+
+.stars__item {
+  display: inline-block;
+  margin: 0 1px;
+  padding-bottom: 2px;
+  content: url("images/star.svg");
+}
+
+.stars--4 :nth-child(-n+4) {
+  content: url("images/star-active.svg");
+}
+
+.card__price-text {
+  padding-top: 6px;
+
+}
+
+.card__price {
+  width: 100%;
+  height: 19px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price-amount {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card > .card__btn {
+  width: 100%;
+}
+
+.card__btn-link {
+  display: block;
+  text-decoration: none;
+  font-style: normal;
+  line-height: 16px;
+  padding: 11px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--card-bg-color);
+  background: var(--btn-main-color);
+  border: 1px solid var(--btn-main-color);
+  border-radius: 5px;
+}
+
+.card__btn-link:hover {
+  background: var(--card-bg-color);
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: var(--btn-main-color);
+}
