@@ -14,7 +14,6 @@ body {
 }
 
 .product-card_image {
-  content: url("./images/imac.jpeg");
   width: 160px;
   height: 134px;
   margin: 30px 0;
@@ -30,7 +29,7 @@ body {
   font-size: 12px;
   line-height: 15px;
   margin-top: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .product-card_product-code {
@@ -39,30 +38,34 @@ body {
   font-weight: normal;
   font-size: 11px;
   line-height: 12px;
-  margin-bottom: 16px;
 }
 
 .product-card_review-block {
   display: flex;
+  margin-top: 15px;
 }
 
 .review-block_stars {
   display: flex;
-  justify-content: space-around;
   width: 91px;
   height: 15px;
-  margin-top: 1px;
 }
 
 .review-block_stars_star_item {
   width: 13px;
   height: 12px;
+  margin-right: 5px;
+  margin-left: 1px;
+  margin-top: 1px;
   content: url("./images/star.svg");
 }
 
-.review-block_stars :nth-child(-n + 4) {
+.stars--5,
+.stars--1 :first-child,
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4) {
   content: url("./images/star-active.svg");
-  margin-right: 4px;
 }
 
 .review-block_review-count {
@@ -87,7 +90,7 @@ body {
 
 .product-price-block_text {
   margin-left: 0;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .product-price-block_price {
@@ -96,6 +99,7 @@ body {
   font-size: 16px;
   line-height: 19px;
   text-align: right;
+  margin-top: 1px;
 }
 
 .content-block_link-container {
