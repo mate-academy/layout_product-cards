@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
 }
 
 .product-card {
-  box-sizing: border-box;
   width: 200px;
   background-color: #fafafa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
@@ -47,7 +50,11 @@ body {
   display: flex;
 }
 
-.stars {
+.stars--1:first-child,
+.stars--2:nth-child(-n+2),
+.stars--3:nth-child(-n+3),
+.stars--4:nth-child(-n+4),
+.stars--5 {
   background: url(images/star.svg) no-repeat center;
   height: 15px;
   width: 15px;
