@@ -2,10 +2,17 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
+  padding: 0;
   font-family: "Roboto", sans-serif;
   color: #000;
+  font-size: 100%;
+  font-weight: inherit;
 }
 
 .product {
@@ -34,6 +41,7 @@ body {
 .product__code {
   align-self: start;
   font-size: 11px;
+  font-weight: normal;
   line-height: 13px;
   margin-top: 5px;
 }
@@ -50,15 +58,17 @@ body {
 }
 
 .stars__star {
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(images/star.svg) no-repeat center;
   width: 15px;
   height: 15px;
   margin-right: 4px;
 }
 
-.product__rate_stars .stars__star:nth-child(-n+4) {
+.stars--5 .stars__star,
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
 
@@ -101,6 +111,7 @@ body {
   width: 100%;
   height: 100%;
   background: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
@@ -113,6 +124,5 @@ body {
 
 .product__button_link:hover {
   background: #fff;
-  border: 1px solid #00acdc;
   color: #00acdc;
 }
