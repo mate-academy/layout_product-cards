@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+h3 {
+  margin: 0;
+}
+
 body {
   margin: 0;
 
@@ -50,7 +54,7 @@ body {
   margin-bottom: 20px;
 }
 
-.reviews__stars {
+.stars {
   display: flex;
 }
 
@@ -58,11 +62,15 @@ body {
   width: 15px;
   height: 15px;
   margin-right: 4px;
-
+  
   background: url(images/star.svg) no-repeat center;
 }
 
-.stars__item:nth-child(-n+4) {
+.stars--1 .stars__item:first-child,
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
@@ -90,14 +98,13 @@ body {
   color: #fff;
   text-decoration: none;
 
+  border: 1px solid transparent;
   border-radius: 5px;
   background: #00acdc;
 }
 
 .card__button:hover {
-  border: 1px solid #00acdc;
-  border-radius: 5px;
   color: #00acdc;
-
+  border-color: #00acdc;
   background: #fff;
 }
