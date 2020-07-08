@@ -3,6 +3,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -52,10 +56,11 @@ body {
   margin-right: 4px;
 }
 
-.card__stars > :nth-child(-n+4),
-.card__stars > :nth-child(-n+3),
-.card__stars > :nth-child(-n+2),
-.card__stars > :nth-child(-n+1) {
+.stars--5 .star,
+.stars--1 .star:first-child,
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
 
@@ -88,6 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   background: hsl(193, 100%, 43%);
+  border: 1px solid hsl(193, 100%, 43%);
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -99,8 +105,5 @@ body {
 
 .card__button:hover {
   background-color: white;
-  border: 1px solid hsl(193, 100%, 43%);
-  border-radius: 5px;
-  box-sizing: border-box;
   color: hsl(193, 100%, 43%);
 }
