@@ -55,7 +55,7 @@ body {
   margin: 15px 14px;
 }
 
-.product-card__onestar {
+.stars__item {
   width: 15px;
   height: 15px;
   background-image: url(images/star-active.svg);
@@ -64,7 +64,7 @@ body {
   background-position: center;
 }
 
-.product-card__onestar:nth-child(5) {
+.stars__item:nth-child(n + 5) {
   background-image: url(images/star.svg);
 }
 
@@ -108,6 +108,7 @@ body {
 .product-card__buy {
   font-weight: bold;
   font-size: 14px;
+  height: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
@@ -116,12 +117,11 @@ body {
   color: #fff;
   width: 170px;
   text-decoration: none;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
 }
 
 .product-card__buy:hover {
   background: #fff;
-  border: 1px solid #00acdc;
-  box-sizing: border-box;
-  height: 40px;
   color: #00acdc;
 }
