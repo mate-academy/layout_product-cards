@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -6,10 +10,13 @@ body {
   margin: 0;
 }
 
+h3 {
+  margin: 0;
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   width: 200px;
   padding: 14px;
   background: #fff;
@@ -19,11 +26,11 @@ body {
 
 .card__img {
   padding: 16px 5px 0;
-  height: 134px;
-  width: 160px;
+  height: 150px;
+  width: 170px;
 }
 
-.card__descr {
+.card__description {
   margin-top: 45px;
   font-weight: 500;
   font-size: 12px;
@@ -31,7 +38,6 @@ body {
 }
 
 .card__text {
-  font-weight: normal;
   font-size: 11px;
   line-height: 13px;
 }
@@ -60,6 +66,10 @@ body {
   margin-right: 4px;
 }
 
+.stars--5 .card__star,
+.stars--1 .card__star:first-child,
+.stars--2 .card__star:nth-child(-n+2),
+.stars--3 .card__star:nth-child(-n+3),
 .stars--4 .card__star:nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
@@ -78,10 +88,10 @@ body {
 }
 
 .card__btn {
-  box-sizing: border-box;
   margin-top: 20px;
   height: 40px;
   background: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
   text-align: center;
 }
@@ -102,7 +112,6 @@ body {
 
 .card__btn:hover {
   background: #fff;
-  border: 1px solid #00acdc;
 }
 
 .card__btn-text:hover {
