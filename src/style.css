@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+}
+
+p {
+  margin: 0;
+}
+
+.item {
+  flex: 0 0 200px ;
+  padding: 14px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.item__photo {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.item__img {
+  width: 160px;
+  height: 134px;
+}
+
+.item__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.item__cod {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.item__rate,
+.item__cost {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.item__stars {
+  display: flex;
+}
+
+.item__star {
+  background-image: url(images/star.svg);
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.item__stars--1 .item__star:nth-child(-n + 1),
+.item__stars--2 .item__star:nth-child(-n + 2),
+.item__stars--3 .item__star:nth-child(-n + 3),
+.item__stars--4 .item__star:nth-child(-n + 4),
+.item__stars--5 .item__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.item__cost {
+  align-items: baseline;
+}
+
+.item__currency {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.item__buy {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00acdc;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.item__buy:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #00acdc;
+}
