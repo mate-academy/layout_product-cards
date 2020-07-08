@@ -62,7 +62,11 @@ body {
   margin-right: 4px;
 }
 
-.card--4 .card__item:nth-child(-n+4) {
+.card--1 .card__item:nth-child(1),
+.card--2 .card__item:nth-child(-n+2),
+.card--3 .card__item:nth-child(-n+3),
+.card--4 .card__item:nth-child(-n+4),
+.card--5 .card__item:nth-child(n) {
   background-image: url(images/star-active.svg);
 }
 
@@ -86,6 +90,7 @@ body {
 }
 
 .card__button {
+  box-sizing: border-box;
   margin: 0;
   text-align: center;
   background: #00acdc;
