@@ -31,6 +31,9 @@ body,
   height: 403px;
   max-width: 200px;
   flex-direction: column;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .product {
@@ -38,9 +41,6 @@ body,
   border: 1px solid #f3f3f3;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  align-content: center;
 }
 
 .product__photo {
@@ -65,7 +65,6 @@ body,
 
 .product__reviews {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   width: 170px;
@@ -76,7 +75,6 @@ body,
 .product__price {
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   width: 170px;
@@ -104,6 +102,7 @@ body,
   line-height: 16px;
   color: #fff;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .product__buy:hover {
@@ -127,6 +126,10 @@ body,
   margin-right: 4px;
 }
 
-.stars--4 .line__star:nth-child(-n+4) {
+.stars--5 .line__star,
+.stars--4 .line__star:nth-child(-n+4),
+.stars--3 .line__star:nth-child(-n+3),
+.stars--2 .line__star:nth-child(-n+2),
+.stars--1 .line__star:first-child {
   background-image: url(./images/star-active.svg);
 }
