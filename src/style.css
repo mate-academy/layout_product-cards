@@ -1,12 +1,13 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
 }
 
 body * {
   display: flex;
   box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
 }
 
 .card,
@@ -58,7 +59,11 @@ body * {
   background-repeat: no-repeat;
 }
 
-.card__stars-container:nth-child(-n+4) {
+.stars--1 .card__stars-container:first-child,
+.stars--2 .card__stars-container:nth-child(-n+2),
+.stars--3 .card__stars-container:nth-child(-n+3),
+.stars--4 .card__stars-container:nth-child(-n+4),
+.stars--5 .card__stars-container:nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -74,6 +79,7 @@ body * {
 .card__info-price {
   margin-bottom: 20px;
   justify-content: space-between;
+  align-items: flex-end;
   flex-grow: 1;
 }
 
@@ -91,6 +97,7 @@ body * {
   height: 40px;
   justify-content: center;
   align-items: center;
+  border: 1px solid #00acdc;
   border-radius: 5px;
   background-color: #00acdc;
   font-size: 14px;
@@ -102,5 +109,4 @@ body * {
 .card__button-buy:hover {
   background-color: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
