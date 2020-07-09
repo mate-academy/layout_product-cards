@@ -1,0 +1,132 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.product__code,
+.product__comments,
+.product__word {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+body,
+.row__item,
+.product__name,
+.product__code,
+.product__comments {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.row__item {
+  height: 403px;
+  max-width: 200px;
+  flex-direction: column;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.product__photo {
+  position: relative;
+  width: 160px;
+  flex: 134px 0 0;
+  margin: 30px 20px 45px;
+}
+
+.product__description {
+  position: relative;
+  width: 170px;
+  margin-bottom: 14px;
+}
+
+.product__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 6px;
+}
+
+.product__reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 170px;
+  margin-bottom: 19px;
+  padding: 0;
+}
+
+.product__price {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 170px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.product__figure {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.product__buy {
+  display: flex;
+  flex: 40px 0 0;
+  width: 170px;
+  justify-content: center;
+  align-items: center;
+  background: #00acdc;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.product__buy:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
+
+.line {
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.line__star {
+  flex: 15px 0 0;
+  height: 15px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.stars--4 .line__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
