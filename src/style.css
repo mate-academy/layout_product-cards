@@ -12,83 +12,93 @@ html {
 .product {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background: white;
-  width: 200px;
+  max-width: 200px;
   height: 400px;
-  margin-bottom: 51px;
+  box-sizing: border-box;
+  padding: 30px 14px 14px;
 }
 
 .product__img {
   width: 160px;
   height: 134px;
-  margin: 30px auto;
 }
 
 .product__title {
   width: 170px;
   font-size: 12px;
   line-height: 15px;
-  height: 31px;
-  margin: 15px 14px 0;
+  margin-top: 45px;
+  margin-bottom: 6px;
   font-weight: 500;
 }
 
 .product__code {
   font-weight: normal;
-  margin: 5px 14px;
+  margin-bottom: 15px;
+  margin-left: -70px;
+}
+
+.product__raiting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .product__stars {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  margin: 0;
 }
 
-.product__stars :nth-child(1),
-.product__stars :nth-child(-n + 2),
-.product__stars :nth-child(-n + 3),
-.product__stars :nth-child(-n + 4) {
+.stars__cell {
+  display: flex;
+  justify-content: start;
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background: url(images/star.svg) no-repeat center;
+}
+
+.stars--4 :nth-child(-n + 1),
+.stars--4 :nth-child(-n + 2),
+.stars--4 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4) {
   background: url(images/star-active.svg) no-repeat center;
 }
 
-.star {
-  display: flex;
-  width: 15px;
-  height: 15px;
-  align-self: flex-end;
-}
-
 .product__reviews {
-  display: flex;
-  justify-content: flex-start;
+  margin-left: 16px;
+  line-height: 13px;
+  height: 13px;
 }
 
 .product__price {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  padding: 10px 15px;
-  margin-top: 1px;
+  padding-top: 20px;
 }
 
 .product__total {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
+  margin-left: 60px;
+  margin-right: 0;
+}
+
+.product__text {
+  margin-left: 0;
 }
 
 .product__link {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  padding-left: 15px;
-  padding-bottom: 0;
-  margin-top: 5px;
+  margin-top: 16px;
 }
 
 .product__button {
@@ -102,7 +112,6 @@ html {
   background-color: #00acdc;
   border-radius: 5px;
   color: white;
-  text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
