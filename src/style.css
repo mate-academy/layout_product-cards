@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 403px;
+  margin: 0;
+  padding: 30px 14px 14px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 0 5px 45px;
+}
+
+.card__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 5px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  margin: 0 0 15px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15px;
+  margin: 0 0 20px;
+}
+
+.card--feedback .card__code {
+  margin: 0;
+}
+
+.card__stars {
+  display: flex;
+  align-items: center;
+}
+
+.card__item {
+  height: 15px;
+  width: 15px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5px;
+  margin-right: 4px;
+}
+
+.card--1 .card__item:nth-child(1),
+.card--2 .card__item:nth-child(-n+2),
+.card--3 .card__item:nth-child(-n+3),
+.card--4 .card__item:nth-child(-n+4),
+.card--5 .card__item:nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.card__capture {
+  font-size: 11px;
+  line-height: 13px;
+  margin: 0;
+}
+
+.card__number {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__button {
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
+  margin: 0;
+  text-align: center;
+  background: #00acdc;
+  border-radius: 5px;
+  width: 170px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 40px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
