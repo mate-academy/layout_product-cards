@@ -15,8 +15,9 @@ html {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background: white;
-  width: 198px;
-  height: 401px;
+  width: 200px;
+  height: 400px;
+  margin-bottom: 51px;
 }
 
 .product__img {
@@ -39,33 +40,23 @@ html {
   margin: 5px 14px;
 }
 
-.product__stars,
-.product__price {
+.product__stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  margin: 0;
 }
 
-.product__container {
-  display: flex;
-  justify-content: space-between;
-  width: 91px;
+.product__stars :nth-child(-n + 4) {
+  background: url(images/star-active.svg) no-repeat center;
 }
 
 .star {
   display: flex;
   width: 15px;
   height: 15px;
-  
-}
-
-.product__cell {
-  background: url(images/star-active.svg) no-repeat center;
-}
-
-.product__cell--last {
-  background: url(images/star.svg) no-repeat center;
+  align-self: flex-end;
 }
 
 .product__reviews {
@@ -73,11 +64,18 @@ html {
   justify-content: flex-start;
 }
 
-.product__total {
+.product__price {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 15px;
+  margin-top: 1px;
+}
+
+.product__total {
   font-size: 16px;
   font-weight: bold;
+  line-height: 19px;
 }
 
 .product__link {
@@ -85,9 +83,9 @@ html {
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  padding-top: 14px;
   padding-left: 15px;
   padding-bottom: 0;
+  margin-top: 5px;
 }
 
 .product__button {
@@ -104,6 +102,7 @@ html {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 .product__button:hover {
