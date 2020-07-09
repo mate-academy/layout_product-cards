@@ -58,14 +58,18 @@
 }
 
 .stars__item {
+  display: flex;
+  align-items: center;
+  background: url(/images/star.svg) no-repeat center;
+  background-size: auto;
   width: 15px;
   height: 15px;
   margin-left: 4px;
-  display: flex;
-  align-items: center;
 }
 
-.stars__container :last-child {
+.stars__container :nth-child(-n+4) {
+  background: url(/images/star-active.svg) no-repeat center;
+  background-size: auto;
   margin-right: 0;
 }
 
@@ -90,7 +94,7 @@
   line-height: 16px;
   padding: 11px 10px;
   border-radius: 5px;
-  border: 1px solid transparent;
+  border: 1px solid #00acdc;
   background: #00acdc;
   text-transform: uppercase;
   color: #fff;
@@ -98,7 +102,6 @@
 }
 
 .press__batton:hover {
-  border-color: #00acdc;
   background-color: #fff;
   color: #00acdc;
   cursor: pointer;
