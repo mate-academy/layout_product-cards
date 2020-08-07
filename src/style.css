@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap&subset=cyrillic");
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.products__item {
+  width: 200px;
+  height: 403px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__img {
+  align-self: center;
+  margin-top: 30px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  width: 170px;
+  margin-top: 45px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__code {
+  margin: 5px 0 0 14px;
+  align-self: flex-start;
+}
+
+.card__rating {
+  margin-top: 16px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__stars--1 .card__star:nth-child(1),
+.card__stars--2 .card__star:nth-child(-n+2),
+.card__stars--3 .card__star:nth-child(-n+3),
+.card__stars--4 .card__star:nth-child(-n+4),
+.card__stars--5 .card__star:nth-child(n) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__star {
+  width: 15px;
+  height: 15px;
+  background: url("images/star.svg") no-repeat center;
+  margin-right: 4px;
+}
+
+.card__feedback {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #000;
+}
+
+.card__price {
+  width: 170px;
+  margin-top: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__price-value {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__price-text {
+  align-self: flex-end;
+}
+
+.card__buy-link {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 11px 0 12px;
+  height: 40px;
+  width: 170px;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  border-radius: 5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.card__buy-link:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
+
+.card__star:hover {
+  transform: scale(2);
+}
