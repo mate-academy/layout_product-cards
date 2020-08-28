@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+
+  --btn-height: 40px;
+  --accent-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 14px 15px;
+}
+
+.product-card__img {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 45px;
+}
+
+.product-card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.product-card__code {
+  margin-bottom: 15px;
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.product-card__price--value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.product-card__btn {
+  width: 100%;
+  height: var(--btn-height);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: var(--btn-height);
+  transition: all 0.3s;
+}
+
+.product-card__btn:hover {
+  background-color: white;
+  color: var(--accent-color);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
