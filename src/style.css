@@ -47,7 +47,8 @@ body {
   display: flex;
 }
 
-.card__star {
+.card__star,
+.stars_5 .card__star {
   background: url("images/star-active.svg") no-repeat center;
   width: 15px;
   height: 15px;
@@ -57,7 +58,11 @@ body {
   margin-left: 4px;
 }
 
-.card__star:nth-child(1n+5) {
+.stars_0 .card__star,
+.stars_1 .card__star:nth-child(1n+2),
+.stars_2 .card__star:nth-child(1n+3),
+.stars_3 .card__star:nth-child(1n+4),
+.stars_4 .card__star:nth-child(1n+5) {
   background: url("images/star.svg") no-repeat center;
 }
 
