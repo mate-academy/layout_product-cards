@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
+  box-sizing: border-box;
 }
 
 .card {
@@ -20,14 +21,13 @@
   width: 160px;
   display: block;
   margin: 0 auto;
-  padding-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .name {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
-  margin: 0;
   padding-bottom: 5px;
 }
 
@@ -38,17 +38,15 @@
 }
 
 .code {
-  margin: 0;
   line-height: 13px;
 }
 
 .cost {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
 }
 
-.stars {
+.review {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -60,16 +58,36 @@
   margin: 0;
 }
 
-.setOfStars {
+.stars {
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
 }
 
-.imgStar {
+.star {
   width: 15px;
   height: 15px;
+  background: url(/images/star.svg) no-repeat;
+  margin-right: 4px;
+  background-position: 50% 50%;
+}
+
+.stars--1 .star:nth-child(1),
+.stars--2 .star:nth-child(1),
+.stars--3 .star:nth-child(1),
+.stars--4 .star:nth-child(1),
+.stars--5 .star:nth-child(1),
+.stars--2 .star:nth-child(2),
+.stars--3 .star:nth-child(2),
+.stars--4 .star:nth-child(2),
+.stars--5 .star:nth-child(2),
+.stars--3 .star:nth-child(3),
+.stars--4 .star:nth-child(3),
+.stars--5 .star:nth-child(3),
+.stars--4 .star:nth-child(4),
+.stars--5 .star:nth-child(4),
+.stars--5 .star:nth-child(5) {
+  background: url(/images/star-active.svg) no-repeat;
+  background-position: 50% 50%;
 }
 
 .price {
@@ -79,29 +97,26 @@
   padding-bottom: 20px;
 }
 
-.star {
-  list-style: none;
-  margin-right: 4px;
-  display: inline-table;
-  line-height: 0;
-}
-
 .buy {
   display: block;
   margin: auto;
   height: 40px;
   width: 170px;
+  padding: 12px 0;
 
   background-color: #00acdc;
 
   font-size: 14px;
+  line-height: 14px;
   color: white;
   font-weight: bold;
+  text-decoration: none;
   text-transform: uppercase;
 
   border-radius: 5px;
   border: 1px solid #00acdc;
   outline: none;
+  text-align: center;
 }
 
 .buy:hover {
