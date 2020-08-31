@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -41,7 +43,6 @@ h3 {
 }
 
 .card__code {
-  width: 100%;
   margin-top: 5px;
   font-size: 11px;
   line-height: 13px;
@@ -61,14 +62,18 @@ h3 {
   display: flex;
 }
 
-.star {
+.card__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
   background: url(images/star-active.svg) no-repeat center;
 }
 
-.top_star_value ~ .star {
+.card__star--0 .card__star,
+.card__star--1 :nth-child(1) ~ .card__star,
+.card__star--2 :nth-child(2) ~ .card__star,
+.card__star--3 :nth-child(3) ~ .card__star,
+.card__star--4 :nth-child(4) ~ .card__star {
   background-image: url(images/star.svg);
 }
 
@@ -94,7 +99,6 @@ h3 {
 }
 
 .btn {
-  width: 100%;
   height: 40px;
 
   background-color: #00acdc;
