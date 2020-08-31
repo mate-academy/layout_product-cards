@@ -59,14 +59,20 @@ body {
   margin-right: 4px;
 }
 
-.star:nth-child(-n + 4) {
-  background-image: url("images/star-active.svg");
+.stars--1 .star:nth-child(1),
+.stars--2 .star:nth-child(-n + 2),
+.stars--3 .star:nth-child(-n + 3),
+.stars--4 .star:nth-child(-n + 4),
+.stars--5 .star:nth-child(-n + 5) {
+  background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 .price__num {
@@ -90,7 +96,6 @@ body {
   outline: none;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  margin-top: 20px;
 }
 
 .card__button:hover {
