@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  margin: 0;
+  line-height: 13px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 14px 14px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 45px;
+}
+
+.card__title {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+
+.card__subtitle {
+  margin-bottom: 15px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background: url("images/star.svg") no-repeat center;
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.card__price {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card_button {
+  background: #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  height: 40px;
+  width: 170px;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card_button:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
