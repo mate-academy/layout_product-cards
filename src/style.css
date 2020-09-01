@@ -51,24 +51,23 @@ body {
   display: flex;
 }
 
-.card__star,
-.stars_5 .card__star {
+.card__star {
   width: 15px;
   height: 15px;
 
-  background: url("images/star-active.svg") no-repeat center;
+  background: url("images/star.svg") no-repeat center;
 }
 
 .card__star:nth-child(1n+2) {
   margin-left: 4px;
 }
 
-.stars_0 .card__star,
-.stars_1 .card__star:nth-child(1n+2),
-.stars_2 .card__star:nth-child(1n+3),
-.stars_3 .card__star:nth-child(1n+4),
-.stars_4 .card__star:nth-child(1n+5) {
-  background: url("images/star.svg") no-repeat center;
+.stars_1 .card__star:nth-child(-1n+1),
+.stars_2 .card__star:nth-child(-1n+2),
+.stars_3 .card__star:nth-child(-1n+3),
+.stars_4 .card__star:nth-child(-1n+4),
+.stars_5 .card__star:nth-child(-1n+5) {
+  background: url("images/star-active.svg") no-repeat center;
 }
 
 .card__feedbacks {
@@ -95,26 +94,26 @@ body {
 }
 
 .card__btn {
-  padding: 12px 0;
+  display: block;
+
   margin-top: 20px;
 
   font-size: 14px;
   color: white;
+  text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
-  line-height: 16px;
   text-align: center;
+  line-height: 40px;
 
   background: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
 }
 
 .card__btn:hover {
-  padding: 11px 0;
-
   color: #00acdc;
 
   background: #fff;
-  border: 1px solid #00acdc;
   border-radius: 5px;
 }
