@@ -32,9 +32,8 @@ body {
 }
 
 .text-code,
-.text-price,
-.stars-block,
-.text-fb {
+.price__text,
+.feedback__text {
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -50,39 +49,36 @@ body {
 }
 
 .text-code {
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
-.star {
-  background-image: url("./images/star.svg");
-  background-size: center;
-  background-repeat: no-repeat;
+.stars__star {
+  background: url("./images/star.svg") no-repeat center;
   width: 15px;
   height: 15px;
 }
 
-.stars-block {
+.feedback {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 18px;
 }
 
-.stars-row {
+.stars {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-left: 1px;
-  margin-right: 1px;
 }
 
-.star:nth-child(-n+4) {
+.stars__star:nth-child(-n+4) {
   background-image: url("./images/star-active.svg");
   margin-right: 4px;
 }
 
-.text-fb {
-  margin-top: -1px;
+.feedback__text {
+  margin-top: 1px;
+  margin-bottom: 2px;
 }
 
 .price {
@@ -91,7 +87,8 @@ body {
   align-items: flex-end;
 }
 
-.price-value {
+.price__value {
+  margin-top: 1px;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
