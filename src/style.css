@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 11px;
   line-height: 13px;
   font-weight: normal;
@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 200px;
-  background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 30px 14px 15px;
@@ -56,7 +55,7 @@ body {
   display: flex;
 }
 
-.stars {
+.star {
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -65,11 +64,15 @@ body {
   margin-left: 4px;
 }
 
-.stars:first-child {
+.star:first-child {
   margin-left: 0;
 }
 
-.stars:nth-child(-n+4) {
+.stars--1 .star:nth-child(-n+1),
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star:nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -85,6 +88,7 @@ body {
   line-height: 16px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: #fff;
   padding: 12px 0 11px;
 
