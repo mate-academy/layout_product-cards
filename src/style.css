@@ -13,7 +13,7 @@ body {
   margin: 0;
 }
 
-.container {
+.card {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -25,21 +25,13 @@ body {
   font-family: inherit;
 }
 
-.photo {
+.card__photo {
   width: 160px;
   height: 134px;
   margin: 30px auto 45px;
 }
 
-.text-code,
-.price__text,
-.feedback__text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 11px;
-}
-
-.text-name {
+.card__title {
   width: 170px;
   font-weight: 500;
   font-style: normal;
@@ -48,40 +40,11 @@ body {
   margin: 0 auto 5px;
 }
 
-.text-code {
+.card__code {
   margin-bottom: 15px;
 }
 
-.stars__star {
-  background: url("./images/star.svg") no-repeat center;
-  width: 15px;
-  height: 15px;
-}
-
-.feedback {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 18px;
-}
-
-.stars {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.stars__star:nth-child(-n+4) {
-  background-image: url("./images/star-active.svg");
-  margin-right: 4px;
-}
-
-.feedback__text {
-  margin-top: 1px;
-  margin-bottom: 2px;
-}
-
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -94,13 +57,51 @@ body {
   line-height: 19px;
 }
 
-.botton {
+.card__code,
+.price__text,
+.feedback__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.card__feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.feedback__text {
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stars__star {
+  background: url("./images/star.svg") no-repeat center;
+  width: 15px;
+  height: 15px;
+}
+
+.stars__star:nth-child(-n+4) {
+  background-image: url("./images/star-active.svg");
+  margin-right: 4px;
+}
+
+.card__botton {
   width: 170px;
   height: 40px;
   margin: 20px auto 15px;
   
   background: #00acdc;
   border-radius: 5px;
+  border: 1px solid transparent;
 
   text-align: center;
   font-size: 14px;
@@ -110,8 +111,8 @@ body {
   color: white;
 }
 
-.botton:hover {
+.card__botton:hover {
   background: white;
   color: #00acdc;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
 }
