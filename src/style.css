@@ -9,7 +9,7 @@ body * {
   font-family: "Roboto", Helvetica, sans-serif;
 }
 
-.product-wrapper {
+.card {
 
   height: 403px;
   width: 200px;
@@ -20,18 +20,18 @@ body * {
   border-radius: 5px;
 }
 
-.product-wrapper:hover {
+.card:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
-.product__image {
+.card__image {
   display: block;
   height: 134px;
   width: 160px;
   margin: 0 auto;
 }
 
-.product__name {
+.card__name {
   display: block;
   margin-top: 45px;
   font-size: 12px;
@@ -39,28 +39,28 @@ body * {
   line-height: 15px;
 }
 
-.product__code,
-.product__rating-comments,
-.product__price-text {
+.card__code,
+.card__rating-comments,
+.card__price-text {
   font-size: 11px;
 }
 
-.product__code {
+.card__code {
   margin-top: 5px;
 }
 
-.product__rating {
+.card__rating {
   display: flex;
   justify-content: space-between;
 }
 
-.product__rating__block {
+.stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product__rating__image {
+.stars__star {
   display: flex;
   height: 15px;
   width: 15px;
@@ -74,39 +74,39 @@ body * {
   background-repeat: no-repeat;
 }
 
-.product__rating__image:first-of-type {
+.stars:first-of-type {
   margin-left: 0;
 }
 
-.product__rating__block.stars--4 .product__rating__image:nth-child(-n+4) {
+.stars.stars--4 .stars__star:nth-child(-n+4) {
   background: url(images/star-active.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.product__rating-comments {
+.card__rating-comments {
   margin-top: 16px;
 
 }
 
-.product__price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product__price-text {
+.card__price-text {
   margin-top: 24px;
 }
 
-.product__price-value {
+.card__price-value {
   margin-top: 20px;
 
   font-weight: bold;
   font-size: 16px;
 }
 
-.product__button {
+.card__button {
   display: block;
   width: 170px;
   height: 40px;
@@ -118,13 +118,13 @@ body * {
   outline-style: none;
 }
 
-.product__button:hover {
+.card__button:hover {
   background-color: #fff;
   border: 1px solid #00acdc;
   color: #00acdc;
 }
 
-.product__button-text {
+.card__button-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,6 +136,6 @@ body * {
   color: #fff;
 }
 
-.product__button-text:hover {
+.card__button-text:hover {
   color: #00acdc;
 }
