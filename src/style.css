@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 15px 14px;
+
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-bottom: 42px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__code-name {
+  line-height: 13px;
+  margin-top: 5px;
+}
+
+.card__rating {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.stars_star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background: url(/images/star.svg) no-repeat center;
+}
+
+.stars--1 .stars_star:nth-child(-n+1),
+.stars--2 .stars_star:nth-child(-n+2),
+.stars--3 .stars_star:nth-child(-n+3),
+.stars--4 .stars_star:nth-child(-n+4),
+.stars--5 .stars_star:nth-child(n) {
+  background-image: url(/images/star-active.svg);
+}
+
+.card__votes {
+  line-height: 13px;
+  margin-top: 1px;
+}
+
+.card__price {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__name {
+  margin-top: 3px;
+}
+
+.price__value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.button {
+  margin-top: 20px;
+  height: 40px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+
+  font-family: inherit;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
