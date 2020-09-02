@@ -2,20 +2,23 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+html {
   font-family: "Roboto", sans-serif;
   color: #000;
   font-size: 11px;
   line-height: 13px;
 }
 
+body {
+  margin: 0;
+}
+
 .card {
   background-color: #fff;
   border: 1px solid #f3f3f3;
-  width: 200px;
-  padding: 14px;
   border-radius: 5px;
+  padding: 14px;
+  width: 200px;
 }
 
 .card__picture {
@@ -36,13 +39,13 @@ body {
   margin-top: 5px;
 }
 
-.double {
+.block {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.card__feedblock {
+.card__feedback {
   display: flex;
 }
 
@@ -51,7 +54,7 @@ body {
   margin-top: 15px;
 }
 
-.star {
+.stars__star {
   width: 15px;
   height: 15px;
   background-image: url("./images/star.svg");
@@ -60,51 +63,43 @@ body {
   margin-right: 4px;
 }
 
-.stars--1 .star:nth-child(-n + 1),
-.stars--2 .star:nth-child(-n + 2),
-.stars--3 .star:nth-child(-n + 3),
-.stars--4 .star:nth-child(-n + 4),
-.stars--5 .star:nth-child(-n + 5) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url("./images/star-active.svg");
 }
 
-.card__feedback,
-.card__priceblock__title {
+.card__counter,
+.card__price__title {
   line-height: 15px;
 }
 
-.card__priceblock {
+.card__price {
   margin-top: 20px;
 }
 
-.card__priceblock__price {
+.card__price__amount {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
 }
 
-.card__buy {
+.card__button {
   display: block;
-  padding: 0;
-  margin: 20px 0 0;
+  margin-top: 20px;
+  width: 170px;
   height: 40px;
-  width: 100%;
   border: 1px solid #00acdc;
-  border-radius: 5px;
   background-color: #00acdc;
-  text-align: center;
-  justify-items: center;
-}
-
-.card__buy__link {
-  display: block;
-  font-weight: 700;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
-  letter-spacing: normal;
+  line-height: 40px;
   text-decoration: none;
 }
 
@@ -112,10 +107,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
-.card:hover .card__buy {
+.card__button:hover {
   background-color: #fff;
-}
-
-.card:hover .card__buy__link {
   color: #00acdc;
 }
