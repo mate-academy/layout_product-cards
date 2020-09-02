@@ -51,7 +51,7 @@ body {
   padding-bottom: 20px;
 }
 
-.price__value {
+.card__price--value {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -59,8 +59,8 @@ body {
 }
 
 .card__code,
-.price__text,
-.feedback__text {
+.card__price--text,
+.card__feedback--text {
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -73,29 +73,31 @@ body {
   padding-bottom: 14px;
 }
 
-.feedback__text {
+.card__feedback--text {
   padding-bottom: 2px;
   padding-top: 1px;
 }
 
 .stars {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .stars__star {
   background: url("./images/star.svg") no-repeat center;
-  width: 15px;
   height: 15px;
-}
-
-.stars__star:nth-child(-n+4) {
-  background-image: url("./images/star-active.svg");
+  width: 15px;
   margin-right: 4px;
 }
 
-.card__botton {
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.card__button {
   width: 170px;
   height: 40px;
 
@@ -111,7 +113,7 @@ body {
   color: white;
 }
 
-.card__botton:hover {
+.card__button:hover {
   background: white;
   color: #00acdc;
   border-color: #00acdc;
