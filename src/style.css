@@ -58,7 +58,7 @@ body {
 }
 
 .product__star {
-  background-image: url(./images/star-active.svg);
+  background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   height: 15px;
@@ -67,15 +67,18 @@ body {
 }
 
 .product__star:last-child {
-  background-image: url(./images/star.svg);
   margin-right: 0;
+
+}
+
+.product__rating > .product__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .product__amount {
   font-size: 11px;
-  line-height: 13px;
+  line-height: 15px;
   font-weight: 400;
-  padding-top: 1px;
 }
 
 .product__price {
@@ -97,23 +100,20 @@ body {
 }
 
 .product__btn {
-  margin-top: 20px;
-}
-
-.product__link {
-  border-radius: 5px;
+  background-color: #00acdc;
   color: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  background-color: #00acdc;
-  border: 1px solid #00acdc;
   display: inline-block;
   padding: 11px 56px 10px 57px;
+  margin-top: 20px;
 }
 
-.product__link:hover {
+.product__btn:hover {
   background-color: #fff;
   color: #00acdc;
 }
