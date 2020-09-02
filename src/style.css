@@ -16,15 +16,15 @@ h3 {
 
 .card {
   width: 200px;
-  height: 403px;
   padding: 15px 14px;
 
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+}
 
-  display: flex;
-  flex-direction: column;
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
 .card__photo {
@@ -32,24 +32,19 @@ h3 {
   width: 160px;
   margin-top: 15px;
   margin-left: 5px;
+  margin-bottom: 42px;
 }
 
 .card__title {
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin-top: 45px;
 }
 
 .card__code {
   margin-top: 5px;
   font-size: 11px;
   line-height: 13px;
-}
-
-.card__code::before {
-  content: "Код товара: ";
 }
 
 .card__rating {
@@ -69,16 +64,12 @@ h3 {
   background: url(images/star.svg) no-repeat center;
 }
 
-.stars--1 :first-child,
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(n) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(n) {
   background-image: url(images/star-active.svg);
-}
-
-.card__votes::before {
-  content: "Отзывов: ";
 }
 
 .card__price {
@@ -88,18 +79,15 @@ h3 {
   align-items: center;
 }
 
-.card__price_value {
+.price__value {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
 }
 
-.card__price_value::after {
-  content: "грн";
-}
-
 .btn {
   height: 40px;
+  width: 100%;
 
   background-color: #00acdc;
   border-radius: 5px;
@@ -115,10 +103,6 @@ h3 {
 
   cursor: pointer;
   transition: background-color 400ms;
-}
-
-.card:hover {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
 .btn:hover {
