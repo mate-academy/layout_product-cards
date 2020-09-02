@@ -4,3 +4,4 @@
 - don't add border to the button on hover. Add it to initial button state and make `transparent`
 - are you sure you've polished your code? :)
 - BEM block should't have outer styles(like margin)
+- stars should be the same as in [Stars task](https://github.com/mate-academy/layout_stars)
