@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 403px;
+  padding: 30px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+}
+
+.card__description {
+  position: relative;
+  width: 170px;
+  margin-top: 45px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+
+.card__description::after {
+  content: "Код товара: 195434";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+  margin-top: 33px;
+}
+
+.rating__stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rating__stars--1 .stars__star:first-child,
+.rating__stars--2 .stars__star:nth-child(-n + 2),
+.rating__stars--3 .stars__star:nth-child(-n + 3),
+.rating__stars--4 .stars__star:nth-child(-n + 4),
+.rating__stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.rating__reviews {
+  font-size: 11px;
+  line-height: 13px;
+  margin: auto 0;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 170px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.price__text {
+  padding-top: 5px;
+  width: 29px;
+  height: 13px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+}
+
+.price__value {
+  width: 79px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  color: #000;
+}
+
+.card__link {
+  margin-top: 20px;
+  padding: 11px 57px;
+  background: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__link:hover {
+  color: #00acdc;
+  background: #fff;
+}
