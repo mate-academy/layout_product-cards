@@ -8,27 +8,19 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
 h2,
-h3,
 body {
   margin: 0;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 0 auto;
   max-width: 200px;
-  background: #fff;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
   border-radius: 5px;
   padding: 30px 14px 15px;
 }
 
-.card__item-img {
+.card__img {
   width: 100%;
   height: 134px;
   display: block;
@@ -49,14 +41,14 @@ body {
   padding-bottom: 15px;
 }
 
-.card__item--rating {
+.card__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
 }
 
-.stars__block {
+.stars {
   display: flex;
 }
 
@@ -64,33 +56,17 @@ body {
   width: 15px;
   height: 15px;
   margin-right: 4px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.stars__block.stars--0 .star {
-  background-image: url(images/star.svg);
-}
-
-.stars__block.stars--5 .star:nth-child(4) ~ .star {
+.stars--1 .star:nth-child(-1n+1),
+.stars--2 .star:nth-child(-1n+2),
+.stars--3 .star:nth-child(-1n+3),
+.stars--4 .star:nth-child(-1n+4),
+.stars--5 .star:nth-child(-1n+5) {
   background-image: url(images/star-active.svg);
-}
-
-.stars__block.stars--4 .star:nth-child(4) ~ .star {
-  background-image: url(images/star.svg);
-}
-
-.stars__block.stars--3 .star:nth-child(3) ~ .star {
-  background-image: url(images/star.svg);
-}
-
-.stars__block.stars--2 .star:nth-child(2) ~ .star {
-  background-image: url(images/star.svg);
-}
-
-.stars__block.stars--1 .star:nth-child(1) ~ .star {
-  background-image: url(images/star.svg);
 }
 
 .card__feadback {
@@ -98,7 +74,7 @@ body {
   line-height: 13px;
 }
 
-.card__item__price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -106,7 +82,7 @@ body {
   padding-bottom: 20px;
 }
 
-.card__price {
+.card__price__cost {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
