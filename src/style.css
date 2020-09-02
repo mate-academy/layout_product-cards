@@ -52,6 +52,10 @@ p {
 }
 
 .rating__item {
+  display: flex;
+}
+
+.stars__item {
   width: 15px;
   height: 15px;
   margin-right: 4px;
@@ -61,7 +65,11 @@ p {
   background-position: 50%;
 }
 
-.rating__item:nth-child(-n+4) {
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+4) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -84,7 +92,6 @@ p {
 
 .price {
   display: flex;
-  margin-bottom: 21px;
 }
 
 .price__description {
@@ -104,6 +111,8 @@ p {
 .card__btn {
   width: 170px;
   height: 40px;
+
+  margin-top: 21px;
 
   font-weight: bold;
   font-size: 14px;
