@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+}
+
+body,
+h3 {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 15px 14px;
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.card__photo {
+  height: 134px;
+  width: 160px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-bottom: 42px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__code {
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__rating {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background: url(images/star.svg) no-repeat center;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.btn {
+  height: 40px;
+  width: 100%;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+
+  font-family: inherit;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  cursor: pointer;
+  transition: background-color 400ms;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
