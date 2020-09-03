@@ -36,7 +36,6 @@ p {
 }
 
 .card__description {
-  position: relative;
   width: 170px;
   margin-top: 45px;
   font-weight: 500;
@@ -45,11 +44,8 @@ p {
   color: #000;
 }
 
-.card__description::after {
-  content: "Код товара: 195434";
-  position: absolute;
-  top: 35px;
-  left: 0;
+.card__description--small {
+  margin-top: 5px;
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
@@ -59,10 +55,10 @@ p {
   display: flex;
   justify-content: space-between;
   width: 170px;
-  margin-top: 33px;
+  margin-top: 15px;
 }
 
-.rating__stars {
+.stars {
   display: flex;
 }
 
@@ -75,15 +71,15 @@ p {
   background-position: center;
 }
 
-.rating__stars--1 .stars__star:first-child,
-.rating__stars--2 .stars__star:nth-child(-n + 2),
-.rating__stars--3 .stars__star:nth-child(-n + 3),
-.rating__stars--4 .stars__star:nth-child(-n + 4),
-.rating__stars--5 .stars__star:nth-child(-n + 5) {
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
 }
 
-.rating__reviews {
+.reviews {
   font-size: 11px;
   line-height: 13px;
   margin: auto 0;
