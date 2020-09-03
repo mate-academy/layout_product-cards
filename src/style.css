@@ -5,7 +5,10 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 11px;
-  line-height: 13px;
+}
+
+body {
+  margin: 0;
 }
 
 .card {
@@ -14,7 +17,6 @@ html {
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
-  border-radius: 5px;
   padding: 30px 14px 14px;
 }
 
@@ -33,7 +35,6 @@ html {
 
 .card__subtitle {
   margin-bottom: 15px;
-  font-size: 11px;
   line-height: 13px;
 }
 
@@ -52,6 +53,7 @@ html {
   width: 15px;
   height: 15px;
   margin-right: 4px;
+  background: url(/images/star.svg) no-repeat center;
 }
 
 .stars--1 :first-child,
@@ -59,7 +61,7 @@ html {
 .stars--3 :nth-child(-n+3),
 .stars--4 :nth-child(-n+4),
 .stars--5 :nth-child(-n+5) {
-  background: url("images/star-active.svg") no-repeat center;
+  background: url(images/star-active.svg) no-repeat center;
 }
 
 .card__info {
@@ -76,23 +78,25 @@ html {
 }
 
 .card_button {
-  background: #00acdc;
-  border-radius: 5px;
-  text-align: center;
   height: 40px;
   width: 170px;
+  background: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+
+  text-align: center;
+  color: #fff;
   font-size: 14px;
   line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+
+  cursor: pointer;
 }
 
 .card_button:hover {
   background: #fff;
-  border: 1px solid #00acdc;
   color: #00acdc;
-  cursor: pointer;
 }
 
 .card:hover {
