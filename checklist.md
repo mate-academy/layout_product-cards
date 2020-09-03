@@ -5,3 +5,4 @@
 - are you sure you've polished your code? :)
 - BEM block should't have outer styles(like margin)
 - stars should be the same as in [Stars task](https://github.com/mate-academy/layout_stars)
+- do not add an empty line at the start of the block. Just between siblings if they are large enough
