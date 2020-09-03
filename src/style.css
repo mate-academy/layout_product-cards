@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.product-card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 15px 14px;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  margin: 15px 5px 41px;
+}
+
+.product-card__product-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.product-card__product-code {
+  font-size: 11px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.product-card__review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 15px;
+  margin-bottom: 24px;
+}
+
+.stars-block {
+  display: flex;
+  justify-content: space-between;
+
+  width: 91px;
+}
+
+.stars-block__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 15px;
+  height: 15px;
+}
+
+.product-card__review-count {
+  justify-items: flex-end;
+
+  margin: 0;
+  padding: 0;
+
+  line-height: 13px;
+  font-size: 11px;
+}
+
+.product-card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 15px;
+  margin-bottom: 20px;
+}
+
+.product-card__price-text {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.product-card__price-numbers {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.product-card__buy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  width: 170px;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+
+  background-color: #00acdc;
+
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  line-height: 16px;
+}
+
+.stars-block--1 .stars-block__star:nth-child(1),
+.stars-block--2 .stars-block__star:nth-child(-n+2),
+.stars-block--3 .stars-block__star:nth-child(-n+3),
+.stars-block--4 .stars-block__star:nth-child(-n+4),
+.stars-block--5 .stars-block__star:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.product-card__buy-button:hover {
+  background-color: #fff;
+
+  color: #00acdc;
+}
