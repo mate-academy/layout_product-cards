@@ -1,7 +1,9 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 .card {
@@ -18,62 +20,56 @@
   padding: 0 14px;
 }
 
-.card__picture--image {
+.card__picture {
   width: 160px;
   height: 134px;
   margin-top: 30px;
   margin-left: 5px;
 }
 
-.card__goods-name {
-  margin-top: 41px;
-}
-
-.card__goods-name--text {
+.card__name {
   width: 170px;
   height: 31px;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
+  margin-top: 45px;
 }
 
-.card__goods-id {
+.card__id {
   margin-top: 4px;
   width: 101px;
   height: 13px;
-}
-
-.card__goods-id--text {
   white-space: nowrap;
   font-size: 11px;
 }
 
-.card__stars {
+.card__rating {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
 
-.card__stars--4 {
+.stars {
   display: flex;
 }
 
-.stars--4__item {
+.stars__item {
   width: 15px;
   height: 15px;
   margin-left: 4px;
   background: no-repeat center url("./images/star.svg");
 }
 
-.stars--4__item:nth-child(-n+4) {
+.stars--4 .stars__item:nth-child(-n+4) {
   background: no-repeat center url("./images/star-active.svg");
 }
 
-.stars--4__item:nth-child(0n+1) {
+.stars--4 .stars__item:nth-child(0n+1) {
   margin-left: 0;
 }
 
-.card__stars-text--item {
+.card__reviews {
   margin-top: 1px;
   font-size: 11px;
 }
@@ -83,12 +79,12 @@
   justify-content: space-between;
 }
 
-.card__price--text {
+.card__word {
   margin-top: 25px;
   font-size: 11px;
 }
 
-.card__price--text-1 {
+.card__value {
   margin-top: 20px;
   font-weight: bold;
   font-size: 16px;
@@ -98,12 +94,12 @@
   margin-top: 20px;
 }
 
-.card__button--item {
+.card__button--style {
   width: 170px;
   height: 40px;
 
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
   color: white;
 
   background: #00acdc;
@@ -111,7 +107,7 @@
   border-radius: 5px;
 }
 
-.card__button--item:hover {
-  background: white;
+.card__button--style:hover {
+  background-color: white;
   color: #00acdc;
 }
