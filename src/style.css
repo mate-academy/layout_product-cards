@@ -8,21 +8,17 @@ html {
   color: #000;
 }
 
-a {
-  text-decoration: none;
-  padding: 0;
-}
-
+h2,
 p {
   margin: 0;
-  padding: 0;
+}
 
-  font-weight: 200;
+a {
+  text-decoration: none;
 }
 
 .card {
   width: 200px;
-  height: 403px;
   padding: 30px 14px 14px;
 
   background: #fff;
@@ -67,17 +63,24 @@ p {
   background: url("images/star.svg") no-repeat center;
 }
 
-.stars__item:not(:last-child) {
-  background: url("images/star-active.svg") no-repeat center;
-  margin-right: 4px;
+.stars__item + .stars__item {
+  margin-left: 4px;
 }
 
-.price {
+.stars--5 .stars__item,
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--1 .stars__item:first-child {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.card__price {
   display: flex;
   justify-content: space-between;
 }
 
-.price p:first-child {
+.price__text {
   align-self: flex-end;
   line-height: 13px;
 }
@@ -103,12 +106,12 @@ p {
   border: 1px solid transparent;
   background: #00acdc;
   border-radius: 5px;
-  transition: 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
 }
 
 .card__btn:hover {
   color: #00acdc;
 
-  border: 1px solid #00acdc;
+  border: 1px solid;
   background: #fff;
 }
