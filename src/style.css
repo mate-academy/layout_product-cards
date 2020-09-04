@@ -58,7 +58,11 @@ body {
   background: center url(images/star.svg) no-repeat;
 }
 
-.stars--4 :nth-child(-n + 4) {
+.stars--1 :first-child,
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -81,6 +85,7 @@ body {
   width: 170px;
   height: 40px;
   border-radius: 5px;
+  border: 1px solid #00acdc;
 
   font-weight: bold;
   font-size: 14px;
@@ -95,7 +100,6 @@ body {
 }
 
 .card__button:hover {
-  border: 1px solid #00acdc;
   color: #00acdc;
   background: #fff;
 }
