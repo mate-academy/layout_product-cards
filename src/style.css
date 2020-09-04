@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  color: #000;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 14px 15px;
+  font-family: inherit;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  align-self: center;
+}
+
+.card__title {
+  width: 170px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  padding-top: 45px;
+}
+
+.card__code {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+
+.card__price--value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  padding-top: 5px;
+}
+
+.card__price--position {
+  padding-bottom: 20px;
+}
+
+.card__code,
+.card__price--text,
+.card__feedback--text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.card__feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 14px;
+}
+
+.card__feedback--text {
+  padding-bottom: 2px;
+  padding-top: 1px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url("./images/star.svg") no-repeat center;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.card__button {
+  width: 170px;
+  height: 40px;
+
+  background: #00acdc;
+  border-radius: 5px;
+  border: 1px solid transparent;
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.card__button:hover {
+  background: white;
+  color: #00acdc;
+  border-color: #00acdc;
+}
