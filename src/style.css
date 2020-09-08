@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 html {
+  font-family: "Roboto", sans-serif;
   font-size: 11px;
   line-height: 13px;
 }
@@ -47,23 +47,23 @@ body {
   margin-bottom: 15px;
 }
 
-.card__stars {
+.stars {
   display: flex;
 }
 
-.card__star {
+.stars__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
   background: url("images/star.svg") no-repeat center;
 }
 
-.stars--1 :first-child,
-.stars--2 :nth-child(-n+2),
-.stars--3 :nth-child(-n+3),
-.stars--4 :nth-child(-n+4),
-.stars--5 :nth-child(-n+5) {
-  background-image: url("images/star-active.svg");
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background: url("./images/star-active.svg") no-repeat center;
 }
 
 .card__info {
@@ -81,18 +81,21 @@ body {
 
 .card__btn {
   display: block;
+
+  width: 170px;
+  height: 40px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
   border: 1px solid #00acdc;
   background-color: #00acdc;
   border-radius: 5px;
   color: #fff;
-  width: 170px;
-  height: 40px;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 40px;
 }
 
 .card__btn:hover {
