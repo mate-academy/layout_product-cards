@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
+:root {
+  --star: url(images/star.svg);
+  --active_star: url(images/star-active.svg);
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 30px 14px 14px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 0 5px 45px;
+}
+
+.card__info {
+  margin-bottom: 15px;
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  height: 31px;
+}
+
+.card__code {
+  margin: 4px 0 0;
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rate__stars {
+  display: flex;
+}
+
+.rate__stars-star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: var(--star);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 .rate__stars-star:first-child,
+.stars--2 .rate__stars-star:nth-child(-n+2),
+.stars--3 .rate__stars-star:nth-child(-n+3),
+.stars--4 .rate__stars-star:nth-child(-n+4),
+.stars--5 .rate__stars-star {
+  background-image: var(--active_star);
+}
+
+.card__price {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__price-amount {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__btn-buy {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px 57px;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.card__btn-buy:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
