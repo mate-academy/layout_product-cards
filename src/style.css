@@ -39,24 +39,24 @@ a {
   padding-bottom: 5px;
 }
 
-.card__rating {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-}
-
 .card__text {
   font-size: 11px;
   line-height: 13px;
   margin-bottom: 15px;
 }
 
-.rating__stars {
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.stars {
   display: flex;
   padding-right: 4px;
 }
 
-.card__stars {
+.stars__item {
   margin-right: 4px;
   width: 15px;
   height: 15px;
@@ -65,7 +65,11 @@ a {
   background-position: center;
 }
 
-.rating__stars .card__stars:nth-child(-n+4) {
+.stars .stars__item:nth-child(1),
+.stars .stars__item:nth-child(-n+2),
+.stars .stars__item:nth-child(-n+3),
+.stars .stars__item:nth-child(-n+4),
+.stars .stars__item:nth-child(-n+5) {
   background: url("./images/star-active.svg");
   background-repeat: no-repeat;
   background-position: center;
