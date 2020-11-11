@@ -10,96 +10,90 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: space-between;
   height: 403px;
   width: 200px;
+  padding: 30px 14px 0;
+  border-radius: 5px;
   background: #fff;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
-  border-radius: 5px;
 }
 
-.product_img {
+.card__img {
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
-  width: 160px;
   height: 134px;
-  margin: 30px 20px 0;
+  width: 160px;
 }
 
-.product_description {
-  width: 170px;
+.card__description {
+  padding-top: 45px;
   height: 31px;
-  margin: 45px 15px 4px;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
-.product_code {
-  width: 170px;
+.card__code {
+  padding-top: 35px;
   font-size: 11px;
   line-height: 13px;
 }
 
-.star {
-  display: flex;
-  padding-left: 15px;
-}
-
-.star_section {
+.card__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
-  margin: 15px 0 20px;
+  padding-top: 15px;
 }
 
-.star_block {
+.card__rating__stars {
+  display: flex;
+}
+
+.card__rating__stars--block {
   width: 15px;
   height: 15px;
   margin-right: 4px;
   background: url(./images/star.svg) no-repeat center;
 }
 
-.rating .star_block:nth-child(-n+4) {
+.card__rating--value .card__rating__stars--block:nth-child(-n+4) {
   background: url(./images/star-active.svg) no-repeat center;
 }
 
-.reviews {
-  padding-right: 15px;
+.card__rating__reviews {
   font-size: 11px;
   line-height: 13px;
 }
 
-.price_section {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  width: 170px;
+  padding: 20px 0;
 }
 
-.price_text {
+.card__price__text {
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
 }
 
-.price_value {
+.card__price__value {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
 }
 
-.button {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 40px;
-  margin: 20px 15px 0;
   background: #00acdc;
   color: #fff;
   border: 1px solid #00acdc;
@@ -111,7 +105,7 @@ body {
   text-transform: uppercase;
 }
 
-.button:hover {
+.card__button:hover {
   background-color: #fff;
   border: 1px solid #00acdc;
   color: #00acdc;
