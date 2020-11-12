@@ -1,3 +1,9 @@
+:root {
+  --star: url(images/star.svg);
+  --star-active: url(images/star-active.svg);
+  --width: 200px;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -8,9 +14,10 @@ body {
 }
 
 .card {
-  width: 200px;
+  width: var(--width);
   height: 403px;
-  padding: 30px 0 15px 14px;
+  padding-top: 30px;
+  padding-bottom: 15px;
   background: #fff;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
@@ -19,85 +26,158 @@ body {
 
 .card > :nth-child(1) {
   height: 134px;
-  width: 160px;
-  margin-bottom: 41px;
-  margin-left: 5px;
+  width: calc(var(--width) * 0.8);
+  display: block;
+  margin: 0 auto 45px;
 }
 
-.card--description {
+.card__description {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+  width: calc(var(--width) * 0.85);
+  margin: 0 auto 5px;
 }
 
-.card--code {
+.card__code {
   font-size: 11px;
-  margin: 5px 0;
+  width: calc(var(--width) * 0.85);
+  margin: 0 auto 16px;
 }
 
-.card--price,
+.card__price,
 .card__rating {
   display: flex;
   justify-content: space-between;
+  width: calc(var(--width) * 0.85);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card__rating {
   align-items: flex-start;
-  padding: 11px 14px 15px 0;
+  margin-bottom: 20px;
 }
 
-.card__stars > * {
-  height: 15px;
-  width: 15px;
-  border-radius: 0.5px;
-  padding: 0 1px;
+.stars-block {
+  display: flex;
+  margin-top: 1px;
 }
 
-.card--feedback {
+.stars-block > * {
+  height: 13px;
+  width: 13px;
+  background-repeat: no-repeat;
+  margin: 0 3px;
+}
+
+.stars-block > :first-child {
+  margin-left: 1px;
+}
+
+.stars--0 > * {
+  background-image: var(--star);
+}
+
+.stars--1 :nth-child(1) {
+  background-image: url(images/star-active.svg);
+}
+
+.stars--1 :nth-child(2),
+.stars--1 :nth-child(3),
+.stars--1 :nth-child(4),
+.stars--1 :nth-child(5) {
+  background-image: var(--star);
+}
+
+.stars--2 :nth-child(1),
+.stars--2 :nth-child(2) {
+  background-image: var(--star-active);
+}
+
+.stars--2 :nth-child(3),
+.stars--2 :nth-child(4),
+.stars--2 :nth-child(5) {
+  background-image: var(--star);
+}
+
+.stars--3 :nth-child(1),
+.stars--3 :nth-child(2),
+.stars--3 :nth-child(3) {
+  background-image: var(--star-active);
+}
+
+.stars--3 :nth-child(4),
+.stars--3 :nth-child(5) {
+  background-image: var(--star);
+}
+
+.stars--4 :nth-child(1),
+.stars--4 :nth-child(2),
+.stars--4 :nth-child(3),
+.stars--4 :nth-child(4) {
+  background-image: var(--star-active);
+}
+
+.stars--4 :nth-child(5) {
+  background-image: var(--star);
+}
+
+.stars--5 :nth-child(1),
+.stars--5 :nth-child(2),
+.stars--5 :nth-child(3),
+.stars--5 :nth-child(4),
+.stars--5 :nth-child(5) {
+  background-image: var(--star-active);
+}
+
+.card__feedback {
   font-size: 11px;
   text-align: right;
   font-weight: 400;
   color: #000;
 }
 
-.card--price {
-  align-items: center;
-  padding-bottom: 20px;
-  padding-right: 14px;
+.card__price {
+  height: 15px;
 }
 
-.card--price > :nth-child(1) {
-  margin-top: 4px;
+.card__price > :nth-child(1) {
+  margin-top: 5px;
   font-size: 11px;
   line-height: 13px;
   text-align: right;
 }
 
-.card--price > :nth-child(2) {
+.card__price > :nth-child(2) {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
   text-align: right;
 }
 
-.card--button {
+.card__button {
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 40px;
+  height: calc(var(--width) * 0.2);
+  width: calc(var(--width) * 0.85);
   background: #00acdc;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   color: #fff;
-  text-transform: uppercase;
-}
-
-.card--button:hover {
-  color: #00acdc;
-  background: #fff;
   border: 1px solid #00acdc;
   text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.card__button:hover {
+  color: #00acdc;
+  background: #fff;
+  text-transform: uppercase;
+  padding-bottom: 1px;
+  margin-top: 24px;
 }
