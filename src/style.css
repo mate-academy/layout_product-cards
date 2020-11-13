@@ -79,40 +79,19 @@ body {
   background-image: var(--star);
 }
 
-.stars--1 :nth-child(n) {
+.stars--1 :nth-child(n),
+.stars--2 :nth-child(n),
+.stars--3 :nth-child(n),
+.stars--4 :nth-child(n),
+.stars--5 :nth-child(n) {
   background-image: var(--star-active);
 }
 
-.stars--1 :nth-child(n + 2) {
-  background-image: var(--star);
-}
-
-.stars--2 :nth-child(n) {
-  background-image: var(--star-active);
-}
-
-.stars--2 :nth-child(n + 3) {
-  background-image: var(--star);
-}
-
-.stars--3 :nth-child(n) {
-  background-image: var(--star-active);
-}
-
-.stars--3 :nth-child(n + 4) {
-  background-image: var(--star);
-}
-
-.stars--4 :nth-child(n) {
-  background-image: var(--star-active);
-}
-
+.stars--1 :nth-child(n + 2),
+.stars--2 :nth-child(n + 3),
+.stars--3 :nth-child(n + 4),
 .stars--4 :nth-child(5) {
   background-image: var(--star);
-}
-
-.stars--5 > * {
-  background-image: var(--star-active);
 }
 
 .card__feedback {
@@ -144,7 +123,7 @@ body {
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  align-items: center;
+  line-height: calc(var(--width) * 0.2);
   height: calc(var(--width) * 0.2);
   width: calc(var(--width) * 0.85);
   background: #00acdc;
@@ -155,12 +134,10 @@ body {
   color: #fff;
   border: 1px solid #00acdc;
   text-transform: uppercase;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
 .card__button:hover {
   color: #00acdc;
   background: #fff;
-  padding-bottom: 1px;
-  margin-top: 24px;
 }
