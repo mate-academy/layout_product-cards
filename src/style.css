@@ -1,30 +1,30 @@
 * {
   box-sizing: border-box;
-  font-family: "Roboto", Arial, sans-serif;
 }
 
 body {
   margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
   height: 403px;
   width: 200px;
-  padding: 30px 14px 0;
-  border-radius: 5px;
+  padding: 30px 14px 15px;
   background: #fff;
   border: 1px solid #f3f3f3;
 }
 
 .card__img {
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 134px;
+  align-self: center;
   width: 160px;
+  height: 134px;
+  background-image: url(./images/imac.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 
 .card__description {
@@ -49,18 +49,22 @@ body {
   padding-top: 15px;
 }
 
-.card__rating__stars {
+.stars {
   display: flex;
 }
 
-.card__rating__stars--block {
+.stars__block {
   width: 15px;
   height: 15px;
   margin-right: 4px;
   background: url(./images/star.svg) no-repeat center;
 }
 
-.card__rating--value .card__rating__stars--block:nth-child(-n+4) {
+.stars--1 .stars__block:nth-child(1),
+.stars--2 .stars__block:nth-child(-n+2),
+.stars--3 .stars__block:nth-child(-n+3),
+.stars--4 .stars__block:nth-child(-n+4),
+.stars--5 .stars__block:nth-child(-n+5) {
   background: url(./images/star-active.svg) no-repeat center;
 }
 
@@ -107,6 +111,5 @@ body {
 
 .card__button:hover {
   background-color: #fff;
-  border: 1px solid #00acdc;
   color: #00acdc;
 }
