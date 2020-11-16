@@ -38,10 +38,10 @@ a {
   font-weight: 400;
   font-size: 11px;
   line-height: 12.89px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
-.card__rate {
+.card__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,24 +52,6 @@ a {
   font-weight: 400;
   font-size: 11px;
   line-height: 12.89px;
-}
-
-.stars {
-  display: flex;
-  justify-content: space-between;
-  width: 90px;
-}
-
-.stars__item {
-  background-image: url("images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 14px;
-  height: 14px;
-}
-
-.stars__item:nth-child(5) {
-  background-image: url("images/star.svg");
 }
 
 .card__price {
@@ -112,4 +94,27 @@ a {
   color: #00acdc;
   border-color: #00acdc;
   background-color: transparent;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 91px;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--0 .stars__star:nth-child(-n + 0),
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url("images/star-active.svg");
 }
