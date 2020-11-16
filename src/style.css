@@ -2,10 +2,14 @@ body {
   font-size: 11px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -37,10 +41,12 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+  
 }
 
 .card__code {
-  margin: 0 15px;
+  margin: 0 15px 15px;
+  
   font-size: 11px;
 }
 
@@ -49,6 +55,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin-block-start: 0;
 }
 
 .stars {
@@ -64,7 +72,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.stars_4 .stars__star:nth-child(-n+4) {
+.stars--4 .stars__star:nth-child(-n+4) {
   background-image: url("images/star-active.svg");
 }
 
@@ -77,6 +85,7 @@ body {
   justify-content: space-between;
   margin: 0 15px;
   align-items: baseline;
+
 }
 
 .price__amount {
@@ -85,23 +94,23 @@ body {
 }
 
 .card__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 170px;
   background-color: #00acdc;
-  margin: 20px 15px 15px;
   color: #fff;
-  text-transform: uppercase;
-  border-radius: 5px;
-  border: 1px solid #00acdc;
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  margin: 20px 15px 15px;
 }
 
 .card__buy:hover {
   background-color: #fff;
   color: #00acdc;
-}
-
-.card__buy:focus {
-  outline: none;
 }
