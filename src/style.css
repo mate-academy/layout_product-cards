@@ -13,7 +13,6 @@ body {
 
 .product {
   width: 200px;
-  height: 403px;
   padding-left: 14px;
   padding-right: 14px;
   border: 1px solid #f3f3f3;
@@ -45,7 +44,7 @@ body {
   margin-bottom: 22px;
 }
 
-.stars {
+.rating__stars {
   width: 91px;
   display: flex;
   justify-content: space-between;
@@ -60,16 +59,30 @@ body {
   background-repeat: no-repeat;
 }
 
-.stars__item:nth-child(-n+4) {
+.stars--1 .stars__item:nth-child(-n+1) {
   background-image: url("images/star-active.svg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.reviews {
+.stars--2 .stars__item:nth-child(-n+2) {
+  background-image: url("images/star-active.svg");
+}
+
+.stars--3 .stars__item:nth-child(-n+3) {
+  background-image: url("images/star-active.svg");
+}
+
+.stars--4 .stars__item:nth-child(-n+4) {
+  background-image: url("images/star-active.svg");
+}
+
+.stars--5 .stars__item:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.rating__reviews {
   font-weight: 400;
   font-size: 11px;
-  line-height: 12.89px;
+  line-height: 13px;
   text-align: right;
   align-self: flex-end;
 }
@@ -114,7 +127,6 @@ body {
 .button__action:hover {
   cursor: pointer;
   background-color: #fff;
-  border-radius: 5px;
   color: var(--blue);
   line-height: 16px;
 }
