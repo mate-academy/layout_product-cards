@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+}
+
+body,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  flex: 0 0 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 14px;
+}
+
+.card__img-wrapper {
+  text-align: center;
+}
+
+.card__img {
+  height: 134px;
+  width: 160px;
+  margin: 16px 0 43px;
+}
+
+.card__product-name {
+  font-size: 12px;
+  max-width: 170px;
+  font-weight: 500;
+  color: black;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  margin-top: 5px;
+}
+
+.card__comment-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 22px;
+}
+
+.card__star-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card__comments-number {
+  font-size: 11px;
+}
+
+.card__star-single {
+  flex: 15px 0 0;
+  height: 15px;
+  background: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__star-single:nth-child(-n + 4) {
+  background: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__star-single:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card__price-word {
+  font-size: 11px;
+  display: flex;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card__button {
+  display: flex;
+  text-align: center;
+}
+
+.card__button .card__buy-link {
+  margin-top: 20px;
+  width: 168px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+.card__buy-link--hover:hover {
+  color: #00acdc;
+  background-color: white;
+  border-radius: 5px;
+}
