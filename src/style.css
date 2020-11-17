@@ -1,115 +1,128 @@
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 html {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
 }
 
-.container {
+.card {
   width: 200px;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
+  background: #fff;
+  font-weight: normal;
+  border-radius: 5px;
   font-size: 11px;
 }
 
-.card__image {
-  width: 160px;
-  height: 134px;
-  margin: 30px 20px 40px;
+.card--wrap {
+  padding: 0 14px;
+  border: 1px solid #f3f3f3;
 }
 
-.card__name {
-  margin: 0 15px 6px;
+.card__img {
+  width: 160px;
+  box-sizing: content-box;
+  height: 134px;
+  margin: 0 5px 42px;
+  padding-top: 30px;
+}
+
+.card__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+
+  margin-bottom: 5px;
+  margin-block-start: 0;
 }
 
 .card__code {
-  margin: 0 64px 0 15px;
-  font-weight: 400;
+  margin-bottom: 15px;
+  margin-block-start: 0;
 }
 
 .card__rating {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin-top: 15px;
+  margin-bottom: 14px;
 }
 
-.stars {
+.card__rate {
   display: flex;
-  align-self: center;
-  align-items: baseline;
-  padding-left: 5px;
 }
 
-.stars__star {
-  background: url("./images/star.svg") no-repeat center;
+.card__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
+  background: url("images/star.svg") center no-repeat;
 }
 
-.stars__star:last-child {
-  margin-right: 0;
+.stars--1 .card__star:nth-child(-n+1),
+.stars--2 .card__star:nth-child(-n+2),
+.stars--3 .card__star:nth-child(-n+3),
+.stars--4 .card__star:nth-child(-n+4),
+.stars--5 .card__star:nth-child(-n+5) {
+  background: url("images/star-active.svg") center no-repeat;
 }
 
-.stars--1 .stars__star:first-child,
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background: url("./images/star-active.svg") no-repeat center;
-}
-
-.card__feed {
-  padding: 5px 7px;
-}
-
-.card__price {
+.card__cost {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  margin: 15px ;
+  margin-bottom: 20px;
 }
 
-.card__price-title {
-  margin: 0;
+.card__price--name {
+  margin-block-end: 0;
+  line-height: 13px;
+}
+
+.card__price-amount,
+.card__feedback {
+  white-space: nowrap;
 }
 
 .card__price-amount {
-  font-family: Roboto, sans-serif;
+  font-weight: bold;
   font-size: 16px;
-  font-weight: 700;
   line-height: 19px;
+  margin-left: 63px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-.card__block {
+.card__button,
+.card__feedback {
+  text-decoration: none;
+}
+
+.card__feedback {
+  margin-left: 18px;
+  line-height: 13px;
+  color: #000;
+}
+
+.card__button {
   font-weight: bold;
+  text-transform: uppercase;
   font-size: 14px;
   color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
   background-color: #00acdc;
   border-radius: 5px;
   border: 1px solid #00acdc;
-  margin: 0 auto;
-  display: block;
+  display: inline-block;
   text-align: center;
-  width: 170px;
-  height: 40px;
   margin-bottom: 15px;
+  width: 100%;
+  height: 40px;
   padding-top: 10px;
 }
 
-.card__block:hover {
+.card__button:hover {
   color: #00acdc;
   background-color: #fff;
 }
