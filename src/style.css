@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-blue: #00acdc;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.product {
+  padding: 15px 14px;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product__photo {
+  margin: 0 auto 30px;
+  padding: 12px 0;
+  width: 166px;
+  height: 164px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  transition: transform 1s;
+}
+
+.product__photo:hover {
+  transform: scale(1.2);
+  border-color: #f3f3f3;
+}
+
+.product__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product__title {
+  margin-bottom: 5px;
+  min-height: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.product__code {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.product__feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background: url("./images/star.svg") center no-repeat;
+}
+
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.product__comments {
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+}
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.product__price-legend {
+  margin-right: 10px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.product__price-sum {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.btn {
+  display: block;
+  padding: 10px 10px 11px;
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--light-blue);
+}
