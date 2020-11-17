@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  margin: 0;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 14px 14px;
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+}
+
+.card__picture {
+  height: 134px;
+  width: 160px;
+}
+
+.card__title {
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 45px;
+  font-weight: 500;
+}
+
+.card__cod {
+  width: 100%;
+  text-align: left;
+  line-height: 13px;
+  margin-top: 5px;
+}
+
+.card__rating {
+  display: flex;
+  width: 100%;
+  justify-content: space-between ;
+  padding-top: 15px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  background: url("images/star.svg") no-repeat center;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+}
+
+.stars--1 :nth-child(1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+
+.card__reviews {
+  line-height: 13px;
+  align-self: center;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.card__name {
+  line-height: 13px;
+}
+
+.card__amount {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__button {
+  display: flex;
+  width: 170px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__button--hover:hover {
+  background-color: transparent;
+  color: #00acdc;
+}
