@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: Roboto, serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.card {
+  width: 200px;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 1);
+  /*background-color: aqua;*/
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__imac {
+  width: 160px;
+  height: 134px;
+  margin: 30px 0 45px;
+
+  background-image: url("images/imac.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card__characteristics {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.card__code {
+  margin-bottom: 15px;
+  /*background-color: green;*/
+
+  align-self: flex-start;
+}
+
+.card__rating {
+  width: 100%;
+  margin-bottom: 25px;
+  /*background-color: gold;*/
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__stars {
+  /*background-color: red;*/
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.card__review {
+  align-self: center;
+}
+
+.card__star {
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  /*background-color: hotpink;*/
+
+  align-self: flex-end;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url("images/star.svg");
+}
+
+.card__star:nth-child(-n +4) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__price {
+  width: 100%;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /*background-color: darkorchid;*/
+}
+
+.card__grn {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__buy {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 172, 220, 1);
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.card__buy:hover {
+  border: 1px solid #00acdc;
+  color: rgba(0, 172, 220, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
