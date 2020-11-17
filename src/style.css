@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  font-size: 11px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 30px 20px 40px;
+}
+
+.card__name {
+  margin: 0 15px 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__code {
+  margin: 0 64px 0 15px;
+  font-weight: 400;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.stars {
+  display: flex;
+  align-self: center;
+  align-items: baseline;
+  padding-left: 5px;
+}
+
+.stars__star {
+  background: url("./images/star.svg") no-repeat center;
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background: url("./images/star-active.svg") no-repeat center;
+}
+
+.card__feed {
+  padding: 5px 7px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 15px ;
+}
+
+.card__price-title {
+  margin: 0;
+}
+
+.card__price-amount {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.card__block {
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.card__block:hover {
+  color: #00acdc;
+  background-color: #fff;
+}
