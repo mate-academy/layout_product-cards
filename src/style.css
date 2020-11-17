@@ -36,7 +36,7 @@ a {
   font-size: 12px;
   line-height: 15px;
   margin-top: 0;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .card__text {
@@ -48,7 +48,7 @@ a {
 .card__rating {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .stars {
@@ -65,11 +65,11 @@ a {
   background-position: center;
 }
 
-.stars .stars__item:nth-child(1),
-.stars .stars__item:nth-child(-n+2),
-.stars .stars__item:nth-child(-n+3),
-.stars .stars__item:nth-child(-n+4),
-.stars .stars__item:nth-child(-n+5) {
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
   background: url("./images/star-active.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -97,7 +97,9 @@ a {
 }
 
 .card__bth {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #00acdc;
   background-color: #00acdc;
   border-radius: 5px;
@@ -105,10 +107,8 @@ a {
   width: 170px;
   height: 40px;
   text-transform: uppercase;
-  text-align: center;
   font-weight: bold;
   font-size: 14px;
-  line-height: 40px;
 }
 
 .card__bth:hover {
