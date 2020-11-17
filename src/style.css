@@ -1,0 +1,106 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  height: 403px;
+  width: 200px;
+  padding: 15px 15px 15px 14px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 15px 0 41px 5px;
+}
+
+.card__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 5px;
+  width: 170px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  margin: 0;
+}
+
+.stars {
+  display: flex;
+  margin: 15px 0;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.card__review {
+  position: absolute;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  left: 63.5%;
+  top: 274px;
+  bottom: 115px;
+}
+
+.stars__item {
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background: url(./images/star-active.svg) no-repeat center;
+}
+
+.stars__item:nth-child(5) {
+  background-image: url(./images/star.svg);
+}
+
+.card__price {
+  display: flex;
+  margin: 25px 0 20px;
+  justify-content: space-between;
+}
+
+.price-word {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.price-number {
+  font-weight: bold;
+  /*font-weight: 700 і bold видають одну й ту саму помилку в тестах */
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: -4px;
+}
+
+.card__button {
+  background: #00acdc;
+  border-radius: 5px;
+  width: 170px;
+  height: 40px;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid  #00acdc;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__button:hover {
+  background-color: white;
+  color: #00acdc;
+}
