@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 30px 14px 15px;
+}
+
+.card__picture {
+  height: 134px;
+}
+
+.card__name {
+  width: 170px;
+  height: 31px;
+  margin-top: 45px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+.card__code {
+  margin-bottom: 0;
+  margin-top: 4px;
+  align-self: flex-start;
+  font-size: 11px;
+}
+
+.rate,
+.rate__stars {
+  display: flex;
+}
+
+.rate {
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.rate__item {
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  text-align: right;
+}
+
+.rate__stars--1 :nth-child(-n+1),
+.rate__stars--2 :nth-child(-n+2),
+.rate__stars--3 :nth-child(-n+3),
+.rate__stars--4 :nth-child(-n+4),
+.rate__stars--5 :nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.rate__responses {
+  margin: 0;
+  font-size: 11px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 11px;
+}
+
+.card__number {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card__button {
+  margin-top: 20px;
+}
+
+.button {
+  display: flex;
+  width: 170px;
+  height: 40px;
+}
+
+.button__form,
+.button__buy,
+.button__link {
+  flex-grow: 1;
+}
+
+.button__form,
+.button__buy {
+  display: flex;
+}
+
+.button__buy {
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+}
+
+.button__link {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #00acdc;
+  color: #f3f3f3;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 38px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button__buy :hover {
+  background-color: #fff;
+  color: #00acdc;
+  border-color: #00acdc;
+}
