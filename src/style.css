@@ -2,7 +2,9 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-body {
+body,
+p,
+h3 {
   margin: 0;
 }
 
@@ -15,10 +17,10 @@ body {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 30px 14px 14px;
-  display: flex;
-  flex-direction: column;
   font-size: 11px;
   line-height: 13px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__image {
@@ -39,18 +41,18 @@ body {
   margin-bottom: 15px;
 }
 
-.card__rate,
-.card__price {
+.card__price,
+.card__rate-tile {
   margin-bottom: 20px;
 }
 
-.card__rate {
+.card__rate-tile {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.rate__stars {
+.stars {
   display: inline-flex;
   width: 100px;
 }
@@ -58,7 +60,7 @@ body {
 .stars__item {
   height: 15px;
   width: 15px;
-  background-image: url("images/star.svg");
+  background: url("images/star.svg") no-repeat center;
   margin-right: 4px;
 }
 
@@ -66,8 +68,12 @@ body {
   margin-right: 0;
 }
 
-.stars--4 :nth-child(-n+4) {
-  background-image: url("images/star-active.svg");
+.stars--1 :nth-child(1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background: url("images/star-active.svg") no-repeat center;
 }
 
 .card__price {
@@ -98,5 +104,4 @@ body {
   background-color: #fff;
   color: #00acdc;
   border: 1px solid #00acdc;
-
 }
