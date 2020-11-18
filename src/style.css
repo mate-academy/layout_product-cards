@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -9,16 +7,17 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.container {
+  width: 200px;
+  height: 403px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 403px;
   padding: 15px 14px;
-  background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  color: #000;
 }
 
 .card__photo {
@@ -37,7 +36,7 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 }
 
 .card__code,
@@ -45,6 +44,7 @@ body {
 .card__name {
   font-size: 11px;
   line-height: 13px;
+  margin: 0;
 }
 
 .card__rate {
@@ -66,7 +66,11 @@ body {
   margin-right: 4px;
 }
 
-.stars--4 .stars__item:nth-child(-n+4) {
+.stars--1 .stars__item:nth-child(-n+1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
@@ -82,6 +86,7 @@ body {
   font-size: 16px;
   line-height: 19px;
   text-align: right;
+  margin: 0;
 }
 
 .card__button {
@@ -96,6 +101,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   border-style: none;
+  cursor: pointer;
 }
 
 .card__button:hover {
@@ -104,5 +110,4 @@ body {
   box-sizing: border-box;
   border-radius: 5px;
   color: #00acdc;
-  cursor: pointer;
 }
