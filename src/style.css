@@ -48,18 +48,15 @@ body {
   height: 15px;
   width: 15px;
   margin-right: 4px;
-  background: no-repeat center;
+  background: url(images/star.svg) no-repeat center;
 }
 
-.rang__star--first,
-.rang__star--second,
-.rang__star--third,
-.rang__star--fourth {
-  background-image: url(images/star-active.svg) ;
-}
-
-.rang__star--fifth {
-  background-image: url(images/star.svg);
+.rang--1 > .rang__star:nth-child(1),
+.rang--2 > .rang__star:nth-child(-n+2),
+.rang--3 > .rang__star:nth-child(-n+3),
+.rang--4 > .rang__star:nth-child(-n+4),
+.rang--5 > .rang__star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
 }
 
 .card__price {
