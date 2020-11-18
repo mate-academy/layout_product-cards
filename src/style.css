@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 
-body,
-h1 {
+body {
   margin: 0;
   font-family: Roboto, sans-serif;
   color: #000;
@@ -43,6 +42,7 @@ h1 {
   font-size: 12px;
   line-height: 15px;
   padding-top: 30px;
+  margin: 0;
 }
 
 .card__code {
@@ -57,11 +57,18 @@ h1 {
   padding: 13px 0 18px;
 }
 
-.card__rating__stars > :nth-child(n) {
-  margin-left: 2px;
+.stars__item {
+  background: url(/images/star.svg) center no-repeat;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
 }
 
-.card__rating :nth-child(2) {
+.stars__item:nth-child(-n+4) {
+  background: url(/images/star-active.svg) center no-repeat;
+}
+
+.card__feedback {
   font-size: 11px;
 }
 
@@ -73,12 +80,12 @@ h1 {
   padding-bottom: 20px;
 }
 
-.card__price > :nth-child(1) {
+.price__text {
   display: flex;
   font-size: 11px;
 }
 
-.card__price > :nth-child(2) {
+.price__value {
   font-weight: bold;
   font-size: 16px;
 }
