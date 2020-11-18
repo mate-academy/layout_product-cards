@@ -5,9 +5,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-}
-
-body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -21,31 +18,33 @@ body {
 }
 
 .product__image {
+  width: 160px;
+  height: 134px;
   margin: 30px auto 41px 5px;
 }
 
 .product__description {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15.47px;
+  line-height: 15px;
 }
 
 .product__code {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 11px;
-  line-height: 12.89px;
+  line-height: 13px;
 }
 
 .product__rating {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .stars {
-  width: 91px;
+  width: 90px;
   display: flex;
   justify-content: space-between;
 }
@@ -59,22 +58,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.stars--1 .stars__item:nth-child(-n+1) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--2 .stars__item:nth-child(-n+2) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--3 .stars__item:nth-child(-n+3) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--4 .stars__item:nth-child(-n+4) {
-  background-image: url("images/star-active.svg");
-}
-
+.stars--1 .stars__item:nth-child(-n+1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
 .stars--5 .stars__item:nth-child(-n+5) {
   background-image: url("images/star-active.svg");
 }
@@ -83,8 +70,6 @@ body {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
-  text-align: right;
-  align-self: flex-end;
 }
 
 .product__cost {
@@ -93,22 +78,23 @@ body {
   margin-bottom: 20px;
 }
 
-.cost__text {
+.product__cost-text {
   align-self: flex-end;
   margin-bottom: 1px;
   font-weight: 400;
   font-size: 11px;
-  line-height: 12.89px;
+  line-height: 13px;
 }
 
-.cost__digit {
+.product__cost-digit {
   font-weight: 700;
   font-size: 16px;
-  line-height: 18.75px;
+  line-height: 19px;
   text-align: right;
 }
 
 .button__action {
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +105,7 @@ body {
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16.41px;
+  line-height: 16px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -128,5 +114,4 @@ body {
   cursor: pointer;
   background-color: #fff;
   color: var(--blue);
-  line-height: 16px;
 }
