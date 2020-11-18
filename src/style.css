@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+
+  padding: 30px 14px 15px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+
+  margin: 0 5px;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+
+  margin: 45px 0 5px;
+}
+
+.card__code {
+  margin-bottom: 15px;
+}
+
+.card__mark {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__stars {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+
+  background: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 .stars__stars:first-child,
+.stars--2 .stars__stars:nth-child(-n+2),
+.stars--3 .stars__stars:nth-child(-n+3),
+.stars--4 .stars__stars:nth-child(-n+4),
+.stars--5 .stars__stars:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.card__price {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__button {
+  background-color: #00acdc;
+
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+
+  height: 40px;
+
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: #fff;
+
+  color: #00acdc;
+}
