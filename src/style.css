@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -19,22 +17,24 @@ html {
   padding: 30px 14px 15px;
 }
 
-.picture {
+.card__picture {
   height: 134px;
 }
 
-.name {
+.card__name {
   width: 170px;
   height: 31px;
   margin-top: 45px;
+  margin-bottom: 0;
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
 }
 
-.code {
-  align-self: flex-start;
+.card__code {
+  margin-bottom: 0;
   margin-top: 4px;
+  align-self: flex-start;
   font-size: 11px;
 }
 
@@ -53,22 +53,27 @@ html {
 .rate__item {
   width: 15px;
   height: 15px;
-  background-image: url(./images/star.svg);
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 4px;
+  background-image: url(./images/star.svg);
   text-align: right;
 }
 
-.rate__item:nth-child(-n+4) {
+.rate__stars--1 :nth-child(-n+1),
+.rate__stars--2 :nth-child(-n+2),
+.rate__stars--3 :nth-child(-n+3),
+.rate__stars--4 :nth-child(-n+4),
+.rate__stars--5 :nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
 .rate__responses {
+  margin: 0;
   font-size: 11px;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -76,18 +81,23 @@ html {
   margin-top: 20px;
 }
 
-.price__text {
+.card__text {
+  margin: 0;
   font-size: 11px;
 }
 
-.price__number {
+.card__number {
+  margin: 0;
   font-weight: 700;
   font-size: 16px;
 }
 
+.card__button {
+  margin-top: 20px;
+}
+
 .button {
   display: flex;
-  margin-top: 20px;
   width: 170px;
   height: 40px;
 }
@@ -104,23 +114,25 @@ html {
 }
 
 .button__buy {
+  padding: 0;
   border: 0;
   border-radius: 5px;
 }
 
 .button__link {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 5px;
   background-color: #00acdc;
   color: #f3f3f3;
-  border-radius: 5px;
   font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 38px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .button__buy :hover {
   background-color: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
 }
