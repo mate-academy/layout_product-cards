@@ -10,12 +10,15 @@ body {
   box-sizing: border-box;
 }
 
-.card {
+.page__card {
   position: relative;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
   height: 403px;
   width: 200px;
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
   padding: 15px 15px 15px 14px;
 }
 
@@ -40,13 +43,6 @@ body {
   margin: 0;
 }
 
-.stars {
-  display: flex;
-  margin: 15px 0;
-  flex-grow: 1;
-  justify-content: flex-start;
-}
-
 .card__review {
   position: absolute;
   font-weight: 400;
@@ -57,15 +53,26 @@ body {
   bottom: 115px;
 }
 
+.stars {
+  display: flex;
+  margin: 15px 0;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
 .stars__item {
   height: 15px;
   width: 15px;
   margin-right: 4px;
-  background: url(./images/star-active.svg) no-repeat center;
+  background: url(./images/star.svg) no-repeat center;
 }
 
-.stars__item:nth-child(5) {
-  background-image: url(./images/star.svg);
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
 }
 
 .card__price {
@@ -74,13 +81,13 @@ body {
   justify-content: space-between;
 }
 
-.price-word {
+.card__word {
   font-weight: 400;
   font-size: 11px;
   line-height: 14px;
 }
 
-.price-number {
+.card__number {
   position: relative;
   font-weight: bold;
   font-size: 16px;
@@ -90,15 +97,20 @@ body {
 }
 
 .card__button {
+  display: block;
   background: #00acdc;
   border-radius: 5px;
+  text-decoration: none;
   width: 170px;
   height: 40px;
+  text-align: center;
+  line-height: 39px;
   color: white;
   text-transform: uppercase;
   border: 1px solid  #00acdc;
   font-weight: 700;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .card__button:hover {
