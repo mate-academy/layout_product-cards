@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: gray;
+
+  font-family: Roboto, sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+  border: none;
+
+  background-color: transparent;
+}
+
+.card {
+  width: 200px;
+  height: 403px;
+  padding: 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.07);
+
+  background-color: #fff;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  align-self: center;
+  margin-top: 16px;
+}
+
+.card__info {
+  width: 100%;
+  margin-top: 45px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.card__code {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5px;
+
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.card__testimonials {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.card__stars {
+  justify-self: start;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+
+  background: url("/images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(n) {
+  background-image: url("/images/star-active.svg");
+}
+
+.card__testim-text {
+  font-size: 11px;
+}
+
+.card__price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card__price-text {
+  align-self: flex-end;
+
+  font-size: 11px;
+  font-weight: 400;
+  height: 13px;
+
+}
+
+.card__price-value {
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__button {
+  width: 170px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: #00acdc;
+}
+
+.card__button:hover {
+  color: #00acdc;
+  background-color: #fff;
+}
