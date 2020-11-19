@@ -1,9 +1,10 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, sans-serif;
 }
 
@@ -17,7 +18,7 @@ body {
   padding: 14px;
 }
 
-.card > :nth-child(1) {
+.card__img {
   margin: 16px auto 45px;
 }
 
@@ -26,6 +27,7 @@ body {
   font-size: 12px;
   line-height: 15px;
   margin-bottom: 5px;
+  margin-top: 0;
 }
 
 .card__code {
@@ -55,7 +57,11 @@ body {
   border-radius: 0.5px;
 }
 
-.stars > .stars__item:nth-child(-n+4) {
+.stars--1 :first-child,
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
@@ -88,6 +94,7 @@ body {
 .card__buy {
   align-self: center;
   background-color: #00acdc;
+  border: 1px solid transparent;
   border-radius: 5px;
   height: 40px;
   width: 170px;
@@ -101,7 +108,7 @@ body {
 
 .card__buy:hover {
   background: white;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
   color: #00acdc;
-  line-height: 38px;
+  /* line-height: 38px; */
 }
