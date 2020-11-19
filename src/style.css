@@ -2,100 +2,104 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+}
+
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 11px;
   line-height: 13px;
-  margin: 0;
 }
 
-.item {
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+.card {
   display: flex;
-  width: 200px;
   flex-direction: column;
   align-items: center;
-  padding: 30px 14px 15px;
   max-height: 403px;
+  width: 200px;
+  padding: 30px 14px 15px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 }
 
-.item__img {
+.card__img {
   width: 160px;
   height: 134px;
 }
 
-.item__name {
+.card__name {
   margin-top: 45px;
+  margin-bottom: 0;
+  line-height: 15px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
-  margin-bottom: 0;
 }
 
-.item__cod {
+.card__cod {
   margin-top: 5px;
   margin-bottom: 15px;
 }
 
-.item__stars {
+.card__stars {
   display: flex;
 }
 
-.item__star {
+.card__star {
   background-image: url("images/star.svg");
   width: 15px;
   height: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
   margin-right: 4px;
   margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.stars--4 .item__star:nth-child(-n+4) {
+.stars--4 .card__star:nth-child(-n+4) {
   background: url("images/star-active.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.item__rating {
+.card__rating {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.item__price {
+.card__price {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
   align-items: flex-end;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-.item__buy {
+.card__buy {
   display: flex;
-  background: #00acdc;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 40px;
-  align-items: center;
-  justify-content: center;
+  background: #00acdc;
+  color: white;
+  text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+  border-radius: 5px;
 }
 
-.item__buy:hover {
+.card__buy:hover {
   border: 1px solid #00acdc;
   color: #00acdc;
   background-color: white;
 }
 
-.item__number {
+.card__number {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
