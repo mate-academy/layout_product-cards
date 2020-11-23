@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 403px;
+  width: 200px;
+  padding: 30px 14px 15px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  margin-top: 45px;
+  margin-bottom: 0;
+  line-height: 15px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.card__cod {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  background-image: url("images/star.svg");
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n + 2),
+.stars--3 .stars__item:nth-child(-n + 3),
+.stars--4 .stars__item:nth-child(-n + 4),
+.stars--5 .stars__item:nth-child(-n + 5) {
+  background: url("images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  background: #00acdc;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+}
+
+.card__buy:hover {
+  color: #00acdc;
+  background-color: white;
+}
+
+.card__number {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
