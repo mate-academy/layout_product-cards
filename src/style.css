@@ -11,14 +11,7 @@ html {
   color: #000;
 }
 
-.block {
-  width: 200px;
-  height: 403px;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  align-items: flex-start;
+.card {
   box-sizing: border-box;
 
   background: #fff;
@@ -27,17 +20,13 @@ html {
   border-radius: 5px;
 }
 
+.block {
+  width: 200px;
+}
 /* margin // fonts-weight */
 
 .card__item {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card__price {
-  padding-bottom: 20px;
+  margin: 0 14px 15px;
 }
 
 .card__code,
@@ -51,12 +40,11 @@ html {
 /* main style */
 
 .card__photo {
-  display: block;
-
+  
   width: 160px;
   height: 134px;
-
-  margin: 31px 20px 30px 19px;
+  
+  padding: 30px 19px 45px;
 }
 
 .card__img {
@@ -65,8 +53,9 @@ html {
 }
 
 .card__text {
-  margin-bottom: 5px;
-  height: 31px;
+  line-height: 1.25em;
+  margin-bottom: 6px;
+  
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -75,35 +64,31 @@ html {
 .card__code {
   display: flex;
   
-  height: 13px;
+  line-height: 1.18em;
   margin-bottom: 15px;
-
-  justify-content: start;
-
 }
 
 /* feedback */
 
 .card__feedback {
   display: flex;
-
+  
   height: 15px;
   margin-bottom: 20px;
-
+  
   justify-content: space-between;
 }
 
 .card__nfeed {
   display: flex;
   align-items: center;
-  margin-top: 1px;
+  line-height: 1.18em;
 }
 
 /* stars */
 
 .card__stars {
   display: flex;
-  height: 15px;
 }
 
 .star {
@@ -118,11 +103,6 @@ html {
 
 /* price */
 
-.card___price {
-  height: 19px;
-  margin-bottom: 20px;
-}
-
 .price__actucall {
   font-weight: 700;
   font-style: normal;
@@ -131,20 +111,25 @@ html {
 
 .price {
   display: flex;
+
+  margin-bottom: 20px;
+
   justify-content: space-between;
-  align-items: center;
+  align-content: flex-end;
+  align-items: baseline;
+}
+
+.price__name {
+  line-height: 1.18em;
 }
 
 /* button */
 
 .buy__link {
-  height: 40px;
-  width: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-sizing: border-box;
+  line-height: 16px;
+  padding: 11px 10px;
+  display: block;
+  text-align: center;
 
   font-weight: 700;
   font-style: normal;
@@ -162,7 +147,4 @@ html {
 .buy__link:hover {
   color: #00acdc;
   background: #fff;
-  border: 1px solid #00acdc;
-  box-sizing: border-box;
-  border-radius: 5px;
 }
