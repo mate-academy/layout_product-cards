@@ -11,6 +11,10 @@ html {
   color: #000;
 }
 
+.block {
+  width: 200px;
+}
+
 .card {
   box-sizing: border-box;
 
@@ -20,9 +24,6 @@ html {
   border-radius: 5px;
 }
 
-.block {
-  width: 200px;
-}
 /* margin // fonts-weight */
 
 .card__item {
@@ -40,10 +41,8 @@ html {
 /* main style */
 
 .card__photo {
-  
   width: 160px;
   height: 134px;
-  
   padding: 30px 19px 45px;
 }
 
@@ -81,8 +80,10 @@ html {
 
 .card__nfeed {
   display: flex;
-  align-items: center;
+
   line-height: 1.18em;
+  
+  align-items: center;
 }
 
 /* stars */
@@ -91,15 +92,19 @@ html {
   display: flex;
 }
 
-.star {
+.star__item {
   width: 15px;
   margin-right: 4px;
+  
   background: url(.\images\star.svg) no-repeat 50%;
 }
 
-.active-stars {
+.star__item:nth-of-type(-n+4) {
   background: url(.\images\star-active.svg) no-repeat 50%;
 }
+/* .active-stars {
+  background: url(.\images\star-active.svg) no-repeat 50%;
+} */
 
 /* price */
 
@@ -126,10 +131,11 @@ html {
 /* button */
 
 .buy__link {
-  line-height: 16px;
-  padding: 11px 10px;
   display: block;
   text-align: center;
+  
+  line-height: 16px;
+  padding: 11px 10px;
 
   font-weight: 700;
   font-style: normal;
