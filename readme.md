@@ -1,12 +1,12 @@
-# Product cards
+# Product blocks
 1. Replace `<your_account>` with your Github username in the links
-    - [DEMO LINK](https://<your_account>.github.io/layout_product-cards/) <br>
-    - [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+    - [DEMO LINK](https://yevhenii-kozak.github.io/layout_product-blocks/) <br>
+    - [TEST REPORT LINK](https://yevhenii-kozak.github.io/layout_product-blocks/report/html_report/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
 ___
 
 ## The task
-Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1).
+Create a pages with product block using `flexbox` basing on [the mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-blocks?node-id=0%3A1).
 
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
 
@@ -19,11 +19,11 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 ### Requirements:
 - reset browser's default margins
-- card width is `200px` including border
+- block width is `200px` including border
 - use images from [src/images](src/images)
 - change link styles on `:hover`
 - follow styles from the mock
-- add `data-qa="card"` attribute to the card block
+- add `data-qa="block"` attribute to the block block
 - add `data-qa="hover"` attribute to the link
 ---
-![screenshot](./references/card-example.png)
+![screenshot](./references/block-example.png)
