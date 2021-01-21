@@ -25,7 +25,7 @@ const config = {
   scenarios: [
     {
       ...basic,
-      label: 'Card with data-qa_card',
+      label: 'card with data-qa_card',
       selectors: ['[data-qa="card"]'],
     },
     {

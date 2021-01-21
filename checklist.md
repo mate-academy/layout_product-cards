@@ -1,8 +1,8 @@
 - check your work using basic recommendations [here](https://github.com/mate-academy/layout_search-bar-airbnb/blob/master/checklist.md)
-- use stars from `stars-block` task
+- use stars from `stars-card` task
 - check your classes, are they ok? do they follow BEM methodology?
 - don't add border to the button on hover. Add it to initial button state and make `transparent`
 - are you sure you've polished your code? :)
-- BEM block should't have outer styles(like margin)
+- BEM card should't have outer styles(like margin)
 - stars should be the same as in [Stars task](https://github.com/mate-academy/layout_stars)
-- do not add an empty line at the start of the block. Just between siblings if they are large enough
+- do not add an empty line at the start of the card. Just between siblings if they are large enough
