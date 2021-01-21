@@ -7,7 +7,7 @@ const { basicScenario } = backstop;
 const basic = {
   ...basicScenario,
   label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/product-blocks/',
+  referenceUrl: basicScenario.referenceUrl + '/product-cards/',
 };
 
 const config = {
@@ -25,15 +25,15 @@ const config = {
   scenarios: [
     {
       ...basic,
-      label: 'block with data-qa_block',
-      selectors: ['[data-qa="block"]'],
+      label: 'card with data-qa_card',
+      selectors: ['[data-qa="card"]'],
     },
     {
       ...basic,
       label: 'Link with data-qa_hover',
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
-      selectors: ['[data-qa="block"]'],
+      selectors: ['[data-qa="card"]'],
     },
   ],
 };
