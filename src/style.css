@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto, Arial, sans-serif;
 }
@@ -7,7 +11,7 @@ html {
 body,
 .card__amount,
 .card__reviews,
-.card__price-text {
+.card__price {
   margin: 0;
 }
 
@@ -18,7 +22,6 @@ body,
   width: 200px;
 
   border-radius: 5px;
-  box-sizing: border-box;
   border: 1px solid #f3f3f3;
 }
 
@@ -38,20 +41,15 @@ body,
 
 .card__code {
   margin: 0 14px 15px;
-
-  font-weight: 400;
-  font-size: 11px;
 }
 
 .card__item,
-.card__price,
 .card__link {
   display: flex;
   align-items: center;
 }
 
-.card__item,
-.card__price {
+.card__item {
   justify-content: space-between;
   margin: 0 14px 20px;
 }
@@ -61,12 +59,9 @@ body,
   font-weight: 700;
 }
 
-.card__reviews {
-  font-weight: 400;
-  font-size: 11px;
-}
-
-.card__price-text {
+.card__reviews,
+.card__price,
+.card__code {
   font-weight: 400;
   font-size: 11px;
 }
@@ -82,12 +77,11 @@ body,
 
   font-size: 14px;
   font-weight: 700;
-  border-radius: 5px;
 
   background-color: #00acdc;
+  border-radius: 5px;
   border: 1px solid #00acdc;
   position: absolute;
-  box-sizing: border-box;
   bottom: 15px;
   left: 15px;
 }
