@@ -1,0 +1,134 @@
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 400px;
+}
+
+body,
+h3,
+p,
+img {
+  margin: 0;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.product__card {
+  display: block;
+  box-sizing: border-box;
+  align-items: center;
+
+  width: 200px;
+  padding: 15px 14px;
+  
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+
+.product__card-outer {
+  margin: 0 22px;
+}
+
+.product__photo {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 15px 5px 44px;
+}
+
+.product__name {
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500px;
+  margin-bottom: 6px;
+}
+
+.product__code {
+  margin-bottom: 15px;
+}
+
+.product__code::before {
+  content: "Код товара: ";
+}
+
+/* review block */
+
+.product__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product__reviews {
+  margin: 0;
+}
+
+.product__reviews::before {
+  content: "Отзывов: ";
+}
+
+.product__stars {
+  display: flex;
+}
+
+.product__star {
+  flex-direction: row;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+
+.product__stars-1 .product__star:nth-child(-n+1),
+.product__stars-2 .product__star:nth-child(-n+2),
+.product__stars-3 .product__star:nth-child(-n+3),
+.product__stars-4 .product__star:nth-child(-n+4),
+.product__stars-5 .product__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+/* price block */
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.product__price-amount {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+
+  color: white;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
+
+.product__buy:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
