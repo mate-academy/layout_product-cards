@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -5,7 +9,6 @@ body {
 
 .product {
   padding: 30px 14px 15px;
-  box-sizing: border-box;
   position: relative;
   width: 200px;
   border: 1px solid #f3f3f3;
@@ -17,7 +20,7 @@ body {
   padding-bottom: 45px;
 }
 
-.product__photo_img {
+.product__photo-img {
   width: 160px;
   height: 134px;
 }
@@ -25,7 +28,6 @@ body {
 .product__name {
   margin: 0;
   padding-bottom: 5px;
-  font-style: normal;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -36,9 +38,7 @@ body {
   margin: 0;
   padding-bottom: 15px;
   display: flex;
-  font-style: normal;
   font-size: 11px;
-  font-weight: normal;
   line-height: 13px;
   color: #000;
 }
@@ -57,23 +57,21 @@ body {
   padding-bottom: 20px;
 }
 
-.product__rating_stars {
+.product__rating-stars {
   display: flex;
 }
 
-.product__rating_amount {
-  font-style: normal;
+.product__rating-amount {
   font-size: 11px;
-  font-weight: normal;
   line-height: 13px;
   color: #000;
 }
 
-.stars__1 .stars__star:first-child,
-.stars__2 .stars__star:nth-child(-n+2),
-.stars__3 .stars__star:nth-child(-n+3),
-.stars__4 .stars__star:nth-child(-n+4),
-.stars__5 .stars__star:nth-child(-n+5) {
+.stars-first .stars__star:first-child,
+.stars-second .stars__star:nth-child(-n+2),
+.stars-third .stars__star:nth-child(-n+3),
+.stars-fourth .stars__star:nth-child(-n+4),
+.stars-fifth .stars__star:nth-child(-n+5) {
   background: url(images/star-active.svg) no-repeat center;
 }
 
@@ -84,17 +82,14 @@ body {
   padding-bottom: 20px;
 }
 
-.product__price_naming {
-  font-style: normal;
+.product__price-naming {
   font-size: 11px;
-  font-weight: normal;
   line-height: 13px;
   text-align: right;
   color: #000;
 }
 
-.product__price_value {
-  font-style: normal;
+.product__price-value {
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
@@ -104,10 +99,10 @@ body {
 
 .product__button {
   display: flex;
-  box-sizing: border-box;
   justify-self: center;
   font-size: 14px;
-  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: bold;
   align-items: center;
   text-align: center;
   height: 40px;
