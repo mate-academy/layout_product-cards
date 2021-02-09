@@ -2,9 +2,17 @@
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -23,23 +31,32 @@
   margin: 0 auto 45px;
 }
 
-.card__description {
-  margin-bottom: 5px;
+.card__header {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
+.card__header-margin {
+  margin-bottom: 5px;
+}
+
 .card__code {
-  margin-bottom: 15px;
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
 }
 
+.card__code-margin {
+  margin-bottom: 15px;
+}
+
 .rating {
   display: flex;
   justify-content: space-between;
+}
+
+.rating-margin {
   margin-bottom: 20px;
 }
 
@@ -47,22 +64,28 @@
   display: flex;
 }
 
-.star__active {
+.rating__active {
   display: flex;
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
   background-image: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.star {
+.rating__active-properties {
   width: 15px;
   height: 15px;
+  margin-right: 4px;
+}
+
+.rating__unactive {
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.rating__unactive-properties {
+  width: 15px;
+  height: 15px;
 }
 
 .rating__reviews {
@@ -76,6 +99,9 @@
   display: flex;
   justify-content: space-between;
   align-content: flex-end;
+}
+
+.price-margin {
   margin-bottom: 20px;
 }
 
@@ -97,9 +123,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 40px;
-  margin-bottom: 15px;
   line-height: 16px;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -109,6 +132,12 @@
   color: #fff;
   background-color: #00acdc;
   border-radius: 5px;
+}
+
+.card__link-properties {
+  width: 170px;
+  height: 40px;
+  margin-bottom: 15px;
 }
 
 .card__link:hover {
