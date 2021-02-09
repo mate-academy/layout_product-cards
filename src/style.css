@@ -11,22 +11,27 @@ img {
   margin: 0;
 }
 
-.box {
+.product {
   display: flex;
   justify-content: center;
 }
 
-.box__card {
+.product__card {
   display: block;
   box-sizing: border-box;
   align-items: center;
+
   width: 200px;
-  margin: 0 22px;
   padding: 15px 14px;
+  
   background: #fff;
   border: 1px solid #f3f3f3;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
+}
+
+.product__card-outer {
+  margin: 0 22px;
 }
 
 .product__photo {
@@ -58,7 +63,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .product__reviews {
@@ -73,21 +78,22 @@ img {
   display: flex;
 }
 
-.product__stars-star {
+.product__star {
   flex-direction: row;
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
   background-image: url("./images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
 }
 
-.stars--1 .product__stars-star:nth-child(-n+1),
-.stars--2 .product__stars-star:nth-child(-n+2),
-.stars--3 .product__stars-star:nth-child(-n+3),
-.stars--4 .product__stars-star:nth-child(-n+4),
-.stars--5 .product__stars-star:nth-child(-n+5) {
+.product__stars-1 .product__star:nth-child(-n+1),
+.product__stars-2 .product__star:nth-child(-n+2),
+.product__stars-3 .product__star:nth-child(-n+3),
+.product__stars-4 .product__star:nth-child(-n+4),
+.product__stars-5 .product__star:nth-child(-n+5) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -110,14 +116,16 @@ img {
   justify-content: center;
   align-items: center;
   height: 38px;
+
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
-  border-radius: 5px;
+
+  color: white;
   background-color: #00acdc;
   border: 1px solid #00acdc;
-  color: white;
+  border-radius: 5px;
 }
 
 .product__buy:hover {
