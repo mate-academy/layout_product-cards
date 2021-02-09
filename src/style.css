@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Стилі всієї картки */
+.card {
+  width: 200px;
+  height: 403px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+/* Стилі картинки */
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 30px 20px 40px;
+}
+
+/* Стилі інформації під картинкою */
+.card__info {
+  padding: 0 15px;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.card__stars_feedback,
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card__code {
+  margin-bottom: 15px;
+}
+
+/* Стилізація зірок */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url("./images/star-active.svg");
+}
+
+/* Стилізація ціни */
+.card__price__value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Стилізація кнопки */
+.card__btn {
+  width: 170px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #00acdc;
+}
+
+.card__btn:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  transition: 0.5s;
+}
