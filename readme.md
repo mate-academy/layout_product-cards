@@ -20,8 +20,6 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 - follow styles from the mock
 - add `data-qa="card"` attribute to the card block
 - add `data-qa="hover"` attribute to the link
----
-![screenshot](./references/card-example.png)
 
 ### Common mistakes
 - Add **ALL** `data-qa` attributes required in the task
@@ -29,3 +27,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 - Don't use repeated styles.
 - Item with text 'Купить' should be a link.
 - Check font styles. Use [google fonts](https://fonts.google.com/)
+
+---
+![screenshot](./references/card-example.png)
+
