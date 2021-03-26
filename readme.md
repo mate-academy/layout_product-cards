@@ -12,13 +12,6 @@ ___
 ## The task
 Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1).
 
-### Common mistakes
-- Add **ALL** `data-qa` attributes required in the task
-- Do not use `tabs`. Use `2 spaces` for indentation.
-- Don't use repeated styles.
-- Item with text 'Купить' should be a link.
-- Check font styles. Use [google fonts](https://fonts.google.com/)
-
 ### Requirements:
 - reset browser's default margins
 - card width is `200px` including border
@@ -29,3 +22,10 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 - add `data-qa="hover"` attribute to the link
 ---
 ![screenshot](./references/card-example.png)
+
+### Common mistakes
+- Add **ALL** `data-qa` attributes required in the task
+- Do not use `tabs`. Use `2 spaces` for indentation.
+- Don't use repeated styles.
+- Item with text 'Купить' should be a link.
+- Check font styles. Use [google fonts](https://fonts.google.com/)
