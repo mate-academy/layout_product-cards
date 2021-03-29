@@ -18,11 +18,10 @@ p {
 }
 
 .card {
-  width: 200px;
-  padding: 30px 14px 15px;
-
   display: flex;
   flex-direction: column;
+  width: 200px;
+  padding: 30px 14px 15px;
 
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -31,7 +30,6 @@ p {
 .card__photo {
   width: 160px;
   height: 134px;
-
   margin: auto;
   margin-bottom: 45px;
 }
@@ -57,31 +55,36 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 15px;
   margin-top: 15px;
 }
 
 .star {
   width: 15px;
-  height: 12px;
+  height: 15px;
   margin-right: 4px;
+
   background-image: url(images/star-active.svg);
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card__reviews-stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15px;
 }
 
 .star:last-of-type {
-  background-image: url(images/star.svg);
   margin-right: 0;
+
+  background-image: url(images/star.svg);
 }
 
 .card__reviews-text {
-  width: 58px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   font-size: 11px;
   font-weight: 400;
@@ -96,9 +99,7 @@ p {
 }
 
 .card__price-text {
-  display: flex;
-  align-self: flex-end;
-  margin-bottom: 1px;
+  align-self: center;
 
   font-size: 11px;
   font-weight: 400;
@@ -106,7 +107,6 @@ p {
 }
 
 .card__price-cash {
-  display: flex;
   align-self: flex-start;
 
   font-size: 16px;
@@ -129,12 +129,14 @@ p {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+
   background-color: #00acdc;
   border-radius: 5px;
 }
 
 .card__button:hover {
   color: var(--button-color);
+
   background: #fff;
   border: 1px solid var(--button-color);
 }
