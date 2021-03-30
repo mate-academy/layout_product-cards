@@ -7,6 +7,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 11px;
   font-weight: normal;
+  --button-color: #00acdc;
 }
 
 .product {
@@ -38,10 +39,7 @@ html {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-}
-
-.product__reviews {
-  line-height: 15px;
+  align-items: center;
 }
 
 .price__value {
@@ -52,7 +50,7 @@ html {
 .button {
   display: flex;
   justify-content: center;
-  background: #00acdc;
+  background: var(--button-color);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -64,8 +62,8 @@ html {
 
 .product__button:hover {
   background: #fff;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
 }
 
 .product__price {
@@ -86,11 +84,9 @@ html {
   width: 15px;
   height: 15px;
   margin-right: 4px;
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(images/star.svg) no-repeat center;
 }
 
-.stars__star:last-child {
-  background-image: url(images/star.svg);
+.stars__star--active {
+  background-image: url(images/star-active.svg);
 }
