@@ -8,7 +8,7 @@ p {
   margin: 0;
 }
 
-.product-card {
+.card {
   width: 200px;
 
   display: flex;
@@ -17,21 +17,23 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 11px;
   --btn-color: #00acdc;
-
-  padding: 15px;
 }
 
-.product-card__img {
+.card-img {
   width: 160px;
   height: 134px;
 
   display: flex;
   align-self: center;
   
-  margin: 16px 5px 45px;
+  margin: 31px 5px 45px;
 }
 
-.product-card__adout {
+.card-description {
+  padding: 0 15px;
+}
+
+.card-description__about {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -39,7 +41,7 @@ p {
   margin-bottom: 5px;
 }
 
-.product-card-rating {
+.card-description__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,23 +49,23 @@ p {
   margin-top: 15px;
 }
 
-.product-card-rating__stars {
+.card-description__stars {
   display: flex;
 }
 
-.product-card-rating__star {
+.card-description__star {
   width: 15px;
   height: 15px;
   
   background: url(./images/star.svg) no-repeat center;
 }
 
-.product-card-rating__star--star_active {
+.card-description__star--star_active {
   margin-right: 4px;
   background-image: url(./images/star-active.svg);
 }
 
-.product-card-price {
+.card-description__cost {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -71,18 +73,19 @@ p {
   margin-top: 20px;
 }
 
-.product-card-price__amount {
+.card-description__amount {
   font-size: 16px;
   font-weight: 700;
 }
 
-.product-card-button {
-  width: 100%;
+.card-button {
+  width: 170px;
   height: 40px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   
   background-color: var(--btn-color);
   border-radius: 5px;
@@ -95,7 +98,7 @@ p {
   margin-top: 20px;
 }
 
-.product-card-button:hover {
+.card-button:hover {
   background-color: #fff;
   border: 1px solid var(--btn-color);
 
