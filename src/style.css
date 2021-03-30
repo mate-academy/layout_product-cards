@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-body {
+body,
+p {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -18,40 +19,36 @@ body {
   border-radius: 5px;
 }
 
-.cardImage {
+.cardConteiner__image {
   width: 160px;
   height: 134px;
   margin-bottom: 45px;
   align-self: center;
 }
 
-.text {
-  margin: 0;
-}
-
-.nameProduct {
+.product__name {
   font-weight: 500;
   line-height: 15px;
   font-size: 12px;
   margin-bottom: 5px;
 }
 
-.productCode {
+.product__code {
   margin-bottom: 15px;
 }
 
-.rateConteiner {
+.rate {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.stars {
+.rate__stars {
   display: flex;
 }
 
-.stars__star {
+.rate__stars--star {
   width: 15px;
   height: 15px;
   background-image: url(images/star-active.svg);
@@ -60,23 +57,20 @@ body {
   margin-right: 4px;
 }
 
-.stars__star:last-child {
+.rate__stars--star:last-child {
   width: 15px;
   height: 15px;
   background-image: url(images/star.svg);
 }
 
-.blockProductPrice {
+.price {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 20px;
 }
 
-.text_Price {
-  align-self: flex-end;
-}
-
-.valuePrice {
+.price__value {
   font-size: 16px;
   font-weight: 700;
 }
@@ -87,6 +81,7 @@ body {
   align-items: center;
   height: 40px;
   background-color: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 700;
@@ -97,5 +92,4 @@ body {
 .buttonToBuy:hover {
   color: #00acdc;
   background-color: #fff;
-  border: 1px solid #00acdc;
 }
