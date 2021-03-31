@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: 400;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  --white-color: #fff;
+  --blue-color: #00acdc;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 403px;
+  background-color: var(--white-color);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product__image-block {
+  margin: 29px 19px 44px;
+}
+
+.product__image {
+  width: 160px;
+  height: 134px;
+}
+
+.product__item-title {
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0 14px 5px;
+}
+
+.product__item-code {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 400;
+  font-size: 11px;
+  margin: 0 14px 15px;
+}
+
+.product__feedback {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 14px 20px;
+  align-items: center;
+}
+
+.product__stars {
+  display: flex;
+}
+
+.product__star-active {
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product__star-not-active {
+  height: 15px;
+  width: 15px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product__feedback-count {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.product__price-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 14px 20px;
+}
+
+.product__price-text {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.product__price-number {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product__buy-button {
+  display: flex;
+}
+
+.product__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  margin: 0 14px 15px;
+  color: var(--white-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.product__button:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  color: var(--blue-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--blue-color);
+}
+
+.product:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
