@@ -14,7 +14,7 @@ p {
   padding: 0;
 }
 
-.main__card {
+.card {
   width: 200px;
   padding: 14px;
   border: 1px solid #f3f3f3;
@@ -29,52 +29,61 @@ p {
   justify-content: center;
 }
 
-.main__product-name {
+.card__product-name {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
   margin-bottom: 5px;
 }
 
-.main__product-code {
+.card__product-code {
   margin-bottom: 15px;
 }
 
-.main__rating-container {
+.card__rating-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.main__product-stars {
+.card__product-stars {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+}
+
+.card__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
   height: 15px;
-  margin-left: -4px;
-}
-
-.main__product-star {
   width: 15px;
-  height: 12px;
-  margin-left: 4px;
+  margin-right: 4px;
+  background-position: 50%;
 }
 
-.main__product-price {
+.card__star-active {
+  background-image: url("images/star-active.svg");
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background-position: 50%;
+}
+
+.card__product-price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 20px;
 }
 
-.main__product-price-value {
+.card__product-price-value {
   font-size: 16px;
   font-weight: 700;
 }
 
-.main__button {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,10 +95,10 @@ p {
   color: #fff;
   background-color: #00acdc;
   border-radius: 5px;
+  border: 1px solid #00acdc;
 }
 
-.main__button:hover {
+.card__button:hover {
   color: #00acdc;
   background-color: #fff;
-  border: 1px solid #00acdc;
 }
