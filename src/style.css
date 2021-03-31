@@ -1,11 +1,15 @@
-.page {
+* {
+  box-sizing: border-box;
+}
+
+.page,
+p {
   margin: 0;
   font-family: "Roboto", sans-serif;
   --blue-color: #00acdc;
 }
 
 .card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +36,7 @@
 .card__title {
   padding-top: 30px;
   padding-bottom: 6px;
+
   color: #000;
   font-size: 12px;
   line-height: 15px;
@@ -41,16 +46,16 @@
 .card__id {
   width: 100%;
   padding-bottom: 15px;
+
   font-size: 11px;
   line-height: 13px;
 }
 
 .card__rating {
   display: flex;
-  width: 100%;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding-bottom: 20px;
 }
 
@@ -74,17 +79,16 @@
   background-image: url("./images/star-active.svg");
 }
 
-.reviews {
+.card__reviews {
   font-size: 11px;
   line-height: 13px;
 }
 
 .card__price {
   display: flex;
-  width: 100%;
-  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  width: 100%;
   padding-bottom: 20px;
 }
 
@@ -99,36 +103,28 @@
   line-height: 19px;
 }
 
-.bottom-buy {
+.card__bottom-buy {
   display: flex;
   width: 100%;
   height: 40px;
   border-radius: 5px;
 }
 
-.card__bottom-buy {
-  background-color: var(--blue-color);
-  color: #fff;
-}
-
 .card__bottom-buy:hover {
-  box-sizing: border-box;
   background: #fff;
   border: 1px solid var(--blue-color);
   color: var(--blue-color);
 }
 
-.bottom-buy__link {
+.card__bottom-buy--link {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
+  background-color: var(--blue-color);
   
+  color: #fff;
   font-size: 14px;
-  color: inherit;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
