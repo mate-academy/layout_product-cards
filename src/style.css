@@ -1,0 +1,136 @@
+:root {
+  --button-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #000;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 30px 14px 15px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+.card__title {
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 15px;
+}
+
+.card__item {
+  height: 13px;
+  line-height: 13px;
+}
+
+.card__reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 15px;
+  margin-top: 15px;
+}
+
+.star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+
+  background-image: url(images/star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__reviews-stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star:last-of-type {
+  margin-right: 0;
+
+  background-image: url(images/star.svg);
+}
+
+.card__reviews-text {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-style: normal;
+}
+
+.card__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card__price-text {
+  align-self: center;
+
+  font-style: normal;
+}
+
+.card__price-cash {
+  align-self: flex-start;
+
+  font-size: 16px;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+
+  background-color: var(--button-color);
+  border-radius: 5px;
+  border: 1px solid var(--button-color);
+}
+
+.card__button:hover {
+  color: var(--button-color);
+  background: #fff;
+}
