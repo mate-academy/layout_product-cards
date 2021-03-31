@@ -14,42 +14,34 @@ body {
   margin: 0;
 }
 
-.productCard {
+.product-card {
   width: 200px;
   padding: 14px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
 
-.productCard:hover {
+.product-card:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
-.productCard-imgBox {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  margin-bottom: 45px;
-}
-
-.productCard-img {
+.product-card__img {
+  display: block;
   width: 160px;
   height: 134px;
+  margin: 15px auto 45px;
 }
 
-.productCard-title {
-  --title-lineHeight: 15px;
-
-  height: calc(var(--title-lineHeight) * 2);
+.product-card__title {
   overflow: hidden;
   margin: 0 0 6px;
 
   font-size: 12px;
   font-weight: 500;
-  line-height: var(--title-lineHeight);
+  line-height: 15px;
 }
 
-.productCard-cod {
+.product-card__cod {
   margin: 0 0 15px;
 
   font-size: 11px;
@@ -63,12 +55,12 @@ body {
   align-items: center;
 }
 
-.rating-stars {
+.rating__stars {
   display: flex;
   align-items: center;
 }
 
-.rating-star {
+.rating__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
@@ -79,17 +71,17 @@ body {
   background-position: center;
 }
 
-.rating-star_active {
+.rating__star--active {
   background-image: url("images/star-active.svg");
 }
 
-.rating-response {
+.rating__response {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
 }
 
-.productCard-rating {
+.product-card__rating {
   margin-bottom: 20px;
 }
 
@@ -99,14 +91,14 @@ body {
   align-items: baseline;
 }
 
-.price-title {
+.price__title {
   margin: 0;
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
 }
 
-.price-value {
+.price__value {
   margin: 0;
 
   font-size: 16px;
@@ -114,16 +106,16 @@ body {
   line-height: 19px;
 }
 
-.productCard-price {
+.product-card__price {
   margin-bottom: 20px;
 }
 
-.buyButton {
+.buy-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 40px;
   padding: 0;
   border-radius: 5px;
   border: 1px solid var(--color-blue);
@@ -137,11 +129,7 @@ body {
   text-decoration: none;
 }
 
-.buyButton:hover {
+.buy-button:hover {
   background-color: #fff;
   color: var(--color-blue);
-}
-
-.productCard-buyButton {
-  height: 40px;
 }
