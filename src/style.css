@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  
+  --card-color: #00acdc;
+  --basic-width: 170px;
+}
+
+.card {
+  width: 200px;
+  padding: 29px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  margin-bottom: 45px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  width: var(--basic-width);
+}
+
+.card__code {
+  margin-bottom: 15px;
+  font-weight: 400;
+  width: var(--basic-width);
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--basic-width);
+  margin-bottom: 20px;
+}
+
+.card__comments {
+  font-weight: 400;
+}
+
+.stars {
+  display: flex;
+  width: 100px;
+  height: 15px;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars__star:nth-last-child(n + 2) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: var(--basic-width);
+  padding-bottom: 20px;
+}
+
+.card__word {
+  font-weight: 400;
+}
+
+.card__amount {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--card-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 5px;
+  width: 170px;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: var(--card-color);
+  border: 1px solid var(--card-color);
+}
