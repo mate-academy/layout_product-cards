@@ -43,25 +43,31 @@ li {
 }
 
 .card__product-code {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   font-size: 11px;
 }
 
 .rating {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 
-.rating__stars {
+.stars {
   display: flex;
-  gap: 6px;
-  list-style: none;
-  margin-left: 1px;
 }
 
-.rating__star {
-  display: inline-flex;
+.stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--active-stars_4 > .stars__star:nth-last-child(n+2) {
+  background-image: url(images/star-active.svg);
 }
 
 .rating__count {
