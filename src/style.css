@@ -42,19 +42,36 @@ body {
 }
 
 .imac__rating {
-  margin: 16px 14px 0;
+  margin: 15px 14px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
-.star-active:not(:first-child) {
+.imac__stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars:not(:last-child) {
+  width: 15px;
+  height: 15px;
+  background-image: url(images\star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars:not(:first-child) {
   margin-left: 4px;
 }
 
-.no-active {
-  margin-right: 21px;
-  margin-left: 4px;
+.stars:last-child {
+  width: 15px;
+  height: 15px;
+  background-image: url(images\star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .rating {
@@ -64,7 +81,7 @@ body {
 }
 
 .imac__price {
-  margin: 21px 14px 0;
+  margin: 20px 14px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
