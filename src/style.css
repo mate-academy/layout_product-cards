@@ -1,6 +1,7 @@
 .page {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  --blue-color: #00acdc;
 }
 
 .card {
@@ -19,7 +20,7 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 5px 15px;
+  padding: 15px 5px;
 }
 
 .img {
@@ -30,6 +31,7 @@
 
 .card__title {
   padding-top: 30px;
+  padding-bottom: 6px;
   color: #000;
   font-size: 12px;
   line-height: 15px;
@@ -38,7 +40,7 @@
 
 .card__id {
   width: 100%;
-  padding: 5px 0;
+  padding-bottom: 15px;
   font-size: 11px;
   line-height: 13px;
 }
@@ -49,15 +51,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 20px;
+  padding-bottom: 20px;
 }
 
-.rating-stars {
+.rating {
   display: flex;
 }
 
-.stars-star {
-  background-image: url("./images/star.svg");
+.rating__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
@@ -65,7 +66,11 @@
   background-position: center;
 }
 
-.rating-stars :nth-child(-n+4) {
+.rating__star--bad {
+  background-image: url("./images/star.svg");
+}
+
+.rating__star--good {
   background-image: url("./images/star-active.svg");
 }
 
@@ -80,7 +85,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0 0 20px;
+  padding-bottom: 20px;
 }
 
 .price-title {
@@ -88,7 +93,7 @@
   line-height: 13px;
 }
 
-.price {
+.price-value {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -100,14 +105,14 @@
   justify-content: center;
   width: 100%;
   height: 40px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 5px;
   color: #fff;
 }
 
 .card__bottom-buy:hover {
   background: #fff;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--blue-color);
   box-sizing: border-box;
   border-radius: 5px;
   color: #00acdc;
