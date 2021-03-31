@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+.content-page,
+h1,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  padding: 14px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+
+  display: flex;
+  align-self: center;
+  
+  margin: 16px 4px 45px;
+}
+
+.card-description__about {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+
+  margin-bottom: 5px;
+}
+
+.card-description__code {
+  margin-bottom: 15px;
+}
+
+.card-description__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.card-description__stars {
+  display: flex;
+}
+
+.card-description__star {
+  width: 15px;
+  height: 15px;
+  
+  background: url(./images/star.svg) no-repeat center;
+}
+
+.card-description__star--star_active {
+  margin-right: 4px;
+  background-image: url(./images/star-active.svg);
+}
+
+.card-description__cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 20px;
+}
+
+.card-description__amount {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-button {
+  width: 170px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  --btn-color: #00acdc;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+
+  background-color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  border-radius: 5px;
+}
+ 
+
+.card-button:hover {
+  background-color: #fff;
+  color: var(--btn-color);
+  
+  transition: 0.1s;
+}
