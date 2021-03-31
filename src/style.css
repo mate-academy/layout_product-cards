@@ -1,17 +1,4 @@
-html {
-  --width-product-card: 200px;
-  --height-product-card: 403px;
-  --paddings-product-card: 30px 14px 15px;
-  --border-color-product-card: #f3f3f3;
-  --width-product-image: 160px;
-  --height-product-image: 134px;
-  --rating-stars-width: 91px;
-  --star-width: 15px;
-  --star-height: 12px;
-  --color-product-button-buy: #00acdc;
-  --height-product-button-buy: 40px;
-}
-
+/* #region Normalize */
 * {
   box-sizing: border-box;
 }
@@ -26,34 +13,42 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
 }
+/* #endregion */
 
-.card-product {
+/* #region Product-card */
+.product-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  width: var(--width-product-card);
-  height: var(--height-product-card);
-  padding: var(--paddings-product-card);
+  width: 200px;
+  padding: 30px 14px 14px;
 
-  border: 1px solid var(--border-color-product-card);
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.card-product__image {
-  align-self: center;
-
-  width: var(--width-product-image);
-  height: var(--height-product-image);
+.product-card__image-container {
+  margin-bottom: 45px;
 }
+/* #endregion */
 
-.card-product__container {
+/* #region Card-container-picture */
+.card-container-picture {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: stretch;
 }
 
-.card-product__name {
+.card-container-picture__img {
+  align-self: center;
+  width: 160px;
+  height: 134px;
+}
+/* #endregion */
+
+/* #region Card-container-info */
+.card-container-info__name {
   margin-bottom: 5px;
 
   font-size: 12px;
@@ -61,72 +56,82 @@ body {
   line-height: 15px;
 }
 
-.card-product__code {
-  margin-bottom: 16px;
+.card-container-info__code {
+  margin-bottom: 15px;
 
   font-size: 11px;
   line-height: 13px;
 }
 
-.card-product__rating {
+.card-container-info__rating {
+  margin-bottom: 20px;
+}
+
+.card-container-info__price {
+  margin-bottom: 20px;
+}
+/* #endregion */
+
+/* #region Product-rating */
+.product-rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 21px;
 }
 
-.rating__stars {
+/* #region Rating-stars */
+.rating-stars {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: var(--rating-stars-width);
 }
 
-.stars__star {
-  width: var(--star-width);
-  height: var(--star-height);
+.rating-stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
 
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: none;
   background-position: center;
 }
 
-.stars__star--active {
+.rating-stars__star--active {
   background-image: url(images/star-active.svg);
 }
+/* #endregion */
 
-.rating__comments {
+.product-rating__comments {
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
 }
+/* #endregion */
 
-.card-product__price {
+/* #region Product-price */
+.product-price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 20px;
-
+  
   font-size: 11px;
   line-height: 13px;
 }
 
-.price_word {
-  font-size: 11px;
-}
-
-.price__amount {
+.product-price__amount {
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
 }
+/* #endregion */
 
-.card-product__buy {
+/* #region Button-buy */
+.button-buy {
+  --color-button-buy: #00acdc;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--height-product-button-buy);
+  height: 40px;
 
   font-size: 14px;
   font-weight: 700;
@@ -135,12 +140,13 @@ body {
   text-decoration: none;
   
   color: #fff;
-  background-color: var(--color-product-button-buy);
+  background-color: var(--color-button-buy);
   border-radius: 5px;
 }
 
-.card-product__buy:hover {
-  color: var(--color-product-button-buy);
-  border: 1px solid var(--color-product-button-buy);
+.button-buy:hover {
+  color: var(--color-button-buy);
+  border: 1px solid var(--color-button-buy);
   background-color: #fff;
 }
+/* #endregion */
