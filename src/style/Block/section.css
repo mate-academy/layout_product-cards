@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+/* #region block-card-product */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  width: var(--width-product-card);
+  height: min-content;
+  font-family: Roboto, sans-serif;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+/* #endregion */
+
+/* #region image-product */
+
+.card__image-imac {
+  margin: 15px 5px 45px;
+  width: 160px;
+  height: 134px;
+}
+
+/* #endregion  */
+
+/* #region info-by-product */
+
+.card__description {
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+  line-height: 15px;
+  padding-bottom: 6px;
+}
+
+.card__code {
+  font-size: 11px;
+  line-height: 13px;
+  text-align: left;
+}
+
+/* #endregion */
+
+/* #region rating */
+.card__rating {
+  margin-top: 15px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.stars__star {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url("/images/star.svg");
+  background-position: center;
+}
+
+.stars :not(:nth-child(n+5)) {
+  background-image: url("/images/star-active.svg");
+}
+
+.rating__feedbacks {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+/* #endregion */
+
+/* #region cost */
+.card__cost {
+  margin: 20px 0;
+}
+
+.cost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cost__text {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.cost__amount {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* #endregion */
+
+/* #region buttom */
+
+.card__link-buttom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--color-product-blue);
+  border-radius: 5px;
+  border: 1px solid var(--color-product-blue);
+}
+
+.card__link-buttom:hover {
+  background-color: #fff;
+  color: var(--color-product-blue);
+}
+
+/* #endregion */
