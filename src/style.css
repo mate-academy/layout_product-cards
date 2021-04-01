@@ -5,17 +5,26 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
 body {
   margin: 0;
   padding: 0;
+  --white-color: #fff;
+  --blue-color: #00acdc;
+  --black-color: #000;
 }
 
-.main {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: var(--white-color);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
@@ -37,15 +46,13 @@ body {
 .content__title {
   padding: 0 0 6px;
   margin: 0;
-  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #000;
+  color: var(--black-color);
 }
 
 .content__code {
-  font-family: Roboto, sans-serif;
   font-size: 11px;
   line-height: 13px;
   padding: 0 0 15px;
@@ -80,65 +87,54 @@ body {
   margin: 0;
 }
 
-.span {
-  font-family: Roboto, sans-serif;
+.reviews__feedbacks {
   font-size: 11px;
   line-height: 13px;
-  color: #000;
+  color: var(--black-color);
 }
 
-.price {
+.content__price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 0 20px;
 }
 
-.price :nth-child(n) {
+.content__price :nth-child(n) {
   margin: 0;
 }
 
-.price__title {
-  font-family: Roboto, sans-serif;
+.content__price-title {
   font-size: 11px;
   line-height: 13px;
-  color: #000;
+  color: var(--black-color);
 }
 
-.price__cost {
-  font-family: Roboto, sans-serif;
+.content__price-cost {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
 }
 
-/* .buy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-} */
-
 .buy {
   text-decoration: none;
-  font-family: Roboto, sans-serif;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  color: #fff;
-  background-color: #00acdc;
+  color: var(--white-color);
+  background-color: var(--blue-color);
   border-radius: 5px;
-  min-width: 170px;
-  min-height: 40px;
+  width: 170px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .buy:hover {
-  color: #00acdc;
-  background: #fff;
+  color: var(--black-color);
+  background: var(--white-color);
   border: 1px solid #00acdc;
   border-radius: 5px;
   box-sizing: border-box;
