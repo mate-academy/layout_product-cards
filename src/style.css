@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+h2 {
+  margin: 0;
+  --card__link-color: #00acdc;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 15px 5px 45px;
+}
+
+.card__name-product {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+.card__code-producte {
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 16px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: url(../src/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star_active {
+  background-image: url(../src/images/star-active.svg);
+}
+
+.card__count {
+  align-self: center;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card__price-text {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--card__link-color);
+  border: 1px solid var(--card__link-color);
+  border-radius: 5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.card__link:hover {
+  background-color: #fff;
+  color: var(--card__link-color);
+}
