@@ -3,20 +3,16 @@
 }
 
 .page {
-  background-color: #e5e5e5;
-  padding: 100px;
   font-family: Roboto, sans-serif;
 }
 
 .card {
   width: 200px;
-  background-color: rgba(255, 255, 255, 1);
   border-radius: 5px;
   border: 1px solid rgba(243, 243, 243, 1);
 }
 
 .card__image {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,24 +26,18 @@
   width: 100%;
 }
 
-.card__name-container {
-  margin: 0 15px 6px;
-}
-
 .card__name {
-  font-weight: bold;
+  font-weight: 500;
+  margin: 0 15px 6px;
   font-size: 12px;
   line-height: 15.47px;
-}
-
-.card__number-container {
-  margin: 0 15px 15px;
 }
 
 .card__number {
   font-weight: 400;
   font-size: 11px;
   line-height: 12.89px;
+  margin: 0 15px 15px;
 }
 
 .card__feedback {
@@ -56,20 +46,21 @@
   justify-content: space-between;
 }
 
-.card__stars {
+.stars {
   display: flex;
 }
 
-.card__star {
+.stars__star {
   margin-right: 4px;
   height: 15px;
   width: 15px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.card__star--inactive {
-  background-image: url(images/star.svg);
+.stars__star--active {
+  background-image: url(images/star-active.svg);
 }
 
 .card__review {
@@ -118,6 +109,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .card__link:hover {
