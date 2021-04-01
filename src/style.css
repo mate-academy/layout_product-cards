@@ -22,7 +22,6 @@ p {
 
 .card__img {
   display: flex;
-  box-sizing: border-box;
   width: 100%;
   padding: 15px 5px;
 }
@@ -59,23 +58,20 @@ p {
   padding-bottom: 20px;
 }
 
-.rating {
+.stars {
   display: flex;
 }
 
-.rating__star {
+.stars__star {
   width: 15px;
   height: 15px;
   margin-right: 4px;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.rating__star--bad {
   background-image: url("./images/star.svg");
 }
 
-.rating__star--good {
+.stars--4 .stars__star:nth-child(-n+4) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -92,12 +88,12 @@ p {
   padding-bottom: 20px;
 }
 
-.price-title {
+.card__price-title {
   font-size: 11px;
   line-height: 13px;
 }
 
-.price-value {
+.card__price-value {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -105,27 +101,23 @@ p {
 
 .card__bottom-buy {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
   height: 40px;
   border-radius: 5px;
+  background-color: var(--blue-color);
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .card__bottom-buy:hover {
   background: #fff;
   border: 1px solid var(--blue-color);
   color: var(--blue-color);
-}
-
-.card__bottom-buy--link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--blue-color);
-  
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
 }
