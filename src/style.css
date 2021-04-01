@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: var(--black-color);
+}
+
+body {
+  padding: 0;
+  --white-color: #fff;
+  --blue-color: #00acdc;
+  --black-color: #000;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--white-color);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 29px 0 45px;
+}
+
+.content {
+  padding: 0 14px 14px;
+}
+
+.content__title {
+  padding: 0 0 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--black-color);
+}
+
+.content__code {
+  padding: 0 0 15px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 20px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+
+.stars :nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.stars :last-child {
+  background-image: url(images/star.svg);
+}
+
+.reviews__feedbacks {
+  color: var(--black-color);
+}
+
+.content__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0 20px;
+}
+
+.content__price :nth-child(n) {
+  margin: 0;
+}
+
+.content__price-title {
+  color: var(--black-color);
+}
+
+.content__price-cost {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.buy {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  border-radius: 5px;
+  width: 170px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy:hover {
+  color: var(--black-color);
+  background: var(--white-color);
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
