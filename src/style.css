@@ -2,22 +2,20 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: aliceblue;
   font-family: "Roboto", sans-serif;
   font-size: 11px;
-  
   --card-color: #00acdc;
-  --basic-width: 170px;
 }
 
 .card {
   width: 200px;
-  padding: 29px 0 15px;
+  padding: 29px 14px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,20 +35,19 @@ body {
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
-  width: var(--basic-width);
 }
 
 .card__code {
   margin-bottom: 15px;
   font-weight: 400;
-  width: var(--basic-width);
+  align-self: flex-start;
 }
 
 .card__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: var(--basic-width);
+  align-self: stretch;
   margin-bottom: 20px;
 }
 
@@ -60,7 +57,6 @@ body {
 
 .stars {
   display: flex;
-  width: 100px;
   height: 15px;
 }
 
@@ -80,6 +76,7 @@ body {
 .card__price {
   display: flex;
   justify-content: space-between;
+  align-self: stretch;
   align-items: baseline;
   width: var(--basic-width);
   padding-bottom: 20px;
