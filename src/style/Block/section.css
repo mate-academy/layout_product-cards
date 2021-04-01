@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+/* #region block-card-product */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  width: var(--width-product-card);
+  height: min-content;
+  font-family: Roboto, sans-serif;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+/* #endregion */
+
+/* #region image-product */
+
+.image-product {
+  display: flex;
+  padding: 15px 5px 45px;
+}
+
+.image-product__image-imac {
+  object-fit: contain;
+  width: 100%;
+  height: 134px;
+}
+
+/* #endregion  */
+
+/* #region info-by-product */
+
+.info-by-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-by-product__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  padding-bottom: 5px;
+}
+
+.info-by-product__code {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+/* #endregion */
+
+/* #region rating */
+
+.rating-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.stars__star {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url("/images/star.svg");
+  background-position: center;
+}
+
+.stars :not(:nth-child(n+5)) {
+  background-image: url("/images/star-active.svg");
+}
+
+.rating-product__text-rating {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+/* #endregion */
+
+/* #region cost */
+
+.cost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 0;
+}
+
+.cost__text {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.cost__amount {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* #endregion */
+
+/* #region buttom */
+.buy-button {
+  display: flex;
+}
+
+.buy-button__link-buttom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--color-product-blue);
+  border-radius: 5px;
+  border: 1px solid var(--color-product-blue);
+}
+
+.buy-button__link-buttom:hover {
+  background-color: #fff;
+  color: var(--color-product-blue);
+}
+
+/* #endregion */
