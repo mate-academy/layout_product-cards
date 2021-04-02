@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   margin: 0;
@@ -8,9 +12,7 @@ body {
 }
 
 .card {
-  box-sizing: border-box;
   width: 200px;
-  height: 403px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -21,7 +23,7 @@ body {
 }
 
 .card__photo {
-  margin-top: 20px;
+  margin-top: 29px;
   width: 160px;
   height: 134px;
 }
@@ -32,13 +34,14 @@ body {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  margin: 0 14px;
+  padding: 0 14px;
 }
 
 .card__name {
   display: flex;
   flex-direction: column;
-  margin-top: 26px;
+  margin-top: 45px;
+  margin-bottom: 0;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -47,6 +50,7 @@ body {
 .card__code {
   display: flex;
   margin-top: 6px;
+  margin-bottom: 0;
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
@@ -58,7 +62,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 15px ;
+  padding: 0 14px;
+  margin-top: 16px;
 }
 
 .card__stars_active {
@@ -67,12 +72,15 @@ body {
 }
 
 .card__star_active {
-  box-sizing: border-box;
   background-image: url(images/star-active.svg);
   background-repeat: no-repeat;
-  margin-right: 4px;
+  margin-left: 4px;
   height: 15px;
   width: 15px;
+}
+
+.card__star_active:first-child {
+  margin-left: 1px;
 }
 
 .card__star_active:last-child {
@@ -81,34 +89,36 @@ body {
 
 .card__reviews_comments {
   margin: 0;
+  margin-bottom: 3px;
   font-size: 11px;
   font-weight: 400;
 }
 
 .card__primary {
-  margin: 0 15px;
+  padding: 0 14px;
+  margin-top: 2px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
-
 }
 
 .card__primary_price {
   margin: 0;
+  margin-top: 3px;
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
 }
 
 .card__primary_value {
-  margin: 0;
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
 }
 
 .card__button_active {
+  box-sizing: border-box;
   display: flex;
   width: 170px;
   height: 40px;
@@ -121,13 +131,14 @@ body {
   color: #fff;
   justify-content: center;
   align-items: center;
+  margin-top: 3px;
   margin-bottom: 6px;
 }
 
 .card__button_active:hover {
+  margin-top: 4px;
   color: #00acdc;
   background: #fff;
   border: 1px solid #00acdc;
-  box-sizing: border-box;
   border-radius: 4px;
 }
