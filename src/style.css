@@ -1,0 +1,141 @@
+/* #region Font */
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+/* #endregion */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  --clear-star: url(images/star.svg);
+  --golden-star: url(images/star-active.svg);
+  --blue-color: #00acdc;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding-left: 14px;
+  padding-right: 14px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+
+/* #region Product-info*/
+.product__image {
+  width: 160px;
+  height: 134px;
+  margin: 29px 5px 45px;
+  padding: 0;
+}
+
+.product__code {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.product__text {
+  text-align: justify;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+/* #endregion */
+
+/* #region Rating */
+.product-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-rating__text {
+  margin: 0;
+}
+
+.product-rating__stars {
+  display: flex;
+  height: 15px;
+  float: left;
+}
+
+.product-rating__star {
+  width: 15px;
+  margin-right: 4px;
+  background-image: var(--clear-star);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-rating__stars :nth-child(-n+4) {
+  background-image: var(--golden-star);
+}
+/* #endregion*/
+
+/* #region Price*/
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.product__price-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+/*#endregion*/
+
+/* #region Button */
+.product__buy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: var(--blue-color);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  border: 1px solid var(--blue-color);
+  border-radius: 5px;
+}
+
+.product__buy-button:hover {
+  background-color: #fff;
+  color: var(--blue-color);
+}
+/* #endregion */
