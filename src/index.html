@@ -1,45 +1,55 @@
 <!doctype html>
-<html lang="en">
+ <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no,
-initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product cards</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?
+family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&disp
+lay=swap"
+      rel="stylesheet"
+    >
   </head>
-  <body>
-    <main class="main">
-      <div class="card" data-qa="card">
-        <img
-          class="product-image"
-          alt="imac-image"
-          src="./images/imac.jpeg"
-        >
-        <p class="card__product-name">Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)</p>
-        <p class="card__product-code">Код товара: 195434</p>
-        <div class="card__rating-container">
-          <div class="card__product-stars">
-            <div class="card__star-active"></div>
-            <div class="card__star-active"></div>
-            <div class="card__star-active"></div>
-            <div class="card__star-active"></div>
-            <div class="card__star"></div>
-          </div>
-          <p class="card__product-reviews">Отзывов: 5</p>
+  <body >
+    <div class="card-product"
+        data-qa="card">
+      <img
+        class="card-product__imac_img"
+        src="images/imac.jpeg"
+        alt="imac"
+      >
+
+      <h2 class="card-product__name">Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)</h2>
+      <p class="card-product__code">Код товара: 195434</p>
+
+      <div class="card-product__rating">
+        <div class="card-product__stars stars">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
         </div>
-        <div class="card__product-price">
-          <p class="card__product-price-title">Цена:</p>
-          <p class="card__product-price-value">69 999 грн</p>
+        <div class="card-product__feedback">
+          Отзывов: 5
         </div>
-        <a
-          class="card__button"
+      </div>
+      <div class="card-product__price" >
+        <h3 class="card-product__price_text">Цена:</h3>
+        <p class="card-product__price_amount">69 999 грн</p>
+      </div>
+      <a
+          class="card-product__button"
           href="#"
           data-qa="hover"
-         >
+      >
           КУПИТЬ
-        </a>
-      </div>
-    </main>
+      </a>
+    </div>
   </body>
-</html>
+ </html>
