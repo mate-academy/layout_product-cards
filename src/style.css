@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,7 +25,6 @@ h2 {
 .product-card {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   width: var(--product-card-width);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -43,20 +46,17 @@ h2 {
 
 .product-card__name-code {
   margin-bottom: 15px;
-}
-
-.name-code {
   width: var(--content-width);
 }
 
-.name-code__name {
+.product-card__name {
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
   margin-bottom: 6px;
 }
 
-.name-code__code {
+.product-card__code {
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
@@ -67,19 +67,17 @@ h2 {
 .product-card__rating {
   width: var(--content-width);
   margin: 0 var(--horizontal-content-margins) 21px;
-}
-
-.rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
-.stars {
+.product-card__stars {
   display: inline-flex;
 }
 
-.stars__star {
+.product-card__star {
   background-image: url("./images/star.svg");
   width: 15px;
   height: 15px;
@@ -88,13 +86,13 @@ h2 {
   margin-right: 4px;
 }
 
-.rating__customers-coments {
+.product-card__customers-coments {
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
 }
 
-.stars--4 .stars__star:not(:last-child) {
+.product-card__stars--4 .product-card__star:not(:last-child) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -104,22 +102,19 @@ h2 {
 
 .product-card__price-label {
   margin-bottom: 19px;
-}
-
-.price-label {
   display: flex;
   width: var(--content-width);
   justify-content: space-between;
   align-items: center;
 }
 
-.price-label__label {
+.product-card__label {
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
 }
 
-.price-label__price {
+.product-card__price {
   font-size: 16px;
   line-height: 19px;
   font-weight: 700;
@@ -132,15 +127,14 @@ h2 {
   margin-bottom: 15px;
 }
 
-.buy-button__button {
-  box-sizing: border-box;
+.buy-button {
+  text-decoration: none;
   display: flex;
   width: var(--content-width);
   height: 40px;
   background-color: var(--brand-color);
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: #fff;
   font-size: 14px;
   line-height: 16px;
@@ -148,11 +142,7 @@ h2 {
   border-radius: 5px;
 }
 
-.buy-button {
-  text-decoration: none;
-}
-
-.buy-button__button:hover {
+.buy-button:hover {
   background-color: #fff;
   color: var(--brand-color);
   border: 1px solid var(--brand-color);
