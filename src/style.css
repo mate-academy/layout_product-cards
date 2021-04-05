@@ -55,15 +55,23 @@ body {
   padding-top: 15px;
 }
 
-.card__rating-stars {
+.card__rating-stars :nth-child(n) {
   display: flex;
-  justify-content: center;
 }
 
 .card__rating-star {
-  margin-right: 4px;
-  width: 15px;
   height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  background: no-repeat center url(images/star.svg);
+}
+
+.card__rating-star1 :nth-child(-n+1),
+.card__rating-star2 :nth-child(-n+2),
+.card__rating-star3 :nth-child(-n+3),
+.card__rating-star5 :nth-child(-n+5),
+.card__rating-star4 :nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .card__price {
