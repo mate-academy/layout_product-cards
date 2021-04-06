@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  --elems-padding-left: 14px;
+  --elems-padding-right: 14px;
+  --button-color: #00acdc;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding-left: var(--elems-padding-left);
+  padding-right: var(--elems-padding-right);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+.product-card__img {
+  align-self: center;
+  height: 208px;
+  padding: 29px 0 45px;
+}
+
+.product-card__title {
+  margin: 0;
+  padding-bottom: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15.47px;
+}
+
+.product-card__code {
+  font-weight: 400;
+  line-height: 13px;
+  padding-bottom: 15px;
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.product-card__price-text {
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.product-card__price-cost {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.product-card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: var(--button-color);
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.product-card__link:hover {
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--button-color);
+  cursor: pointer;
+}
+
+/* #region Stars */
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-last-child(n+4),
+.stars--3 :nth-last-child(n+3),
+.stars--4 :nth-last-child(n+2),
+.stars--5 :nth-last-child(n+1) {
+  background-image: url(./images/star-active.svg);
+}
+
+/* #endregion Stars */
