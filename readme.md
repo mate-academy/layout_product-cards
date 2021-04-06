@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://BilliZane.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://BilliZane.github.io/layout_product-cards/report/html_report/)
+- [TEST REPORT LINK](https://BilliZane.github.io/layout_product-cards/report/html_report/index.html)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 ___
