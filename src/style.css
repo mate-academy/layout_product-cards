@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.products-page {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.products-page__content {
+  display: flex;
+}
+
+.product-card {
+  margin: auto;
+  display: flex;
+  padding: 29px 14px 14px;
+  width: 200px;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  --blue-color: #00acdc;
+  --white-color: #fff;
+  --title-font-size: 12px;
+  --card-font-size: 11px;
+}
+
+.product-card__image {
+  align-self: center;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 45px;
+}
+
+.product-card__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  line-height: 15.47px;
+  font-size: var(--title-font-size);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.product-card__tech-info {
+  font-size: var(--card-font-size);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.product-card__feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars--4 {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+}
+
+.stars__star:nth-child(-n + 4) {
+  background-image: url(images/star-active.svg);
+}
+
+.product-card__reviews {
+  font-size: var(--card-font-size);
+}
+
+.product-card__price {
+  font-size: var(--card-font-size);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.product-card__cost {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product-card__buy-button {
+  text-decoration: none;
+  display: flex;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--blue-color);
+  border-radius: 5px;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+}
+
+.product-card__buy-button:hover {
+  background-color: var(--white-color);
+  color: var(--blue-color);
+  border: 1px solid;
+}
