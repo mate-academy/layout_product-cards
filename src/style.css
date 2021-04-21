@@ -25,26 +25,22 @@ body {
   height: 134px;
 }
 
-.product-card__description {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .product-card__description-name {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
+  margin-top: 45px;
 }
 
 .product-card__description-code {
+  align-self: flex-start;
   margin-top: 6px;
 }
 
 .product-card__description-rating {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   margin-top: 15px;
 }
@@ -54,7 +50,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* gap: 4px; */
 }
 
 .star {
@@ -78,6 +73,7 @@ body {
 
 .product-card__description-price {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -94,22 +90,22 @@ body {
 }
 
 .pay-button {
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-}
-
-.pay-button__apply {
-  background-color: #00acdc;
-  width: 170px;
   height: 40px;
+  width: 170px;
+  border-radius: 5px;
+  background-color: #00acdc;
   color: white;
   font-weight: 700;
   font-size: 14px;
-  border-radius: 5px;
-  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.pay-button__apply:hover {
+.pay-button:hover {
   border: 1px solid #00acdc;
   background-color: #fff;
   color: #00acdc;
