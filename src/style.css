@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --image-height: 134px;
+  --max-width: 200px;
+  --font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  padding: 30px 15px 15px;
+}
+
+.card-photo {
+  margin: 0 auto;
+  height: var(--image-height);
+}
+
+.card-photo__image {
+  width: 160px;
+  height: var(--image-height);
+}
+
+.product {
+  padding-top: 45px;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.product__name {
+  text-align: left;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.product__number {
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+}
+
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__images {
+  background-image: url("../src/images/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+}
+
+.stars .stars__images:nth-child(-n+4) {
+  background-image: url("../src/images/star-active.svg");
+
+}
+
+.review__number {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  color: #000;
+  height: 13px;
+  white-space: nowrap;
+}
+
+.product__cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.producr__price {
+  font-family: var(--font-family);
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  color: #000;
+}
+
+.product__sum {
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #000;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 15px;
+}
+
+.button__link {
+  padding: 11px 56px 11px 57px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.button__link:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
