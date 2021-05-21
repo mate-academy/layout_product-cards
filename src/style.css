@@ -16,17 +16,21 @@ body {
   width: 160px;
   height: 134px;
   padding: 0;
-  margin: 15px 5px 40px;
+  margin: 15px 5px 41px;
 }
 
 .card__name {
   font-family: "Roboto", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
+}
+
+.card__name-header {
+  margin: 0;
   width: 171px;
   height: 31px;
   line-height: 15px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .card__code {
@@ -58,16 +62,12 @@ body {
   display: inline-block;
   width: 15px;
   height: 15px;
-}
-
-.card__review-star:nth-child(-n+4) {
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
-}
-
-.card__review-star:nth-child(5) {
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
+}
+
+.card__reviews-stars--4 > .card__review-star:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
 }
 
 .card__reviews-text {
@@ -124,10 +124,4 @@ body {
 .card__button-link {
   text-decoration: none;
   color: inherit;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
 }
