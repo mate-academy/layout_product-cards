@@ -1,6 +1,7 @@
 
 body {
   margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 .card {
@@ -9,33 +10,27 @@ body {
   height: fit-content;
   position: relative;
   border: 1px solid #f3f3f3;
-  padding: 14px;
+  padding: 29px 14px 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__image {
   width: 160px;
   height: 134px;
-  padding: 0;
-  margin: 15px 5px 41px;
-}
-
-.card__name {
-  font-family: "Roboto", Arial, sans-serif;
-  margin-bottom: 5px;
+  margin: auto;
+  margin-bottom: 45px;
 }
 
 .card__name-header {
   margin: 0;
-  width: 171px;
-  height: 31px;
+  margin-bottom: 6px;
   line-height: 15px;
   font-weight: 500;
   font-size: 12px;
 }
 
 .card__code {
-  line-height: 13px;
-  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 11px;
   margin-bottom: 15px;
@@ -46,24 +41,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15px;
 }
 
 .card__reviews-stars {
-  padding-top: 3px;
-  padding-left: 1px;
-  display: inline-block;
-  width: fit-content;
-  height: 15px;
+  display: flex;
 }
 
 .card__review-star {
-  padding: 0;
-  display: inline-block;
+  margin-right: 4px;
   width: 15px;
   height: 15px;
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .card__reviews-stars--4 > .card__review-star:nth-child(-n+4) {
@@ -71,10 +61,8 @@ body {
 }
 
 .card__reviews-text {
-  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 11px;
-  line-height: 13px;
 }
 
 .card__price {
@@ -85,19 +73,17 @@ body {
 }
 
 .card__price-text {
-
-  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 11px;
 }
 
 .card__price-value {
-  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
 }
 
-.card__button {
+.card__button-link {
+  text-decoration: none;
   padding-top: 1px;
   padding-left: 1px;
   box-sizing: border-box;
@@ -106,7 +92,6 @@ body {
   border-radius: 5px;
   background-color: #00acdc;
   color: white;
-  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -115,13 +100,8 @@ body {
   align-items: center;
 }
 
-.card__button:hover {
+.card__button-link:hover {
   color: #00acdc;
   background-color: white;
   border: 1px solid #00acdc;
-}
-
-.card__button-link {
-  text-decoration: none;
-  color: inherit;
 }
