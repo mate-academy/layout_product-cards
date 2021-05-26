@@ -5,10 +5,10 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
   font-size: 11px;
-  font-weight: 400;
   line-height: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -17,16 +17,16 @@ body {
 
 .container {
   display: flex;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .box {
   width: 200px;
+  padding: 14px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 14px;
 }
 
 .box:hover {
@@ -41,10 +41,10 @@ body {
 }
 
 .box__title {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 15px;
   margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
 }
 
 .box__id {
@@ -53,9 +53,9 @@ body {
 
 .box__flex {
   display: flex;
+  margin-bottom: 20px;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 20px;
 }
 
 .stars {
@@ -63,9 +63,12 @@ body {
 }
 
 .stars__star {
-  background: url(images/star-active.svg) no-repeat center;
   width: 15px;
   height: 15px;
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.stars__star:not(:last-child) {
   margin-right: 4px;
 }
 
@@ -75,27 +78,27 @@ body {
 
 .box__price {
   font-size: 16px;
-  font-weight: 700;
   line-height: 19px;
+  font-weight: 700;
 }
 
 .box__link {
   display: flex;
+  height: 40px;
   align-items: center;
   justify-content: center;
-  height: 40px;
   font-size: 14px;
-  font-weight: 700;
   line-height: 16px;
+  font-weight: 700;
   color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
   background: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .box__link:hover {
-  background: #fff;
   color: #00acdc;
+  background: #fff;
 }
