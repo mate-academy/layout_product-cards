@@ -22,21 +22,12 @@ html {
   position: relative;
 }
 
-.carg-image {
-  /* width: 160px; */
-  height: 134px;
-  margin-bottom: 45px;
-}
-
 .image {
   display: inline-block;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 160px;
+  max-height: 134px;
   object-fit: contain;
-}
-
-.card-description {
-  margin-bottom: 6px;
+  margin-bottom: 45px;
 }
 
 .description {
@@ -46,6 +37,7 @@ html {
   font-size: 12px;
   line-height: 15px;
   color: #000;
+  margin-bottom: 6px;
 }
 
 .product-code {
@@ -64,19 +56,25 @@ html {
   margin-bottom: 20px;
 }
 
-.card__rate {
+.stars {
   display: flex;
-  line-height: 15px;
 }
 
-.rate-star {
+.stars__star {
   display: inline-block;
   width: 15px;
   height: 15px;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.rate-star:not(:last-child) {
+.stars .stars__star:not(:last-child) {
   margin-right: 4px;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url("images/star-active.svg");
 }
 
 .card__reviews {
@@ -106,28 +104,21 @@ html {
   color: #000;
 }
 
-.btn {
-  width: 170px;
-  height: 40px;
-}
-
 .btn-link {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
   /* color: #00acdc; */
   color: #fff;
   /* background-color: #fff; */
   background-color: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  padding: 12px 57px 11px 58px;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
 }
 
 .btn-link:hover {
