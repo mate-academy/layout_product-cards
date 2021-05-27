@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.product-card {
+  width: 200px;
+  height: 403px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  margin: 30px 20px 45px;
+}
+
+.product-card__about {
+  padding: 0 15px 15px;
+}
+
+.about__name {
+  width: 170px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  line-height: 15px;
+  height: 31px;
+}
+
+.about__code {
+  width: 101px;
+  height: 13px;
+  font-weight: 400;
+  font-size: 11px;
+  margin: 6px 84px 15px 0;
+  top: 0;
+  right: 0;
+}
+
+.about__rate {
+  margin-bottom: 20px;
+}
+
+/* #region Stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star-active.svg);
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--0 .stars__star:nth-child(n),
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:nth-child(n+5) {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
+
+.reviews {
+  width: 58px;
+  height: 13px;
+}
+
+.rating {
+  font-size: 11px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.about__price {
+  height: 19px;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.price__text {
+  font-size: 11px;
+  width: 29px;
+  height: 13px;
+}
+
+.price__number {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  width: 79px;
+  height: 19px;
+}
+
+/* #region button-to-buy */
+
+.about__confirm {
+  display: block;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.confirm-to-buy-link {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #00acdc;
+  /* text-align: center; */
+  text-decoration: none;
+  color: #fff;
+  /* padding: 11px 56px 10px 57px; */
+  border-radius: 5px;
+}
+
+.confirm-to-buy-link:hover {
+  color: #00acdc;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
+
+/* #endregion */
