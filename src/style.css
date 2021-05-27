@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --image-height: 134px;
+  --image-width: 160px;
+  --image-block-height: calc(var(--image-height) + 60px);
+}
+
 .page {
   font-weight: 400;
   font-size: 11px;
@@ -14,61 +20,76 @@
 }
 
 .product {
-  padding: 14px;
+  display: flex;
+  flex-direction: column;
   width: 200px;
+  padding: 14px;
   border-radius: 5px;
   border: 1px solid rgba(243, 243, 243, 1);
 }
 
 .product__image {
-  margin: 15px 5px 42px;
-  width: 160px;
-  height: 134px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 4px;
+  width: 100%;
+  height: var(--image-block-height);
+}
+
+.image {
+  width: var(--image-width);
+  height: var(--image-height);
 }
 
 .product__name {
-  margin-bottom: 6px;
-  line-height: 15px;
+  margin: 0 0 0.5em;
   font-weight: 500;
   font-size: 12px;
+  line-height: 15px;
 }
 
 .product__id {
-  margin-bottom: 15px;
+  margin-bottom: 1.4em;
 }
 
 .product__rate {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 23px;
+  align-items: center;
+  margin-bottom: 2.1em;
 }
 
-.rate-stars {
+.stars {
   display: flex;
   height: 15px;
 }
 
-.stars-star {
+.stars__star {
   width: 15px;
   background: url(images/star.svg) no-repeat 50%;
 }
 
-.stars-star:not(:first-child) {
+.stars__star:not(:first-child) {
   margin-left: 4px;
 }
 
-.stars-star:nth-child(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background: url(images/star-active.svg) no-repeat 50%;
+}
+
+.feedbacks {
+  line-height: 11px;
 }
 
 .product__price {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 23px;
-}
-
-.price-label {
-  line-height: 13px;
+  align-items: baseline;
+  margin-bottom: 1.9em;
 }
 
 .price-value {
@@ -78,21 +99,19 @@
 
 .product__buy-link {
   display: block;
-  width: 100%;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgba(243, 243, 243, 1);
+  line-height: 38px;
   text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 172, 220, 1);
   border-radius: 5px;
+  color: rgba(243, 243, 243, 1);
   background: rgba(0, 172, 220, 1);
 }
 
 .product__buy-link:hover {
-  line-height: 38px;
   color: rgba(0, 172, 220, 1);
-  border: 1px solid rgba(0, 172, 220, 1);
   background: rgba(255, 255, 255, 1);
 }
