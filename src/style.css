@@ -1,6 +1,10 @@
 @import "./reset.css";
 @import "./variables.css";
 
+* {
+  box-sizing: border-box;
+}
+
 .content {
   margin: inherit;
   font-family: "Roboto", sans-serif;
@@ -160,7 +164,7 @@
   display: flex;
   width: inherit;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
   margin-top: 20px;
 }
@@ -168,14 +172,20 @@
 .item-price-label {
   font-size: 11px;
   font-weight: 400;
+  height: 13px;
   margin-left: var(--standart-item-margin);
+  margin-bottom: 1px;
+  font-style: normal;
 }
 
 .item-price-amount {
-  line-height: 18.75px;
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   font-weight: 700;
+  
   margin-right: var(--standart-item-margin);
+  width: 79px;
 }
 /* #endregion */
 
@@ -191,6 +201,7 @@
   width: var(--button-width);
   height: var(--button-height);
 
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #fff;
@@ -207,6 +218,8 @@
 }
 
 .item-purchase-button__link:hover {
+  width: var(--button-width);
+  height: var(--button-height);
   background-color: #fff;
   border: 1px solid #00acdc;
   color: rgba(0, 172, 220, 1);
