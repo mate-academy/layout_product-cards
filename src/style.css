@@ -11,16 +11,19 @@
 }
 
 .main {
-  display: flex;
   box-sizing: border-box;
+  display: flex;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   width: var(--card-width);
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
 /* #region iMac*/
@@ -29,16 +32,10 @@
   justify-content: center;
 }
 
-.imac__img--size {
-  height: var(--image-height);
-  width: var(--image-width);
-
-  margin: 30px 20px 45px;
-}
-
 .image {
   height: var(--image-height);
   width: var(--image-width);
+  margin: 30px 20px 45px;
 }
 /* #endregion */
 
@@ -50,15 +47,17 @@
 
 .item-description__content {
   line-height: 15.47px;
+  margin: 0 var(--standart-item-margin);
+
   font-size: 12px;
   font-weight: 500;
-  margin: 0 var(--standart-item-margin);
 }
 
 .item-description__code {
+  margin: 6px auto 15px var(--standart-item-margin);
+
   font-size: 11px;
   font-weight: 400;
-  margin: 6px auto 15px var(--standart-item-margin);
 }
 /* #endregion */
 
@@ -70,12 +69,12 @@
 }
 
 .item-rating__amount {
-  font-size: 11px;
-  font-weight: 400;
   margin-right: var(--standart-item-margin);
-
   display: flex;
   align-items: center;
+
+  font-size: 11px;
+  font-weight: 400;
 }
 
 /* #region star--0*/
@@ -87,21 +86,23 @@
 }
 
 .stars__item {
+  width: 15px;
+  margin-right: 4px;
+
   background: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 15px;
-  margin-right: 4px;
 }
 /* #endregion */
 
 /* #region star--1*/
 .stars--1 .stars__item:nth-child(1) {
+  width: 15px;
+  margin-right: 4px;
+
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 15px;
-  margin-right: 4px;
 }
 
 /* #endregion */
@@ -109,11 +110,12 @@
 /* #region star--2 */
 .stars--2 .stars__item:nth-child(1),
 .stars--2 .stars__item:nth-child(2) {
+  width: 15px;
+  margin-right: 4px;
+
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 15px;
-  margin-right: 4px;
 }
 /* #endregion */
 
@@ -121,11 +123,12 @@
 .stars--3 .stars__item:nth-child(1),
 .stars--3 .stars__item:nth-child(2),
 .stars--3 .stars__item:nth-child(3) {
+  width: 15px;
+  margin-right: 4px;
+
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 15px;
-  margin-right: 4px;
 }
 /* #endregion */
 
@@ -134,11 +137,12 @@
 .stars--4 .stars__item:nth-child(2),
 .stars--4 .stars__item:nth-child(3),
 .stars--4 .stars__item:nth-child(4) {
+  width: 15px;
+  margin-right: 4px;
+
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 15px;
-  margin-right: 4px;
 }
 /* #endregion */
 
@@ -148,11 +152,12 @@
 .stars--5 .stars__item:nth-child(3),
 .stars--5 .stars__item:nth-child(4),
 .stars--5 .stars__item:nth-child(5) {
+  width: 15px;
+  margin-right: 4px;
+
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 15px;
-  margin-right: 4px;
 }
 /* #endregion */
 
@@ -169,27 +174,26 @@
   width: inherit;
   justify-content: space-between;
   align-items: flex-end;
-
   margin-top: 20px;
 }
 
 .item-price-label {
-  font-size: 11px;
-  font-weight: 400;
   height: 13px;
   margin-left: var(--standart-item-margin);
   margin-bottom: 1px;
+
+  font-size: 11px;
+  font-weight: 400;
   font-style: normal;
 }
 
 .item-price-amount {
   display: flex;
   justify-content: center;
+  margin-right: var(--standart-item-margin);
+
   font-size: 16px;
   font-weight: 700;
-  
-  margin-right: var(--standart-item-margin);
-  
 }
 /* #endregion */
 
@@ -198,6 +202,7 @@
   display: flex;
   width: inherit;
   justify-content: center;
+
   text-transform: uppercase;
 }
 
@@ -215,15 +220,16 @@
 }
 
 .item-purchase-button__link--decoration {
+  margin: 20px var(--standart-item-margin) var(--standart-item-margin);
+
   background-color: rgba(0, 172, 220, 1);
   border-radius: 5px;
-
-  margin: 20px var(--standart-item-margin) var(--standart-item-margin);
 }
 
 .item-purchase-button__link:hover {
   width: var(--button-width);
   height: var(--button-height);
+
   background-color: #fff;
   border: 1px solid #00acdc;
   color: rgba(0, 172, 220, 1);
