@@ -10,10 +10,6 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  margin: 0;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -41,7 +37,7 @@ h1 {
 }
 
 .card__title {
-  font-family: inherit;
+  margin: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -50,7 +46,6 @@ h1 {
 }
 
 .card__subtitle {
-  font-family: inherit;
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
@@ -67,11 +62,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-.card__stars {
+.stars {
   display: flex;
 }
 
-.card__star {
+.stars__star {
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -80,17 +75,19 @@ h1 {
   margin-right: 4px;
 }
 
-.card__star:nth-child(5n+5) {
+.stars__star:nth-child(5n+5) {
   margin-right: 0;
 }
 
-.card__star:nth-child(-n+4) {
-  display: block;
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(n) {
   background-image: url(images/star-active.svg);
 }
 
 .card__reviews {
-  font-family: inherit;
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
@@ -107,7 +104,6 @@ h1 {
 }
 
 .card__cost {
-  font-family: inherit;
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -117,7 +113,6 @@ h1 {
 }
 
 .card__sum {
-  font-family: inherit;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
