@@ -5,13 +5,15 @@
   box-sizing: border-box;
 }
 
-.content {
-  margin: inherit;
+html {
   font-family: "Roboto", sans-serif;
 }
 
+.page {
+  margin: inherit;
+}
+
 .main {
-  box-sizing: border-box;
   display: flex;
 }
 
@@ -27,12 +29,12 @@
 }
 
 /* #region iMac*/
-.imac__img {
+.item-image__img {
   display: flex;
   justify-content: center;
 }
 
-.image {
+.card-image {
   height: var(--image-height);
   width: var(--image-width);
   margin: 30px 20px 45px;
@@ -80,7 +82,6 @@
 /* #region star--0*/
 .stars {
   display: flex;
-  flex-direction: row;
   height: 15px;
   margin-left: var(--standart-item-margin);
 }
@@ -97,8 +98,6 @@
 
 /* #region star--1*/
 .stars--1 .stars__item:nth-child(1) {
-  width: 15px;
-  margin-right: 4px;
 
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
@@ -110,9 +109,6 @@
 /* #region star--2 */
 .stars--2 .stars__item:nth-child(1),
 .stars--2 .stars__item:nth-child(2) {
-  width: 15px;
-  margin-right: 4px;
-
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -123,9 +119,6 @@
 .stars--3 .stars__item:nth-child(1),
 .stars--3 .stars__item:nth-child(2),
 .stars--3 .stars__item:nth-child(3) {
-  width: 15px;
-  margin-right: 4px;
-
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -137,9 +130,6 @@
 .stars--4 .stars__item:nth-child(2),
 .stars--4 .stars__item:nth-child(3),
 .stars--4 .stars__item:nth-child(4) {
-  width: 15px;
-  margin-right: 4px;
-
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -152,9 +142,6 @@
 .stars--5 .stars__item:nth-child(3),
 .stars--5 .stars__item:nth-child(4),
 .stars--5 .stars__item:nth-child(5) {
-  width: 15px;
-  margin-right: 4px;
-
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -210,7 +197,6 @@
   width: var(--button-width);
   height: var(--button-height);
 
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #fff;
@@ -227,9 +213,6 @@
 }
 
 .item-purchase-button__link:hover {
-  width: var(--button-width);
-  height: var(--button-height);
-
   background-color: #fff;
   border: 1px solid #00acdc;
   color: rgba(0, 172, 220, 1);
