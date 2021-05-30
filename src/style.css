@@ -8,16 +8,16 @@ body {
 }
 
 .card {
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: start;
+  box-sizing: border-box;
   max-width: 200px;
+  margin: 0;
   padding: 14px;
   border: 1px solid rgb(0 0 0 / 5%);
   border-radius: 5px;
   background-color: white;
-  box-sizing: border-box;
 }
 
 .card__image-block {
@@ -59,8 +59,8 @@ body {
 }
 
 .stars__star {
-  background: url(images/star-active.svg) no-repeat center;
   width: 15px;
+  background: url(images/star-active.svg) no-repeat center;
 }
 
 .stars :not(:last-child) {
@@ -71,25 +71,28 @@ body {
   background: url(images/star.svg) no-repeat center;
 }
 
+.card__price {
+  margin-bottom: 18px;
+}
+
 .price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 18px;
 }
 
 .price__text {
-  font-size: 11px;
   line-height: 19px;
+  font-size: 11px;
 }
 
 .price__summ {
   display: flex;
   align-self: flex-start;
+  line-height: 16px;
+  font-size: 16px;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
 }
 
 .card__link {
@@ -98,20 +101,19 @@ body {
   align-items: center;
   width: 170px;
   height: 40px;
-  color: white;
-  text-decoration: none;
-  background: #00acdc;
+  line-height: 16px;
   box-sizing: border-box;
   border-radius: 5px;
-  /* font-style: normal; */
+  text-decoration: none;
+  background: #00acdc;
+  color: white;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .card__link:hover {
-  color: #00acdc;
-  background: #fff;
   border: 1px solid #00acdc;
+  background: #fff;
+  color: #00acdc;
 }
