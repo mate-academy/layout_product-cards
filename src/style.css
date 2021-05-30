@@ -32,29 +32,25 @@ body {
   border: 1px solid #f3f3f3;
 }
 
-.card-title {
-  font-size: 12px;
-  text-align: justify;
-}
-
-.card-title__model {
-  font-style: normal;
-  text-transform: uppercase;
-}
-
+/* #region image and title */
 .card__image-image {
   height: 134px;
   width: 160px;
 }
 
-.card__code--code {
-  /* safe */
+.card-title {
+  font-size: 12px;
+  text-align: justify;
+}
+/* #endregion */
+
+.card__code {
+  align-self: flex-start;
 }
 
 /* #region card__ranks */
-.card__ranks {
+.card-ranks {
   display: flex;
-  justify-content: space-between;
 }
 
 .stars {
@@ -77,7 +73,9 @@ body {
 .card--ranks__rank {
   /* just 4 safe */
 }
+/* #endregion */
 
+/* #region card__price */
 .card-price {
   display: flex;
   justify-content: space-between;
@@ -107,15 +105,19 @@ body {
 }
 
 .card-button__buy {
+  display: block;
   line-height: var(--button-height);
   text-decoration: none;
   color: #f3f3f3;
 }
 
 .card-button:hover {
-  background-color: #f3f3f3;
   color: #00acdc;
-  /* cursor: pointer; */
+  background-color: #f3f3f3;
   border: 1px solid #00acdc;
+}
+
+.card-button__buy:hover {
+  color: #00acdc;
 }
 /* #endregion */
