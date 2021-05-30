@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
 
+/* #region normalize */
 * {
   box-sizing: border-box;
 }
@@ -14,6 +15,7 @@ body,
 h2 {
   margin: initial;
 }
+/* #endregion */
 
 body {
   margin: 20px;
@@ -26,13 +28,17 @@ body {
   align-items: center;
   height: 403px;
   width: 200px;
-  padding: 2.9rem 1.45rem 1.45rem;
-  /* 32 16 16 */
+  padding: 32px 16px 16px;
+  /* 2.9rem 1.45rem 1.45rem */
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
 
-/* #region image and title */
+.card__image {
+  /* margin-bottom: 40px; */
+}
+/* #region card__ image and title */
+
 .card__image-image {
   height: 134px;
   width: 160px;
@@ -41,16 +47,25 @@ body {
 .card-title {
   font-size: 12px;
   text-align: justify;
+  font-weight: 500;
 }
 /* #endregion */
+
+.card__title {
+  /* safe */
+}
 
 .card__code {
   align-self: flex-start;
 }
 
-/* #region card__ranks */
+.card__ranks {
+  /*safe  */
+}
+/* #region card-ranks */
 .card-ranks {
   display: flex;
+  gap: 14px;
 }
 
 .stars {
@@ -71,16 +86,19 @@ body {
 }
 
 .card--ranks__rank {
-  /* just 4 safe */
+  /* fgjkj */
 }
 /* #endregion */
 
+.card__price {
+  /* safe */
+}
 /* #region card__price */
 .card-price {
   display: flex;
   justify-content: space-between;
   align-self: stretch;
-  align-items: center;
+  align-items: baseline;
 }
 
 .card-price__price {
@@ -90,13 +108,16 @@ body {
 
 /* #endregion */
 
-/* #region card_button */
+.card__button {
+  /* safe */
+}
+/* #region card-button */
 
 .card-button {
   --button-height: 40px;
   font-weight: bold;
   background-color: #00acdc;
-
+  text-transform: uppercase;
   height: var(--button-height);
   width: 168px;
   border-radius: 5px;
@@ -108,12 +129,12 @@ body {
   display: block;
   line-height: var(--button-height);
   text-decoration: none;
-  color: #f3f3f3;
+  color: #fff;
 }
 
 .card-button:hover {
   color: #00acdc;
-  background-color: #f3f3f3;
+  background-color: #fff;
   border: 1px solid #00acdc;
 }
 
