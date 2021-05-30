@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-em {
-  font-style: normal;
-  text-transform: uppercase;
-}
-
 html {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
@@ -17,51 +12,110 @@ html {
 
 body,
 h2 {
-  margin: 0;
+  margin: initial;
+}
+
+body {
+  margin: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   height: 403px;
   width: 200px;
-  padding: 1em;
+  padding: 2.9rem 1.45rem 1.45rem;
+  /* 32 16 16 */
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
 
-.card__image-image {
-  height: 160px;
-  width: 134px;
+.card-title {
+  font-size: 12px;
+  text-align: justify;
 }
 
-/* #region card-ranks */
-.card-ranks {
+.card-title__model {
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.card__image-image {
+  height: 134px;
+  width: 160px;
+}
+
+.card__code--code {
+  /* safe */
+}
+
+/* #region card__ranks */
+.card__ranks {
   display: flex;
-  align-items: center;
-  align-content: space-between;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+}
+
+.stars .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .card--ranks__rank {
   /* just 4 safe */
 }
 
-.card-ranks__price {
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+}
+
+.card-price__price {
   font-weight: bold;
   font-size: 1.45rem;
 }
 
 /* #endregion */
-.card__button {
-  gap: 16px;
-}
 
-.card__button--buy {
+/* #region card_button */
+
+.card-button {
+  --button-height: 40px;
   font-weight: bold;
   background-color: #00acdc;
+
+  height: var(--button-height);
+  width: 168px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.card-button__buy {
+  line-height: var(--button-height);
   text-decoration: none;
   color: #f3f3f3;
 }
+
+.card-button:hover {
+  background-color: #f3f3f3;
+  color: #00acdc;
+  /* cursor: pointer; */
+  border: 1px solid #00acdc;
+}
+/* #endregion */
