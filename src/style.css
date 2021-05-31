@@ -63,13 +63,13 @@ body {
   height: 15px;
   margin-right: 4px;
 
-  background-image: url(/images/star-active.svg);
+  background-image: url(/images/star.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.stars__star:last-child {
-  background-image: url(/images/star.svg);
+.stars__star:nth-child(-n+4) {
+  background-image: url(/images/star-active.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -87,7 +87,7 @@ body {
   line-height: 19px;
 }
 
-.card__link {
+.card__buy-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,13 +98,14 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
   background-color: #00acdc;
   border-radius: 5px;
   color: white;
 }
 
-.card__link:hover {
+.card__buy-button:hover {
   background-color: #fff;
-  border: 1px solid #00acdc;
   color: #00acdc;
 }
