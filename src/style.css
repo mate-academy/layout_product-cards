@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap");
+
+:root {
+  --main-font-color: #060b35;
+  --secondary-font-color: #616070;
+  --accent-color: #00acdc;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.page__body {
+  margin: 0;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  padding: 29px 14px 16px;
+
+  width: 200px;
+}
+
+.card__product-image {
+  display: block;
+
+  height: 134px;
+  width: 160px;
+
+  margin: 0 auto 45px;
+}
+
+.card__product-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__product-title {
+  color: var(--main-font-color);
+  font-size: 12px;
+  font-weight: 500;
+
+  margin-bottom: 6px;
+
+  line-height: 18px;
+}
+
+.card__product-code {
+  color: var(--secondary-font-color);
+  font-size: 10px;
+  font-weight: 400;
+
+  margin-bottom: 15px;
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-right: 4px;
+
+  height: 15px;
+  width: 15px;
+}
+
+.stars__star:nth-child(n + 5) {
+  background-image: url(./images/star.svg);
+}
+
+.card__rating-feedback {
+  font-size: 10px;
+}
+
+.card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.card__price-label {
+  color: var(--secondary-font-color);
+  font-size: 12px;
+}
+
+.card__price-value {
+  color: var(--main-font-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__button {
+  background-color: var(--accent-color);
+  color: #fff;
+
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  height: 40px;
+
+  line-height: 16px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: var(--accent-color);
+}
