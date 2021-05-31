@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-/* #region normalize */
 * {
   box-sizing: border-box;
 }
+/* #region normalize */
 
 body,
 h2 {
   margin: initial;
+  padding: initial;
 }
 /* #endregion */
 
@@ -15,10 +16,13 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 10px;
+  line-height: 1.4rem;
+  color: #060b35;
+
 }
 
 body {
-  margin: 2rem;
+  /* margin: 2rem; */
   font-size: 1.1rem;
 }
 
@@ -26,23 +30,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20rem;
+  max-width: 20rem;
   min-height: 40.3rem;
   padding: 3.2rem 1.6rem 1.6rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #f3f3f3;
+  background-color: #fff;
 }
 
 .card__image {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
-.card__title {
-  margin-bottom: 1.8rem;
-}
-
-/* #region card__ image and title */
-
+/* #region card-image */
 .card-image__image {
   --image-height: 1.34;
   --image-width: 1.6;
@@ -51,6 +51,14 @@ body {
   flex-shrink: 0;
 }
 
+/* #endregion */
+
+.card__title {
+  margin-bottom: 1.6rem;
+}
+
+/* #region card__title */
+
 .card-title {
   display: flex;
   flex-direction: column;
@@ -58,31 +66,41 @@ body {
 
 .card-title__title {
   font-size: 1.2rem;
+  line-height: 1.8rem;
   text-align: justify;
   font-weight: 500;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.2rem;
 }
 
 .card-title__code {
+  /* padding-top: 0.2rem; */
   align-self: flex-start;
+  color: #616070;
+  /* font-size: 1.2rem; */
+  /* has to be 1rem */
 }
 /* #endregion */
 
 .card__rank {
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.4rem;
 }
 
-/* #region card__rank */
+/* #region card-rank */
 .card-rank {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .stars {
   display: flex;
+  position: relative;
+  left: -0.5rem;
 }
 
 .stars__star {
-  --star-basis: 1.5rem;
+  --star-basis: 1.6rem;
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: 50%;
@@ -96,26 +114,37 @@ body {
 }
 
 .card-rank__feedback {
-  padding-left: 1.3rem;
+  /* has to be 1rem */
+  line-height: 1.4rem;
+  position: relative;
+  right: -0.5rem;
 }
 
 /* #endregion */
+
 .card__price {
-  margin-bottom: 1.6rem;
+
+  margin-bottom: 1.5rem;
 }
+
 /* #region card__price */
+
 .card-price {
   display: flex;
   justify-content: space-between;
   align-self: stretch;
-  align-items: baseline;
+  align-items: center;
+}
+
+.card-price__price-word {
+  color: #616070;
+  line-height: 1.8rem;
 }
 
 .card-price__price {
   font-weight: bold;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
 }
-
 /* #endregion */
 
 /* #region card-button */
