@@ -10,7 +10,7 @@ ___
 ___
 
 ## The task
-Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/bS8N1lTT0Ew0Brf1Nfl36iMV/Product-Cards?node-id=0%3A1).
+Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/euXjY316CHKYkPRO1K0kjLsF/Moyo-Catalog?node-id=11325%3A2288).
 
 ### Requirements:
 - reset browser's default margins
