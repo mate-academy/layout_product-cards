@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 /* #region normalize */
 * {
@@ -7,7 +7,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 11px;
 }
 
@@ -24,50 +24,57 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* gap: 10px; */
   align-items: center;
   height: 403px;
   width: 200px;
-  padding: 32px 16px 16px;
+  padding: 31px 16px 16px;
   /* 2.9rem 1.45rem 1.45rem */
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
 
 .card__image {
-  margin-bottom: -20px;
-}
-/* #region card__ image and title */
-
-.card__image-image {
-  height: 134px;
-  width: 160px;
+  margin-bottom: 40px;
 }
 
 .card__title {
-  padding-top: 20px;
-  margin-bottom: 4px;
+  margin-bottom: 18px;
+}
+
+/* #region card__ image and title */
+
+.card-image__image {
+  height: 134px;
+  width: 160px;
+  flex-shrink: 0;
 }
 
 .card-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title__title {
   font-size: 12px;
   text-align: justify;
   font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.card-title__code {
+  align-self: flex-start;
 }
 /* #endregion */
 
-.card__code {
-  align-self: flex-start;
-
+.card__rank {
+  margin-bottom: 24px;
 }
 
-.card__ranks {
+/* #region card__rank */
+.card-rank {
   display: flex;
-}
-/* #region card-ranks */
-.card-ranks {
-  display: flex;
-  gap: 14px;
 }
 
 .stars {
@@ -87,13 +94,13 @@ body {
   background-image: url(./images/star-active.svg);
 }
 
-.card--ranks__rank {
-  /* fgjkj */
+.card-rank__feedback {
+  padding-left: 13px;
 }
-/* #endregion */
 
+/* #endregion */
 .card__price {
-  /* safe */
+  margin-bottom: 16px;
 }
 /* #region card__price */
 .card-price {
@@ -109,9 +116,8 @@ body {
 }
 
 /* #endregion */
-
 .card__button {
-  /* safe */
+  margin-bottom: 16px;
 }
 /* #region card-button */
 
