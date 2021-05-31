@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__rate,
+.card__product,
+.card__product-code,
+.card__cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 14px;
+}
+
+.card__image {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 30px;
+  width: 160px;
+  height: 134px;
+  /* margin: 31px 20px 40px; */
+}
+
+.card__product {
+  margin-top: 208px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: left;
+}
+
+.card__product-code {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 15px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.reviews-count {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.stars__star:not(:last-child) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__cost {
+  align-items: baseline;
+  margin-top: 19px;
+}
+
+.price {
+  position: relative;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.amount {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 172, 220, 1);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 20px 14px 15px;
+}
+
+.card__link:hover {
+  background-color: white;
+  border: 1px solid rgba(0, 172, 220, 1);
+  color: rgba(0, 172, 220, 1);
+}
