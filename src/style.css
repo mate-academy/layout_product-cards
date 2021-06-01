@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 200px;
+  padding: 14px;
+  border: 1px solid rgb(0 0 0 / 5%);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.card__image-block {
+  display: flex;
+  width: 160px;
+  height: 134px;
+  margin: 15px 5px 45px;
+}
+
+.card-image {
+  width: 160px;
+}
+
+.card__text-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 6px;
+}
+
+.card__id {
+  font-size: 11px;
+  margin-bottom: 16px;
+}
+
+.card__rate-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 23px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.stars__star {
+  width: 15px;
+  background: url(images/star.svg) no-repeat center;
+}
+
+.stars :not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__stars--active--1 .stars__star:nth-child(-n + 1),
+.card__stars--active--2 .stars__star:nth-child(-n + 2),
+.card__stars--active--3 .stars__star:nth-child(-n + 3),
+.card__stars--active--4 .stars__star:nth-child(-n + 4),
+.card__stars--active--5 .stars__star:nth-child(-n + 5) {
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.card__price {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__price-text {
+  line-height: 19px;
+  font-size: 11px;
+}
+
+.card__price-summ {
+  display: flex;
+  align-self: flex-start;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  line-height: 16px;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #00acdc;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.card__link:hover {
+  border-color: #00acdc;
+  background: #fff;
+  color: #00acdc;
+}
