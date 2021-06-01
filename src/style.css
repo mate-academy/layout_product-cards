@@ -1,4 +1,3 @@
-/* #region body */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -7,8 +6,7 @@ body {
   font-size: 12;
   color: #000;
 }
-/* #endregion */
-/* #region card */
+
 .card {
   box-sizing: border-box;
   width: 200px;
@@ -19,25 +17,32 @@ body {
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 0.5px;
 }
-/* #endregion */
-/* #region image */
+
 .card__image {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   margin-bottom: 45px;
 }
 
-.iMac-image {
+.image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image__iMac {
   width: 160px;
   height: 134px;
 }
-/* #endregion */
-/* #region description */
+
+.card__description {
+  margin-bottom: 20px;
+}
+
 .description {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .description__title {
@@ -50,70 +55,60 @@ body {
 
 .description__code {
   font-size: 11px;
-  margin: 0;
+  margin: 0 0 15px;
   line-height: 13px;
-  
 }
-/* #endregion */
-/* #region rate */
-.rate {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+
+.description__rate {
   margin-bottom: 20px;
 }
 
-.rate__stars {
+.rate {
   display: flex;
   align-content: space-between;
 }
 
-.rate__stars-star {
+.rate__star {
   height: 15px;
   width: 15px;
   background: url(./images/star-active.svg) no-repeat center;
 }
 
-.rate__stars-star:last-child {
+.rate__star:last-child {
   background: url(./images/star.svg) no-repeat center;
 }
 
-.rate__stars-star:not(:last-child) {
+.rate__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.rate__feedback {
+.description__feedback {
   font-size: 11px;
   line-height: 13px;
-  margin: 0;
-
-}
-/* #endregion */
-/* #region price */
-.price {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
-.price__title {
+.description__price {
   font-size: 11px;
   line-height: 13px;
   margin: 0;
 }
 
-.price__amount {
+.description__amount {
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
   margin: 0;
 }
-/* #endregion */
-/* #region purchase */
-.purchase {
+
+.card__purchase {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase_btn {
   width: 168px;
   height: 40px;
   display: flex;
@@ -130,9 +125,8 @@ body {
   line-height: 16px;
 }
 
-.purchase:hover {
+.purchase_btn:hover {
   background-color: #fff;
   color: rgba(0, 172, 220, 1);
   border: 1px solid rgba(0, 172, 220, 1);
 }
-/* #endregion */
