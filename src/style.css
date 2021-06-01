@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card {
+  width: 200px;
+  min-height: 402px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.product-card__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 15px auto 45px;
+}
+
+.about__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-bottom: 6px;
+}
+
+.about__code {
+  margin-bottom: 15px;
+  height: 13px;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.about__rate {
+  margin-bottom: 20px;
+}
+
+/* #region Stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star-active.svg);
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin: 0;
+}
+
+.stars--0 .stars__star:nth-child(n),
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:nth-child(n+5) {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
+
+.rating {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__price {
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.price__text {
+  font-size: 11px;
+  width: 29px;
+  height: 13px;
+}
+
+.price__number {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+}
+
+/* #region button-to-buy */
+
+.about__confirm {
+  display: flex;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-to-buy-link {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #00acdc;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.confirm-to-buy-link:hover {
+  color: #00acdc;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+/* #endregion */
