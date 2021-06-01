@@ -40,7 +40,7 @@ body {
   line-height: 13px;
 }
 
-.card__raiting {
+.card__rating {
   margin: 0 0 25px;
   font-size: 11px;
   font-weight: 400;
@@ -62,7 +62,11 @@ body {
   background-position: 50%;
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
 }
 
@@ -74,7 +78,6 @@ body {
 
 .card__price_tag {
   font-size: 11px;
-  font-style: normal;
   font-weight: 400;
   line-height: 19px;
   vertical-align: bottom;
@@ -82,7 +85,6 @@ body {
 
 .card__price_size {
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
   line-height: 13px;
   text-align: right;
@@ -104,10 +106,11 @@ body {
   text-transform: uppercase;
   color: #fff;
   background: #00acdc;
+  border: 1px solid #00acdc;
 }
 
 .card__link:hover {
   color: #00acdc;
   background-color: #fff;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
 }
