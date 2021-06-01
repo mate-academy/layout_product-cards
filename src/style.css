@@ -1,65 +1,74 @@
-
 * {
-  
   box-sizing: border-box;
 }
 
 html {
   --small-font-size: 11px;
-}
-
-body {
-  margin: 0;
   font-family: Roboto, sans-serif;
   font-style: normal;
 }
 
+body {
+  margin: 0;
+}
+
 .product {
-  width: 200px;
   max-width: 200px;
-  height: 403px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  border: 1px solid white;
   border-radius: 5px;
-  padding: 32px 16px 16px;
 }
 
 .product__image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.image {
+  display: block;
   width: 160px;
   height: 134px;
+  margin: 32px 19px 40px;
 }
 
 .product__name {
   font-size: 12px;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin: 0 16px 4px;
+  line-height: 18px;
 }
 
 .product__id {
   font-size: var(--small-font-size);
-  font-weight: normal;
-  margin-bottom: 18px;
+  margin: 0 16px 16px;
 }
 
 .product__rate {
-  font-size: var(--small-font-size);
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  
+  margin: 16px 16px 23px;
+  font-size: var(--small-font-size);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .product__price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: baseline;
+  margin: 0 16px;
+  height: 20px;
 }
 
 .product__price-word {
@@ -71,38 +80,22 @@ body {
   font-size: 16px;
 }
 
-.stars {
-  display: flex;
-  
-}
-
-.stars__star {
-  height: 15px;
-  width: 15px;
-  margin-right: 4px;
-  background-image: url(./images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars--4 .stars__star:nth-child(-n+4) {
-  background-image: url(./images/star-active.svg);
-}
-
 .product__button {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
+  margin: 17px 16px 16px;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: bold;
-  line-height: 16px;
-  text-decoration: none;
-  background-color: #00acdc;
-  color: #fff;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
   text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  border-radius: 5px;
+  color: #fff;
+  
 }
 
 .product__button :hover {
