@@ -22,7 +22,7 @@ p {
 /* #endregion */
 
 /* #region container settings */
-.card-container {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start ;
@@ -38,14 +38,14 @@ p {
 /* #endregion */
 
 /* #region content */
-.card-photo {
+.card__photo {
   padding: 0;
   height: 134px;
   width: 160px;
   margin-bottom: 40px;
 }
 
-.product-name {
+.product__name {
   margin-bottom: 4px;
 
   font-family: inherit;
@@ -56,7 +56,7 @@ p {
   color: var(--main-accent);
 }
 
-.product-code {
+.product__code {
   line-height: 14px;
   font-size: 11px;
   font-weight: 400;
@@ -67,7 +67,7 @@ p {
 /* #endregion */
 
 /* #region rating */
-.product-rating {
+.rating {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -75,23 +75,22 @@ p {
   margin-top: 15px;
 }
 
-.product-rating__stars {
+.card__stars {
   display: flex;
   height: 16px;
 }
 
-.star {
+.stars__star {
   background: url(images/star.svg) no-repeat center;
-  width: 16px;
-}
-
-.star-active {
-  background: url(images/star-active.svg) no-repeat center;
   width: 16px;
   margin-right: 4px;
 }
 
-.product-rating__feedback {
+.stars__star:nth-of-type(-n+4) {
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.card__feedback {
   margin: 0;
   font-size: 11px;
   font-weight: 400;
@@ -102,7 +101,7 @@ p {
 /* #endregion */
 
 /* #region price */
-.price-value {
+.card__price {
   margin: 23px 0 16px;
   display: flex;
   width: 100%;
@@ -110,7 +109,7 @@ p {
   align-items: baseline;
 }
 
-.price-value__price {
+.card__price-label {
   font-size: 11px;
   font-weight: 400;
   line-height: 18px;
@@ -118,7 +117,7 @@ p {
   color: #616070;
 }
 
-.price-value__value {
+.card__price-value {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
@@ -127,12 +126,13 @@ p {
 /* #endregion */
 
 /* #region button */
-.buy-button {
+.card__buy-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 40px;
+  border: 1px solid var(--blue-accent);
 
   font-size: 14px;
   font-weight: bold;
@@ -140,11 +140,12 @@ p {
   border-radius: 5px;
   text-transform: uppercase;
   text-decoration: none;
+
   color: #fff;
   background: #00acdc;
 }
 
-.buy-button:hover {
+.card__buy-button:hover {
   background-color: #fff;
   border: 1px solid var(--blue-accent);
 
