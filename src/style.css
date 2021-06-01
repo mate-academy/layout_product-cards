@@ -30,13 +30,17 @@ h2,
   width: 200px;
 }
 
-.card__product-image {
-  display: block;
+.card__product {
+  display: flex;
+  justify-content: center;
 
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.card__product-image {
   height: 134px;
   width: 160px;
-
-  margin: 32px auto 40px;
 }
 
 .card__title {
@@ -45,7 +49,8 @@ h2,
   font-weight: 500;
   font-size: 12px;
 
-  margin: 0 auto 4px;
+  margin: 0 auto;
+  padding-bottom: 4px;
 
   line-height: 18px;
 
@@ -55,8 +60,8 @@ h2,
 .card__code {
   color: var(--secondary-font-color);
 
-  margin-bottom: 16px;
-  margin-left: 16px;
+  padding-bottom: 10px;
+  padding-left: 16px;
 }
 
 .card__rating {
@@ -66,7 +71,7 @@ h2,
 
   height: 16px;
 
-  margin: 16px 16px 24px;
+  padding: 14px 16px 32px;
 }
 
 .stars {
@@ -86,11 +91,13 @@ h2,
 }
 
 .stars__star:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 .stars__star:nth-child(n + 5) {
   background: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card__rating-feedback {
@@ -107,7 +114,8 @@ h2,
 
   height: 20px;
 
-  margin: 0 16px;
+  padding: 0 16px;
+  padding-bottom: 16px;
 }
 
 .card__price-label {
@@ -144,6 +152,7 @@ h2,
   height: 40px;
 
   margin: 16px;
+  line-height: 16px;
 
   text-decoration: none;
   text-transform: uppercase;
