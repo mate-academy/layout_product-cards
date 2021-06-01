@@ -3,7 +3,6 @@
 :root {
   --main-font-color: #060b35;
   --secondary-font-color: #616070;
-
   --accent-color: #00acdc;
 }
 
@@ -26,14 +25,12 @@ h2,
 .card {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-
   width: 200px;
 }
 
 .card__product {
   display: flex;
   justify-content: center;
-
   padding-top: 32px;
   padding-bottom: 40px;
 }
@@ -45,21 +42,16 @@ h2,
 
 .card__title {
   color: var(--main-font-color);
-
   font-weight: 500;
   font-size: 12px;
-
   margin: 0 auto;
   padding-bottom: 4px;
-
   line-height: 18px;
-
   width: 166px;
 }
 
 .card__code {
   color: var(--secondary-font-color);
-
   padding-bottom: 10px;
   padding-left: 16px;
 }
@@ -68,15 +60,12 @@ h2,
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   height: 16px;
-
   padding: 14px 16px 32px;
 }
 
 .stars {
   display: flex;
-
   height: 16px;
 }
 
@@ -84,25 +73,20 @@ h2,
   background: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-
   margin-right: 4px;
-
   width: 16px;
 }
 
-.stars__star:last-child {
-  padding-right: 0;
-}
-
-.stars__star:nth-child(n + 5) {
-  background: url(./images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.stars--0 .stars__star:nth-child(n + 1),
+.stars--1 .stars__star:nth-child(n + 2),
+.stars--2 .stars__star:nth-child(n + 3),
+.stars--3 .stars__star:nth-child(n + 4),
+.stars--4 .stars__star:nth-child(n + 5) {
+  background-image: url(images/star.svg);
 }
 
 .card__rating-feedback {
   color: var(--main-font-color);
-
   height: 14px;
   line-height: 14px;
 }
@@ -111,49 +95,37 @@ h2,
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-
   height: 20px;
-
   padding: 0 16px;
   padding-bottom: 16px;
 }
 
 .card__price-label {
   color: var(--secondary-font-color);
-
   line-height: 18px;
 }
 
 .card__price-value {
   color: var(--main-font-color);
-
   font-size: 16px;
   font-weight: 700;
-
   line-height: 18px;
 }
 
 .card__button {
   background: var(--accent-color);
   color: #fff;
-
   border: 1px solid var(--accent-color);
   border-radius: 5px;
-
   font-weight: 700;
   font-size: 14px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-grow: 1;
-
   height: 40px;
-
   margin: 16px;
   line-height: 16px;
-
   text-decoration: none;
   text-transform: uppercase;
 }
