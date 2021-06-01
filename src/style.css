@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
- 
+
 * {
   box-sizing: border-box;
 }
 
 html {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
+
   color: #000;
 }
 
@@ -29,21 +29,22 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
-.image {
+.container__image {
+  margin: 0;
   width: 160px;
   height: 134px;
   margin-top: 15px;
   margin-bottom: 45px;
 }
 
-.title {
+.container__title {
   margin-bottom: 6px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 }
 
-.product-id {
+.container__product-id {
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -51,7 +52,7 @@ body {
   line-height: 13px;
 }
 
-.product-rating {
+.container__product-rating {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -71,11 +72,16 @@ body {
   background: url(./images/star-active.svg) no-repeat center;
 }
 
-.stars--4 .stars__star:nth-child(n + 5) {
+.stars--0 .stars__star:nth-child(n + 1),
+.stars--1 .stars__star:nth-child(n + 2),
+.stars--2 .stars__star:nth-child(n + 3),
+.stars--3 .stars__star:nth-child(n + 4),
+.stars--4 .stars__star:nth-child(n + 5),
+.stars--5 .stars__star:nth-child(n + 6) {
   background: url(./images/star.svg) no-repeat center;
 }
 
-.comments {
+.container__product-rating-comments {
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -83,7 +89,7 @@ body {
   color: #000;
 }
 
-.price {
+.container__price {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -91,13 +97,13 @@ body {
   margin: 20px 0;
 }
 
-.price__label {
+.container__price-label {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
 }
 
-.price__sum {
+.container__price-sum {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -122,5 +128,6 @@ body {
 .buy-button:hover {
   color: #00acdc;
   background-color: #fff;
-  border: 1px solid #00acdc;
+  border: 1px solid;
+  border-color: #00acdc;
 }
