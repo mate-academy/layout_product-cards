@@ -28,7 +28,6 @@ html {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
 }
 
-/* #region iMac*/
 .item-image__img {
   display: flex;
   justify-content: center;
@@ -39,16 +38,14 @@ html {
   width: var(--image-width);
   margin: 30px 20px 45px;
 }
-/* #endregion */
 
-/* #region Description */
 .item-title {
   display: flex;
   flex-direction: column;
 }
 
 .item-title__content {
-  line-height: 15.47px;
+  line-height: 15px;
   margin: 0 var(--standart-item-margin);
 
   font-size: 12px;
@@ -61,9 +58,7 @@ html {
   font-size: 11px;
   font-weight: 400;
 }
-/* #endregion */
 
-/* #region Rating*/
 .item-rating {
   display: flex;
   justify-content: space-between;
@@ -89,7 +84,7 @@ html {
   width: 15px;
   margin-right: 4px;
 
-  background: url(images/star-active.svg);
+  background-image: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -99,14 +94,9 @@ html {
 .stars--2 .stars__item:nth-child(n+3),
 .stars--3 .stars__item:nth-child(n+4),
 .stars--4 .stars__item:nth-child(n+5) {
-  background: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url(images/star.svg);
 }
 
-/* #endregion */
-
-/* #region Pricing */
 .item-price {
   display: flex;
   width: inherit;
@@ -138,9 +128,7 @@ html {
   font-size: 16px;
   font-weight: 700;
 }
-/* #endregion */
 
-/* #region Button */
 .item-purchase-button {
   display: flex;
   width: inherit;
@@ -162,9 +150,11 @@ html {
 }
 
 .item-purchase-button__link--decoration {
+  box-sizing: border-box;
   margin: 20px var(--standart-item-margin) var(--standart-item-margin);
 
   background-color: rgba(0, 172, 220, 1);
+  border: 1px rgb(0, 172, 220) solid;
   border-radius: 5px;
 }
 
@@ -173,4 +163,3 @@ html {
   border: 1px solid #00acdc;
   color: rgba(0, 172, 220, 1);
 }
-/* #endregion */
