@@ -1,0 +1,130 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px 16px;
+
+  width: 200px;
+  height: 403px;
+  border-radius: 5px;
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+}
+
+.image__img {
+  margin-bottom: 45px;
+  height: 134px;
+  width: 160px;
+}
+
+.card__name {
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 7px;
+}
+
+.card__code {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-bottom: 14px;
+}
+
+.card__fedback {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  height: 15px;
+}
+
+.stars__star {
+  background: url(images/star.svg) no-repeat center;
+  width: 15px;
+  margin-left: 4px;
+}
+
+.stars:first-child {
+  margin-left: 0;
+}
+
+.stars__star--0 .stars__star:nth-child(-n),
+.stars__star--1 .stars__star:nth-child(-n + 1),
+.stars__star--2 .stars__star:nth-child(-n + 2),
+.stars__star--3 .stars__star:nth-child(-n + 3),
+.stars__star--4 .stars__star:nth-child(-n + 4),
+.stars__star--5 .stars__star:nth-child(n) {
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.fedback__content {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 21px;
+}
+
+.price__name {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.price__velue {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+.card__buy {
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.buy__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  line-height: 16.41px;
+  border-radius: 5px;
+}
+
+.buy__link:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+}
