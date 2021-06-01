@@ -25,7 +25,8 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  justify-content: center;
   width: 200px;
   min-height: 403px;
   padding: 32px 16px 16px;
@@ -34,7 +35,6 @@ body {
   background-color: #fff;
 }
 
-/* #region card-image */
 .card__image {
   --image-height: 1.34;
   --image-width: 1.6;
@@ -42,6 +42,7 @@ body {
   width: calc(100px * var(--image-width));
   flex-shrink: 0;
   margin-bottom: 40px;
+  align-self: center;
 }
 
 .card__title {
@@ -54,13 +55,13 @@ body {
 .card__code {
   align-self: flex-start;
   color: #616070;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .card__rating {
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 24px;
 }
 
@@ -69,7 +70,7 @@ body {
 }
 
 .stars__star {
-  --star-basis: 15px;
+  --star-basis: 16px;
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: 50%;
@@ -89,13 +90,13 @@ body {
 .card__price {
   display: flex;
   justify-content: space-between;
-  align-self: stretch;
   align-items: baseline;
   margin-bottom: 15px;
 }
 
 .card__price-word {
   color: #616070;
+  /* font-size: 12px; */
   line-height: 18px;
 }
 
