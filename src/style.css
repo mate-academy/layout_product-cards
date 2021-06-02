@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-.card-container {
+.cards {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -15,16 +15,16 @@
   font-family: Roboto, sans-serif;
 }
 
-.picture-container {
+.cards__container {
   padding: 32px 19px 36px;
 }
 
-.picture-container__picture {
+.cards__picture {
   width: 160px;
   height: 134px;
 }
 
-.brief-description {
+.cards__description {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -32,7 +32,7 @@
   color: #060b35;
 }
 
-.product-code {
+.cards__product-code {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -40,7 +40,7 @@
   color: #616070;
 }
 
-.stars-rewievs-block {
+.cards__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,11 +48,11 @@
   padding: 0 0 24px 16px;
 }
 
-.stars {
+.cards__stars {
   display: flex;
 }
 
-.stars__star {
+.cards__star {
   height: 16px;
   width: 16px;
   margin-right: 4px;
@@ -61,11 +61,27 @@
   background-position: center;
 }
 
-.stars__star:nth-child(-n + 4) {
+.cards__stars--active-1 .cards__star:nth-child(-n + 1) {
   background-image: url(./images/star-active.svg);
 }
 
-.count-reviews {
+.cards__stars--active-2 .cards__star:nth-child(-n + 2) {
+  background-image: url(./images/star-active.svg);
+}
+
+.cards__stars--active-3 .cards__star:nth-child(-n + 3) {
+  background-image: url(./images/star-active.svg);
+}
+
+.cards__stars--active-4 .cards__star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.cards__stars--active-5 .cards__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.cards__count-reviews {
   font-weight: 400;
   font-size: 10px;
   padding-right: 16px;
@@ -73,31 +89,31 @@
   line-height: 14px;
 }
 
-.price-title {
+.cards__price {
   display: flex;
   justify-content: space-between;
   padding: 0 16px 15px;
 }
 
-.price-title__text {
+.cards__price-label {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
 }
 
-.price-title__price {
+.cards__price-value {
   font-weight: 700;
   font-style: 16px;
   line-height: 20px;
   color: #060b35;
 }
 
-.button-buy {
+.cards__button-buy {
   padding: 0 16px 16px;
 }
 
-.button-buy__border {
+.cards__button-border {
   width: 100%;
   height: 40px;
   background: #00acdc;
@@ -110,7 +126,7 @@
   text-align: center;
 }
 
-.button-buy__text {
+.cards__button-text {
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -122,9 +138,8 @@
 
 }
 
-.button-buy__border--active:hover,
-.button-buy__text--active:hover {
-  background: #fff;
-  
+.cards__button-border--active:hover,
+.cards__button-text--active:hover {
+  background: none;
   color: #00acdc;
 }
