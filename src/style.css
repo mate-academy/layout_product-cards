@@ -38,11 +38,14 @@ p {
 /* #endregion */
 
 /* #region content */
+.image {
+  margin-bottom: 40px;
+}
+
 .card__photo {
   padding: 0;
   height: 134px;
   width: 160px;
-  margin-bottom: 40px;
 }
 
 .product__name {
@@ -68,11 +71,14 @@ p {
 
 /* #region rating */
 .rating {
+  margin-top: 15px;
+}
+
+.card__rating {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
 }
 
 .card__stars {
@@ -81,13 +87,17 @@ p {
 }
 
 .stars__star {
-  background: url(images/star.svg) no-repeat center;
+  background: url(/images/star-active.svg) no-repeat center;
   width: 16px;
-  margin-right: 4px;
+  padding-right: 4px;
 }
 
-.stars__star:nth-of-type(-n+4) {
-  background: url(images/star-active.svg) no-repeat center;
+.stars--0 .stars__star:nth-child(n),
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:nth-child(n+5) {
+  background: url(images/star.svg) no-repeat center;
 }
 
 .card__feedback {
@@ -101,8 +111,11 @@ p {
 /* #endregion */
 
 /* #region price */
-.card__price {
+.price {
   margin: 23px 0 16px;
+}
+
+.card__price {
   display: flex;
   width: 100%;
   justify-content: space-between;
