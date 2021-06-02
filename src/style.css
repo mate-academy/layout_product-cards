@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 403px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f2f2f2cc;
+  border-radius: 5px;
+}
+
+.card_image {
+  display: flex;
+  height: 134px;
+  width: 160px;
+  margin: 0 3px 40px;
+}
+
+.card_name {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.card_code {
+  display: flex;
+  height: 13px;
+  margin: 0 0 16px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  text-align: left;
+  color: #616070;
+}
+
+.card_review {
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  margin-bottom: 24px;
+}
+
+/* #region Stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  display: flex;
+  margin-right: 4px;
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars--4 .stars__star:nth-child(n + 5) {
+  background-image: url(./images/star.svg);
+}
+/* #endregion */
+
+.review_rating {
+  display: flex;
+  align-items: flex-end;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: right;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.price_caption {
+  display: flex;
+  align-self: flex-end;
+  height: 13px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  text-align: right;
+  color: #616070;
+}
+
+.price_value {
+  display: flex;
+  font-size: 16px;
+  height: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: right;
+}
+
+.button {
+  display: flex;
+  height: 40px;
+  width: 168px;
+}
+
+.button_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  background: #00acdc;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.button_link:hover {
+  border: 1px solid #00acdc;
+  background-color: #fff;
+  color: #00acdc;
+}
