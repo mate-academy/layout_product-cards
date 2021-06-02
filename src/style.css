@@ -7,10 +7,8 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  color: #000;
 }
 
 .card {
@@ -19,7 +17,6 @@ html {
   flex-direction: column;
   width: 200px;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
   border-radius: 5px;
 }
 
@@ -49,19 +46,25 @@ html {
   color: #616070;
 }
 
-.card__review {
+.card__container-feedback {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
-.stars-4 {
+.stars--0,
+.stars--1,
+.stars--2,
+.stars--3,
+.stars--4,
+.stars--5 {
   display: flex;
   height: 16px;
 }
 
-.stars {
+.stars--0,
+.stars__star {
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -69,7 +72,11 @@ html {
   margin-right: 4px;
 }
 
-.stars-4 .stars:nth-child(-n+4) {
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(./images/star-active.svg);
 }
 
