@@ -1,21 +1,23 @@
-body {
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 12;
-  color: #000;
 }
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 29px 14px 14px;
   border: 1px solid rgba(243, 243, 243, 1);
-  border-radius: 0.5px;
+  border-radius: 5px;
 }
 
 .card__image {
@@ -23,12 +25,7 @@ body {
 }
 
 .image {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.image__iMac {
+  display: block;
   width: 160px;
   height: 134px;
 }
@@ -71,15 +68,19 @@ body {
 .rate__star {
   height: 15px;
   width: 15px;
-  background: url(./images/star-active.svg) no-repeat center;
-}
-
-.rate__star:last-child {
   background: url(./images/star.svg) no-repeat center;
 }
 
 .rate__star:not(:last-child) {
   margin-right: 4px;
+}
+
+.rate--1 .rate__star:nth-child(-n+1),
+.rate--2 .rate__star:nth-child(-n+2),
+.rate--3 .rate__star:nth-child(-n+3),
+.rate--4 .rate__star:nth-child(-n+4),
+.rate--5 .rate__star:nth-child(-n+5) {
+  background: url(./images/star-active.svg) no-repeat center;
 }
 
 .description__feedback {
@@ -108,7 +109,7 @@ body {
   justify-content: center;
 }
 
-.purchase_btn {
+.purchase__btn {
   width: 168px;
   height: 40px;
   display: flex;
@@ -116,7 +117,7 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: rgba(0, 172, 220, 1);
-  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
@@ -125,8 +126,8 @@ body {
   line-height: 16px;
 }
 
-.purchase_btn:hover {
+.purchase__btn:hover {
   background-color: #fff;
   color: rgba(0, 172, 220, 1);
-  border: 1px solid rgba(0, 172, 220, 1);
+  border-color: rgba(0, 172, 220, 1);
 }
