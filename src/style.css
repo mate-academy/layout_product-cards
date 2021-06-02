@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 29px 14px 14px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+}
+
+.card__image {
+  margin-bottom: 45px;
+}
+
+.image {
+  display: block;
+  width: 160px;
+  height: 134px;
+}
+
+.card__description {
+  margin-bottom: 20px;
+}
+
+.description {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description__title {
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 6px;
+  line-height: 15px;
+ 
+}
+
+.description__code {
+  font-size: 11px;
+  margin: 0 0 15px;
+  line-height: 13px;
+}
+
+.description__rate {
+  margin-bottom: 20px;
+}
+
+.rate {
+  display: flex;
+  align-content: space-between;
+}
+
+.rate__star {
+  height: 15px;
+  width: 15px;
+  background: url(./images/star.svg) no-repeat center;
+}
+
+.rate__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.rate--1 .rate__star:nth-child(-n+1),
+.rate--2 .rate__star:nth-child(-n+2),
+.rate--3 .rate__star:nth-child(-n+3),
+.rate--4 .rate__star:nth-child(-n+4),
+.rate--5 .rate__star:nth-child(-n+5) {
+  background: url(./images/star-active.svg) no-repeat center;
+}
+
+.description__feedback {
+  font-size: 11px;
+  line-height: 13px;
+  margin: 0 0 20px;
+}
+
+.description__price {
+  font-size: 11px;
+  line-height: 13px;
+  margin: 0;
+}
+
+.description__amount {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin: 0;
+}
+
+.purchase {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase__btn {
+  width: 168px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgba(0, 172, 220, 1);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.purchase__btn:hover {
+  background-color: #fff;
+  color: rgba(0, 172, 220, 1);
+  border-color: rgba(0, 172, 220, 1);
+}
