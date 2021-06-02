@@ -26,11 +26,16 @@ p {
   margin-bottom: 40px;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
 .info__product-name {
   margin-bottom: 16px;
 }
 
-.product-name__title {
+.info__title {
   margin-bottom: 2px;
 
   font-weight: 500;
@@ -38,7 +43,7 @@ p {
   line-height: 18px;
 }
 
-.product-name__code {
+.info__code {
   font-size: 10px;
   line-height: 14px;
   color: #616070;
@@ -54,30 +59,30 @@ p {
   margin-bottom: 24px;
 }
 
-.stars {
+.feedback__stars {
   display: flex;
   flex-grow: 1;
 }
 
-.stars__star {
+.feedback__star {
   height: 16px;
   width: 16px;
   background: url(./images/star.svg) no-repeat center;
 }
 
-.stars__star:not(:last-child) {
+.feedback__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.stars--0 .stars__star {
+.feedback__stars--0 .stars__star {
   background: url(./images/star.svg) no-repeat center;
 }
 
-.stars--1 .stars__star:first-child,
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
+.feedback__stars--1 .feedback__star:first-child,
+.feedback__stars--2 .feedback__star:nth-child(-n + 2),
+.feedback__stars--3 .feedback__star:nth-child(-n + 3),
+.feedback__stars--4 .feedback__star:nth-child(-n + 4),
+.feedback__stars--5 .feedback__star:nth-child(-n + 5) {
   background: url(./images/star-active.svg) no-repeat center;
 }
 
@@ -130,10 +135,10 @@ p {
   text-decoration: none;
 
   color: #fff;
+  border: 1px solid #00acdc;
 }
 
 .info__item:hover {
   background-color: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
