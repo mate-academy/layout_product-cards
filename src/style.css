@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", serif;
   font-size: 10px;
@@ -5,10 +9,6 @@ html {
 
 body {
   margin: 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .contaiener {
@@ -29,34 +29,33 @@ body {
 .product__photo {
   width: 160px;
   height: 134px;
-  margin: 16px 1px 37px 3px;
+  margin: 16px 1px 0 3px;
 }
 
 .product__text-name {
-  margin: 0 1px 0 0;
+  margin: 37px 1px 0 0;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   color: #060b35;
   width: 168px;
-
 }
 
 .product__text-code {
   margin-top: 4px;
-  margin-bottom: 0;
   font-weight: 400;
   line-height: 14px;
   color: #616070;
 }
 
-.product__star-4 {
+.stars--4 {
   margin-top: 15px;
   display: flex;
   align-items: center;
   height: 16px;
 }
 
+.stars__star--1,
 .stars__star {
   margin-left: 4px;
   background-image: url(./images/star.svg);
@@ -66,13 +65,16 @@ body {
   width: 15px;
 }
 
-.product__star-4 .stars__star:nth-child(-n+4) {
+.stars__star--1 {
+  margin-right: 15px;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
 }
 
-.stars__star-4-review {
+.stars__review {
   font-weight: 400;
-  margin-left: 15px;
   line-height: 14px;
   color: #060b35;
 }
@@ -84,14 +86,14 @@ body {
   width: 168px;
 }
 
-.cost__price-words {
+.product__price-label {
   font-size: 12px;
   line-height: 18px;
   color: #616070;
   margin: 0;
 }
 
-.cost__price-number {
+.product__price-value {
   font-size: 16px;
   margin: 0 0 0 57px;
   font-weight: 700;
