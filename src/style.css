@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 403px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background: #fff;
+  font-family: Roboto, sans-serif;
+}
+
+.cards__container {
+  padding: 32px 19px 36px;
+}
+
+.cards__picture {
+  width: 160px;
+  height: 134px;
+}
+
+.cards__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 15px 4px 16px;
+  color: #060b35;
+}
+
+.cards__product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0 0 15px 16px;
+  color: #616070;
+}
+
+.cards__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 24px 16px;
+}
+
+.cards__stars {
+  display: flex;
+}
+
+.cards__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cards__stars--active-1 .cards__star:nth-child(-n + 1),
+.cards__stars--active-2 .cards__star:nth-child(-n + 2),
+.cards__stars--active-3 .cards__star:nth-child(-n + 3),
+.cards__stars--active-4 .cards__star:nth-child(-n + 4),
+.cards__stars--active-5 .cards__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.cards__count-reviews {
+  font-weight: 400;
+  font-size: 10px;
+  padding-right: 16px;
+  color: #060b35;
+  line-height: 14px;
+}
+
+.cards__price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 15px;
+}
+
+.cards__price-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.cards__price-value {
+  font-weight: 700;
+  font-style: 16px;
+  line-height: 20px;
+  color: #060b35;
+}
+
+.cards__button-buy {
+  padding: 0 16px 16px;
+}
+
+.cards__button-border {
+  width: 100%;
+  height: 40px;
+  background: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cards__button-text {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background: #00acdc;
+
+}
+
+.cards__button-border--active:hover,
+.cards__button-text--active:hover {
+  background: none;
+  color: #00acdc;
+}
