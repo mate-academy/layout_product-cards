@@ -13,32 +13,27 @@ body {
   margin: 20px auto;
   width: 200px;
   border-radius: 5px;
-  /* padding: 32px 16px 16px; */
 }
 
 .img-container__picture {
+  display: block;
   width: 160px;
   height: 134px;
   margin-top: 32px;
   margin-bottom: 40px;
 }
 
-.prod-discribe {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-}
-
 .prod-discribe__opus {
-  margin: 0;
   font-weight: 500;
-  margin-bottom: 4px;
+  font-size: 12px;
+  margin: 0 16px 4px;
 }
 
 .prod-discribe__code {
-  width: 101px;
+  line-height: 14px;
   font-weight: 400;
   font-size: 11px;
-  margin-bottom: 16px;
+  margin: 0 83px 16px 16px;
 }
 
 .rating-container {
@@ -67,7 +62,7 @@ body {
   margin-right: 16px;
 }
 
-.rating-container__stars--4 .stars:not(:nth-child(n + 5)) {
+.rating-container__stars--4 .stars:nth-child(-n + 4) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -106,7 +101,6 @@ body {
 
 .button-container {
   display: flex;
-  /* border: 1px solid red; */
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -118,7 +112,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
   width: 168px;
   height: 40px;
   background: #00acdc;
@@ -127,7 +120,6 @@ body {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-  /* margin-bottom: 16px; */
 }
 
 .button-container__link {
@@ -135,5 +127,7 @@ body {
 }
 
 .button-container__button:hover {
+  background-color: #fff;
   border: 1px solid #00acdc;
+  color: #00acdc;
 }
