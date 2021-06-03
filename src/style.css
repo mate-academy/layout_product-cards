@@ -22,14 +22,14 @@ body {
   border-radius: 5px;
 }
 
-.card_image {
+.card__image {
   display: flex;
   height: 134px;
   width: 160px;
   margin: 0 3px 40px;
 }
 
-.card_name {
+.card__name {
   display: flex;
   align-items: center;
   height: 36px;
@@ -38,9 +38,10 @@ body {
   line-height: 18px;
   text-align: left;
   margin-bottom: 4px;
+  color: #060b35;
 }
 
-.card_code {
+.card__code {
   display: flex;
   height: 13px;
   margin: 0 0 16px;
@@ -51,7 +52,7 @@ body {
   color: #616070;
 }
 
-.card_review {
+.card__review {
   display: flex;
   justify-content: space-between;
   height: 16px;
@@ -63,22 +64,25 @@ body {
   display: flex;
 }
 
-.stars__star {
-  display: flex;
+.stars__star,
+.stars--0.stars__star {
+  width: 15px;
   margin-right: 4px;
-  background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 16px;
-  width: 16px;
+  background-image: url(images/star.svg);
 }
 
-.stars--4 .stars__star:nth-child(n + 5) {
-  background-image: url(./images/star.svg);
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url("images/star-active.svg");
 }
 /* #endregion */
 
-.review_rating {
+.card__review_rating {
   display: flex;
   align-items: flex-end;
   height: 16px;
@@ -86,15 +90,16 @@ body {
   font-weight: 400;
   line-height: 16px;
   text-align: right;
+  color: #060b35;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 18px;
 }
 
-.price_caption {
+.card__price_caption {
   display: flex;
   align-self: flex-end;
   height: 13px;
@@ -105,22 +110,22 @@ body {
   color: #616070;
 }
 
-.price_value {
+.card__price_value {
   display: flex;
   font-size: 16px;
   height: 18px;
   font-weight: 700;
   line-height: 18px;
   text-align: right;
+  color: #060b35;
 }
 
-.button {
+.card__button {
   display: flex;
   height: 40px;
-  width: 168px;
 }
 
-.button_link {
+.card__button_link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,10 +140,10 @@ body {
   border-radius: 5px;
   text-align: center;
   color: white;
+  border: 1px solid #00acdc;
 }
 
-.button_link:hover {
-  border: 1px solid #00acdc;
+.card__button_link:hover {
   background-color: #fff;
   color: #00acdc;
 }
