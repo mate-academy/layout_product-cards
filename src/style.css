@@ -18,10 +18,10 @@ p {
   margin: 0;
 }
 
-.card-container {
+.card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start ;
+  justify-content: flex-start;
   align-items: center;
 
   width: 200px;
@@ -32,14 +32,14 @@ p {
   font-family: Roboto, sans-serif;
 }
 
-.card-photo {
+.card__image {
   padding: 0;
   height: 134px;
   width: 160px;
   margin-bottom: 40px;
 }
 
-.product-name {
+.card__title {
   margin-bottom: 4px;
 
   font-family: inherit;
@@ -50,16 +50,15 @@ p {
   color: var(--main-accent);
 }
 
-.product-code {
+.card__subtitle {
   line-height: 14px;
   font-size: 10px;
   font-weight: 400;
   font-family: inherit;
-
   color: #616070;
 }
 
-.product-rating {
+.card__rating {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -67,23 +66,23 @@ p {
   margin-top: 15px;
 }
 
-.product-rating__stars {
+.stars {
   display: flex;
   height: 16px;
 }
 
-.star {
+.stars__star {
   background: url(images/star.svg) no-repeat center;
   width: 16px;
 }
 
-.star-active {
+.stars__star--4 {
   background: url(images/star-active.svg) no-repeat center;
   width: 16px;
   margin-right: 4px;
 }
 
-.product-rating__feedback {
+.feedback {
   margin: 0;
   font-size: 10px;
   font-weight: 400;
@@ -92,7 +91,7 @@ p {
   color: var(--main-accent);
 }
 
-.price-value {
+.card__price {
   margin: 23px 0 16px;
   display: flex;
   width: 100%;
@@ -100,7 +99,7 @@ p {
   align-items: baseline;
 }
 
-.price-value__price {
+.card__price-title {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -108,14 +107,14 @@ p {
   color: #616070;
 }
 
-.price-value__value {
+.card__price-value {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
   color: var(--main-accent);
 }
 
-.buy-button {
+.card__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,9 +131,8 @@ p {
   background: #00acdc;
 }
 
-.buy-button:hover {
+.card__button:hover {
   background-color: #fff;
   border: 1px solid var(--blue-accent);
-
   color: var(--blue-accent);
 }
