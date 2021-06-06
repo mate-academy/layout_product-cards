@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 10px;
+  line-height: 13px;
+  color: #616070;
+  --text-color-bold: #060b35;
+}
+
+.title {
+  margin: 20px;
+  color: #027199;
+}
+
+.product-card {
+  margin: 20px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
+}
+
+.product-card__img {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.product-card__name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color-bold);
+}
+
+.product-card__code {
+  margin-bottom: 16px;
+}
+
+.product-card__evaluation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.product-card__evaluation-star {
+  display: flex;
+}
+
+.product-card__evaluation-star_stars {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  
+.product-card__evaluation-star_stars:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.product-card__evaluation-reviews {
+  line-height: 14px;
+  color: var(--text-color-bold);
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product-card__price_cost {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--text-color-bold);
+}
+
+.product-card__button-buy {
+  --button-buy-color: #00acdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid var(--button-buy-color);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--button-buy-color);
+  transition: all 0.3s;
+}
+
+.product-card__button-buy:hover {
+  color: var(--button-buy-color);
+  background-color: #fff;
+}
