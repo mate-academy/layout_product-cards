@@ -32,10 +32,13 @@ html {
 
 .product-description {
   display: flex;
+  margin: 21px 16px 1px;
+}
+
+.product-description__text {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
-  margin: 21px 16px 1px;
 }
 
 .product-code {
@@ -47,32 +50,38 @@ html {
   margin: 3px 88px 8px 16px;
 }
 
-.product-rating {
+.product-reviews {
+  display: flex;
+  margin: 7px 0 13px;
+
+}
+
+.stars {
   display: flex;
   flex-direction: row;
   align-self: flex-start;
   height: 15px;
-  margin: 7px 14px 13px 16px;
 }
 
-.product-rating__stars {
+.stars__star {
   background: url(images/star.svg) no-repeat center;
   height: 15px;
   width: 15px;
-  margin-left: 1px;
-  margin-right: 4px;
+  margin-right: 5px;
 }
 
-.product-reviews {
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.product-reviews__feedback {
+  display: flex;
+  justify-self: left;
   font-weight: 400px;
   font-size: 10px;
   line-height: 14px;
   margin-top: 1px;
-  margin-left: 13.5px;
-}
-
-.product-rating .product-rating__stars:nth-child(-n + 4) {
-  background: url(images/star-active.svg) no-repeat center;
+  margin-left: 14px;
 }
 
 .product-price {
@@ -114,11 +123,12 @@ html {
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .buy-product__buy:hover {
   height: 38px;
-  width: 165px;
+  width: 164px;
   color: #00acdc;
   background: #fff;
   border: 1px solid #00acdc;
