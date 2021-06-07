@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
 body {
   margin: 0;
   background: #00acdc;
+  box-sizing: border-box;
 }
 
-.rectangle-3 {
+html {
+  font-family: Roboto, serif;
+  font-weight: 400;
+}
+
+.product-card {
   display: flex;
-  margin: 32px;
   flex-direction: column;
   height: 403px;
   width: 200px;
@@ -16,52 +18,34 @@ body {
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 5px;
+  padding: 16px;
 }
 
-.rectangle-4 {
-  display: flex;
+.product-card__image {
   height: 134px;
   width: 160px;
-  background: url(images/imac.jpeg);
-  background-size: 160px 134px;
-  margin-top: 32px;
-  align-self: center;
+  margin: 16px 1px 0 3px;
 }
 
-.text-of-item {
-  margin-left: 16px;
-  /* display: block; */
-  font-family: Roboto, serif;
+.product-card__title {
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  text-align: left;
   margin-top: 40px;
 }
 
-.code-of-item {
-  width: 101;
-  margin-top: 4px;
-  margin-left: 16px;
+.product-card__code {
   margin-bottom: 16px;
-  display: block;
-  font-family: Roboto, serif;
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 13px;
-  text-align: left;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
 }
 
-.review {
+.product-card__reviews {
   margin-top: 16;
-  margin-left: 16px;
-  margin-right: 16px;
   display: flex;
   justify-content: space-between;
   height: 16px;
-  width: 168px;
 }
 
 .stars {
@@ -87,15 +71,12 @@ body {
 
 .button {
   display: flex;
-  align-self: center;
   justify-content: center;
   align-items: center;
   height: 40px;
   width: 168px;
   border-radius: 5px;
   background: #00acdc;
-
-  font-family: Roboto, serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -117,35 +98,25 @@ a {
   border: 1px solid #00acdc;
 }
 
-.feedback {
-  font-family: Roboto, serif;
-  font-style: normal;
-  font-weight: normal;
+.feedbacks {
   font-size: 11px;
   line-height: 16px;
 }
 
-.priced {
+.price {
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
-  margin-left: 16px;
-  margin-right: 16px;
   margin-bottom: 18px;
   align-items: baseline;
 }
 
-.price {
-  font-family: Roboto, serif;
-  font-style: normal;
-  font-weight: normal;
+.price__title {
   font-size: 11px;
   line-height: 13px;
 }
 
-.figure {
-  font-family: Roboto, serif;
-  font-style: normal;
+.price__figure {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
