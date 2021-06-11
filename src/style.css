@@ -1,7 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-
-:root {
+* {
   --color-blue: #00acdc;
+}
+
+.page__content,
+.card,
+.card__rating,
+.card__stars,
+.card__price,
+.card__buy,
+.card__button {
+  display: flex;
+}
+
+.page__content,
+.card__rating,
+.card__buy,
+.card__button {
+  justify-content: center;
+}
+
+.page__content,
+.card__rating,
+.card__price,
+.card__buy,
+.card__button {
+  align-items: center;
+}
+
+.card__rating,
+.card__price {
+  justify-content: space-between;
 }
 
 .page__content {
@@ -9,30 +37,6 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-}
-
-.card--display_JC_center {
-  justify-content: center;
-}
-
-.card--display_JC_space-between {
-  justify-content: space-between;
-}
-
-.card--display_AI_center {
-  align-items: center;
-}
-
-.card--display_flex {
-  display: flex;
-}
-
-.card--font-weight_normal {
-  font-weight: normal;
-}
-
-.card--font-weight_bold {
-  font-weight: bold;
 }
 
 .card {
@@ -46,7 +50,7 @@
 }
 
 .card__img {
-  margin: 32px 20px 40px 20px;
+  margin: 32px 20px 40px;
   width: 160px;
 }
 
@@ -56,7 +60,7 @@
   line-height: 18px;
 }
 
-.card__kod {
+.card__code {
   margin-top: 2px;
   margin-left: 16px;
   font-size: 10px;
@@ -106,6 +110,7 @@
 }
 
 .card__button {
+  box-sizing: border-box;
   margin: 16px;
   width: 168px;
   height: 40px;
