@@ -1,0 +1,126 @@
+* {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  
+  --min-side-padding: 16px;
+  --color-grey-light: #616070;
+  --color-blue: #00acdc;
+  --color-text: #060b35;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.card {
+  padding: 32px 16px 16px;
+  height: 404px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  margin: 0 auto 40px;
+  background-image: url(./images/imac.jpeg);
+  width: 160px;
+  height: 134px;
+  background-size: 160px 134px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__title {
+  margin: 0 0 4px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.card__number {
+  margin: 0 0 16px;
+  color: var(--color-grey-light);
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.card__rating {
+  margin: 0 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating__stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars__star {
+  background-image: url(./images/star-active.svg);
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  background-image: url(./images/star.svg);
+}
+
+.rating__reviews {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__price {
+  margin: 0 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.price__text {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-grey-light);
+}
+
+.price__number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__buy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+  background-color: var(--color-blue);
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.card__buy-button:hover {
+  color: var(--color-blue);
+  background-color: #fff;
+  border: 1px var(--color-blue) solid;
+}
