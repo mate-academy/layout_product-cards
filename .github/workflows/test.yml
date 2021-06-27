@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm start & sleep 5 && npm test
+    - run: npm test
     - name: Upload HTML report(backstop data)
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
