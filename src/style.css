@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border-radius: 5px;
+
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.card--inner-width {
+  padding: 0 14px;
+  border: 1px solid #f3f3f3;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  margin: 0 5px 42px;
+  padding-top: 30px;
+  box-sizing: content-box;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+
+  margin-bottom: 5px;
+  margin-block-start: 0;
+}
+
+.card__code {
+  margin-bottom: 15px;
+  margin-block-start: 0;
+}
+
+.card__opinion {
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.card__rate {
+  display: flex;
+}
+
+.card__star {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+
+  background: url("images/star.svg") center no-repeat;
+}
+
+.stars--1 .card__star:nth-child(-n+1),
+.stars--2 .card__star:nth-child(-n+2),
+.stars--3 .card__star:nth-child(-n+3),
+.stars--4 .card__star:nth-child(-n+4),
+.stars--5 .card__star:nth-child(-n+5) {
+  background: url("images/star-active.svg") center no-repeat;
+}
+
+.card__cost {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.card__price-title {
+  margin-block-end: 0;
+  line-height: 13px;
+}
+
+.card__price-itself,
+.card__feedbacks-link {
+  white-space: nowrap;
+}
+
+.card__price-itself {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  
+  margin-left: 63px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.card__link,
+.card__feedbacks-link {
+  text-decoration: none;
+}
+
+.card__feedbacks-link {
+  margin-left: 18px;
+  line-height: 13px;
+  color: #000;
+}
+
+.card__link {
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.card__link:hover {
+  color: #00acdc;
+  background-color: #fff;
+}
