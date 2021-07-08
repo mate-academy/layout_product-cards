@@ -2,84 +2,106 @@
 
 html {
   font-family: Roboto, sans-serif;
-  font-size: 10px;
+  font-size: 14px;
   color: #060b35;
+
+  --small-font-size: 12px;
+  --large-font-size: 16px;
+
+  --font-color-light: #616070;
+  --active-blue-color: #00acdc;
+  --border-color: #f3f3f3;
 }
 
-body {
-  margin-left: 0;
+h2,
+body,
+p,
+ul {
+  margin: 0;
 }
 
-.card_container {
+.card {
   width: 200px;
   padding: 32px 16px 16px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--border-color);
   box-sizing: border-box;
   border-radius: 5px;
 }
 
-.card_image {
+.card__image {
   display: block;
+  margin: auto;
   width: 160px;
   height: 134px;
-  margin: auto;
+  padding-bottom: 40px;
 }
 
-.card_product-name {
-  margin-top: 40px;
-  margin-bottom: 0;
-
-  font-size: 12px;
-  line-height: 18px;
+.card__product-name {
+  font-size: var(--small-font-size);
   font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 5px;
 }
 
-.card_item-number {
-  color: #616070;
-  margin: 5px auto 9px;
+.card__item-number {
+  color: var(--font-color-light);
+  font-size: 10px;
 }
 
-.card_product-info {
+.card__product-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 0;
 }
 
-.card_stars {
+.card__stars {
   display: flex;
+  flex: 58%;
 }
 
-.stars_star {
+.card__star {
   display: inline-block;
   height: 16px;
   width: 16px;
   margin-right: 4px;
+  margin-top: 1px;
 
   background-image: url(./images/star-active.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.stars_star:last-child {
+.card__star:last-child {
   background-image: url(./images/star.svg);
 }
 
-.card_price-value {
-  font-size: 16px;
+.card__reviews {
+  flex: auto;
+  font-size: 10px;
+  text-align: right;
+}
+
+.card__price {
+  flex: 50%;
+  font-size: var(--small-font-size);
+  color: var(--font-color-light);
+  margin-top: 24px;
+}
+
+.card__price-value {
+  flex: 50%;
+  font-size: var(--large-font-size);
+  text-align: right;
   font-weight: 700;
+  margin-top: 24px;
 }
 
-.card_price {
-  font-size: 12px;
-  color: #616070;
-}
-
-.card_buy-item-button {
+.card__buy-item-button {
   display: block;
   height: 40px;
 
-  font-size: 14px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -87,14 +109,14 @@ body {
   text-align: center;
   line-height: 40px;
 
-  background-color: #00acdc;
+  background-color: var(--active-blue-color);
   border-radius: 5px;
 }
 
-.card_buy-item-button:hover {
+.card__buy-item-button:hover {
   box-sizing: border-box;
-  color: #00acdc;
+  color: var(--active-blue-color);
 
   background: #fff;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--active-blue-color);
 }
