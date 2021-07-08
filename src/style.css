@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
 
 html {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -8,74 +12,43 @@ html {
   justify-content: center;
 }
 
+.product_card {
+  display: flex;
+  width: 200px;
+  height: 404px;
+}
+
 .card {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 404px;
-}
-
-.card_hover {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 403px;
-  margin: 0 55px;
-}
-
-.card_2 {
-  position: absolute;
   width: 200px;
   height: 404px;
   background: #fff;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.card_1 {
-  position: absolute;
-  width: 200px;
-  height: 404px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
-  box-sizing: border-box;
   border-radius: 5px;
   
 }
 
-.logo {
-  position: absolute;
+.product_logo {
   width: 160px;
   height: 134px;
-  left: calc(50% - 160px / 2);
-  top: 32px;
+  margin: 32px 20px;
   background-image: url(./images/imac.jpeg);
   background-size: cover;
 }
 
 .product_name {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  position: absolute;
   width: 168px;
   height: 36px;
-  left: calc(50% - 168px / 2);
+  margin: 40px 16px;
   bottom: 162px;
   color: #060b35;
 }
 
-.code_of_product {
-  position: absolute;
-  width: 92px;
+.product_code {
   height: 14px;
-  left: calc(50% - 92px / 2 - 38px);
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  margin-top: 2px;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
@@ -83,26 +56,21 @@ html {
 
 .review {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   margin: 16px 0;
-  position: absolute;
-  width: 160px;
+  width: 168px;
   height: 16px;
-  top: 45px;
-  left: calc(50% - 168px / 2);
   bottom: 114px;
 }
 
 .stars {
-  position: static;
   display: flex;
-  flex: none;
-  order: 0;
   width: 96px;
   height: 16px;
   flex-grow: 0;
+  margin-right: 19px;
+  
 }
 
 .stars__star {
@@ -119,39 +87,27 @@ html {
 }
 
 .reviews {
-  position: static;
-  width: 53px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 14px;
   display: flex;
   align-items: flex-end;
+  width: 53px;
+  font-size: 10px;
+  line-height: 14px;
   color: #060b35;
-  flex: none;
-  order: 1;
   flex-grow: 0;
 }
 
 .price_box {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  position: absolute;
   width: 168px;
   height: 18px;
-  top: 100px;
+  margin-top: 24px;
 }
 
 .price {
-  position: static;
   width: 32px;
   height: 18px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 18px;
   display: flex;
@@ -160,9 +116,6 @@ html {
 }
 
 .price_numbers {
-  position: static;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
@@ -172,36 +125,14 @@ html {
   color: #060b35;
 }
 
-.button {
-  position: absolute;
-  width: 168px;
-  height: 40px;
-  top: 140px;
-  left: calc(50% - 168px / 2);
-  bottom: 16px;
-  background: #00acdc;
-  border-radius: 5px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-
 .button_hover {
-  position: absolute;
+  margin-top: 16px;
   width: 168px;
   height: 40px;
-  top: 140px;
-  left: calc(50% - 168px / 2);
   bottom: 16px;
   background: #00acdc;
   border-radius: 5px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
+  border: none;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -213,13 +144,6 @@ html {
 .button_hover:hover {
   background: #fff;
   border: 1px solid #00acdc;
-  box-sizing: border-box;
-  border-radius: 5px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
   text-transform: uppercase;
   color: #00acdc;
 }
