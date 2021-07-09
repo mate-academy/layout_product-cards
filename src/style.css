@@ -1,0 +1,118 @@
+@import "reset.css";
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card-product {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+.card-product__img {
+  object-fit: cover;
+  padding-bottom: 40px;
+}
+
+.card-product-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card-product-name__text {
+  padding-bottom: 4px;
+}
+
+.card-product-code {
+  font-size: 12px;
+  color: #616070;
+  padding-bottom: 16px;
+}
+
+.card-product-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 > .stars__star:nth-child(-n + 1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4),
+.stars--5 > .stars__star:nth-child(-n + 5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card-product-feedback {
+  display: flex;
+  align-items: center;
+}
+
+.card-product-feedback__text {
+  font-size: 12px;
+  color: #060b35;
+}
+
+.card-product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.card-product-price__text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card-product-price__value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card-product-buy-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 56px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card-product-buy-link:hover {
+  cursor: pointer;
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+}
