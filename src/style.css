@@ -1,0 +1,159 @@
+:root {
+  --main-width: 170px;
+  --text-color: #000;
+  --main-font-family: "Roboto", sans-serif;
+  --main-font-size: 10px;
+  --main-button-color: #00acdc;
+  --auxiliary-button-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-color: #e5e5e5;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 404px;
+  margin: 25px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.card__photo {
+  display: block;
+  width: calc(var(--main-width, 170px) - 6.25%); /*160px*/
+  margin: 32px 0 45px;
+  line-height: 0;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__description {
+  display: block;
+  width: var(--main-width, 170px); /*170px*/
+  color: var(--text-color, #000);
+  font-size: calc(var(--main-font-size, 10px) * 1.2); /*12px*/
+  line-height: 15px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 500;
+}
+
+.card__code-box {
+  display: flex;
+  width: var(--main-width, 170px); /*170px*/
+  margin: 6px 0 0;
+}
+
+.card__code,
+.card__comment,
+.card__price {
+  display: block;
+  color: var(--text-color, #000);
+  font-size: var(--main-font-size, 10px); /*10px*/
+  line-height: 13px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 400;
+}
+
+.card__price {
+  font-size: calc(var(--main-font-size, 10px) * 1.2); /*12px*/
+}
+
+.card__reviews {
+  display: flex;
+  margin: 15px 0 0;
+  width: 170px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__star-1,
+.card__star-2,
+.card__star-3,
+.card__star-4,
+.card__star-5 {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 4px 0 0;
+  background: url(./images/star-active.svg) 50% 50% no-repeat;
+}
+
+.card__stars_silver .card__star-5 {
+  background: url(./images/star.svg) 50% 50% no-repeat;
+}
+
+.card__cost {
+  display: flex;
+  margin: 20px 0;
+  width: var(--main-width, 170px);
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__sum {
+  display: block;
+  color: var(--text-color, #000);
+  font-size: calc(var(--main-font-size, 10px) * 1.6); /*16px*/
+  line-height: 19px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 700;
+}
+
+.card__button {
+  display: flex;
+  width: var(--main-width, 170px); /*170px*/
+  height: 40px;
+  background: var(--main-button-color, #00acdc);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--auxiliary-button-color, #fff);
+  font-size: calc(var(--main-font-size, 10px) * 1.4); /*14px*/
+  line-height: 16px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 700;
+}
+
+.card__button:hover {
+  background: var(--auxiliary-button-color, #fff);
+  border: 1px solid var(--main-button-color, #00acdc);
+  box-sizing: border-box;
+  color: var(--main-button-color, #00acdc);
+}
+
+.card__button_white {
+  background: var(--auxiliary-button-color, #fff);
+  border: 1px solid var(--main-button-color, #00acdc);
+  box-sizing: border-box;
+  color: var(--main-button-color, #00acdc);
+}
+
+.card__button_white:hover {
+  background: var(--main-button-color, #00acdc);
+  color: var(--auxiliary-button-color, #fff);
+}
