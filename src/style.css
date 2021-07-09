@@ -10,11 +10,20 @@ html {
 body {
   margin: 0;
 }
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 /* #endregion */
 
 /* #region product card */
 .card {
   display: flex;
+  padding: 0 16px;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
@@ -26,7 +35,7 @@ body {
 
 /* #region product image */
 .card__image-position {
-  padding: 32px 20px 41px;
+  padding: 32px 4px 40px;
 }
 
 .card__image {
@@ -43,16 +52,15 @@ body {
 .item {
   display: flex;
   flex-direction: column;
-  margin: 0 16px;
-  
 }
 
 .item__name {
-  padding-bottom: 4px;
+  padding: 1px 0 6px;
   font-weight: 500;
   font-size: 12px;
   color: #000;
-  line-height: 16px;
+  line-height: 17px;
+  vertical-align: middle;
 }
 
 .item__code {
@@ -64,10 +72,11 @@ body {
 
 /* #region reviews */
 .review {
-  margin: 18px 16px 0;
+  margin-top: 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .review__stars {
@@ -78,7 +87,6 @@ body {
   font-size: 10px;
   font-weight: 400;
   text-align: right;
-  align-self: flex-end;
   color: #000;
 }
 /* #endregion */
@@ -96,30 +104,30 @@ body {
 .stars__star {
   width: 16px;
   height: 16px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0.5px;
 }
 
-.stars__star:last-child {
-  background-image: url(images/star.svg);
+.stars__star--active {
+  background-image: url(images/star-active.svg);
 }
 /* #endregion */
 
 /* #region price */
 .price {
-  margin: 24px 16px 0;
+  margin-top: 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .price__text {
   font-size: 12px;
   font-weight: 400;
   color: #000;
-  align-self: flex-end;
 }
 
 .price__money {
@@ -132,7 +140,7 @@ body {
 /* #region buy button */
 .buy-button {
   display: flex;
-  margin: 16px;
+  margin: 17px 0;
   height: 40px;
   font-size: 14px;
   font-weight: 700;
@@ -146,8 +154,8 @@ body {
 }
 
 .buy-button:hover {
-  border: 1px solid #00acdc;
   box-sizing: border-box;
+  border: 1px solid #00acdc;
   background-color: #fff;
   color: #00acdc;
 }
