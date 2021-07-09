@@ -35,22 +35,26 @@ body {
   height: 134px;
 }
 
-.card__title {
+.title {
   font-size: 12px;
-  font-weight: 500;
   line-height: 18px;
-  margin-top: 40px;
-
+  font-weight: 500;
   color: var(--main-color);
 }
 
-.card__id {
+.id {
   font-size: 10px;
-  font-weight: 400;
-  margin-top: 4px;
   line-height: 14px;
-
+  font-weight: 400;
   color: var(--secondary-color);
+}
+
+.card__title {
+  margin-top: 40px;
+}
+
+.card__id {
+  margin-top: 4px;
 }
 
 .card__reviews {
@@ -63,30 +67,30 @@ body {
   margin-top: 16px;
 }
 
-.card__stars--stars-4 {
+.stars {
   display: flex;
   align-self: flex-end;
   height: 15px;
-  margin: 0;
 }
 
-.star {
+.stars__star {
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   display: flex;
   width: 16px;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin: 0 2px;
 }
 
-.card__stars--stars-4 > .star:nth-child(-n + 4) {
+.stars--5 > .stars__star,
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--1 > .stars__star:first-child {
   background-image: url(./images/star-active.svg);
 }
 
 .card__reviews-count {
-  display: flex;
   font-size: 10px;
-  align-self: flex-start;
   color: var(--main-color);
 }
 
@@ -95,41 +99,41 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+
   margin-top: 24px;
 }
 
 .card__price-text {
-  align-self: center;
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
+  font-weight: 400;
   color: var(--secondary-color);
 }
 
 .card__price-digits {
-  align-self: center;
   font-size: 16px;
   font-weight: 700;
   color: var(--main-color);
 }
 
 .card__button {
-  margin-top: 16px;
   padding: 11px 55px;
-  border-radius: 5px;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-
   text-transform: uppercase;
   text-decoration: none;
-
-  border: 1px solid var(--blue-accent);
-  background-color: var(--blue-accent);
   color: #fff;
+
+  background-color: var(--blue-accent);
+  border: 1px solid var(--blue-accent);
+  border-radius: 5px;
+
+  margin-top: 16px;
 }
 
 .card__button:hover {
-  background-color: #fff;
   color: var(--blue-accent);
+  background-color: #fff;
 }
