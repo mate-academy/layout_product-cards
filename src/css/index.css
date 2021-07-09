@@ -1,5 +1,6 @@
 @import url(../css/reset.css);
 @import url(../css/variables.css);
+@import url(../css/stars.css);
 
 html {
   font-family: Roboto, sans-serif;
@@ -46,11 +47,6 @@ html {
   margin-bottom: 24px;
 }
 
-.card__stars {
-  display: flex;
-  gap: 4px;
-}
-
 .card__reviews {
   font-size: var(--font-size-small);
   font-weight: 400;
@@ -72,6 +68,7 @@ html {
 }
 
 .card__button {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,11 +76,14 @@ html {
   width: 100%;
   background-color: var(--color-btn);
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .card__button:hover {
   background-color: var(--color-main);
   border: 1px solid var(--color-btn);
+  transition: background-color 0.3s;
 }
 
 .card__link {
@@ -93,8 +93,10 @@ html {
   font-size: var(--font-size-normal);
   line-height: 16px;
   color: var(--color-main);
+  transition: color 0.3s;
 }
 
 .card__button:hover > .card__link {
   color: var(--color-btn);
+  transition: color 0.3s;
 }
