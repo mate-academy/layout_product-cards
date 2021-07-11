@@ -1,0 +1,129 @@
+.page {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #060b35;
+
+  --secondary-color: #616070;
+
+  --secondary-font-size: 10px;
+
+  --width-of-card: 200px;
+  --left-and-right-pad: 16px;
+}
+
+.page-content {
+  margin: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  width: var(--width-of-card);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  margin: 32px 20px 40px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: var(--left-and-right-pad);
+  padding-right: var(--left-and-right-pad);
+  margin-bottom: 16px;
+}
+
+.product-info__name {
+  line-height: 18px;
+}
+
+.product-info__code {
+  margin: 0;
+  margin-top: 2px;
+  color: var(--secondary-color);
+  font-size: var(--secondary-font-size);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: var(--left-and-right-pad);
+  padding-right: var(--left-and-right-pad);
+}
+
+.rating__stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating__stars--star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
+.rating__stars > :nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.rating__opinion {
+  margin: 0;
+  align-self: top;
+  font-size: var(--secondary-font-size);
+  color: var(--secondary-color);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--left-and-right-pad);
+  padding-right: var(--left-and-right-pad);
+  margin-top: 24px;
+}
+
+.price__text {
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.price__amount {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.buy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  
+  width: 168px;
+  height: 40px;
+  margin: 16px;
+}
+
+.buy-button:hover {
+  background: #fff;
+  color: #00acdc;
+  border: 1px solid #f3f3f3;
+}
