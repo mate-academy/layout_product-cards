@@ -1,0 +1,134 @@
+html {
+  --main-accent: #060b35;
+  --blue-accent: #00acdc;
+  --secondary: #616070;
+
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--main-accent);
+}
+
+body {
+  margin: 0;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+.pr-card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.pr-card__img {
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.pr-card__title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.pr-card__code {
+  align-self: start;
+  font-size: 10px;
+  line-height: 14px;
+  float: left;
+  margin-bottom: 16px;
+
+  color: var(--secondary);
+}
+
+.pr-card__rating {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.pr-card__reviews {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--4 :nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+/* #endregion stars */
+
+/* #region price */
+.pr-card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.pr-card__price-name {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.pr-card__price-digit {
+  font-weight: bold;
+}
+/* #endregion price */
+
+/* #region button */
+.buy-button {
+  width: 168px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+
+  color: #fff;
+  background-color: var(--blue-accent);
+  border-radius: 5px;
+}
+
+.buy-button:hover {
+  color: var(--blue-accent);
+  background-color: #fff;
+  border: 1px solid var(--blue-accent);
+}
+
+/* #endregion button */
