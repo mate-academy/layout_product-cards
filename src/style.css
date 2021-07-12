@@ -10,33 +10,36 @@ body {
 h2,
 p {
   font-size: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .card {
   width: 200px;
-  height: 400px;
+  height: 404px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
   border-radius: 5px;
 }
 
 .card__img {
   height: 134px;
   width: 160px;
-  padding-top: 22px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .card__title {
   width: 168px;
   height: 36px;
-  padding-top: 40px;
-  padding-bottom: 2px;
+  margin-bottom: 4px;
+  box-sizing: content-box;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -46,7 +49,8 @@ p {
 .card__subtitle {
   width: 168px;
   height: 14px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
+  box-sizing: content-box;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
@@ -55,9 +59,10 @@ p {
 .card__rating {
   display: flex;
   justify-content: space-between;
+  box-sizing: content-box;
   width: 168px;
   height: 16px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .card__stars {
@@ -68,8 +73,8 @@ p {
 }
 
 .card__star {
-  height: 16px;
-  width: 16px;
+  height: 13px;
+  width: 13px;
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -80,8 +85,11 @@ p {
 }
 
 .card__review {
+  width: 53px;
+  height: 16px;
   font-size: 10px;
   line-height: 14px;
+  box-sizing: content-box;
   display: flex;
   align-items: flex-end;
   color: #060b35;
@@ -92,7 +100,7 @@ p {
   width: 168px;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .card__price-title {
