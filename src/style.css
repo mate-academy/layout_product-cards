@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import "./styles/reset.css";
+
+.page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.content {
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  object-fit: contain;
+  width: 100%;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.description__title {
+  margin-bottom: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.description__code {
+  margin-bottom: 15px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.description__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star :last-child {
+  margin-right: 0;
+}
+
+.stars :first-child,
+.stars :nth-child(-n+2),
+.stars :nth-child(-n+3),
+.stars :nth-child(-n+4) {
+  background-image: url(/images/star-active.svg);
+}
+
+.num-review {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.description__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.description__price-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+  
+}
+
+.description__price-amount {
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+  font-weight: 600;
+}
+
+.bottom-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
+  padding: 12px 0;
+  background-color: #00acdc;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.bottom-buy:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
+
+.bottom-buy__link {
+  padding: 12px 54px;
+  font-weight: 500;
+  
+  font-size: 14px;
+  line-height: 16px;
+
+  text-decoration: none;
+  color: inherit;
+}
