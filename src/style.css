@@ -4,17 +4,18 @@
   box-sizing: border-box;
 }
 
-.card-html {
+html {
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
-
-  --horizontal-padding: 16px;
-  --btn-first-color: #00acdc;
-  --btn-second-color: #fff;
+  --color-blue: #00acdc;
+  --color-grey: #616070;
 }
 
-.card-body {
+body,
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -22,29 +23,23 @@
   display: flex;
   flex-direction: column;
 
+  padding: 0 16px;
   width: 200px;
   height: 400px;
 
   background-color: #fff;
-
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.card__image-block {
-  margin: 32px 20px 40px;
+.card__img {
+  margin: 32px auto 40px;
   width: 160px;
   height: 134px;
 }
 
-.card__img {
-  width: 100%;
-  height: auto;
-}
-
-.card__name {
-  padding: 0 var(--horizontal-padding);
-  margin-bottom: 2px;
+.card__title {
+  margin-bottom: 4px;
 
   line-height: 18px;
   font-size: 12px;
@@ -52,17 +47,16 @@
 }
 
 .card__number {
-  padding: 0 var(--horizontal-padding);
   margin-bottom: 15px;
+  color: var(--color-grey);
 }
 
-/* #region stars */
+/* #region rating */
 
-.card__stars-and-review {
+.card__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--horizontal-padding);
   margin-bottom: 24px;
 }
 
@@ -100,8 +94,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--horizontal-padding);
   margin-bottom: 16px;
+}
+
+.card__price-name {
+  font-weight: 400;
+  color: var(--color-grey);
 }
 
 .card__price {
@@ -109,12 +107,7 @@
   font-weight: 700;
 }
 
-.card__btn-postition {
-  margin-bottom: 16px;
-  padding: 0 var(--horizontal-padding);
-}
-
-.card__btn-block {
+.card__btn-link {
   display: block;
   text-decoration: none;
   width: 168px;
@@ -124,15 +117,15 @@
   font-weight: 700;
   text-align: center;
   line-height: 40px;
-  color: var(--btn-second-color);
   text-transform: uppercase;
+  color: #fff;
 
-  background: var(--btn-first-color);
+  background: var(--color-blue);
+  border: 1px solid var(--color-blue);
   border-radius: 5px;
 }
 
-.card__btn-block:hover {
-  color: var(--btn-first-color);
-  background: var(--btn-second-color);
-  border: 1px solid var(--btn-first-color);
+.card__btn-link:hover {
+  color: var(--color-blue);
+  background: #fff;
 }
