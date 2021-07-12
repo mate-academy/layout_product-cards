@@ -10,7 +10,7 @@ html {
   color: #060b35;
 }
 
-.Page {
+.page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ html {
   background-color: #e5e5e5;
 }
 
-.Card {
+.card {
   box-sizing: border-box;
   min-height: 404px;
   padding: 32px 16px 16px;
@@ -30,7 +30,7 @@ html {
   border-radius: 5px;
 }
 
-.Card-imgContainer {
+.card__img-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +39,7 @@ html {
   margin-bottom: 2px;
 }
 
-.Card-img {
+.card__img {
   padding: 0 4px;
   object-fit: cover;
   object-position: center;
@@ -48,30 +48,30 @@ html {
   box-sizing: border-box;
 }
 
-.Card-imgDescription {
+.card__img-description {
   font-weight: 500;
 }
 
-.Card-code {
+.card__code {
   font-size: 10px;
   line-height: 14px;
   color: #616070;
   margin-bottom: 16px;
 }
 
-.Card-reviewContainer {
+.card__review-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.Card-reviewStars {
+.card__review-stars {
   display: flex;
   gap: 4px;
 }
 
-.Card-star {
+.card__star {
   width: 16px;
   height: 16px;
   background-image: url(images/star.svg);
@@ -82,35 +82,35 @@ html {
   transition: all 0.3s;
 }
 
-.Card-star--active {
+.card__star:not(:nth-child(n+5)) {
   background-image: url(images/star-active.svg);
 }
 
-.Card-star:hover {
+.card__star:hover {
   transform: scale(1.3);
 }
 
-.Card-reviewDescription {
+.card__review-description {
   font-size: 10px;
   line-height: 14px;
 }
 
-.Card-priceContainer {
+.card__price-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.Card-priceDescription {
+.card__price-description {
   color: #616070;
 }
 
-.Card-priceValue {
+.card__price-value {
   font-size: 16px;
   font-weight: 700;
 }
 
-.Card-link {
+.card__link {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -129,7 +129,7 @@ html {
   transition: all 0.3s;
 }
 
-.Card:hover .Card-link {
+.card:hover .card__link {
   color: #00acdc;
   background-color: #fff;
 }
