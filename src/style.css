@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  --color-blue: #00acdc;
+  --color-grey: #616070;
+}
+
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 16px;
+  width: 200px;
+  height: 400px;
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  margin: 32px auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  margin-bottom: 4px;
+
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card__number {
+  margin-bottom: 15px;
+  color: var(--color-grey);
+}
+
+/* #region rating */
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url("./images/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+/* #endregion */
+
+.card__price-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-name {
+  font-weight: 400;
+  color: var(--color-grey);
+}
+
+.card__price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__btn-link {
+  display: block;
+  text-decoration: none;
+  width: 168px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #fff;
+
+  background: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 5px;
+}
+
+.card__btn-link:hover {
+  color: var(--color-blue);
+  background: #fff;
+}
