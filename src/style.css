@@ -1,0 +1,113 @@
+:root {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --btn-color: #00acdc;
+  --border-color: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: var(--main-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.card__img {
+  align-self: center;
+  height: 134px;
+  width: 160px;
+}
+
+.card__name {
+  margin: 0;
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.card__code {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-color);
+}
+
+.card__review {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__rate {
+  display: flex;
+  width: 93px;
+  margin-left: 2px;
+  justify-content: space-between;
+}
+
+.stars__star {
+  content: url(images/star-active.svg);
+  margin-right: 7px;
+}
+
+.stars--4 > .stars__star:nth-child(n + 5) {
+  content: url(images/star.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  color: #616070;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__link {
+  align-self: center;
+  margin-top: 16px;
+}
+
+.card__button {
+  width: 166px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--btn-color);
+}
+
+.card__button:hover {
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color);
+  background-color: #fff;
+  cursor: pointer;
+}
