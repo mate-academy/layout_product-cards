@@ -18,13 +18,16 @@ p {
 }
 
 .card {
+  --card-border-color: #f3f3f3;
+  --card-txt-first-color: #060b35;
+  --card-txt-second-color: #616070;
   width: 200px;
   height: 404px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--card-border-color);
   border-radius: 5px;
 }
 
@@ -43,7 +46,7 @@ p {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--card-txt-first-color);
 }
 
 .card__subtitle {
@@ -53,7 +56,7 @@ p {
   box-sizing: content-box;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--card-txt-second-color);
 }
 
 .card__rating {
@@ -92,7 +95,7 @@ p {
   box-sizing: content-box;
   display: flex;
   align-items: flex-end;
-  color: #060b35;
+  color: var(--card-txt-first-color);
 }
 
 .card__price {
@@ -108,18 +111,19 @@ p {
   line-height: 18px;
   display: flex;
   align-items: flex-end;
-  color: #616070;
+  color: var(--card-txt-second-color);
 }
 
 .card__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
-
+  color: var(--card-txt-first-color);
 }
 
 .card__button {
+  --button-color-first: #00acdc;
+  --button-color-second: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,19 +132,19 @@ p {
   cursor: pointer;
   width: 168px;
   height: 40px;
-  background-color: #00acdc;
-  border: 1px solid #fff;
+  background-color: var(--button-color-first);
+  border: 1px solid var(--button-color-second);
   border-radius: 5px;
   box-sizing: border-box;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  color: #fff;
+  color: var(--button-color-second);
 
 }
 
 .card__button:hover {
-  color: #00acdc;
-  background-color: #fff;
-  border-color: #00acdc;
+  color: var(--button-color-first);
+  background-color: var(--button-color-second);
+  border-color: var(--button-color-first);
 }
