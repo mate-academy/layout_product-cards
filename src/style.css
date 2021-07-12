@@ -1,0 +1,141 @@
+.page {
+  font-family: "Roboto", sans-serif;
+  color: #060b35;
+  font-size: 12px;
+  font-weight: 500;
+
+  --secondary-color: #616070;
+  --button-color: #00acdc;
+
+  --secondary-font-size: 10px;
+  --secondary-font-weight: 400;
+
+  --width-of-card: 200px;
+
+  --width-of-img: 160px;
+  --height-of-img: 134px;
+
+  --width-of-buy-button: 167px;
+  --height-of-buy-button: 40px;
+}
+
+.page-content {
+  margin: 0;
+  padding: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  width: var(--width-of-card);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.product-card__image {
+  width: var(--width-of-img);
+  height: var(--height-of-img);
+  padding: 0 3px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 18px;
+}
+
+.product-info__name {
+  margin-top: 40px;
+}
+
+.product-info__code {
+  margin-top: 4px;
+  margin-bottom: 15px;
+
+  line-height: 14px;
+  color: var(--secondary-color);
+  font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating__stars {
+  display: flex;
+}
+
+.stars_star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars--active > :nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.rating__opinion {
+  margin: 0;
+
+  font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight);
+  line-height: 14px;
+}
+
+.price__section {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 24px 0 15px;
+}
+
+.price__text {
+  margin: 0;
+  
+  line-height: 20px;
+  font-weight: var(--secondary-font-weight);
+  color: var(--secondary-color);
+}
+
+.price__amount {
+  margin: 0;
+
+  line-height: 18px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  border-radius: 5px;
+  border: 1px solid var(--button-color);
+  background-color: var(--button-color);
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  
+  width: var(--width-of-buy-button);
+  height: var(--height-of-buy-button);
+}
+
+.button:hover {
+  background: #fff;
+  color: var(--button-color);
+}
