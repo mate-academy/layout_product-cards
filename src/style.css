@@ -1,4 +1,8 @@
-body {
+.product-card {
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card__content {
   margin: 0;
 }
 
@@ -11,41 +15,42 @@ body {
   border-radius: 5px;
 }
 
-.producte-photo {
+.card__photo {
   display: flex;
   justify-content: center;
 }
-/*--------------------Producte info-------------------*/
-.producte-info {
-  margin-top: 40px;
+/*--------------------Title-------------------*/
+.title {
+  padding-top: 40px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
   color: #060b35;
 }
-/*------------------Code------------------------------*/
-.producte-code {
+
+.title__code {
   height: 14px;
-  margin: 4px 0 15px;
+  margin-top: 4px;
   font-size: 10px;
   line-height: 14px;
-  font-weight: 400px;
+  font-weight: 400;
   color: #616070;
   display: flex;
 }
 /*------------------review------------------------------*/
-.stars-review {
+.review {
   display: flex;
   justify-content: space-between;
   align-items: center;
   
 }
 
-.stars {
+.review__stars {
   display: flex;
+  padding-top: 15px;
 }
 
-.star-item {
+.review__item {
   height: 16px;
   width: 16px;
   background-image: url(images/star-active.svg);
@@ -54,7 +59,7 @@ body {
   margin-right: 4px;
 }
 
-.star-item-last {
+.review__item--last_color {
   height: 16px;
   width: 16px;
   background-image: url(images/star.svg);
@@ -62,10 +67,11 @@ body {
   background-repeat: no-repeat;
 }
 
-.review {
+.review__total {
+  padding-top: 15px;
   font-size: 10px;
   line-height: 14px;
-  font-weight: 400px;
+  font-weight: 400;
   color: #060b35;
 }
 /*---------------------------Producte price-------------------------*/
@@ -74,33 +80,39 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
-  margin-bottom: 16px;
-    
 }
 
-.price-left {
+.producte-price__left,
+.producte-price__right {
+  margin-top: 47px;
+}
+
+.producte-price__left {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: #616070;
 }
 
-.price-right {
+.producte-price__right {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: #060b35;
 }
 /*-------------------------------button--------------------------------*/
-.buy {
+.button {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.button-buy {
+.button__form {
+  margin-top: 41px;
+}
+
+.button__buy {
   padding: 0;
   height: 40px;
   width: 166px;
@@ -115,7 +127,7 @@ body {
   border: 1px solid #00acdc;
 }
 
-.button-buy:hover {
+.button__buy:hover {
   background-color: #fff;
   color: #00acdc;
 }
