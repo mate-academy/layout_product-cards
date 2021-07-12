@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  --main-color: #060b35;
+  --second-color: #616070;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 200px;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  max-width: 160px;
+  height: 134px;
+  margin: 16px auto;
+}
+
+.card__info {
+  margin-top: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card__code {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--second-color);
+}
+
+.card__reviews {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  color: var(--main-color);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  background: url(images/star.svg) no-repeat;
+}
+
+.stars--1 > :first-child,
+.stars--2 > :nth-child(-n+2),
+.stars--3 > :nth-child(-n+3),
+.stars--4 > :nth-child(-n+4),
+.stars--5 > :nth-child(-n+5) {
+  background: url(images/star-active.svg) no-repeat;
+}
+
+.card__reviews-count {
+  font-size: 10px;
+  color: var(--main-color);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  line-height: 18px;
+}
+
+.card__text {
+  color: var(--second-color);
+  font-size: 12px;
+}
+
+.card__price-value {
+  font-weight: bold;
+  font-size: 16px;
+  color: #060b35;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 16px;
+  max-width: 200px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid #00acdc;
+  color: #fff;
+  text-decoration: none;
+  line-height: 16px;
+  background: #00acdc;
+  border-radius: 5px;
+}
+
+.card__button:hover {
+  background: #fff;
+  color: #00acdc;
+}
