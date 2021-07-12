@@ -21,24 +21,19 @@ body {
   height: 134px;
 }
 
-.card__info {
-  display: flex;
-  flex-direction: column;
-}
-
-.card__info-name {
+.card__name {
   margin-top: 36px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
 }
 
-.card__info-code {
-  margin-top: 2px;
-  font-family: Roboto, serif;
+.card__code {
   font-size: 10px;
+  margin: 0;
+  font-weight: normal;
   line-height: 14px;
   color: #616070;
 }
@@ -61,15 +56,12 @@ body {
   margin-right: 4px;
   width: 16px;
   height: 16px;
-  background-image: url(images/star.svg);
+  background-image: url(images/star-active.svg);
   background-repeat: no-repeat;
 }
 
-.stars .stars__star:first-child,
-.stars .stars__star:nth-child(2),
-.stars .stars__star:nth-child(3),
-.stars .stars__star:nth-child(4) {
-  background-image: url(images/star-active.svg);
+.stars .stars__star:last-child {
+  background-image: url(images/star.svg);
 }
 
 .card__rating-value {
@@ -86,7 +78,6 @@ body {
 
 .card__price-text {
   margin-top: 25px;
-  font-family: Roboto, serif;
   font-weight: 400;
   font-size: 12px;
   color: #616070;
@@ -94,7 +85,6 @@ body {
 
 .card__price-cost {
   margin-top: 22px;
-  font-family: Roboto, serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -116,6 +106,7 @@ body {
   font-weight: 700;
   margin: 1px auto;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card__button:hover {
