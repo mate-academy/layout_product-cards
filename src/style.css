@@ -8,42 +8,35 @@ body {
 }
 
 h2,
-h3,
 p {
   font-size: 0;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .card {
-  width: 198px;
-  height: 402px;
+  width: 200px;
+  height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 5px;
 }
 
 .card__img {
-  display: flex;
   height: 134px;
-  margin-top: 32px;
-  margin-bottom: 40px;
-  background-image: url(./images/imac.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  width: 160px;
+  padding-top: 22px;
 }
 
 .card__title {
-  padding-left: 16px;
+  width: 168px;
+  height: 36px;
+  padding-top: 40px;
+  padding-bottom: 2px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -51,26 +44,25 @@ p {
 }
 
 .card__subtitle {
-  padding-left: 16px;
+  width: 168px;
+  height: 14px;
+  padding-bottom: 16px;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
 }
 
-.card__block-1 {
-  margin-bottom: 16px;
-}
-
-.card__block-2 {
+.card__rating {
   display: flex;
-  margin-bottom: 24px;
   justify-content: space-between;
-  align-items: center;
+  width: 168px;
+  height: 16px;
+  padding-bottom: 24px;
 }
 
 .card__stars {
-  padding-left: 16px;
   display: flex;
+  justify-content: space-around;
   width: 96px;
   height: 16px;
 }
@@ -90,21 +82,20 @@ p {
 .card__review {
   font-size: 10px;
   line-height: 14px;
-  padding-right: 16px;
   display: flex;
   align-items: flex-end;
   color: #060b35;
 }
 
-.card__block-3 {
+.card__price {
   display: flex;
-  margin-bottom: 16px;
+  width: 168px;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 16px;
 }
 
 .card__price-title {
-  padding-left: 16px;
   font-size: 12px;
   line-height: 18px;
   display: flex;
@@ -116,7 +107,6 @@ p {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  padding-right: 16px;
   color: #060b35;
 
 }
@@ -125,14 +115,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 16px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   width: 168px;
   height: 40px;
   background-color: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -142,7 +133,5 @@ p {
 
 .card__button:hover {
   color: #00acdc;
-  border: 1px solid #00acdc;
-  box-sizing: border-box;
   background-color: #fff;
 }
