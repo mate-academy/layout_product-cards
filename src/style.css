@@ -1,5 +1,9 @@
 @import "reset.css";
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --accent-color-blue: #00acdc;
   --accent-color-dark: #060b35;
@@ -19,30 +23,27 @@ html {
   display: flex;
   flex-direction: column;
   width: 200px;
-  padding: 32px 20px 16px;
+  padding: 32px 16px 16px;
   border-radius: 4px;
   border: 1px solid #e5e5e5;
 }
 
 .product-card__img {
-  object-fit: cover;
-  margin-bottom: 40px;
+  align-self: center;
+  width: 160px;
+  margin-bottom: 42px;
 }
 
 .product-card__title {
-  margin-bottom: 5px;
-  font-weight: 700;
-  font-size: 14px;
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 12px;
   line-height: 18px;
   color: var(--accent-color-dark);
 }
 
-.product-card-name__text {
-  padding-bottom: 10px;
-}
-
 .product-card__code {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--accent-color-gray);
   margin-bottom: 16px;
 }
@@ -51,7 +52,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 24px;
+}
+
+.product-card__rating {
+  margin-bottom: 24px;
 }
 
 .stars {
@@ -62,9 +66,14 @@ html {
 .stars__star {
   width: 16px;
   height: 16px;
+  margin-right: 4px;
   background-image: url("images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
 }
 
 .stars--1 > .stars__star:nth-child(-n + 1),
@@ -76,7 +85,7 @@ html {
 }
 
 .product-card-rating__feedback {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--accent-color-dark);
 }
 
@@ -84,7 +93,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 16px;
+}
+
+.product-card__price {
+  margin-bottom: 16px;
 }
 
 .product-card-price__title {
@@ -100,11 +112,11 @@ html {
   color: var(--accent-color-dark);
 }
 
-.product-card__link {
+.buy-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 56px;
+  height: 40px;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -113,9 +125,10 @@ html {
   border-radius: 5px;
   border: 1px solid var(--accent-color-blue);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-.product-card__link:hover {
+.product-card__buy-link:hover {
   cursor: pointer;
   color: var(--accent-color-blue);
   background-color: var(--color-white);
