@@ -7,12 +7,13 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
 }
 
-.card {
+.imac-card {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   width: 200px;
   padding: 32px 16px 16px;
   color: #060b35;
@@ -21,13 +22,13 @@ body {
   border-radius: 5px;
 }
 
-.card__image {
+.imac-card__image {
   width: 160px;
   height: 134px;
   margin: 0 auto;
 }
 
-.card__name {
+.imac-card__name {
   margin-top: 40px;
   margin-bottom: 0;
   font-size: 12px;
@@ -36,29 +37,22 @@ body {
   color: #060b35;
 }
 
-.card__code {
+.imac-card__code {
   height: 14px;
   line-height: 14px;
-  margin: 4px 0;
+  margin: 4px 0 0;
+  padding-bottom: 8px;
   font-size: 10px;
   font-weight: 400;
   color: #616070;
   text-align: left;
 }
 
-.card__description {
-  margin: 4px auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-stars {
+.stars {
   display: flex;
 }
 
-.card-stars__star {
+.stars__star {
   height: 12px;
   width: 16px;
   margin-right: 3px;
@@ -66,15 +60,15 @@ body {
   background: url(./images/star.svg) no-repeat;
 }
 
-.card-stars--rating_1 > :nth-child(-n+1),
-.card-stars--rating_2 > :nth-child(-n+2),
-.card-stars--rating_3 > :nth-child(-n+3),
-.card-stars--rating_4 > :nth-child(-n+4),
-.card-stars--rating_5 > :nth-child(-n+5) {
+.stars--rating_1 > :nth-child(-n+1),
+.stars--rating_2 > :nth-child(-n+2),
+.stars--rating_3 > :nth-child(-n+3),
+.stars--rating_4 > :nth-child(-n+4),
+.stars--rating_5 > :nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
-.card__reviews {
+.imac-card__reviews {
   font-weight: 400;
   height: 10px;
   line-height: 10px;
@@ -82,7 +76,7 @@ body {
   color: #060b35;
 }
 
-.card__price-name {
+.imac-card__price-name {
   height: 20px;
   font-size: 12px;
   font-weight: 400;
@@ -90,7 +84,7 @@ body {
   color: #616070;
 }
 
-.card__value {
+.imac-card__value {
   height: 20px;
   font-weight: 700;
   font-size: 16px;
@@ -101,6 +95,7 @@ body {
 .card-action-buy-button {
   display: flex;
   justify-content: center;
+  flex-basis: 168px;
   box-sizing: border-box;
   height: 40px;
   font-size: 14px;
