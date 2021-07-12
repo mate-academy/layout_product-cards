@@ -4,12 +4,16 @@
 }
 
 .card__star {
-  height: 16px;
+  display: flex;
   width: 16px;
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
 }
 
-.card__stars > :nth-child(-n+4) {
+.stars--5 > .card__star,
+.stars--4 > .card__star:nth-child(-n+4),
+.stars--3 > .card__star:nth-child(-n+3),
+.stars--2 > .card__star:nth-child(-n+2),
+.stars--1 > .card__star:first-child {
   background-image: url(../images/star-active.svg);
 }
