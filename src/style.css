@@ -1,5 +1,5 @@
 .page {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   color: #060b35;
 
@@ -8,7 +8,6 @@
   --secondary-font-size: 10px;
 
   --width-of-card: 200px;
-  --left-and-right-pad: 16px;
 
   --width-of-img: 160px;
   --height-of-img: 134px;
@@ -19,6 +18,7 @@
 
 .page-content {
   margin: 0;
+  padding: 0;
 }
 
 .product-card {
@@ -30,68 +30,60 @@
   width: var(--width-of-card);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
-.product-card__image--apple {
+.product-card__image {
   width: var(--width-of-img);
   height: var(--height-of-img);
-  margin: 32px 20px 40px;
 }
 
 .product-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  padding-left: var(--left-and-right-pad);
-  padding-right: var(--left-and-right-pad);
-}
-
-.product-info__name {
   line-height: 18px;
 }
 
+.product-info__name {
+  margin-top: 40px;
+}
+
 .product-info__code {
-  margin: 0;
   margin-top: 2px;
   margin-bottom: 16px;
 
-  justify-content: center;
   color: var(--secondary-color);
   font-size: var(--secondary-font-size);
+  line-height: 18px;
 }
 
 .rating {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding-left: var(--left-and-right-pad);
-  padding-right: var(--left-and-right-pad);
 }
 
 .rating__stars {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
 }
 
-.rating__stars--star {
+.stars_star {
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 16px;
   width: 16px;
+  margin: 0 2px;
 }
 
-.rating__stars > :nth-child(-n+4) {
+.rating__stars_stars--active > :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
 
 .rating__opinion {
   margin: 0;
+
   font-size: var(--secondary-font-size);
+  align-self: flex-end;
 }
 
 .price__section {
@@ -99,28 +91,31 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 24px;
-  padding-left: var(--left-and-right-pad);
-  padding-right: var(--left-and-right-pad);
+  margin: 24px 0 16px;
 }
 
 .price__text {
-  color: var(--secondary-color);
   margin: 0;
+
+  color: var(--secondary-color);
 }
 
 .price__amount {
+  margin: 0;
+
   font-weight: 700;
   font-size: 16px;
 }
 
-.button__buy-link {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: #00acdc;
   border-radius: 5px;
+  border: 1px solid #00acdc;
+  
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -128,11 +123,9 @@
   
   width: var(--width-of-buy-button);
   height: var(--height-of-buy-button);
-  margin: 16px;
 }
 
-.button__buy-link:hover {
+.button:hover {
   background: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
