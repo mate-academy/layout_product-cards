@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import "./styles/normalize.css";
+@import "./styles/reset.css";
+
+/* #region imac-card-position */
+
+.imac-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+/* #endregion */
+
+/* #region imac-card-description */
+.imac-card__image {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.imac-card__name {
+  margin-top: 40px;
+  margin-bottom: 0;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+
+.imac-card__code {
+  height: 14px;
+  line-height: 14px;
+  margin: 4px 0 0;
+  padding-bottom: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  text-align: left;
+}
+
+.imac-card__reviews {
+  height: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.imac-card__price-name {
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+
+.imac-card__value {
+  height: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-text-color);
+}
+/* #endregion */
+
+/* #region stars-block */
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 12px;
+  width: 16px;
+  margin-right: 3px;
+  margin-left: 1px;
+  background: url(./images/star.svg) no-repeat;
+}
+
+.stars--rating_1 > :nth-child(-n+1),
+.stars--rating_2 > :nth-child(-n+2),
+.stars--rating_3 > :nth-child(-n+3),
+.stars--rating_4 > :nth-child(-n+4),
+.stars--rating_5 > :nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+/* #endregion */
+
+/* #region button-block */
+
+.card-action-buy-button {
+  display: flex;
+  justify-content: center;
+  flex-basis: 168px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hover-color-2);
+  text-decoration: none;
+  text-align: center;
+  background: var(--hover-color-1);
+  border-radius: 5px;
+}
+
+.card-action-buy-button:hover {
+  color: var(--hover-color-1);
+  background: var(--hover-color-2);
+  border: 1px solid var(--hover-color-1);
+}
+
+/* #endregion */
