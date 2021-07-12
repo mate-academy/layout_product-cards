@@ -16,23 +16,19 @@ html {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 200px;
-  max-height: 404px;
+  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
 .card__image {
+  align-self: center;
   max-width: 160px;
-  margin: 32px auto 40px;
+  margin-bottom: 40px;
 }
 
-.text {
-  padding: 0 16px 16px;
-}
-
-.text__name {
+.card__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -40,30 +36,30 @@ html {
   margin-bottom: 2px;
 }
 
-.text__code {
+.card__code {
+  margin-bottom: 16px;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
 }
 
-.review,
-.cost {
+.rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #060b35;
 }
 
-.review {
-  padding: 16px 0 24px;
+.card__rating {
+  margin-bottom: 24px;
 }
 
-.review__stars {
+.rating__stars {
   display: flex;
   height: 16px;
 }
 
-.review__star {
+.rating__star {
   height: 16px;
   width: 16px;
   margin: 0 4px 0 0;
@@ -72,36 +68,43 @@ html {
   background-position: center;
 }
 
-.review__star--active {
+.rating__star--active {
   background-image: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.review__num {
+.rating__review {
   font-size: 10px;
   line-height: 14px;
 }
 
 .cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   line-height: 18px;
 }
 
-.cost__text {
+.card__cost {
+  margin-bottom: 16px;
+}
+
+.cost__title {
   font-size: 12px;
   color: #616070;
 }
 
-.cost__num {
+.cost__value {
   font-weight: 700;
   font-size: 16px;
+  color: #060b35;
 }
 
 .text__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
   width: 168px;
   height: 40px;
   font-weight: 700;
