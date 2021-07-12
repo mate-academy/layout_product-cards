@@ -1,0 +1,130 @@
+.page {
+  font-family: "Roboto", sans-serif;
+
+  --star-width: 16px;
+  --star-height: 16px;
+  --color-dark: #060b35;
+  --color-light: #616070;
+}
+
+.page__content {
+  margin: 0;
+}
+
+.product-card {
+  box-sizing: border-box;
+
+  width: 200px;
+  padding: 16px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 134px;
+  padding: 16px 0 26px;
+  object-fit: contain;
+}
+
+.product-card__title {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 4px;
+}
+
+.product-card__code {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--color-light);
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.product-card__stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__star {
+  width: var(--star-width);
+  height: var(--star-height);
+  margin-right: 4px;
+
+  background-image: url(images/star.svg);
+  background-size: var(--star-width) var(--star-height);
+  background-repeat: no-repeat;
+}
+
+.product-card__star--active {
+  background-image: url(images/star-active.svg);
+}
+
+.product-card__reviews {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color-dark);
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 16px;
+}
+
+.product-card__price-label {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--color-light);
+}
+
+.product-card__price-number {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.product-card__buy {
+  display: block;
+  padding: 12px 0 11px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
+
+.product-card__buy:hover {
+  color: #00acdc;
+  background-color: #fff;
+}
