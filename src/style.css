@@ -1,7 +1,10 @@
 :root {
   --text-color: #000;
   --main-font-family: "Roboto", sans-serif;
-  --main-font-size: 10px;
+  --main-font-size-base: 10px;
+  --main-font-size-title: 12px;
+  --main-font-size-button: 14px;
+  --main-font-size-sum: 16px;
   --main-button-color: #00acdc;
   --auxiliary-button-color: #fff;
 }
@@ -11,14 +14,8 @@ body {
   padding: 0;
 }
 
-.container {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-color: #e5e5e5;
-  align-items: center;
-  justify-content: center;
+* {
+  box-sizing: border-box;
 }
 
 .card {
@@ -26,7 +23,7 @@ body {
   width: 200px;
   height: 404px;
   margin: 25px;
-  padding: 16px;
+  padding: 32px 16px 16px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -37,14 +34,14 @@ body {
 .card__photo {
   display: block;
   width: 160px;
-  margin: 16px 4px 38px;
+  margin: 0 4px 40px;
 }
 
 .style-text {
   display: block;
-  margin: 2px 0 0;
+  margin: 0;
   color: var(--text-color, #000);
-  font-size: var(--main-font-size, 10px); /*10px*/
+  font-size: var(--main-font-size-base);
   line-height: 14px;
   font-family: var(--main-font-family, sans-serif);
   font-weight: 400;
@@ -52,18 +49,20 @@ body {
 
 .card__description {
   width: 100%;
-  font-size: calc(var(--main-font-size, 10px) * 1.2); /*12px*/
+  font-size: var(--main-font-size-title);
   line-height: 18px;
   font-weight: 500;
+  margin: 0 0 2px;
 }
 
 .card__code {
   width: 100%;
+  margin: 0 0 16px;
 }
 
 .card__reviews {
   display: flex;
-  margin: 16px 0 0;
+  margin: 0 0 24px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -101,21 +100,25 @@ body {
   background: url(./images/star-active.svg) 50% 50% no-repeat;
 }
 
+.card__comment {
+  margin: 0;
+}
+
 .card__cost {
   display: flex;
-  margin: 24px 0 0;
+  margin: 0 0 16px;
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
 }
 
 .card__price {
-  font-size: calc(var(--main-font-size, 10px) * 1.2); /*12px*/
+  font-size: var(--main-font-size-title);
   line-height: 18px;
 }
 
 .card__sum {
-  font-size: calc(var(--main-font-size, 10px) * 1.6); /*16px*/
+  font-size: var(--main-font-size-sum);
   line-height: 18px;
   font-family: var(--main-font-family, sans-serif);
   font-weight: 700;
@@ -123,16 +126,17 @@ body {
 
 .card__button {
   display: flex;
-  margin: 16px 0 0;
   width: 100%;
   height: 40px;
   background-color: var(--main-button-color, #00acdc);
+  border: 1px solid var(--main-button-color, #00acdc);
   border-radius: 5px;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--auxiliary-button-color, #fff);
-  font-size: calc(var(--main-font-size, 10px) * 1.4); /*14px*/
+  font-size: var(--main-font-size-button);
   line-height: 16px;
   font-family: var(--main-font-family, sans-serif);
   font-weight: 700;
@@ -140,7 +144,5 @@ body {
 
 .card__button:hover {
   background-color: var(--auxiliary-button-color, #fff);
-  border: 1px solid var(--main-button-color, #00acdc);
-  box-sizing: border-box;
   color: var(--main-button-color, #00acdc);
 }
