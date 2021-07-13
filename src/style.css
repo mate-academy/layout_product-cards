@@ -9,57 +9,76 @@ body {
   flex-direction: column;
   width: 200px;
   background: #fff;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
-  font-style: normal;
+  box-sizing: border-box;
+  padding: 32px 16px 15px;
 }
 
 .product_img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
-  left: 20px;
-  top: 32px;
+  margin: 0 auto;
+  width: 160px;
+  height: 134px;
 }
 
 .product_name {
-  display: block;
   font-size: 12px;
   font-weight: 500;
-  margin: 40px 16px 0;
+  width: 100%;
+  margin-top: 40px;
   line-height: 18px;
   letter-spacing: 0;
   text-align: left;
   color: #060b35;
-  bottom: 162px;
-  left: 20px;
-  top: 32px;
 }
 
 .product_index {
   font-size: 10px;
-  margin: 5px auto 0 16px;
+  margin-top: 4px;
   font-weight: 400;
   color: #616070;
   font-style: normal;
   line-height: 14px;
   letter-spacing: 0;
-  bottom: 146px;
 }
 
-.stars_conteiner {
+.container {
+  margin-top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
   display: flex;
   flex-direction: row;
-  margin: 18px 16px;
-  width: 200px;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  padding-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./images/star-active.svg);
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars__star:not(:nth-child(-n+4)) {
+  background-image: url(./images/star.svg);
 }
 
 .review {
   font-size: 10px;
-  float: right;
-  margin: 0 0 8px 35px;
   font-weight: 400;
-  border-radius: 0.5px;
+  margin-top: 20px;
 }
 
 .product_price {
@@ -67,73 +86,42 @@ body {
   align-items: flex-end;
   font-size: 12px;
   color: #616070;
-  position: static;
-  width: 32px;
-  font-style: normal;
   line-height: 18px;
   flex: none;
   order: 0;
-  flex-grow: 0;
-  margin: 0 16px 0 17px;
   font-weight: 400;
-  letter-spacing: 0;
-  text-align: left;
+  margin-top: 8px;
 }
 
-.product_price p {
+.sum {
   display: flex;
   align-items: flex-end;
-  text-align: right;
-  float: right;
   font-size: 16px;
   font-weight: 700;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: 0;
-  position: static;
   left: 52.98%;
-  right: 0;
-  top: 0;
-  bottom: 0;
   color: #060b35;
   flex: none;
   order: 1;
-  flex-grow: 0;
-  margin: 0 56px;
-}
-
-.stars_img {
-  height: 16px;
-  width: 16px;
-  left: 0;
-  top: 0;
-  border-radius: 0.5px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(./images/star-active.svg);
-}
-
-.stars_img:nth-child(5) {
-  background-image: url(./images/star.svg);
+  margin: 0 0 0 56px;
 }
 
 .button {
   background: #00acdc;
   border-radius: 5px;
+  /* padding-left: 3px; */
   border: 1px solid #00acdc;
-  width: 168px;
-  height: 40px;
+  width: auto;
+  height: 38px;
   display: block;
   text-align: center;
-  margin: 16px auto;
+  margin-top: 17px;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 40px;
-  bottom: 16px;
+  line-height: 38px;
 }
 
 .button:hover {
