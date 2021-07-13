@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -6,7 +10,7 @@ body {
   margin: 0;
   --main-color: #000;
   --secondary-color: #777;
-  --moyo-color: #00acdc;
+  --blue-color: #00acdc;
 }
 
 h2,
@@ -16,10 +20,6 @@ p {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
   padding: 32px 16px 16px;
   width: 200px;
   border: 1px solid #f3f3f3;
@@ -27,8 +27,11 @@ p {
 }
 
 .card__img {
+  display: block;
   width: 160px;
   height: 134px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 40px;
 }
 
@@ -123,8 +126,8 @@ p {
   align-items: center;
   text-decoration: none;
   width: 100%;
-  background-color: var(--moyo-color);
-  border: 1px solid var(--moyo-color);
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
   border-radius: 5px;
   color: #fff;
   font-weight: 700;
@@ -133,6 +136,6 @@ p {
 }
 
 .card__button:hover {
-  color: var(--moyo-color);
+  color: var(--blue-color);
   background-color: #fff;
 }
