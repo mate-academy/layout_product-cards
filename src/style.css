@@ -51,7 +51,7 @@ body {
 .text-reviews {
   font-size: 10px;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 14px;
   color: rgba(97, 96, 112, 1);
 }
 
@@ -73,16 +73,17 @@ body {
 }
 
 .stars__star {
-  width: 16px;
+  margin: 2px;
   height: 16px;
-  background-image: url(images/star.svg);
-  background-size: 16px 16px;
-  margin-right: 4px;
+  width: 16px;
+  background: url("images/star.svg");
+  background-repeat: no-repeat;
 }
 
-.stars :not(:nth-child(n+5)) {
-  background: url("images/star-active.svg") no-repeat;
-  background-size: 16px 16px;
+.stars--4 :nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+
 }
 
 .price-text {
@@ -93,7 +94,7 @@ body {
   color: rgba(97, 96, 112, 1);
 }
 
-.price-amount {
+.amount {
   height: 18px;
   font-size: 16px;
   font-weight: 700;
@@ -103,16 +104,13 @@ body {
 
 .button {
   display: flex;
-  height: 40px;
   justify-content: center;
   align-items: center;
+  height: 40px;
   border: 1px solid;
   background-color: rgba(0, 172, 220, 1);
   border-color: rgba(0, 172, 220, 1);
   border-radius: 5px;
-}
-
-.button__text {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -121,8 +119,5 @@ body {
 
 .button:hover {
   background-color: rgba(255, 255, 255, 1);
-}
-
-.button__text:hover {
   color: rgba(0, 172, 220, 1);
 }
