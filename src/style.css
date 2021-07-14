@@ -1,0 +1,125 @@
+:root {
+  --text-color: #000;
+  --main-font-family: "Roboto", sans-serif;
+  --main-font-size-base: 10px;
+  --main-font-size-title: 12px;
+  --main-font-size-button: 14px;
+  --main-font-size-sum: 16px;
+  --main-button-color: #00acdc;
+  --auxiliary-button-color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: block;
+  width: 200px;
+  height: 404px;
+  padding: 32px 16px 16px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.card__photo {
+  display: block;
+  width: 160px;
+  margin: 0 4px 40px;
+}
+
+.style-text {
+  display: block;
+  margin: 0;
+  color: var(--text-color, #000);
+  font-size: var(--main-font-size-base);
+  line-height: 14px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 400;
+}
+
+.card__description {
+  font-size: var(--main-font-size-title);
+  line-height: 18px;
+  font-weight: 500;
+  margin: 0 0 2px;
+}
+
+.card__code {
+  margin: 0 0 16px;
+}
+
+.card__reviews {
+  display: flex;
+  margin: 0 0 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__star {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 4px 0 0;
+  background: url(./images/star.svg) 50% 50% no-repeat;
+}
+
+.card__stars-1 :nth-child(-n+1),
+.card__stars-2 :nth-child(-n+2),
+.card__stars-3 :nth-child(-n+3),
+.card__stars-4 :nth-child(-n+4),
+.card__stars-5 :nth-child(-n+5) {
+  background: url(./images/star-active.svg) 50% 50% no-repeat;
+}
+
+.card__cost {
+  display: flex;
+  margin: 0 0 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__price {
+  font-size: var(--main-font-size-title);
+  line-height: 18px;
+}
+
+.card__sum {
+  font-size: var(--main-font-size-sum);
+  line-height: 18px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 700;
+}
+
+.card__button {
+  display: flex;
+  height: 40px;
+  background-color: var(--main-button-color, #00acdc);
+  border: 1px solid var(--main-button-color, #00acdc);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--auxiliary-button-color, #fff);
+  font-size: var(--main-font-size-button);
+  line-height: 16px;
+  font-family: var(--main-font-family, sans-serif);
+  font-weight: 700;
+}
+
+.card__button:hover {
+  background-color: var(--auxiliary-button-color, #fff);
+  color: var(--main-button-color, #00acdc);
+}
