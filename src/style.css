@@ -1,7 +1,16 @@
 html {
   font-family: Roboto, sans-serif;
-  --white: #f3f3f3;
+
+  --white: #fff;
   --dark: #060B35;
+  --grey: #616070;
+  --blue: #00acdc;
+}
+
+h2,
+p {
+   margin: 0;
+   padding: 0;
 }
 
 body {
@@ -14,17 +23,17 @@ body {
 
 .card {
   width: 200px;
-  padding: 16px; 
+  padding: 32px 16px 16px 16px; 
 
-  border: 1px solid var(--white);
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
 
 }
 
 .card__image {
-  display: flex;
-  width: 100%;
-  padding-bottom: 40px;
+  display: block;
+  width: 160px;
+  margin: 0 auto 40px;
 }
 
 .description__title {
@@ -38,20 +47,18 @@ body {
 }
 
 .description__code {
-  margin-top: 0;
   margin-bottom: 16px;
 
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
-  color: #616070;
+  color: var(--grey);
 }
 
 .description__rating {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0;
   margin-bottom: 24px;
   height: 16px;
 }
@@ -61,8 +68,6 @@ body {
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-
-  margin-right: 4px;
 }
 
 .description__stars {
@@ -71,20 +76,21 @@ body {
 
 .description__stars :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
+  margin-right: 4px;
 }
 
 .description__reviews {
   font-size: 10px;
   line-height: 14px;
-  color: #060B35;
-  margin: 0;
+  color: var(--dark);
 }
 
 .description__price {
   display: flex;
-  align-items: flex-end;
+  align-items: space-between;
   justify-content: space-between;
-  width: 100%;
+
+  margin-bottom: 16px;
 }
 
 .description__price-label {
@@ -95,7 +101,7 @@ body {
 
   display: inline-block;
 
-  color: #616070;
+  color: var(--grey);
 }
 
 .description__price-number {
@@ -107,13 +113,8 @@ body {
 
   display: inline-block;
 
-  color: #060B35;
+  color: var(--dark);
 }
-
-.description {
-  margin-bottom: 16px;
-}
-
 
 .buy__button {
   display: block;
@@ -122,17 +123,17 @@ body {
   padding: 12px 0;
 
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   text-align: center;
 
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 5px;
 }
 
 .buy__button:hover {
-  background-color: #fff;
-  color: #00acdc;
-  border: 1px solid #00acdc;
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
 }
 
 
