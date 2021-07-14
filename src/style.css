@@ -2,16 +2,16 @@ html {
   font-family: Roboto, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .section {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
   height: 404px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-around ;
-  box-sizing: border-box;
+  padding: 32px 16px 16px;
 }
 
 .section__container-image {
@@ -19,43 +19,30 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px ;
-  object-fit: contain;
-  align-self: center;
-}
-
-.section__container-image--margin {
-  margin-top: 20px;
-}
-
-.section__image {
-  object-fit: c;
-  height: 134px;
-  width: 160px;
-}
-
-.section__name-code-about {
-  padding: 0 16px ;
-}
-
-.section__name-code-about--margin {
-  margin-top: 10px;
 }
 
 .section__name {
   font-weight: 500;
   font-size: 12px;
+  line-height: 18px;
+}
+
+.section__name--margin {
+  margin-top: 40px;
 }
 
 .section__code {
   color: #616070;
-  padding: 2px 0 0;
   font-weight: 400px;
+  line-height: 14px;
   font-size: 10px;
 }
 
+.section__name-code-about--margin-code {
+  margin: 4px 0 15px;
+}
+
 .section__rate {
-  padding: 0 16px;
   font-weight: normal;
   font-size: 10px;
   line-height: 14px;
@@ -63,8 +50,8 @@ html {
   justify-content: space-between;
 }
 
-.rate__star--margin {
-  margin: 0 1px;
+.rate__star--margin:nth-child(n + 2) {
+  margin-left: 4px;
 }
 
 .rate__star {
@@ -72,7 +59,6 @@ html {
   width: 16px;
   height: 16px;
   content: "";
-  display: inline-block;
   background-repeat: no-repeat;
 }
 
@@ -80,22 +66,24 @@ html {
   background-image: url(images/star-active.svg);
 }
 
-.stars {
+.rate__stars {
   display: flex;
-  width: 5px;
-  flex-grow: 0;
-  justify-content: space-around;
+  flex-grow: 1;
 }
 
-.section_feedback {
+.rate__feedback {
   display: flex;
   justify-self: flex-end;
 }
 
+.rate--margin {
+  margin-top: 16px;
+}
+
 .section__about-price {
-  padding: 0 16px;
   display: flex;
   justify-content: space-between;
+  line-height: 18px;
 }
 
 .section__price-word {
@@ -110,12 +98,16 @@ html {
   line-height: 18px;
 }
 
+.section__about-price--margin {
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
 .section__button-container {
   height: 40px;
-  width: 86%;
+  width: 168px;
   background-color: #00acdc;
   border-radius: 5px;
-  box-sizing: border-box;
   align-self: center;
 }
 
@@ -131,7 +123,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  
 }
 
 .section__button:hover {
