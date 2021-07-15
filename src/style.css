@@ -1,6 +1,11 @@
 html {
   --light-grey-text: #616070;
   --aqua-theme: #00acdc;
+  --button-height: 40px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .body {
@@ -16,7 +21,6 @@ html {
   height: 408px;
   background: #fff;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -29,7 +33,6 @@ html {
   display: block;
   margin-top: 16px;
   margin-left: 3px;
-  box-sizing: border-box;
 }
 
 .card__name {
@@ -96,13 +99,13 @@ html {
 }
 
 .card__button {
-  width: 166px;
-  height: 40px;
+  height: var(--button-height);
   background: var(--aqua-theme);
   border-radius: 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   margin-top: 16px;
 }
 
@@ -112,14 +115,14 @@ html {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
-  width: 100%;
   text-align: center;
+  line-height: var(--button-height);
+  flex-grow: 1;
+
 }
 
 .card__button:hover {
   border: 1px solid var(--aqua-theme);
-  box-sizing: border-box;
-  border-radius: 5px;
   background-color: inherit;
   color: var(--aqua-theme);
 }
