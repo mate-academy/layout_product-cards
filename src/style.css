@@ -1,0 +1,132 @@
+html {
+  --light-grey-text: #616070;
+  --aqua-theme: #00acdc;
+  --button-height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #e5e5e5;
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  display: block;
+  margin-top: 16px;
+  margin-left: 3px;
+}
+
+.card__name {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__id {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--light-grey-text);
+  margin-top: 3px;
+}
+
+.reviews {
+  display: flex;
+  margin-top: 16px ;
+  justify-content: space-between;
+}
+
+.reviews__stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.reviews__count {
+  font-size: 10px;
+  line-height: 16px;
+  align-items: baseline;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 24px;
+}
+
+.price__title {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--light-grey-text);
+}
+
+.price__cost {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__button {
+  height: var(--button-height);
+  background: var(--aqua-theme);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+.card__button-link {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: var(--button-height);
+  flex-grow: 1;
+
+}
+
+.card__button:hover {
+  border: 1px solid var(--aqua-theme);
+  background-color: inherit;
+  color: var(--aqua-theme);
+}
+
+.card__button-link:hover {
+  color: var(--aqua-theme);
+}
