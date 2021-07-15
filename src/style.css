@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+/* #region Normalize */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #00acdc;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+/* #endregion */
+
+.cards {
+  display: flex;
+}
+
+.card {
+  padding: 32px 16px 16px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+}
+/* #region Image */
+
+.card-images {
+  width: 160px;
+}
+/* #endregion */
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.product {
+  text-align-last: left;
+}
+
+.product__name {
+  margin-top: 37px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  font-weight: 500;
+}
+
+.product__code {
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #616070;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: normal;
+}
+
+.card__stars {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  height: 16px;
+  width: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+
+.stars--4 > :nth-child(n + 5) {
+  background-image: url(./images/star.svg);
+}
+
+.card__respond {
+  color: #060b35;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 17px;
+  text-align: right;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.card__price-title {
+  margin: 0;
+  color: #616070;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.card__price-size {
+  margin-top: 10px;
+  color: #060b35;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: right;
+}
+
+/* #region Button*/
+.card__buy-button {
+  height: 40px;
+}
+
+.card__buy-button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #00acdc;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  border: solid 1px #00acdc;
+}
+
+.card__buy-button-link:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
+/* #endregion */
