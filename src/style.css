@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  --font-size-small: 10px;
+  --font-size-medium: 12px;
+  --color-fonts: #060b35;
+  --color-back-ground: #00acdc;
+}
+
+body,
+div,
+span,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 41px;
+}
+
+.card__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-fonts);
+  margin-bottom: 2.5px;
+}
+
+.card__code {
+  align-self: flex-start;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.card__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 58px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+  flex-basis: 60%;
+}
+
+.stars__star {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  background-image: url(./images/star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+  background-image: url(./images/star.svg);
+}
+
+.card__reting {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.card__price {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.card__curent-price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--color-fonts);
+}
+
+.buy-btn {
+  width: 168px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+
+  background-color: var(--color-back-ground);
+  border-radius: 5px;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+.buy-btn__text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.buy-btn:hover {
+  color: var(--color-back-ground);
+  background-color: #fff;
+  border: 1px solid var(--color-back-ground);
+  border-radius: 5px;
+}
