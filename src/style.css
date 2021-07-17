@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #060b35;
+  --light: #fff;
+  --gray: #616070;
+  --blue: #00acdc;
+  --br-5: 5px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.card {
+  border-radius: var(--br-5);
+  max-width: 200px;
+  width: 100%;
+  background-color: var(--light);
+  border: 1px solid #f3f3f3;
+}
+
+.card__body {
+  padding: 40px 16px 16px;
+}
+
+.card__img {
+  padding: 32px 20px 0 20px;
+}
+
+.card__title {
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.card__article {
+  color: var(--gray);
+  margin-bottom: 16px;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__rate {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 96px;
+}
+
+.stars__star {
+  background: url("images/star.svg") 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1) {
+  background: url("images/star-active.svg") 0 0 no-repeat;
+}
+
+.stars--2 .stars__star:nth-child(-n + 2) {
+  background: url("images/star-active.svg") 0 0 no-repeat;
+}
+
+.stars--3 .stars__star:nth-child(-n + 3) {
+  background: url("images/star-active.svg") 0 0 no-repeat;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background: url("images/star-active.svg") 0 0 no-repeat;
+}
+
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background: url("images/star-active.svg") 0 0 no-repeat;
+}
+
+.rate__star {
+  background: url("./images/star.svg") 0 0 no-repeat;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--dark);
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.card__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.card__label {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--gray);
+}
+
+.btn {
+  border-radius: var(--br-5);
+  background-color: var(--blue);
+  color: var(--light);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  line-height: 16px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--blue);
+  height: 40px;
+  transition: 0.3s ease all;
+  width: 100%;
+}
+
+@media (any-hover: hover) {
+  .btn:hover {
+    background-color: transparent;
+    color: var(--blue);
+  }
+}
