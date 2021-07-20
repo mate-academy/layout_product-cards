@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html {
+  font-family: Roboto, sans-serif;
+}
 
 body {
   margin: 0;
 }
 
 .product {
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 11px;
   box-sizing: border-box;
@@ -25,8 +26,8 @@ body {
 }
 
 .product__info-block {
-  padding-top: 40px;
-  padding-bottom: 14px;
+  margin-top: 40px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -38,8 +39,12 @@ body {
   font-weight: 510;
 }
 
+.product__title > :first-child {
+  margin: 0;
+}
+
 .product__id {
-  padding-top: 4px;
+  margin-top: 4px;
   height: 14px;
   font-size: 10px;
 }
@@ -54,7 +59,6 @@ body {
 }
 
 .product__raiting-stars-block {
-  flex-direction: row-reverse;
   display: flex;
   gap: 4px;
 }
@@ -63,11 +67,11 @@ body {
   background-image: url("./images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
-  height: 16px;
-  width: 16px;
+  height: 15px;
+  width: 15px;
 }
 
-.product__raiting-star:nth-last-child(-n+4) {
+.star_active {
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
 }
@@ -78,7 +82,7 @@ body {
 }
 
 .product__price {
-  padding-top: 7px;
+  margin-top: 7px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -89,7 +93,6 @@ body {
 .product__price-title {
   font-weight: 400;
   font-size: 12px;
-
 }
 
 .product__price-amount {
@@ -98,12 +101,12 @@ body {
 }
 
 .product__buy {
-  padding-top: 17px;
+  margin-top: 17px;
   width: 100%;
 }
 
 .product__buy-button {
-  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
   display: flex;
   background-color: rgba(0, 172, 220, 1);
