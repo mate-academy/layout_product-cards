@@ -1,0 +1,142 @@
+html {
+  font-family: Roboto, sans-serif;
+  color: rgba(6, 11, 53, 1);
+}
+
+body,
+p,
+h3 {
+  margin: 0;
+}
+ 
+/* card styles */
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 200px;
+  padding: 16px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+}
+
+.card__image-container {
+  margin: 16px auto 40px;
+}
+
+.card__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 16px;
+}
+
+.card__product-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  margin-bottom: 4px;
+}
+
+.card__feedbacks {
+  margin-bottom: 24px;
+}
+
+.card__feedbacks,
+.card__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price {
+  margin-bottom: 16px;
+}
+
+/* card buy-link */
+
+.card__buy-link {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 11px;
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 1);
+  background: rgba(0, 172, 220, 1);
+  border: 1px solid rgba(0, 172, 220, 1);
+  border-radius: 5px;
+}
+
+.card__buy-link:hover {
+  color: rgba(0, 172, 220, 1);
+  border: 1px solid #00acdc;
+  background: rgba(255, 255, 255, 1);
+}
+
+/* stars */
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  position: relative;
+  top: 2px;
+  left: 2px;
+
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+}
+
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+/* card text-size modifiers */
+
+.card__product-code--size_10,
+.card__feedbacks-amount--size_10 {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__price-name--size_12 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price-amount--size_16,
+.card__buy-link--size_16 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* card colors modifiers */
+
+.card__product-code--color_light,
+.card__price-name--color_light {
+  color: rgba(97, 96, 112, 1);
+}
