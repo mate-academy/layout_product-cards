@@ -18,19 +18,20 @@ p {
   background: #fff;
   border: 1px solid #f3f3f3;
   --indentention: 16px;
+  padding: var(--indentention);
 }
 
 .product-card__image {
   width: 160px;
   height: 134px;
   margin-top: var(--indentention);
-  padding-top: var(--indentention);
 }
 
 .product-card__title {
   width: 168px;
   height: 36px;
-  margin-top: 41px;
+  margin-top: 40px;
+  margin-bottom: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -38,7 +39,6 @@ p {
 }
 
 .product-card__code {
-  margin-left: var(--indentention);
   width: 92px;
   height: 14px;
   align-self: flex-start;
@@ -48,38 +48,38 @@ p {
   color: #616070;
 }
 
-.product-card-review {
+.review {
   display: flex;
   justify-content: space-between;
   width: 166px;
 }
 
 .product-card__review {
-  margin: var(--indentention) 0;
+  margin-top: var(--indentention);
   height: 16px;
 }
 
-.product-card-review__stars {
+.stars {
   display: flex;
   width: 96px;
   gap: 4px;
   justify-content: space-between;
 }
 
-.product-card-review__stars-star {
+.stars-star {
   width: 16px;
   background: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
 
-.product-card-review__stars-star:nth-child(5) {
+.stars-star:nth-child(5) {
   background: url(images/star.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
 
-.product-card-review__amount {
+.review__amount {
   align-self: flex-start;
   width: 53px;
   line-height: 16px;
@@ -87,7 +87,7 @@ p {
   color: #060b35;
 }
 
-.product-card-price {
+.price {
   display: flex;
   width: 166px;
   justify-content: space-between;
@@ -95,17 +95,17 @@ p {
 }
 
 .product-card__price {
-  margin-top: 8px;
+  margin-top: 24px;
 }
 
-.product-card-price__title {
+.price__title {
   font-size: 12px;
   line-height: 18px;
   height: 18px;
   color: #616070;
 }
 
-.product-card-price__cost {
+.price__cost {
   font-weight: bold;
   font-size: 16px;
   color: #060b35;
@@ -113,12 +113,14 @@ p {
   height: 18px;
 }
 
-.product-card-link {
+.link {
   display: flex;
   width: 168px;
   height: 40px;
   background: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   font-weight: bold;
@@ -133,8 +135,7 @@ p {
   margin-top: var(--indentention);
 }
 
-.product-card-link:hover {
+.link:hover {
   background: #fff;
-  border: 1px solid #00acdc;
   color: #00acdc;
 }
