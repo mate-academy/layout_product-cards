@@ -7,6 +7,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+/* #region card */
 .card {
   display: flex;
   flex-direction: column;
@@ -47,18 +48,6 @@ html {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
-}
-
-.card__stars {
-  display: flex;
-}
-
-.card__star {
-  margin: 0 4px 0 0;
-  line-height: 16px;
-  text-align: center;
-  width: 16px;
-  height: 16px;
 }
 
 .card__reviews {
@@ -108,3 +97,25 @@ html {
   color: rgba(0, 172, 220);
   background: none;
 }
+/* #endregion */
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.stars--0 :nth-child(n),
+.stars--1 :nth-child(n + 2),
+.stars--2 :nth-child(n + 3),
+.stars--3 :nth-child(n + 4),
+.stars--4 :nth-child(n + 5) {
+  background: url(images/star.svg) no-repeat center;
+}
+/* #endregion */
