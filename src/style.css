@@ -1,9 +1,9 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   font-family: Roboto, Arial, sans-serif;
   --small-font-waight: 400;
   --medium-font-waight: 500;
@@ -13,7 +13,7 @@ body {
 .card {
   display: flex;
   width: 200px;
-  padding: 16px;
+  padding: 32px 16px 16px;
   flex-direction: column;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -24,7 +24,6 @@ body {
 .itemFoto {
   width: 160px;
   height: 134px;
-  margin-top: 16px;
 }
 
 .itemName {
@@ -32,6 +31,7 @@ body {
   font-weight: var(--medium-font-waight);
   line-height: 18px;
   margin-top: 40px;
+  margin-bottom: 0;
   color: #060b35;
 }
 
@@ -56,12 +56,12 @@ body {
 }
 
 .star {
-  width: 13px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 7px;
+  background-position: 0 1px;
+  margin-right: 4px;
 }
 
 .star:nth-child(n + 5) {
@@ -80,8 +80,6 @@ body {
   justify-content: space-between;
   width: 100%;
   margin-top: 24px;
-
-  
 }
 
 .itemPrice {
@@ -92,28 +90,36 @@ body {
 
 .price {
   font-size: 16px;
+  line-height: 16px;
   font-weight: var(--big-font-waight);
   color: #060b35;
 
 }
 
-.buyKey {
-  width: 166px;
+.linkBox {
+  display: block;
+  width: 100%;
   height: 40px;
   font-size: 14px;
   font-weight: var(--big-font-waight);
   background-color: #00acdc;
-  display: flex;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  margin-top: 18px;
-  align-items: center;
-  justify-content: center;
+  margin-top: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.buyKey {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: #fff;
 }
 
 .buyKey:hover {
-  background-color: #fff;
   color: #00acdc ;
+  background-color: #fff;
+  border-radius: 5px;
 }
