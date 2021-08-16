@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -25,15 +24,17 @@ body {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #fff;
+  padding: 22px 16px 0;
 }
 
 /* #region image */
-.product-img {
+img {
+  margin-left: 3px;
   background-image: url(./images/imac.jpeg);
+  background-repeat: no-repeat;
   background-size: 160px 134px;
   width: 160px;
   height: 134px;
-  margin: 22px 20px 0;
 }
 /* #endregion */
 
@@ -42,6 +43,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding-top: 22px;
 }
 
 .product-description__text {
@@ -54,7 +56,6 @@ body {
   display: block;
   width: 100%;
   text-align: left;
-  padding-left: 16px;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
@@ -62,22 +63,20 @@ body {
 /* #endregion */
 
 /* #region rating */
-.product-rating {
+.stars {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
-.product-rating__star {
+.stars__star {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100px;
 }
 
-.product-rating__star_active {
+.stars__star_active {
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -85,7 +84,7 @@ body {
   height: 16px;
 }
 
-.product-rating__star_not-active {
+.stars__star_not-active {
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -93,7 +92,7 @@ body {
   height: 16px;
 }
 
-.product-rating__feedback {
+.stars__feedback {
   display: flex;
   align-items: flex-end;
   font-size: 10px;
@@ -107,7 +106,7 @@ body {
 .price {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
   line-height: 18px;
 }
 
@@ -115,7 +114,6 @@ body {
   font-size: 12px;
   line-height: 18px;
   color: #616070;
-  padding-left: 16px;
 }
 
 .price__number {
@@ -124,18 +122,12 @@ body {
   font-weight: bold;
   font-size: 16px;
   color: #060b35;
-  padding-right: 16px;
 }
 /* #endregion */
 
 /* #region button */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.button-container__elem {
+.button-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -145,7 +137,7 @@ body {
   border-radius: 5px;
 }
 
-.button-container__elem:hover {
+.button-container:hover {
   background: #fff;
   border: 1px solid #00acdc;
   box-sizing: border-box;
