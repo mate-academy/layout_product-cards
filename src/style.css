@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+
+  --main-color: #060b35;
+  --second-color: #00acdc;
+  --white-color: #fff;
+  --grey-color: #616070;
+}
+
+.card {
+  margin: 0 auto;
+  width: 200px;
+  padding: 32px 16px 18px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+}
+
+.card__image {
+  text-align: center;
+}
+
+.card__image-pic {
+  width: 160px;
+  height: 134px;
+}
+
+.card__article {
+  margin-top: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card__id {
+  margin-top: 4px;
+  font-weight: normal;
+  color: var(--grey-color);
+  font-size: 10px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.card__rating-stars {
+  display: flex;
+}
+
+.card__rating-reviews {
+  color: var(--main-color);
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 1px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars__star:nth-child(-n + 4) {
+  background: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:hover {
+  background: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.card__price {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-article {
+  margin-top: 1px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--grey-color);
+}
+
+.price-amount {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.buy-link {
+  display: inline-block;
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 12px 55px;
+  background-color: var(--second-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 5px;
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.buy-link:hover {
+  padding: 10px 54px;
+  background-color: var(--white-color);
+  border: 1px solid var(--second-color);
+  color: var(--second-color);
+  transition: 0.2s ease-out;
+}
