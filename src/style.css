@@ -8,6 +8,8 @@ p {
   font-size: 10px;
   line-height: 18px;
   color: #060b35;
+  --card-color-grey: #616070;
+  --card-color-blue: #00acdc;
 }
 
 .page__content {
@@ -45,7 +47,7 @@ p {
 .container__product-code {
   line-height: 14px;
   margin-bottom: 16px;
-  color: #616070;
+  color: var(--card-color-grey);
 }
 
 .rating {
@@ -64,18 +66,12 @@ p {
 
 .stars__star {
   background-image: url("./images/star-active.svg");
-  /* background-size: cover; */
   background-repeat: no-repeat;
-  /* background-position: center; */
   width: 16px;
   height: 16px;
   margin: 1px 2px 0;
   cursor: pointer;
 }
-
-/* .stars__star:last-child {
-  margin-right: 0;
-} */
 
 .star-5 {
   background-image: url("./images/star.svg");
@@ -87,7 +83,6 @@ p {
 
 .rating__reviews {
   line-height: 14px;
-  color: #060b35;
 }
 
 .price {
@@ -102,13 +97,12 @@ p {
 .price__text {
   margin-top: 1px;
   font-size: 12px;
-  color: #616070;
+  color: var(--card-color-grey);
 }
 
 .price__number {
   font-weight: 700;
   font-size: 16px;
-  color: #060b35;
 }
 
 .container__buy-link {
@@ -120,15 +114,15 @@ p {
   width: 100%;
   padding: 11px 57px;
   margin-bottom: 16px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--card-color-blue);
   border-radius: 5px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #00acdc;
+  background-color: var(--card-color-blue);
 }
 
 .container__buy-link:hover {
-  color: #00acdc;
+  color: var(--card-color-blue);
   background-color: #fff;
   transition: all 0.5s;
 }
