@@ -9,43 +9,45 @@
     >
     <title>Product cards</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="product-conteiner" data-qa="card">
-      <img
-        class="product-conteiner__img"
-        src="./images/imac.jpeg"
-        alt="imac"
-      >
-      <div class="product-conteiner__decription">
-        <div class="tittle">
-          <div class="title-text">
-            Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)
-          </div>
-          <div class="title-subtext">
-            Код товара: 195434
-          </div>
-        </div>
-        <div class="rating-star">
+    <div class="product">
+      <div class="product__card" data-qa="card">
+        <img
+          src="./images/imac.jpeg"
+          class="product__img"
+          alt="imac"
+        >
+        <span class="product__card-name">
+          Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)
+        </span>
+        <span class="product__card-code">
+          Код товара: 195434
+        </span>
+        <div class="product__rating">
           <div class="stars">
-            <span class="stars-star"></span>
-            <span class="stars-star"></span>
-            <span class="stars-star"></span>
-            <span class="stars-star"></span>
-            <span class="stars-star"></span>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
           </div>
-          Отзывов: 5
+          <a href="#" class="product__comments">Отзывов: 5</a>
         </div>
-        <div class="price">
-          <div class="price-tittle">
-            Цена:
-          </div>
-          <div class="price-cost">
-            69 999 грн
-          </div>
+        <div class="product__price">
+          <span class="product__price-text">Цена:</span>
+          <span class="product__price-cost">69 999 грн</span>
         </div>
-        <!-- <button data-qa="hover" class="button-buy">Купить</button> -->
-        <a href="#buy" class="button-buy">Купить</a>
+        <a
+          href="#"
+          class="product__button"
+          data-qa="hover"
+        >
+          Купить
+        </a>
       </div>
     </div>
   </body>

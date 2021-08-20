@@ -1,156 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-}
-
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-.product-conteiner {
+.product__card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  height: 408px;
   width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.product-conteiner__decription {
-  padding: 0 16px 16px;
-}
-
-/* #region Image */
-.product-conteiner__img {
+.product__img {
+  display: block;
   height: 134px;
   width: 160px;
-  padding: 32px 20px;
+  padding: 32px 19px 40px;
 }
-/* #endregion */
 
-/* #region Tittle */
-.title-text {
-  margin: 8px 0 0;
-  font-size: 12px;
+.product__card-name {
+  margin: 0 16px 4px;
+  font-style: normal;
   font-weight: 500;
+  font-size: 12px;
   line-height: 18px;
   color: #060b35;
 }
 
-.title-subtext {
-  margin: 4px 0 0;
-  font-size: 10px;
+.product__card-code {
+  font-style: normal;
   font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
   color: #616070;
+  margin: 0 16px 16px;
 }
-/* #endregion */
 
-/* #region Rating */
-.rating-star {
-  align-content: center;
+.product__rating {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #060b35;
-  font-size: 10px;
-  margin: 16px 0 0;
+  width: 166px;
+  margin: 0 16px;
 }
 
 .stars {
   display: flex;
 }
 
-.stars-star {
-  background-image: url(./images/star.svg);
+.star {
   height: 16px;
   width: 16px;
-  margin-right: 4px;
+  background-image: url(./images/star.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  margin-top: 1px;
+  margin-right: 2px;
+  margin-left: 2px;
 }
 
 .stars :nth-child(-n + 4) {
   background-image: url(./images/star-active.svg);
 }
 
-/* #endregion */
-
-/* #region Price */
-.price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  line-height: 18px;
-  margin: 24px 0 0;
+.product__comments {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+  text-decoration: none;
 }
 
-.price-tittle {
+.product__price {
+  margin: 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 166px;
+  margin-top: 22px;
+}
+
+.product__price-text {
+  font-style: normal;
+  font-weight: normal;
   font-size: 12px;
+  line-height: 18px;
   color: #616070;
 }
 
-.price-cost {
-  font-size: 16px;
+.product__price-cost {
+  font-style: normal;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
   color: #060b35;
 }
-/* #endregion */
 
-/* #region Button*/
-/* .button-buy {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
+.product__button {
+  display: inline-block;
+  margin: 0 16px;
   padding: 12px 56px;
   color: #fff;
-  background-color: #00acdc;
-  border-radius: 5px;
   text-transform: uppercase;
-  margin-top: 16px;
-  border: none;
-}
-
-.button-buy:hover {
-  background-color: white;
-  color: #00acdc;
-  border: 1px solid #00acdc;
-} */
-.button-buy {
-  display: block;
-  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
   line-height: 16px;
-  padding: 12px 56px;
-  color: #fff;
   background-color: #00acdc;
   border-radius: 5px;
-  text-transform: uppercase;
-  margin-top: 16px;
-  text-decoration: none;
+}
+
+.product__button:hover {
+  color: #00acdc;
   border: 1px solid #00acdc;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 5px;
 }
-
-/* .button-buy-link {
-  text-decoration: none;
-  color: white;
-} */
-
-/* .button-buy-link:hover {
-  color: #00acdc;
-} */
-
-.button-buy:hover {
-  background-color: white;
-  color: #00acdc;
-}
-/* #endregion */
