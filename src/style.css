@@ -1,0 +1,123 @@
+html {
+  --font-color-main: #060b35;
+  --font-color-second: #616070;
+  --brand-main-color: #00acdc;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  height: 408px;
+  width: 200px;
+}
+
+.card-image {
+  height: 134px;
+  width: 160px;
+  margin: 32px 19px 40px;
+  margin-top: 32px;
+}
+
+.product-card__title {
+  color: var(--font-color-main);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0 16px 4px;
+}
+
+.product-card__code {
+  color: var(--font-color-second);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin: 0 16px 15px;
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.product-card__stars {
+  display: flex;
+}
+
+.product-card__star {
+  background-image: url("/images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  margin-left: 0;
+}
+
+.product-card__star:nth-child(-n+4) {
+  background-image: url("/images/star-active.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.product-card__feedback {
+  color: var(--font-color-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 16px 16px;
+  margin-top: 24px;
+}
+
+.product-card__price-title {
+  color: var(--font-color-second);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product-card__price-value {
+  color: var(--font-color-main);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.product-card__buy-button {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 16px;
+  padding: 12px 55px;
+  color: #fff;
+  background-color: var(--brand-main-color);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.product-card__buy-button:hover {
+  border: 1px solid var(--brand-main-color);
+  background: #fff;
+  color: var(--brand-main-color);
+}
