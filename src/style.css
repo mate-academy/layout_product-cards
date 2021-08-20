@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
   margin: 0;
 }
@@ -8,33 +10,29 @@ body {
   height: 404px;
 }
 
-.main {
+.card {
   padding: 15px;
   padding-top: 32px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.product {
-  display: flex;
-}
-
-.img {
+.card__img {
+  display: block;
   height: 134px;
   width: 160px;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-bottom: 40px;
+  margin: 0 auto 40px;
 }
 
-.product-info {
+.card__info {
   display: flex;
   flex-direction: column;
   width: 166px;
   margin: 0;
+  margin-bottom: 16px;
 }
 
-.product-name {
+.card__name {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500px;
@@ -44,7 +42,7 @@ body {
   padding-bottom: 2px;
 }
 
-.product-code {
+.card__code {
   padding-top: 2px;
   font-weight: 400px;
   font-size: 10px;
@@ -52,11 +50,11 @@ body {
   margin: 0;
 }
 
-.product-rate {
+.card__rate {
   display: flex;
   width: 166px;
   align-items: center;
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .stars {
@@ -64,26 +62,24 @@ body {
   width: 166px;
 }
 
-.stars-inside {
-  background-image: url("./images/star-active.svg");
-  width: 16px;
+.stars__star {
   height: 16px;
-  background-repeat: no-repeat;
-  margin-top: 1px;
-  margin-right: 2px;
-  margin-left: 2px;
-}
-
-.stars-inside-dark {
+  width: 16px;
   background-image: url("./images/star.svg");
-  width: 16px;
-  height: 16px;
   background-repeat: no-repeat;
-  margin-top: 1px;
-  margin-left: 2px;
+  background-position: center;
+  margin-right: 4px;
 }
 
-.review-text {
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__text {
   font-size: 10px;
   line-height: 14px;
   font-weight: 400px;
@@ -95,10 +91,9 @@ body {
   justify-content: space-between;
   width: 166px;
   align-items: center;
-  margin-top: 24px;
 }
 
-.price-tag {
+.price__title {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -107,7 +102,7 @@ body {
   color: #616070;
 }
 
-.price-number {
+.price__value {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
