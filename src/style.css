@@ -1,0 +1,130 @@
+/* #region page */
+
+.page {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+
+  --main-color-text: #060b35;
+  --second-color-text: #616070;
+  --color-botton: #00acdc;
+  --color-text-botton: #fff;
+  --color-border-product-card: #f3f3f3;
+}
+
+.page__content {
+  margin: 0;
+}
+
+/* #endregion */
+
+/* #region product--card */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid var(--color-border-product-card);
+  border-radius: 5px;
+}
+
+.product-card__image {
+  margin: 16px auto 40px;
+  width: 160px;
+  height: 134px;
+  align-self: center;
+}
+
+.product-card__name {
+  margin-bottom: 4px;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5em;
+  color: var(--main-color-text);
+}
+
+.product-card__id {
+  margin-bottom: 15px;
+  font-size: 1em;
+  line-height: 1.4em;
+  color: var(--second-color-text);
+}
+
+.product-card__container-feedback {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.product-card__container-stars {
+  display: flex;
+  align-items: center;
+}
+
+.product-card__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-card__star:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.product-card__feedback {
+  font-size: 1em;
+  line-height: 1.4em;
+  color: var(--main-color-text);
+}
+
+.product-card__block-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-card__name-price {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: var(--second-color-text);
+}
+
+.product-card__price {
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 1.12em;
+  color: var(--main-color-text);
+
+}
+
+.product-card__botton-buy {
+  display: flex ;
+  justify-content: center;
+  height: 40px;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 16px;
+  color: var(--color-text-botton);
+  text-decoration: none;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: var(--color-botton);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.product-card__botton-buy:hover {
+  color: var(--color-botton);
+  background-color: var(--color-text-botton);
+  border: 1px solid var(--color-botton);
+}
+
+/* #endregion */
