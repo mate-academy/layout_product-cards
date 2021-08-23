@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  width: 200px;
+  height: 404px;
+}
+
+.card {
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  display: block;
+  height: 134px;
+  width: 160px;
+  margin: 0 auto 40px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.card__name {
+  font-style: normal;
+  font-weight: 500;
+  color: #060b35;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0 0 5px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  color: #616070;
+  margin: 0;
+}
+
+.card__rate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__text {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price__value {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 56px;
+  color: #fff;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button:hover {
+  background-color: white;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  padding: 11px 55px;
+}
