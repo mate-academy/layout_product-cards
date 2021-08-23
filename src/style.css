@@ -1,10 +1,7 @@
-* {
-  box-sizing: border-box;
-}
-
 body,
 h2,
 .card__buy-button {
+  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -21,6 +18,7 @@ html {
 }
 
 .card {
+  box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
   background-color: #fff;
@@ -45,7 +43,6 @@ html {
 
 .card__code {
   margin-bottom: 16px;
-  font-size: 10px;
   line-height: 13px;
   color: var(--color-secondary);
 }
@@ -66,22 +63,14 @@ html {
   width: 16px;
   height: 16px;
   background: url("./images/star.svg") no-repeat center;
-}
-
-.stars__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
+.stars--4 .stars__star:nth-child(-n + 4) {
   background: url("./images/star-active.svg") no-repeat center;
 }
 
 .card__reviews-count {
-  font-size: 10px;
   line-height: 14px;
   color: var(--color-main_accent);
   text-decoration: none;
@@ -119,6 +108,7 @@ html {
 }
 
 .card__buy-button:hover {
+  box-sizing: border-box;
   background-color: #fff;
   color: var(--color-blue_accent);
   border: 1px solid var(--color-blue_accent);
