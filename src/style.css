@@ -1,6 +1,10 @@
 html {
   font-family: Roboto, sans-serif;
   font-style: normal;
+
+  --dark-color: #060b35;
+  --grey-color: #616070;
+  --blue-color: #00acdc;
 }
 
 body,
@@ -30,7 +34,7 @@ h2 {
   font-size: 12px;
   line-height: 18px;
   padding-top: 40px;
-  color: #060b35;
+  color: var(--dark-color);
 }
 
 .product-card__code {
@@ -38,7 +42,7 @@ h2 {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--grey-color);
 }
 
 .product-card__rate {
@@ -49,7 +53,7 @@ h2 {
 }
 
 .product-card__count {
-  color: #060b35;
+  color: var(--dark-color);
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -59,12 +63,12 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color: #060b35;
+  color: var(--dark-color);
   margin-top: 23px;
 }
 
 .product-card__price-text {
-  color: #616070;
+  color: var(--grey-color);
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -74,29 +78,27 @@ h2 {
   font-weight: 700;
 }
 
-.buy-button {
-  margin-top: 16px;
-}
-
-.buy-button__link {
+.product-card__buy-button {
   display: flex;
   justify-content: center;
   align-items: center;
 
+  margin-top: 16px;
   height: 40px;
-  color: #fff;
+
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
+  color: #fff;
 
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 5px;
 }
 
-.buy-button__link:hover {
-  color: #00acdc;
+.product-card__buy-button:hover {
+  color: var(--blue-color);
   background-color: #fff;
 }
 
