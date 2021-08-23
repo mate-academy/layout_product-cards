@@ -1,0 +1,127 @@
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --main-color: #060b35;
+  font-style: normal;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 408px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.product-card__photo {
+  display: block;
+  height: 134px;
+  width: 160px;
+  padding: 32px 19px 40px;
+}
+
+.product-card__name {
+  margin: 0 16px 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.product-card__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-decoration: none;
+  color: #616070;
+  margin: 0 16px 16px;
+}
+
+.product-card__grade {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  margin: 0 16px;
+}
+
+.product-card__stars {
+  display: flex;
+}
+
+.product-card__star {
+  width: 16px;
+  height: 16px;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  margin-top: 1px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.product-card__star:first-child,
+.product-card__star:nth-child(2),
+.product-card__star:nth-child(3),
+.product-card__star:nth-child(4) {
+  background-image: url("images/star-active.svg");
+}
+
+.product-card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.product-card__price {
+  margin: 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 166px;
+  margin-top: 22px;
+}
+
+.product-card__price-name {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.product-card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.product-card__button {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 16px;
+  padding: 12px 56px;
+  color: #fff;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.product-card__button:hover {
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #fff;
+  transition-duration: 300ms;
+}
