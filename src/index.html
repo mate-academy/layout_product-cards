@@ -1,38 +1,66 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Product cards</title>
-  <link rel="stylesheet" href="./styles/style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Product cards</title>
+    <link rel="stylesheet" href="./styles/style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
 
-<body>
-  <div class="ProductCard" data-qa="card">
-    <img class="ProductCard-logo" src="./images/imac.jpeg" alt="Apple_A1419 image">
-
-    <section class="Description">
-      <h2 class="Description-ProductTitle">
-        Моноблок APPLE A1419 iMac 27&#8221; Retina 5K (MNED2UA/A)
+  <body>
+    <div class="product-card" data-qa="card">
+      <!-- image logo -->
+      <div class="product-card__logo">
+        <img
+          class="product-card__image"
+          src="./images/imac.jpeg"
+          alt="Apple_A1419 image"
+        >
+      </div>
+      <!-- product title -->
+      <h2 class="product-card__title">
+        Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)
       </h2>
-      <div class="Description-ProductCode">
-        Код товара: 195434
+      <div class="product-card__productcode">
+        Код товара: <span class="product-card_id"></span>
       </div>
-      <div class="Description Price">
-        <div class="Price-Name">Цена:</div>
-        <div class="Price-Price">69 999 грн</div>
+      <!-- Rating -->
+      <div class="product-card__rating">
+        <div class="stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+        <div class="product-card__reviews">
+          Отзывов: <span class="product-card__reviews-number">5</span>
+        </div>
       </div>
-    </section>
-
-    <div class="BuyBotton">
-      <a  class="BuyBotton-Botton" href="#buy" data-qa="hover">КУПИТЬ</a>
+      <!-- Price -->
+      <div class="product-card__price">
+        <div class="product-card__price-name">
+          Цена:
+        </div>
+        <div class="product-card__price-price">
+          69 999 грн
+        </div>
+      </div>
+      <!-- BUY BOTTON -->
+      <div class="product-card__buy-botton">
+        <a
+          class="buy-botton"
+          href="#buy"
+          data-qa="hover"
+        >
+          КУПИТЬ
+        </a>
+      </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
