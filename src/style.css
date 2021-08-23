@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  font-family: "Roboto" , sans-serif;
   --main-blue-color: #00acdc;
   --main-white-color: #fff;
   --main-gray-color: #060b35;
@@ -12,18 +13,17 @@ body {
   flex-direction: column;
   width: 198px;
   height: 404px;
-  font-family: "Roboto" , sans-serif;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.product-photo {
+.product__photo {
   width: 160px;
   height: 134px;
   margin: 32px 19px 0;
 }
 
-.product-description {
+.product__description {
   margin: 40px 16px 4px;
   font-style: normal;
   font-size: 12px;
@@ -32,7 +32,7 @@ body {
   color: var(--main-gray-color);
 }
 
-.product-code {
+.product__code {
   margin: 0;
   margin-left: 16px;
   margin-bottom: 16px;
@@ -57,21 +57,21 @@ body {
   background-repeat: no-repeat;
 }
   
-.stars__star:last-child {
-  margin-right: 0;
-}
-  
-.stars {
+.product-mark__stars {
   display: flex;
   flex-direction: row;
   height: 16px;
 }
 
-.stars--4 .stars__star:nth-child(-n+4) {
+.product-mark__star:last-child {
+  margin-right: 0;
+}
+
+.product-mark__stars--4 .product-mark__star:nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
 
-.product-response {
+.product-mark__response {
   font-style: normal;
   font-size: 10px;
   line-height: 14px;
@@ -80,7 +80,7 @@ body {
   color: var(--main-gray-color);
 }
 
-.product_price {
+.product__genural-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -88,7 +88,7 @@ body {
   margin: 23px 16px 16px;
 }
 
-.price {
+.product__price {
   margin: 0;
   font-size: 12px;
   font-weight: 400;
@@ -96,7 +96,7 @@ body {
   color: #616070;
 }
 
-.number-price {
+.product__number-price {
   margin: 0;
   font-style: normal;
   font-size: 16px;
