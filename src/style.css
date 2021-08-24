@@ -1,0 +1,130 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+
+  --color-dark-blue: #060b35;
+  --color-blue: #00acdc;
+  --color-grey: #616070;
+}
+
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.product-card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.product-card__img {
+  display: flex;
+  margin: auto;
+  width: 160px;
+  height: 134px;
+}
+
+.product-card__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 40px;
+  color: #060b35;
+}
+
+.product-card__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 4px;
+  color: var(--color-grey);
+}
+
+.product-card__stars-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.product-card__container-reviews {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--color-dark-blue);
+}
+
+.product-card__cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 24px;
+  color: var(--color-dark-blue);
+}
+
+.product-card__cost-price {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-grey);
+}
+
+.product-card__cost-sum {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--color-dark-blue);
+}
+
+.product-card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  margin-top: 16px;
+}
+
+.product-card__button:hover {
+  color: var(--color-blue);
+  background-color: #fff;
+  border: 1px solid var(--color-blue);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
