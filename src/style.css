@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Roboto" , sans-serif;
@@ -11,8 +15,8 @@ body {
 .product {
   display: flex;
   flex-direction: column;
-  width: 198px;
-  height: 404px;
+  width: 200px;
+  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
@@ -20,11 +24,12 @@ body {
 .product__photo {
   width: 160px;
   height: 134px;
-  margin: 32px 19px 0;
+  margin: 0 auto 40px;
 }
 
 .product__description {
-  margin: 40px 16px 4px;
+  /* margin: 40px 16px 4px; */
+  padding-bottom: 4px;
   font-style: normal;
   font-size: 12px;
   font-weight: 500;
@@ -33,9 +38,7 @@ body {
 }
 
 .product__code {
-  margin: 0;
-  margin-left: 16px;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
   font-style: normal;
   font-size: 10px;
   font-weight: 400;
@@ -47,20 +50,22 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 16px;
 }
 
-.stars__star {
+.product-mark__star {
   width: 16px;
-  margin: 1px 2px -2px;
+  margin: 1px 4px -2px 0;
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
 }
   
 .product-mark__stars {
   display: flex;
-  flex-direction: row;
   height: 16px;
+}
+
+.product-mark__star:first-child {
+  margin-left: 2px;
 }
 
 .product-mark__star:last-child {
@@ -82,10 +87,9 @@ body {
 
 .product__genural-price {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin: 23px 16px 16px;
+  margin: 23px 0 16px;
 }
 
 .product__price {
@@ -106,9 +110,10 @@ body {
 }
 
 .buy {
-  display: inline-block;
-  margin: 0 16px;
-  padding: 12px 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
   font-style: normal;
   font-size: 14px;
   line-height: 16px;
@@ -121,10 +126,7 @@ body {
 }
 
 .buy:hover {
-  padding: 12px 55px;
-  line-height: 14px;
   color: var(--main-blue-color);
   background-color: var(--main-white-color);
   border: 1px solid var(--main-blue-color);
-  box-sizing: border-box;
 }
