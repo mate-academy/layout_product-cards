@@ -1,0 +1,139 @@
+h1 {
+  display: none;
+}
+
+* {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 404px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__image-container {
+  position: relative;
+  width: 160px;
+  height: 134px;
+  margin: 0 5px 45px;
+
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__rating-feedback {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  float: right;
+}
+
+.card__title {
+  font-family: Roboto, sans-serif;
+  width: 168px;
+  height: 36px;
+  font-size: 11px;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.card__number {
+  width: 92px;
+  height: 14px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin: 2px;
+  margin-bottom: 16px;
+}
+
+.card__rating-star {
+  background-image: url(images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.card__rating {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+.card__rating :first-child,
+.card__rating :nth-child(-n + 4) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 16px;
+  margin: 0;
+}
+
+.card__price-name {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+  width: 32px;
+  height: 18px;
+  flex-grow: 1;
+}
+
+.card__price-namber {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  justify-self: end;
+}
+
+.card__buy {
+  width: 168px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 6px;
+}
+
+.card__buy-link {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__buy:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+}
+
+.card__buy-link:hover {
+  color: #00acdc;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
