@@ -2,14 +2,15 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
+  --main-color: #060b35;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-}
-
-html {
-  --main-color: #060b35;
 }
 
 .card {
@@ -19,15 +20,15 @@ html {
   width: 200px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border-radius: 5px;
 }
 
 .card__photo {
-  display: block;
+  /* display: block; */
   width: 160px;
   height: 134px;
-  padding: 32px 19px 40px;
+  margin: 32px 19px 40px;
 }
 
 .card__name {
@@ -69,10 +70,10 @@ html {
   cursor: pointer;
 }
 
-.star-1,
-.star-2,
-.star-3,
-.star-4 {
+.stars__star--1,
+.stars__star--2,
+.stars__star--3,
+.stars__star--4 {
   background-image: url("./images/star-active.svg");
 }
 
@@ -127,7 +128,6 @@ html {
   color: #00acdc;
   border: 1px solid #00acdc;
   box-sizing: border-box;
-  border-radius: 5px;
   background: #fff;
-  transition: 300ms;
+  transition: all 0.3s;
 }
