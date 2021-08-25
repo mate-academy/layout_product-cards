@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  --main-accent-color: #060b35;
+  --secondary-color: #616070;
+  --blue-accent-color: #00acdc;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 200px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.item * {
+  box-sizing: border-box;
+}
+
+.item__image {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.item__name {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-accent-color);
+}
+
+.item__code {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-color);
+}
+
+.item__rates {
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.star:last-child {
+  margin-right: 0;
+}
+
+.stars__star---1,
+.stars__star---2,
+.stars__star---3,
+.stars__star---4 {
+  background-image: url(./images/star-active.svg);
+}
+
+.review {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--main-accent-color);
+}
+
+.item__price {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.item__price-word {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary-color);
+}
+
+.item__price-value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-accent-color);
+}
+
+.item__buy-link {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background-color: var(--blue-accent-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.item__buy-link:hover {
+  background-color: #fff;
+  border: 1px solid var(--blue-accent-color);
+  color: var(--blue-accent-color);
+}
