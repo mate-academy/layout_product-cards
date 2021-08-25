@@ -4,6 +4,9 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  --main-accent-color: #060b35;
+  --secondary-color: #616070;
+  --blue-accent-color: #00acdc;
 }
 
 .item {
@@ -16,9 +19,10 @@ html {
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  --main-accent-color: #060b35;
-  --secondary-color: #616070;
-  --blue-accent-color: #00acdc;
+}
+
+.item * {
+  box-sizing: border-box;
 }
 
 .item__image {
@@ -69,10 +73,10 @@ html {
   margin-right: 0;
 }
 
-.star1,
-.star2,
-.star3,
-.star4 {
+.stars__star---1,
+.stars__star---2,
+.stars__star---3,
+.stars__star---4 {
   background-image: url(./images/star-active.svg);
 }
 
@@ -92,18 +96,18 @@ html {
   width: 100%;
 }
 
-.price-word {
+.item__price-word {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: var(--secondary-color);
 }
 
-.price-value {
+.item__price-value {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
-  color: var(--primary-color);
+  color: var(--main-accent-color);
 }
 
 .item__buy-link {
@@ -114,6 +118,7 @@ html {
   align-items: center;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -123,7 +128,7 @@ html {
   box-sizing: border-box;
 }
 
-.buy-link_hover:hover {
+.item__buy-link:hover {
   background-color: #fff;
   border: 1px solid var(--blue-accent-color);
   color: var(--blue-accent-color);
