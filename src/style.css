@@ -12,7 +12,7 @@ html {
   --main-color: #060b35;
 }
 
-.product__card {
+.card {
   display: flex;
   flex-direction: column;
   height: 408px;
@@ -23,14 +23,14 @@ html {
   border-radius: 5px;
 }
 
-.product__photo {
+.card__photo {
   display: block;
   width: 160px;
   height: 134px;
   padding: 32px 19px 40px;
 }
 
-.product__card-name {
+.card__name {
   margin: 0 16px 4px;
   font-style: normal;
   font-weight: 500;
@@ -39,7 +39,7 @@ html {
   color: var(--main-color);
 }
 
-.product__card-code {
+.card__code {
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -48,7 +48,7 @@ html {
   margin: 0 16px 16px;
 }
 
-.product__grade {
+.card__grade {
   display: flex;
   justify-content: space-between;
   width: 166px;
@@ -57,26 +57,26 @@ html {
 
 .stars {
   display: flex;
+  justify-content: space-between;
 }
 
-.star {
+.stars__star {
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-image: url(./images/star.svg);
-  background-repeat: no-repeat;
-  margin-top: 1px;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin: 1px 2px 0;
+  cursor: pointer;
 }
 
-.star--1,
-.star--2,
-.star--3,
-.star--4 {
-  background-image: url(./images/star-active.svg);
+.star-1,
+.star-2,
+.star-3,
+.star-4 {
+  background-image: url("./images/star-active.svg");
 }
 
-.product__reviews {
+.card__reviews {
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -84,7 +84,7 @@ html {
   color: var(--main-color);
 }
 
-.product__price {
+.card__price {
   margin: 0 16px 16px;
   display: flex;
   justify-content: space-between;
@@ -93,7 +93,7 @@ html {
   margin-top: 22px;
 }
 
-.product__price-name {
+.card__price-name {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -101,7 +101,7 @@ html {
   color: #616070;
 }
 
-.product__price-value {
+.card__price-value {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -109,7 +109,7 @@ html {
   color: var(--main-color);
 }
 
-.product__button {
+.card__button {
   display: inline-block;
   font-style: normal;
   font-weight: bold;
@@ -123,7 +123,7 @@ html {
   text-transform: uppercase;
 }
 
-.product__button:hover {
+.card__button:hover {
   color: #00acdc;
   border: 1px solid #00acdc;
   box-sizing: border-box;
