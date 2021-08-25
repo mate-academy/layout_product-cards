@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  --color-blue: #00acdc;
+  --light-gray: #616070;
+  --dark-gray: #060b35;
+}
+
+body {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+.product {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product__image {
+  display: flex;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.product__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dark-gray);
+  margin-bottom: 4px;
+}
+
+.product__code {
+  font-size: 10px;
+  line-height: 13px;
+  color: var(--light-gray);
+  margin-bottom: 16px;
+}
+
+.product__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars__star:nth-child(-n+4) {
+  background-image: url("images/star-active.svg");
+}
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.price__name {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--light-gray);
+}
+
+.price__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-gray);
+}
+
+.product__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  margin: 0 auto;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  background-color: var(--color-blue);
+  border-radius: 5px;
+}
+
+.product__btn:hover {
+  background-color: transparent;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
