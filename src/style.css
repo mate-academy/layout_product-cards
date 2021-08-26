@@ -5,23 +5,22 @@ html {
   box-sizing: border-box;
 }
 
-.block {
+.card {
   background: #fff;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 5px;
   width: 200px;
-  height: 409px;
   padding: 32px 16px 16px;
 }
 
-.block__image {
+.card__image {
   width: 160px;
   height: 134px;
   margin: 0 auto;
 }
 
-.block__text {
+.card__text {
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
@@ -32,12 +31,12 @@ html {
   width: 168px;
 }
 
-.block__code {
+.card__code {
   font-size: 10px;
   color: rgba(97, 96, 112, 1);
 }
 
-.block__stars-opinion {
+.card__rating {
   display: flex;
   justify-content: space-between;
   height: 16px;
@@ -45,18 +44,29 @@ html {
   margin-top: 16px;
 }
 
-.box-stars__star {
-  width: 14px;
-  height: 14px;
-  margin-right: 2px;
+.card-stars {
+  display: flex;
 }
 
-.opinion {
-  font-family: Roboto, sans-serif ;
+.star {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.card-stars__star5 {
+  background-image: url(./images/star.svg);
+}
+
+.card__opinion {
   font-size: 10px;
 }
 
-.block__price {
+.card__price {
   display: flex;
   justify-content: space-between;
   height: 18px;
@@ -65,7 +75,7 @@ html {
 }
 
 .price__how-much {
-  display: block;
+  display: card;
   align-items: center;
   font-size: 12px;
   line-height: 18px;
@@ -101,7 +111,6 @@ html {
 
 .buttom-link:hover {
   border: 1px solid #00acdc;
-  border-radius: 5px;
   background-color: #fff;
   color: #00acdc;
 }
