@@ -7,6 +7,10 @@ a {
 
 html {
   font-family: Roboto, sans-serif;
+  --main-color: #060b35;
+  --second-color: #616070;
+  --main-background-color: #00acdc;
+  --second-background-color: #fff;
 }
 
 .card {
@@ -16,19 +20,14 @@ html {
   box-sizing: border-box;
   border-radius: 5px;
   padding: 16px;
-
-  --main-color: #060b35;
-  --second-color: #616070;
-  --main-background-color: #00acdc;
-  --second-background-color: #fff;
 }
 
 .card__image {
   display: block;
   margin: auto;
-  margin-top: 16px;
   width: 160px;
   height: 134px;
+  margin-top: 16px;
 }
 
 .card__title {
@@ -69,13 +68,11 @@ html {
   height: 24px;
 }
 
-.card__stars--1 .card__stars-star:nth-child(1),
-.card__stars--2 .card__stars-star:nth-child(-n+2),
-.card__stars--3 .card__stars-star:nth-child(-n+3),
-.card__stars--4 .card__stars-star:nth-child(-n+4),
-.card__stars--5 .card__stars-star:nth-child(n) {
+.card__stars-star:nth-child(-n+1),
+.card__stars-star:nth-child(-n+2),
+.card__stars-star:nth-child(-n+3),
+.card__stars-star:nth-child(-n+4) {
   background-image: url(/images/star-active.svg);
-  background-repeat: no-repeat;
 }
 
 .card__reviews {
@@ -118,7 +115,7 @@ html {
   background: var(--second-background-color);
   border: 1px solid var(--main-background-color);
   box-sizing: border-box;
-  border-radius: 5px;
+  color: var(--main-background-color);
 }
 
 .card__buy {
