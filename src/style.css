@@ -1,0 +1,134 @@
+body,
+div,
+p,
+a {
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  --main-color: #060b35;
+  --second-color: #616070;
+  --main-background-color: #00acdc;
+  --second-background-color: #fff;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.card__image {
+  display: block;
+  margin: auto;
+  width: 160px;
+  height: 134px;
+  margin-top: 16px;
+}
+
+.card__title {
+  margin: 40px 0 4px;
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card__description {
+  text-align: left;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--second-color);
+}
+
+.card__rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__stars {
+  display: flex;
+  flex-direction: row;
+  margin: 14px 0;
+}
+
+.card__stars-star {
+  padding: 2px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 24px;
+}
+
+.card__stars-star:nth-child(-n+1),
+.card__stars-star:nth-child(-n+2),
+.card__stars-star:nth-child(-n+3),
+.card__stars-star:nth-child(-n+4) {
+  background-image: url(/images/star-active.svg);
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--main-color);
+}
+
+.card__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__price-name {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--second-color);
+}
+
+.card__price-cost {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card__button {
+  display: flex;
+  margin: 16px 0;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  background: var(--main-background-color);
+  border-radius: 5px;
+}
+
+.card__button:hover {
+  background: var(--second-background-color);
+  border: 1px solid var(--main-background-color);
+  box-sizing: border-box;
+  color: var(--main-background-color);
+}
+
+.card__buy {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--second-background-color);
+}
+
+.card__buy:hover {
+  color: var(--main-background-color);
+}
