@@ -4,7 +4,6 @@ html {
   
 body {
   margin: 0;
-  padding: 0;
 }
 
 .product {
@@ -85,11 +84,8 @@ body {
 }
 
 .product__link {
-  display: flex;
   background-color: #00acdc;
   text-decoration: none;
-  justify-content: center;
-  align-items: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -100,21 +96,16 @@ body {
 }
 
 .product__link:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #00acdc;
   border: 1px solid #00acdc;
-  border-radius: 5px;
   background-color: #fff;
-  width: 54px;
 }
 
-.product__stars {
+.stars {
   display: flex;
 }
 
-.product__star {
+.stars__star {
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -123,6 +114,12 @@ body {
   height: 15px;
 }
 
-.product__stars .product__star:nth-child(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
