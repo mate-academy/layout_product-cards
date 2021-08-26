@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e5e5e5;
+  --color-button: #00acdc;
+}
+
+.product-card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 32px 16px 16px;
+}
+
+.product-card__photo {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.product-card__name {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.product-card__kod {
+  font-size: 10px;
+  color: #616070;
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 32px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars_star {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars_star:nth-child(5) {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+}
+
+.reviews {
+  font-size: 10px;
+  text-decoration: none;
+  color: #060b35;
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__price-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+  margin: 0;
+}
+
+.product-card__price-value {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #060b35;
+  margin: 0;
+}
+
+.product-card__buy {
+  display: block;
+  padding: 12px 55px;
+  background-color: var(--color-button);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-card__buy:hover {
+  background-color: #fff;
+  border: 1px solid var(--color-button);
+  color: var(--color-button);
+}
