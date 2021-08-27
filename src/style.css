@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+
+  --darkGray: #060b35;
+  --lightGray: #616070;
+  --lightBlue: #00acdc;
+}
+
+.body {
+  background-color: #e5e5e5;
+  padding: 10px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 166px;
+  padding: 32px 16px 16px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product__image {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.product__name {
+  margin-top: 40px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--darkGray);
+}
+
+.product__code {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--lightGray);
+}
+
+.product__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.stars {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.stars__star {
+  margin: 0 4px 0 0;
+  flex-direction: row-reverse;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star.svg);
+  /* background-position: 50%; */
+  background-repeat: no-repeat;
+}
+
+.stars--4 .stars__star:nth-child(n + 2) {
+  background-image: url(images/star-active.svg);
+}
+
+.product__review {
+  align-self: center;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--darkGray);
+}
+
+.product__priceInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.product__priceName {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--lightGray);
+}
+
+.product__priceValue {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--darkGray);
+}
+
+.product__buyButton {
+  box-sizing: border-box;
+  margin-top: 16px;
+  padding: auto;
+  height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--lightBlue);
+  border-radius: 5px;
+}
+
+.product__buyButton:hover {
+  color: var(--lightBlue);
+  line-height: 38px;
+  border: 1px solid var(--lightBlue);
+  background-color: #fff;
+}
