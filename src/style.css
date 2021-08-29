@@ -3,6 +3,7 @@
 * {
   margin: 0;
   font-family: Roboto, sans-serif;
+  
 }
 
 .product {
@@ -13,19 +14,22 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  padding: 0 16px;
 }
 
 .product__image {
   width: 160px;
   height: 134px;
-  margin: 32px 19px 40px;
+  margin: 32px auto 0;
+  padding: 0;
 }
 
 .product__info {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  margin: 0 16px 4px;
+  margin-top: 40px;
+  padding: 0;
   color: #060b35;
 }
 
@@ -33,72 +37,61 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  margin: 0 16px 16px;
+  margin: 4px 0 18px;
   color: #616070;
 }
 
-.stars {
+.product__stars {
   display: flex;
-  margin-left: 8px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.stars__0 {
-  margin: 0;
-}
-
-.stars__star {
+.product__stars-star {
   width: 16px;
   height: 16px;
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
-  margin: 2px 2px -2px;
+  margin: 0 2px;
 }
 
-.stars--0 .stars__star:nth-child(-n+4) {
+.product__stars .product__stars-star:nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
 }
 
-.stars__response {
+.product__rating {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  margin-right: 16px;
   color: #060b35;
+  margin-top: -1px;
 }
 
-.price {
-  margin-top: 24px;
-  margin-bottom: 12px;
+.product__price {
+  margin-top: 22px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.price__title {
+.product__price-title {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  margin: 0 0 4px 16px;
   color: #616070;
 }
 
-.price__current {
+.product__price-current {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  margin: 0 16px 4px;
   color: #060b35;
 }
 
-.button {
+.product__button {
+  margin-top: 16px;
   display: flex;
   justify-content: center;
-
-}
-
-.button__buy {
   box-sizing: border-box;
   height: 40px;
   width: 166px;
@@ -107,11 +100,12 @@
   background-color: #00acdc;
   font-size: 14px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 40px;
   color: #fff;
+  transition: 0.5s;
 }
 
-.button__buy:hover {
+.product__button:hover {
   background-color: #fff;
   color: #00acdc;
 }
