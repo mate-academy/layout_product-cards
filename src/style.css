@@ -26,21 +26,36 @@ p {
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* if use h2, h3 {...} — result is: 
+Expected newline after "," linter falt */
+
+.h1-hidden {
+  display: none;
+}
+
 .product-card {
   height: 406px;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background: var(--main-bg-color);
-  padding: 16px;
+  padding: 32px 16px 16px;
 }
 
-.product-card__image {
-  margin-top: 16px;
+.product-card__image-wrapper {
   text-align: center;
+  padding-bottom: 36px;
 }
 
-.product-card__image > img {
+.product-card__image-wrapper > img {
   width: 160px;
   height: 134px;
   object-fit: cover;
@@ -51,30 +66,30 @@ p {
   font-weight: 500;
   color: var(--main-color);
   line-height: 18px;
-  margin: 36px 0 0;
+  padding-bottom: 4px;
 }
 
-.product-card__product-code {
-  margin-top: 4px;
+.product-card__code {
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
   text-align: left;
   color: var(--serving-color);
+  padding-bottom: 16px;
 }
 
 .response {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
+  padding-bottom: 24px;
 }
 
-.response__stars {
+.stars {
   display: flex;
 }
 
-.response__star {
+.stars__item {
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
@@ -83,7 +98,7 @@ p {
   margin-right: 4px;
 }
 
-.response__star:nth-child(-n + 4) {
+.stars__item:nth-child(-n + 4) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -99,10 +114,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 24px;
+  padding-bottom: 16px;
 }
 
-.product-card__price-text {
+.product-card__price-title {
   color: var(--serving-color);
   font-size: 12px;
   font-weight: 400;
@@ -123,10 +138,9 @@ p {
   height: 40px;
   background-color: var(--main-color);
   border-radius: 5px;
-  margin-top: 16px;
 }
 
-.product-card__buy > a {
+.product-card__buy .product-card__buy-link {
   margin: 0 auto;
   text-decoration: none;
   text-transform: uppercase;
@@ -136,7 +150,7 @@ p {
   padding: 10px 55px;
 }
 
-.product-card__buy:hover > a {
+.product-card__buy:hover .product-card__buy-link {
   border: 1px solid var(--main-color);
   border-radius: 5px;
   color: var(--main-color);
