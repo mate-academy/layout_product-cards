@@ -6,7 +6,7 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .card {
@@ -17,10 +17,11 @@ html {
   height: 408px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 0;
 }
 
 .card__img {
-  margin: 32px 19px 0;
+  margin: 0 3px;
 }
 
 .img {
@@ -29,7 +30,7 @@ html {
 }
 
 .card__product-name {
-  margin: 40px 16px 0;
+  margin-top: 40px;
 }
 
 .product-name {
@@ -42,7 +43,7 @@ html {
 }
 
 .card__product-code {
-  margin: 4px 0 0 16px;
+  margin-top: 4px;
 }
 
 .product-code {
@@ -58,7 +59,7 @@ html {
 }
 
 .review__stars {
-  margin: 15px 0 0 16px;
+  margin-top: 15px;
 }
 
 .stars {
@@ -78,12 +79,16 @@ html {
   margin-left: 0;
 }
 
-.stars__star:nth-child(-n+4) {
+.stars--active--1 > .stars__star:first-child,
+.stars--active--2 > .stars__star:nth-child(-n+2),
+.stars--active--3 > .stars__star:nth-child(-n+3),
+.stars--active--4 > .stars__star:nth-child(-n+4),
+.stars--active--5 > .stars__star:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
 .review__responce {
-  margin: 16px 16px 0 0;
+  margin-top: 16px;
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
@@ -91,19 +96,18 @@ html {
 
 .price {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
 .price_text {
-  margin: 25px 0 0 16px;
+  margin-top: 25px;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
 }
 
 .price_value {
-  margin: 24px 16px 0 0;
+  margin-top: 24px;
   font-weight: 700;
   font-size: 16px;
   font-style: normal;
@@ -112,20 +116,21 @@ html {
 }
 
 .card__buy {
-  margin: 16px;
+  margin-top: 16px;
 }
 
 .buy__button {
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
   width: 168px;
   height: 40px;
   border-radius: 5px;
-  border: none;
   background-color: #00acdc;
 }
 
 .buy__link {
   display: block;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
@@ -136,7 +141,6 @@ html {
 
 .buy__button:hover {
   background: #fff;
-  border: 1px solid #f3f3f3;
 }
 
 .buy__link:hover {
