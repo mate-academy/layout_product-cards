@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   background-color: #e5e5e5;
   --color-button: #00acdc;
 }
@@ -23,43 +25,48 @@ body {
 .product-card__photo {
   width: 160px;
   height: 134px;
-  margin: 0 auto 40px;
+  margin: 0 auto 38px;
   display: block;
 }
 
 .product-card__name {
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 18px;
+  margin: 0;
 }
 
 .product-card__kod {
   font-size: 10px;
   color: #616070;
+  line-height: 14px;
+  margin: 7px 0 0;
 }
 
 .product-card__rating {
   display: flex;
   justify-content: space-between;
-  margin: 16px 0 32px;
+  margin: 16px 0 24px;
 }
 
 .stars {
   display: flex;
 }
 
-.stars_star {
-  background-image: url(./images/star-active.svg);
+.stars__star {
+  background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
   margin-right: 4px;
 }
 
-.stars_star:nth-child(5) {
-  background-image: url(./images/star.svg);
-  background-repeat: no-repeat;
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
 }
 
 .reviews {
@@ -102,10 +109,10 @@ body {
   margin-top: 16px;
   text-decoration: none;
   font-weight: bold;
+  border: 1px solid var(--color-button);
 }
 
 .product-card__buy:hover {
   background-color: #fff;
-  border: 1px solid var(--color-button);
   color: var(--color-button);
 }
