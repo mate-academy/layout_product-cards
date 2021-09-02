@@ -61,14 +61,20 @@ body {
 }
 
 .star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 16px;
   height: 16px;
-  object-fit: none;
   margin-right: 4px;
 }
 
 .star:last-child {
   margin-right: 0;
+}
+
+.rating__stars--active .star.star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .rating__reviews {
