@@ -28,32 +28,34 @@ html {
 .card {
   display: flex;
   flex-direction: column;
-  width: 198px;
-  position: absolute;
+  width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   height: 406px;
-  
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
 }
 
 .card__foto_card {
-  height: 166px;
-}
-
-.card__foto_card_position {
-  padding: 32px 19px 0;
-  position: relative;
   width: 160px;
   height: 134px;
 }
 
+.card__foto_card_position {
+  position: relative;
+  width: 160px;
+  height: 134px;
+  margin-left: 3px;
+
+}
+
 .card__product_info {
-  padding: 40px 16px 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
+  margin-top: 40px;
 }
 
 .card__product_name {
@@ -70,34 +72,31 @@ html {
 
 .card__product_code {
   position: relative;
-  padding: 4px 0 0;
+  margin-top: 4px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   color: #616070;
-  height: 14px;
-  
+  line-height: 14px;
 }
 
 .card__product_rating {
   display: flex;
-  padding: 18px 0 0 2px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
-  height: 14px;
+  line-height: 16px;
 }
 
 .stars {
-  position: relative;
   display: flex;
   content: "";
-  top: 0%;
-  margin: 0;
   border-radius: 0.5px;
-  padding-right: 0;
+  margin-right: 16px;
+  margin-left: 2px;
+  margin-top: 18px;
 }
 
 .stars__star {
@@ -110,7 +109,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.card__stars--active__stars > :nth-child(-n+4) {
+.stars--4 > :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
   border-radius: 0.5px;
 }
@@ -124,22 +123,21 @@ html {
   flex: none;
   order: 1;
   flex-grow: 0;
-  padding: 0 0 0 16px;
   color: #060b35;
-
+  margin-top: 17px;
 }
 
 .card__price_card {
   display: flex;
+  margin-top: 24px;
 }
 
 .card__product_price {
   display: flex;
-  align-items: flex-end;
   flex: none;
   order: 0;
   flex-grow: 0;
-  padding: 22px 56px 0 0;
+  margin-right: 55px;
   font-weight: 400;
   font-size: 12px;
   font-style: normal;
@@ -148,13 +146,9 @@ html {
 }
 
 .card__product_price_number {
-  display: flex;
-  align-items: flex-end;
-  text-align: right;
   flex: none;
   order: 1;
   flex-grow: 0;
-  padding: 24px 16px 0 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -163,21 +157,16 @@ html {
 }
 
 .card__product_buy {
-  position: absolute;
   width: 166px;
   height: 40px;
-  bottom: 16px;
   background: #00acdc;
   border-radius: 5px;
   border: 1px solid #00acdc;
   box-sizing: border-box;
+  margin-top: 14px;
 }
 
 .card__product_buy_text {
-  width: 55px;
-  height: 16px;
-  left: calc(50% - 55px / 2 - 0.5px);
-  border: 29px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -185,7 +174,7 @@ html {
   line-height: 16px;
   text-transform: uppercase;
   text-align: center;
-  padding: 11px 56px 12px 54px;
+  padding: 11px 53px;
   color: #fff;
 }
 
