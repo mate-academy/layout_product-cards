@@ -1,139 +1,127 @@
-h1 {
-  display: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
   margin: 0;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 200px;
-  height: 404px;
+  width: 166px;
+  padding: 0 16px 16px;
+  background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 32px 16px 16px;
-}
-
-.card__image-container {
-  position: relative;
-  width: 160px;
-  height: 134px;
-  margin: 0 5px 45px;
-
 }
 
 .card__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card__rating-feedback {
-  font-family: Roboto, sans-serif;
-  font-size: 10px;
-  line-height: 14px;
-  float: right;
+  display: block;
+  height: 134px;
+  width: 160px;
+  margin: 32px auto 40px;
 }
 
 .card__title {
-  font-family: Roboto, sans-serif;
-  width: 168px;
-  height: 36px;
-  font-size: 11px;
-  line-height: 18px;
-  color: #060b35;
+  display: flex;
+  text-decoration: none;
   margin-bottom: 4px;
+  color: #060b35;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .card__number {
-  width: 92px;
-  height: 14px;
+  display: flex;
+  align-self: start;
   font-size: 10px;
+  font-weight: 400;
   line-height: 14px;
+  margin-bottom: 17px;
   color: #616070;
-  margin: 2px;
-  margin-bottom: 16px;
-}
-
-.card__rating-star {
-  background-image: url(images/star.svg);
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
 }
 
 .card__rating {
   display: flex;
-  flex-direction: row;
-  padding-bottom: 10px;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 
-.card__rating :first-child,
+.card__rating-star {
+  background-image: url(images/star.svg);
+  width: 14px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .card__rating :nth-child(-n + 4) {
   background-image: url(images/star-active.svg);
 }
 
+.card__rating-feedback {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #060b35;
+  margin-left: 12px;
+  margin-top: 1px;
+}
+
 .card__price {
   display: flex;
-  justify-content: space-around;
-  padding: 10px 0 16px;
-  margin: 0;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  align-items: baseline;
 }
 
 .card__price-name {
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
-  width: 32px;
-  height: 18px;
-  flex-grow: 1;
 }
 
-.card__price-namber {
-  font-family: Roboto, sans-serif;
+.card__price-number {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
-  justify-self: end;
+  color: #060b35;
 }
 
 .card__buy {
-  width: 168px;
+  display: block;
+  width: 166px;
   height: 40px;
-  background-color: #00acdc;
-  border-radius: 5px;
-  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 40px;
-  margin-top: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #00acdc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  border-color: #fff;
 }
 
 .card__buy-link {
+  font-family: Roboto, sans-serif;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .card__buy:hover {
-  text-decoration: none;
-  background-color: white;
+  background-color: #fff;
   color: #00acdc;
-  border-radius: 5px;
   border: 1px solid #00acdc;
 }
 
 .card__buy-link:hover {
   color: #00acdc;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
 }
