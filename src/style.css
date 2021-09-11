@@ -1,0 +1,127 @@
+:root {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --link-color: #00acdc;
+  --border-color: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid var(--border-color);
+}
+
+.product-card__goods-image {
+  align-self: center;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.product-card__title {
+  margin-bottom: 4px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.product-card__code {
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+  font-size: 10px;
+  line-height: 140%;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 > :nth-child(-n + 1),
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
+  background-image: url("images/star-active.svg");
+}
+
+.product-card__stars {
+  margin-right: 17px;
+}
+
+.product-card__reviews {
+  color: var(--main-color);
+  font-size: 10px;
+  line-height: 140%;
+}
+
+.product-card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__label {
+  color: var(--secondary-color);
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.product-card__price {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 112%;
+  margin-bottom: 16px;
+}
+
+.product-card__buy-button {
+  padding: 12px 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--link-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 114%;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.product-card__buy-button:hover {
+  color: var(--link-color);
+  border-color: var(--link-color);
+  background: #fff;
+}
