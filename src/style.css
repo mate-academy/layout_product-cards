@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -12,7 +16,6 @@ body {
 
 .container {
   width: 200px;
-  box-sizing: border-box;
   padding: 32px 16px 16px;
 
   display: flex;
@@ -25,15 +28,11 @@ body {
 
 .article {
   position: relative;
-  width: 160px;
-  height: 134px;
-  left: calc(50% - 160px / 2);
-
 }
 
 .article-img {
   display: block;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   width: 160px;
   height: 134px;
 }
@@ -46,13 +45,8 @@ body {
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 4px;
   width: 16px;
   height: 16px;
-}
-
-.star:last-child {
-  margin-right: 0;
 }
 
 .star-active {
@@ -66,9 +60,6 @@ body {
 
 .description {
   padding-top: 40px;
-  width: 166px;
-  height: 36px;
-
   font-weight: 500;
   line-height: 18px;
 
@@ -86,36 +77,39 @@ body {
 }
 
 .rewiev-container {
+  margin-bottom: 24px;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 24px;
 }
 
 .review {
   padding-left: 17px;
 
   font-size: 10px;
-  line-height: 14px;
+
   color: #060b35;
 }
 
 .price-field {
+  margin-bottom: 16px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
 }
 
 .price-title {
   font-weight: 300;
   font-size: 12px;
-  line-height: 18px;
+
   color: #616070;
 }
 
 .price {
   padding-left: 55px;
+
   line-height: 18px;
   font-weight: bold;
   font-size: 16px;
@@ -125,14 +119,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 166px;
   height: 40px;
   text-decoration: none;
   background: #00acdc;
   border-radius: 5px;
-  border: none;
-  font-family: inherit;
-  font-style: inherit;
+
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -144,7 +135,6 @@ body {
 .button:hover {
   border: 1px solid #00acdc;
   background: #fff;
-  box-sizing: border-box;
   border-radius: 5px;
 
   color: #00acdc;
