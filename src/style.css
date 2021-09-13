@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  color: #060b35;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  width: 200px;
+  height: 408px;
+}
+
+.card__mac-image {
+  width: 160px;
+  height: 134px;
+
+  margin-top: 32px;
+}
+
+.card__description {
+  margin-top: 40px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.card__description-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__description-id {
+  color: #616070;
+
+  margin-top: 4px;
+}
+
+/* #region Rating */
+.card__description-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 16px;
+}
+
+/* #region Stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 16px;
+  width: 16px;
+
+  margin-right: 4px;
+}
+
+.stars--4 > .stars__star:not(:nth-child(n+5)) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion*/
+
+.comments {
+  margin: 0;
+  line-height: 16px;
+}
+
+/* #endregion */
+
+/* #region Price-tag */
+.card__description-price-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 23px;
+}
+
+.card__description-price-tag-word-price {
+  font-size: 12px;
+  color: #616070;
+}
+
+.card__description-price-tag-price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* #endregion */
+
+.card__description-button-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 166px;
+  height: 40px;
+
+  margin-top: 16px;
+
+  background-color: #00acdc;
+
+  border-radius: 5px;
+
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__description-button-buy:hover {
+  background-color: #fff;
+
+  border: 1px solid #00acdc;
+
+  color: #00acdc;
+}
