@@ -9,6 +9,11 @@ html {
   font-weight: normal;
   color: #060b35;
   font-size: 10px;
+
+  --background-color: #fff;
+  --main-border-color: #f3f3f3;
+  --accent-light-color: #616070;
+  --accent-main-color: #00acdc;
 }
 
 body {
@@ -20,7 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--main-border-color);
   border-radius: 5px;
 
   width: 200px;
@@ -47,7 +52,7 @@ body {
 }
 
 .card__description-id {
-  color: #616070;
+  color: var(--accent-light-color);
 
   margin-top: 4px;
 }
@@ -77,7 +82,13 @@ body {
   margin-right: 4px;
 }
 
-.stars--4 > .stars__star:not(:nth-child(n+5)) {
+
+
+.stars--1 > .stars__star:not(:nth-child(n+2)),
+.stars--2 > .stars__star:not(:nth-child(n+3)),
+.stars--3 > .stars__star:not(:nth-child(n+4)),
+.stars--4 > .stars__star:not(:nth-child(n+5)),
+.stars--5 > .stars__star:not(:nth-child(n+6)) {
   background-image: url(./images/star-active.svg);
 }
 /* #endregion*/
@@ -100,7 +111,7 @@ body {
 
 .word-price {
   font-size: 12px;
-  color: #616070;
+  color: var(--accent-light-color);
 }
 
 .price {
@@ -120,21 +131,21 @@ body {
 
   margin-top: 16px;
 
-  background-color: #00acdc;
+  background-color: var(--accent-main-color);
 
   border-radius: 5px;
 
   font-weight: bold;
-  color: #fff;
+  color: var(--background-color);
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .card__description-button-buy:hover {
-  background-color: #fff;
+  background-color: var(--background-color);
 
-  border: 1px solid #00acdc;
+  border: 1px solid var(--accent-main-color);
 
-  color: #00acdc;
+  color: var(--accent-main-color);
 }
