@@ -5,24 +5,35 @@ body {
 }
 
 .card {
-  display: flex;
-  background: #fff url(./images/imac.jpeg) no-repeat;
-  background-size: 160px 134px;
-  background-position: center 32px;
+  background: #fff;
   height: 406px;
   width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__image {
+  margin: 32px 19px 0;
+  height: 134px;
+  width: 160px;
 }
 
 .info__name {
-  height: 35px;
+  height: 36px;
   width: 166px;
-  margin: 206px 16px 0;
+  margin: 40px 16px 0;
   font-weight: 500;
   font-size: 12px;
+  line-height: 18px;
 }
 
 .info__code {
-  margin: 0 16px;
+  margin: 4px 16px 0;
   font-weight: 400;
   font-size: 10px;
 }
@@ -32,11 +43,29 @@ body {
   height: 16px;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 16px 0;
+  margin: 17px 16px 0;
 }
 
 .review__stars {
-  gap: 4px;
+  display: flex;
+  justify-content: space-around;
+  height: 16px;
+  margin-left: 2px;
+  /* gap: 4px; */
+}
+
+.stars_star {
+  background: url("./images/star-active.svg") no-repeat;
+  width: 16px;
+  margin: 2px 0 0;
+}
+
+.stars_star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars_star:last-child {
+  background: url("./images/star.svg") no-repeat;
 }
 
 .review__count {
@@ -49,7 +78,8 @@ body {
   height: 18px;
   justify-content: space-between;
   align-items: center;
-  margin: 24px 16px;
+  margin: 24px 16px 16px;
+
 }
 
 .price__text {
@@ -81,4 +111,16 @@ body {
   background-color: white;
   color: #00acdc;
   border: 1px solid #00acdc;
+  box-sizing: border-box;
+}
+
+.info__name,
+.price__value,
+.review__count {
+  color: #060b35;
+}
+
+.price__text,
+.info__code {
+  color: #616070;
 }
