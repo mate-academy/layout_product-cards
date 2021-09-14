@@ -16,12 +16,12 @@
   margin: 16px 3px 40px;
 }
 
-.product-info {
+.product-container__info {
   display: flex;
   flex-direction: column;
 }
 
-.product-info__name {
+.product-container__name {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -29,7 +29,7 @@
   margin-bottom: 4px;
 }
 
-.product-info__id {
+.product-container__id {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -37,22 +37,22 @@
   margin-bottom: 16px;
 }
 
-.product-info__rating {
+.product-container__rating {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 24px;
 }
 
-.product-info__price {
+.product-container__price-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.product-info__buy-button {
+.product-container__buy-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,47 +67,31 @@
   border: 1px solid transparent;
   text-decoration: none;
   color: #fff;
+  text-transform: uppercase;
 }
 
-.stars {
-  display: flex;
-  flex-direction: row;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-position: center;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-}
-
-.stars--4 .stars__star:nth-child(-n+4) {
-  background-image: url(../images/star-active.svg);
-}
-
-.rating__reviews {
+.product-container__reviews {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
+  color: #060b35;
 }
 
-.price__price {
+.product-container__price {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: var(--grey-color);
+  color: #616070;
 }
 
-.price__amount {
+.product-container__amount {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #060b35;
 }
 
-.product-info__buy-button:hover {
+.product-container__buy-button:hover {
   color: var(--light-blue);
   background-color: #fff;
   border-color: var(--light-blue);
