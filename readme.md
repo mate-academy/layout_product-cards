@@ -21,12 +21,15 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 - add `data-qa="card"` attribute to the card block
 - add `data-qa="hover"` attribute to the link
 
-### Common mistakes
+--> [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md)
+
+### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
-- Do not use `tabs`. Use `2 spaces` for indentation.
-- Don't use repeated styles.
+- Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
+and keep it operational. If you change `stars--4` modifier to `stars--2` or
+other - number of selected stars should change correctly.
 - Item with text 'Купить' should be a link.
-- Check font styles. Use [google fonts](https://fonts.google.com/)
+- Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
 
 ---
 ![screenshot](./references/card-example.png)
