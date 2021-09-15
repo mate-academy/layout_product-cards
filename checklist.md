@@ -56,3 +56,4 @@ and let content dictate the container size.
 transparent border of the same width, and change its color on `:hover`
 9. [STYLES] - Be consistent with your margins. Add only top or bottom, don't
 add both.
+10. [FILE STRUCTURE] - You should create separate file for each BEM block
