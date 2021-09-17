@@ -1,3 +1,9 @@
+:root {
+  --color-card: #fff;
+  --color-card__product: #00acdc;
+  --color-card__code: #616070;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -5,7 +11,7 @@
   padding: 32px 16px 16px;
   line-height: 18px;
 
-  background: #fff;
+  background: var(--color-card);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
@@ -28,7 +34,7 @@
   font-size: 10px;
   line-height: 14px;
 
-  color: #616070;
+  color: var(--color-card__code);
 }
 
 .card__reviews {
@@ -54,7 +60,7 @@
 .card__text {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--color-card__code);
 }
 
 .card__price {
@@ -63,27 +69,27 @@
   font-weight: 700;
 }
 
-.product {
+.card__product {
   padding: 11px;
 
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
   text-align: center;
-  color: #fff;
+  color: var(--color-card);
   text-transform: uppercase;
 
   text-decoration: none;
   border: 1px solid  transparent;
   border-radius: 5px;
-  background: #00acdc;
+  background: var(--color-card__product);
 
   transition: all 0.2s;
 }
 
-.product:hover {
-  color: #00acdc;
-  background: #fff;
+.card__product:hover {
+  color: var(--color-card__product);
+  background: var(--color-card);
 
-  border: 1px solid #00acdc;
+  border: 1px solid var(--color-card__product);
 }
