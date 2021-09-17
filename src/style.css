@@ -1,0 +1,137 @@
+html {
+  font-family: Roboto, sans-serif;
+
+  --white: #fff;
+  --dark: #060b35;
+  --grey: #616070;
+  --blue: #00acdc;
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+}
+
+.card__image {
+  display: block;
+  width: 160px;
+  margin: 0 auto 40px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dark);
+
+  margin-bottom: 2px;
+}
+
+.card__code {
+  margin-bottom: 16px;
+
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  height: 16px;
+}
+
+.card__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__stars :nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+  margin-right: 4px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--dark);
+}
+
+.card__price {
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.card__price-label {
+  font-size: 12px;
+  line-height: 18px;
+
+  text-align: left;
+
+  display: inline-block;
+
+  color: var(--grey);
+}
+
+.card__price-number {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-align: right;
+
+  display: inline-block;
+
+  color: var(--dark);
+}
+
+.card__buy-button {
+  display: block;
+
+  width: 100%;
+  padding: 12px 0;
+
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+
+  background-color: var(--blue);
+  border-radius: 5px;
+}
+
+.card__buy-button:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
