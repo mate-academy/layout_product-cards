@@ -1,0 +1,136 @@
+:root {
+  --text-color-dark: #060b35;
+  --text-color-light: #616070;
+  --button-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__name {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color-dark);
+  margin-bottom: 4px;
+}
+
+.card__code {
+  color: var(--text-color-light);
+  margin-bottom: 15px;
+}
+
+.card__feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* #region starts */
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars--0 :nth-child(n),
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:nth-child(n+5) {
+  background-image: url(images/star.svg);
+}
+
+/* #endregion */
+
+.card__commets {
+  color: var(--text-color-dark);
+}
+
+/* #region price */
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.price__caption {
+  color: var(--text-color-light);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.price__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color-dark);
+}
+
+/* #endregion */
+
+/* #region button */
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+  color: var(--button-color);
+}
+
+/* #endregion */
