@@ -15,15 +15,15 @@ selector.
 GOOD example
 ```html
 <!--index.html-->
-<div class="container">
-  <div class="container__card card">
+<div class="card">
+  <div class="card__card card">
     ...
   </div>
 </div>
 ```
 ```css
 /*styles.css*/
-.container__card {
+.card__card {
   margin: 48px 24px;
 }
 
@@ -36,7 +36,7 @@ GOOD example
 BAD example
 ```html
 <!--index.html-->
-<div class="container">
+<div class="card">
   <div class="card">
     ...
   </div>
@@ -51,7 +51,7 @@ BAD example
 ```
 
 7. [STYLES] - Don't hardcode exact card size. Add necessary paddings according to mockup
-and let content dictate the container size.
+and let content dictate the card size.
 8. [STYLES] - Don't add new border to the element on hover. Add default
 transparent border of the same width, and change its color on `:hover`
 9. [STYLES] - Be consistent with your margins. Add only top or bottom, don't
