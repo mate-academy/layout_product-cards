@@ -13,40 +13,44 @@ BEM-blocks. Use mix where necessary and move all external styles under element
 selector.
 
 GOOD example
+
 ```html
 <!--index.html-->
 <div class="container">
-  <div class="container__card card">
-    ...
-  </div>
+    <div class="container__card product-card">
+        ...
+    </div>
 </div>
 ```
+
 ```css
 /*styles.css*/
 .container__card {
-  margin: 48px 24px;
+    margin: 48px 24px;
 }
 
-.card {
-  font-size: 16px;
-  background-color: purple;
+.product-card {
+    font-size: 16px;
+    background-color: purple;
 }
 ```
 
 BAD example
+
 ```html
 <!--index.html-->
 <div class="container">
-  <div class="card">
-    ...
-  </div>
+    <div class="product-card">
+        ...
+    </div>
 </div>
 ```
+
 ```css
-.card {
-  margin: 48px 24px;
-  font-size: 16px;
-  background-color: purple;
+.product-card {
+    margin: 48px 24px;
+    font-size: 16px;
+    background-color: purple;
 }
 ```
 
