@@ -65,6 +65,7 @@ body {
 }
 
 .rating__star {
+  background: url(images/star.svg) no-repeat;
   background-position: center;
   width: 16px;
   height: 16px;
@@ -74,24 +75,8 @@ body {
   margin-right: 4px;
 }
 
-.rating__star:nth-child(1) {
+.rating__stars--4 > .rating__star:nth-child(-n+4) {
   background: url(images/star-active.svg) no-repeat;
-}
-
-.rating__star:nth-child(2) {
-  background: url(images/star-active.svg) no-repeat;
-}
-
-.rating__star:nth-child(3) {
-  background: url(images/star-active.svg) no-repeat;
-}
-
-.rating__star:nth-child(4) {
-  background: url(images/star-active.svg) no-repeat;
-}
-
-.rating__star:nth-child(5) {
-  background: url(images/star.svg) no-repeat;
 }
 
 .rating__review {
@@ -134,7 +119,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  transition: all 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
   padding: 5px;
   font-size: 14px;
   line-height: 16px;
