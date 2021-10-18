@@ -1,13 +1,67 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Product cards</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <h1>Product cards</h1>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="
+            width=device-width,
+            user-scalable=no,
+            initial-scale=1.0,
+            maximum-scale=1.0,
+            minimum-scale=1.0
+    ">
+    <title>Product cards</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="product-card" data-qa="card">
+      <img
+        src="images/imac.jpeg"
+        alt=""
+        class="product-card__product-img"
+      >
+
+      <div class="product-card__product-info">
+        <h2 class="product-card__product-name">
+          Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)
+        </h2>
+        <p class="product-card__product-number">
+          Код товара: 195434
+        </p>
+      </div>
+
+      <div class="product-card__rating">
+        <div class="stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+
+        <span class="product-card__reviews-count">
+          Отзывов: 5
+        </span>
+      </div>
+
+      <div class="product-card__price price">
+        <span class="price__title">Цена:</span>
+        <span class="price__value">69 999 грн</span>
+      </div>
+
+      <a href="#"
+        class="product-card__buy-button"
+        data-qa="hover"
+      >
+        Купить
+      </a>
+    </div>
+  </body>
 </html>
