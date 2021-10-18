@@ -1,0 +1,120 @@
+@import url(./reset.css);
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #060b35;
+
+  --small-font-size: 12px;
+  --large-font-size: 16px;
+
+  --font-color-light: #616070;
+  --active-blue-color: #00acdc;
+  --border-color: #f3f3f3;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.card__image {
+  box-sizing: border-box;
+  padding: 0 3px;
+  width: 100%;
+  height: 134px;
+}
+
+.card__product-name {
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  margin: 37px 0 5px;
+}
+
+.card__item-number {
+  color: var(--font-color-light);
+  font-size: 10px;
+}
+
+.card__product-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+
+  padding: 17px 0;
+  height: 58px;
+}
+
+.stars {
+  display: flex;
+  flex: 58%;
+}
+
+.stars--1 > :nth-child(-n + 1),
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars__star {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__reviews {
+  flex: auto;
+  line-height: 16px;
+  font-size: 10px;
+  text-align: right;
+}
+
+.card__price {
+  flex: 50%;
+  font-size: var(--small-font-size);
+  color: var(--font-color-light);
+}
+
+.card__price-value {
+  flex: 50%;
+  font-size: var(--large-font-size);
+  text-align: right;
+  font-weight: 700;
+}
+
+.buy-item-button {
+  display: block;
+  height: 40px;
+
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+
+  background-color: var(--active-blue-color);
+  border-radius: 5px;
+}
+
+.buy-item-button:hover {
+  box-sizing: border-box;
+  color: var(--active-blue-color);
+
+  background: #fff;
+  border: 1px solid var(--active-blue-color);
+}
