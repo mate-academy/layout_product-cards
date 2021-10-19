@@ -1,0 +1,38 @@
+.card-rate {
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+  
+.stars__star {
+  background-image: url("./images/star.svg");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-left: 4px;
+  cursor: pointer;
+}
+  
+.stars__star:first-child {
+  margin-left: 0;
+}
+  
+.stars--1 > :nth-child(-n+1),
+.stars--2 > :nth-child(-n+2),
+.stars--3 > :nth-child(-n+3),
+.stars--4 > :nth-child(-n+4),
+.stars--5 > :nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.card-rate__amount {
+  color: rgba(6, 11, 53, 1);
+  font-size: 10px;
+  cursor: pointer;
+}
