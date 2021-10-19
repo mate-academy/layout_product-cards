@@ -34,3 +34,4 @@ other - number of selected stars should change correctly.
 ---
 ![screenshot](./references/card-example.png)
 
+Test still doesn't pass, it seems that font isn't linked
