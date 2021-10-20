@@ -1,3 +1,5 @@
+@import url(./styles/reset.css);
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
@@ -8,24 +10,15 @@
   --main-color: #060b35;
   --main-bg-color: #fff;
   --serving-color: #616070;
+  --blue-color: #00acdc;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
+.html {
   font-family: "Roboto", sans-serif;
-}
-
-body {
-  margin: 0;
-}
-
-p,
-h2,
-h3 {
-  margin: 0;
 }
 
 .h1-hidden {
@@ -123,11 +116,10 @@ h3 {
 }
 
 .product-card__buy {
-  --main-color: #00acdc;
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: var(--main-color);
+  background-color: var(--blue-color);
   border-radius: 5px;
 }
 
@@ -139,11 +131,12 @@ h3 {
   font-weight: 700;
   color: var(--main-bg-color);
   padding: 10px 55px;
+  border: 1px solid transparent;
 }
 
 .product-card__buy:hover .product-card__buy-link {
-  border: 1px solid var(--main-color);
+  border-color: var(--main-color);
   border-radius: 5px;
-  color: var(--main-color);
+  color: var(--blue-color);
   background-color: var(--main-bg-color);
 }
