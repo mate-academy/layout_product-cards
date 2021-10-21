@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://Nadiyahr.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://Nadiyahr.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 ___
@@ -10,7 +10,7 @@ ___
 ___
 
 ## The task
-Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/euXjY316CHKYkPRO1K0kjLsF/Moyo-Catalog?node-id=11325%3A2288).
+Create a pages with product card using `flexcard` basing on [the mockup](https://www.figma.com/file/euXjY316CHKYkPRO1K0kjLsF/Moyo-Catalog?node-id=11325%3A2288).
 
 ### Requirements:
 - reset browser's default margins
@@ -34,3 +34,4 @@ other - number of selected stars should change correctly.
 ---
 ![screenshot](./references/card-example.png)
 
+Test still doesn't pass, it seems that font isn't linked
