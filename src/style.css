@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  --Main-accent: #060b35;
+  --Secondary: #616070;
+  --Gray-elements: #e5e5e5;
+  --Blue-accent: #00acdc;
+
+}
+
+.goods_card {
+  width: 200px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 16px;
+  max-width: 166px;
+
+}
+
+.goods_card__image {
+  height: 134px;
+  /* width: 160px; */
+  left: 20px;
+  margin: 16px 0 40px;
+}
+
+.goods_card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+  color: var(--Main-accent);
+}
+
+.goods_card_code {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--Secondary);
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+.goods_card_rating,
+.goods_card_stars {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.goods_card_stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.goods_card_stars--1 :nth-child(-n+1),
+.goods_card_stars--2 :nth-child(-n+2),
+.goods_card_stars--3 :nth-child(-n+3),
+.goods_card_stars--4 :nth-child(-n+4),
+.goods_card_stars--5 :nth-child(-n+5) {
+  background-image: url(images/star-active.svg) ;
+}
+
+.goods_card_rating_num {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--Main-accent);
+}
+
+.goods_card_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.goods_card_price_name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--Secondary);
+}
+
+.goods_card_price_money {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: bold;
+  line-height: 18px;
+  color: var(--Main-accent);
+}
+
+.goods_card_button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  text-align: center;
+  background-color: var(--Blue-accent);
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.goods_card_button:hover {
+  color: var(--Blue-accent);
+  background-color: #fff;
+  border-color: var(--Blue-accent);
+}
