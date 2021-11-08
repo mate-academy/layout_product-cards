@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  --Main-accent: #060b35;
+  --Secondary: #616070;
+  --Gray-elements: #e5e5e5;
+  --Blue-accent: #00acdc;
+
+}
+
+.goods_card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.goods_card__image {
+  height: 134px;
+  width: 160px;
+  /* display: block; */
+  /* max-width: max-content; */
+  margin: 32px 0 40px;
+  align-self: center;
+}
+
+.goods_card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+  color: var(--Main-accent);
+}
+
+.goods_card_code {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--Secondary);
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+.goods_card_rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.goods_card_stars {
+  display: flex;
+}
+
+.goods_card_stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.goods_card_stars--1 :nth-child(-n+1),
+.goods_card_stars--2 :nth-child(-n+2),
+.goods_card_stars--3 :nth-child(-n+3),
+.goods_card_stars--4 :nth-child(-n+4),
+.goods_card_stars--5 :nth-child(-n+5) {
+  background-image: url(images/star-active.svg) ;
+}
+
+.goods_card_rating_num {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--Main-accent);
+}
+
+.goods_card_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.goods_card_price_name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--Secondary);
+}
+
+.goods_card_price_money {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  color: var(--Main-accent);
+}
+
+.goods_card_button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  background-color: var(--Blue-accent);
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.goods_card_button:hover {
+  color: var(--Blue-accent);
+  background-color: #fff;
+  border: 1px solid var(--Blue-accent);
+}
