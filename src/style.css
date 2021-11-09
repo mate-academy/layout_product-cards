@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+
+  --main-accent: #060b35;
+  --secondary-accent: #616070;
+  --blue-accent: #00acdc;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-accent);
+  margin-bottom: 4px;
+}
+
+.card__code-number {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  color: var(--secondary-accent);
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  border-radius: 0.5px;
+  margin-right: 4px;
+  background-position: center;
+}
+
+.stars__star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.rating__feedback {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--main-accent);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--secondary-accent);
+}
+
+.price__current-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--main-accent);
+}
+
+.card__button-buy {
+  box-sizing: border-box;
+  height: 40px;
+  background: var(--blue-accent);
+  border-radius: 5px;
+  padding: 12px 0;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__button-buy:hover {
+  background: #fff;
+  border: 1px solid var(--blue-accent);
+  color: var(--blue-accent);
+}
