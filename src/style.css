@@ -1,0 +1,133 @@
+body,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card {
+  display: flex;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0 16px;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+  margin: 32px 0 40px;
+  align-self: center;
+}
+
+.product-card__description {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.product-card__article {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rating__stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rating__stars-star {
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  gap: 2px;
+}
+
+.rating__stars--1 > div:first-child,
+.rating__stars--2 > div:nth-child(-n + 2),
+.rating__stars--3 > div:nth-child(-n + 3),
+.rating__stars--4 > div:nth-child(-n + 4),
+.rating__stars--5 > div:nth-child(n) {
+  background-image: url(/images/star-active.svg);
+}
+
+.rating__reviews {
+  display: flex;
+  align-items: center;
+}
+
+.rating__reviews-text {
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+  font-weight: normal;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.price__text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price__value {
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+  font-weight: bold;
+}
+
+.button-buy {
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.button-buy__link {
+  text-decoration: none;
+  padding: 10px 55px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.button-buy:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.button-buy__link:hover {
+  color: #00acdc;
+}
