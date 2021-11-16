@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__product {
+  height: 134px;
+  padding: 0 3px 40px;
+}
+
+.card__description {
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+  padding-bottom: 4px;
+}
+
+.card__cod {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  padding-bottom: 16px;
+}
+
+.card__review {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  line-height: 16px;
+}
+
+.review__fedback {
+  font-size: 10px;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.price__text {
+  font-size: 12px;
+  color: #616070;
+}
+
+.price__amount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.review__stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background: url("./images/star.svg") no-repeat 50% 50%;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.review__stars--5 .stars__star,
+.review__stars--4 .stars__star:nth-child(-n+4),
+.review__stars--3 .stars__star:nth-child(-n+3),
+.review__stars--2 .stars__star:nth-child(-n+2),
+.review__stars--1 .stars__star:first-child {
+  background: url("./images/star-active.svg") no-repeat 50% 50%;
+}
+
+.review__stars--inactive {
+  display: none;
+}
+
+.card__button {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  background-color: #00acdc;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.card__button:hover {
+  padding: 11px 0;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
