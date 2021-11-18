@@ -4,37 +4,17 @@
 }
 
 .card {
-  width: 198px;
-  height: 404px;
+  width: 200px;
   border: 1px solid #f3f3f3;
-  /* background-color: #fff; */
   background-color: #fff;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.button {
-  height: 40px;
-  width: 166px;
-  background-color: #00acdc;
-  border-radius: 5px;
-  font-size: 14px;
-  text-align: center;
-  line-height: 40px;
-  margin: 16px;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.price {
-  display: flex;
-  width: 166px;
-  justify-content: space-between;
-  margin-top: 24px;
+  font-family: Roboto, sans-serif;
+  color: #060b35;
+  font-weight: 400;
+  line-height: 14px;
 }
 
 .image {
@@ -48,12 +28,25 @@
 .name {
   font-size: 12px;
   margin: 40px 16px 0;
+  font-weight: 500;
+  height: 36px;
+  line-height: 18px;
 }
 
 .code {
   align-self: flex-start;
   margin: 4px 0 0 16px;
   font-size: 10px;
+  color: #616070;
+}
+
+.reviews {
+  font-size: 10px;
+  display: flex;
+  width: 166px;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
 }
 
 .stars {
@@ -65,19 +58,59 @@
   height: 16px;
   width: 16px;
   background-image: url(images/star-active.svg);
-  background-size: cover;
-  margin: 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
 }
 
-.stars--4 .stars__star:nth-child(n+5) {
+.stars__star:nth-child(n+5) {
   background-image: url(images/star.svg);
 }
 
-.all-stars {
-  font-size: 10px;
+.price {
   display: flex;
   width: 166px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 24px;
 }
+
+.price__word {
+  color: #616070;
+  font-size: 12px;
+}
+
+.price__money {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.button {
+  font-size: 14px;
+  height: 40px;
+  width: 166px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 38px;
+  margin: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border-color: #00acdc;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+/*
+.link:visited {
+  color: #fff;
+} */
