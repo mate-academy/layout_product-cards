@@ -1,7 +1,7 @@
 1. [STYLES] - Get used to style all elements using classes. And don't increase
 selectors specificity unless completely necessary.
 2. [STYLES] - Remember to use fallback fonts - alternative font-family in case
-the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
+the card one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
 3. [TASK] - Make sure to reuse part of [Stars task](https://github.com/mate-academy/layout_stars)
 here, and keep it operational in case you change block modifier.
 4. [BEM] - Check your BEM structure using BEM-linter (`npm run lint`) and
