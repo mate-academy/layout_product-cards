@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__img {
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+.product-card__image {
+  display: flex;
+  justify-content: center;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.product-card__name {
+  width: 100%;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product-card__num {
+  font-weight: normal;
+  color: #616070;
+  font-size: 10px;
+  padding-bottom: 16px;
+  line-height: 14px;
+}
+
+.star {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__item:nth-child(1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.star__reviews {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.product-card__price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-card__price-title {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.product-card__price-sum {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #060b35;
+}
+
+.product-card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.product-card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
