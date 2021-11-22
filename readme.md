@@ -25,9 +25,9 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
-- Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
-and keep it operational. If you change `stars--4` modifier to `stars--2` or
-other - number of selected stars should change correctly.
+- Reuse `review__stars` block from [review__stars task](https://github.com/mate-academy/layout_review__stars)
+and keep it operational. If you change `review__stars--4` modifier to `review__stars--2` or
+other - number of selected review__stars should change correctly.
 - Item with text 'Купить' should be a link.
 - Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
 
