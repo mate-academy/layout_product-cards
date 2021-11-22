@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: calc(200px - 2 * var(--border-width));
+  --border-width: 1px;
+  border: var(--border-width) solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #060b35;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin-top: 32px;
+  padding: 0 19px;
+}
+
+.card__description {
+  display: inline-flex;
+  align-items: center;
+  align-content: space-between;
+  flex-grow: 1;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 40px;
+  padding: 0 16px;
+  line-height: 18px;
+}
+
+.card__article {
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  color: #616070;
+  margin-top: 4px;
+  padding: 0 16px;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-top: 17px;
+}
+
+.card__star {
+  margin: 2px;
+  padding: 0 2px;
+  height: 12px;
+  width: 12px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  gap: 2px;
+}
+
+.card__stars-stars--1 > :first-child,
+.card__stars-stars--2 > div:nth-child(-n+2),
+.card__stars-stars--3 > div:nth-child(-n+3),
+.card__stars-stars--4 > div:not(:last-child),
+.card__stars-stars--5 > * {
+  background-image: url(images/star-active.svg);
+}
+
+.card__comment {
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  padding-right: 16px;
+  align-self: stretch;
+  align-items: center;
+  text-align: center;
+  margin-top: 17px;
+}
+
+.card__price {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+  text-align: center;
+  margin-top: 23px;
+}
+
+.card__text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+  padding-left: 16px;
+}
+
+.card__value {
+  font-size: 16px;
+  font-weight: 700;
+  padding-right: 16px;
+}
+
+.card__button {
+  display: flex;
+  margin: 16px;
+  background-color: #00acdc;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.card__link {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.card__link:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border-color: #00acdc;
+}
