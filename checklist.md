@@ -50,7 +50,7 @@ BAD example
 }
 ```
 
-7. [STYLES] - Don't hardcode exact card size. Add necessary paddings according to mockup
+7. [STYLES] - Don't hardcode exact height size. Add necessary paddings according to mockup
 and let content dictate the container size.
 8. [STYLES] - Don't add new border to the element on hover. Add default
 transparent border of the same width, and change its color on `:hover`
