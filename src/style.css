@@ -39,6 +39,7 @@
 .card__feedback {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: 24px;
 }
@@ -50,14 +51,19 @@
 .card__reviews {
   cursor: pointer;
   font-size: 10px;
-  line-height: 15px;
+  line-height: 14px;
   font-weight: 400;
   color: #060b35;
+}
+
+.card__reviews:hover {
+  color: #00acdc;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   width: 100%;
   margin-bottom: 16px;
 }
@@ -78,8 +84,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00acdc;
-  height: 38px;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px transparent;
   border-radius: 5px;
   text-decoration: none;
   font-size: 14px;
@@ -90,6 +97,8 @@
 }
 
 .card__button:hover {
+  border-style: solid;
+  border-color: #00acdc;
   color: #00acdc;
   background-color: white;
 }
