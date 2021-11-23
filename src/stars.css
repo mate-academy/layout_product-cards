@@ -1,18 +1,22 @@
 .reviews__stars {
   display: flex;
   flex-direction: row;
-  margin-top: 16px;
+  /* margin-top: 16px; */
 }
 
 .stars__star {
   height: 16px;
   width: 16px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: 50%;
-  margin: 2px;
+  margin-right: 4px;
 }
 
-.stars--4 .stars__star:nth-child(n+5) {
-  background-image: url(images/star.svg);
+.stars_stars--1 .star:nth-child(1),
+.stars_stars--2 .star:nth-child(-n+2),
+.stars_stars--3 .star:nth-child(-n+3),
+.stars_stars--4 .star:nth-child(-n+4),
+.stars_stars--5 .star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
 }
