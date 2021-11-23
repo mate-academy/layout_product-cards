@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.product__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+}
+
+.product__name {
+  position: relative;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product__id {
+  position: relative;
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.product__rating {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.product__feedbacks {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  color: #060b35;
+}
+
+.product__stars {
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  width: 96px;
+}
+
+.product__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.product__stars--1 .product__star:nth-child(1),
+.product__stars--2 .product__star:nth-child(-n + 2),
+.product__stars--3 .product__star:nth-child(-n + 3),
+.product__stars--4 .product__star:nth-child(-n + 4),
+.product__stars--5 .product__star:nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.product__prices {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.product__price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.product-amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00acdc;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.product__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+}
