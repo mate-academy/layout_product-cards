@@ -1,0 +1,38 @@
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  margin-right: 4px;
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reviews {
+  font-size: 10px;
+  font-weight: 400;
+  color: #060b35;
+  order: 1;
+}
+
+.starts__star:last-child {
+  margin-right: 0;
+}
+
+.rating__stars_stars-value--1 .star:nth-child(1),
+.rating__stars_stars-value--2 .star:nth-child(-n+2),
+.rating__stars_stars-value--3 .star:nth-child(-n+3),
+.rating__stars_stars-value--4 .star:nth-child(-n+4),
+.rating__stars_stars-value--5 .star:nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+}
