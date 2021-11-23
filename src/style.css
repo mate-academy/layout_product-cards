@@ -1,141 +1,16 @@
-:root {
-  --Main-accent: #060b35;
-  --Secondary: #616070;
-  --Blue-accent: #00acdc;
-}
+@import url(./blocks/root.css);
+@import url(./blocks/card.css);
+@import url(./blocks/rating.css);
+@import url(./blocks/price.css);
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  padding: 16px;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-}
-
-.card__img {
-  display: block;
-  margin: 16px 3px;
-  width: 160px;
-}
-
-.title {
-  margin-top: 25px;
-}
-
-.card__title {
-  text-align: left;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--Main-accent);
-}
-
-.code {
-  margin-top: 4px;
-}
-
-.card__code {
-  align-items: flex-start;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 10px;
-  line-height: 14px;
-  color: var(--Secondary);
-}
-
-.rating {
-  margin-top: 16px;
-}
-
-.card__rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.stars {
-  display: flex;
-  align-items: flex-start;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-  background: center no-repeat url("./images/star.svg");
-}
-
-.stars--1 .stars__star:nth-child(1),
-.stars--2 .stars__star:not(:nth-child(n+3)),
-.stars--3 .stars__star:not(:nth-child(n+4)),
-.stars--4 .stars__star:not(:nth-child(n+5)),
-.stars--5 .stars__star:not(:nth-child(n+6)) {
-  background: center no-repeat url("./images/star-active.svg");
-}
-
-.rating__review {
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 10px;
-  line-height: 14px;
-  color: var(--Main-accent);
-}
-
-.card__price {
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card__price-title {
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--Secondary);
-}
-
-.card__price-amount {
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
-  color: var(--Main-accent);
-}
-
-.link {
-  margin-top: 16px;
-}
-
-.card__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-basis: 40px;
-  background-color: var(--Blue-accent);
-  border: 1px solid var(--Blue-accent);
-  border-radius: 5px;
-  text-decoration: none;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.card__link:hover {
-  color: var(--Blue-accent);
-  background-color: #fff;
 }
