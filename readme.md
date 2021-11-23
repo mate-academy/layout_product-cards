@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://levix2l.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://levix2l.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 ___
@@ -25,7 +25,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
-- Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
+- Reuse `stars` block from [stars task](https://github.com/mate-academy/layout_stars)
 and keep it operational. If you change `stars--4` modifier to `stars--2` or
 other - number of selected stars should change correctly.
 - Item with text 'Купить' should be a link.
