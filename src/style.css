@@ -1,106 +1,85 @@
+@import url(./blocks/stars.css);
+
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+  --color-blue: #00acdc;
+  --color-indigo: #060b35;
+  --color-grey: #616070;
+  --color-white: #fff;
+}
+
 .card {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  font-family: Roboto, Helvetica, sans-serif;
+  background-color: var(--color-white);
 }
 
 .card__img {
   height: 134px;
   width: 160px;
+
   margin: 32px 19px 40px;
 }
 
 .card__name {
   text-align: left;
   font-size: 12px;
-  color: #060b35;
+  color: var(--color-indigo);
   font-weight: 500;
   line-height: 18px;
+
   margin: 0 16px 4px;
 }
 
 .card__code {
   font-size: 10px;
-  color: #616070;
+  color: var(--color-grey);
+
   margin: 0 16px 16px;
 }
 
-.card__rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 0 16px 24px;
-}
-
-.card__stars {
-  display: flex;
-  gap: 4px;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(images/star-active.svg);
-}
-
-.card__reviews {
-  font-size: 10px;
-  color: #060b35;
-}
-
-.card__price {
+.card__cost {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   margin: 0 16px 16px;
 }
 
-.price-1 {
+.card__price {
   font-size: 12px;
-  color: #616070;
+  color: var(--color-grey);
 }
 
-.price-2 {
-  color: #060b35;
+.card__price-amount {
+  color: var(--color-indigo);
   font-size: 16px;
   font-weight: 700;
 }
 
-.card__button-buy {
-  display: flex;
-  justify-content: center;
+.card__buy-link {
+  height: 40px;
+  width: 166px;
+  border: 1px solid var(--color-blue);
   border-radius: 5px;
-  margin: 0 16px 16px;
-}
+  background-color: var(--color-blue);
 
-.buy-link {
-  border: 1px solid #00acdc;
-  border-radius: 5px;
-  background-color: #00acdc;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-white);
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 10px 55px;
+  text-align: center;
+  line-height: 40px;
+
+  margin: 0 16px 16px;
 }
 
-.buy-link:hover {
-  background-color: #fff;
-  color: #00acdc;
+.card__buy-link:hover {
+  background-color: var(--color-white);
+  color: var(--color-blue);
 }
