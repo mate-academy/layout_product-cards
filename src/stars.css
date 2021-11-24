@@ -1,0 +1,23 @@
+.stars {
+  display: flex;
+}
+
+.card__star {
+  background-image: url(../src/images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.card__star:first-child {
+  margin-left: 0;
+}
+
+.stars__star--1 .card__star:nth-child(1),
+.stars__star--2 .card__star:nth-child(-n+2),
+.stars__star--3 .card__star:nth-child(-n+3),
+.stars__star--4 .card__star:nth-child(-n+4),
+.stars__star--5 .card__star:nth-child(-n+5) {
+  background-image: url(../src/images/star-active.svg);
+}
