@@ -1,12 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-<<<<<<< HEAD
 - [DEMO LINK](https://Rom911.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://Rom911.github.io/layout_product-cards/report/html_report/)
-=======
-- [DEMO LINK](https://Romm911.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://Romm911.github.io/layout_product-cards/report/html_report/)
->>>>>>> ef037b8ef7284aa31053f8162a0e1b7ce6e62102
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 ___
