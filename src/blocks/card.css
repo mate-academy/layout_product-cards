@@ -1,0 +1,106 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  display: flex;
+  height: 134px;
+  margin: 16px auto 0;
+}
+
+.card__title {
+  margin-top: 40px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--Main-accent);
+}
+
+.card__code {
+  margin-top: 4px;
+  align-items: flex-start;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--Secondary);
+}
+
+.card__rating {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background: center no-repeat url("../images/star.svg");
+}
+
+.card__stars--1 .card__star:nth-child(1),
+.card__stars--2 .card__star:not(:nth-child(n+3)),
+.card__stars--3 .card__star:not(:nth-child(n+4)),
+.card__stars--4 .card__star:not(:nth-child(n+5)),
+.card__stars--5 .card__star:not(:nth-child(n+6)) {
+  background: center no-repeat url("../images/star-active.svg");
+}
+
+.card__review {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--Main-accent);
+}
+
+.card__price {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price-title {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--Secondary);
+}
+
+.card__price-amount {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--Main-accent);
+}
+
+.card__link {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-basis: 40px;
+  background-color: var(--Blue-accent);
+  border: 1px solid var(--Blue-accent);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__link:hover {
+  color: var(--Blue-accent);
+  background-color: #fff;
+}
