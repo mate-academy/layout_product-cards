@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  --blue-color: #00acdc;
+  --white-color: #fff;
+  --title-font-size: 12px;
+  --text-font-size: 11px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background: var(--white-color);
+  border-radius: 5px;
+  padding: 29px 14px 15px;
+  outline: none;
+}
+
+.card__img {
+  display: flex;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 45px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: var(--title-font-size);
+  line-height: 15px;
+  margin-bottom: 6px;
+}
+
+.card__text {
+  font-size: var(--text-font-size);
+  line-height: 13px;
+  margin-bottom: 15px;
+}
+
+.card__recall {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__item:last-child {
+  margin-right: 0;
+  background-image: url(images/star.svg);
+}
+
+.card__price {
+  font-size: var(--text-font-size);
+  line-height: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.card__reviews {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.card__cost {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid var(--blue-color);
+  background-color: var(--blue-color);
+  border-radius: 5px;
+  color: var(--white-color);
+  width: 170px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  color: var(--blue-color);
+  background-color: var(--white-color);
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
