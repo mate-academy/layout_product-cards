@@ -1,17 +1,17 @@
-html {
+body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
 .card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 200px;
+  height: 406px;
   padding: 32px 19px;
   border: 1px solid #f3f3f3;
-  width: 198px;
-  height: 406px;
 }
 
 .img {
@@ -20,35 +20,43 @@ html {
   margin-bottom: 40px;
 }
 
-.blocks {
+.title {
   flex-direction: column;
   align-items: center;
   font-style: normal;
 }
 
-.blocks__title {
-  margin: 0;
+.title-title {
   color: #060b35;
   font-size: 12px;
   line-height: 18px;
   width: 172px;
+  margin-bottom: 4px;
+}
+
+.phrases {
+  margin-bottom: 14px;
 }
 
 .phrase {
+  margin-bottom: 14px;
   color: #616070;
   font-size: 10px;
   line-height: 14px;
 }
 
-.phrase--position_left {
-  margin-left: 0;
+.phrase--position_right {
+  margin-right: 90px;
 }
 
 .stars {
   display: flex;
+  align-items: center;
+
   color: #060b35;
   font-size: 10px;
   line-height: 14px;
+  margin-bottom: 14px;
 }
 
 .stars__star {
@@ -67,17 +75,29 @@ html {
   background-image: url(./images/star-active.svg);
 }
 
-.price {
+.reviews {
+  margin-left: 17px;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+  margin-bottom: 14px;
+}
+
+.card-price-text {
   color: #616070;
   font-size: 12px;
   line-height: 18px;
 }
 
-.price--position_left {
+.card-price-text--position_left {
   margin-left: 0;
 }
 
-.price-price {
+.card-price-value {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -85,19 +105,26 @@ html {
   color: #060b35;
 }
 
-.price-price--position_right {
+.card-rice-value--position_right {
   margin-right: 0;
 }
 
 .buy {
+  margin-bottom: 14px;
+}
+
+.buy__buy {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
   width: 166px;
   height: 40px;
+  
   color: rgba(255, 255, 255, 1);
   background: rgba(0, 172, 220, 1);
   border-radius: 5px;
@@ -105,7 +132,7 @@ html {
   font-weight: 700;
 }
 
-.buy:hover {
+.buy__buy:hover {
   border: 1px solid #00acdc;
   border-radius: 5px;
   color: rgba(0, 172, 220, 1);
