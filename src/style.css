@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #060b35;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  max-width: 160px;
+  height: 134px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.card__title {
+  font-size: inherit;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card__number {
+  color: #616070;
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__rate-reviews {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.card__rate-stars {
+  display: flex;
+}
+
+.card__rate-star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__rate-stars--1 > .card__rate-star:first-child,
+.card__rate-stars--2 > .card__rate-star:nth-child(-n+2),
+.card__rate-stars--3 > .card__rate-star:nth-child(-n+3),
+.card__rate-stars--4 > .card__rate-star:nth-child(-n+4),
+.card__rate-stars--5 > .card__rate-star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-title {
+  color: #616070;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 40px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  background-color: #00acdc;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.card__link:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border-color: #00acdc;
+}
