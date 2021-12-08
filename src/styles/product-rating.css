@@ -1,0 +1,32 @@
+.product-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-rating__stars {
+  display: flex;
+  gap: 4px;
+}
+
+.product-rating__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-rating__stars--1 > :first-child,
+.product-rating__stars--2 > :nth-child(-n+2),
+.product-rating__stars--3 > :nth-child(-n+3),
+.product-rating__stars--4 > :nth-child(-n+4),
+.product-rating__stars--5 > :nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+}
+
+.product-rating__reviews {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--dark-text-color);
+}
