@@ -1,0 +1,129 @@
+html {
+  --card-width: 200px;
+  --picture-width: 160px;
+  --picture-height: 134px;
+  /*--stars-quantity: 4;*/
+  --main-text-color: #060b35;
+  --secondary-text-color: #616070;
+  --purchase-elements-color: #00acdc;
+
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-text-color);
+}
+
+.page {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: var(--card-width);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background-color: #fff;
+}
+
+.stars {
+  display: flex;
+}
+
+.card__img {
+  display: block;
+  margin: 0 auto 40px;
+  width: var(--picture-width);
+  height: var(--picture-height);
+}
+
+.card__description-name {
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+
+.card__description-code {
+  margin-bottom: 16px;
+}
+
+.card__feedback-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars__star {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--0 .stars__star:nth-child(-n + 0),
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__feedback-quantity {
+  color: var(--main-text-color);
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-name {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--main-text-color);
+}
+
+.card__perchase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid var(--purchase-elements-color);
+  border-radius: 5px;
+  
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: var(--purchase-elements-color);
+}
+
+.card__perchase:hover {
+  background-color: #fff;
+  color: var(--purchase-elements-color);
+}
