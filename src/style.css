@@ -1,0 +1,134 @@
+/* #region normalize */
+body, p {
+  margin: 0;
+
+  --dark-color: #060B35;
+  --light-color: #616070;
+  --small-font-size: 10px;
+  --button-color: #00ACDC;
+}
+/* #endregion */
+
+/* #region imac-card */
+.imac-card {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.imac-card__image {
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.imac-card__name {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.imac-card__code {
+  margin-bottom: 16px;
+  font-size: var(--small-font-size);
+  color: var(--light-color);
+}
+
+.imac-card__reviews {
+  margin-bottom: 24px;
+}
+
+.imac-card__price {
+  margin-bottom: 16px;
+}
+/* #endregion */
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+/* #endregion */
+
+/* #region reviews */
+.reviews {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__amount {
+  font-size: var(--small-font-size);
+  color: var(--dark-color);
+}
+/* #endregion */
+
+/* #region price */
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__name {
+  color: var(--light-color);
+}
+
+.price__amount {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dark-color);
+}
+/* #endregion */
+
+/* #region button */
+.button {
+  display: flex;
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button__link {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.button:hover {
+  border: 1px solid var(--button-color);
+  background-color: #fff;
+}
+
+.button:hover .button__link {
+  color: var(--button-color);
+}
+/* #endregion */
