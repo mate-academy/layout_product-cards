@@ -1,0 +1,115 @@
+.page {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: #060b35;
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  --button-color: #00acdc;
+  --small-text-size: 10px;
+  --small-text-line-height: 14px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  object-fit: cover;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card__number {
+  font-weight: 400;
+  color: #616070;
+  font-size: var(--small-text-size);
+  line-height: var(--small-text-line-height);
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rating__stars {
+  display: flex;
+}
+
+.rating__star {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.rating__stars--1 :nth-child(-n+1),
+.rating__stars--2 :nth-child(-n+2),
+.rating__stars--3 :nth-child(-n+3),
+.rating__stars--4 :nth-child(-n+4),
+.rating__stars--5 :nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.rating__reviews {
+  font-size: var(--small-text-size);
+  line-height: var(--small-text-line-height);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__title {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+  font-weight: 400;
+}
+
+.price__number {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.card__button {
+  color: #fff;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  border: 1px solid var(--button-color);
+  padding: 11px 12px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: var(--button-color);
+  cursor: pointer;
+}
