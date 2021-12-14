@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --borderColor: #f3f3f3;
+  --textColor: #060b35;
+  --productCodeTextColor: #616070;
+  --acdcBlue: #00acdc;
+}
+
+.card {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding: 32px 16px 16px;
+  border: 1px solid var(--borderColor);
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+}
+
+.titleWrapper {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--textColor);
+  margin-bottom: 0;
+}
+
+.card__productCode {
+  margin-right: 45%;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.productCode {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--productCodeTextColor);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 96px;
+}
+  
+.stars_star {
+  width: 16px;
+  height: 16px;
+  background: url(./images/star.svg) no-repeat;
+}
+
+.stars--5 .stars_star,
+.stars--1 .stars_star:first-child,
+.stars--2 .stars_star:nth-child(-n+2),
+.stars--3 .stars_star:nth-child(-n+3),
+.stars--4 .stars_star:nth-child(-n+4) {
+  background: url(./images/star-active.svg) no-repeat;
+}
+
+.card__reviewsWithStars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.numberOfReviews {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--textColor);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.priceWord {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--productCodeTextColor);
+}
+
+.priceNumber {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.buyButtonWrapper {
+  margin-bottom: 16px;
+}
+
+.card__buyButton {
+  display: flex;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--acdcBlue);
+  border: 1px solid var(--acdcBlue);
+  color: white;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-around;
+  transition: background-color 1s, color 1s;
+}
+
+.buyLink {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.card__buyButton:hover {
+  background-color: white;
+  color: var(--acdcBlue);
+}
