@@ -3,11 +3,13 @@ Replace `<your_account>` with your Github username and copy the links to Pull Re
 - [DEMO LINK](https://banzaifun.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://banzaifun.github.io/layout_product-cards/report/html_report/)
 
-> Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
+> Follow [this instructions](https://mate-academy.github.io/layout_task-guideline)
 ___
 
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
 ___
+
+## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
 ## The task
 Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/euXjY316CHKYkPRO1K0kjLsF/Moyo-Catalog?node-id=11325%3A2288).
