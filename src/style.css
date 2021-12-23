@@ -1,0 +1,89 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  width: 199px  ;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 5px;
+}
+
+.product {
+  background-image: url(images/imac.jpeg);
+  background-size: cover;
+  width: 160px;
+  height: 134px;
+  margin: 32px 19px 40px ;
+}
+
+.productName {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0 16px;
+  color: #060b35;
+}
+
+.productCode {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin: 4px 90px 16px 16px ;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productRate {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 24px;
+}
+
+/* #region Star */
+
+.stars {
+  display: none;
+}
+
+.stars_star {
+  height: 12px;
+  width: 12px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  margin: 2px 6px 2px 2px;
+}
+
+.stars--5 > :nth-child(n),
+.stars--4 > :nth-child(-n + 4),
+.stars--3 > :nth-child(-n + 3),
+.stars--2 > :nth-child(-n + 2),
+.stars--1 > :nth-child(-n + 1) {
+  height: 12px;
+  width: 12px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  margin: 2px 6px 2px 2px;
+}
+/* #endregion */
+
+/* change number in .stars:nth-child to switch between stars */
+.stars:nth-child(4) {
+  display: flex;
+}
+
+.productRate-feedback {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+}
