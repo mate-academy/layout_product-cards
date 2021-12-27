@@ -9,7 +9,15 @@
   display: flex;
 }
 
-.rating__star {
+.rating__stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url("../images/star.svg");
+  background-position: center;
+}
+
+.stars--4 > .rating__stars__star:nth-child(-n + 4) {
   height: 16px;
   width: 16px;
   margin-right: 4px;
@@ -18,13 +26,9 @@
   background-position: center;
 }
 
-.rating__star--un-active {
-  background-image: url("../images/star.svg");
-}
-
 .rating__customer-review {
   font-size: var(--xs-small-size);
-  font-weight: 300px;
+  font-weight: 300;
   line-height: var(--small-l-height);
   color: var(--color-main-accent);
 }
