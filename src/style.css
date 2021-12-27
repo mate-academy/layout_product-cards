@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  padding: 32px 16px 16px;
+}
+
+.product {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.text__product {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+
+}
+
+.code {
+  align-self: start;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.rating {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.stars--1 > :nth-child(n+1):nth-child(-n+1),
+.stars--2 > :nth-child(n+1):nth-child(-n+2),
+.stars--3 > :nth-child(n+1):nth-child(-n+3),
+.stars--4 > :nth-child(n+1):nth-child(-n+4),
+.stars--5 > :nth-child(n+1):nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.rating__count {
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.price__text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price__sum {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.button {
+  height: 40px;
+  width: 166px;
+  display: flex;
+  background: #00acdc;
+  border-radius: 5px;
+}
+
+.button__link {
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.button:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
+
+.button__link:hover {
+  color: #00acdc;
+}
