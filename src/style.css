@@ -51,40 +51,31 @@ body {
 }
 
 /* #region Rate */
-.card__rate {
-  margin-top: 16px;
+.stars {
+  display: flex;
 }
 
-.rate {
+.card__rate {
+  margin-top: 16px;
   height: 16px;
   width: 166px;
   display: flex;
   justify-content: space-between;
 }
 
-.stars > :last-child {
-  margin: 0;
-}
-
-.stars {
-  display: flex;
-  width: 96px;
-}
-
 .stars__star {
-  width: 16px;
-  height: 16px;
   background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  margin: 2px 6px 2px 2px;
 }
 
-.disactive {
+.stars--4 > :nth-child(n+5) {
   background-image: url(images/star.svg);
 }
 
-.rate__text {
+.card__text {
   font-size: 10px;
   width: 53px;
   height: 16px;
