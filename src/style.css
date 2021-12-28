@@ -1,17 +1,18 @@
-* {
+.homepage {
   font-family: Roboto, sans-serif;
-  box-sizing: border-box;
-  margin: 0;
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --blue-accent: #00acdc;
 }
 
 .content {
-
   background: #fff;
-  border: 1px solid black;
+  border: 1px solid #fff;
   border-radius: 5px;
   width: 200px;
   height: 408px;
-  display: block;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .content__item {
@@ -37,15 +38,16 @@
   margin-bottom: 4px;
   height: 36px;
   font-size: 12px;
+  font-weight: 500;
   line-height: 18px;
-  color: #060b35;
+  color: var(--main-color);
 }
 
 .content__item-id {
   margin-bottom: 16px;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--secondary-color);
 }
 
 /* #region evaluation */
@@ -55,20 +57,19 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
-  height: 16px;
-  width: 166px;
 }
 
 .stars {
   display: flex;
-  gap: 4px;
 }
 
 .stars__star {
-  width: 16px;
   height: 16px;
+  width: 16px;
+  margin-right: 4px;
   background-image: url(\images\star-active.svg);
-  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 .stars--4 > :nth-child(n+5) {
@@ -93,14 +94,14 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: #616070;
+  color: var(--secondary-color);
 }
 
-.price-current {
-  font-style: bold;
+.content__price-current {
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 /* #endregion */
@@ -109,8 +110,8 @@
   width: 100%;
   height: 40px;
   font-style: bold;
-  background-color: #00acdc;
-  border: 1px solid #00acdc;
+  background-color: var(--blue-accent);
+  border: 1px solid var(--blue-accent);
   border-radius: 5px;
   text-transform: uppercase;
   color: #fff;
@@ -122,7 +123,7 @@
 
 .buy-btn:hover {
   background-color: #fff;
-  color: #00acdc;
+  color: var(--blue-accent);
 }
 
 /* #endregion */
