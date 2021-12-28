@@ -1,20 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import "./normalize.css";
+@import "./reset.css";
+@import "./stars.css";
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #060b35;
-}
-
-body {
-  margin: 0;
-  background: #e5e5e5;
-}
-
-.main {
+.product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +14,7 @@ body {
   border-radius: 5px;
 }
 
-.imac {
+.product-card__imac {
   display: flex;
   margin-top: 32px;
   width: 160px;
@@ -41,13 +29,14 @@ body {
   margin-top: 40px;
 }
 
-.description {
+.container__description {
   display: flex;
   width: 166px;
 }
 
-.code {
+.container__code {
   font-family: inherit;
+  font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 14px;
@@ -55,32 +44,14 @@ body {
   margin-top: 4px;
 }
 
-.rating {
+.container__rating {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
 }
 
-.stars {
-  display: flex;
-}
-
-.star {
-  display: flex;
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-  width: 16px;
-  height: 16px;
-}
-
-.stars > :nth-child(n + 5) {
-  background-image: url(images/star.svg);
-}
-
-.review {
-  font-family: "Roboto", sans-serif;
+.container__review {
+  font-family: inherit;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -88,45 +59,49 @@ body {
   color: #060b35;
 }
 
-.price {
+.container__price {
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
 }
 
-.price1 {
+.container__price1 {
   font-family: inherit;
   font-weight: normal;
   color: #616070;
 }
 
-.price2 {
+.container__price2 {
   font-family: inherit;
-  font-weight: bold;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 18px;
 }
 
-.buy {
+.container__buy {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 16px;
-  height: 40px;
-  font-family: "Roboto", sans-serif;
+  /* padding: 10px 56px 12px 55px; */
+  height: 39px;
+  font-family: inherit;
   font-style: normal;
   font-weight: bold;
-  text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
   background-color: #00acdc;
-  border: 1px solid #00acdc;
+  border: none;
   border-radius: 5px;
 }
 
-.buy:hover {
+.container__buy--hovered:hover {
   background-color: #fff;
+  border: 1px solid #00acdc;
   color: #00acdc;
   cursor: pointer;
 }
