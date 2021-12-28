@@ -1,0 +1,130 @@
+@import url(./stars.css);
+
+/* #region page-settings */
+html {
+  font-family: Roboto, sans-serif;
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --blue-color: #00acdc;
+  --card-border-color: #f3f3f3;
+}
+
+body {
+  margin: 0;
+}
+/* #endregion */
+
+/* #region card */
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid var(--card-border-color);
+  border-radius: 5px;
+  padding: 16px;
+}
+/* #endregion */
+
+/* #region photo */
+.card__photo {
+  margin: 16px auto 0;
+  width: 160px;
+  height: 134px;
+  background-image: url(images/imac.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* #endregion */
+
+/* #region name */
+.card__name {
+  display: flex;
+  margin: 40px auto 0;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+/* #endregion */
+
+/* #region code */
+.card__code {
+  margin: 4px 74px 0 0;
+  height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+/* #endregion */
+
+/* #region rating */
+.card__rating {
+  margin: 16px auto 0;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  width: 166px;
+  height: 16px;
+}
+
+.rating__reviews {
+  font-size: 10px;
+  margin: 0;
+  color: var(--main-color);
+}
+/* #endregion */
+
+/* #region price */
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px auto 0;
+  height: 18px;
+  width: 166px;
+}
+
+.card__text {
+  line-height: 18px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.card__amount {
+  line-height: 18px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+/* #endregion */
+
+/* #region buy-button */
+.card__buy-button {
+  margin: 16px auto 0;
+  text-align: center;
+  line-height: 38px;
+  width: 164px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--blue-color);
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__buy-button:hover {
+  background-color: white;
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+  transition: 0.3s;
+}
+/* #endregion */
