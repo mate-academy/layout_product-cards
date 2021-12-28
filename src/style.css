@@ -1,3 +1,4 @@
+/* #region GeneralSettings */
 html {
   padding: 0;
   font-family: Roboto, sans-serif;
@@ -9,8 +10,9 @@ html {
 body {
   margin: 0;
 }
-
-.product_card {
+/* #endregion */
+/* #region MainCard */
+.card {
   padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
@@ -24,13 +26,13 @@ body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
-.monoblock_picture {
+/* #endregion */
+.card__monoblock_picture {
   width: 160px;
   height: 134px;
 }
 
-.name_item {
+.card__name_item {
   font-weight: 500;
   width: 166px;
   height: 36px;
@@ -38,7 +40,7 @@ body {
   color: #060b35;
 }
 
-.code_item {
+.card__code_item {
   display: flex;
   justify-content: space-between;
   font-size: 10px;
@@ -48,13 +50,16 @@ body {
   color: #616070;
 }
 
-.rate {
-  margin-top: 16px;
+/* #region Rate */
+.card__rate {
   height: 16px;
   width: 166px;
   display: flex;
   justify-content: space-between;
-  font-style: inherit;
+}
+
+.rate {
+  margin-top: 16px;
 }
 
 .stars {
@@ -71,7 +76,7 @@ body {
   margin-right: 4px;
 }
 
-.stars > :last-child {
+.rate__stars > :last-child {
   margin: 0;
 }
 
@@ -85,7 +90,29 @@ body {
   height: 16px;
   text-align: left;
 }
+/* #endregion */
+/* #region Price */
+.price_block {
+  margin-top: 24px;
+  height: 18px;
+  width: 166px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 18px;
+}
 
+.price_block__text {
+  font-size: 12px;
+  color: #616070;
+}
+
+.price_block__numbers {
+  font-weight: bold;
+  font-size: 16px;
+  color: #060b35;
+}
+/* #endregion */
+/* #region Button */
 .button_buy {
   background-color: #00acdc;
   width: 166px;
@@ -106,23 +133,4 @@ body {
   border-radius: 5px;
   transition: 0.3s ease-in-out;
 }
-
-.price_block {
-  padding-top: 24px;
-  height: 18px;
-  width: 166px;
-  display: flex;
-  justify-content: space-between;
-  line-height: 18px;
-}
-
-.price_block__text {
-  font-size: 12px;
-  color: #616070;
-}
-
-.price_block__numbers {
-  font-weight: bold;
-  font-size: 16px;
-  color: #060b35;
-}
+/* #endregion */
