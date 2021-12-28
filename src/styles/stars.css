@@ -1,15 +1,18 @@
-/* #region stars */
 .stars {
   display: flex;
 }
 
 .stars__star {
+  height: 16px;
+  width: 16px;
   background-image: url(../images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 16px;
-  width: 16px;
   margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
 }
 
 .stars--0 > :nth-child(n+1),
@@ -20,4 +23,3 @@
 .stars--5 > :nth-child(n+6) {
   background-image: url(../images/star.svg);
 }
-/* #endregion */
