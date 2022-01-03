@@ -17,7 +17,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 ### Requirements:
 - reset browser's default margins
 - card width is `200px` including border
-- use images from [src/images](src/images)
+- use images from [src/images](src/images)git
 - change link styles on `:hover`
 - follow styles from the mock
 - add `data-qa="card"` attribute to the card block
