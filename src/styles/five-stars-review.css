@@ -1,0 +1,30 @@
+/* #region five-stars-review*/
+
+.five-stars__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.five-stars__item {
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  list-style-type: none;
+  background-position: center;
+}
+
+.five-stars__item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.five-stars__list--4 > li.five-stars__item:nth-of-type(-n+4) {
+  background-image: url(/images/star-active.svg);
+}
+
+.five-stars__review-number {
+  font-size: 10px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+/* #endregion */
