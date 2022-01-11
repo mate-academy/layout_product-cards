@@ -9,9 +9,10 @@ p {
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  --font-family: roboto, sans-serif;
   --blue-color: #00acdc;
-
+  --darkblue-color: #060b35;
+  --grey-color: #616070;
 }
 
 .card {
@@ -23,31 +24,40 @@ body {
 /* image  ---------------*/
 
 .card__img {
-  display: block;
+  width: 100%;
+  object-position: center;
+}
+
+.card__img-wrap {
   width: 160px;
-  margin-bottom: 41px;
+  height: 134px;
+  margin: auto;
 }
 
 /* ------------- */
 
 .card__title {
+  font-family: var(--font-family);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
+  margin-top: 40px;
   margin-bottom: 6px;
   line-height: 18px;
+  color: var(--darkblue-color);
 }
 
 .card__code {
   font-size: 10px;
   font-weight: 400;
-  margin-bottom: 17px;
-  font-family: Roboto, sans-serif;
+  margin-bottom: 15px;
+  font-family: var(--font-family);
+  line-height: 14px;
+  color: var(--grey-color);
 }
 
 .rait {
   display: flex;
   justify-content: space-between;
-  /* gap: 17; */
   margin-bottom: 23px;
 }
 
@@ -72,16 +82,14 @@ body {
   background-image: url(./images/star-active.svg);
 }
 
-/* .stars__star:last-child {
-  margin-right: 13px;
-} */
-
 .rait__number {
   font-size: 10px;
   font-weight: 400;
   display: flex;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   align-items: center;
+  line-height: 14px;
+  color: var(--darkblue-color);
 }
 
 .price {
@@ -94,11 +102,15 @@ body {
 .price__text {
   font-size: 12px;
   font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--grey-color);
 }
 
 .price__amount {
   font-size: 16px;
   font-weight: 700;
+  line-height: 18px;
+  font-family: var(--font-family);
 
 }
 
@@ -121,7 +133,7 @@ body {
 }
 
 .card__link {
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   display: block;
   width: 166px;
   padding: 12px 0;
@@ -133,11 +145,11 @@ body {
   text-decoration: none;
   font-weight: 700;
   text-align: center;
+  line-height: 16px;
 }
 
 .card__link:hover {
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
   background-color: #fff;
-
 }
