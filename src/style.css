@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  --blue-color: #00acdc;
+  --darkblue-color: #060b35;
+  --grey-color: #616070;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 19px;
+  border: 1px solid #f3f3f3 ;
+}
+
+/* image  ---------------*/
+
+.card__img {
+  width: 100%;
+  object-position: center;
+}
+
+.card__img-wrap {
+  width: 160px;
+  height: 134px;
+  margin: auto;
+}
+
+/* ------------- */
+
+.card__title {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 6px;
+  line-height: 18px;
+  color: var(--darkblue-color);
+}
+
+.card__code {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 14px;
+  color: var(--grey-color);
+}
+
+.rait {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--5 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.rait__number {
+  font-size: 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  line-height: 14px;
+  color: var(--darkblue-color);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.price__text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--grey-color);
+}
+
+.price__amount {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+/* button -------- */
+.code {
+  display: flex;
+}
+
+.card__link {
+  display: block;
+  width: 166px;
+  padding: 12px 0;
+  background: var(--blue-color);
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  line-height: 16px;
+}
+
+.card__link:hover {
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+  background-color: #fff;
+}
