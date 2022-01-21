@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 .card {
-  font-family: Roboto, Helvetica, sans-serif;
-  color: #060b35;
+  color: var(--dark-color);
 }
 
 .card__wrapper {
@@ -31,7 +29,7 @@
 }
 
 .card__product-title,
-.price {
+.card__price {
   font-size: 12px;
 }
 
@@ -56,16 +54,16 @@
 }
 
 .card__product-code,
-.reviews {
+.card__reviews {
   font-size: 10px;
 }
 
 .card__product-code,
-.price {
-  color: #616070;
+.card__price {
+  color: var(--gray-color);
 }
 
-.price-value,
+.card__price-value,
 .card__button {
   font-weight: 700;
 }
@@ -78,16 +76,17 @@
   line-height: 16px;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  color: var(--light-color);
 
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--primary-color);
 
-  transition: all 0.3s ease;
+  transition: color var(--trans-duration-default) ease-in,
+    background-color var(--trans-duration-default) ease;
 }
 
 .card__button:hover {
-  background-color: #fff;
-  color: #00acdc;
+  background-color: var(--light-color);
+  color: var(--primary-color);
 }
