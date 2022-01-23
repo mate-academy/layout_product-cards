@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  --cards-black-text-color: #060b35;
+  --cards-grey-text-color: #616070;
+  --cards-light-blue-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  max-width: 200px;
+}
+
+.product-card {
+  padding: 32px 16px 16px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  display: block;
+  margin: 0 auto 40px;
+  height: 134px;
+}
+
+.product-card__title {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--cards-black-text-color);
+}
+
+.product-card__id {
+  margin-bottom: 16px;
+
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--cards-grey-text-color);
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+
+  background-image: url("images/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars > .stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 > :nth-child(1),
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(n) {
+  background-image: url("images/star-active.svg");
+}
+
+.product-card__review-value {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--cards-black-text-color);
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-card__price-text,
+.product-card__price-value {
+  line-height: 18px;
+}
+
+.product-card__price-text {
+  font-size: 12px;
+  color: var(--cards-grey-text-color);
+}
+
+.product-card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cards-black-text-color);
+}
+
+.product-card__buy-button {
+  display: block;
+  padding: 11px 0;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: var(--cards-light-blue-color);
+  border: 1px solid var(--cards-light-blue-color);
+  border-radius: 5px;
+}
+
+.product-card__buy-button:hover {
+  border-radius: 5px;
+  background-color: inherit;
+  color: var(--cards-light-blue-color);
+}
