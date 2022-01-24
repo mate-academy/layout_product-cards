@@ -5,7 +5,7 @@ https://SanyaBratashchuk.github.io/layout_product-cards/report/html_report/
 
 > Follow [this instructions](https://mate-academy.github.io/layout_task-guideline)
 ___
-
+ddf
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
 ___
 
