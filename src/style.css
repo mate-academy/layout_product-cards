@@ -21,7 +21,7 @@ body {
   border: 1px solid #f3f3f3;
 }
 
-.product-card-image {
+.product-card__image {
   margin: 0 auto 40px;
 
   display: block;
@@ -30,7 +30,7 @@ body {
   box-sizing: border-box;
 }
 
-.product-card-title {
+.product-card__title {
   margin: 0 0 4px;
 
   font-size: 12px;
@@ -38,29 +38,26 @@ body {
   font-weight: 500;
 }
 
-.product-card-code {
+.product-card__code {
   margin: 0 0 16px;
 
   color: #616070;
 }
 
-.product-card-rate {
-  margin-bottom: 24px;
-
+.rate {
   display: flex;
   justify-content: space-between;
 }
 
-.product-rate-stars-0,
-.product-rate-stars-1,
-.product-rate-stars-2,
-.product-rate-stars-3,
-.product-rate-stars-4,
-.product-rate-stars-5 {
+.product-card__rate {
+  margin-bottom: 24px;
+}
+
+.stars {
   display: flex;
 }
 
-.stars-star {
+.stars__star {
   margin-right: 4px;
 
   height: 16px;
@@ -75,15 +72,15 @@ body {
   margin-right: 0;
 }
 
-.product-rate-stars-1 .stars-star:nth-child(-n + 1),
-.product-rate-stars-2 .stars-star:nth-child(-n + 2),
-.product-rate-stars-3 .stars-star:nth-child(-n + 3),
-.product-rate-stars-4 .stars-star:nth-child(-n + 4),
-.product-rate-stars-5 .stars-star:nth-child(-n + 5) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(./images/star-active.svg);
 }
 
-.product-rate-feedback {
+.rate__feedback {
   margin: 0;
 
   display: flex;
@@ -91,14 +88,17 @@ body {
   text-align: center;
 }
 
-.product-card-price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.price {
   margin-bottom: 16px;
 }
 
-.product-price-title {
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__title {
   margin: 0;
 
   font-size: 12px;
@@ -107,7 +107,7 @@ body {
   color: #616070;
 }
 
-.product-price-amount {
+.price__amount {
   margin: 0;
 
   font-size: 16px;
@@ -115,7 +115,7 @@ body {
   font-weight: 700;
 }
 
-.product-button-link {
+.product-card__link {
   padding: 12px 0;
 
   display: block;
@@ -135,7 +135,7 @@ body {
   transition: all 0.3s;
 }
 
-.product-button-link:hover {
+.product-card__link:hover {
   color: #00acdc;
   background-color: #fff;
   border-color: #00acdc;
