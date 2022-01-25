@@ -1,0 +1,34 @@
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  border-radius: 0.5px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 > :nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__text-stars {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--color-black);
+}
