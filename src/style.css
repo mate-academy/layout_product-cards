@@ -8,6 +8,7 @@ body {
   font-style: normal;
   border-radius: 5px;
   width: 198px;
+  padding: 32px 19px 16px;
   margin: 0;
 }
 
@@ -15,7 +16,7 @@ p {
   margin: 0;
 }
 
-.container {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,14 +24,14 @@ p {
   margin-right: 16px;
 }
 
-.product-image {
+.card__image {
   height: 134px;
   width: 160px;
-  margin-top: 33px;
+  padding-top: 33px;
+  margin-bottom: 40px;
 }
 
-.product-name {
-  margin-top: 40px;
+.card__name {
   margin-bottom: 4px;
   font-size: 12px;
   font-weight: 500;
@@ -38,28 +39,28 @@ p {
   color: #060b35;
 }
 
-.product-code {
+.card__code {
   font-size: 10px;
   line-height: 14px;
   color: #616070;
   align-self: self-start;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
-.rating {
-  margin-top: 16px;
+.card__rating {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-self: stretch;
+  margin-bottom: 24px;
 }
 
-.stars-5 {
+.stars {
   display: flex;
 }
 
-.star {
+.stars__star {
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -68,24 +69,24 @@ p {
   width: 16px;
 }
 
-.stars-5:last-child {
+.stars__star:last-child {
   background-image: url(./images/star.svg);
 }
 
-.rating-description {
+.card_rating-description {
   font-size: 10px;
   font-weight: normal;
   color: #060b35;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
   align-self: stretch;
+  margin-bottom: 16px;
 }
 
-.price-word {
+.card__price-word {
   margin: 0;
   align-self: center;
   font-size: 12px;
@@ -94,7 +95,7 @@ p {
   line-height: 18px;
 }
 
-.price-value {
+.card__price-value {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
@@ -102,7 +103,7 @@ p {
   color: #060b35;
 }
 
-.purchase-button {
+.card__purchase-button {
   width: 166px;
   height: 40px;
   background-color: #00acdc;
@@ -111,11 +112,10 @@ p {
   font-weight: bold;
   border-radius: 5px;
   border: none;
-  margin-top: 16px;
   line-height: 16px;
 }
 
-.purchase-button:hover {
+.card__purchase-button:hover {
   background-color: #fff;
   color: #00acdc;
   border: 1px solid #00acdc;
