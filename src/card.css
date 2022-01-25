@@ -1,99 +1,91 @@
+.page {
+  width: 200px;
+}
+
 .card {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 32px 16px 16px;
+
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.card__img {
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
   height: 134px;
-  width: 160px;
-  padding: 32px 19px;
 }
 
-.card__text {
-  display: block;
-  margin: 0;
-  padding: 8px 16px;
-  padding-bottom: 0;
+.card__title {
+  margin-bottom: 4px;
 
-  font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  font-weight: 500;
+  color: var(--black-color);
 }
 
-.card__code {
-  font-weight: normal;
+.card__id {
+  margin-bottom: 16px;
+
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
-
-  padding: 4px 16px;
-  margin: 0;
+  color: var(--grey-color);
 }
 
 .card__rating {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 12px;
+  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
-.card__rating-value {
-  margin: 0;
-  margin-left: 18px;
-
+.card__review-value {
   font-size: 10px;
-  font-weight: 400;
-  color: #060b35;
+  line-height: 14px;
+  color: var(--black-color);
 }
 
 .card__price {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 16px;
+  margin-bottom: 16px;
 }
 
-.card__price-word {
-  margin: 11px 0;
+.card__price-text,
+.card__price-value {
+  line-height: 18px;
+}
 
-  font-weight: 400;
+.card__price-text {
   font-size: 12px;
-  color: #616070;
+  color: var(--grey-color);
 }
 
 .card__price-value {
-  margin: 11px 0;
-
-  font-weight: 700;
   font-size: 16px;
-  color: #060b35;
-}
-
-.card__button-link {
-  display: block;
-  text-decoration: none;
-  color: white;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-
-  padding: 12px 0;
-  margin: 5px 16px 16px;
-
-  background-color: #00acdc;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
-  transition: 0.2s ease-out;
+  color: var(--black-color);
 }
 
-.card__button-link:hover {
-  color: #00acdc;
+.card__buy-button {
+  display: block;
+  padding: 11px 0;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: var(--acdc-blue-color);
+  border: 1px solid var(--acdc-blue-color);
   border-radius: 5px;
-  background: white;
+}
+
+.card__buy-button:hover {
+  border-radius: 5px;
+  background-color: inherit;
+  transition: 0.3s ease-out;
+  color: var(--acdc-blue-color);
 }
