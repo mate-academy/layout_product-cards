@@ -8,26 +8,27 @@ body {
   background-color: #e5e5e5;
   display: flex;
   justify-content: center;
-  align-content: center;
+}
+
+.product {
+  border: 1px solid #f3f3f3;
 }
 
 .product__card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  box-sizing: border-box;
   width: 198px;
   height: 406px;
-  border: 1px solid #f3f3f3;
   border-radius: 5px;
   background: white;
-  margin-top: 32px;
-  
+  padding: 32px 16px 16px;
 }
 
 .card__image {
   height: 134px;
   width: 160px;
-  justify-self: center;
   align-self: center;
   margin-bottom: 40px;
 }
@@ -39,8 +40,6 @@ body {
   font-weight: 500;
   line-height: 18px;
   color: #060b35;
-  margin-left: 16px;
-  margin-right: 16px;
   margin-bottom: 4px;
 }
 
@@ -51,17 +50,14 @@ body {
   font-weight: 400;
   line-height: 14px;
   color: #616070;
-  margin-left: 16px;
-  margin-right: 16px;
   margin-bottom: 16px;
-
 }
 
 .card__review {
   display: flex;
   justify-content: space-between;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-bottom: 24px;
+  justify-items: baseline;
 }
 
 .stars {
@@ -71,7 +67,6 @@ body {
 .stars__star {
   width: 16px;
   height: 16px;
-  margin-right: 4px;
   background-image: url(./images/star.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -82,7 +77,6 @@ body {
 }
 
 .card__review-number {
-  padding-top: 2px;
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-style: normal;
@@ -95,7 +89,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 24px 16px 16px;
+  margin-bottom: 16px;
 }
 
 .card__price-cost {
@@ -125,7 +119,6 @@ body {
   height: 40px;
   width: 166px;
   border-radius: 5px;
-  margin: 0 auto;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-style: normal;
