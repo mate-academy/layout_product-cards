@@ -1,0 +1,127 @@
+html {
+  font-family: Roboto, sans-serif;
+  --main-accent-color: #060b35;
+  --secondary-accent-color: #616070;
+  --blue-accent-color: #00acdc;
+}
+  
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__content {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--main-accent-color);
+  line-height: 18px;
+  margin: 0 0 4px;
+}
+
+.card__product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: 16px;
+  color: var(--secondary-accent-color);
+}
+
+.card__stars-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars > :not(.stars) {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+}
+
+.stars--1 > :first-child,
+.stars--2 > :nth-child(-n+2),
+.stars--3 > :nth-child(-n+3),
+.stars--4 > :nth-child(-n+4),
+.stars--5 > :nth-child(n) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.card__stars-response {
+  font-weight: 400;
+  line-height: 14px;
+  font-size: 10px;
+  color: var(--main-accent-color);
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary-accent-color);
+}
+
+.card__price-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-accent-color);
+}
+
+.card__button-buy {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: var(--blue-accent-color);
+  height: 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card__button-buy:hover {
+  background-color: #fff;
+  border: 1px solid var(--blue-accent-color);
+  color: var(--blue-accent-color);
+}
