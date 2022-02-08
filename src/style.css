@@ -10,11 +10,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 198px;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding-top: 32px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
 }
 /*#endregion*/
 
@@ -23,7 +23,13 @@
   height: 134px;
 }
 
+.image {
+  display: flex;
+  justify-content: center;
+}
+
 .card__image {
+  margin: 0;
   margin-bottom: 40px;
 }
 /*#endregion*/
@@ -31,14 +37,14 @@
 /*#region title*/
 .title {
   font-weight: 500;
-  text-align: left;
   font-size: 12px;
+  text-align: left;
   line-height: 18px;
   color: #060b35;
-  padding: 0 16px;
 }
 
 .card__title {
+  margin: 0;
   margin-bottom: 4px;
 }
 /*#endregion*/
@@ -50,12 +56,10 @@
   font-weight: 400;
   color: #616070;
   text-align: left;
-  padding: 0 16px;
-  min-width: 198px;
-  box-sizing: border-box;
 }
 
 .card__code {
+  margin: 0;
   margin-bottom: 16px;
 }
 /*#endregion*/
@@ -63,19 +67,21 @@
 /*#region rate*/
 .rate {
   display: flex;
-  gap: 17px;
   flex-direction: row;
-}
-
-.card__rate {
-  margin-bottom: 24px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .rate__responses {
   font-size: 10px;
   font-weight: 400;
-  line-height: 14px;
+  /* line-height: 14px; */
   color: #060b35;
+  margin: 0;
+}
+
+.card__rate {
+  margin-bottom: 24px;
 }
 /*#endregion*/
 
@@ -112,8 +118,8 @@
 .price {
   display: flex;
   flex-direction: row;
-  gap: 55px;
-  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .price__title {
@@ -126,35 +132,32 @@
 .price__amount {
   font-weight: 700;
   font-size: 16px;
-  line-height: 18px;
   color: #060b35;
 }
 
 .card__price {
-  margin-bottom: 16px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 /*#endregion*/
 
 /*#region button*/
 .button {
+  line-height: 38px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
   text-decoration: none;
   color: #fff;
   background-color: #00acdc;
-  padding: 12px 56px;
   text-transform: uppercase;
-  border-radius: 5px;
+  border: 1px solid #00acdc;
 }
 
 .button:hover {
-  border: 1px solid #00acdc;
   background-color: #fff;
   color: #00acdc;
-}
-
-.card__button {
-  margin-bottom: 16px;
 }
 /*#endregion*/
