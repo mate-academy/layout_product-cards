@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  --main-theme-color: #00acdc;
+  --main-text-color: #616070;
+  --main-text-size: 12px;
+  --main-line-height: 18px;
+  --secondary-text-size: 10px;
+  --secondary-line-height: 14px;
+  --accent-text-color: #060b35;
+  --accent-text-size: 16px;
+
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  color: var(--main-text-color);
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__title {
+  font-size: var(--main-text-size);
+  color: var(--accent-text-color);
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.card__code {
+  color: var(--accent-text-color);
+  font-size: var(--secondary-text-size);
+  line-height: var(--secondary-line-height);
+  margin: 0 0 16px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--accent-text-color);
+  font-size: var(--secondary-text-size);
+  line-height: var(--secondary-line-height);
+  margin-bottom: 24px;
+}
+
+.rating__stars,
+.rating__review {
+  margin: 0;
+}
+
+/* #region rating-stars */
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 > .stars__star:nth-child(-n + 1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4),
+.stars--5 > .stars__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+
+/* #endregion */
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price__title {
+  margin: 0;
+}
+
+.price__value {
+  font-size: var(--accent-text-size);
+  color: var(--accent-text-color);
+  font-weight: bold;
+  margin: 0;
+}
+
+.buy-button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--main-theme-color);
+  border-radius: 5px;
+  background-color: var(--main-theme-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.buy-button:hover {
+  color: var(--main-theme-color);
+  background-color: #fff;
+}
