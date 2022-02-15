@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.product-box {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 198px;
+  padding: 32px 15px 16px;
+}
+
+.product-box__img {
+  width: 160px;
+  height: 134px;
+  margin: 0 3px 36px;
+  /* margin-bottom: 35px; */
+}
+
+.product-box__title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product-box__cod {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.product-box__rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__item {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__item:not(:last-child),
+.stars__item:not(:nth-child(n+3)),
+.stars__item:not(:nth-child(n+4)),
+.stars__item:not(:nth-child(n+5)),
+.stars__item * {
+  background-image: url(./images/star-active.svg);
+}
+
+.product-box__reviews {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  align-items: flex-end;
+  color: #060b35;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.product-box__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-box__price-coast {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.product-box__number {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: right;
+  color: #060b35;
+}
+
+.product-box__button {
+  display: flex;
+  background: #00acdc;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-box__button:hover {
+  background: white;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
