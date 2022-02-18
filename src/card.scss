@@ -1,0 +1,94 @@
+@import "./card_variables.scss";
+@import "./card_extends.scss";
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  padding: 32px 16px 16px;
+
+  font-family: Roboto, Helvetica, sans-serif;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__picture {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+
+    background-image: url(images/imac.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+
+    color: $secondary-color;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent-color;
+  }
+
+  &__stats {
+    position: relative;
+
+    @extend %card_flex_wide;
+    margin-bottom: 24px;
+  }
+
+  &__review_count {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    color: $main-accent-color;
+  }
+
+  &__price {
+    @extend %card_flex_wide;
+    margin-bottom: 16px;
+  }
+
+  &__price_name {
+    color: $secondary-color;
+  }
+
+  &__price_value {
+    color: $main-accent-color;
+  }
+
+  &__buy-button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: white;
+
+    background-color: $blue-accent-color;
+    border: 1px solid $blue-accent-color;
+    border-radius: 5px;
+
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  &__buy-button:hover {
+    color: $blue-accent-color;
+    background-color: white;
+  }
+}
