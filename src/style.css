@@ -1,0 +1,145 @@
+
+/* region normalize */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  /* border-top: 1px solid black; */
+}
+/* region end */
+
+/* region html */
+
+.marketplace_page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: blanchedalmond;
+}
+
+/* region end */
+
+/* region product-card */
+
+.product-card {
+  width: 200px;
+  background-color: white;
+  border: 1px solid #f3f3f3;
+  border-radius: 6px;
+  padding: 32px 16px 16px;
+}
+
+.product-card__img {
+  background-image: url(./images/imac.jpeg);
+  background-repeat: no-repeat;
+  background-size: 160px 134px;
+  height: 134px;
+  width: 160px;
+  margin: 0 3px;
+}
+
+.product-card__name {
+  font-weight: 500;
+  color: #060b35;
+  line-height: 18px;
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+.product-card__code {
+  color: #616070;
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+/* region prouct rate*/
+.product-card__rate {
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.star_stars {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.star_stars:last-child {
+  margin: 0;
+}
+
+.stars--1 .star_stars:nth-child(1),
+.stars--2 .star_stars:nth-child(-n+2),
+.stars--3 .star_stars:nth-child(-n+3),
+.stars--4 .star_stars:nth-child(-n+4),
+.stars--5 .star_stars:nth-child(n) {
+  background-image: url(./images/star-active.svg);
+}
+
+.product-card__reviews {
+  display: flex;
+  align-items: center;
+  color: #060b35;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+/* region end */
+
+/* region price */
+.product-card__price {
+  margin-top: 23px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__label {
+  color: #616070;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.product-card__value {
+  color: #060b35;
+  font-weight: 700;
+}
+
+/* region end */
+
+.product-card__buy-button {
+  margin-top: 16px;
+  font-style: bold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.product-card__buy-button:hover {
+  color: #00acdc;
+  background-color: white;
+  border: 1px solid #00acdc;
+}
+
+.product-card__buy-button--position {
+  margin-bottom: 1px;
+}
