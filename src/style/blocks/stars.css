@@ -1,0 +1,26 @@
+.stars {
+  display: flex;
+  justify-content: start;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+
+}
+
+.stars_star {
+  background-image: url("./../../images/star.svg");
+  background-repeat: no-repeat;
+
+  height: 16px;
+  width: 16px;
+  margin: 2px;
+  margin-bottom: -2px;
+}
+
+.stars--1 .stars_star:nth-child(n+5),
+.stars--2 .stars_star:nth-child(n+4),
+.stars--3 .stars_star:nth-child(n+3),
+.stars--4 .stars_star:nth-child(n+2),
+.stars--5 .stars_star:nth-child(n+1) {
+  background-image: url("./../../images/star-active.svg");
+}
