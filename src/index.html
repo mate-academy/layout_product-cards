@@ -1,13 +1,66 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Product cards</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <h1>Product cards</h1>
-</body>
+<html lang="en" class="product-card">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Product cards</title>
+    <link rel="stylesheet" href="./styles/index.css">
+  </head>
+  <body class="product-card__content">
+    <section
+      class="card"
+      data-qa="card"
+    >
+      <img
+        class="card__item-img"
+        src="images/imac.jpeg"
+        alt="screen"
+      >
+
+      <h1 class="card__item-article">
+        Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)
+      </h1>
+
+      <p class="card__item-code">
+        Код товара 195434
+      </p>
+
+      <section class="stars">
+        <article class="stars__list">
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
+          <div class="stars__item stars__item--disactive"></div>
+        </article>
+        <p class="stars__likes">
+          Отзывов: 5
+        </p>
+      </section>
+
+      <section class="card__price">
+        <p class="card__price-word">
+          Цена:
+        </p>
+        <p class="card__price-count">
+          69 999 грн
+        </p>
+      </section>
+
+      <label
+        for="#buy-button"
+        class="card__button"
+        data-qa="hover"
+      >
+        <link
+          id="buy-button"
+          rel="stylesheet"
+          href="#backet"
+        >
+          КУПИТЬ
+        </link>
+      </label>
+    </section>
+  </body>
 </html>
