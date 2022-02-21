@@ -1,6 +1,8 @@
 /* #region reset */
 body {
   font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
 
   margin: 0;
 
@@ -11,12 +13,6 @@ body {
 
 /* #region card-container */
 .card-container {
-  position: absolute;
-  left: 0.5%;
-  right: 0.5%;
-  top: 0.25%;
-  bottom: 0.25%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,11 +42,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 166px;
 }
 
 .title-block__title {
-  left: calc(50% - (166px / 2));
-
   font-weight: 500;
   font-size: 12px;
   color: var(--main-font);
@@ -60,9 +55,9 @@ body {
 }
 
 .title-block__product-code {
-  font-weight: 400;
-  font-size: 10px;
   color: var(--secondary-font);
+
+  height: 14px;
 
   margin: 4px 0 16px;
 
@@ -78,25 +73,26 @@ body {
 
   margin: 0;
   padding: 0;
-
-  line-height: 14px;
 }
 
 .review-block {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 
   width: 166px;
   height: 16px;
 }
 
 .stars-block {
-  height: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .stars-block :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
+  margin: 0 4px 0 0;
 }
 
 .stars-block :nth-child(5) {
@@ -107,10 +103,9 @@ body {
   background-color: transparent;
   background-repeat: no-repeat;
 
-  background-position: 50% 90%;
+  background-position: 50%;
 
   padding: 0;
-  margin: 0;
 
   border-radius: 0.5px;
   border: none;
@@ -124,39 +119,37 @@ body {
 .price-block {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  /* align-items: center; */
+  align-items: center;
 
-  width: 168px;
+  width: 166px;
   height: 18px;
 
   margin: 24px 0 0;
 }
 
 .price-block__text {
-  margin: 0;
-
   font-weight: 400;
   font-size: 12px;
   color: var(--secondary-font);
 }
 
 .price-block__price {
-  padding: 0;
-  margin: 0;
-
   font-weight: 700;
   font-size: 16px;
+  line-height: 18px;
   color: var(--main-font);
 }
 /* #endregion */
 
 /* #region button-block */
-.button-block__button {
+.button-block__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: rgba(0, 172, 220, 1);
 
   margin: 16px 0;
-  padding: 0;
 
   width: 166px;
   height: 40px;
@@ -169,9 +162,10 @@ body {
   text-transform: uppercase;
   line-height: 16px;
   text-align: center;
+  text-decoration: none;
 }
 
-.button-block__button:hover {
+.button-block__link:hover {
   background: #fff;
   border: 1px solid rgba(0, 172, 220, 1);
   color: rgba(0, 172, 220, 1);
