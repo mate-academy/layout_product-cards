@@ -21,47 +21,15 @@ body {
   background-position: center;
 }
 
-.stars--4 > .stars_star:first-child {
-  margin-left: 0;
-}
-
+.stars--5 .stars_star:not(:nth-child(n + 6)),
+.stars--3 .stars_star:not(:nth-child(n + 4)),
+.stars--2 .stars_star:not(:nth-child(n + 3)),
+.stars--1 .stars_star:nth-child(1),
 .stars--4 .stars_star:not(:nth-child(n + 5)) {
   background-image: url(./images/star-active.svg);
 }
 
-.stars--1 .stars_star:nth-child(1) {
-  background-image: url(./images/star-active.svg);
-}
-
-.stars--2 .stars_star:not(:nth-child(n + 3)) {
-  background-image: url(./images/star-active.svg);
-}
-
-.stars--3 .stars_star:not(:nth-child(n + 4)) {
-  background-image: url(./images/star-active.svg);
-}
-
-.stars--5 .stars_star:not(:nth-child(n + 6)) {
-  background-image: url(./images/star-active.svg);
-}
-
-.stars--0 > .stars_star:first-child {
-  margin-left: 0;
-}
-
-.stars--1 > .stars_star:first-child {
-  margin-left: 0;
-}
-
-.stars--2 > .stars_star:first-child {
-  margin-left: 0;
-}
-
-.stars--3 > .stars_star:first-child {
-  margin-left: 0;
-}
-
-.stars--5 > .stars_star:first-child {
+.star .stars_star:first-child {
   margin-left: 0;
 }
 
@@ -143,25 +111,19 @@ body {
 
 .card_link {
   display: flex;
-  border-radius: 5px;
-  width: 166px;
-  height: 40px;
-  background-color: #00acdc;
-  margin: 0 16px 16px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00acdc;
-}
-
-.link {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  width: 55px;
-  height: 16px;
-  margin: 12px 56px 12px 55px;
+  width: 166px;
+  height: 40px;
+  margin: 0 16px 16px;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
 }
 
 .card_link:hover {
