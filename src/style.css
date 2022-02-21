@@ -8,7 +8,7 @@ body {
 }
 
 .card {
-  padding: 32px 16px 0;
+  padding: 32px 16px 16px;
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
@@ -16,11 +16,14 @@ body {
 }
 
 .card__img {
+  margin-bottom: 40px;
+}
+
+.img {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 3px;
-  margin-bottom: 40px;
 }
 
 .img__imac {
@@ -41,31 +44,41 @@ body {
   font-size: 10px;
   line-height: 14px;
   color: #616070;
-  padding-top: 4px;
+  margin-top: 4px;
 }
 
 .card__reviews {
-  display: flex;
-  padding: 16px 0;
+  margin: 16px 0;
+}
+
+.reviews {
   justify-content: space-between;
+  display: flex;
 }
 
 .reviews__stars {
   display: flex;
 }
 
+.stars {
+  width: min-content;
+}
+
 .stars__item {
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
+  background-position: 50%;
   width: 16px;
   height: 16px;
   margin-right: 4px;
-  background-position: 50%;
 }
 
-.stars__item:last-child {
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
+.stars--1 .stars__item:nth-child(-n+1),
+.stars--2 .stars__item:nth-child(-n+2),
+.stars--3 .stars__item:nth-child(-n+3),
+.stars--4 .stars__item:nth-child(-n+4),
+.stars--5 .stars__item:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
 }
 
 .reviews__text {
@@ -78,9 +91,12 @@ body {
 }
 
 .card__price {
+  margin: 24px 0 0;
+}
+
+.price {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0 0;
 }
 
 .price__text {
@@ -98,25 +114,25 @@ body {
 }
 
 .card__btn {
-  padding: 16px 0;
+  margin: 16px 0;
 }
 
 .btn__link {
   display: flex;
-  font-weight: 700;
-  font-size: 14px;
-  color: #fff;
-  background: #00acdc;
-  border-radius: 5px;
-  text-transform: uppercase;
-  height: 40px;
-  cursor: pointer;
-  border: none;
-  transition: 0.5s;
-  text-decoration: none;
-  width: 166px;
   justify-content: center;
   align-items: center;
+  width: 166px;
+  height: 40px;
+  color: #fff;
+  background: #00acdc;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .btn__link:hover {
