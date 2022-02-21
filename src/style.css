@@ -1,11 +1,15 @@
 * {
+  box-sizing: border-box;
+}
+
+body p {
   margin: 0;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 198px;
+  width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -15,14 +19,13 @@
   margin-left: 19px;
   align-items: center;
   margin-top: 32px;
-  margin-bottom: 40px;
   width: 160px;
   height: 134px;
   background-image: url(images/imac.jpeg) ;
 }
 
 .card__name {
-  margin-bottom: 4px;
+  margin-top: 40px;
   font-size: 12px;
   margin-left: 16px;
   line-height: 18px;
@@ -32,7 +35,7 @@
 }
 
 .card__code {
-  margin-bottom: 17px;
+  margin-top: 4px;
   margin-left: 16px;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
@@ -41,7 +44,7 @@
 }
 
 .rating {
-  margin-bottom: 23px;
+  margin-top: 17px;
   width: 166px;
   margin-left: 16px;
   display: flex;
@@ -49,7 +52,8 @@
 }
 
 .rating__comment {
-  margin-top: 2px;
+  display: flex;
+  align-items: center;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -80,7 +84,7 @@
 }
 
 .price {
-  margin-bottom: 27px;
+  margin-top: 23px;
   margin-left: 16px;
   width: 166px;
   display: flex;
@@ -88,7 +92,9 @@
 }
 
 .price__text {
-  margin-top: 2.5px;
+  display: flex;
+  align-items: center;
+  margin: 0;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -96,6 +102,7 @@
 }
 
 .price__num {
+  margin: 0;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -104,16 +111,20 @@
 
 .buy {
   margin-left: 16px;
-  margin-bottom: 26px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  width: 166px;
 }
 
 .buy__link {
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 12px 56px 12px 55px;
+  padding: 11px;
   background-color: #00acdc;
   border-radius: 5px;
   color: white;
@@ -122,6 +133,6 @@
 .buy__link:hover {
   background-color: white;
   color: #00acdc;
-  padding: 11px 55px 11px 54px;
   border: 1px solid #00acdc;
+  padding: 10px;
 }
