@@ -46,10 +46,6 @@ html {
   margin-bottom: 24px;
 }
 
-p {
-  margin: 0;
-}
-
 .card-rate__stars {
   display: flex;
 }
@@ -67,7 +63,11 @@ p {
   margin-right: 4px;
 }
 
-.stars-4 :nth-child(-n+4) {
+.stars-1 :nth-child(1),
+.stars-2 :nth-child(-n+2),
+.stars-3 :nth-child(-n+3),
+.stars-4 :nth-child(-n+4),
+.stars-5 :nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -76,6 +76,7 @@ p {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 10px;
+  margin: 0;
   margin-right: 16px;
   color: #060b35;
 }
@@ -99,6 +100,9 @@ p {
 
 .card-buy {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -106,13 +110,12 @@ p {
   line-height: 16px;
   text-transform: uppercase;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
   margin: 16px;
   width: 166px;
   height: 40px;
+
   background: #00acdc;
-  color: #fff;
   border-radius: 5px;
 }
 
