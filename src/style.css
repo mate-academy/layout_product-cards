@@ -56,7 +56,7 @@ img {
   margin-bottom: 16px;
 }
 
-.card__review {
+.card__stars {
   display: flex;
   text-align: center;
   justify-content: space-between;
@@ -88,14 +88,18 @@ img {
   background-position: center;
 }
 
-.stars__star:not(:first-child) {
-  margin-right: 4px;
-}
-
-.review__stars :nth-child(n+2) {
+.stars--1 :nth-child(n+5),
+.stars--2 :nth-child(n+4),
+.stars--3 :nth-child(n+3),
+.stars--4 :nth-child(n+2),
+.stars--5 :nth-child(n) {
   background-image: url(images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.stars__star:not(:first-child) {
+  margin-right: 4px;
 }
 
 .card__price {
