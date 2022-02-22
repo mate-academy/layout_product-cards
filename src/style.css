@@ -9,7 +9,8 @@ p {
 }
 
 .card {
-  width: 198px;
+  box-sizing: border-box;
+  width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -50,24 +51,27 @@ p {
   margin-bottom: 24px;
 }
 
-.card-rate__stars {
+.stars {
   display: flex;
 }
 
-.star {
+.stars__star {
   width: 16px;
   height: 16px;
-  /* border-radius: 0.5px; */
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.card-rate__stars :not(:last-child) {
+.stars :not(:last-child) {
   margin-right: 4px;
 }
 
-.stars-4 :nth-child(-n+4) {
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
@@ -105,26 +109,29 @@ p {
   color: #060b35;
 }
 
-.card-buy {
+.card__buy {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin: 16px;
   width: 166px;
   height: 40px;
+
   background: #00acdc;
   color: #fff;
   border-radius: 5px;
-  text-decoration: none;
 }
 
-.card-buy:hover {
+.card__buy:hover {
   box-sizing: border-box;
   background: #fff;
   color: #00acdc;
