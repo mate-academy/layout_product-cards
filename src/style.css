@@ -10,41 +10,37 @@ body {
 }
 
 .container {
-  display: flex;
   width: 200px;
-  height: 406px;
+  padding: 32px 16px 16px;
   box-sizing: border-box;
-  flex-direction: column;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
 .container__logo {
+  display: block;
   width: 160px;
   height: 134px;
-  padding: 32px 0 0 19px;
+  margin: 0 auto 40px;
 }
 
 /* #region information */
-.conainer_information {
-  margin: 40px 16px 0;
-}
 
-.conainer_tovar {
+.conainer_info {
   font-weight: 500;
   font-size: 12px;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
   line-height: 18px;
   color: #060b35;
 }
 
-.conainer_kod-tovara {
+.conainer_kod {
   font-weight: 400;
   font-size: 10px;
-
   line-height: 14px;
   color: #616070;
+  margin-bottom: 16px;
 }
 /* #endregion */
 
@@ -53,28 +49,32 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin: 16px 16px 0;
+  margin-bottom: 24px;
 }
 
-.container__stars {
-  height: 16px;
-  width: 96px;
+.stars {
   display: flex;
-  justify-content: space-between;
 }
 
-.container__star {
+.star {
   margin-right: 4px;
   background-color: transparent;
   height: 16px;
   width: 16px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50%;
 }
 
-.container__star:last-child {
-  background-image: url(images/star.svg);
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
+
+.stars :last-child {
   margin-right: 0;
 }
 
@@ -90,7 +90,7 @@ body {
 .container__buy {
   display: flex;
   justify-content: space-between;
-  margin: 24px 16px 0;
+  margin-bottom: 16px;
 }
 
 .price {
@@ -109,13 +109,8 @@ body {
 /* #endregion */
 
 /* #region buy-link */
-.container__buy-link {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-}
 
-.buy-submit {
+.container_buy-submit {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -132,20 +127,8 @@ body {
   line-height: 16px;
 }
 
-.buy-submit:hover {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 700;
+.container_buy-submit:hover {
   color: #00acdc;
-  text-decoration: none;
-  height: 40px;
-  width: 166px;
   background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #00acdc;
-  padding-top: 11px;
-  line-height: 16px;
 }
 /* #endregion */
