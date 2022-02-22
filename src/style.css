@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.card__content {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  height: 134px;
+  object-fit: contain;
+}
+
+.card__title {
+  min-width: 166px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #616070;
+}
+
+.card__review {
+  display: flex;
+  margin-top: 17px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url("images/star.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 23px;
+}
+
+.card__label {
+  font-size: 12px;
+  color: #616070;
+}
+
+.card__amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+}
+
+.card__link {
+  display: block;
+
+  margin-top: 16px;
+  padding: 11.5px 55px;
+  min-width: 166px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+
+  background: #00acdc;
+  border-radius: 5px;
+  border: none;
+}
+
+.card__link:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+
+  color: #00acdc;
+}
