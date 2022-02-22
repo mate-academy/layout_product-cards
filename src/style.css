@@ -6,6 +6,13 @@ body {
   margin: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
 .card {
   width: 200px;
   border-radius: 5px;
@@ -22,8 +29,7 @@ body {
 .card__image {
   height: 134px;
   width: 160px;
-  padding-left: 19px;
-  padding-top: 32px;
+  padding: 32px 0 0 19px;
 }
 
 .card__info-name {
@@ -75,7 +81,11 @@ body {
   background-position: center;
 }
 
-.stars :nth-child(-n+4) {
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
