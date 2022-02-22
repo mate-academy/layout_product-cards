@@ -23,7 +23,6 @@ body {
   background-color: #fff;
 
   width: 198px;
-  height: 406px;
 }
 /* #endregion */
 
@@ -38,14 +37,14 @@ body {
 /* #endregion */
 
 /* #region title-block */
-.title-block {
+.card-container__title-block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 166px;
 }
 
-.title-block__title {
+.card-container__title {
   font-weight: 500;
   font-size: 12px;
   color: var(--main-font);
@@ -54,7 +53,7 @@ body {
   margin: 0;
 }
 
-.title-block__product-code {
+.card-container__product-code {
   color: var(--secondary-font);
 
   height: 14px;
@@ -66,7 +65,7 @@ body {
 /* #endregion */
 
 /* #region review-block */
-.review-block__reviews {
+.card-container__reviews {
   font-weight: 400;
   font-size: 10px;
   color: var(--main-font);
@@ -75,7 +74,7 @@ body {
   padding: 0;
 }
 
-.review-block {
+.card-container__review-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,18 +83,18 @@ body {
   height: 16px;
 }
 
-.stars-block {
+.card-container__stars-block {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
-.stars-block :nth-child(-n+4) {
+.card-container__stars-block :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
   margin: 0 4px 0 0;
 }
 
-.stars-block :nth-child(5) {
+.card-container__stars-block :nth-child(5) {
   background-image: url(images/star.svg);
 }
 
@@ -142,19 +141,22 @@ body {
 /* #endregion */
 
 /* #region button-block */
+
+.card-container__button-block {
+  margin: 16px 0;
+}
+
 .button-block__link {
   display: flex;
   justify-content: center;
   align-items: center;
 
   background: rgba(0, 172, 220, 1);
-
-  margin: 16px 0;
+  border: 1px solid rgba(0, 172, 220, 1);
 
   width: 166px;
-  height: 40px;
+  height: 38px;
   border-radius: 5px;
-  border: none;
 
   font-weight: 700;
   font-size: 14px;
@@ -167,7 +169,7 @@ body {
 
 .button-block__link:hover {
   background: #fff;
-  border: 1px solid rgba(0, 172, 220, 1);
+
   color: rgba(0, 172, 220, 1);
 }
 /* #endregion */
