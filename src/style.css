@@ -1,0 +1,118 @@
+.page {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #e5e5e5;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__picture {
+  height: 134px;
+  width: 160px;
+  background-image: url(./images/imac.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 31px 19px 0;
+}
+
+.product-card__description-text {
+  padding: 40px 16px 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product-card__description-code {
+  padding: 4px 16px 0;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.product-card-rating {
+  padding: 17px 16px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.stars {
+  display: flex;
+}
+
+.stars-star {
+  padding-right: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* #region active-stars */
+.stars--1 > .stars-star:nth-child(1),
+.stars--2 > .stars-star:nth-child(-n+2),
+.stars--3 > .stars-star:nth-child(-n+3),
+.stars--4 > .stars-star:nth-child(-n+4),
+.stars--5 > .stars-star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
+
+.product-card-rating__count-review {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+
+}
+
+.product-card__prise {
+  padding: 24px 16px 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 18px;
+
+}
+
+.product-card__prise-text {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.product-card__prise-amount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.product-card__bye {
+  padding: 16px;
+}
+
+.product-card__bye-button {
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: #00acdc;
+  border: 1px solid #00acdc ;
+  border-radius: 5px;
+  padding: 11px 0;
+}
+
+.product-card__bye-button:hover {
+  background: white;
+  color: #00acdc;
+}
