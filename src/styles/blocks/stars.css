@@ -1,0 +1,36 @@
+.review {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars :not(:nth-child(n+5)) {
+  margin-right: 4px;
+}
+
+.stars__star {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-image: url(../../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--4 > :nth-child(-n+4) {
+  background-image: url(../../images/star-active.svg);
+}
+
+.rev {
+  margin: 0;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  display: flex;
+  align-items: flex-end;
+  color: #060b35;
+}
