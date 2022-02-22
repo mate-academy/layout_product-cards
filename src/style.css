@@ -17,11 +17,8 @@ body {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
   padding: 32px 16px 16px;
   width: 200px;
-  height: 406px;
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
   background-color: #fff;
@@ -44,7 +41,7 @@ body {
 
 .card__code {
   color: var(--additional-font);
-  margin-bottom: 16px;
+  margin: 0 0 16px;
 }
 
 .card__review {
@@ -53,22 +50,30 @@ body {
   margin-bottom: 24px;
 }
 
-.card__review-stars {
+.stars {
   display: flex;
   align-self: flex-end;
   background-position: center;
 }
 
-.stars {
+.star {
   width: 16px;
   height: 16px;
-  background-image: url(images/star-active.svg);
+  background-image: url(images/star.svg);
   margin-right: 4px;
   background-repeat: no-repeat;
 }
 
-.stars:last-child {
-  background-image: url(images/star.svg);
+.stars :last-child {
+  margin: 0;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
 }
 
 .card__review-comments {
@@ -98,11 +103,6 @@ body {
 .card__button {
   display: flex;
   justify-content: center;
-}
-
-.card__button-buy {
-  display: flex;
-  justify-content: center;
   align-items: center;
   width: 166px;
   height: 40px;
@@ -117,8 +117,7 @@ body {
   text-transform: uppercase;
 }
 
-.card__button-buy:hover {
+.card__button:hover {
   background-color: rgb(255, 255, 255);
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
