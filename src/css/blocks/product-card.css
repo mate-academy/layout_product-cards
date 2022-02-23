@@ -38,19 +38,18 @@
 }
 
 /* Star rating */
-.card__star-rating-wrapper {
+.stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.card__star-rating-list {
+.stars__list {
   display: flex;
-  gap: 4px;
 }
 
-.card__star-rating-item {
+.stars__star {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../images/star-active.svg);
@@ -59,11 +58,19 @@
   cursor: pointer;
 }
 
-.card__star-rating-item:nth-of-type(n+5) {
+.stars__star:not(:first-of-type) {
+  margin-right: 4px;
+}
+
+.stars__list--1 :nth-child(n+2),
+.stars__list--2 :nth-child(n+3),
+.stars__list--3 :nth-child(n+4),
+.stars__list--4 :nth-child(n+5),
+.stars__list--5 :nth-child(n+6) {
   background-image: url(../../images/star.svg);
 }
 
-.card__star-rating-amount {
+.stars__amount {
   font-size: 10px;
   line-height: 14px;
 }
