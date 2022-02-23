@@ -1,0 +1,41 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 14px;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.stars__rate {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(/src/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stars :not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars__rate--1 .stars__star:nth-child(-n+1),
+.stars__rate--2 .stars__star:nth-child(-n+2),
+.stars__rate--3 .stars__star:nth-child(-n+3),
+.stars__rate--4 .stars__star:nth-child(-n+4),
+.stars__rate--5 .stars__star:nth-child(-n+5) {
+  background-image: url(/src/images/star-active.svg);
+}
+
+.stars__feedback {
+  display: flex;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  margin-right: 16px;
+  color: #060b35;
+}
