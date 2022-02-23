@@ -51,23 +51,6 @@ html {
 }
 
 .feedback-stars__button {
-  background-image: url(images/star.svg);
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 16px;
-  width: 16px;
-  padding: 0;
-  border: none;
-}
-
-.feedback-stars :nth-last-child(n + 2) {
-  background: url(images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars:not(:last-child) {
   background-image: url(images/star-active.svg);
   background-color: transparent;
   background-position: center;
@@ -76,6 +59,15 @@ html {
   width: 16px;
   padding: 0;
   border: none;
+}
+
+.stars--0 :nth-child(n),
+.stars--1 :nth-child(n+2),
+.stars--2 :nth-child(n+3),
+.stars--3 :nth-child(n+4),
+.stars--4 :nth-child(n+5) {
+  background-image: url(images/star.svg);
+  background-position: center;
 }
 
 .feedback-rate {
