@@ -1,17 +1,28 @@
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 html {
   font-family: Roboto, sans-serif;
+  font-style: normal;
 }
 
-.card-price-monoblock {
-  box-sizing: border-box;
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
   width: 200px;
+
+  background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+}
+
+.card {
+  width: 200px;
 }
 
 .card__image {
@@ -21,91 +32,113 @@ html {
 }
 
 .card__apple-name {
-  font-style: normal;
+  font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: hsl(234, 80%, 12%);
-  margin: 0 16px 4px;
+  margin: 0 16px;
+
+  width: 166px;
+  height: 36px;
 }
 
 .card__product-code {
   font-size: 10px;
+  font-weight: 400;
   line-height: 14px;
+
+  width: 92px;
+  height: 14px;
+
   color: #616070;
-  margin: 0 16px 16px;
+  margin: 4px 16px 16px;
+
   text-align: left;
   align-items: center;
   justify-content: space-between;
 }
 
-.rating__stars-star {
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 16px;
+  line-height: 14px;
+
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+.stars__star {
   width: 16px;
   height: 16px;
+
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(images/star.svg);
+
   display: flex;
 }
 
-.rating__stars-star:nth-child(-n+4) {
+/* .stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4), */
+.stars :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
 
-.rating__stars {
+.stars :not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars {
   display: flex;
-  width: 166px;
-  height: 16px;
-  margin: 0 16px 24px;
-  justify-content: space-between;
+  /* align-items: flex-start; */
 }
 
 .stars-text {
   font-size: 10px;
   line-height: 14px;
   display: flex;
-  align-items: flex-end;
   color: rgb(6, 11, 53);
-  padding-right: 0;
-  padding-left: 32px;
+  font-weight: 400;
+  margin-right: 16px;
 }
 
 .price {
   display: flex;
+  justify-content: space-between;
   text-align: center;
   align-items: center;
-  padding: 0 16px 16px;
 }
 
 .price__text {
   line-height: 18px;
-  padding: 0;
-  padding-right: 50px;
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
   text-align: left;
   color: #616070;
+  margin-left: 16px;
 }
 
 .price__apple {
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  text-align: right;
   color: hsl(234, 80%, 12%);
+  margin-right: 16px;
 }
 
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(193, 100%, 43%);
-  border-radius: 5px;
+
   width: 166px;
   height: 40px;
   margin: 0 16px 16px;
-  border: 1px solid hsl(193, 100%, 43%);
+
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -114,10 +147,14 @@ html {
   text-transform: uppercase;
   color: hsl(0, 0%, 100%);
   text-decoration: none;
+
+  border: 1px solid hsl(193, 100%, 43%);
+  background-color: hsl(193, 100%, 43%);
+  border-radius: 5px;
 }
 
-button:hover {
+.button:hover {
   background: #fff;
-  text-decoration: underline;
-  color: hsl(193, 100%, 43%);
+  border: 1px solid #00acdc;
+  color: #00acdc;
 }
