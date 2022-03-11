@@ -1,13 +1,47 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Product cards</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <h1>Product cards</h1>
-</body>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Product cards</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="product-card" data-qa="card">
+      <img src="./images/imac.jpeg" alt="elemenPicture" class="product-card__picture">
+
+      <h2 class="product-card__description-text reset-margin">Моноблок APPLE A1419 iMac 27" Retina 5K (MNED2UA/A)</h2>
+      <p class="product-card__description-code reset-margin">Код товара: 195434</p>
+
+      <section class="product-card-rating">
+        <div class="stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+        <p class="product-card-rating__count-review">
+          Отзывов: 5
+        </p>
+      </section>
+
+      <div class="product-card__prise">
+        <h3 class="product-card__prise-text">Цена:</h3>
+        <p class="product-card__prise-amount">69 999 грн</p>
+      </div>
+
+      <a href="#bye" data-qa="hover">
+        <input
+          type="button"
+          value="купить"
+          class="product-card__button"
+        >
+      </a>
+    </main>
+  </body>
 </html>
