@@ -29,51 +29,57 @@ html {
 .product__name {
   margin: 0;
   padding: 0 16px;
-}
-
-.product__name-info {
-  padding: 0;
-  margin: 0;
   font-weight: 500;
   font-size: 12px;
 }
 
 .product__code {
   margin: 0;
-}
-
-.product__code-info {
   padding-left: 16px;
   font-size: 10px;
   margin-top: 4px;
   margin-bottom: 6px;
 }
 
-.product__rating-reviews {
-  font-size: 10px;
-  padding-left: 13px;
-  margin-bottom: 8px;
+.product__rating {
+  display: flex;
+  margin-top: 10px;
+  padding-left: 16px;
 }
 
-.product__rating {
+.stars__rating {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 
-.product__star {
-  height: 16px;
-  width: 16px;
-  background: url(./images/star.svg) no-repeat;
-  margin-right: 4px;
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  min-width: 16px;
+  min-height: 16px;
 }
 
-.product__rating .product__star:nth-child(-n+4) {
-  background: url(./images/star-active.svg) no-repeat;
+.stars__rating .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  min-height: 16px;
+  min-width: 16px;
 }
 
-.product-price {
+.stars__reviews {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 10px;
+  padding-left: 17px;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+}
+
+.product__price {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -81,24 +87,28 @@ html {
   padding: 0 16px;
 }
 
-.product-price__price {
+.money__price {
   font-size: 12px;
 }
 
-.product-price__amount {
+.money__amount {
   font-size: 16px;
   font-weight: bold;
 }
 
 .product__button {
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+
+  padding: 16px;
   margin: 0 16px;
+  font-size: 14px;
+
   border-radius: 5px;
-  background-color: #00acdc;
-  border: #00acdc;
+
   color: white;
-  text-transform: uppercase;
-  font-weight: 700;
+  background-color: #00acdc;
 }
 
 .product__button:hover {
