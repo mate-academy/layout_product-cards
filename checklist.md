@@ -2,12 +2,12 @@
 selectors specificity unless completely necessary.
 2. [STYLES] - Remember to use fallback fonts - alternative font-family in case
 the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
-3. [TASK] - Make sure to reuse part of [Stars task](https://github.com/mate-academy/layout_stars)
+3. [TASK] - Make sure to reuse part of [product__rating task](https://github.com/mate-academy/layout_product__rating)
 here, and keep it operational in case you change block modifier.
 4. [BEM] - Check your BEM structure using BEM-linter (`npm run lint`) and
 [this list](https://mate-academy.github.io/fe-program/css/typical-bem-mistakes)
 5. [BEM] - Don't make BEM structure too complicated. You don't need to create
-separate blocks for anything other than card itself and stars.
+separate blocks for anything other than card itself and product__rating.
 6. [BEM & STYLES] - Don't add external styles (positioning or margins) to
 BEM-blocks. Use mix where necessary and move all external styles under element
 selector.
