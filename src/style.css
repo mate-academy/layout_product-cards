@@ -10,11 +10,7 @@ p {
   margin: 0;
 }
 
-h2 {
-  margin: 0;
-}
-
-.card {
+.card__container {
   display: flex;
   width: 200px;
   padding: 32px 16px 16px;
@@ -33,8 +29,11 @@ h2 {
 }
 
 .card__title {
+  margin: 0;
   margin-bottom: 4px;
+}
 
+.title {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -44,7 +43,9 @@ h2 {
 
 .card__id {
   margin-bottom: 16px;
+}
 
+.id {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -81,12 +82,11 @@ h2 {
 .card__feedback {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 24px;
 }
 
 .feedback {
-  align-self: flex-end;
-
   font-weight: 400;
   font-size: 10px;
   color: #060b35;
@@ -113,34 +113,29 @@ h2 {
 
 .card__buy {
   display: flex;
+  width: 100%;
+  height: 40px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 166px;
-  height: 40px;
-
-  background: #00acdc;
-  border-radius: 5px;
 }
 
 .buy {
-  width: 100%;
-
   text-decoration: none;
-  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
-}
 
-.card__buy--hover:hover {
-  background: #fff;
-  border: 1px solid #00acdc;
+  background: #00acdc;
   border-radius: 5px;
 }
 
 .buy--hover:hover {
   color: #00acdc;
+
+  background: #fff;
+  border: 1px solid #00acdc;
+  
+  transition: 0.5s;
 }
