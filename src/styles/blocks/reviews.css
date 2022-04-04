@@ -1,0 +1,36 @@
+.card-reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-reviews__stars {
+  display: flex;
+  align-items: center;
+}
+
+.card-reviews__star {
+  height: 16px;
+  width: 16px;
+  margin-left: 16px;
+
+  background-image: url(../../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-reviews__star:not(:first-child) {
+  margin-left: 4px;
+}
+
+.card-reviews__stars .card-reviews__star:nth-child(-n+4) {
+  background-image: url(../../images/star-active.svg);
+}
+
+.card-reviews__count {
+  font-size: 10px;
+  color: #060b35;
+
+  margin: 16px;
+}
