@@ -11,100 +11,86 @@ body {
   margin: 0;
 }
 
-.product__card {
-  color: #060b35;
-
-  margin: 10px;
+.card {
+  display: flex;
+  flex-direction: column;
   width: 200px;
+  padding: 32px 16px 16px;
 
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
+  color: #060b35;
 }
 
-.product__image {
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 40px;
-}
-
-.product__img {
-  margin-top: 32px;
+.card__img {
   width: 160px;
+  margin: 0 auto;
 }
 
-.product__info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  margin: 0 16px;
-}
-
-.product__title {
+.card__title {
   font-weight: 500;
-  font-size: 12px;
+  line-height: 18px;
 
-  margin: 0;
-  margin-bottom: 4px;
+  margin: 40px 0 0;
 }
 
-.product__code {
+.card__code {
   font-size: 10px;
-
+  line-height: 14px;
   color: #616070;
 
-  margin: 0;
-  margin-bottom: 16px;
+  margin: 4px 0 0;
 }
 
-.product__rating {
+.card__rating-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  margin-bottom: 24px;
-}
-
-.product__stars {
-  display: flex;
+  margin-top: 16px;
 }
 
 .stars {
+  display: flex;
+}
+
+.stars__star {
   content: url("./images/star.svg");
 
   margin-right: 4px;
 }
 
-.stars:last-child {
+.stars__star:last-child {
   margin-right: 0;
 }
 
-.stars:nth-child(-n+4) {
+.stars--4 > .stars__star:nth-child(-n+4) {
   content: url("./images/star-active.svg");
 }
 
-.product__feedback {
+.feedbacks {
   font-size: 10px;
 }
 
-.product__price {
+.card__price-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 16px;
+  margin-top: 24px;
 }
 
-.text {
+.card__price-text {
   color: #616070;
 }
 
-.value {
+.card__price-value {
   font-weight: 700;
   font-size: 16px;
 }
 
-.product__button {
+.card__button {
   font-weight: 700;
   font-size: 14px;
   color: #fff;
@@ -118,13 +104,13 @@ body {
   border: 1px solid transparent;
   border-radius: 5px;
 
-  padding: 12px;
-  margin-bottom: 16px;
+  padding: 12px 0;
+  margin-top: 16px;
 
   transition: 0.4s ease;
 }
 
-.product__button:hover {
+.card__button:hover {
   color: #00acdc;
   background-color: #fff;
   border-color: #00acdc;
