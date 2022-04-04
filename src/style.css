@@ -1,0 +1,135 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.product {
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.product__img {
+  width: 160px;
+  height: 134px;
+}
+
+.product__name {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  margin-bottom: 4px;
+  margin-top: 40px;
+  color: #060b35;
+}
+
+.product__index {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  color: #616070;
+}
+
+.product__stars_AND_reviews {
+  height: 16px;
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+  margin: 0;
+}
+
+.star {
+  height: 16px;
+  width: 16px;
+  margin: 0 2px;
+  background-repeat: no-repeat;
+  background-image: url(./images/star.svg);
+  background-position: center;
+}
+
+.stars--1 .star:nth-child(1),
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.reviews {
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  color: #616070;
+}
+
+.product__price_AND_number {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  margin-top: 20px;
+  line-height: 18px;
+  margin-bottom: 22px;
+}
+
+.price {
+  font-weight: 400;
+  color: #060b35;
+  font-size: 12px;
+}
+
+.number {
+  font-weight: 700;
+  color: #060b35;
+  font-size: 16px;
+}
+
+.buy-button {
+  height: 40px;
+  width: 166px;
+  margin-bottom: 14px;
+  
+  border-radius: 5px;
+  border: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #00acdc;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.buy-button:hover {
+  background-color: white;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
