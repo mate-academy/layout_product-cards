@@ -11,15 +11,21 @@ body {
   box-sizing: border-box;
 }
 
+.page__product-card {
+  width: 200px;
+}
+
 .product-card {
+  padding-top: 34px;
+  padding-left: 16px;
+  padding-right: 16px;
   flex-direction: column;
   display: flex;
-  width: 198px;
   background-color: #fff;
 }
 
 .product-card__img {
-  margin: 32px 19px 40px;
+  margin-bottom: 40px; /* 0 19px 40px;*/
   height: 134px;
   width: 160px;
 }
@@ -27,14 +33,23 @@ body {
 .product-card__title {
   font-weight: 500;
   font-size: 12px;
-  padding: 0 16px 4px;
+  margin-bottom: 4px;
+  line-height: 18px;
 }
 
 .product-card__code {
   font-size: 10px;
   font-weight: 400;
   color: #616070;
-  padding: 0 16px 16px;
+  margin: 0 0 16px;
+  line-height: 14px;
+}
+
+.product-card__stars-and-feedback {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .product-card__star {
@@ -43,7 +58,11 @@ body {
   background-image: url("./images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 4px;
+  /*margin-right: 4px;*/
+}
+
+.product-card__star:last-child {
+  margin-right: 0;
 }
 
 .product-card__star-active {
@@ -55,21 +74,15 @@ body {
   margin-right: 4px;
 }
 
-.product-card__stars-and-feedback {
-  padding: 0 16px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .product-card__feedback {
   font-size: 10px;
   font-weight: 400;
   padding-left: 13px;
+  line-height: 14px;
 }
 
 .product-card__price {
-  padding: 0 16px /*16px*/;
+  margin: 0 0 16px /*16px*/;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,17 +92,21 @@ body {
   font-size: 12px;
   font-weight: 400;
   color: #616070;
+  line-height: 14px;
+  margin: 0;
 }
 
 .product-card__price-num {
   font-size: 16px;
   color: #060b35;
   font-weight: 700;
+  line-height: 14px;
+  margin: 0;
 }
 
 .product-card__button {
   background-color: #00acdc;
-  margin: 0 16px 16px;
+  margin-bottom: 16px;
   height: 40px;
   width: 166px;
   display: flex;
