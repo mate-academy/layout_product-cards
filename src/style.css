@@ -2,68 +2,57 @@
   margin: 0;
 }
 
-.card {
+html {
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #fff;
-  width: 198px;
-}
-
-.card__picture {
-  margin: 32px auto 0;
-  height: 134px;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
 }
 
 .card__image {
-  width: 160px;
   height: 134px;
+  width: 160px;
+  margin: 0 auto 40px;
 }
 
-.card__name {
-  margin-top: 40px;
-  padding: 0 16px;
-  margin-bottom: 4px;
-}
-
-.card__name-content {
-  font-style: normal;
+.card__title {
   font-weight: 500;
   color: #060b35;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .card__number {
-  margin-left: 16px;
-  margin-right: 90px;
-  margin-bottom: 16px;
-}
-
-.card__number-content {
   font-size: 10px;
   line-height: 14px;
   color: #616070;
+  margin: 0 0 16px;
 }
 
 .card__rating {
   display: flex;
   justify-content: space-between;
-  padding: 0 16px;
+  align-items: flex-end;
   margin-bottom: 24px;
-  height: 16px;
 }
 
 .stars {
   display: flex;
 }
 
-.stars__star {
+.star {
   background-image: url("./images/star.svg");
   width: 16px;
   height: 16px;
@@ -72,38 +61,40 @@
   background-repeat: no-repeat;
 }
 
-.stars--1 .stars__star:nth-child(1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
+.stars--1 .star:nth-child(1),
+.stars--2 .star:nth-child(-n + 2),
+.stars--3 .star:nth-child(-n + 3),
+.stars--4 .star:nth-child(-n + 4),
+.stars--5 .star:nth-child(-n + 5) {
   background-image: url("./images/star-active.svg");
 }
 
 .card__rating-feedbacks-number {
   font-size: 10px;
+  line-height: 14px;
   color: #060b35;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
-  padding: 0 16px;
   margin-bottom: 16px;
 }
 
-.card__price-word {
+.card__price-text {
   color: #616070;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .card__price-amount {
   font-weight: 700;
   font-size: 16px;
   color: #060b35;
+  line-height: 18px;
 }
 
 .card__buy {
-  margin: 0 16px 16px;
   height: 40px;
   background-color: #00acdc;
   border-radius: 5px;
