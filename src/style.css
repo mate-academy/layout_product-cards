@@ -9,44 +9,38 @@ body {
   background: #e5e5e5;
 }
 
-.container {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.container__card {
-  padding: 32px 16px 16px;
-  background-color: #fff;
+.card {
   width: 200px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  box-sizing: inherit;
-}
-
-.container__card--img {
   display: flex;
-  justify-content: center;
-  margin: 0 auto 40px;
+  flex-direction: column;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
 }
 
-.img {
+.card__img {
+  display: flex;
+  margin-bottom: 40px;
   width: 160px;
   height: 134px;
+  justify-content: center;
 }
 
-.medium {
+.card__title {
+  box-sizing: inherit;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  margin: 0 0 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  width: 100%;
-  display: block;
-  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
 }
 
-.code {
+.card__code {
   display: block;
   font-weight: 400;
   font-size: 10px;
@@ -55,8 +49,9 @@ body {
   margin-bottom: 16px;
 }
 
-.evaluation {
+.card__evaluation {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 24px;
 }
@@ -64,8 +59,7 @@ body {
 .stars {
   display: flex;
   justify-content: space-between;
-  width: 96px;
-
+  align-items: center;
 }
 
 .stars__star {
@@ -75,9 +69,14 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 4px;
 }
 
-.stars--4 .stars__star:nth-child(-n+4) {
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
 
   background-image: url(./images/star-active.svg);
 }
@@ -87,12 +86,15 @@ body {
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
+  display: flex;
+  margin: 0;
 }
 
-.price {
-  display: flex;
+.card__price {
+  display: inline-flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .title {
@@ -137,6 +139,6 @@ body {
   background: #fff;
   color: #00acdc;
   cursor: pointer;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
   box-sizing: border-box;
 }
