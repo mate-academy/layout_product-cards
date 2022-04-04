@@ -10,7 +10,7 @@ html {
   margin: 0;
 }
 
-.product {
+.card {
   padding: 32px 16px 16px;
 }
 
@@ -18,36 +18,38 @@ html {
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 408px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.product__foto {
+.card__photo {
   max-width: 160px;
   max-height: 134px;
   margin-bottom: 40px;
 }
 
-.product__name {
+.card__name {
   font-weight: 500;
   font-size: 12px;
   margin-bottom: 4px;
-}
-
-.name {
   line-height: 18px;
 }
 
-.product__code {
+.card__code {
   font-size: 10px;
   margin-bottom: 16px;
+  color: #616070;
 }
 
-.product__rating {
+.card__feedback {
+  display: flex;
+}
+
+.stars {
   display: flex;
   justify-content: space-between;
+  /* flex-direction: wrap; */
   text-align: center;
   align-items: center;
   margin-bottom: 24px;
@@ -57,13 +59,15 @@ html {
   display: flex;
   text-align: center;
   align-items: center;
-  gap: 4px;
+  margin-right: 4px;
 }
 
-.stars__reviews {
+.card__reviews {
+  display: flex;
   font-size: 10px;
   margin: 0;
   padding-bottom: 3px;
+  padding-left: 17px;
 }
 
 .stars__star {
@@ -73,33 +77,34 @@ html {
   min-height: 16px;
 }
 
-.stars__rating .stars__star:nth-child(-n+4) {
-  background-image: url(./images/star-active.svg);
-  background-repeat: no-repeat;
+.stars--1 .star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background: url(./images/star-active.svg) no-repeat;
   min-height: 16px;
   min-width: 16px;
 }
 
-.product__price {
+.card__price {
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  margin-bottom: 16px;
-}
-
-.money__price {
+  margin: 0 0 16px;
   font-size: 12px;
-  margin: 0;
+  color: #616070;
 }
 
-.money__amount {
+.card__amount {
   font-size: 16px;
+  color: #060b35;
   font-weight: bold;
   margin: 0;
 }
 
-.product__button {
+.card__button {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -108,6 +113,7 @@ html {
   min-height: 39px;
 
   font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
 
   border-radius: 5px;
