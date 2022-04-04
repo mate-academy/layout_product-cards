@@ -2,28 +2,33 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-body {
+.page {
   margin: 0;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 198px;
+  padding: 32px 16px 16px;
 
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
+.page__card {
+  width: 183px;
+}
+
 .card__photo {
-  margin: 32px 19px auto;
+  display: block;
+  margin: 0 auto 40px;
   height: 134px;
   width: 160px;
 }
 
-.card__name-of-product {
-  margin: 40px 16px 4px;
+.card__title {
+  margin: 0 0 4px;
 
   font-family: inherit;
   font-size: 12px;
@@ -32,8 +37,8 @@ body {
   color: #060b35;
 }
 
-.card__code-of-product {
-  margin: 4px 16px auto;
+.card__code {
+  margin: 0;
 
   font-family: inherit;
   font-weight: 400;
@@ -44,20 +49,17 @@ body {
 
 .card__reviews {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 16px;
   height: 16px;
 }
 
 .card__reviews-stars {
   display: flex;
-  margin-left: 16px;
-  text-align: center;
 }
 
-.star {
+.stars__star {
   display: flex;
   background: url(./images/star.svg) no-repeat;
 
@@ -65,19 +67,23 @@ body {
   width: 16px;
 }
 
-.star:not(:last-child) {
+.stars__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.card__reviews-stars > :nth-child(-n + 4) {
+.stars--1 > :nth-child(1),
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
   background: url(./images/star-active.svg) no-repeat;
 }
 
 .card__reviews-text {
-  margin-right: 16px;
   font-family: inherit;
   font-weight: 400;
   font-size: 10px;
+  line-height: 14px;
   color: #060b35;
 }
 
@@ -86,7 +92,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 24px 16px auto;
+  margin: 24px 0 auto;
   color: #060b35;
 }
 
@@ -103,12 +109,8 @@ body {
   font-size: 16px;
 }
 
-.bottom-holder {
-  margin-bottom: 16px;
-}
-
 .bottom {
-  margin: 16px 16px auto;
+  margin: 16px auto;
   width: 166px;
   height: 40px;
   background: #00acdc;
@@ -131,6 +133,6 @@ body {
 
 .bottom:hover {
   background-color: #fff;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
   color: #00acdc;
 }
