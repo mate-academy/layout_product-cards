@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://ISRLv2021.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://ISRLv2021.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instructions](https://mate-academy.github.io/layout_task-guideline)
 ___
@@ -35,4 +35,3 @@ other - number of selected stars should change correctly.
 
 ---
 ![screenshot](./references/card-example.png)
-
