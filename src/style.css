@@ -1,4 +1,13 @@
 
+* {
+  box-sizing: border-box;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
 .page {
   font-family: "Roboto", sans-serif;
 }
@@ -8,36 +17,26 @@
   background-color: #e5e5e5;
 }
 
+.page__card {
+  width: 200px;
+}
+
 .card {
   padding: 32px 16px 16px;
-  box-sizing: border-box;
 
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.page__card {
-  width: 200px;
-}
-
 .card__photo {
-  display: block;
+  display: flex;
   margin: auto;
-  
+
   height: 134px;
   width: 160px;
   
   margin-bottom: 40px;
-}
-
-.card__content {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.description {
-  margin: 0;
 }
 
 .card__description {
@@ -48,10 +47,6 @@
   font-weight: 500;
 
   color: #060b35;
-}
-
-.code {
-  margin: 0;
 }
 
 .card__code {
@@ -69,7 +64,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
-  margin: 0;
 }
 
 .stars {
@@ -84,7 +78,12 @@
   background-repeat: no-repeat;
 }
 
-.stars__star:nth-child(5) {
+.stars--5 .star:nth-child(n + 6),
+.stars--4 .star:nth-child(n + 5),
+.stars--3 .star:nth-child(n + 4),
+.stars--2 .star:nth-child(n + 3),
+.stars--1 .star:nth-child(n + 2),
+.stars--0 .star:nth-child(n + 1) {
   background-image: url(images/star.svg);
 }
 
