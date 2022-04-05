@@ -3,33 +3,43 @@ html {
 }
 
 * {
+  box-sizing: border-box;
+}
+
+h2,
+p {
   margin: 0;
 }
 
+.card-apple--width {
+  width: 200px;
+}
+
 .card-apple {
-  height: 406px;
-  width: 198px;
+  display: flex;
+  flex-direction: column;
   border-radius: 5px;
+
+  padding: 32px 16px 16px;
 
   background-color: #fff;
   border: 1px solid #f3f3f3;
 }
 
 .card-apple__img {
+  display: block;
   height: 134px;
-  width: 160px;
-  padding: 32px 19px 36px;
+  padding: 0 3px;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .card-apple__commodity {
-  font-family: inherit;
-  padding: 0 16px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-
   color: #060b35;
-
+  margin-bottom: 4px;
 }
 
 .card-apple__code {
@@ -38,7 +48,7 @@ html {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  padding: 4px 0 16px 16px;
+  margin-bottom: 16px;
 
   color: #616070;
 
@@ -46,25 +56,28 @@ html {
 
 .card-apple__rating {
   display: flex;
-  padding: 0 0 0 16px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
 }
 
 .stars {
   display: flex;
-  justify-content: space-between;
-
-  width: 96px;
 }
 
 .stars__star {
-  display: flex;
-  flex-grow: 1;
   height: 16px;
   width: 16px;
   border-radius: 0.5px;
+  margin-right: 4px;
+  background-position: center;
 
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
+}
+
+.stars__star--last-child {
+  margin-right: 0;
 }
 
 .stars--1 > .stars__star:first-child,
@@ -75,7 +88,7 @@ html {
   background-image: url(./images/star-active.svg);
 }
 
-.rating {
+.card-apple__feedback {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -84,19 +97,20 @@ html {
   display: flex;
   margin-left: 17px;
   align-items: center;
+
 }
 
 .card-apple__price {
   font-family: inherit;
   display: flex;
   justify-content: space-between;
-  padding: 24px 16px 16px;
+  margin-bottom: 16px;
 }
 
 .card-apple__world {
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
+  font-weight: 400;
   color: #616070;
 
 }
@@ -111,46 +125,28 @@ html {
 
 .buttom {
   display: flex;
-  margin: 0 16px 16px;
-  padding: 0;
+  margin: 0;
   height: 40px;
-  width: 166px;
   background: #00acdc;
   border-radius: 5px;
-  text-align: left;
   justify-content: center;
-
-}
-
-.buttom__link {
-  display: flex;
   text-transform: uppercase;
+  border: 1px solid #00acdc;
 
   text-decoration: none;
   color: white;
 
-  height: 16px;
-  width: 55px;
-}
-
-.buttom__item {
-  display: flex;
   align-items: center;
-
-  font-family: inherit;
   font-size: 14px;
-  line-height: 16px;
   font-weight: 700;
+
+  line-height: 16px;
+  text-align: center;
 }
 
 .buttom--hover:hover {
-  border: 1px solid #00acdc;
   box-sizing: border-box;
   background-color: #fff;
   transition: 0.5s;
-}
-
-.buttom__link--hover:hover {
   color: #00acdc;
-  transition: 0.5s;
 }
