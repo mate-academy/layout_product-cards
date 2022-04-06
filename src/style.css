@@ -1,20 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
 }
 
-body {
+h3,
+p {
   margin: 0;
+}
+
+.card--width {
+  width: 200px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 200px;
   padding: 32px 16px 16px;
 
   border: 1px solid #f3f3f3;
@@ -24,15 +31,20 @@ body {
 }
 
 .card__img {
-  width: 160px;
-  margin: 0 auto;
+  display: block;
+  height: 134px;
+
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0 3px;
 }
 
 .card__title {
+  font-size: 12px;
   font-weight: 500;
   line-height: 18px;
 
-  margin: 40px 0 0;
+  margin-bottom: 4px;
 }
 
 .card__code {
@@ -40,15 +52,14 @@ body {
   line-height: 14px;
   color: #616070;
 
-  margin: 4px 0 0;
+  margin-bottom: 16px;
 }
 
 .card__rating-block {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .stars {
@@ -58,6 +69,8 @@ body {
 .stars__star {
   content: url("./images/star.svg");
 
+  height: 16px;
+  width: 16px;
   margin-right: 4px;
 }
 
@@ -65,29 +78,33 @@ body {
   margin-right: 0;
 }
 
-.stars--4 > .stars__star:nth-child(-n+4) {
+.stars--4 > .stars__star:nth-child(-n + 4) {
   content: url("./images/star-active.svg");
 }
 
-.feedbacks {
+.card__rating-feedbacks {
   font-size: 10px;
+
+  display: flex;
+  align-items: center;
 }
 
 .card__price-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin-top: 24px;
 }
 
 .card__price-text {
+  font-size: 12px;
+  line-height: 18px;
   color: #616070;
 }
 
 .card__price-value {
   font-weight: 700;
   font-size: 16px;
+  line-height: 18px;
 }
 
 .card__button {
