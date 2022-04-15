@@ -13,9 +13,10 @@ BEM-blocks. Use mix where necessary and move all external styles under element
 selector.
 
 GOOD example
+
 ```html
 <!--index.html-->
-<div class="container">
+<div class="card">
   <div class="container__card card">
     ...
   </div>
@@ -34,9 +35,10 @@ GOOD example
 ```
 
 BAD example
+
 ```html
 <!--index.html-->
-<div class="container">
+<div class="card">
   <div class="card">
     ...
   </div>
