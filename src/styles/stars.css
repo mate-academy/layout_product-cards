@@ -1,1 +1,22 @@
+.rate__stars {
+  display: flex;
+}
 
+.rate__stars--star
+ {
+  display: flex;
+  flex-direction: row;
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../images/star.svg)
+ }
+
+ .rate__stars--star:not(:first-child) {
+  margin-left: 4px;
+}
+
+.rate__stars--star:nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
+}
