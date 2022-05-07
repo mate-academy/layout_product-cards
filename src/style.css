@@ -1,0 +1,98 @@
+@import "./cardStyles/__normalise.css";
+@import "./cardStyles/__variables.css";
+@import "./cardStyles/__feedbackStars.css";
+
+.homePage {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+
+}
+
+.card {
+  display: flexbox;
+  width: var(--cardWidth);
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px ;
+}
+
+.card__productPhoto {
+  display: flex;
+  justify-content: center;
+}
+
+.card__productImage {
+  width: var(--productImageWidth);
+  height: var(--productImageHeight);
+  padding-bottom: 40px;
+}
+
+.card__aboutProduct {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__productDescription {
+  display: block;
+  font-weight: 500;
+  color: var(--mainAccentFontColor);
+  font-size: 12px;
+  line-height: 18px;
+  padding-bottom: 4px;
+}
+
+.card__productCode {
+  line-height: 14px;
+  color: var(--secondaryFontColor);
+  padding-bottom: 16px;
+}
+
+.card__purchase {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__purchasePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 18px;
+  padding-bottom: 16px;
+}
+
+.card__productPrice {
+  align-self: center;
+  font-size: 12px;
+  color: var(--secondaryFontColor);
+}
+
+.card__priceValue {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--mainAccentFontColor);
+}
+
+.card__buySubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--buySubmitColor);
+  border-radius: 5px;
+  background: var(--buySubmitColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.card__buy:hover .card__buySubmit {
+  background-color: #fff;
+  color: var(--buySubmitColor);
+}
