@@ -38,12 +38,68 @@ html {
   padding: 4px 90px 16px 16px;
 }
 
-.product-card__rating {
+/* .product-card__rating {
   display: flex;
   flex-direction: row;
   gap: 17px;
   justify-content: center;
   padding-bottom: 24px;
+} */
+
+.product-card__rating {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 16px;
+  padding-bottom: 24px;
+}
+
+.product-card__rating_stars {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+label {
+  display: inline-block;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+
+.product-card__rating_stars input {
+  display: none
+}
+
+.stars__star:nth-of-type(1) { order: 5; }
+.stars__star:nth-of-type(2) { order: 4; }
+.stars__star:nth-of-type(3) { order: 3; }
+.stars__star:nth-of-type(4) { order: 2; }
+.stars__star:nth-of-type(5) { order: 1; }
+
+.stars--1 .stars__star:nth-child(n+9),
+.stars--2 .stars__star:nth-child(n+7),
+.stars--3 .stars__star:nth-child(n+5), 
+.stars--5 .stars__star:nth-child(n+2),
+.stars--4 .stars__star:nth-child(n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+input:checked ~ .stars__star {
+  background-image: url(./images/star-active.svg);
+}
+
+form:hover .stars__star {
+  background-image: url(./images/star.svg); 
+}
+
+form .stars__star:hover,
+.stars__star:hover ~ .stars__star {
+  background-image: url(./images/star-active.svg);
 }
 
 .product-card__rating_text {
@@ -51,29 +107,29 @@ html {
   font-size: 10px;
 }
 
-.stars {
+/* .stars {
   display: flex;
   gap: 4px;
-}
+} */
     
-.stars__star {
+/* .stars__star {
   background-image: url(./images/star.svg);
   height: 16px;
   width: 16px;
   background-repeat: no-repeat;
-}
+} */
     
-.stars__star:hover {
+/* .stars__star:hover {
   background-image: url(./images/star-active.svg);
-}
+} */
     
 /* .stars--1 .stars__star:nth-child(-n+1),
 .stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3), */
-/* .stars--5 .stars__star:nth-child(-n+5) { */
+.stars--3 .stars__star:nth-child(-n+3), 
+.stars--5 .stars__star:nth-child(-n+5),
 .stars--4 .stars__star:nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
-}
+} */
 
 .product-card__price-component {
   display: flex;
