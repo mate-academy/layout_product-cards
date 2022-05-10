@@ -1,0 +1,116 @@
+.page {
+  font-family: "Roboto", sans-serif;
+  --color-dark-blue: #060b35;
+  --color-blue: #00acdc;
+  --color-white: #fff;
+}
+
+.page__container {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: var(--color-white);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__iMac-image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 3px 40px;
+}
+
+.card__name {
+  font-size: 12px;
+  margin: 0 0 4px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--color-dark-blue);
+}
+
+.card__code {
+  font-style: normal;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #616070;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/star.svg);
+}
+
+.stars__star:not(:last-child) {
+  margin: 0 4px 0 0;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+}
+
+.card__feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: 24px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px;
+}
+
+.card__cost {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-dark-blue);
+}
+
+.card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__bottom:hover {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+}
