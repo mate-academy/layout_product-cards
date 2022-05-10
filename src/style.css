@@ -1,13 +1,16 @@
-@import url(styles/stars.css);
-@import url(styles/normalize.css);
-@import url(styles/variables.css);
+@import "./styles/normalize.css";
+@import "./styles/stars.css";
+@import "./styles/variables.css";
+
+.product {
+  padding: 16px;
+}
 
 .product-block {
   display: flex;
   flex-direction: column;
   justify-items: center;
   width: 198px;
-  margin: 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
@@ -26,7 +29,6 @@ img {
 
 .product_name {
   height: 40px;
-  margin-bottom: 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -45,34 +47,11 @@ img {
   height: 40px;
 }
 
-/* .product-rate__items {
+.product-rate__items {
   height: 40;
   display: flex;
   justify-content: space-between;
 }
-
-.product-rate__stars {
-  display: flex;
-}
-
-.product-rate__star {
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin: 0 2px;
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-.product-rate__star:first-child {
-  margin-left: 0;
-}
-
-.product-rate__star:nth-child(n + 5) {
-  background-image: url(images/star.svg);
-} */
 
 .product-rate__reviews {
   display: flex;
@@ -121,7 +100,7 @@ img {
 
 .buy__button:hover {
   padding: 10px 0;
-  color: #00acdc;
+  color: var(--blue-color);
   border: 1px solid var(--blue-color);
   background-color: #fff;
 }
