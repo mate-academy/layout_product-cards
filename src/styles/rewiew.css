@@ -1,0 +1,38 @@
+.stars-rewiew {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.rewiew {
+  display: flex;
+}
+
+.rewiew__star {
+  background-image: url(~/images/star.svg);
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.rewiew_star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.rewiew--5 .rewiew__star,
+.rewiew--1 .rewiew__star:nth-child(1),
+.rewiew--2 .rewiew__star:nth-child(-n+2),
+.rewiew--3 .rating__star:nth-child(-n+3),
+.rewiew--4 .rewiew__star:nth-child(-n+4) {
+  background-image: url(~/images/star-active.svg);
+}
+
+.stars-rewiew__text {
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #060b35;
+}
