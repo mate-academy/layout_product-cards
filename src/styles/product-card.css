@@ -1,0 +1,130 @@
+/* #region product-card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 200px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+
+  background-color: var(--white-accent);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__img {
+  object-fit: cover;
+  align-self: center;
+
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.product-card__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--main-accent);
+}
+
+.product-card__code {
+  align-self: flex-start;
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: var(--font-family-regular);
+  color: var(--secondary-accent);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/star.svg);
+}
+
+.stars__star:nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.rating__reviews {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: var(--font-family-regular);
+  color: var(--main-accent);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  line-height: 18px;
+}
+
+.price__word {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: var(--font-family-regular);
+  color: var(--secondary-accent);
+}
+
+.price__amount {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: var(--font-family-bolt);
+  color: var(--main-accent);
+}
+
+.product-card__link {
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  margin-bottom: 16px;
+
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: var(--font-family-bolt);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-accent);
+
+  background-color: var(--blue-accent);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.product-card__link:hover {
+  color: var(--blue-accent);
+
+  background-color: var(--white-accent);
+  border-color: var(--blue-accent);
+}
+/* #endregion */
