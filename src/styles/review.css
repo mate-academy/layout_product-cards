@@ -1,0 +1,24 @@
+.review {
+  display: flex;
+}
+
+.review__star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.review--5 .review__star,
+.review--1 .review__star:first-child,
+.review--2 .review__star:nth-child(-n+2),
+.review--3 .review__star:nth-child(-n+3),
+.review--4 .review__star:nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.card__feedback {
+  color: var(--color-dark);
+}
