@@ -1,15 +1,15 @@
 * {
   box-sizing: border-box;
+
+}
+
+.page {
+  font-family: Roboto, sans-serif;
   font-size: 12px;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
-
-}
-
 p,
-body {
+.page__body {
   margin: 0;
 }
 
@@ -18,26 +18,26 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
-  height: 406px;
-  width: 198px;
+  height: 408px;
+  max-width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
 .card__image {
+  display: flex;
   align-self: center;
-  object-position: center;
-  object-fit: contain;
   padding-top: 16px;
   width: 160px;
-  height: 134px;
+  height: 150px;
 }
 
 .product__name {
   margin: 0;
   padding-bottom: 4px;
   font-weight: 500;
+  font-size: 12px;
   line-height: 18px;
   color: #060b35;
 }
@@ -107,23 +107,24 @@ body {
 }
 
 .product__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 166px;
-  font-weight: bold;
-  background-color: #00acdc;
-  border-radius: 5px;
+  display: block;
 }
 
 .button {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   font-size: 14px;
   line-height: 16px;
-  text-decoration: none;
+  font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
+  height: 40px;
+  width: 166px;
   color: #fff;
+  background-color: #00acdc;
+  border-radius: 5px;
 }
 
 .button:hover {
