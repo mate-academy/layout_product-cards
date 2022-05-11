@@ -30,7 +30,8 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 - Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
 and keep it operational. If you change `stars--4` modifier to `stars--2` or
 other - number of selected stars should change correctly.
-- Item with text 'Купить' should be a link.
+- There should be only 2 BEM blocks in your code `card` and `stars` all the others are just card elements
+- Item with the text `Купить` should be a link.
 - Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
 
 ---
