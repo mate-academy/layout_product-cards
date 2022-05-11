@@ -1,11 +1,4 @@
-.page {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-}
-
 .card {
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
@@ -13,10 +6,12 @@
   border-radius: 5px;
 }
 
-.card__images {
-  margin: auto;
+.card__image {
+  display: flex;
+  padding: 0 3px;
   width: 160px;
   height: 134px;
+  margin-bottom: 40px;
 }
 
 .card__title {
@@ -24,7 +19,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 4px;
-  margin-top: 40px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -39,12 +33,51 @@
   color: #616070;
 }
 
+.card__rewiew {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: end;
+  margin-bottom: 24px;
+}
+
+.card__rewiew-stars {
+  display: flex;
+}
+
+.card__rewiew-star {
+  background-image: url(~/images/star.svg);
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.card__rewiew-star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__rewiew-stars--5 .card__rewiew-star,
+.card__rewiew-stars--1 .card__rewiew-star:nth-child(1),
+.card__rewiew-stars--2 .card__rewiew-star:nth-child(-n+2),
+.card__rewiew-stars--3 .card__rewiew-star:nth-child(-n+3),
+.card__rewiew-stars--4 .card__rewiew-star:nth-child(-n+4) {
+  background-image: url(~/images/star-active.svg);
+}
+
+.card__rewiew-text {
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #060b35;
+}
+
 .card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  margin-top: 24px;
 }
 
 .card__price-text {
@@ -67,7 +100,6 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 166px;
   height: 40px;
   padding: 12px;
   border: 1px solid #00acdc;
