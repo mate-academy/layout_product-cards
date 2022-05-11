@@ -1,12 +1,7 @@
-@import "./cardStyles/__normalise.css";
-@import "./cardStyles/__variables.css";
-@import "./cardStyles/__feedbackStars.css";
-
-.home-page {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-}
+@import "./cardStyles/reset.css";
+@import "./cardStyles/normalize.css";
+@import "./cardStyles/variables.css";
+@import "./cardStyles/stars.css";
 
 .card {
   display: block;
@@ -46,6 +41,18 @@
   line-height: 14px;
   color: var(--common-font-color);
   padding-bottom: 16px;
+}
+
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 24px;
+}
+
+.card__feedback-number {
+  line-height: 14px;
+  color: var(--accent-font-color);
 }
 
 .card__purchase {
