@@ -1,10 +1,7 @@
-@import url("../styles/normalize.css");
-@import url("../styles/stars.css");
-@import url("../styles/variables.css");
-
 .product-card {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   padding: 32px 16px 16px;
   width: 200px;
   background: #fff;
@@ -14,7 +11,7 @@
 
 .product-card__img {
   align-self: center;
-  width: 160px;
+  object-fit: contain;
   height: 134px;
   margin-bottom: 40px;
 }
@@ -66,12 +63,11 @@
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  border: 1px solid var(--blue-accent);
   border-radius: 5px;
 }
 
 .product-card__link:hover {
   background: #fff;
   color: var(--blue-accent);
-  border: 1px solid var(--blue-accent);
-  border-radius: 5px;
 }
