@@ -1,0 +1,24 @@
+.stars {
+  display: flex;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star:not(:last-of-type) {
+  margin-right: 4px;
+}
+
+.stars--raiting_1 > .star:nth-of-type(-n+1),
+.stars--raiting_2 > .star:nth-of-type(-n+2),
+.stars--raiting_3 > .star:nth-of-type(-n+3),
+.stars--raiting_4 > .star:nth-of-type(-n+4),
+.stars--raiting_5 > .star:nth-of-type(-n+5) {
+  background-image: url(../images/star-active.svg);
+}
