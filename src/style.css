@@ -3,6 +3,8 @@
 .page {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
+
+  --link-height: 40px;
 }
 
 .page__content {
@@ -24,6 +26,8 @@
 /* #region card */
 
 .card {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
@@ -34,18 +38,18 @@
 .card__photo {
   width: 160px;
   height: 134px;
-  margin: 0 3px 37px;
+  margin: 0 3px 40px;
 }
 
 .card__title {
   color: #060b35;
   font-weight: 500;
-  margin-bottom: 3.8px;
+  margin-bottom: 4px;
   line-height: 18px;
 }
 
 .card__phrase {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 /* #endregion */
@@ -56,7 +60,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 23.5px;
+  margin-bottom: 24px;
 }
 
 .stars {
@@ -105,18 +109,17 @@
   color: #060b35;
 }
 
+/* #endregion */
+
+/* #region link */
+
 .card__link {
-  --link-height: 40px;
   height: var(--link-height);
   background-color: #00acdc;
   border-radius: 5px;
   text-align: center;
   line-height: var(--link-height);
 }
-
-/* #endregion */
-
-/* #region link */
 
 .link {
   display: block;
@@ -127,6 +130,8 @@
 }
 
 .link:hover {
+  box-sizing: border-box;
+  line-height: 38px;
   background-color: white;
   color: #00acdc;
   border: 1px solid #00acdc;
