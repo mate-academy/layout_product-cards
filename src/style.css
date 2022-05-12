@@ -1,0 +1,114 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 16px;
+
+}
+
+.card__img {
+  align-items: center;
+  margin: 16px auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.card__code {
+  font-size: 10px;
+  color: #616070;
+  margin-bottom: 16px;
+  line-height: 14px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__feedback {
+  font-size: 10px;
+  color: #060b35;
+  margin: 0;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  color: #616070;
+}
+
+.card__price-sum {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #00acdc;
+  border-radius: 5px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__buy:hover {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
