@@ -1,11 +1,11 @@
-.stars-rating {
+.stars-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.stars-rating__container {
+.stars {
   display: flex;
 }
 
@@ -21,6 +21,15 @@
   margin-right: 4px;
 }
 
-.stars .stars__star:not(:nth-child(n+5)) {
+.stars--5 :nth-child(n),
+.stars--4 :nth-child(-n + 4),
+.stars--3 :nth-child(-n + 3),
+.stars--2 :nth-child(-n + 2),
+.stars--1 :nth-child(-n + 1) {
   background-image: url(../images/star-active.svg);
+}
+
+.stars-container__feedback-count {
+  font-size: 10px;
+  color: #060b35;
 }
