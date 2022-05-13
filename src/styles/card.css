@@ -1,10 +1,5 @@
 /* #region card */
 
-/* stylelint-disable-next-line selector-list-comma-newline-after */
-body, h2, p {
-  margin: 0;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -71,23 +66,19 @@ body, h2, p {
 /* #region link */
 
 .card__link {
-  height: var(--link-height);
+  display: block;
   background-color: #00acdc;
   border-radius: 5px;
-  text-align: center;
-  line-height: var(--link-height);
-}
-
-.link {
-  display: block;
-  text-decoration: none;
   color: white;
   font-size: 14px;
   font-weight: 700;
+  line-height: var(--link-height);
+  text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.link:hover {
+.card__link:hover {
   line-height: calc(var(--link-height) - 2 * var(--border-size));
   background-color: white;
   color: #00acdc;
