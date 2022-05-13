@@ -7,8 +7,8 @@
   padding: 32px 16px 16px;
   width: 200px;
 
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  background: var(--color-page);
+  border: 1px solid var(--border-block-card);
   border-radius: 5px;
 }
 
@@ -20,19 +20,20 @@
 }
 
 .card__name-product {
-  color: rgba(6, 11, 53, 1);
   margin-bottom: 4px;
+
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
+
+  color: var(--color-dark-text);
 }
 
 .card__code {
   align-self: flex-start;
   margin-bottom: 16px;
 
-  color: rgba(97, 96, 112, 1);
-
+  color: var(--color-grey-text);
 }
 
 .card__feedback {
@@ -58,51 +59,59 @@
   background-repeat: no-repeat;
 }
 
-.card__stars--4 .card__star:nth-child(-n+4) {
+.card__stars--1 .card__star:first-child,
+.card__stars--2 .card__star:nth-child(-n+2),
+.card__stars--3 .card__star:nth-child(-n+3),
+.card__stars--4 .card__star:nth-child(-n+4),
+.card__stars--5 .card__star:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
 .card__response {
   font-size: 10px;
-  color: rgba(6, 11, 53, 1);
+  color: var(--color-dark-text);
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
-  line-height: 18px;
   align-items: center;
+
+  margin-bottom: 16px;
   width: 100%;
+
+  line-height: 18px;
 }
 
 .card__price-str {
   font-size: 12px;
-  /* font-weight: 400; */
 
-  color: #616070;
+  color: var(--color-grey-text);
 }
 
 .card__price-number {
   font-weight: 700;
   font-size: 16px;
 
-  color: #060b35;
+  color: var(--color-dark-text);
 }
 
 .card__link {
   display: flex;
   justify-content: center;
   align-items: center;
+
   box-sizing: border-box;
   width: 100%;
   height: 40px;
-  color: #fff;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+
+  color: var(--color-page);
   background: var(--button-color);
   border: 1px solid var(--color-page);
   border-radius: 5px;
