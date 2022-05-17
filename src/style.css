@@ -1,0 +1,149 @@
+@font-face {
+  font-family: Roboto;
+  src: url(fonts\Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: medium;
+  src: url(fonts\Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url(fonts\Roboto-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 198px;
+  height: 406px;
+}
+
+.logo {
+  width: 160px;
+  height: 134px;
+  padding: 34px 19px 37px;
+}
+
+.field__text-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: medium;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 16px 4px;
+}
+
+.field__text-product-code {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0 16px 18px;
+  color: #616070;
+}
+
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 24px;
+}
+
+.review-container__stars {
+  display: flex;
+}
+
+.star {
+  background-image: url(..\src\images\star.svg);
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  border-radius: 0.5px;
+}
+
+.star:last-child {
+  margin-right: 0;
+}
+
+.review-container__stars .star:nth-child(-n+1),
+.review-container__stars .star:nth-child(-n+2),
+.review-container__stars .star:nth-child(-n+3),
+.review-container__stars .star:nth-child(-n+4) {
+  background-image: url(..\src\images\star-active.svg);
+}
+
+.review {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: normal;
+  align-items: flex-end;
+  color: #060b35;
+}
+
+.field__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+}
+
+.price {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price-number {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.field__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  margin: 0 16px;
+}
+
+.button {
+  width: 55px;
+  height: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: medium;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 55px;
+}
+
+.field__button:hover {
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.button:hover {
+  color: #00acdc;
+}
