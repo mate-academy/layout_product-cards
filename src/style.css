@@ -1,13 +1,12 @@
 * {
   margin: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  box-sizing: border-box;
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
@@ -55,14 +54,20 @@
 
 .card__stars {
   display: flex;
-  width: 96px;
-  height: 16px;
-  background-image: url(images/star-active.svg);
-  background-repeat: no-repeat;
 }
 
-.card__stars:nth-child(5) {
-  background-image: url(images/star.svg);
+.card__star {
+  height: 16px;
+  width: 16px;
+  background: url(/images/star.svg) no-repeat center;
+  margin-right: 4px;
+}
+
+.card__stars .card__star:nth-child(-n + 1),
+.card__stars .card__star:nth-child(-n + 2),
+.card__stars .card__star:nth-child(-n + 3),
+.card__stars .card__star:nth-child(-n + 4) {
+  background-image: url(/images/star-active.svg);
 }
 
 .card__feedbacks {
