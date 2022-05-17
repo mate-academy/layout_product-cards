@@ -1,0 +1,37 @@
+.rewiev-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+
+}
+
+.rewievs {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--main-color);
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+
+  background-image: url(/src/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:not(:nth-child(5n)) {
+  margin-left: 4px;
+}
+
+.stars--4 :nth-child(n+2) {
+  background-image: url(/src/images/star-active.svg);
+}
