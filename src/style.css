@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image-product {
+  margin: 0 auto;
+  height: 134px;
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.card__name-product {
+  font-weight: 500;
+  margin: 0 0 5px;
+  line-height: 18px;
+}
+
+.card__article {
+  font-size: 10px;
+  color: #616070;
+  margin: 0 0 18px;
+}
+
+.card__block-feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.card__feedback {
+  align-items: center;
+  font-size: 10px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-name {
+  color: #616070;
+}
+
+.card__price-cost {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__button-pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.button-pay {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #00acdc;
+  border: 1px solid rgba(0, 67, 86, 0);
+  border-radius: 5px;
+}
+
+.card__button-pay:hover {
+  background-color: #fff;
+  border: 1px solid rgba(0, 172, 220, 1);
+  color: #00acdc;
+}
+/* #region stars */
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-of-type {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
