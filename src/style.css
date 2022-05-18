@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  align-self: center;
+  padding-top: 16px;
+  margin-bottom: 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.product-card__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.product-card__code {
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rating__scale {
+  display: flex;
+  gap: 4px;
+}
+
+.rating__text {
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.rating__star {
+  background-image: url(./images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.rating__star:hover {
+  background-image: url(./images/star-active.svg);
+}
+
+.rating__scale--1 .rating__star:nth-child(-n+1),
+.rating__scale--2 .rating__star:nth-child(-n+2),
+.rating__scale--3 .rating__star:nth-child(-n+3),
+.rating__scale--4 .rating__star:nth-child(-n+4),
+.rating__scale--5 .rating__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__text {
+  font-weight: 400;
+  font-size: 12px;
+  color: #616070;
+}
+
+.price__value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product-card__purchase-button-link {
+  padding: 12px 0;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.product-card__purchase-button-link:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
