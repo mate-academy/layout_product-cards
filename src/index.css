@@ -1,3 +1,9 @@
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .card__price,
 .card__stats {
   display: flex;
@@ -17,12 +23,11 @@
 }
 
 .card__picture {
+  display: block;
   width: 160px;
   height: 134px;
   margin: 0 auto 40px;
-  background-image: url(images/imac.jpeg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  object-fit: contain;
 }
 
 .card__code {
@@ -63,14 +68,16 @@
 
 .card__buy-button {
   box-sizing: border-box;
+  display: block;
   width: 100%;
-  padding: 0;
+  padding: 11px 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
   color: #fff;
+  text-decoration: none;
   background-color: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
@@ -80,13 +87,6 @@
 .card__buy-button:hover {
   color: #00acdc;
   background-color: white;
-}
-
-.card__link {
-  display: block;
-  padding: 11px 0;
-  color: inherit;
-  text-decoration: none;
 }
 
 .text {
@@ -142,4 +142,8 @@
   background-image: url(./images/star-active.svg);
 }
 
-/*# sourceMappingURL=style.css.map */
+.stars--5 :nth-child(n+1) {
+  background-image: url(./images/star-active.svg);
+}
+
+/*# sourceMappingURL=index.css.map */
