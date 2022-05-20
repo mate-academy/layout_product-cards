@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* css reset */
+p,
+h2 {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  height: 134px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 4px ;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__id {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #616070;
+}
+
+.card__rewiev {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rewiew-text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #060b35;
+  line-height: 14px;
+  align-self: flex-end;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.price-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button-buy {
+  background-color: #00acdc;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 55px;
+  border-radius: 5px;
+}
+
+.card__button-buy:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+}
