@@ -19,7 +19,7 @@ body {
   border: 1px solid #f3f3f3;
 }
 
-.card_logo {
+.card__logo {
   height: 134px;
   width: 160px;
   margin: 32px 19px 40px;
@@ -62,11 +62,15 @@ body {
   margin-right: 4px;
 }
 
-.stars__star:nth-child(5) {
+.stars--4 .card__stars:nth-child(5) {
   margin-right: 0;
 }
 
-.stars .stars__star:nth-child(-n + 4) {
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(n) {
   background-image: url(/images/star-active.svg);
 }
 
@@ -103,7 +107,7 @@ body {
   line-height: 18px;
 }
 
-.card_buy-link {
+.card__buy-link {
   font-size: 14px;
   text-align: center;
   line-height: 40px;
@@ -116,10 +120,10 @@ body {
   font-weight: bold;
   margin: 0 auto;
   margin-bottom: 16px;
+  border: 1px solid;
 }
 
-.card_buy-link:hover {
+.card__buy-link:hover {
   background-color: #fff;
   color: #00acdc;
-  border: 1px solid;
 }
