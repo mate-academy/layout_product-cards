@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --main: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+  --gray-elements: #e5e5e5;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card__photo {
+  display: flex;
+  margin: 0 3px 40px;
+  max-width: 100%;
+  max-height: 134px;
+}
+
+.product-card__title {
+  display: flex;
+  color: var(--main);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.product-card__code {
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+/* #region RATING */
+
+.product-card-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.product-card-rating-stars {
+  display: flex;
+}
+
+.product-card-rating-stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(images/star.svg);
+}
+
+.product-card-rating-stars__star:nth-child(-n + 4) {
+  background-image: url(images/star-active.svg);
+}
+
+.product-card-rating__quontity {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--main);
+}
+
+/* #endregion */
+
+/* #region PRICE */
+
+.product-card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-card-price__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary);
+}
+
+.product-card-price__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--main);
+}
+
+/* #endregion */
+
+.product-card__buy {
+  display: flex;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background: var(--blue-accent);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.product-card__buy:hover {
+  background: white;
+  border: 1px solid var(--blue-accent);
+  color: var(--blue-accent);
+}
