@@ -24,16 +24,24 @@ p {
   margin: 0;
 }
 
+h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
 .field {
   display: flex;
+  width: 200px;
   flex-direction: column;
-  width: 198px;
+  box-sizing: border-box;
 }
 
 .logo {
   width: 160px;
   height: 134px;
-  padding: 34px 19px 37px;
+  padding: 0 19px ;
+  margin-top: 34px;
+  margin-bottom: 37px;
 }
 
 .field__text-name {
@@ -66,7 +74,7 @@ p {
   display: flex;
 }
 
-.star {
+.stars__star {
   background-image: url(..\src\images\star.svg);
   width: 16px;
   height: 16px;
@@ -75,14 +83,14 @@ p {
   border-radius: 0.5px;
 }
 
-.star:last-child {
+.stars__star:last-child {
   margin-right: 0;
 }
 
-.review-container__stars .star--1:nth-child(-n+1),
-.review-container__stars .star--2:nth-child(-n+2),
-.review-container__stars .star--3:nth-child(-n+3),
-.review-container__stars .star--4:nth-child(-n+4) {
+.stars--4 .stars__star:nth-child(-n+1),
+.stars--4 .stars__star:nth-child(-n+2),
+.stars--4 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4) {
   background-image: url(..\src\images\star-active.svg);
 }
 
