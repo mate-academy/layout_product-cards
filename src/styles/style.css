@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-/* @import url("./variables.css");
-@import url("./stars.css"); */
+@import url("./variables.css");
+@import url("./stars.css");
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  src: url(../font/Roboto-Medium.ttf);
+}
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
-  font-weight: normal;
-
-  --text-main-accent: #060b35;
-  --text-secondary: #616070;
-  --color-main: #00acdc;
+  font-weight: 500;
 }
 
 body,
@@ -64,40 +65,12 @@ p {
 
 }
 
-/* #region stars */
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  background: url(\images\star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background: url(\images\star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* #endregion */
-
 .opinion {
   color: var(--text-main-accent);
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
 }
-
-/* #region price */
 
 .card_pay {
   display: flex;
@@ -121,8 +94,6 @@ p {
   line-height: 18px;
   text-align: right;
 }
-
-/* #endregion */
 
 .pay {
   display: flex;
