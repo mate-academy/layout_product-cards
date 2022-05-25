@@ -47,42 +47,55 @@ body {
   margin-bottom: 16px;
 }
 
-.rating {
+.card__rating {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   margin-bottom: 24px;
 }
 
 .stars {
   display: flex;
-  gap: 4px;
+  gap: 5px;
 }
 
-.raiting-caption {
+.stars__star {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: none;
+  background-position: center;
+}
+
+.stars__star--active {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__raiting-caption {
   font-size: 10px;
   line-height: 14px;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.price__title {
+.card__price-title {
   color: #616070;
   font-size: 12px;
   line-height: 18px;
 }
 
-.price__value {
+.card__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
 }
 
-.buy {
+.card__button {
   display: block;
   width: 100%;
   padding: 12px 0;
@@ -98,7 +111,7 @@ body {
   cursor: pointer;
 }
 
-.buy:hover {
+.card__button:hover {
   border: 1px solid var(--light-blue);
   background: none;
   color: var(--light-blue);
