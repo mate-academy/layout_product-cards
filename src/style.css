@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --main: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+  --gray-elements: #e5e5e5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.card__photo {
+  display: flex;
+  margin: 0 3px 40px;
+  max-width: 100%;
+  max-height: 134px;
+}
+
+.card__title {
+  display: flex;
+  color: var(--main);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 0 0 4px;
+}
+
+.card__code {
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+/* #region RATING */
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.card-rating__stargroup {
+  display: flex;
+}
+
+.card-rating__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(images/star.svg);
+}
+
+.card-rating__stargroup--1 .card-rating__star:nth-child(-n + 1),
+.card-rating__stargroup--2 .card-rating__star:nth-child(-n + 2),
+.card-rating__stargroup--3 .card-rating__star:nth-child(-n + 3),
+.card-rating__stargroup--4 .card-rating__star:nth-child(-n + 4),
+.card-rating__stargroup--5 .card-rating__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card-rating__quontity {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--main);
+}
+
+/* #endregion */
+
+/* #region PRICE */
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-price__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary);
+}
+
+.card-price__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--main);
+}
+
+/* #endregion */
+
+.card__buy {
+  box-sizing: border-box;
+  display: flex;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background: var(--blue-accent);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__buy:hover {
+  background: white;
+  border: 1px solid var(--blue-accent);
+  color: var(--blue-accent);
+  line-height: 16px;
+}
