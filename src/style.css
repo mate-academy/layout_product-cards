@@ -7,7 +7,7 @@
   --gray-elements: #e5e5e5;
 }
 
-.product-card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,23 +19,23 @@
   font-family: "Roboto", sans-serif;
 }
 
-.product-card__photo {
+.card__photo {
   display: flex;
   margin: 0 3px 40px;
   max-width: 100%;
   max-height: 134px;
 }
 
-.product-card__title {
+.card__title {
   display: flex;
   color: var(--main);
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
 }
 
-.product-card__code {
+.card__code {
   color: var(--secondary);
   font-size: 10px;
   font-weight: 400;
@@ -45,18 +45,18 @@
 
 /* #region RATING */
 
-.product-card-rating {
+.card-rating {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.product-card-rating-stars {
+.card-rating__stargroup {
   display: flex;
 }
 
-.product-card-rating-stars__star {
+.card-rating__star {
   width: 16px;
   height: 16px;
   margin-right: 4px;
@@ -65,11 +65,15 @@
   background-image: url(images/star.svg);
 }
 
-.product-card-rating-stars__star:nth-child(-n + 4) {
+.card-rating__stargroup--1 .card-rating__star:nth-child(-n + 1),
+.card-rating__stargroup--2 .card-rating__star:nth-child(-n + 2),
+.card-rating__stargroup--3 .card-rating__star:nth-child(-n + 3),
+.card-rating__stargroup--4 .card-rating__star:nth-child(-n + 4),
+.card-rating__stargroup--5 .card-rating__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
 }
 
-.product-card-rating__quontity {
+.card-rating__quontity {
   font-size: 10px;
   font-weight: 400;
   color: var(--main);
@@ -79,14 +83,14 @@
 
 /* #region PRICE */
 
-.product-card-price {
+.card-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.product-card-price__text {
+.card-price__text {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -94,7 +98,7 @@
   color: var(--secondary);
 }
 
-.product-card-price__price {
+.card-price__price {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
@@ -103,7 +107,8 @@
 
 /* #endregion */
 
-.product-card__buy {
+.card__buy {
+  box-sizing: border-box;
   display: flex;
   width: 166px;
   height: 40px;
@@ -115,12 +120,14 @@
   align-self: center;
   font-size: 14px;
   font-weight: 700;
+  line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.product-card__buy:hover {
+.card__buy:hover {
   background: white;
   border: 1px solid var(--blue-accent);
   color: var(--blue-accent);
+  line-height: 16px;
 }
