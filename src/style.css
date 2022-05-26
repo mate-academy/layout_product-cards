@@ -15,6 +15,11 @@ body {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .card {
   width: 200px;
   padding: 32px 16px 16px;
@@ -37,7 +42,9 @@ body {
 .card__title {
   line-height: 18px;
   font-weight: 500;
-  margin-bottom: 4px;
+  font-size: 12px;
+  margin: 0 0 4px;
+  padding: 0;
 }
 
 .card__code {
@@ -56,7 +63,6 @@ body {
 
 .stars {
   display: flex;
-  gap: 5px;
 }
 
 .stars__star {
@@ -66,6 +72,10 @@ body {
   background-repeat: no-repeat;
   background-size: none;
   background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
 }
 
 .stars__star--active {
@@ -98,9 +108,9 @@ body {
 .card__button {
   display: block;
   width: 100%;
-  padding: 12px 0;
+  padding: 11px 0;
   background: var(--light-blue);
-  border: none;
+  border: 1px solid var(--light-blue);
   border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
@@ -112,7 +122,6 @@ body {
 }
 
 .card__button:hover {
-  border: 1px solid var(--light-blue);
   background: none;
   color: var(--light-blue);
 }
