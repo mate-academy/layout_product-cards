@@ -25,23 +25,18 @@ body {
 }
 
 .card {
-  width: 198px;
-  height: min-content;
+  width: 200px;
+  box-sizing: border-box;
   background-color: #fff;
-  padding: 0;
+  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.image {
+.card__image {
   width: 160px;
   height: 134px;
-  margin: 32px 19px 36px;
-}
-
-.product {
-  margin: 0 16px 16px;
-  padding: 0;
+  margin: 0 3px 36px;
 }
 
 .product__name {
@@ -75,19 +70,15 @@ body {
 }
 
 .stars__star {
-  background: url(./images/star-active.svg) no-repeat;
+  background: url(./images/star-active.svg) no-repeat 50%;
   height: 16px;
   width: 16px;
-  background-position: 50%;
-}
-
-.stars__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.stars__star:nth-child(5) {
-  background: url(./images/star.svg) no-repeat;
-  background-position: 50%;
+.stars__star:last-child {
+  background: url(./images/star.svg) no-repeat 50%;
+  margin-right: 0;
 }
 
 .product_review {
