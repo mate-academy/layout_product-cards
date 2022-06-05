@@ -1,0 +1,24 @@
+.card__stars-item {
+  display: flex;
+}
+
+.card__stars-item-star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.card__stars-item-star:last-child {
+  margin-right: 0;
+}
+
+.card__stars-item--5 .card__stars-item-star,
+.card__stars-item--4 .card__stars-item-star:nth-child(-n+4),
+.card__stars-item--3 .card__stars-item-star:nth-child(-n+3),
+.card__stars-item--2 .card__stars-item-star:nth-child(-n+2),
+.card__stars-item--1 .card__stars-item-star:nth-child(1) {
+  background-image: url(../images/star-active.svg);
+}
