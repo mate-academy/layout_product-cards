@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  height: 134px;
+  width: 160px;
+  margin-top: 16px;
+}
+
+.product-card__product {
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 40px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product-card__code {
+  align-self: flex-start;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-top: 4px;
+}
+
+.product-card__rating {
+  width: 166px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  background-position: center;
+}
+
+.stars:last-child {
+  margin: 0;
+}
+
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.review-number {
+  font-size: 10px;
+  color: #060b35;
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  margin-top: 24px;
+}
+
+.product-card__cost {
+  font-size: 12px;
+  color: #616070;
+  line-height: 18px;
+}
+
+.product-card__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product-card__link {
+  margin-top: 16px;
+  display: block;
+  background-color: #00acdc;
+  color: white;
+  width: 166px;
+  height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.product-card__link:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
