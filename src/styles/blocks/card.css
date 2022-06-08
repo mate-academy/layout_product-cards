@@ -1,24 +1,10 @@
-/* #region page */
-html {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-size: 16px;
-  color: #060b35;
-}
-
-* {
-  margin: 0;
-}
-/* #endregion */
-/* #region card */
 .card {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   box-sizing: border-box;
   width: 200px;
   height: 406px;
-  padding: 31px 15px 15px;
+  padding: 31px 15px 0;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background: #fff;
@@ -58,6 +44,7 @@ html {
 
 .card__product-reviews {
   justify-content: end;
+  align-self: flex-end;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -68,7 +55,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .card__product-price_title {
@@ -110,29 +97,3 @@ html {
   background-color: #fff;
   color: #00acdc;
 }
-
-/* #endregion */
-/* #region stars */
-.stars {
-  display: flex;
-  flex-direction: row;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-}
-
-.stars :last-child {
-  margin-right: 0;
-}
-
-.stars--4 :nth-child(-n + 4) {
-  background-image: url(images/star-active.svg);
-}
-/* #endregion */
