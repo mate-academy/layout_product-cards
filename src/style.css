@@ -1,0 +1,139 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.catalog {
+  margin: 0;
+  padding: 0;
+}
+
+.item_card {
+  width: 166px;
+  padding: 17px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  --main-text-color: #060b35;
+  --product-code-color: #616070;
+  --button-color: #00acdc;
+  --button-text-color: #fff;
+}
+
+.item_card-image {
+  display: flex;
+  justify-content: center;
+  width: 160px;
+  height: 134px;
+  margin: 13px auto 40px;
+}
+
+.item_card-titel {
+  /* font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: bold; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: var(--main-text-color);
+  margin-bottom: 4px;
+}
+
+.item_card-number {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--product-code-color);
+  margin-bottom: 16px;
+}
+
+.item_card-statistic {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.item_card-reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--main-text-color);
+}
+
+.item_card-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.item_card-price-text {
+  font-weight: 400;
+  font-size: 12px;
+  color: #616070;
+}
+
+.item_card-cost {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-text-color);
+}
+
+.item_card-button {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.item_card-link {
+  height: 40px;
+  width: 166px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: var(--button-text-color);
+  background: var(--button-color);
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.item_card-link:hover {
+  color: var(--button-color);
+  background: var(--button-text-color);
+  border: var(--button-color) 1px solid;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ---------------------- Стили звезд --------------------------- */
+
+.stars {
+  display: flex;
+}
+
+.stars_star {
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
+  background: url("/images/star.svg") center no-repeat;
+}
+
+.stars_star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars_star:nth-child(1),
+.stars--2 .stars_star:nth-child(-n+2),
+.stars--3 .stars_star:nth-child(-n+3),
+.stars--4 .stars_star:nth-child(-n+4),
+.stars--5 .stars_star:nth-child(-n+5) {
+  background: url("/images/star-active.svg") center no-repeat;
+}
