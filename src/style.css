@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.card {
+  height: 406px;
+  width: 198px;
+  background: white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin-top: 32px;
+}
+
+.card__header {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  margin-top: 40px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.card__code {
+  display: block;
+  width: 166px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 4px;
+  line-height: 14px;
+  margin-bottom: 0;
+  color: #616070;
+}
+
+.stars__reviews {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 0;
+  margin-left: 17px;
+}
+
+.card__label {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+  margin: 0;
+}
+
+.card__tag {
+  color: #060b35;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  margin-left: 55px;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.card__button {
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #00acdc;
+}
+
+.card__button:hover {
+  background-color: white;
+}
+
+.card__link {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card__button:hover > .card__link {
+  color: #00acdc;
+}
+
+.stars {
+  display: flex;
+  height: 16px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background: url(./images/star.svg) center no-repeat;
+}
+
+.stars__star:not(:last-of-type) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background: url(./images/star-active.svg) center no-repeat;
+}
