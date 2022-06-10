@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.card__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.card__code {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+
+.card__rate {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: no-repeat center url("images/star.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__rate-review {
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__price-label {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__price-sum {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button {
+  width: 100%;
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card__button:hover {
+  background: #fff;
+  border-color: #00acdc;
+  color: #00acdc;
+}
