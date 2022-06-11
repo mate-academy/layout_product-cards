@@ -8,11 +8,11 @@
   padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .card__img {
   height: 134px;
-  padding: 0 3px;
 }
 
 .card__name {
@@ -27,15 +27,16 @@
   font-size: 10px;
   margin-top: 6px;
   color: #616070;
+  align-self: flex-start;
 }
 
 .card__revew_box {
   margin-top: 19px;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .card__revew {
@@ -44,6 +45,7 @@
 }
 
 .card__price_box {
+  width: 100%;
   margin-top: 24px;
   display: flex;
   flex-wrap: nowrap;
@@ -70,17 +72,18 @@
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  background: #00acdc;
+  background-color: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
   margin-top: 17px;
   padding: 12px 0;
   width: 100%;
   font-weight: 700;
-  transition: all 0.5s;
+  transition: color 0.5s,
+    background-color 0.5s;
 }
 
 .card__button_buy:hover {
   color: #00acdc;
-  background: #fff;
+  background-color: #fff;
 }
