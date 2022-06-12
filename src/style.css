@@ -1,0 +1,34 @@
+@import "./style/reset.css";
+@import "./style/card.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
