@@ -1,10 +1,14 @@
 .card {
-  box-sizing: border-box;
+  display: flex;
   width: 200px;
   padding: 32px 16px 0;
-  display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
+
+  font-family: "Roboto", sans-serif;
+  color: #060b35;
+
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
@@ -17,6 +21,7 @@
 
 .card__description-block {
   margin-bottom: 4px;
+
   line-height: 18px;
   font-size: 12px;
   font-weight: 500;
@@ -25,6 +30,7 @@
 .card__product-code {
   height: 14px;
   margin-bottom: 16px;
+
   align-self: flex-start;
   color: #616070;
   font-size: 10px;
@@ -40,35 +46,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   line-height: 18px;
 }
 
-.card__price-text {
+.card__price-title {
   font-size: 12px;
   color: #616070;
 }
 
 .card__link {
-  font-weight: 700;
-  font-size: 14px;
+  box-sizing: border-box;
   margin-bottom: 16px;
   width: 100%;
-  background-color: #00acdc;
+
+  font-weight: 700;
+  font-size: 14px;
+
   color: white;
   text-decoration: none;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
   text-align: center;
   line-height: 40px;
   text-transform: uppercase;
+
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
 }
 
 .card__link:hover {
-  background-color: white;
   color: #00acdc;
+
+  background-color: white;
+
   transition: 0.5s;
 }
 
-.card__stars {
+.card__stars-and-comments {
   margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__comments {
+  font-size: 10px;
+  line-height: 14px;
 }
