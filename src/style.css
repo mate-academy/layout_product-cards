@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #060b35;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+
+  padding: 32px 16px 16px;
+}
+
+.product__picture {
+  max-width: 160px;
+  margin-bottom: 40px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__product-name {
+  margin-bottom: 16px;
+}
+
+.info__title {
+  margin-bottom: 2px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.info__code {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.info__feedback {
+  margin-bottom: 24px;
+}
+
+.feedback__stars {
+  display: flex;
+  flex-grow: 1;
+}
+
+.feedback__star {
+  height: 16px;
+  width: 16px;
+  background: url(./images/star.svg) no-repeat center;
+}
+
+.feedback__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.feedback__stars--0 .stars__star {
+  background: url(./images/star.svg) no-repeat center;
+}
+
+.feedback__stars--1 .feedback__star:first-child,
+.feedback__stars--2 .feedback__star:nth-child(-n + 2),
+.feedback__stars--3 .feedback__star:nth-child(-n + 3),
+.feedback__stars--4 .feedback__star:nth-child(-n + 4),
+.feedback__stars--5 .feedback__star:nth-child(-n + 5) {
+  background: url(./images/star-active.svg) no-repeat center;
+}
+
+.feedback__count {
+  font-size: 10px;
+  line-height: 14px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.info__price {
+  margin-bottom: 15px;
+}
+
+.price__label {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price__price-teg {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.info__buy-link {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.info__item {
+  flex-grow: 1;
+  padding: 12px 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #fff;
+  border: 1px solid #00acdc;
+}
+
+.info__item:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
