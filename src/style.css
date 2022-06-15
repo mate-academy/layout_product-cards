@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+  --color_main: #060b35;
+  --color_second: #616070;
+  --color_blue: #00acdc;
+}
+
+.card__pic {
+  margin-top: 16px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+}
+
+.card__info {
+  margin: 36px 0 16px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color_main);
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color_second);
+  margin: 4px 0 16px;
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color_main);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.card__left {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color_second);
+}
+
+.card__right {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color_main);
+}
+
+.card__button {
+  width: 166px;
+  height: 40px;
+  box-sizing: border-box;
+  color: #fff;
+  background: var(--color_blue);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__button:hover {
+  color: var(--color_blue);
+  background: #fff;
+  border: 1px solid var(--color_blue);
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/star.svg);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+}
