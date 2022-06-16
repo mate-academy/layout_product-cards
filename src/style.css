@@ -1,0 +1,128 @@
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  padding: 0;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+
+.stars--2 > .stars__star:nth-child(-n+2),
+
+.stars--3 > .stars__star:nth-child(-n+3),
+
+.stars--4 > .stars__star:nth-child(-n+4),
+
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #060b35;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 32px 16px 16px;
+}
+
+.product-card__img {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.product-card__name {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.product-card__code {
+  align-self: flex-start;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.product-card__responses {
+  align-self: flex-end;
+  font-size: 10px;
+  line-height: 14px;
+  order: 1;
+  flex-shrink: 0;
+}
+
+.product-card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-bottom: 24px;
+}
+
+.product-card__price {
+  display: flex;
+  line-height: 18px;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-bottom: 16px;
+  color: #616070;
+}
+
+.price-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #060b35;
+}
+
+.buy-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+}
+
+.buy-link:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
