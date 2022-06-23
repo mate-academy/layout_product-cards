@@ -1,0 +1,132 @@
+/* #region Normilize */
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+}
+/* #endregion */
+
+.card {
+  box-sizing: border-box; /* to have the same width */
+  width: 200px;
+  align-items: center;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  color: #060b35;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.card__code {
+  display: block;
+  color: #616070;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.card__review {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-size: auto;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:not(:nth-last-child(-n+3)),
+.stars--3 .stars__star:not(:nth-last-child(-n+2)),
+.stars--4 .stars__star:not(:last-child),
+.stars--5 * {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__reviews {
+  color: #060b35;
+  font-weight: 400;
+  margin: 0 0 0 14px;
+}
+
+.card__price {
+  display: flex;
+}
+
+.text {
+  display: block;
+  color: #616070;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 55px;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.amount {
+  display: block;
+  color: #060b35;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  margin: 0 0 16px;
+}
+
+.card__link {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: #00acdc;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 55px;
+  text-transform: uppercase;
+}
+
+.card__link:hover {
+  background-color: white;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
