@@ -1,0 +1,29 @@
+/* #region rating */
+.stars {
+  display: flex;
+  position: absolute;
+  bottom: 114px;
+  left: var(--edge-gap);
+}
+    
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+  
+/* .rating__stars--4 .stars__star:not(:last-child) {
+  background-image: url(/images/star-active.svg);
+} */
+.rating__stars--1 :nth-child(1),
+.rating__stars--2 :nth-child(-n + 2),
+.rating__stars--3 :nth-child(-n + 3),
+.rating__stars--4 :nth-child(-n + 4),
+.rating__stars--5 :nth-child(-n + 5) {
+  background-image: url(/images/star-active.svg);
+}
+
+/* #endregion */
