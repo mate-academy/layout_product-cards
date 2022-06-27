@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+.rating-stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-stars__item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+  
+.rating-stars__star {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: url(../src/images/star.svg);
+  background-position: center;
+}
+
+.rating-stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.rating-stars__item--1 :nth-child(1),
+.rating-stars__item--2 :nth-child(-n + 2),
+.rating-stars__item--3 :nth-child(-n + 3),
+.rating-stars__item--4 :nth-child(-n + 4),
+.rating-stars__item--5 :nth-child(-n + 5) {
+  background-image: url(../src/images/star-active.svg);
+}
+
+.rating-stars__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--default-text-color);
+}
