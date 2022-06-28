@@ -71,7 +71,11 @@ p {
   margin-right: 4px;
 }
 
-.stars--4 .stars__star:nth-child(-n+4) {
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(n) {
   background-image: url(images/star-active.svg);
 }
 
@@ -100,6 +104,7 @@ p {
   font-size: 16px;
   font-weight: 700;
   color: #060b35;
+  line-height: 18px;
 }
 
 /* #endregion price */
@@ -107,17 +112,13 @@ p {
 /* #region button */
 
 .card__button {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   background-color: #00acdc;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
   margin-bottom: 16px;
-}
-
-.card__button_buy {
-  padding: 12px 55px;
-  border-radius: 5px;
+  padding: 12px 0;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
@@ -126,8 +127,7 @@ p {
   color: #fff;
 }
 
-.card__button:hover,
-.card__button_buy:hover {
+.card__button:hover {
   background-color: #fff;
   color: #00acdc;
   border-color: #00acdc;
