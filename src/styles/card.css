@@ -4,77 +4,65 @@
 }
 
 .card {
-  position: relative;
   display: flex;
   flex-direction: column;
-  width: 198px;
-  height: 406px;
-  
+  width: 166px;
+  height: 358px;
+  padding: 32px 16px 16px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius);
 }
 
+.card__image {
+  height: 134px;
+  padding: 0 3px;
+}
+
 .card__imac {
-  position: absolute;
   width: 160px;
   height: 134px;
-  padding: 32px 19px 0;
 }
 
 .card__title {
-  position: absolute;
-  line-height: 18px;
-
   font-weight: var(--font-weight-500);
   font-size: 12px;
-
-  width: 166px;
-  height: min-content;
-
-  left: var(--edge-gap);
-  right: var(--edge-gap);
-  bottom: 164px;
-
+  line-height: 18px;
+  padding-top: 40px;
   color: #060b35;
 }
 
 .card__description {
-  position: absolute;
-  
   font-weight: var(--font-weight-400);
   font-size: 10px;
 
-  top: 246px;
-  left: 16px;
+  padding-top: 4px;
 
   color: #616070;
 }
 
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  width: 166px;
+}
+
 .card__rating-feedback {
   display: flex;
-  position: absolute;
   align-items: center;
-  justify-content: flex-end;
 
   font-weight: var(--font-weight-400);
   font-size: 10px;
-  height: 16px;
-  width: 53px;
-  left: 129px;
-  bottom: 114px;
 }
 
 .card__price {
-  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
   
-  width: 166px;
-  height: 18px;
-  left: var(--edge-gap);
-  bottom: 72px;
+  padding-top: 24px;
+  padding-bottom: 16px;
 }
 
 .card__price-name {
@@ -86,34 +74,29 @@
 .card__price-value {
   font-weight: var(--font-weight-700);
   font-size: 16px;
-
-  height: min-content;
   color: #060b35;
 }
 
 .card__button {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  font-weight: var(--font-weight-700);
-  font-size: 14px;
+
+  width: 100%;
   height: 40px;
-  
-  left: var(--edge-gap);
-  right: var(--edge-gap);
-  bottom: 16px;
-  
-  text-decoration: none;
-  text-transform: uppercase;
+
   color: #fff;
-  background-color: #00acdc;
-  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #00acdc;
+  border-radius: 5px;
 }
 
 .card__button:hover {
-  height: 38px;
+  box-sizing: border-box;
+  width: 166px;
   color: #00acdc;
   background-color: #fff;
   border: 1px solid #00acdc;
