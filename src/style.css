@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #060b35;
+  --secondary-color: #616070;
+  --blue-color: #00acdc;
+  --text-small: 10px;
+  --text-normal: 12px;
+  --text-big: 16px;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  margin: 32px auto 36px;
+}
+
+.img {
+  margin: 0 auto;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: var(--text-normal);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.card__id {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: var(--text-small);
+  line-height: 1.4;
+  color: var(--secondary-color);
+}
+
+.card__feedback {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__stars {
+  display: flex;
+  flex-direction: column;
+}
+
+.stars {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stars__star {
+  margin: 0 2px;
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars__star:last-child {
+  margin-right: 2px;
+}
+
+.stars--1 :nth-child(1),
+.stars--2 :nth-child(-n + 2),
+.stars--5 :nth-child(-n + 5),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__comments {
+  font-size: var(--text-small);
+  line-height: 1.4;
+}
+
+.card__price {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-title {
+  font-weight: 400;
+  font-size: var(--text-normal);
+  line-height: 1.5;
+  color: var(--secondary-color);
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: var(--text-big);
+  line-height: 1.12;
+  color: var(--text-color);
+}
+
+.card__btn {
+  margin-bottom: 16px;
+  display: block;
+  width: 166px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--blue-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.card__btn:hover {
+  background-color: transparent;
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
