@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 198px;
+  height: 406px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.card__section {
+  padding: 0 16px;
+}
+
+.card__image {
+  width: 160px;
+  display: block;
+  padding: 31px 0 40px;
+}
+
+.card__product-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__product-number {
+  font-size: 10px;
+  line-height: 14px;
+  padding: 5px 0 0;
+  color: #616070;
+}
+
+.card__stars-and-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 0;
+}
+
+.card__product-review {
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+/* #region Stars */
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars__star {
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+}
+
+.stars--1 div:nth-child(-n+1),
+.stars--2 div:nth-child(-n+2),
+.stars--3 div:nth-child(-n+3),
+.stars--4 div:nth-child(-n+4),
+.stars--5 div:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0 0;
+}
+
+.card__price-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__product-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__buy {
+  font-family: inherit;
+  margin: 16px 0 15px;
+  width: 166px;
+  height: 40px;
+  color: #fff;
+  background: #00acdc;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__buy:hover {
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  background: #fff;
+}
