@@ -1,23 +1,22 @@
 @import "./reset.css";
 
 .card {
-  width: 198px;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
 .card__image {
-  align-self: center;
-  margin: 32px 3px 40px;
+  margin: 0 auto 40px;
   width: 160px;
   height: 134px;
 }
 
 .card__model {
-  margin: 0 16px;
+  margin-bottom: 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -25,34 +24,28 @@
 }
 
 .card__code {
-  margin: 4px 16px 0;
-  font-weight: 400;
+  margin-bottom: 16px;
   color: #616070;
 }
 
 .card__comment {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
-  margin: 16px 16px 0;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .card__rating {
-  font-weight: 400;
   color: #060b35;
 }
 
 .card__cost {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
-  margin: 24px 16px 0;
+  margin-bottom: 16px;
 }
 
 .card__price {
-  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
@@ -66,15 +59,16 @@
 }
 
 .card__button {
-  margin: 16px;
+  margin-bottom: 16px;
 }
 
 .card__link {
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
   height: 40px;
   text-decoration: none;
   text-transform: uppercase;
@@ -84,14 +78,12 @@
   width: 166px;
   color: #fff;
   background-color: var(--button-color);
-  border-radius: 5px;
 }
 
 .card__link:hover {
   color: var(--button-color);
   background-color: #fff;
   border: 1px solid var(--button-color);
-  border-radius: 5px;
 }
 
 .stars {
@@ -111,10 +103,6 @@
   margin-left: 0;
 }
 
-.stars--1 :nth-child(-n+1),
-.stars--2 :nth-child(-n+2),
-.stars--3 :nth-child(-n+3),
-.stars--4 :nth-child(-n+4),
-.stars--5 :nth-child(-n+5) {
+.stars--4 :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
