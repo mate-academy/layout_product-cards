@@ -1,0 +1,120 @@
+@import "./reset.css";
+
+.card {
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  align-self: center;
+  margin: 32px 3px 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__model {
+  margin: 0 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  margin: 4px 16px 0;
+  font-weight: 400;
+  color: #616070;
+}
+
+.card__comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 16px 16px 0;
+}
+
+.card__rating {
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card__cost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 24px 16px 0;
+}
+
+.card__price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__sum {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button {
+  margin: 16px;
+}
+
+.card__link {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 14px;
+  width: 166px;
+  color: #fff;
+  background-color: var(--button-color);
+  border-radius: 5px;
+}
+
+.card__link:hover {
+  color: var(--button-color);
+  background-color: #fff;
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
