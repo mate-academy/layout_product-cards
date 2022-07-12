@@ -6,5 +6,7 @@ module.exports = {
   plugins: [
     "stylelint-scss"
   ],
-  rules: {}
+  rules: {
+    "number-max-precision": 3,
+  }
 };
