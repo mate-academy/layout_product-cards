@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card {
+  max-width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  max-width: 160px;
+  height: 134px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.card__heading {
+  margin: 40px 0 0;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #060b35;
+}
+
+.card__code {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin: 4px 0 0;
+}
+
+.card__rating {
+  margin: 16px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__rating-count {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars-item {
+  margin-left: 4px;
+  height: 16px;
+  width: 16px;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars-item:first-child {
+  margin-left: 0;
+}
+
+.stars--1 > .stars-item:nth-child(-n+1),
+.stars--2 > .stars-item:nth-child(-n+2),
+.stars--3 > .stars-item:nth-child(-n+3),
+.stars--4 > .stars-item:nth-child(-n+4),
+.stars--5 > .stars-item:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.price-block {
+  margin: 24px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price-count {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__btn {
+  margin: 16px 0 0;
+  display: flex;
+  padding: 11.5px 55.5px 11.5px 54.5px;
+  background-color: #00acdc;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card__btn:hover {
+  color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+}
