@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  padding: 16px;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 16px 3px 40px;
+}
+
+.card__title {
+  width: 166px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+  color: #060b35;
+
+}
+
+.card__code {
+  width: 92px;
+  height: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  font-size: 10px;
+  top: 247px;
+  left: 16px;
+  margin-bottom: 16px;
+  color: #616070;
+
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:last-child {
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__rate-reviews {
+  font-size: 10px;
+  font-weight: 400;
+  color: #060b35;
+
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: #616070;
+
+}
+
+.card__price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+}
+
+.card__link {
+  flex-grow: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__link:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+  border-radius: 5px;
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
