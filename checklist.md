@@ -1,6 +1,6 @@
 1. [STYLES] - Get used to style all elements using classes. And don't increase
 selectors specificity unless completely necessary.
-2. [STYLES] - Remember to use fallback fonts - alternative font-family in case 
+2. [STYLES] - Remember to use fallback fonts - alternative font-family in case
 the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
 3. [CODE STYLE] - Add empty lines between multiline sibling blocks of HTML.
 But don't add empty lines between parent and child elements
@@ -93,4 +93,4 @@ transparent border of the same width, and change its color on `:hover`
 10. [STYLES] - Be consistent with your margins. Add only top or bottom, don't
 add both.
 11. [FILE STRUCTURE] - You should create separate file for each BEM block
-12. [SEMANTICS] - Use semantic tags like h2, p ...
+12. [SEMANTICS] - Use semantic tags like p, p ...
