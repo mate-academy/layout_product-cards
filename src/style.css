@@ -1,0 +1,136 @@
+/* #region Normolize*/
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+}
+/* #endregion*/
+
+.card {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  width: 200px;
+  padding: 32px 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  --font-color-bold: #060b35;
+  --font-color-normal: #616070;
+}
+
+.foto {
+  height: 134px;
+  margin: auto;
+}
+
+.item-model {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--font-color-bold);
+  text-decoration: none;
+}
+
+.item-kod {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--font-color-normal);
+  margin-top: 4px;
+}
+
+/* #region feedback*/
+.feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.feedback__stars {
+  display: flex;
+}
+
+.feedback__stars--5 :nth-of-type(-n+5),
+.feedback__stars--4 :nth-of-type(-n+4),
+.feedback__stars--3 :nth-of-type(-n+3),
+.feedback__stars--2 :nth-of-type(-n+2),
+.feedback__stars--1 :nth-of-type(-n+1) {
+  background-image: url(../src/images/star-active.svg);
+}
+
+.feedback__star {
+  height: 16px;
+  width: 16px;
+  background: url(../src/images/star.svg) no-repeat center;
+  margin-right: 4px;
+}
+
+.feedback__star:last-child {
+  margin-right: 0;
+}
+
+.feedback__count {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--font-color-bold);
+}
+/* #endregion*/
+
+/* #region price*/
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.price__word {
+  font-weight: 400;
+  font-size: 12px;
+  color: #616070;
+}
+
+.price__uah {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--font-color-normal);
+}
+/* #endregion*/
+
+.buy {
+  height: 40px;
+  width: 166px;
+  background: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  margin-top: 16px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+.buy:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  color: #00acdc;
+}
