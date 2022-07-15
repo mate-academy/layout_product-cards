@@ -1,21 +1,15 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 .card {
-  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 16px;
+
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 150%;
+
   color: #060b35;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -28,15 +22,15 @@ body {
 }
 
 .card__product-name {
-  font-weight: 500;
   margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .card__product-code {
+  margin-bottom: 16px;
   font-size: 0.63rem;
   line-height: 140%;
   color: #616070;
-  margin-bottom: 16px;
 }
 
 .card__rate {
@@ -46,9 +40,9 @@ body {
 }
 
 .card__comments {
+  align-self: flex-end;
   font-size: 0.63rem;
   line-height: 140%;
-  align-self: flex-end;
 }
 
 .card__cost {
@@ -75,43 +69,24 @@ body {
 
 .card__link {
   flex: 1 0 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #00acdc;
-  border-radius: 5px;
+  padding: 11px 0;
   min-height: 40px;
-  text-transform: uppercase;
-  color: #fff;
-  text-decoration: none;
+
   font-weight: 700;
   font-size: 0.88rem;
   line-height: 114%;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  color: #fff;
+  background-color: #00acdc;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 
 .card__link:hover {
   background-color: #fff;
   color: #00acdc;
   border: 1px solid #00acdc;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  background: url("images/star.svg") center no-repeat;
-  width: 16px;
-  height: 16px;
-}
-
-.stars__star:not(:last-child) {
-  margin: 0 4px 0 0;
-}
-
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background: url("images/star-active.svg") center no-repeat;
 }
