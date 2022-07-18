@@ -2,45 +2,38 @@ body {
   margin: 0;
 }
 
-.cards {
+.card {
   width: 200px;
-  height: 406px;
   display: flex;
   flex-direction: column;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   box-sizing: border-box;
+  padding-bottom: 16px;
+  padding-top: 32px;
 }
 
-.cards__card {
-  /* width: 100%;
-  height: 50%; */
+.card__card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cards__image {
+.card__image {
   display: block;
   width: 160px;
   height: 134px;
   margin: 0 auto 40px;
-  margin-top: 32px;
 }
 
-.cards__description {
-  /* width: 100%;
-  height: 50%; */
+.card__description {
   display: flex;
   justify-content: center;
+  padding: 0 16px;
 }
 
-.cards__content {
-  width: 166px;
-}
-
-.cards__title {
+.card__title {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -50,7 +43,7 @@ body {
   margin-bottom: 4px;
 }
 
-.cards__code {
+.card__code {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -60,8 +53,7 @@ body {
   margin-bottom: 16px;
 }
 
-.cards__rang {
-  height: 16px;
+.card__rang {
   display: flex;
   margin-bottom: 24px;
   justify-content: space-between;
@@ -69,7 +61,7 @@ body {
   text-align: center;
 }
 
-.cards__feedback {
+.card__feedback {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -78,7 +70,7 @@ body {
   color: #060b35;
 }
 
-.cards__star {
+.stars__star {
   width: 16px;
   height: 16px;
   background-image: url(./images/star.svg);
@@ -87,30 +79,29 @@ body {
   background-position: center;
 }
 
-.cards__star:last-child {
+.card__stars:last-child {
   margin-right: 0;
 }
 
-.cards__star_4 {
+.stars {
   display: flex;
 }
 
-.cards__star_1 .cards__star:nth-child(-n + 1),
-.cards__star_2 .cards__star:nth-child(-n + 2),
-.cards__star_3 .cards__star:nth-child(-n + 3),
-.cards__star_4 .cards__star:nth-child(-n + 4),
-.cards__star_5 .cards__star:nth-child(-n + 5) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(./images/star-active.svg);
 }
 
-.cards__prise-block {
-  height: 18px;
+.card__prise-block {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.cards__prise-text {
+.card__prise-text {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -119,7 +110,7 @@ body {
   color: #616070;
 }
 
-.cards__prise {
+.card__prise {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -128,7 +119,7 @@ body {
   color: #060b35;
 }
 
-.cards__cards_buy {
+.card__card_buy {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +139,7 @@ body {
   text-align: center;
 }
 
-.cards__cards_buy:hover {
+.card__card_buy:hover {
   background-color: #fff;
   color: #00acdc;
 }
