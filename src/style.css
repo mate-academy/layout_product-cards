@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 198px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 5px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.card__item-image {
+  width: 160px;
+  padding-bottom: 41px;
+}
+
+.card__product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 16px 18px;
+}
+
+.card__product-text {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding-bottom: 5px;
+  color: hsl(234, 80%, 12%);
+}
+
+.card__product-code {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(97, 96, 112);
+}
+
+.card__rating {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(6, 11, 53);
+  padding-right: 16px;
+}
+
+.card__price {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 16px;
+
+}
+
+.card__price-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgb(97, 96, 112);
+  padding-left: 16px;
+}
+
+.card__price-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(6, 11, 53);
+  padding-right: 16px;
+  line-height: 18px;
+}
+
+.card__buy-buttom_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background: rgb(0, 172, 220);
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 12px 56px;
+}
+
+.card__buy-buttom_link:hover {
+  background: #fff;
+  color: rgb(0, 172, 220);
+  border: 1px solid;
+  padding: 11px 55px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  padding-left: 16px;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--1 > .stars__star:nth-child(1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars-- > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars .stars__star:nth-child(5) {
+  margin-right: 0;
+}
