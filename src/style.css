@@ -1,86 +1,83 @@
-body {
-  margin: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 400px;
-  padding: 30px;
-  margin-bottom: 0;
-}
-
-.text {
+html {
   font-family: "Roboto", serif;
-}
-
-.pic {
-  height: 134px;
-  width: 160px;
-  left: 20px;
-  top: 33px;
-}
-
-.name {
-  height: 36px;
-  width: 166px;
-  left: 17px;
-  top: 207px;
-
-  font-family: 'Roboto';
-  font-style: bold;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.code {
-  height: 14px;
-  width: 92px;
-  left: 10px;
-  top: 247px;
-  padding: 20px;
-  padding-left: 0;
-
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 200;
   font-size: 10px;
   line-height: 14px;
 }
 
-.price {
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+}
+
+.card__pic {
+  height: 134px;
+  width: 160px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  margin: 0 0 4px;
+}
+
+.card__code {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.card__review {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.card__price {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
   justify-content: space-between;
+  width: 100%;
 }
 
-.price--number {
-  padding-right: 40px;
-  font-weight: 1000;
+.card__price-number {
+  font-weight: 700;
 }
 
-.buy {
+.card__buy {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 166px;
-  left: 17px;
-  top: 351px;
+  padding: 12px;
+  width: 100%;
   border-radius: 5px;
   margin-top: 10px;
   background-color: #00acdc;
   color: white;
-  border: transparent;
+  border: 1px solid #00acdc;
   text-decoration: none;
+  line-height: 16px;
+  font-size: 14px;
 }
 
-.buy:hover {
+.card__buy:hover {
   background-color: white;
   color: #00acdc;
   border: solid #00acdc;
