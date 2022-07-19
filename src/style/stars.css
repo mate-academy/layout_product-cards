@@ -1,0 +1,23 @@
+/* #region Stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars--5 .stars__star,
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:not(:nth-child(n+3)),
+.stars--3 .stars__star:not(:nth-child(n+4)),
+.stars--4 .stars__star:not(:last-child) {
+  background-image: url(../images/star-active.svg);
+}
+/* #endregion */
