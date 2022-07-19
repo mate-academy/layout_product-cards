@@ -3,7 +3,6 @@ body {
   margin: 0;
 }
 /* #endregion */
-
 /* #region Card styles */
 .card {
   box-sizing: border-box;
@@ -15,16 +14,21 @@ body {
   width: 200px;
   font-family: "Roboto", Helvetica, sans-serif;
   font-style: normal;
+
+  --global-margin: 0 16px;
+}
+
+.card__label,
+.card__rate,
+.card__price,
+.card__buy {
+  margin: var(--global-margin);
 }
 
 .card__imagine {
   width: 160px;
   height: 134px;
   margin: 32px 19px 36px;
-}
-
-.card__label {
-  margin: 0 16px;
 }
 
 .card__label p:first-child {
@@ -48,7 +52,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 16px;
 }
 
 .card__feedback {
@@ -61,7 +64,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 16px;
 }
 
 .card__price p:first-child {
@@ -86,7 +88,6 @@ body {
   text-align: center;
   width: 164px;
   height: 38px;
-  margin: 0 16px;
   margin-bottom: 16px;
   border-radius: 5px;
   border: 1px solid #00acdc;
@@ -121,13 +122,11 @@ body {
   margin-right: 4px;
 }
 
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background: url(images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
 }
 /*#endregion*/
