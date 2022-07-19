@@ -1,4 +1,5 @@
-body {
+body,
+h2 {
   margin: 0;
 }
 
@@ -7,33 +8,30 @@ p {
   display: inline-block;
 }
 
-h2 {
-  margin: 0;
-}
-
 .card {
-  width: 198px;
+  width: 188px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding-left: 16px;
 }
 
-.iMac {
-  padding-top: 32px;
-  padding-left: 19px;
+.card__iMac {
+  margin-top: 32px;
+  margin-left: 5px;
   width: 160px;
 }
 
-.iMacMark {
+.card__iMacMark {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  padding-top: 40px;
-  padding-left: 16px;
+  margin-top: 40px;
+  width: 180px;
 }
 
-.iMacMark__Text {
+.iMacMarkText {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -41,7 +39,7 @@ h2 {
   color: #060b35;
 }
 
-.iMacMark__Code {
+.iMacMarkCode {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 10px;
@@ -50,13 +48,12 @@ h2 {
   color: #616070;
 }
 
-.rate {
+.stars {
   display: flex;
-  padding-top: 16px;
-  padding-left: 16px;
+  margin-top: 16px;
 }
 
-.rate__stars {
+.stars__star {
   width: 16px;
   height: 16px;
   background-image: url(./images/star.svg);
@@ -64,11 +61,11 @@ h2 {
   margin-right: 4px;
 }
 
-.rate--1 .rate__stars:nth-child(1),
-.rate--2 .rate__stars:nth-child(-n + 2),
-.rate--3 .rate__stars:nth-child(-n + 3),
-.rate--4 .rate__stars:nth-child(-n + 4),
-.rate--5 .rate__stars:nth-child(-n + 5) {
+.stars--rate_1 .stars__star:nth-child(1),
+.stars--rate_2 .stars__star:nth-child(-n + 2),
+.stars--rate_3 .stars__star:nth-child(-n + 3),
+.stars--rate_4 .stars__star:nth-child(-n + 4),
+.stars--rate_5 .stars__star:nth-child(-n + 5) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -81,12 +78,11 @@ h2 {
   padding-left: 13px;
 }
 
-.priceBlock {
-  padding-top: 24px;
-  padding-left: 16px;
+.card__priceBlock {
+  margin-top: 24px;
 }
 
-.priceBlock__Text {
+.priceBlockText {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -95,7 +91,7 @@ h2 {
   padding-right: 51px;
 }
 
-.priceBlock__price {
+.priceBlockprice {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -103,28 +99,32 @@ h2 {
   color: #060b35;
 }
 
-.buyBlock {
+.card__buyBlock {
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
 
-.buyBlock__Link {
+.buyBlockLink {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
+
   text-transform: uppercase;
   text-decoration: none;
+
   background-color: #00acdc;
   border: 1px solid transparent;
   border-radius: 5px;
-  padding: 12px 52px;
+
+  padding: 12px 55px;
+  margin-left: -20px;
   margin-bottom: 16px;
 }
 
-.buyBlock__Link:hover {
+.buyBlockLink:hover {
   background-color: #fff;
   border: 1px solid #00acdc;
   border-radius: 5px;
