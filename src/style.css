@@ -1,0 +1,119 @@
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  margin: auto;
+}
+
+.card__product-name {
+  max-width: 166px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(6, 11, 53, 1);
+}
+
+.card__product-id {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 1px;
+  width: 92px;
+  margin-top: 4px;
+  font-size: 10px;
+  color: rgba(97, 96, 112, 1);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 18px;
+  margin-top: 24px;
+}
+
+.card__price-word {
+  font-size: 12px;
+  color: rgba(97, 96, 112, 1);
+}
+
+.card__price-monetary {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(6, 11, 53, 1);
+}
+
+.card__buy-button {
+  height: 40px;
+  line-height: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffff;
+  background-color: #00acdc;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.card__buy-button:hover {
+  background-color: #ffff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background: url(images/star.svg) no-repeat center;
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background: url("images/star-active.svg") no-repeat center;
+
+}
+
+.card__rating_feedback {
+  line-height: 14px;
+  font-size: 10px;
+  color: rgba(6, 11, 53, 1);
+}
