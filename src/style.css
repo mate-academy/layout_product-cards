@@ -4,21 +4,22 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.card {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 
   width: 200px;
 }
 
-.container__image {
-  display: inline-flex;
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
   width: 160px;
   height: 134px;
-  padding: 32px 19px 40px;
 }
 
 p,
@@ -26,32 +27,35 @@ h2 {
   margin: 0;
 }
 
-.container__title {
-  padding: 0 16px 4px;
+.card__title {
+  /* padding: 0 16px 4px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  align-self: auto;
+  align-self: auto; */
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
   color: #060b35;
 }
 
-.container__text {
+.card__text {
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
   color: #616070;
   font-style: normal;
+  margin-bottom: 16px;
 
-  padding: 0 90px 16px 16px;
 }
 
 /* #region Stars */
-.container__review {
+.card__review {
   display: flex;
-  box-sizing: border-box;
   justify-content: space-between;
-  padding: 0 17px 24px 16px;
   align-items: center;
+  margin-bottom: 24px;
 
 }
 
@@ -79,53 +83,53 @@ h2 {
 
 /* #endregion Stars */
 
-.container__review-count {
+.card__review-count {
   font-size: 10px;
   font-weight: 400;
 }
 
-.container__price {
+.card__price {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 16px 16px;
-  line-height: 18px;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-.prices {
+.card__prices {
   font-size: 12px;
+  line-height: 18px;
   font-weight: 400;
   color: #616070;
 }
 
-.suma {
+.card__suma {
   font-size: 16px;
   font-weight: bold;
   line-height: 18px;
 }
 
 /* #region Button */
-.container__button {
+.card__button {
   display: flex;
   justify-content: center;
-  padding: 0 16px 16px;
-}
+  align-items: center;
 
-.submit {
-  width: 166px;
+  box-sizing: border-box;
   height: 40px;
 
-  text-transform: uppercase;
-  color: white;
-  font-weight: 700;
-  font-size: 14px;
-
-  border-radius: 5px;
   background-color: #00acdc;
-  border: 1px solid transparent;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.submit:hover {
+.card__button:hover {
   background-color: white;
   color: #00acdc;
   border: 1px solid #00acdc;
