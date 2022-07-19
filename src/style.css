@@ -1,0 +1,137 @@
+body {
+  margin: 0 ;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  width: 200px;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+p,
+h2 {
+  margin: 0;
+}
+
+.card__title {
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #060b35;
+}
+
+.card__text {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #616070;
+  font-style: normal;
+  margin-bottom: 16px;
+
+}
+
+/* #region Stars */
+.card__review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+}
+
+.stars {
+  display: inline-flex;
+}
+
+.stars__star {
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.stars--1 > .stars__star:nth-child(1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.stars--4 .stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+/* #endregion Stars */
+
+.card__review-count {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__prices {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #616070;
+}
+
+.card__suma {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+/* #region Button */
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  height: 40px;
+
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
+/* #endregion Button*/
