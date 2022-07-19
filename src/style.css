@@ -34,8 +34,10 @@ html {
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  width: 166px;
-  height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 166px; */
+  /* height: 36px; */
 }
 
 .cards__code {
@@ -48,7 +50,7 @@ html {
 
 }
 
-.cards__reviewsTag {
+.cards__reviews-tag {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -73,7 +75,11 @@ html {
   margin-right: 0;
 }
 
-.stars--4 .stars__star:nth-of-type(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-of-type(-n + 2),
+.stars--3 .stars__star:nth-of-type(-n + 3),
+.stars--4 .stars__star:nth-of-type(-n + 4),
+.stars--5 .stars__star:nth-of-type(-n + 5) {
   background-image: url(images\star-active.svg);
 }
 
@@ -83,7 +89,7 @@ html {
   line-height: 14px;
 }
 
-.cards__priceTag {
+.cards__price-tag {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -91,7 +97,7 @@ html {
   width: 100%;
 }
 
-.priceText {
+.price-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
