@@ -1,4 +1,8 @@
-body,
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 h2 {
   margin: 0;
 }
@@ -9,38 +13,38 @@ p {
 }
 
 .card {
-  width: 188px;
+  width: 198px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding-left: 16px;
+  /* padding-right: 20px; */
 }
 
 .card__product {
   margin-top: 32px;
-  margin-left: 5px;
+  margin-left: 11px;
   width: 160px;
 }
 
-.product-mark {
+/* .card__mark {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  margin-top: 40px;
   width: 180px;
-}
+} */
 
-.product-mark__title {
+.card__title {
+  margin-top: 40px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
 
   color: #060b35;
 }
 
-.product-mark__code {
-  font-family: "Roboto", sans-serif;
+.card__code {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -48,9 +52,13 @@ p {
   color: #616070;
 }
 
-.stars {
+.card__rate {
   display: flex;
   margin-top: 16px;
+}
+
+.stars {
+  display: flex;
 }
 
 .star {
@@ -75,23 +83,23 @@ p {
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
-  padding-left: 13px;
+  padding-left: 27px;
 }
 
-.price-block {
+.card__price {
   margin-top: 24px;
 }
 
-.price-block__text {
+.card__price-text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
-  padding-right: 51px;
+  padding-right: 65px;
 }
 
-.price-block__value {
+.card__price-value {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -99,13 +107,19 @@ p {
   color: #060b35;
 }
 
-.buy-block {
+.card__buy {
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
 
-.buy-block__link {
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  width: 180px;
+  height: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -119,12 +133,10 @@ p {
   border: 1px solid transparent;
   border-radius: 5px;
 
-  padding: 12px 55px;
-  margin-left: -20px;
   margin-bottom: 16px;
 }
 
-.buy-block__link:hover {
+.card__link:hover {
   background-color: #fff;
   border-color: #00acdc;
   border-radius: 5px;
