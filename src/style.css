@@ -1,8 +1,8 @@
-* {
-  margin: 0;
-}
-
-p {
+body,
+ul,
+li,
+p,
+a {
   margin: 0;
 }
 
@@ -64,7 +64,7 @@ p {
   line-height: 18px;
 }
 
-.card__button-inside {
+.card__button {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -82,9 +82,8 @@ p {
   margin: 16px;
 }
 
-.card__button-inside:hover {
+.card__button:hover {
   border: 1px solid #00acdc;
-  border-radius: 5px;
   color: #00acdc;
   background-color: #fff;
 }
@@ -109,9 +108,9 @@ p {
 /* #region .stars */
 .stars {
   box-sizing: border-box;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
 }
 
 .stars__star {
@@ -123,11 +122,19 @@ p {
   margin-right: 4px;
 }
 
-.stars--4 {
+.stars--1,
+.stars--2,
+.stars--3,
+.stars--4,
+.stars--5 {
   display: flex;
 }
 
-.stars--4 > .stars__star:nth-child(-n+4) {
-  background-image: url(images/star-active.svg);
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
 }
 /* #endregion */
