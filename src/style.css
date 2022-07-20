@@ -8,11 +8,11 @@ p {
   margin: 0;
 }
 
-.card {
+.page {
   font-family: Roboto, sans-serif;
 }
 
-.card-block {
+.card {
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -21,14 +21,14 @@ p {
   flex-direction: column;
 }
 
-.card-block__img {
+.card__img {
   height: 134px;
   align-self: center;
   margin-bottom: 40px;
   width: 160px;
 }
 
-.card-block__name {
+.card__name {
   margin-top: 0;
   font-weight: 500;
   line-height: 18px;
@@ -37,7 +37,7 @@ p {
   font-size: 12px;
 }
 
-.card-block__code {
+.card__code {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +48,7 @@ p {
   color: #616070;
 }
 
-.card-block__rate {
+.card__rate {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
@@ -66,11 +66,15 @@ p {
   background-repeat: no-repeat;
 }
 
-.stars__star:nth-child(-n+4) {
+.stars--1 > .stars__star:nth-child(-n + 1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4),
+.stars--5 > .stars__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
 }
 
-.card-block__reviews {
+.card__reviews {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -80,12 +84,12 @@ p {
   color: #060b35;
 }
 
-.card-block__container-price {
+.card__container-price {
   display: flex;
   justify-content: space-between;
 }
 
-.card-block__price {
+.card__price {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -95,7 +99,7 @@ p {
   color: #616070;
 }
 
-.card-block__price-value {
+.card__price-value {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -105,7 +109,7 @@ p {
   margin-bottom: 16px;
 }
 
-.card-block__button-link {
+.card__button-link {
   font-weight: 700;
   font-size: 14px;
   color: #fff;
@@ -119,7 +123,7 @@ p {
   border-radius: 5px;
 }
 
-.card-block__button-link:hover {
+.card__button-link:hover {
   background-color: #fff;
   color: #00acdc;
 }
