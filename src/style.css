@@ -1,5 +1,4 @@
 * {
-  /* margin: 0; */
   box-sizing: border-box;
 }
 
@@ -47,6 +46,7 @@
 
 .card__review {
   display: flex;
+  justify-content: space-between;
 }
 
 .stars {
@@ -71,10 +71,6 @@
   margin-left: 0;
 }
 
-.stars__star:last-child {
-  margin-right: 17px;
-}
-
 .stars--1 > .stars__star:nth-child(-n+1),
 .stars--2 > .stars__star:nth-child(-n+2),
 .stars--3 > .stars__star:nth-child(-n+3),
@@ -85,7 +81,7 @@
   background-repeat: no-repeat;
 }
 
-.reviews {
+.card__reviews {
   display: flex;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -130,8 +126,8 @@
   height: 40px;
   background-color: #00acdc;
   border-radius: 5px;
-  border: none;
   cursor: pointer;
+  border: 1px solid #00acdc;
 
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -145,5 +141,4 @@
 .card__button:hover {
   background-color: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
