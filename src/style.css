@@ -5,76 +5,55 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
-  width: 198px;
-  height: 406px;
+  border-radius: 5px;
+  width: 200px;
 }
 
 .card__img {
   width: 160px;
   height: 134px;
-  margin: 32px 19px 40px;
-  display: flex;
+  margin: 0 3px 40px;
+  display: block;
   justify-content: center;
 }
 
 .card__content {
-  margin: 0 16px 5px;
-  display: flex;
-  flex-wrap: 1;
   font-weight: 500;
   font-size: 12px;
   color: #060b35;
   line-height: 18px;
+  margin-bottom: 5px;
 }
 
 .card__prescription {
-  margin: 0 16px 18px;
+  margin-bottom: 18px;
   font-weight: 400;
   font-size: 10px;
   color: #616070;
 }
 
 .rating {
-  margin: 0 16px 23px;
+  margin-bottom: 23px;
   display: flex;
   justify-content: space-between;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars-item {
-  background-image: url(./images/star.svg);
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-}
-
-.stars--4 > .stars-item:nth-child(-n + 4) {
-  background-image: url(./images/star-active.svg);
+  align-items: center;
 }
 
 .rating__comments {
-  display: flex;
   font-weight: 400;
   font-size: 10px;
   color: #060b35;
-  align-items: center;
-  text-align: center;
 }
 
 .price-block {
-  margin: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .price-block__prescription {
@@ -89,45 +68,47 @@
   color: #060b35;
 }
 
-.button-block {
-  margin: 16px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
-.button-block__button {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #00acdc;
-  border-radius: 5px;
-  border: none;
-  width: 166px;
-  height: 40px;
-}
-
-.button-block__button:hover {
-  background: #fff;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
-}
-
 .button-block__link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  text-decoration: none;
   font-weight: 700;
   font-size: 14px;
-  padding: 15px 55px;
+  line-height: 16px;
   text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
   color: #fff;
+  background: #00acdc;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
 .button-block__link:hover {
   color: #00acdc;
+  background-color: #fff;
+  border: 1px solid #00acdc;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars-item {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--1 .stars-item:nth-child(-n+1),
+.stars--2 .stars-item:nth-child(-n+2),
+.stars--3 .stars-item:nth-child(-n+3),
+.stars--4 .stars-item:nth-child(-n+4),
+.stars--5 .stars-item:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
 }
