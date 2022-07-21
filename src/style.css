@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
   margin: 0;
 }
 
 .card {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 400;
   font-style: normal;
@@ -20,6 +20,7 @@
 
 .card__pic {
   padding: 32px 19px 40px;
+  height: 134px;
 }
 
 .card__name {
@@ -34,13 +35,81 @@
   color: #616070;
   padding-left: 16px;
   padding-bottom: 16px;
+  line-height: 14px;
 }
 
-.card__feedbacks {
+.raiting {
+  padding-top: 2px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.raiting__feedbacks {
   font-size: 10px;
   padding-right: 16px;
-  padding-bottom: 24px;
-  display: inline-flex;
-  justify-content: end;
+  padding-bottom: 21px;
+  height: 16px;
+  line-height: 14px;
 }
 
+.stars {
+  display: inline-flex;
+  padding-left: 16px;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  padding-left: 5px;
+}
+
+.stars--1 .stars__star:nth-last-child(1n+5),
+.stars--2 .stars__star:nth-last-child(1n+4),
+.stars--3 .stars__star:nth-last-child(1n+3),
+.stars--4 .stars__star:nth-last-child(1n+2),
+.stars--5 .stars__star:nth-last-child(1n+1) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+}
+
+.card__price-name {
+  color: #616070;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+}
+
+.card__button {
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  background-color: #00acdc;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 32px;
+  cursor: pointer;
+  margin: 0 16px 16px;
+}
+
+.card__button:hover {
+  box-sizing: border-box;
+  color: #00acdc;
+  background: #fff;
+  border: 1px solid #00acdc;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
