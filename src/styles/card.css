@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-* {
-  margin: 0;
-}
+@import './stars.css';
 
 .card {
   font-family: "Roboto", sans-serif;
@@ -40,7 +36,7 @@
 
 .raiting {
   padding-top: 2px;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -50,27 +46,6 @@
   padding-bottom: 21px;
   height: 16px;
   line-height: 14px;
-}
-
-.stars {
-  display: inline-flex;
-  padding-left: 16px;
-}
-
-.stars__star {
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  padding-left: 5px;
-}
-
-.stars--1 .stars__star:nth-last-child(1n+5),
-.stars--2 .stars__star:nth-last-child(1n+4),
-.stars--3 .stars__star:nth-last-child(1n+3),
-.stars--4 .stars__star:nth-last-child(1n+2),
-.stars--5 .stars__star:nth-last-child(1n+1) {
-  background-image: url("images/star-active.svg");
 }
 
 .card__price {
@@ -98,18 +73,14 @@
   text-align: center;
   text-decoration: none;
   background-color: #00acdc;
-  border: none;
+  border: 1px solid #00acdc;
   border-radius: 5px;
-  padding: 12px 32px;
+  padding: 11px 32px;
   cursor: pointer;
   margin: 0 16px 16px;
 }
 
 .card__button:hover {
-  box-sizing: border-box;
   color: #00acdc;
   background: #fff;
-  border: 1px solid #00acdc;
-  padding-top: 11px;
-  padding-bottom: 11px;
 }
