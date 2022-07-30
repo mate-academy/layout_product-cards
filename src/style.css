@@ -1,0 +1,138 @@
+/* #region reset */
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+/* #endregion */
+
+/* #region page */
+.page {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+/* #endregion */
+
+/* #region card */
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__product-photo {
+  height: 134px;
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.card__product-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  align-self: start;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.card__product-rating {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.card__product-comments {
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.card__price {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__product-price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__product-price-current {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__btn-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  padding: 10px 55px;
+  border-radius: 5px;
+}
+
+.card__btn-link:hover {
+  background: #fff;
+  color: #00acdc;
+}
+/* #endregion */
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--active--1 .stars__star:nth-child(-n + 1),
+.stars--active--2 .stars__star:nth-child(-n + 2),
+.stars--active--3 .stars__star:nth-child(-n + 3),
+.stars--active--4 .stars__star:nth-child(-n + 4),
+.stars--active--5 .stars__star:nth-child(-n + 5),
+.stars--active--6 .stars__star:nth-child(-n + 6) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
