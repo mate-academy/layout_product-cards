@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  color: #060b35;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.card__image {
+  padding: 32px 19px 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  padding: 0 16px 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px 23px;
+}
+
+.card__review {
+  font-size: 10px;
+}
+
+.card__code {
+  padding-left: 16px;
+  font-size: 10px;
+  color: #616070;
+
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px;
+
+}
+
+.card__price-text {
+  color: #616070;
+  font-size: 12px;
+}
+
+.card__price-num {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card__button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #00acdc;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 16px 16px;
+  border: 1px solid transparent;
+}
+
+.card__button:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+}
+
+.card__buy {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  line-height: 38px;
+}
+
+.card__buy:hover {
+  color: #00acdc;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
