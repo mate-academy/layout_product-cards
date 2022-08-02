@@ -1,0 +1,34 @@
+.card-rating {
+  display: flex;
+  margin-top: 16px;
+  margin-left: 12px;
+}
+
+.card-rating__stars {
+  display: flex;
+  margin-right: 17px;
+}
+
+.card-rating__star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  margin-left: 4px;
+}
+
+.card-rating__stars--1 .card-rating__star:nth-child(1),
+.card-rating__stars--2 .card-rating__star:nth-child(-n + 2),
+.card-rating__stars--3 .card-rating__star:nth-child(-n + 3),
+.card-rating__stars--4 .card-rating__star:nth-child(-n + 4),
+.card-rating__stars--5 .card-rating__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+.card-rating__count {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  color: #060b35;
+}
