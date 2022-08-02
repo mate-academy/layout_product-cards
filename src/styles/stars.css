@@ -1,0 +1,67 @@
+.stars {
+  display: flex;
+  position: relative;
+  width: min-content;
+}
+
+[class*=star--] {
+  display: inline-block;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  content: "";
+  width: 16px;
+}
+
+
+/* #stars--4 region (active) */
+[class*=star--]:not(:last-of-type) {
+  display: inline-block;
+  background-image: url(../images/star-active.svg);
+  background-position: center;
+  height: 16px;
+  content: "";
+}
+
+/* #region stars--5 */
+.stars--5 .stars__star {
+  background-image: url(./images/star-active.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
+
+/* #region stars--3 */
+.stars--3 .stars__star:not(:nth-child(n+4)) {
+  background-image: url(./images/star-active.svg);
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
+
+/* #region stars--2 */
+.stars--2 .stars__star:not(:nth-child(n+3)) {
+  background-image: url(./images/star-active.svg);
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
+
+/* #region stars--1 */
+.stars--1 .stars__star:first-child {
+  background-image: url(./images/star-active.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
