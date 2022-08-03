@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* #region card */
+.card {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+  padding: 32px 16px 16px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 406px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 164px;
+  height: 38px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  padding: 0;
+  color: #fff;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
+
+.card__name {
+  padding-top: 40px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  display: flex;
+  width: 100%;
+  padding-top: 4px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.card__price-tag {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.card__price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__star {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: flex-end;*/
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+.card__review {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+/* #endregion */
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--4 :nth-of-type(n+5) {
+  background-image: url(./images/star.svg);
+}
+
+/* #endregion */
