@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --color-blueaccent: #00acdc;
+  --color-white: white;
+}
+
+body,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.card {
+  max-width: 198px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  color: #060b35;
+  border: 1px solid #f3f3f3;
+}
+
+.card__container {
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  height: 134px;
+  margin: 0 3px;
+}
+
+.card-title {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 12px;
+  padding-top: 40px;
+  line-height: 18px;
+}
+
+.card-code {
+  font-size: 10px;
+  padding: 4px 0 16px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 2px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars--1 > .stars__star:nth-child(1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(n+1) {
+  background-image: url(images/star-active.svg);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-reviews {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  line-height: 18px;
+}
+
+.price-title {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.price-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 16px;
+  border-radius: 5px;
+  background: var(--color-blueaccent);
+  color: var(--color-white);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  height: 40px;
+}
+
+.button-link:hover {
+  box-sizing: border-box;
+  border: 1px solid var(--color-blueaccent);
+  color: var(--color-blueaccent);
+  background: var(--color-white);
+}
