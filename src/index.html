@@ -6,8 +6,10 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product cards</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link 
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" 
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" 
       rel="stylesheet"
     >
   </head>
@@ -24,20 +26,34 @@
       <p class="text card__code">
         Product code: 195434
       </p>
-      <div class="stars">
-        <div class="stars__star"></div>
-        <div class="stars__star"></div>
-        <div class="stars__star"></div>
-        <div class="stars__star"></div>
-        <div class="stars__star"></div>
-        <p class="stars__review">Reviews:5</p>
+      <div class="star-block">
+        <div class="stars">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+        <div>
+          <p class="star-block__review">Reviews:5</p>
+        </div>
       </div>
       <div class="price">
-        <p>Price:</p>
-        <p>$2199</p>
+        <p class="price__text">Price:</p>
+        <p class="price__amount">$2,199</p>
       </div>
       <div class="button-group">
-        <button class="button"><p class="buy">BUY</p></button>
+        <button class="button-group__button">
+          <p class="buy">
+            <a 
+              href="#buy" 
+              class="buy__link"
+              data-qa="hover"
+            >
+              Buy
+            </a>
+          </p>
+        </button>
       </div>
     </div>
   </body>
