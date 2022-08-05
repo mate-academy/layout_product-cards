@@ -1,0 +1,33 @@
+.stars {
+  display: flex;
+}
+
+.stars--1,
+.stars--2,
+.stars--3,
+.stars--4,
+.stars--5 {
+  position: relative;
+}
+
+.stars--1 .stars__star:nth-child(1)::before,
+.stars--2 .stars__star:nth-child(-n+2)::before,
+.stars--3 .stars__star:nth-child(-n+3)::before,
+.stars--4 .stars__star:nth-child(-n+4)::before,
+.stars--5 .stars__star:nth-child(-n+5)::before {
+  content: "";
+  position: absolute;
+  background: url("../../images/star-active.svg") 50% 50%/ auto no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star {
+  background: url("../../images/star.svg") 50% 50%/ auto no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
