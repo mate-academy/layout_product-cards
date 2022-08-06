@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  padding: 32px 16px 28px;
+}
+
+.card__logo {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.card__heading {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 500;
+  margin-top: 40px;
+  color: rgba(6, 11, 53, 1);
+  margin-bottom: 4px;
+}
+
+.card__code {
+  margin: 0;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  font-weight: 400;
+}
+
+.card__stars-reviews {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 16px;
+  height: 16px;
+}
+
+.card__price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 18px;
+  margin: 24px 0 16px;
+}
+
+.review {
+  font-weight: 400;
+  color: #060b35;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(97, 96, 112, 1);
+}
+
+.number {
+  font-weight: 700;
+  font-size: 16px;
+  color: #060b35;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  height: 16px;
+  width: 16px;
+  display: flex;
+  background: url(./images/star-active.svg) no-repeat center;
+}
+
+.star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__button-container {
+  height: 40px;
+  display: flex;
+}
+
+.bye-button {
+  width: 166px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 55px 0 56px;
+  background: #00acdc;
+  color: white;
+  border: 1px solid white;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.bye-button:hover {
+  background-color: white;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
+
+.stars--0 > .star,
+.stars--1 > .star:nth-child(n+2),
+.stars--2 > .star:nth-child(n+3),
+.stars--3 > .star:nth-child(n+4),
+.stars--4 > .star:nth-child(n+5),
+.stars--5 > .star:nth-child(n+6) {
+  background: url(./images/star.svg) no-repeat center;
+}
