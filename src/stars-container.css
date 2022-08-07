@@ -1,0 +1,43 @@
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars__star:not(:first-of-type) {
+  margin-left: 4px;
+}
+
+.stars__star::after {
+  position: relative;
+  content: "";
+  background: url(images/star.svg);
+  width: 13px;
+  height: 12px;
+}
+
+.stars--active > :nth-child(-n+4):after {
+  background: url(images/star-active.svg);
+}
+
+.stars__rewies {
+  height: 16px;
+  width: 53px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 17px;
+  font-size: 10px;
+}
+
+.stars__rewies_text {
+  font-family: var(--font-famaly);
+  font-weight: 400;
+  font-size: 10px;
+}
