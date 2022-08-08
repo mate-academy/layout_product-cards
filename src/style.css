@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.card__name {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__code {
+  font-weight: 400;
+  width: 100%;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.card__grade {
+  gap: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+  height: 16px;
+  width: 96px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars__star {
+  background: url(./images/star.svg) no-repeat center center;
+  width: 16px;
+  height: 16px;
+}
+
+.card__grade-stars-4 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__grade-reviews {
+  font-size: 10px;
+  line-height: 14px;
+  flex-grow: 0;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+  width: 100%;
+
+}
+
+.card__price-text {
+  color: #616070;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__btn {
+  width: 166px;
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__btn-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__btn:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
+
+.card__btn:hover .card__btn-link {
+  color: #00acdc;
+}
