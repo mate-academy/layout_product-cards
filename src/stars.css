@@ -1,0 +1,31 @@
+.stars {
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.stars__star {
+  padding-right: 4px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./images/star.svg);
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(n) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars__reviews {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+  padding-left: 13px;
+}
