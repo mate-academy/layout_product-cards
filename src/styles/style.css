@@ -1,0 +1,126 @@
+@import url(./recet.css);
+@import url(./variables.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.page-content {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
+  font-weight: 400;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: var(--border-radius);
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  margin-bottom: 37px;
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.card__title-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card__title-product-code {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-text-color);
+}
+
+.card__rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__rating-reviews {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+/* #region Stars */
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
+}
+/* #endregion*/
+
+.card__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary-text-color);
+}
+
+.card__price-number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__button {
+  background: var(--accent-color);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  padding: 12px 69px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  color: var(--accent-color);
+}
