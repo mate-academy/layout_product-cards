@@ -9,7 +9,7 @@ body {
 }
 /* #endregion default */
 /* #region container */
-.container {
+.card {
   display: flex;
   flex-direction: column;
   width: 198px;
@@ -20,7 +20,7 @@ body {
 }
 /* #endregion container */
 /* #region image */
-.image {
+.card__image {
   margin: 32px 19px 0;
   width: 160px;
   height: 134px;
@@ -30,13 +30,13 @@ body {
   align-content: center;
 }
 
-.image__item {
+.card__picture {
   width: 160px;
   height: 134px;
 }
 /* #endregion image */
 /* #region name */
-.name {
+.card__name {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -45,7 +45,7 @@ body {
 }
 /* #endregion name */
 /* #region product-code */
-.product-code {
+.card__product-code {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -54,13 +54,13 @@ body {
 }
 /* #endregion product-code */
 /* #region star-review */
-.star-review {
+.card__rating {
   margin: 16px 16px 0;
   display: flex;
   justify-content: space-between;
 }
 
-.star-review__review {
+.card__review {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -72,6 +72,7 @@ body {
 
 .stars {
   display: flex;
+  align-content: center;
 }
 
 .stars__star {
@@ -90,9 +91,8 @@ body {
   background-image: url(images/star-active.svg);
 }
 /* #endregion star-review */
-
 /* #region price */
-.price {
+.card__price {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -102,7 +102,7 @@ body {
   margin: 24px 16px 0;
 }
 
-.price__number {
+.card__price-number {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -110,7 +110,7 @@ body {
 }
 /* #endregion price */
 /* #region buyWithLink */
-.buy {
+.card__buy {
   margin: 16px;
   height: 40px;
   width: 166px;
@@ -122,7 +122,7 @@ body {
   align-items: center;
 }
 
-.buy__link {
+.card__buy-link {
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -132,7 +132,7 @@ body {
   color: #fff;
 }
 
-.buy:hover {
+.card__buy:hover {
   background: #fff;
   border: 1px solid #00acdc;
   border-radius: 5px;
@@ -144,7 +144,7 @@ body {
   color: #00acdc;
 }
 
-.buy:hover .buy__link {
+.card__buy:hover .card__buy-link {
   color: #00acdc;
 }
 /* #endregion buyWithLink */
