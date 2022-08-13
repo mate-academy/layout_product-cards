@@ -1,67 +1,93 @@
 .card {
-  padding: 32px 16px 16px;
+  padding: var(--card-padding-top)
+    var(--card-pading-left-right)
+    var(--card-pading-bottom);
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-gray);
-  border-radius: 5px;
+  align-items: center;
+  width: var(--card-width);
+
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-width) solid var(--color-border);
 }
 
 .card__img {
-  padding: 0 3px;
-  margin-bottom: 40px;
-  width: 166px;
-  height: 134px;
+  margin: 0 0 var(--card-img-margin-bottom);
+  height: var(--card-img-height);
+
+  object-fit: contain;
+  object-position: center;
 }
 
 .card__title {
-  margin-bottom: 4px;
-  display: flex;
-  font: normal normal 500 12px/18px Roboto, sans-serif;
+  margin: 0 0 var(--card-title-margin-bottom);
+  padding: 0;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .card__id {
-  margin-bottom: 16px;
-  display: flex;
-  color: var(--color-secondary-accent);
+  margin: 0 0 var(--card-id-margin-bottom);
+  align-self: start;
+
+  color: var(--color-secondary);
 }
 
 .card__rating {
-  margin-bottom: 24px;
+  margin: 0 0 var(--card-rating-margin-bottom);
   display: flex;
+  align-self: stretch;
   justify-content: space-between;
   align-items: flex-end;
+
+  color: var(--color-secondary);
 }
 
 .card__price {
-  margin-bottom: 16px;
+  margin: 0 0 var(--card-price-margin-bottom);
   display: flex;
+  align-self: stretch;
   justify-content: space-between;
-  font: 12px/18px Roboto, sans-serif;
 }
 
-.price__value {
-  font: bold 16px/18px Roboto, sans-serif;
+.card__price-label {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-secondary);
+}
+
+.card__price-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.12;
 }
 
 .card__button {
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  width: 100%;
+  height: var(--card-button-height);
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  color: var(--color-white);
+  background: var(--color-light-blue);
+
   text-transform: uppercase;
   text-decoration: none;
 
-  font: bold 14px/16px Roboto, sans-serif;
-  color: var(--color-white);
-  background: var(--color-blue);
-
-  border: 1px solid transparent;
-  border-radius: 5px;
+  border: var(--card-button-border-width) solid transparent;
+  border-radius: var(--card-button-border-radius);
 }
 
 .card__button:hover {
-  color: var(color-blue);
+  color: var(--color-light-blue);
   background-color: var(--color-white);
-  border-color: var(--color-blue);
+  border-color: var(--color-light-blue);
 }
