@@ -3,7 +3,7 @@ Replace `<your_account>` with your Github username and copy the links to Pull Re
 - [DEMO LINK](https://rudenkorest.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://rudenkorest.github.io/layout_product-cards/report/html_report/)
 
-> Follow [this instruction](https:/git/mate-academy.github.io/layout_task-guideline)
+> Follow [this instruction](https:/github.com/mate-academy.github.io/layout_task-guideline)
 ___
 
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
