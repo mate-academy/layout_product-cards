@@ -1,9 +1,4 @@
-.stars--0,
-.stars--1,
-.stars--2,
-.stars--3,
-.stars--4,
-.stars--5 {
+.stars {
   display: flex;
 }
 
@@ -13,15 +8,12 @@
   margin-right: 4px;
   height: 16px;
   width: 16px;
-}
-
-.stars--0 > .stars__star,
-.stars--1 > .stars__star,
-.stars--2 > .stars__star,
-.stars--3 > .stars__star,
-.stars--4 > .stars__star {
   background-image: url(../../images/star.svg);
   background-repeat: no-repeat;
+}
+
+.stars__star:last-of-type {
+  margin-right: 0;
 }
 
 .stars--1 > .stars__star:nth-child(1),
@@ -31,13 +23,4 @@
 .stars--5 > .stars__star:nth-child(n) {
   background-image: url(../../images/star-active.svg);
   background-repeat: no-repeat;
-}
-
-.stars--0 > .stars__star:last-of-type,
-.stars--1 > .stars__star:last-of-type,
-.stars--2 > .stars__star:last-of-type,
-.stars--3 > .stars__star:last-of-type,
-.stars--4 > .stars__star:last-of-type,
-.stars--5 > .stars__star:last-of-type {
-  margin-right: 0;
 }
