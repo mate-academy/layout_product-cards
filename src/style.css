@@ -1,4 +1,145 @@
-@import "./reset.css";
-@import "./root.css";
-@import "./product-card.css";
-@import "./starsBlock.css";
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+
+  --text-main-colour: #060b35;
+  --text-additional-colour: #616070;
+  --button-main-colour: #00acdc;
+}
+
+.page__content {
+  background-color: #e5e5e5;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+
+  margin: 32px auto 40px;
+}
+
+.infoblock {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px;
+}
+
+.infoblock__name {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-main-colour);
+
+  margin-bottom: 4px;
+}
+
+.infoblock__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-additional-colour);
+
+  margin-bottom: 16px;
+}
+
+.infoblock__review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.number {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-main-colour);
+}
+
+.infoblock__price {
+  display: flex;
+  justify-content: space-between;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.infoblock__price-word {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-additional-colour);
+}
+
+.infoblock__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-main-colour);
+}
+
+.infoblock__button {
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+
+  background: var(--button-main-colour);
+  border-radius: 5px;
+  border: 1px solid transparent;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.infoblock__button:hover {
+  background-color: #fff;
+  border: 1px solid var(--button-main-colour);
+  color: var(--button-main-colour);
+}
