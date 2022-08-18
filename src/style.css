@@ -1,0 +1,134 @@
+/* #region -----Reset----------------- */
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+h2 {
+  margin: 0;
+}
+/* #endregion */
+
+/* #region -----Card------------------ */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img-imac {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.card__info-section {
+  margin-bottom: 16px;
+}
+
+.card__imac-info {
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  color: #060b35;
+  margin: 0 0 4px;
+}
+
+.card__code-info {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.card__price-box {
+  width: 100%;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card_price-txt {
+  color: #616070;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #060b35;
+}
+
+.card__link {
+  display: flex;
+  width: 166px;
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__link:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
+/* #endregion */
+
+/* #region -----Stars------------------ */
+.stars {
+  height: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars__line {
+  display: flex;
+}
+
+.stars__line > .stars__element {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(/src/images/star.svg) 
+    no-repeat 
+    center;
+}
+
+.stars__line:nth-last-child() {
+  margin: 0;
+}
+
+.stars__element:nth-child(-n + 4) {
+  background-image: url(/src/images/star-active.svg);
+}
+
+.stars__element:last-child {
+  margin-right: 0;
+}
+
+.stars__text {
+  font-weight: 400;
+  line-height: 16px;
+  font-size: 10px;
+}
+/* #endregion */
