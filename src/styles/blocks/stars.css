@@ -7,9 +7,16 @@
   margin-right: 4px;
   height: 16px;
   width: 16px;
-  background: url(../../images/star-active.svg) no-repeat center;
 }
 
-.stars__star:last-child {
+.stars > * {
   background: url(../../images/star.svg) no-repeat center;
+}
+
+.stars--1 > :first-child,
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
+  background: url(../../images/star-active.svg) no-repeat center;
 }
