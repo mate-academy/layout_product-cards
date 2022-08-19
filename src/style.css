@@ -1,17 +1,12 @@
-body,
-h1,
-h2,
-ul,
-p,
-a {
+* {
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  text-decoration: none;
+  padding: 0;
 }
 
 .card {
   padding: 16px;
 
-  font-family: "Roboto", sans-serif;
   width: 166px;
   display: flex;
   flex-direction: column;
@@ -19,6 +14,7 @@ a {
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
 }
 
 .card__media {
@@ -60,27 +56,6 @@ a {
   padding: 0;
 }
 
-.stars {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: start;
-}
-
-.stars__star {
-  background: url("images/star.svg") no-repeat center;
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(5n),
-.stars--2 .stars__star:nth-child(1n + 4),
-.stars--3 .stars__star:nth-child(1n + 3),
-.stars--4 .stars__star:nth-child(1n + 2),
-.stars--5 .stars__star:nth-child(1n) {
-  background: url("images/star-active.svg") no-repeat center;
-}
-
 .card__rating-reviews {
   font-weight: 400;
   font-size: 10px;
@@ -110,6 +85,7 @@ a {
 }
 
 .card__button {
+  text-decoration: none;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -127,4 +103,25 @@ a {
   background-color: #fff;
   border: 1px solid #00acdc;
   color: #00acdc;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+.stars__star {
+  background: url("images/star.svg") no-repeat center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(5n),
+.stars--2 .stars__star:nth-child(1n + 4),
+.stars--3 .stars__star:nth-child(1n + 3),
+.stars--4 .stars__star:nth-child(1n + 2),
+.stars--5 .stars__star:nth-child(1n) {
+  background: url("images/star-active.svg") no-repeat center;
 }
