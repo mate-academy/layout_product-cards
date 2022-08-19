@@ -20,9 +20,6 @@
 .card__product-name {
   margin-bottom: 4px;
 
-  display: flex;
-  align-items: space-between;
-
   line-height: 18px;
   font-weight: 500;
   font-size: 12px;
@@ -30,7 +27,6 @@
 }
 
 .card__product-code {
-  font-weight: 400;
   font-size: 10px;
 
   min-height: 14px;
@@ -53,7 +49,6 @@
   display: flex;
   align-items: flex-end;
 
-  font-weight: 400;
   font-size: 10px;
   color: var(--color-dark);
 }
@@ -62,14 +57,12 @@
   line-height: 18px;
 
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
 
   margin-bottom: 16px;
 }
 
 .card__price-title {
-  font-weight: 400;
   font-size: 12px;
   color: var(--color-gray);
 }
@@ -86,7 +79,9 @@
 
   background-color: #00acdc;
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid transparent;
+
+  transition: background-color 0.3s, color 0.3s;
 
   display: flex;
   align-items: center;
@@ -97,8 +92,6 @@
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
-
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .card__buy-link:hover {
