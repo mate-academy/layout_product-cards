@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card_box-img {
+  padding: 32px 19px 40px;
+}
+
+.card_img {
+  width: 160px;
+  height: 134px;
+}
+
+.card_text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card_text-name {
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  width: 166px;
+  margin: 0 16px;
+}
+
+.card_product-code {
+  font-size: 10px;
+  font-weight: 400;
+  color: #616070;
+  margin: 0 16px 16px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 24px;
+}
+
+.reviews_box {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+
+.star {
+  position: relative;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+.reviews_box-input {
+  display: none;
+}
+
+.box_star:before {
+  position: absolute;
+  content: url(./images/star-active.svg);
+  opacity: 0;
+}
+
+.box_star:hover::before {
+  opacity: 1;
+}
+
+.box_star:hover ~ .box_star::before {
+  opacity: 1;
+}
+
+.reviews_box-input:checked ~ .box_star::before {
+  opacity: 1;
+}
+
+.reviews_text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card_price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 16px;
+}
+
+.price_text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+}
+
+.price_money {
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+}
+
+.botton {
+  display: flex;
+  margin: 0 16px 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.botton_link {
+  height: 40px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #00acdc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.botton_link:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
