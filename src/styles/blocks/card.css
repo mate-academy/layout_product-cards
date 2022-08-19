@@ -1,5 +1,4 @@
 .card {
-  box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
 
@@ -8,6 +7,7 @@
 }
 
 .card__image {
+  box-sizing: content-box;
   height: 134px;
   width: 160px;
   padding: 0 3px;
@@ -29,7 +29,6 @@
 }
 
 .card__price {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 24px 0 16px;
@@ -53,17 +52,19 @@
   background-color: #00acdc;
   color: #fff;
 
+  text-transform: uppercase;
   font-weight: 700;
   line-height: 16px;
 
   border-radius: 5px;
   border: 1px solid #00acdc;
 
-  transition: 0.5s;
+  transition: background-color 0.8s,
+    color 0.8s;
+  cursor: pointer;
 }
 
 .card__button:hover {
   background-color: #fff;
   color: #00acdc;
-  cursor: pointer;
 }
