@@ -1,0 +1,58 @@
+/* card blocks elem with rate parameters */
+.card__rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+/* blocks elem with stars-rate parameters */
+.stars {
+  display: flex;
+
+  padding: 0;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+
+  margin-right: 4px;
+
+  list-style-type: none;
+
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--0 > .stars__star {
+  background-image: url(../images/star.svg);
+}
+
+.stars--1 :not(:first-child) {
+  background-image: url(../images/star.svg);
+}
+
+.stars--2 > .stars__star:nth-child(n+3) {
+  background-image: url(../images/star.svg);
+}
+
+.stars--3 > .stars__star:nth-child(n+4) {
+  background-image: url(../images/star.svg);
+}
+
+.stars--4 :last-child {
+  background-image: url(../images/star.svg);
+}
+
+/* card blocks elem with review parameters */
+.card__review {
+  line-height: var(--line-height_s);
+
+  font-weight: 400;
+  font-size: var(--font-size_s);
+  color: var(--font-color_main);
+}
