@@ -1,0 +1,35 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars__star {
+  height: 16px;
+  margin-right: 4px;
+  width: 16px;
+  border-radius: 0.5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../images/star-active.svg);
+}
+
+.stars :nth-child(5) {
+  margin-right: 0;
+}
+
+.stars__reviews {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--color-of-product);
+  padding-left: 20px;
+}
+
+.stars--0 .stars__star,
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:nth-child(n+5) {
+  background-image: url(../../images/star.svg);
+}
