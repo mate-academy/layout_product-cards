@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+*,
 body,
 p {
   margin: 0;
@@ -18,13 +23,19 @@ p {
   background: #fff;
 }
 
-.card__logo {
+.card__image {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
   background-repeat: no-repeat;
   height: 134px;
   width: 160px;
 }
 
 .card__maintext {
+  font-weight: 500;
   margin-top: 40px;
   margin-bottom: 4px;
   font-size: 12px;
@@ -33,6 +44,7 @@ p {
 }
 
 .card__secondtext {
+  font-weight: 400;
   color: #616070;
   font-size: 10px;
   line-height: 14px;
@@ -42,7 +54,7 @@ p {
 .card__rating {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 24px;
 }
 
@@ -52,22 +64,24 @@ p {
 }
 
 .stars__star {
-  background-image: url(/src/images/star.svg);
+  background-image: url(./images/star.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   height: 16px;
   width: 16px;
   margin-right: 4px;
+  justify-content: space-between;
 }
 
 .stars__star:nth-child(-n + 4) {
-  background-image: url(/src/images/star-active.svg);
+  background-image: url(./images/star-active.svg);
 }
 
 .card__reviews {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
+  color: #060b35;
 }
 
 .card__price {
@@ -84,6 +98,7 @@ p {
 }
 
 .value {
+  font-style: bold;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -94,7 +109,7 @@ p {
   display: flex;
   font-weight: 700;
   font-size: 14px;
-  height: 40px;
+  height: 39px;
   line-height: 16px;
   align-items: center;
   justify-content: center;
