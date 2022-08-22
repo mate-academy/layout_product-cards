@@ -1,5 +1,5 @@
 # Product cards
-Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+Replace `<>` with your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://baranovskazoya.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://baranovskazoya.github.io/layout_product-cards/report/html_report/)
 
