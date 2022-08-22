@@ -3,7 +3,7 @@ Replace `<your_account>` with your Github username and copy the links to Pull Re
 - [DEMO LINK](https://roman-zherebetskyi.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://roman-zherebetskyi.github.io/layout_product-cards/report/html_report/)
 
-> Follow [this instructions](https://mate-academy.github.io/layout_task-guideline)
+> Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
 ___
 
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
@@ -12,7 +12,7 @@ ___
 ## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
 ## The task
-Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/euXjY316CHKYkPRO1K0kjLsF/Moyo-Catalog?node-id=11325%3A2288).
+Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
 
 ### Requirements:
 - reset browser's default margins
@@ -31,7 +31,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 and keep it operational. If you change `stars--4` modifier to `stars--2` or
 other - number of selected stars should change correctly.
 - There should be only 2 BEM blocks in your code `card` and `stars` all the others are just card elements
-- Item with the text `Купить` should be a link.
+- Item with the text `Buy` should be a link.
 - Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
 
 ---
