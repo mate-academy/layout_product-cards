@@ -18,11 +18,15 @@
 }
 
 .card__title {
-  margin-top: 40px;
+  margin: 40px 0 0;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
 .card__code {
-  margin-top: 4px;
+  margin: 4px 0 0;
 
   font-size: var(--text-size-secondary);
   font-weight: var(--text-weight-secondary);
@@ -33,51 +37,61 @@
 .card__rating {
   display: flex;
 
-  margin: 16px 0 0;
+  margin-top: 16px;
   justify-content: space-between;
 }
 
 .card__reviews {
+  align-self: flex-end;
+
   font-size: var(--text-size-secondary);
-  font-weight: var(--text-weight-secondary);
   line-height: var(--text-line-height-secondary);
 }
 
-.card-price {
+.card__price {
   display: flex;
   justify-content: space-between;
+
+  line-height: 18px;
 
   margin-top: 24px;
 }
 
-.card-price__text {
+.price-text {
+  font-size: 12px;
+
   color: var(--text-color-secondary);
 }
 
-.card-price__amount {
+.price-amount {
   font-weight: 700;
   font-size: 16px;
 }
 
-.button {
+.card__button-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-top: 16px;
-  height: 40px;
-  padding: 0;
+  /* height: 40px; */
+  padding: 11px;
 
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
-  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
 
+  color: #fff;
   background-color: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
 
-  cursor: pointer;
   transition: 0.5s;
 }
 
-.button:hover {
+.card__button-buy:hover {
   color: #00acdc;
   background-color: #fff;
 }
