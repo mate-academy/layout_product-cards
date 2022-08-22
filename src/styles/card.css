@@ -3,14 +3,13 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Roboto", sans-serif;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 32px 16px 16px;
   width: 200px;
   background: var(--white-color);
@@ -18,13 +17,10 @@ body {
   border-radius: 5px;
 }
 
-.card > * {
-  width: 100%;
-}
-
-.card__photo-imac {
+.card__photo {
   height: 134px;
   width: 160px;
+  align-self: center;
   margin-bottom: 40px;
 }
 
@@ -40,7 +36,6 @@ body {
   line-height: 14px;
   margin-bottom: 16px;
   font-size: var(--s-font-size);
-  font-weight: var(--s-font-weight);
   color: var(--secondary-color);
 }
 
@@ -51,28 +46,9 @@ body {
   margin-bottom: 24px;
 }
 
-.stars {
-  display: flex;
-  align-items: center;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-repeat: no-repeat;
-  background-image: url(../images/star.svg);
-  background-position: 50%;
-}
-
-.stars--4 > .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
 .card__reviews {
   font-size: var(--s-font-size);
   line-height: 14px;
-  font-weight: 400;
   color: var(--main-accent-color);
 }
 
@@ -85,7 +61,6 @@ body {
 
 .card__price-text {
   font-size: var(--m-font-size);
-  font-weight: var(--s-font-weight);
   line-height: 18px;
   color: var(--secondary-color);
 }
@@ -98,7 +73,6 @@ body {
 }
 
 .card__button-buy {
-  height: 40px;
   width: 166px;
   background-color: #00acdc;
   border-radius: 5px;
@@ -110,6 +84,9 @@ body {
   text-transform: uppercase;
   color: var(--white-color);
   font-weight: var(--l-font-weight);
+  padding: 11px 0;
+
+  transition: 0.3s;
 
   display: flex;
   justify-content: center;
