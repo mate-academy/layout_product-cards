@@ -4,26 +4,30 @@
 
 .page {
   font-family: "Roboto", sans-serif;
+  background-color: #e5e5e5;
 
   --text-main-colour: #060b35;
   --text-additional-colour: #616070;
   --button-main-colour: #00acdc;
 }
 
-.page__content {
-  background-color: #e5e5e5;
+.page__content,
+p,
+ul {
+  margin: 0;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 200px;
 
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
+  padding: 0 16px 16px;
 }
 
 .product-card__image {
@@ -33,13 +37,7 @@
   margin: 32px auto 40px;
 }
 
-.infoblock {
-  display: flex;
-  flex-direction: column;
-  padding: 0 16px 16px;
-}
-
-.infoblock__name {
+.product-card__name {
   display: inline-block;
   font-weight: 500;
   font-size: 12px;
@@ -49,7 +47,7 @@
   margin-bottom: 4px;
 }
 
-.infoblock__code {
+.product-card__code {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -58,7 +56,7 @@
   margin-bottom: 16px;
 }
 
-.infoblock__review {
+.product-card__review {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,33 +89,33 @@
   background-image: url(./images/star-active.svg);
 }
 
-.number {
+.product-card__number {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--text-main-colour);
 }
 
-.infoblock__price {
+.product-card__price {
   display: flex;
   justify-content: space-between;
-  line-height: 18px;
   margin-bottom: 16px;
 }
 
-.infoblock__price-word {
+.product-card__price-word {
   font-weight: 400;
   font-size: 12px;
   color: var(--text-additional-colour);
 }
 
-.infoblock__price-value {
+.product-card__price-value {
   font-weight: 700;
   font-size: 16px;
   color: var(--text-main-colour);
+  line-height: 18px;
 }
 
-.infoblock__button {
+.product-card__button {
   display: block;
   width: 100%;
   height: 40px;
