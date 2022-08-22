@@ -1,10 +1,6 @@
 @import url(./stars.css);
 @import url(./variables.css);
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -13,6 +9,7 @@ body {
 .card {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   background: var(--background-and-button-str-link-color);
 
@@ -104,18 +101,17 @@ body {
   font-size: 14px;
   line-height: 16px;
   text-decoration: none;
+
+  border: 1px solid var(--button-background-and-border-color);
   border-radius: 5px;
 
   color: var(--background-and-button-str-link-color);
-
   background-color: var(--button-background-and-border-color);
 }
 
 .card__buy-button-link:hover {
   color: var(--button-background-and-border-color);
   background: var(--background-and-button-str-link-color);
-
-  border: 1px solid var(--button-background-and-border-color);
 
   transition: 0.2s;
 }
