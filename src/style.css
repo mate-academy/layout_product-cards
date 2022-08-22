@@ -107,10 +107,12 @@ html {
 
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   color: #fff;
 
-  padding: 12px 70px 12px 69px;
+  padding: 12px 0;
+  width: 100%;
   background-color: #00acdc;
   border-radius: 5px;
 }
@@ -119,36 +121,9 @@ html {
   color: #00acdc;
   background-color: #fff;
 
-  padding: 11px 68px;
-
   border: 1px solid #00acdc;
 }
 
 /* #endregion */
 
-/* #region block: stars */
-.stars {
-  display: flex;
-  align-items: center;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-
-  background-image: url(./images/star.svg);
-  object-fit: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-}
-
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--4 > .stars__star:nth-child(-n+4) {
-  background-image: url(./images/star-active.svg);
-}
-
-/* #endregion */
+@import url(./_stars.css)
