@@ -21,20 +21,18 @@
   object-fit: cover;
 }
 
-.card__name {
-  width: 166px;
-  margin-top: 40px;
-}
-
 .card__description {
-  width: 100%;
+  display: block;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: var(--darcBlue);
+  width: 166px;
+  margin-top: 40px;
 }
 
 .card__code {
+  display: block;
   height: 14px;
   font-weight: 400;
   font-size: 10px;
@@ -57,6 +55,7 @@
 }
 
 .card__priceText {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -64,43 +63,36 @@
 }
 
 .card__value {
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: var(--darcBlue);
 }
 
-.card__buy {
-  height: 40px;
-  width: 166px;
-  box-sizing: border-box;
-  margin: 16px auto 0;
-  background: var(--blue);
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s;
-}
-
 .card__button {
+  display: inline-flex;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: var(--backgroundColor);
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.5s;
+  transition: border 0.5s, background-color 0.5s;
   border: 1px solid var(--buttonBorderDefault);
   box-sizing: border-box;
+  height: 40px;
+  width: 166px;
+  margin: 16px auto 0;
+  background: var(--blue);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
-.card__buy:hover {
+.card__button:hover {
   box-sizing: border-box;
   border: 1px solid var(--blue);
-  background: var(--backgroundColor);
-}
-
-.card__buy:hover > .card__button {
+  background-color: var(--backgroundColor);
   color: var(--blue);
 }
