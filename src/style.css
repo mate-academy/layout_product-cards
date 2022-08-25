@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body,
+div,
+p {
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background: #ffff;
+  width: 198px;
+  font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+
+  --color-first: #060b35;
+  --color-second: #616070;
+}
+
+.card__img {
+  display: flex;
+  width: 160px;
+  height: 134px;
+  padding: 32px 19px 40px;
+}
+
+.card__name-item {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 0 16px 4px;
+  color: var(--color-first);
+}
+
+.card__name-article {
+  font-family: inherit;
+  color: var(--color-second);
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 16px 16px;
+}
+
+.card__card-rate {
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.stars-star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  padding-left: 4px;
+}
+  
+.card__stars :not(:last-child) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__rate-reviews {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--color-first);
+}
+
+.card__price {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 16px 16px;
+  justify-content: space-between;
+  font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+}
+
+.card__price :first-of-type {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-second);
+}
+
+.card__price :last-child {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--color-first);
+}
+
+.card__button {
+  padding: 0 16px 16px;
+}
+
+.card__button-buy {
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card:hover .card__button-buy {
+  background-color: #ffff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
