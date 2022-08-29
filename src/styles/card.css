@@ -1,5 +1,10 @@
-* {
-  box-sizing: border-box;
+:root {
+  --main-accent: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+  --white: #fff;
+  --border-card-color: #f3f3f3;
+
 }
 
 html {
@@ -7,7 +12,6 @@ html {
   font-weight: 400;
 }
 
-body,
 .card__tittle,
 .card__code,
 .card__reviews {
@@ -15,9 +19,10 @@ body,
 }
 
 .card {
+  box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--border-card-color);
   border-radius: 5px;
 }
 
@@ -33,7 +38,7 @@ body,
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--main-accent);
 }
 
 .card__code {
@@ -41,7 +46,7 @@ body,
   display: block;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--secondary);
 
 }
 
@@ -53,7 +58,7 @@ body,
 }
 
 .card__reviews {
-  color: #060b35;
+  color: var(--main-accent);
   font-size: 10px;
   line-height: 14px;
 }
@@ -66,7 +71,7 @@ body,
 }
 
 .card__price-label {
-  color: #616070;
+  color: var(--secondary);
   font-size: 12px;
   line-height: 18px;
 }
@@ -75,7 +80,7 @@ body,
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  color: #060b35;
+  color: var(--main-accent);
 }
 
 .card__buy-button {
@@ -84,7 +89,7 @@ body,
   justify-content: center;
   align-items: center;
   height: 40px;
-  background-color: #00acdc;
+  background-color: var(--blue-accent);
   border-radius: 5px;
   border: 1px solid transparent;
 
@@ -93,50 +98,13 @@ body,
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
+  color: var(--white);
 
   transition: color 0.3s, background-color 0.3s;
 }
 
 .card__buy-button:hover {
-  background-color: #fff;
-  border-color: #00acdc;
-  color: #00acdc;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  margin-right: 4px;
-  width: 16px;
-  height: 16px;
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--1 .stars__star:nth-child(-n+1) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--2 .stars__star:nth-child(-n+2) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--3 .stars__star:nth-child(-n+3) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--4 .stars__star:nth-child(-n+4) {
-  background-image: url("images/star-active.svg");
-}
-
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url("images/star-active.svg");
+  background-color: var(--white);
+  border-color: var(--blue-accent);
+  color: var(--blue-accent);
 }
