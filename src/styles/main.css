@@ -1,35 +1,38 @@
 
+/* Connect all blocks*/
+@import  "./stars.css";
+
+html {
+  font-family: Roboto, serif;
+} 
+
+/*Connect Font*/
 @font-face {
   font-family: Roboto;
-  src: url("./font/Roboto-Medium.ttf") format("truetype");
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: medium;
 }
 
 @font-face {
-  font-family: Roboto-Normal;
-  src: url("./font/Roboto-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: Roboto-Bold;
-  src: url("./font/Roboto-Bold.ttf") format("truetype");
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: bold;
 }
 
+@font-face {
+  font-family: Roboto-Normal;
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Roboto, serif;
-}
-
+/*Block card*/
 .card {
   width: 200px;
   height: 408px;
@@ -64,28 +67,6 @@ body {
   margin: 0 0 16px 16px;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  display: flex;
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: 50%;
-  margin-right: 4px;
-}
-
-div.stars--1 div:nth-child(-n+1) ,
-div.stars--2 div:nth-child(-n+2) ,
-div.stars--3 div:nth-child(-n+3) ,
-div.stars--4 div:nth-child(-n+4) ,
-div.stars--5 div:nth-child(-n+5) {
-  background-image: url("images/star-active.svg");
-}
-
 .grade {
   display: flex;
   justify-content: space-between;
@@ -109,7 +90,7 @@ div.stars--5 div:nth-child(-n+5) {
 }
 
 .price__text {
-  font-family: Roboto-Normal, sans-serif;
+  font-weight: 400;
   font-size: 12px;
   color: #616070;
   margin: 0 0 3px 16px;
@@ -120,7 +101,7 @@ div.stars--5 div:nth-child(-n+5) {
 }
 
 .price__cost {
-  font-family: Roboto-Bold, serif;
+  font-weight: 700;
   margin-right: 16px;
   color: #060b35;
   text-transform: uppercase;
@@ -132,7 +113,7 @@ div.stars--5 div:nth-child(-n+5) {
   background: #00acdc;
   border-radius: 5px;
   border: #00acdc;
-  font-family: Roboto-Bold, sans-serif;
+  font-weight: 700;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
