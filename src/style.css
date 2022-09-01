@@ -1,20 +1,6 @@
-p {
-  margin: 0;
-}
+@import url(reset.css);
 
-h1 {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-body {
-  margin: 0 auto;
-}
-
-.block {
+.card {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -25,14 +11,14 @@ body {
   width: 200px;
 }
 
-.block__img {
+.card__img {
   height: 134px;
   padding-top: 32px;
   padding-right: 19px;
   padding-left: 19px;
 }
 
-.block__title {
+.card__title {
   display: flex;
   justify-content: start;
   font-weight: 500;
@@ -44,7 +30,7 @@ body {
   color: #060b35;
 }
 
-.block__subtitle {
+.card__subtitle {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -54,12 +40,16 @@ body {
   padding-right: 16px;
 }
 
-.stars {
+.card__content {
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.stars {
+  display: flex;
 }
 
 .stars__star {
@@ -70,24 +60,24 @@ body {
   background-position: center;
   margin-right: 4px;
   border-radius: 0.5px;
-
 }
 
-.stars__star--active :nth-child(-n + 4) {
+.stars--4 :nth-child(-n + 4) {
   background-image: url(../src/images/star-active.svg) ;
 }
 
-.stars__text {
+.card__text {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   font-weight: 400;
   font-size: 10px;
+  line-height: 14px;
   padding-left: 17px;
   color: #060b35;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   padding-left: 16px;
@@ -116,7 +106,6 @@ body {
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
-
 }
 
 .button__text {
