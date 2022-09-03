@@ -6,8 +6,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-body {
+body,
+p {
   margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -21,6 +23,7 @@ body {
 }
 
 .card__logo {
+  display: flex;
   background-repeat: no-repeat;
   margin: 32px 19px 0;
   width: 160px;
@@ -32,13 +35,11 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  width: 166px;
-  height: 36px;
   margin: 40px 16px 4px;
   color: #060b35;
 }
 
-.card__secondtext {
+.card__second-text {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -50,19 +51,17 @@ body {
   color: #616070;
 }
 
-.card__stars,
-.card__reviews-text {
+.card__stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 53px;
-  height: 16px;
   margin: 0 16px;
+  padding: 0;
 }
 
 .stars {
   display: flex;
-  
+ 
 }
 
 .stars__star {
@@ -80,7 +79,6 @@ body {
 
 .card__reviews {
   font-family: inherit;
-  flex: none;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -90,24 +88,22 @@ body {
 .card__price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0;
 }
 
-.price {
+.card__price-price {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  padding-left: 16px;
   padding-top: 24px;
+  padding-left: 16px;
 }
 
-.value {
+.card__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  padding-right: 16px;
   padding-top: 24px;
+  padding-right: 16px;
 }
 
 .card__button {
@@ -135,7 +131,4 @@ body {
 .card__button-buy:hover {
   background: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
 }
-    
