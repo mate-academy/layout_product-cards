@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 406px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.card__image {
+  display: flex;
+  padding-top: 32px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  padding-top: 40px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.card__product-code {
+  width: 100%;
+  align-items: flex-start;
+  padding-top: 4px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.card__review-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__count {
+  color: #060b35;
+  font-size: 10px;
+  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+}
+
+.card__price {
+  width: 100%;
+  padding-top: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.card__dollars {
+  font-weight: 700;
+  color: #060b35;
+  font-size: 16px;
+}
+
+.card__button {
+  margin: auto;
+  margin-top: 16px;
+  border-radius: 5px;
+  background-color: #00acdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
