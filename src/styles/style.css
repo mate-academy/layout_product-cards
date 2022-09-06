@@ -1,19 +1,13 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Roboto, sans-serif;
-}
-
-body {
-  margin: 0;
-}
+@import url("./reset.css");
+@import url("./normalize.css");
+@import url("./variables.css");
+@import url("./stars.css");
 
 .card {
   display: flex;
   flex-direction: column;
 
+  padding: 32px 16px 16px;
   width: 200px;
 
   border: 1px solid #f3f3f3;
@@ -21,20 +15,18 @@ body {
 }
 
 .card__img {
-  margin: 32px 19px 40px;
+  align-self: center;
+
+  margin-bottom: 40px;
 
   width: 160px;
   height: 134px;
 }
 
-.card__description {
-  margin: 0 16px;
-}
-
 .card__name {
   margin-bottom: 4px;
 
-  color: #060b35;
+  color: var(--black-accent);
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -43,7 +35,7 @@ body {
 .card__code {
   margin-bottom: 16px;
 
-  color: #616070;
+  color: var(--grey-accent);
   font-weight: 400;
   font-size: 10px;
 }
@@ -56,35 +48,8 @@ body {
   margin-bottom: 24px;
 }
 
-.card__stars {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
-
-.card__star {
-  width: 16px;
-  height: 16px;
-
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.card__star:not(:nth-child(5n)) {
-  margin-left: 4px;
-}
-
-.card__stars--1 :nth-child(n+5),
-.card__stars--2 :nth-child(n+4),
-.card__stars--3 :nth-child(n+3),
-.card__stars--4 :nth-child(n+2),
-.card__stars--5 :nth-child(n) {
-  background-image: url(images/star-active.svg);
-}
-
 .card__reviews {
-  color: #060b35;
+  color: var(--black-accent);
   font-weight: 400;
   font-size: 10px;
 }
@@ -98,13 +63,13 @@ body {
 }
 
 .card__price-name {
-  color: #616070;
+  color: var(--grey-accent);
   font-weight: 400;
   font-size: 12px;
 }
 
 .card__price-amount {
-  color: #060b35;
+  color: var(--black-accent);
   font-weight: 700;
   font-size: 16px;
 }
@@ -114,7 +79,6 @@ body {
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 16px;
   height: 40px;
 
   font-weight: 700;
@@ -122,8 +86,8 @@ body {
   color: #fff;
   text-decoration: none;
 
-  background-color: #00acdc;
-  border: 1px solid #00acdc;
+  background-color: var(--blue-accent);
+  border: 1px solid var(--blue-accent);
   border-radius: 5px;
 }
 
