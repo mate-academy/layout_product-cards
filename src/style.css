@@ -1,12 +1,18 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
+body {
+  margin: 0;
+}
 
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  --main: #060b35;
+  --bottom: #00acdc;
+  --code: #616070;
+  --text: white;
 }
 
 .card {
@@ -27,18 +33,18 @@ html {
 }
 
 .card__title {
+  margin: 0 0 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  margin-bottom: 4px;
-  color: #060b35;
+  color: var(--main);
 }
 
 .card__code {
   font-size: 10px;
   line-height: 14px;
   margin-bottom: 16px;
-  color: #616070;
+  color: var(--code);
 }
 
 .card__rating {
@@ -80,15 +86,19 @@ html {
   line-height: 14px;
   order: 1;
   flex-grow: 0;
-  color: #060b35;
+  color: var(--main);
+
+}
+
+p {
+  margin: 0;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
+  color: var(--code);
   margin-bottom: 16px;
-  color: #616070;
-
 }
 
 .card__price-text {
@@ -100,11 +110,12 @@ html {
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
+  color: var(--main);
 }
 
 .card__button {
   display: flex;
-  background-color: #00acdc;
+  background-color: var(--bottom);
   height: 40px;
   width: 166px;
   text-transform: uppercase;
@@ -113,14 +124,15 @@ html {
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--text);
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
 }
 
 .card__button:hover {
   color: #00acdc;
-  background-color: white;
-  border: 1px solid #00acdc;
+  background-color: var(--text);
+  border: 1px solid var(--bottom);
 }
