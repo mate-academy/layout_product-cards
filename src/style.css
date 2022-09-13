@@ -47,36 +47,40 @@ body {
   margin-bottom: 16px;
 }
 
-.card__stars {
+.stars {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.card__list {
+.stars__list {
   display: flex;
   list-style: none;
   order: 0;
 }
 
-.card__star {
+.stars_star {
   content: "";
-  background-image: url(./images/star-active.svg);
+  background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   height: 16px;
   width: 16px;
 }
 
-.card__star:last-child {
-  background-image: url(./images/star.svg);
-}
-
-.card__star:not(:last-child) {
+.stars_star:not(:last-child) {
   margin-right: 4px;
 }
 
-.card_reviews {
+.stars_1 .stars_star:nth-child(1),
+.stars_2 .stars_star:nth-child(-n+2),
+.stars_3 .stars_star:nth-child(-n+3),
+.stars_4 .stars_star:nth-child(-n+4),
+.stars_5 .stars_star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars__reviews {
   display: flex;
   align-items: flex-end;
   font-size: 10px;
@@ -93,7 +97,7 @@ body {
   color: #616070;
 }
 
-.card__bold-price {
+.card__price-bold {
   flex-grow: 1;
   font-weight: 700;
   font-size: 16px;
