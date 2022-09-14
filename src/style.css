@@ -1,6 +1,8 @@
 .card {
   display: flex;
   justify-content: center;
+  width: 200px;
+  padding: 100px;
 }
 
 .card__image {
@@ -18,15 +20,13 @@
   border: 1px solid #f3f3f3;
   justify-content: center;
   font-weight: 500;
-  width: 200px;
   box-sizing: border-box;
 }
 
 .card__product-info {
   font-size: 12px;
-  height: 30px;
-  width: 166px;
   margin-top: 40px;
+  padding-right:16px;
   display: flex;
   flex-direction: column;
   color: #060b35;
@@ -53,7 +53,10 @@
   margin-right: 4px;
 }
 
-.stars .stars_star:nth-child(-n+4) {
+.stars--1 .stars_star:nth-child(1), 
+.stars--2 .stars_star:nth-child(-n+2),
+.stars--3 .stars_star:nth-child(-n+3),
+.stars--4 .stars_star:nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
 
