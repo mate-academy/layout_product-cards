@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product cards</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link 
       rel="preconnect"
@@ -18,21 +18,21 @@
     >
   </head>
   <body>
-
     <div class="card" data-qa="card">
-      <div class="card__image-container">
-        <img 
-          class="image"
-          src="images/imac.jpeg"
-          alt="Imac image"
-        >
-      </div>
+      <img 
+        class="card__image"
+        src="images/imac.jpeg"
+        alt="Imac image"
+      >
+
       <div class="card__title">
         APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
       </div>
+
       <div class="card__product-code">
         Product code: 195434
       </div>
+       
       <div class="card__rating">
         <span class="stars stars--4">
           <span class="stars__star"></span>
@@ -41,26 +41,29 @@
           <span class="stars__star"></span>
           <span class="stars__star"></span>
         </span>
-        <span class="review">
+
+        <span class="card__review">
           Reviews: 5
         </span>
       </div>
+
       <div class="card__price">
-        <div class="price-title">
+        <div class="card__price-title">
           Price:
         </div>
-        <div class="price-value">
+
+        <div class="card__price-value">
           $2,199
         </div>
       </div>
-      <form class="card__form-button" action="http://google.com">
-        <input 
-          class="buy-button"
-          type="submit"
-          value="buy"
-          data-qa="hover"
-        >
-      </form>
+
+      <a class="card__button"
+        data-qa="hover"
+        href="http://google.com"
+      >
+      buy
+      </a>
+
     </div>
 
   </body>
