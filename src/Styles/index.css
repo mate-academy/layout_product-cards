@@ -1,3 +1,6 @@
+@import "./star.css";
+@import "./button.css";
+
 * {
   box-sizing: border-box;
 }
@@ -49,34 +52,6 @@ body {
   color: #616070;
 }
 
-/* #region Stars */
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-image: url("./images/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:first-child,
-.stars--2 .stars__star:nth-child(n+1):nth-child(-n+2),
-.stars--3 .stars__star:nth-child(n+1):nth-child(-n+3),
-.stars--4 .stars__star:nth-child(n+1):nth-child(-n+4),
-.stars--5 .stars__star:nth-child(n+1):nth-child(-n+5) {
-  background-image: url("./images/star-active.svg");
-  background-repeat: no-repeat;
-}
-
-/* #endregion */
-
 .card__review {
   display: flex;
   justify-content: space-between;
@@ -114,39 +89,4 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #060b35;
-}
-
-.button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: unset;
-}
-
-.button__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 11px 0;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-
-  border: 1px solid #00acdc;
-
-  background: #00acdc;
-  border-radius: 5px;
-
-  transition: 0.3s ease-in-out;
-}
-
-.button__link:hover {
-  background: #fff;
-  color: #00acdc;
 }
