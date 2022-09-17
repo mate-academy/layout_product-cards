@@ -1,5 +1,10 @@
+@import "./star.css";
+
 * {
   box-sizing: border-box;
+}
+
+html {
   font-family: "Roboto", sans-serif;
 }
 
@@ -7,8 +12,7 @@ body,
 img,
 h2,
 p,
-a,
-div {
+a {
   margin: 0;
 }
 
@@ -21,7 +25,7 @@ div {
   border-radius: 5px;
 }
 
-.card__imac {
+.card__image {
   width: 160px;
   height: 134px;
   margin: 16px calc(50% - 160px / 2) 40px;
@@ -50,33 +54,7 @@ div {
   justify-content: space-between;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-repeat: no-repeat;
-  background-image: url(images/star-active.svg);
-  margin-right: 4px;
-  border-radius: 0.5px;
-  background-position: center;
-}
-
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--0 .stars__star,
-.stars--1 .stars__star:nth-of-type(n+2),
-.stars--2 .stars__star:nth-of-type(n+3),
-.stars--3 .stars__star:nth-of-type(n+4),
-.stars--4 .stars__star:nth-of-type(n+5) {
-  background-image: url(images/star.svg);
-}
-
-.card__reviewers {
+.card__reviews {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
