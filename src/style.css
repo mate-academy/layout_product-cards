@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+
+  --main-accent: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 0 16px 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.card__title {
+  margin-bottom: 4px;
+}
+
+.card__title-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-accent);
+}
+
+.card__image {
+  height: 134px;
+  width: 160px;
+}
+
+.card__product-code {
+  margin-bottom: 16px;
+}
+
+.card__product-code-value {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary);
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars > .stars__star:not(:last-child) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__reviews-text {
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--main-accent);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary);
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-accent);
+}
+
+.card__link {
+  height: 40px;
+  display: flex;
+  padding: 12px 70px;
+  background: var(--blue-accent);
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+.card__link:hover {
+  color: var(--blue-accent);
+  background-color: #fff;
+  border: 1px solid var(--blue-accent);
+}
