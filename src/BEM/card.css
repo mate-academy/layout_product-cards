@@ -1,18 +1,20 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  padding: 16px;
-  box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  width: 200px;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  width: 166px;
+  margin: 16px;
 }
 
 .card__image {
-  padding-top: 16px;
   height: 134px;
   width: 160px;
-  margin: 0 auto;
+  margin: 16px auto 0;
 }
 
 .card__name-product {
@@ -20,17 +22,15 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--card-text-color-dark);
 }
 
 .card__product-code {
-
   padding-top: 4px;
-  font-weight: 400;
+  font-weight: var(--card-medium-font);
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
-
+  color: var(--card-text-color-light);
 }
 
 .card__stars {
@@ -48,17 +48,17 @@
 }
 
 .card__price-text {
-  font-weight: 400;
+  font-weight: var(--card-medium-font);
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--card-text-color-light);
 }
 
 .card__price-item {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--card-text-color-dark);
 }
 
 .card__button {
@@ -68,7 +68,7 @@
   margin-top: 16px;
   width: 166px;
   height: 40px;
-  background: #00acdc;
+  background: var( --card-button-color);
   border-radius: 5px;
   text-decoration: none;
   font-weight: 700;
@@ -79,8 +79,7 @@
 }
 
 .card__button:hover {
-  border: 1px solid #00acdc;
+  border: 1px solid var( --card-button-color);
   background-color: #fff;
-  color: #00acdc;
-  box-sizing: border-box;
+  color: var( --card-button-color);
 }
