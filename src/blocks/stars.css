@@ -1,0 +1,27 @@
+
+.product-card-star {
+  display: flex;
+}
+
+.product-card-star__item {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.product-card-star--stars_0 > .product-card-star__item {
+  background-image: url(../images/star.svg);
+}
+
+.product-card-star--stars_5 > .product-card-star__item,
+.product-card-star--stars_1 > .product-card-star__item:nth-last-child(n+5),
+.product-card-star--stars_2 > .product-card-star__item:nth-last-child(n+4),
+.product-card-star--stars_3 > .product-card-star__item:nth-last-child(n+3),
+.product-card-star--stars_4 > .product-card-star__item:nth-last-child(n+2) {
+  background-image: url(../images/star-active.svg);
+}
