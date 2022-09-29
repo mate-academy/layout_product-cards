@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.product {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product_image {
+  height: 134px;
+  width: 160px;
+  margin: 32px 19px 0;
+}
+
+.product_name {
+  margin: 40px 16px 0;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.product_code {
+  margin: 4px 16px 0;
+
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.product_review {
+  margin: 16px 16px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_review-counter {
+  display: flex;
+  align-items: flex-end;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.stars_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.product_price {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 24px 16px 0;
+}
+
+.price-word {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price-number {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product__button {
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.product__button-link {
+  box-sizing: border-box;
+
+  width: 166px;
+  padding-top: 11px;
+  padding-bottom: 13px;
+
+  justify-content: center;
+
+  background: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.product__button-link:hover {
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #00acdc;
+}
