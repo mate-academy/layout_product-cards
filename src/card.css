@@ -1,0 +1,109 @@
+/* reset margins */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container__card {
+  --padding-of-card: 16px;
+  --border-width: 1px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: calc(200px - var(--padding-of-card) * 2 - var(--border-width) * 2);
+  padding-left: var(--padding-of-card);
+  padding-right: var(--padding-of-card);
+}
+
+.card {
+  background-color: #fff;
+  border: var(--border-width) solid #f3f3f3;
+  border-radius: 5px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #060b35;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  padding: 32px calc(19px - var(--padding-of-card));
+  margin-bottom: 8px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  font-size: 10px;
+  color: #616070;
+  line-height: 14px;
+
+  margin-bottom: 16px;
+}
+
+.card__product-grade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 23px;
+}
+
+.card__reviews {
+  font-size: 10px;
+}
+
+.card__product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  color: #616070;
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card__buy-link {
+  display: inline-block;
+
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  cursor: pointer;
+
+  width: 164px;
+  height: 38px;
+
+  margin-bottom: 16px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.card__buy-link:hover {
+  background-color: #fff;
+  border-color: #00acdc;
+  color: #00acdc;
+}
