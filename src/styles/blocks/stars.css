@@ -4,16 +4,9 @@
   align-items: center;
 }
 
-.stars__list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-}
-
 .stars__star {
   text-align: left;
-  background-image: url(/images/star-active.svg);
+  background-image: url(/images/star.svg);
   background-repeat: no-repeat;
   background-position: center center;
   height: 16px;
@@ -22,12 +15,13 @@
 }
 
 .stars__star:last-child {
-  background-image: url(/images/star.svg);
   margin-right: 0;
 }
 
-.stars__reviews {
-  font-weight: 400;
-  font-size: 10px;
-  color: #060b35;
+.stars__star--1 :nth-child(-n + 1),
+.stars__star--2 :nth-child(-n + 2),
+.stars__star--3 :nth-child(-n + 3),
+.stars__star--4 :nth-child(-n + 4),
+.stars__star--5 :nth-child(-n + 5) {
+  background-image: url(/images/star-active.svg);
 }
