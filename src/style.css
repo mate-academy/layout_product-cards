@@ -6,12 +6,16 @@ body {
   margin: 0;
 }
 
+.product {
+  display: flex;
+}
+
 .product__card {
   width: 198px;
   height: 406px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .product__image {
@@ -50,11 +54,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
 }
 
 .stars {
   display: flex;
+  flex-direction: row;
 }
 
 .stars__star {
@@ -80,13 +84,15 @@ body {
 .product__price {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  align-items: center;
+  margin: 24px 0 16px;
 }
 
 .product__price_price {
   font-size: 12px;
   line-height: 18px;
   color: #616070;
+  margin: 0;
 }
 
 .product__price_value {
@@ -94,15 +100,13 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #060b35;
+  margin: 0;
 }
 
 .product__button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.button {
   width: 166px;
   height: 38px;
   background: #00acdc;
@@ -115,7 +119,7 @@ body {
   text-transform: uppercase;
 }
 
-.button:hover {
+.product__button:hover {
   background-color: #fff;
   color: #00acdc;
   border: 1px solid #00acdc;
