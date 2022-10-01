@@ -1,0 +1,127 @@
+:root {
+  --main-color: #060B35;
+  --secondary-color: #616070;
+  --background-color: #fff;
+  --accent-color: #00acdc;
+
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card {
+  height: 406px;
+  width: 198px;
+  background-color: var(--background-color);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.img {
+  display: block;
+  height: 134px;
+  width: 160px;
+  margin: 32px auto 0;
+}
+
+.card__description {
+  margin-top: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.product__code {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  line-height: 14px;
+
+  margin-top: 4px;
+}
+
+.description__reviews {
+  margin-top: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
+
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--4 :nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.reviews__number {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1px;
+}
+
+.description__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 24px;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.price__text {
+  font-size: 12px;
+}
+
+.price__number {
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.description__button {
+  margin: 16px auto 0;
+  height: 40px;
+  width: 166px;
+
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  border: none;
+
+  color: var(--background-color);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.description__button:hover {
+  background-color: var(--background-color);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
