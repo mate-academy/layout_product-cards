@@ -1,16 +1,14 @@
 :root {
-  --main-color: #060B35;
+  --main-color: #060b35;
   --secondary-color: #616070;
   --background-color: #fff;
   --accent-color: #00acdc;
-
-
 }
 
 html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -38,7 +36,7 @@ html {
   margin-right: 16px;
 }
 
-.product__code {
+.card__code {
   font-size: 10px;
   font-weight: 400;
   color: var(--secondary-color);
@@ -47,7 +45,7 @@ html {
   margin-top: 4px;
 }
 
-.description__reviews {
+.card__reviews {
   margin-top: 16px;
 
   display: flex;
@@ -60,30 +58,35 @@ html {
 }
 
 .stars__star {
-  margin-right: 4px;
   height: 16px;
   width: 16px;
-
-  background-image: url(./images/star.svg);
+  background-image: url(../../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.stars__star:last-child {
-  margin-right: 0;
+.stars__star:not(:last-child) {
+  margin-right: 4px;
 }
 
-.stars--4 :nth-child(-n + 4) {
-  background-image: url(./images/star-active.svg);
+.stars--5 .stars__star,
+.stars--4 .stars__star:not(:last-child),
+.stars--3 .stars__star:nth-child(1),
+.stars--3 .stars__star:nth-child(2),
+.stars--3 .stars__star:nth-child(3),
+.stars--2 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(2),
+.stars--1 .stars__star:first-child {
+  background-image: url(../../images/star-active.svg);
 }
 
-.reviews__number {
+.card__number {
   font-size: 10px;
   font-weight: 400;
   line-height: 1px;
 }
 
-.description__price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,16 +98,16 @@ html {
   color: var(--secondary-color);
 }
 
-.price__text {
+.card__text {
   font-size: 12px;
 }
 
-.price__number {
+.card__price-number {
   font-weight: 700;
   color: var(--main-color);
 }
 
-.description__button {
+.card__button {
   margin: 16px auto 0;
   height: 40px;
   width: 166px;
@@ -120,7 +123,7 @@ html {
   text-transform: uppercase;
 }
 
-.description__button:hover {
+.card__button-submit:hover {
   background-color: var(--background-color);
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
