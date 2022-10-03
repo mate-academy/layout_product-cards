@@ -1,0 +1,23 @@
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  flex-wrap: wrap;
+  width: 16px;
+  height: 16px;
+  background: url(./images/star.svg) no-repeat center;
+  margin-right: 4px;
+}
+
+.stars__star:last-of-type {
+  margin-right: 0;
+}
+
+.stars--1 :nth-of-type(-n+1),
+.stars--2 :nth-of-type(-n+2),
+.stars--3 :nth-of-type(-n+3),
+.stars--4 :nth-of-type(-n+4),
+.stars--5 :nth-of-type(-n+5) {
+  background: url(./images/star-active.svg) no-repeat center;
+}
