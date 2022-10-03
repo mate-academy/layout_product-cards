@@ -5,7 +5,7 @@
   --accent-color: #00acdc;
 }
 
-html {
+.page {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -23,7 +23,7 @@ html {
   border-radius: 5px;
 }
 
-.img {
+.card__img {
   display: block;
   height: 134px;
   width: 160px;
@@ -69,14 +69,11 @@ html {
   margin-right: 4px;
 }
 
-.stars--5 .stars__star,
-.stars--4 .stars__star:not(:last-child),
-.stars--3 .stars__star:nth-child(1),
-.stars--3 .stars__star:nth-child(2),
-.stars--3 .stars__star:nth-child(3),
-.stars--2 .stars__star:nth-child(1),
-.stars--2 .stars__star:nth-child(2),
-.stars--1 .stars__star:first-child {
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
   background-image: url(./images/star-active.svg);
 }
 
