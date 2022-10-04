@@ -13,22 +13,18 @@ h2 {
 }
 
 .product__card {
-  width: 198px;
-  height: 406px;
+  box-sizing: border-box;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   margin: auto;
 }
 
 .product__image {
-  width: 100%;
-  margin: 32px auto 0;
-}
-
-.image {
   display: block;
   width: 160px;
   height: 134px;
+  margin: 32px auto 0;
 }
 
 .product__container {
@@ -58,7 +54,6 @@ h2 {
 
 .stars {
   display: flex;
-  flex-direction: row;
 }
 
 .stars__star {
@@ -70,7 +65,11 @@ h2 {
   margin-right: 4px;
 }
 
-.stars--4 :nth-child(-n + 4) {
+.stars--1 > :nth-child(-n + 1),
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -119,5 +118,5 @@ h2 {
 .product__button:hover {
   background-color: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
 }
