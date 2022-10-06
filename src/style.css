@@ -1,20 +1,27 @@
 @import url(./styles/reset.css);
 @import url(./styles/star.css);
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   --standart-color: #fff;
   --main-color: #00acdc;
+  --main-text-color: #060b35;
+  --subtitle-text-color: #616070;
+}
+
+.body__card {
+  width: 200px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
 
-  width: 200px;
   background-color: var(--standart-color);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -34,11 +41,11 @@ html {
   font-weight: 500;
   line-height: 18px;
   margin-bottom: 4px;
-  color: #060b35;
+  color: var(--main-text-color);
 }
 
 .card__product-code {
-  color: #616070;
+  color: var(--subtitle-text-color);
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -50,11 +57,10 @@ html {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
-
 }
 
 .card__stars-reviews {
-  color: #060b35;
+  color: var(--main-text-color);
   font-size: 10px;
   font-weight: 400;
 }
@@ -67,7 +73,7 @@ html {
 }
 
 .card__price-text {
-  color: #616070;
+  color: var(--subtitle-text-color);
   font-size: 12px;
   font-weight: 400;
 }
@@ -75,7 +81,7 @@ html {
 .card__price-price {
   font-weight: 700;
   font-size: 16px;
-  color: #060b35;
+  color: var(--main-text-color);
 }
 
 .card__buy {
