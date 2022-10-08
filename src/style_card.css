@@ -1,29 +1,31 @@
 .card_block {
-  display: flex;
-  flex-direction: column;
+  width: 200px;
+  height: 406px;
   border: 1px solid #f3f3f3;
+  box-sizing: border-box;
   border-radius: 5px;
-  padding: 32px 16px 16px;
+  padding: 16px;
+  padding-top: 32px;
 }
 
 .card_block__first_element {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 4px;
 }
 
 .card_block__img {
-  height: 134px;
   width: 160px;
+  height: 134px;
   padding-bottom: 40px;
 }
 
 .card_block__text {
-  width: 166px;
   font-size: 12px;
   line-height: 18px;
+  font-weight: 500;
   color: #060b35;
+  padding-bottom: 4px;
 }
 
 .card_block__second_element {
@@ -35,20 +37,19 @@
   font-size: 10px;
   line-height: 14px;
   color: #616070;
-  padding-bottom: 18px;
-  padding-left: 1px;
+  padding-bottom: 16px;
 }
 
 .card_block__status {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
 }
 
 .card_block__evaluation {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  align-items: center;
+  padding-bottom: 24px;
 }
 
 .card_block__star {
@@ -61,16 +62,16 @@
 
   height: var(--size_star);
   width: var(--size_star);
-  background: url(./images/star.svg) no-repeat;
+  background: url(./images/star.svg) no-repeat left;
   padding-right: 4px;
 }
 
 .card_block__star_item--active:nth-child(-n + 4) {
-  background: url(./images/star-active.svg) no-repeat;
+  background: url(./images/star-active.svg) no-repeat left;
 }
 
 .card_block__star_item--active:nth-child(n):hover {
-  background: url(./images/star-active.svg) no-repeat;
+  background: url(./images/star-active.svg) no-repeat left;
 }
 
 .card_block__reviews {
@@ -81,7 +82,7 @@
 .card_block__price {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  padding-bottom: 16px;
 }
 
 .card_block__price_text {
@@ -91,15 +92,17 @@
 }
 
 .card_block__cost {
+  display: flex;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
 }
 
 .card_block__button {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  height: 38px;
-  width: 166px;
+  height: 40px;
   background-color: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
@@ -116,5 +119,4 @@
   font-size: 14px;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1px;
 }
