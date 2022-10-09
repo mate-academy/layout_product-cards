@@ -1,4 +1,3 @@
-/* #region card */
 html {
   font-family: "Roboto", sans-serif;
   --color-black: #060b35;
@@ -77,6 +76,25 @@ p {
   color: var(--color-black);
 }
 
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url("images/star.svg") center no-repeat;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url("images/star-active.svg");
+}
+
 .card__price-block {
   display: flex;
   justify-content: space-between;
@@ -127,27 +145,3 @@ p {
   color: var(--color-blue);
   background-color: var(--color-white);
 }
-
-/* #endregion */
-
-/* #region stars */
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  background: url("images/star.svg") center no-repeat;
-  margin-right: 4px;
-  width: 16px;
-  height: 16px;
-}
-
-.stars--1 :first-child,
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(-n + 5) {
-  background-image: url("images/star-active.svg");
-}
-
-/* #endregion */
