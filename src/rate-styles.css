@@ -1,0 +1,25 @@
+/* #region rate styles */
+
+.rate {
+  display: flex;
+  flex-basis: 16px;
+  flex-grow: 1;
+}
+
+.rate__one-star {
+  width: 16px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.rate--stars-1 .rate__one-star:nth-of-type(1),
+.rate--stars-2 .rate__one-star:nth-of-type(-n+2),
+.rate--stars-3 .rate__one-star:nth-of-type(-n+3),
+.rate--stars-4 .rate__one-star:nth-of-type(-n+4),
+.rate--stars-5 .rate__one-star:nth-of-type(n) {
+  background-image: url(images/star-active.svg);
+}
+
+/* #endregion */
