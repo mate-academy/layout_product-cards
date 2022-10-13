@@ -1,0 +1,127 @@
+body,
+h1,
+div,
+img,
+a {
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+
+  --small-text-color: #616070;
+  --big-text-color: #060b35;
+  --main-color: #00acdc;
+  --side-indent: 16px;
+}
+
+.card {
+  height: 406px;
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  height: 134px;
+  width: 160px;
+  margin: 32px 19px 40px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--big-text-color);
+  margin: 0 var(--side-indent) 4px;
+}
+
+.card__product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--small-text-color);
+  margin: 0 0 16px var(--side-indent);
+}
+
+.card__ratings {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--side-indent) 24px;
+}
+
+.card__reviews {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--big-text-color);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--side-indent) 16px;
+}
+
+.card__price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--small-text-color);
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--big-text-color);
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.stars .stars__star:hover,
+.stars .stars__star:hover ~ .stars__star,
+.stars input[type="radio"]:checked ~ .stars__star {
+  background-image: url(images/star-active.svg);
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 166px;
+  margin: 0 16px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  border-style: none;
+  text-decoration: none;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
