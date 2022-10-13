@@ -1,27 +1,23 @@
-html {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-}
-
-body {
-  background: #e5e5e5;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
+.card {
   width: 198px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.card {
-  background: url(images/imac.jpeg);
+.image {
+  background: url(../../images/imac.jpeg);
   background-size: 160px 134px;
   width: 160px;
   height: 134px;
+}
+
+.card__image {
   margin: 32px auto 40px;
+}
+
+.card__about {
+  margin: 0 16px;
 }
 
 .title {
@@ -30,43 +26,33 @@ body {
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  margin: 0 16px 4px;
+}
+
+.card__title {
+  margin-bottom: 4px;
 }
 
 .product {
   color: #616070;
   font-size: 10px;
   line-height: 14px;
-  margin: 0 16px 16px;
+}
+
+.card__product {
+  margin-bottom: 16px;
 }
 
 .rating {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 16px 24px;
 }
 
-.stars {
-  display: flex;
-  flex-direction: row;
-  width: 96px;
+.card__rating {
+  margin-bottom: 24px;
 }
 
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(images/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.stars--4 .stars__star:nth-child(-n+4) {
-  background-image: url(images/star-active.svg);
-}
-
-.reviwers {
+.rating__reviwers {
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
@@ -75,16 +61,19 @@ body {
 .cost {
   display: flex;
   justify-content: space-between;
-  margin: 0 16px 16px;
 }
 
-.price {
+.card__cost {
+  margin-bottom: 16px;
+}
+
+.cost__price {
   font-size: 12px;
   line-height: 18px;
   color: #616070;
 }
 
-.priceValue {
+.cost__priceValue {
   font-weight: 700;
   line-height: 18px;
   color: #060b35;
@@ -93,10 +82,13 @@ body {
 .button {
   background: #00acdc;
   border-radius: 5px;
+}
+
+.card__button {
   margin: 0 16px 16px;
 }
 
-.hover {
+.button__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,10 +98,12 @@ body {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  border: 1px solid none;
 }
 
-.hover:hover {
-  height: 38px;
+.button__link:hover {
+  box-sizing: border-box;
+  height: 40px;
   color: #00acdc;
   background-color: #fff;
   border: 1px solid #00acdc;
