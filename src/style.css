@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+body {
+  background: #e5e5e5;
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  display: block;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 134px;
+  padding: 0 3px;
+  box-sizing: inherit;
+}
+
+.card__title {
+  box-sizing: inherit;
+  background-color: #fff;
+  margin: 0 0 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  display: block;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.card__evaluation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+
+  background-image: url(./images/star-active.svg);
+}
+
+.card__evaluation-feedbacks {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+  display: flex;
+  margin: 0;
+}
+
+.card__price {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.card__price-title {
+  color: #616070;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price-value {
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+  font-weight: 700;
+}
+
+.card__btn {
+  display: block;
+}
+
+.card__btn-link {
+  background: #00acdc;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px solid transparent;
+  outline: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__btn-link:hover {
+  background: #fff;
+  color: #00acdc;
+  cursor: pointer;
+  border-color: #00acdc;
+  box-sizing: border-box;
+}
