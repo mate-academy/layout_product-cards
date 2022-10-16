@@ -1,12 +1,14 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
-html {
+h2,
+p,
+body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -60,33 +62,7 @@ html {
   margin-bottom: 24px;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars--0 .stars__star,
-.stars--1 .stars__star,
-.stars--2 .stars__star,
-.stars--3 .stars__star,
-.stars--4 .stars__star,
-.stars--5 .stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(./images/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url(./images/star-active.svg);
-}
-
-.reviews {
+.card__reviews {
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
@@ -133,4 +109,30 @@ html {
   color: #00acdc;
   background: #fff;
   border: 1px solid #00acdc;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars--0 .stars__star,
+.stars--1 .stars__star,
+.stars--2 .stars__star,
+.stars--3 .stars__star,
+.stars--4 .stars__star,
+.stars--5 .stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
 }
