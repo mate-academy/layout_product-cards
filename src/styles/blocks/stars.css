@@ -1,0 +1,24 @@
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.stars .stars__star:hover,
+.stars .stars__star:hover ~ .stars__star,
+.stars input[type="radio"]:checked ~ .stars__star {
+  background-image: url(/images/star-active.svg);
+}
