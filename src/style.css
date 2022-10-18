@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  margin: auto;
+  background-position: center;
+  background-size: contain;
+  align-items: center;
+  height: 134px;
+  width: 160px;
+  margin-bottom: 40px;
+  margin-top: 32px;
+}
+
+.card__title {
+  padding: 0 16px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Roboto", sans-serif;
+
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.stars .stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+/* .stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(images/star-active.svg);
+} */
+
+.stars--5 .stars__star,
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__code {
+  margin-bottom: 16px;
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.card__stars-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.card__button {
+  padding: 12px;
+  text-decoration: none;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  background-color: #00acdc ;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 0 16px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.card__button:hover {
+  padding: 12px;
+  text-decoration: none;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  background-color: #fff ;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00acdc;
+  text-align: center;
+  margin: 0 16px;
+  text-transform: uppercase;
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.card__price {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__amount {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
