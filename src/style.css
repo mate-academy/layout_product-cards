@@ -1,0 +1,127 @@
+/* #region reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* #endregion */
+
+/* #region star */
+.stars__row {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url("images/star.svg") no-repeat center;
+  margin-right: 4px;
+}
+
+.stars__row--1 .stars__star:nth-child(1),
+.stars__row--2 .stars__star:nth-child(-n + 2),
+.stars__row--3 .stars__star:nth-child(-n + 3),
+.stars__row--4 .stars__star:nth-child(-n + 4),
+.stars__row--5 .stars__star:nth-child(-n + 5) {
+  background: url("images/star-active.svg") no-repeat center;
+}
+/* #endregion */
+
+/* #region product-info */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.product-info__img {
+  margin: 0 auto 40px;
+  height: 134px;
+  width: 160px;
+}
+
+.product-info__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  color: #060b35;
+}
+
+.product-info__code {
+  margin-bottom: 17px;
+  font-size: 10px;
+  color: #616070;
+}
+/* #endregion */
+
+/* #region reviews */
+.product-info__reviews-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.reviews {
+  font-size: 10px;
+  color: #060b35;
+}
+/* #endregion */
+
+/* #region price */
+.product-info__price-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-info__text {
+  font-size: 12px;
+  color: #616070;
+}
+
+.product-info__price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #060b35;
+}
+/* #endregion */
+
+/* #region button */
+.product-info__button {
+  text-transform: uppercase;
+  padding: 11px 70px 12px 69.5px;
+  background: #00acdc;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.product-info__button:hover {
+  background: #fff;
+  padding: 10px 70px 11px 68.5px;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
+/* #endregion */
