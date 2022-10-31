@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+}
+
+.page {
+  font-family: Roboto, sans-serif;
+  --tiny-font-size: 10px;
+  --small-font-size: 12px;
+  --medium-font-size: 14px;
+  --big-font-size: 16px;
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --bold-font-weight: 700;
+  --main-text-color: #060b35;
+  --minor-text-color: #616070;
+  --link-text-color: #00acdc;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  height: 134px;
+  width: 160px;
+  margin: 0 auto 40px;
+}
+
+.card__name-product {
+  margin: 0 auto 5px;
+  font-weight: var(--medium-font-weight);
+  font-size: var(--small-font-size);
+  line-height: 18px;
+  color: var(--main-text-color);
+}
+
+.card__product-code {
+  margin-bottom: 18px;
+  font-weight: var(--regular-font-weight);
+  font-size: var(--tiny-font-size);
+  color: var(--minor-text-color);
+}
+
+.card__rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.card__stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.card__stars-star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__stars--1 .card__stars-star:first-child,
+.card__stars--2 .card__stars-star:nth-child(-n+2),
+.card__stars--3 .card__stars-star:nth-child(-n+3),
+.card__stars--4 .card__stars-star:nth-child(-n+4),
+.card__stars--5 .card__stars-star:nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__reviews {
+  font-weight: var(--regular-font-weight);
+  font-size: var(--tiny-font-size);
+  color: var(--main-text-color);
+}
+
+.card__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-weight: var(--regular-font-weight);
+  font-size: var(--small-font-size);
+  color: var(--minor-text-color);
+}
+
+.card__price-cost {
+  font-weight: var(--bold-font-weight);
+  font-size: var(--big-font-size);
+  color: var(--main-text-color);
+}
+
+.card__link {
+  font-weight: var(--bold-font-weight);
+  padding: 12px 69px;
+  font-size: var(--medium-font-size);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--link-text-color);
+
+  border-radius: 5px;
+}
+
+.card__link:hover {
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid var(--link-text-color);
+  color: var(--link-text-color);
+}
