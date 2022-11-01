@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+span,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+  object-fit: contain;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  display: block;
+  color: #616070;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+.stars-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background: url("./images/star-active.svg") center no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--0 div:nth-child(n+1),
+.stars--1 div:nth-child(n+2),
+.stars--2 div:nth-child(n+3),
+.stars--3 div:nth-child(n+4),
+.stars--4 div:nth-child(n+5) {
+  background: url("./images/star.svg") center no-repeat;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #616070;
+
+  margin: 24px 0 16px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button {
+  display: block;
+  width: 100%;
+  padding: 11px 0;
+  background-color: #00acdc;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.card__button:hover {
+  background-color: transparent;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
