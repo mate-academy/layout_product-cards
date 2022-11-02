@@ -1,14 +1,20 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
+body,
+p {
+  margin: 0;
+}
+
 .card {
-  margin: 200px auto;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,14 +34,11 @@
 }
 
 .card-block__description {
-  margin-top: 40px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 40px 16px 0;
 }
 
 .card-block__description-text {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -43,8 +46,7 @@
 }
 
 .card-block__product {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -58,15 +60,37 @@
   height: 16px;
   margin-left: 16px;
   margin-right: 16px;
+
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
 }
 
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
 .card-block__rating-reviews {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -74,9 +98,9 @@
 }
 
 .card-block__price-item {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
   margin: 24px 16px 0;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,7 +113,7 @@
   line-height: 18px;
 }
 
-.card-block__price-price-text {
+.card-block__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -99,16 +123,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 12px 70px;
   border: 1px solid transparent;
   margin: 16px;
-  background: var(--button-color);
   border-radius: 5px;
+
+  background: var(--button-color);
+}
+
+.card-block__button-item:hover {
+  border: 1px solid var(--button-color);
+  background-color: transparent;
 }
 
 .card-block__button-link {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -117,32 +147,6 @@
   color: #fff;
 }
 
-.card-block__button-item:hover {
-  border: 1px solid var(--button-color);
-  background-color: transparent;
-}
-
 .card-block__button-item:hover .card-block__button-link {
   color: var(--button-color);
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(images/star-active.svg);
 }
