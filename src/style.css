@@ -1,39 +1,13 @@
 @import "./styles/stars.css";
 @import "./styles/reset.css";
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 10px;
-}
-
-.card {
-  display: flex;
-  width: 200px;
-  padding: 32px 16px 16px;
-  flex-direction: column;
-
-  color: #060b35;
-
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  background-color: #fff;
-}
+@import "./styles/card.css";
 
 .card__image {
   width: 160px;
   height: 134px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   align-self: center;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .card__product-name {
@@ -88,10 +62,13 @@ html {
 
   background: rgba(0, 172, 220, 1);
   border-radius: 5px;
+
+  transition: 0.3s;
+  border: 1px solid transparent;
 }
 
 .card__button--hover:hover {
   background-color: #fff;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
   color: #00acdc;
 }
