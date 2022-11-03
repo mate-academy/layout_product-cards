@@ -1,11 +1,22 @@
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+body {
   margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
   width: 200px;
   padding: 32px 16px 16px;
   background: #fff;
@@ -16,6 +27,7 @@
 }
 
 .card__image {
+  display: block;
   width: 160px;
   height: 134px;
   margin: 0 auto;
@@ -24,20 +36,20 @@
 
 .card__title {
   width: 166px;
+  margin-bottom: 4px;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  margin-bottom: 4px;
 }
 
 .card__suptitle {
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
-  margin-bottom: 16px;
 }
 
 .card__rating {
@@ -60,13 +72,14 @@
 }
 
 .stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 0.5px;
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
 }
 
 .stars--4 div:nth-child(n+5) {
@@ -82,10 +95,10 @@
 }
 
 .price__title {
-  color: #616070;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  color: #616070;
 }
 
 .price__number {
@@ -96,17 +109,22 @@
 }
 
 .card__link {
+  display: block;
   width: 100%;
   height: 40px;
-  background: #00acdc;
-  border-radius: 5px;
-  color: #fff;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+
+  border-radius: 5px;
+  color: #fff;
+  background: #00acdc;
+
+  transition: 0.3s all ease;
 }
 
 .card__link:hover {
