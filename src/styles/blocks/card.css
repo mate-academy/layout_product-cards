@@ -1,8 +1,8 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+* {
   box-sizing: border-box;
+}
+
+.card {
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
@@ -14,6 +14,8 @@
 }
 
 .card__image {
+  display: block;
+  margin: 0 auto;
   height: 134px;
   width: 160px;
   margin-bottom: 40px;
@@ -30,13 +32,11 @@
   font-size: 10px;
   line-height: 1.4;
   color: var(--secondary-text-color);
-  width: 100%;
   margin-bottom: 16px;
 }
 
 .card__rate {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
@@ -50,7 +50,6 @@
 
 .card__price {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   margin-bottom: 16px;
 }
@@ -61,7 +60,7 @@
   color: var(--secondary-text-color);
 }
 
-.card__price-price {
+.card__price-value {
   font-size: 16px;
   line-height: 1.12;
   font-weight: 700;
@@ -75,17 +74,18 @@
   width: 100%;
   height: 40px;
   background: var(--blue-accent);
+  border: 1px solid transparent;
   border-radius: 5px;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  transition: background-color 0.3s , color 0.3s;
 }
 
 .card__buy-button:hover {
-  border: 1px solid var(--blue-accent);
-  border-radius: 5px;
+  border-color: var(--blue-accent);
   background-color: #fff;
   color: var(--blue-accent);
 }
