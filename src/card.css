@@ -1,14 +1,14 @@
-.card {
+.product__card {
+  display: flex;
+  flex-grow: 0;
   width: var(--card-width);
+}
+
+.card {
   flex-direction: column;
   background: var(--card-background-color);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-}
-
-.product__card {
-  display: flex;
-  flex-grow: 0;
 }
 
 .card__imagine {
@@ -19,10 +19,10 @@
 }
 
 .card__name {
+  margin: 40px var( --block-position-sides-margin) 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  margin: 40px var( --block-position-sides-margin) 0;
   color: var(--main-text-color);
 }
 
@@ -43,11 +43,14 @@
 
 .card__reviews {
   display: flex;
-  font-weight: 400;
   flex: none;
+
+  font-weight: 400;
   font-size: 10px;
-  margin-left: 17px;
+
   line-height: 14px;
+  margin-left: 17px;
+
   color: var(--main-text-color);
 }
 
@@ -70,31 +73,23 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  flex: none;
   text-align: right;
+
+  flex: none;
+
   color: #060b35;
 }
 
 .card__link {
-  margin: 0;
-  text-decoration: none;
-  color: inherit;
-}
-
-.card__button {
   display: flex;
 
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-transform: uppercase;
-  line-height: 16px;
 
   cursor: pointer;
 
-  width: 166px;
-  height: 40px;
-
+  padding: 11px;
   margin: var(--card-button-margin);
 
   background: var(--button-background-color);
@@ -102,13 +97,14 @@
   border: 1px solid var(--button-background-color);
   border-radius: 5px;
 
-  font-family: inherit;
   font-weight: 700;
-  font-style: bold;
   font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.card__button:hover {
+.card__link:hover {
   background: transparent;
   color: var(--button-background-color);
   border-radius: 5px;
