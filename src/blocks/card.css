@@ -1,9 +1,9 @@
 .card {
-  flex-direction: column;
   justify-content: center;
-  justify-items: center;
-  width: 200px;
-  margin: 0 16px;
+  align-items: center;
+  align-content: center;
+  padding: 32px 16px 16px;
+  max-width: 200px;
 
   border-radius: 5px;
   background: #fff;
@@ -16,7 +16,8 @@
   display: block;
   width: 160px;
   height: 134px;
-  margin: 32px auto 40px;
+
+  margin: 0 auto 40px;
   object-fit: contain;
 }
 
@@ -25,13 +26,13 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  margin: 0 16px 4px;
+  margin-bottom: 4px;
 
   color: #060b35;
 }
 
 .card__product-code {
-  margin: 0 16px 16px;
+  margin-bottom: 16px;
 
   font-family: inherit;
   font-weight: 400;
@@ -43,13 +44,12 @@
 
 .card__review {
   display: flex;
-  margin: 0 16px 24px;
+  margin-bottom: 24px;
   align-items: center;
-  justify-content: baseline;
+  justify-content: space-between;
 }
 
 .card__review-value {
-  padding-left: 20px;
 
   font-weight: 400;
   font-size: 10px;
@@ -65,14 +65,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 16px 16px;
+  margin-bottom: 16px;
 
   line-height: 18px;
 }
 
 .card__price-name {
-  display: inline-block;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -81,14 +79,13 @@
 }
 
 .card__price-value {
-  font-family: inherit;
-
+  line-height: 18px;
   font-weight: 700;
   font-size: 16px;
 }
 
 .card__link {
-  margin: 0 16px 17px;
+  margin-bottom: 16px;
   justify-content: center;
 }
 
@@ -105,9 +102,10 @@
 
   color: #fff;
   background: #00acdc;
+  border: 1px solid transparent;
   border-radius: 5px;
 
-  transition: 0.3s property1 ease, 0.3s property2 ease;
+  transition: background-color 0.3s linear;
 }
 
 .card__item:hover {
