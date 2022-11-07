@@ -11,6 +11,7 @@ body {
   margin: 0;
 }
 
+/* #region card */
 .card {
   box-sizing: border-box;
   display: flex;
@@ -45,31 +46,6 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 24px;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-}
-
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url(./images/star-active.svg);
 }
 
 .card__review {
@@ -117,3 +93,31 @@ body {
   background-color: #fff;
   color: var(--main-color);
 }
+/* #endregion */
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
