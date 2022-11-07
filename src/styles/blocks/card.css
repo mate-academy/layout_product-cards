@@ -1,83 +1,74 @@
 .card {
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 200px;
   padding: 32px 16px 16px;
-
-  border: 1px solid black;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 }
 
-.photo {
-  width: 160px;
+.card__device-photo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.name {
+.card__device-name {
+  margin-top: 40px;
+
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px; /* or 150% */
-  color: #060b35;   /* Main accent */
+  line-height: 18px;
+  color: var(--color-main-accent);
 }
 
-.product-code {
+.card__device-code {
+  margin-top: 4px;
+
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
-  line-height: 14px;  /* identical to box height, or 140% */
-  color: #616070;  /* Secondary */
+  line-height: 14px;
+  color: var(--color-secondary-accent);
 }
 
-.reviews {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;   /* or 140% */
+.card__device-price {
+  display: flex;
+  gap: 85px;
 
+  margin-top: 24px;
+}
+
+.card__price-caption {
   display: flex;
   align-items: flex-end;
-  text-align: right;
-  color: #060b35;  /* Main accent */
 
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.price {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 18px; /* identical to box height, or 150% */
+  line-height: 18px;
+  color: var(--color-secondary-accent);
+}
 
+.card__total-price {
   display: flex;
   align-items: flex-end;
 
-  color: #616070; /* Secondary */
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.price-sum {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 18px;  /* identical to box height, or 112% */
-
-  display: flex;
-  align-items: flex-end;
+  line-height: 18px;
   text-align: right;
-
-  color: #060b35;   /* Main accent */
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  color: var(--color-main-accent);
 }
 
-.button {
+.card__button {
+  display: inline-block;
+
+  margin-top: 16px;
   padding: 12px 70px 12px 69px;
   background-color: #00acdc;
   border: 1px solid transparent;
@@ -86,11 +77,16 @@
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;  /* identical to box height, or 114% */
+  line-height: 16px;
   text-decoration: none;
-
   text-align: center;
   text-transform: uppercase;
-
   color: #fff;
+}
+
+.card__button:hover {
+  border: 1px solid #00acdc;
+  background-color: #fff;
+
+  color: #00acdc;
 }
