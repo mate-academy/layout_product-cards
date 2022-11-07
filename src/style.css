@@ -1,7 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   --main-color: #00acdc;
   --text-accent-color: #060b35;
   --text-secondary-color: #616070;
+  --card-border-color: #f3f3f3;
+  --buttom-color: #fff;
   font-size: 10px;
   line-height: 14px;
 }
@@ -13,11 +19,10 @@ body {
 
 /* #region card */
 .card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--card-border-color);
   border-radius: 5px;
   padding: 32px 16px 16px;
 }
@@ -76,13 +81,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   height: 40px;
   border: 1px solid var(--main-color);
   border-radius: 5px;
   font-size: 14px;
   line-height: 16px;
-  color: #fff;
+  color: var(--buttom-color);
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
@@ -90,7 +94,7 @@ body {
 }
 
 .card__button:hover {
-  background-color: #fff;
+  background-color: var(--buttom-color);
   color: var(--main-color);
 }
 /* #endregion */
