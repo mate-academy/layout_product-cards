@@ -1,5 +1,4 @@
 .card {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
@@ -17,15 +16,11 @@
   display: block;
   width: 160px;
   height: 134px;
-  margin: 32px 19px 40px;
+  margin: 32px auto 40px;
   object-fit: contain;
 }
 
 .card__name {
-  display: inline-block;
-  width: 166px;
-  height: 36px;
-
   font-family: inherit;
   font-weight: 500;
   font-size: 12px;
@@ -36,7 +31,6 @@
 }
 
 .card__product-code {
-  display: inline;
   margin: 0 16px 16px;
 
   font-family: inherit;
@@ -49,7 +43,6 @@
 
 .card__review {
   display: flex;
-  flex-direction: row;
   margin: 0 16px 24px;
   align-items: center;
   justify-content: baseline;
@@ -95,13 +88,12 @@
 }
 
 .card__link {
-  display: flex;
   margin: 0 16px 17px;
   justify-content: center;
 }
 
 .card__item {
-  width: 166px;
+  display: block;
   height: 40px;
 
   font-weight: 700;
@@ -115,11 +107,11 @@
   background: #00acdc;
   border-radius: 5px;
 
-  transition: all 0.3s;
+  transition: 0.3s property1 ease, 0.3s property2 ease;
 }
 
 .card__item:hover {
-  background: #fff;
+  background: transparent;
   border: 1px solid #00acdc;
   border-radius: 5px;
   color: #00acdc;
