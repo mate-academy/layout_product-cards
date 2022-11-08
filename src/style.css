@@ -1,0 +1,134 @@
+:root {
+  font-family: Roboto, Arial, serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--colorMain);
+  --colorMain: #060b35;
+  --colorSecondary: #616070;
+  --colorBlue: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page,
+.body,
+p {
+  margin: 0;
+}
+
+.container {
+  display: inline-block;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 16px 16px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  background-color: #fff;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+}
+
+.product-image__image {
+  width: 160px;
+  height: 134px;
+}
+
+.product-text {
+  margin-top: 40px;
+  width: 164px;
+}
+
+.product-text__description {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product-text__code {
+  padding-top: 4px;
+  font-weight: 400;
+  color: var(--colorSecondary);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.stars {
+  display: flex;
+  justify-content: end;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+}
+
+.stars > :nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.rating__text {
+  font-weight: 400;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  justify-content: space-between;
+}
+
+.price__text {
+  color: var(--colorSecondary);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.price__amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.button {
+  display: flex;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.button__btn {
+  width: 166px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 38px;
+  background-color: var(--colorBlue);
+  color: #fff;
+  border: 1px solid var(--colorBlue);
+  border-radius: 5px;
+}
+
+.button__btn:hover {
+  border-color: var(--colorBlue);
+  background-color: #fff;
+  color: var(--colorBlue);
+}
