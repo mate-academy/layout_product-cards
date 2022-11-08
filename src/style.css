@@ -21,9 +21,14 @@ body {
 .card {
   padding: 32px 16px 16px;
   width: 200px;
+
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
+  --text-dark-color: #060b35;
+  --text-light-color: #616070;
+  --button-blue-color: #00acdc;
 }
 
 .card__image {
@@ -41,22 +46,23 @@ body {
   font-size: 12px;
   line-height: 18px;
 
-  color: #060b35;
+  color: var(--text-dark-color);
 
 }
 
 .card__product-cod {
   margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--text-light-color);
 
 }
 
 .card__review {
-  margin-bottom: 24px;
   display: flex;
+  margin-bottom: 24px;
   justify-content: space-between;
   align-items: center;
 }
@@ -66,27 +72,26 @@ body {
   font-weight: 400;
 
   line-height: 14px;
-  color: #060b35;
+  color: var(--text-dark-color);
 }
 
 .card__price-item {
   display: flex;
   justify-content: space-between;
-
   margin-bottom: 16px;
 }
 
 .card__price-name {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--text-light-color);
 }
 
 .card__price-sum {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  color: #060b35;
+  color: var(--text-dark-color);
 }
 
 .card__button_buy {
@@ -100,8 +105,8 @@ body {
   line-height: 16px;
   color: #fff;
 
-  border: 1px solid transparent;
-  background: #00acdc;
+  border: 1px solid var(--button-blue-color);
+  background: var(--button-blue-color);
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
@@ -110,9 +115,8 @@ body {
 }
 
 .card__button_buy:hover {
-  color: #00acdc;
+  color: var(--button-blue-color);
   background-color: #fff;
-  border: 1px solid #00acdc;
 }
 
 .stars {
@@ -122,12 +126,12 @@ body {
 }
 
 .stars__star {
-  background-image: url(images/star.svg);
+  height: 16px;
+  width: 16px;
   background-repeat: no-repeat;
   align-items: center;
   background-position: center;
-  height: 16px;
-  width: 16px;
+  background-image: url(images/star.svg);
 }
 
 .stars__star:not(:last-of-type) {
