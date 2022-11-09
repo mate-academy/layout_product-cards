@@ -1,19 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-}
-
-body,
-p,
-h2,
-span {
-  margin: 0;
-}
-
-.product-card {
+.product {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,20 +12,21 @@ span {
   border-radius: 5px;
 }
 
-.product-card-img {
+.product__img {
   width: 160px;
   height: 134px;
   margin-bottom: 40px;
 }
 
-.product-card-name {
+.product__name {
   margin-bottom: 4px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
+  float: left;
 }
 
-.product-code-article {
+.product__code-article {
   align-self: flex-start;
   margin-bottom: 16px;
   font-size: 10px;
@@ -50,21 +36,21 @@ span {
   color: #616070;
 }
 
-.product-card-rating {
+.product__rating {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 24px;
 }
 
-.count-reviews {
+.product__reviews {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
 }
 
-.product-card-price {
+.product__price {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,14 +58,14 @@ span {
   margin-bottom: 16px;
 }
 
-.product-card-price-name {
+.product__price-name {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: #616070;
 }
 
-.product-card-price-value {
+.product__price-value {
   display: flex;
   align-items: flex-end;
   font-size: 16px;
@@ -88,7 +74,7 @@ span {
   text-align: right;
 }
 
-.button {
+.product__button {
   width: 166px;
   padding: 12px 0;
   font-size: 14px;
@@ -102,7 +88,7 @@ span {
   border: 1px solid #00acdc;
 }
 
-.button:hover {
+.product__button:hover {
   box-sizing: border-box;
   background-color: #fff;
   color: #00acdc;
