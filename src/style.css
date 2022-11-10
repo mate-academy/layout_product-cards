@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  --main-color: #060b35;
+  --secondary: #616070;
+  --button-color: #00acdc;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: #f3f3f3 1px solid;
+}
+
+.card__description {
+  padding: 40px 16px 16px;
+}
+
+.card__image {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.image__imac {
+  height: 134px;
+  width: 160px;
+}
+
+.card__name {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card__code {
+  font-size: 10px;
+  padding-top: 5px;
+  color: var(--secondary);
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+}
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(images/star.svg) no-repeat center;
+}
+
+.stars--5 .stars__star,
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--1 .stars__star:first-child {
+  background-image: url(images/star-active.svg);
+}
+/* #endregion */
+
+.card__reviews {
+  font-size: 10px;
+  color: var(--main-color);
+}
+
+.card__price-zone {
+  padding-top: 23px;
+  padding-bottom: 16px;
+  color: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  color: var(--secondary);
+}
+
+.card__price-amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.card__button {
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: var(--button-color) 1px solid;
+  background-color: var(--button-color);
+}
+
+.card__link {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card__button:hover {
+  background-color: #fff;
+}
+
+.card__link:hover {
+  color: var(--button-color);
+}
