@@ -12,7 +12,11 @@
     <title>Product cards</title>
     <link
       rel="stylesheet"
-      href="./style.css"
+      href="./blocks/card.css"
+    >
+    <link
+      rel="stylesheet"
+      href="./blocks/stars.css"
     >
     <link
       rel="preconnect"
@@ -27,56 +31,36 @@
       rel="stylesheet"
     >
   </head>
-  <body class="page-content">
+  <body class="page__page-content">
     <div
-      class="item"
+      class="card"
       data-qa="card"
     >
       <img
+        class="card__image"
         src="./images/imac.jpeg"
-        alt="imac"
-        class="item__imac-photo"
+        alt="image"
       >
-      <div class="item__description">
+      <div class="card__product-description">
         APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
       </div>
-      <div class="item__code">
+      <div class="card__product-code">
         Product code: 195434
       </div>
-      <div class="rate item__rate">
-        <div class="stars rate__stars">
-          <img
-            src="./images/star-active.svg"
-            alt="star-active"
-            class="stars__star"
-          >
-          <img
-            src="./images/star-active.svg"
-            alt="star-active"
-            class="stars__star"
-          >
-          <img
-            src="./images/star-active.svg"
-            alt="star-active"
-            class="stars__star"
-          >
-          <img
-            src="./images/star-active.svg"
-            alt="star-active"
-            class="stars__star"
-          >
-          <img
-            src="./images/star.svg"
-            alt="star"
-            class="stars__star"
-          >
+      <div class="card__rate">
+        <div class="stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
         </div>
-        <div class="rate__reviews">
+        <div class="card__reviews">
           Reviews: 5
         </div>
       </div>
-      <div class="price item__price">
-        <div class="price__text">
+      <div class="price card__price">
+        <div class="price__content">
           Price:
         </div>
         <div class="price__value">
@@ -84,8 +68,8 @@
         </div>
       </div>
       <a
-        class="item__buy-link"
-        href="#"
+        class="card__buy-button"
+        href="/"
         data-qa="hover"
       >
         Buy
