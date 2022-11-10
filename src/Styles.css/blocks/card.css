@@ -1,36 +1,19 @@
-* {
-  box-sizing: border-box;
-}
+/* region card */
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  --color-dark: #060b35;
-  --color-grey: #616070;
-  --color-blue: #00acdc;
-  --color-white: #fff;
-}
-    
-body {
-  margin: 0;
-}
-    
 .card {
   width: 200px;
   background: var(--color-white);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
-    
+      
 .card__product-img {
-  background: url(images/imac.jpeg);
-  background-size: 160px 134px;
-  width: 160px;
+  display: block;
   height: 134px;
   margin: 32px auto 40px;
 }
-    
-.card__title {
+      
+.card__about-title {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -38,42 +21,40 @@ body {
   color: var(--color-dark);
   margin: 0 16px 4px;
 }
-    
-.card__product-code {
+      
+.card__about-product {
   color: var(--color-grey);
   font-size: 10px;
   line-height: 14px;
   margin: 0 16px 16px;
 }
-    
-.card__reviews-block {
+      
+.card__reviews {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 0 16px 24px;
 }
-    
-
-    
-.card__reviews {
+  
+.card__reviews-container {
   font-size: 10px;
   line-height: 14px;
   color: var(--color-dark);
 }
-    
+      
 .card__cost {
   display: flex;
   justify-content: space-between;
   margin: 0 16px 16px;
 }
-    
+      
 .card__price {
   font-size: 12px;
   line-height: 18px;
   color: var(--color-grey);
 }
-    
-.card__priceValue {
+      
+.card__price-value {
   font-weight: 700;
   line-height: 18px;
   color: var(--color-dark);
@@ -84,8 +65,8 @@ body {
   border-radius: 5px;
   margin: 0 16px 16px;
 }
-    
-.card__hover {
+      
+.card__button-hover {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,8 +77,8 @@ body {
   font-size: 14px;
   text-transform: uppercase;
 }
-    
-.card__hover:hover {
+      
+.card__button-hover:hover {
   height: 38px;
   color: var(--color-blue);
   background-color: var(--color-white);
@@ -105,21 +86,4 @@ body {
   border-radius: 5px;
 }
 
-.stars {
-  display: flex;
-  flex-direction: row;
-  width: 96px;
-}
-    
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(images/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-    
-.stars--4 .stars__star:nth-child(-n+4) {
-  background-image: url(images/star-active.svg);
-}
+/* endregion */
