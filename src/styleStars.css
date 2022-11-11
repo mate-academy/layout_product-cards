@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url(images/star.svg) no-repeat center center;
+  margin-right: 4px;
+}
+
+.stars--1 :nth-last-child(n+5),
+.stars--2 :nth-last-child(n+4),
+.stars--3 :nth-last-child(n+3),
+.stars--4 :nth-last-child(n+2),
+.stars--5 :nth-last-child(n+1) {
+  background-image: url(images/star-active.svg);
+}
