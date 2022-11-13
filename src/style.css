@@ -1,0 +1,113 @@
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  --elements-position: 16px;
+  --use-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding: 32px var(--elements-position) 0 var(--elements-position);
+  border: 1px solid #fff;
+}
+
+.card__foto {
+  position: relative;
+  width: 160px;
+  height: 134px;
+}
+
+.card .card__foto {
+  align-items: center;
+}
+
+.card__description-product {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 40px 0 4px;
+}
+
+.card__description-code {
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.stars-viewed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewed {
+  font-size: 10px;
+}
+
+.stars {
+  display: flex;
+  margin: 16px 0 24px;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  background-position: center;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars:nth-child {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 28px;
+  justify-content: space-between;
+}
+
+.card__price-price {
+  font-size: 12px;
+}
+
+.card__button {
+  justify-content: center;
+  text-align: center;
+}
+
+.card__button-link {
+  padding: 12px 70px;
+  text-transform: uppercase;
+  background-color: var(--use-color);
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px var(--use-color) solid;
+}
+
+.card__button-link:hover {
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--use-color);
+}
