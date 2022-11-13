@@ -2,6 +2,11 @@
 
 :root {
   --blue-button-color: #00acdc;
+  --color-border-card: #f3f3f3;
+  --color-text-card: #060b35;
+  --color-text-button: #fff;
+  --color-background-button-hover: #fff;
+  --color-title-product-code: #616070;
 }
 
 .card {
@@ -9,7 +14,7 @@
   box-sizing: border-box;
   width: 200px;
   padding: 16px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--color-border-card);
   border-radius: 5px;
 }
 
@@ -23,14 +28,14 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-text-card);
   margin-bottom: 4px;
 }
 
 .card__product-code {
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--color-title-product-code);
   margin-bottom: 16px;
 }
 
@@ -45,7 +50,7 @@
   line-height: 14px;
   display: flex;
   align-items: flex-end;
-  color: #060b35;
+  color: var(--color-text-card);
 }
 
 .card__price {
@@ -54,33 +59,32 @@
   margin-bottom: 16px;
 }
 
-.card__price-h {
+.card__price-title {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
 }
 
-.card__price-n {
+.card__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-text-card);
 }
 
-.card__btn {
+.card__button {
   text-transform: uppercase;
   height: 40px;
   background: var(--blue-button-color);
   border: 1px solid var(--blue-button-color);
   border-radius: 5px;
-  color: #fff;
+  color: var(--color-text-button);
   font-weight: 700;
   font-size: 14px;
   width: 100%;
 }
 
-.card__btn:hover {
-  cursor: pointer;
+.card__button:hover {
+  /* cursor: pointer; */
   color: var(--blue-button-color);
-  background-color: #fff;
+  background-color: var(--color-background-button-hover);
 }
