@@ -5,10 +5,6 @@ html {
   font-family: "Roboto", Arial, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -16,10 +12,12 @@ html {
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding-top: 32px;
+  padding: 32px 16px 16px;
+
   --color-dark: #060b35;
   --color-light: #616070;
   --color-blue: #00acdc;
+  --color-white: #fff;
 }
 
 .card__image {
@@ -31,23 +29,19 @@ html {
 
 .card__model {
   display: block;
-  font-family: "Roboto", Arial, sans-serif;
   color: var(--color-dark);
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
 
-  padding: 0 16px;
   margin-bottom: 4px;
 }
 
 .card__item-code {
-  font-family: "Roboto", Arial, sans-serif;
   color: var(--color-light);
   font-size: 10px;
   font-weight: 400;
 
-  padding: 0 16px;
   margin-bottom: 16px;
 }
 
@@ -56,7 +50,6 @@ html {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 16px;
   margin-bottom: 24px;
 }
 
@@ -69,7 +62,7 @@ html {
 .card__price {
   display: flex;
   justify-content: space-between;
-  padding: 0 16px;
+
   margin-bottom: 16px;
 }
 
@@ -97,22 +90,19 @@ html {
   border-radius: 5px;
   border: 1px solid transparent;
 
-  width: 166px;
-  height: 40px;
-
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-white);
 
-  margin: auto;
-  margin-bottom: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .card__button:hover {
-  background-color: #fff;
+  background-color: var(--color-white);
   color: var(--color-blue);
   border-color: var(--color-blue);
 }
