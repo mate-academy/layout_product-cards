@@ -1,0 +1,40 @@
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.rating__review {
+  font-weight: 400;
+  font-size: 10px;
+  color: #060b35;
+  line-height: 14px;
+}
+
+.row-stars {
+  display: flex;
+}
+
+.row-stars__item {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.row-stars--stars_0 > .row-stars__item {
+  background-image: url(../images/star.svg);
+}
+
+.row-stars--stars_5 > .row-stars__item,
+.row-stars--stars_1 > .row-stars__item:nth-last-child(n+5),
+.row-stars--stars_2 > .row-stars__item:nth-last-child(n+4),
+.row-stars--stars_3 > .row-stars__item:nth-last-child(n+3),
+.row-stars--stars_4 > .row-stars__item:nth-last-child(n+2) {
+  background-image: url(../images/star-active.svg);
+}
