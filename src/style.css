@@ -10,6 +10,11 @@ body {
   background: #f3f3f3;
 
   --card-color-text: #616070;
+  --card-dark-color-text: #060b35;
+  --card-color-accent: #00acdc;
+  --first-light-color: #f3f3f3;
+  --second-light-color: #fff;
+
 }
 
 .card {
@@ -17,8 +22,8 @@ body {
   flex-direction: column;
   max-width: 198px;
   height: 406px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  background: var(--second-light-color);
+  border: 1px solid var(--first-light-color);
   border-radius: 5px;
 }
 
@@ -35,7 +40,7 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--card-dark-color-text);
 }
 
 .card__code-product {
@@ -89,24 +94,24 @@ body {
   color: var(--card-color-text);
 }
 
-.card__buttom {
+.card__button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 166px;
   height: 40px;
-  background: #00acdc;
-  border: 1px solid #00acdc;
+  background: var(--card-color-accent);
+  border: 1px solid var(--card-color-accent);
   border-radius: 5px;
   margin: 16px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--second-light-color);
 }
 
-.card__buttom:hover {
-  background: #fff;
-  color: #00acdc;
+.card__button:hover {
+  background: var(--second-light-color);
+  color: var(--card-color-accent);
 }
