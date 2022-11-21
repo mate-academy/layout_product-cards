@@ -1,0 +1,22 @@
+.block-stars {
+  display: flex;
+
+  --size-stars: 16px;
+}
+
+.block-stars__item {
+  width: var(--size-stars);
+  height: var(--size-stars);
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.block-stars--value--5 .block-stars__item,
+.block-stars--value--1 .block-stars__item:first-child,
+.block-stars--value--2 .block-stars__item:nth-child(-n + 2),
+.block-stars--value--3 .block-stars__item:nth-child(-n + 3),
+.block-stars--value--4 .block-stars__item:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
