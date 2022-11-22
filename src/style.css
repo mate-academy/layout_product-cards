@@ -13,25 +13,23 @@ body {
   flex-direction: row;
   font-family: inherit;
   font-style: normal;
-
+  margin: 28px;
 }
 
 .block__card {
-  margin: 28px;
-  width: 198px;
-  height: 400px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.block__imagis {
+.block__card-imagis {
   padding: 32px 19px 36px;
   width: 160px;
   height: 134px;
 }
 
-.block__title {
+.block__card-title {
+  margin: 0;
   padding-left: 16px;
   width: 166px;
   height: 36px;
@@ -42,7 +40,7 @@ body {
   color: #060b35;
 }
 
-.block__code {
+.block__card-code {
   padding-top: 4px;
   padding-bottom: 16px;
   margin: 0;
@@ -51,16 +49,15 @@ body {
   font-size: 10px;
   line-height: 14px;
   color: #616070;
-
 }
 
-.block__container {
+.block__stars {
   display: flex;
   flex-direction: row;
   padding-left: 14px;
 }
 
-.stars {
+.block__stars-stars {
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   width: 16px;
@@ -69,11 +66,12 @@ body {
   background-position: center;
 }
 
-.stars:nth-child(n+5) {
+.block__stars-stars:nth-child(n+5) {
   background-image: url(./images/star.svg);
 }
 
 .reviews {
+  padding-left: 21px;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -84,12 +82,12 @@ body {
   margin: 0;
 }
 
-.block__price {
+.block__card-price {
   display: flex;
   flex-direction: row;
 }
 
-.block__price-title {
+.block__card-price-title {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -100,33 +98,37 @@ body {
   margin: 0;
 }
 
-.block__price-price {
+.block__card-price-price {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   padding-top: 24px;
-  padding-left: 85px;
+  padding-left: 86px;
   color: #060b35;
   margin: 0;
 }
 
-.block__button {
-  font-style: normal;
-  font-weight: 700;
-  margin: 16px;
-  width: 166px;
-  height: 40px;
-  cursor: pointer;
-  background: #00acdc;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
+.block__card-button {
+  height: 30px;
+  margin: 26px 16px 16px;
 }
 
-.block__button:hover {
-  color: #00acdc;
-  background: #fff;
+.block__card-button-linc {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 11px 67px 10px 69px;
+  cursor: pointer;
+  background: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.block__card-button-linc:hover {
+  color: #00acdc;
+  background: #fff;
 }
