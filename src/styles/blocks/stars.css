@@ -1,0 +1,25 @@
+/* #region card */
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars__star {
+  width: 20px;
+  height: 16px;
+  background-image: url(../../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: 2px center;
+}
+
+.stars--0 > .stars__star,
+.stars--1 > .stars__star:nth-child(n + 2),
+.stars--2 > .stars__star:nth-child(n + 3),
+.stars--3 > .stars__star:nth-child(n + 4),
+.stars--4 > .stars__star:nth-child(n + 5) {
+  background-image: url(../../images/star.svg);
+}
+
+/* #endregion */
