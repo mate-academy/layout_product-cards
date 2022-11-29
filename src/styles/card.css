@@ -1,12 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"); */
-
-html {
-  font-family: Roboto, sans-serif;
-}
-
-body {
-  margin: 0;
-}
+/* #region card */
 
 .card {
   box-sizing: border-box;
@@ -20,50 +12,26 @@ body {
 }
 
 .card__img {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   width: 160px;
   height: 134px;
   align-self: center;
 }
 
 .card__product-name {
-  color: #060b35;
+  color: var(--text-important-color);
   font-size: 12px;
   font-weight: 500;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   line-height: 18px;
 }
 
 .card__product-code {
-  color: #616070;
+  color: var(--text-additional-color);
   font-size: 10px;
   font-weight: 400;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   line-height: 14px;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:first-child,
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url(images/star-active.svg);
 }
 
 .card__review {
@@ -71,32 +39,32 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   font-size: 10px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
   line-height: 14px;
 }
 
 .card__review-rate {
-  color: #060b35;
+  color: var(--text-important-color);
 }
 
 .card__product-price {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   align-items: center;
 }
 
 .price-text {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--text-additional-color);
 }
 
 .price-numbers {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 18px;
-  color: #060b35;
+  color: var(--text-important-color);
 }
 
 .card__buy-link {
@@ -105,19 +73,21 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
-  background: #00acdc;
-  border: 1px solid #00acdc;
+  background: var(--theme-color);
+  border: 1px solid var(--theme-color);
   border-radius: 5px;
   text-transform: uppercase;
 }
 
 .card__buy-link:hover {
-  color: #00acdc;
-  border: 1px solid #00acdc;
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
   background-color: #fff;
 }
+
+/* #endregion */
