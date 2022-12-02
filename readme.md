@@ -25,6 +25,8 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 --> [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md)
 
+
+
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
 - Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
