@@ -1,0 +1,42 @@
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.card__stars {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stars__item {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  background-image: url(../../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stars--1 .stars__item:nth-child(n+1),
+.stars--2 .stars__item:nth-child(n+2),
+.stars--3 .stars__item:nth-child(n+3),
+.stars--4 .stars__item:nth-child(n+5),
+.stars--5 .stars__item:nth-child(n+6) {
+  background-image: url(../../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card__likes {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgba(6, 11, 53, 1);
+}
