@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+}
+
+html {
   font-family: "Roboto", "Helvetica", sans-serif;
 }
 
@@ -21,6 +24,10 @@ p {
   width: 200px;
   height: 406px;
   padding: 32px 16px 16px;
+
+  --color-text-gray: #616070;
+  --color-text-dark: #060b35;
+  --color-blue: #00acdc;
 }
 
 .card__image {
@@ -32,16 +39,16 @@ p {
 .card__name-product {
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
-  color: #060b35;
+  line-height: 1.5;
+  color: var(--color-text-dark);
   margin: 0 auto 4px;
 }
 
 .card__code {
   font-weight: 400;
   font-size: 10px;
-  line-height: 14px;
-  color: #616070;
+  line-height: 1.4;
+  color: var(--color-text-gray);
   margin-bottom: 16px;
 }
 
@@ -54,8 +61,8 @@ p {
 .card__review {
   font-weight: 400;
   font-size: 10px;
-  line-height: 14px;
-  color: #060b35;
+  line-height: 1.4;
+  color: var(--color-text-dark);
 }
 
 .card__price {
@@ -66,15 +73,15 @@ p {
 
 .card__text {
   font-size: 12px;
-  line-height: 18px;
-  color: #616070;
+  line-height: 1.5;
+  color: var(--color-text-gray);
 }
 
 .card__dollar {
   font-weight: 700;
   font-size: 16px;
-  line-height: 18px;
-  color: #060b35;
+  line-height: 1.1;
+  color: var(--color-text-dark);
 }
 
 .button {
@@ -83,11 +90,11 @@ p {
   align-items: center;
   width: 166px;
   height: 40px;
-  background: #00acdc;
+  background: var(--color-blue);
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -97,8 +104,8 @@ p {
 
 .button:hover {
   background: #fff;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
 }
 
 /* #region stars */
@@ -112,8 +119,6 @@ p {
 .stars--2 :nth-child(-n+2),
 .stars--1 :nth-child(-n+1) {
   background-image: url(./images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .stars__star {
