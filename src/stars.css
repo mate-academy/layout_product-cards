@@ -1,0 +1,46 @@
+/* #region Stars */
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stars__item {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  list-style: none;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars__item--5 .stars__star,
+.stars__item--1 .stars__star:nth-child(1),
+.stars__item--2 .stars__star:nth-child(-n+2),
+.stars__item--3 .stars__star:nth-child(-n+3),
+.stars__item--4 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars__reviews {
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--black);
+}
+
+/* #endregion */
