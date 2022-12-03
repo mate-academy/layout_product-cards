@@ -5,13 +5,19 @@
 }
 
 body,
-ul {
+ul,
+p,
+h3 {
   margin: 0;
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+p {
+  display: block;
 }
 
 a {
@@ -76,7 +82,6 @@ html {
 }
 
 .card__name {
-  display: block;
   margin-bottom: 4px;
   font-weight: 500;
   font-size: 12px;
@@ -84,8 +89,7 @@ html {
   color: var(--primary-text-color);
 }
 
-.card__description {
-  display: block;
+.card__product-code {
   margin-bottom: 16px;
   font-size: 10px;
   color: var(--secondary-text-color);
@@ -110,7 +114,7 @@ html {
   background: url("./images/star.svg") center no-repeat;
 }
 
-.stars__star--active {
+.stars--0 .stars__star:nth-child(-n + 4) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -129,29 +133,29 @@ html {
 }
 
 .card__price-tag {
-  display: block;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.13;
+  line-height: 18px;
   color: var(--primary-text-color);
 }
 
 .card__button {
-  padding: 9px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
-  text-align: center;
-  border: 1px solid transparent;
+  border: 1px solid var(--button-color);
   border-radius: 5px;
   color: #fff;
   background-color: var(--button-color);
-  transition-property: background-color, border-color, color;
-  transition-duration: 600ms;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
 }
 
 .card__button:hover {
   background-color: #fff;
-  border-color: var(--button-color);
   color: var(--button-color);
 }
