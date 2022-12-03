@@ -1,21 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url(./stars.css);
+@import url(./reset.css);
 
 html {
   font-family: "Roboto", sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   --bloks_width: 100%;
   --main-text_color: #060b35;
   --minor-text_color: #616070;
   --button_color: #00acdc;
-}
-
-p {
-  margin: 0;
 }
 
 .card {
@@ -93,8 +87,9 @@ p {
 .card__button {
   text-decoration: none;
   text-transform: uppercase;
-  width: var(--bloks_width);
-  height: 40px;
+  box-sizing: border-box;
+  width: 165px;
+  height: 39px;
   text-align: center;
   color: #fff;
   background-color: var(--button_color);
@@ -105,12 +100,11 @@ p {
   font-weight: 700;
   font-size: 14px;
   margin-top: 16px;
+  border: 1px solid transparent;
 }
 
 .card__button:hover {
   background-color: #fff;
   color: var(--button_color);
   border: 1px solid var(--button_color);
-  width: 165px;
-  height: 39px;
 }
