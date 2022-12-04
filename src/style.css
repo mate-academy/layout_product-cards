@@ -2,16 +2,16 @@
 
 html {
   font-family: "Roboto", sans-serif;
+
+  --color-button: #00acdc;
+  --color-white: #fff;
+  --color-border: #f3f3f3;
+  --color-text-black: #060b35;
+  --color-text-grey: #616070;
 }
 
-body {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
+body,
+h2,
 p {
   margin: 0;
 }
@@ -19,15 +19,13 @@ p {
 .block {
   display: flex;
   margin: 28px;
+  width: 200px;
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
-}
-
-.card__container {
   padding: 32px 16px 16px;
 }
 
@@ -41,15 +39,14 @@ p {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-text-black);
 }
 
 .card__code {
   padding: 4px 0 16px;
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--color-text-grey);
 }
 
 .card__stars-reviews {
@@ -62,24 +59,20 @@ p {
 }
 
 .stars__stars {
-  background-image: url(./images/star-active.svg);
-  background-repeat: no-repeat;
+  background: url(./images/star.svg) no-repeat center;
   width: 16px;
   height: 16px;
   margin-right: 4px;
-  background-position: center;
 }
 
-.stars__stars:nth-child(n+5) {
-  background-image: url(./images/star.svg);
+.stars__stars:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .card__reviews {
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #060b35;
-  margin: 0;
+  color: var(--color-text-black);
 }
 
 .card__price {
@@ -90,39 +83,33 @@ p {
 }
 
 .card__price-title {
-  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--color-text-grey);
 }
 
 .card__price-price {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-text-black);
 }
 
-.card__button {
-  height: 30px;
-}
-
-.card__button-linc {
+.card__button-link {
   font-weight: 700;
   font-size: 14px;
-  width: 164px;
+  line-height: 38px;
   height: 38px;
   display: block;
   text-align: center;
-  line-height: 38px;
-  background: #00acdc;
-  border: 1px solid #00acdc;
+  background: var(--color-button);
+  border: 1px solid var(--color-button);
   border-radius: 5px;
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
-.card__button-linc:hover {
-  color: #00acdc;
-  background: #fff;
+.card__button-link:hover {
+  color: var(--color-button);
+  background: var(--color-white);
 }
