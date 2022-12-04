@@ -1,35 +1,37 @@
+body,
+p,
+div {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #e5e5e5;
+  --card-background-color: #fff;
+  --button-color-blue: #00acdc;
+  --color-text-grey: #616070;
+}
+
 body {
   font-family: Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #e5e5e5;
-  box-sizing: border-box;
-}
-
-p {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
+  background-color: var(-background-color);
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 32px 16px 0;
   width: 200px;
-  background: #fff;
+  background-color: var(--card-background-color);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 0 16px;
 }
 
 .product-card__imac {
   align-self: center;
   width: 160px;
   height: 134px;
-  margin: 32px 0 40px;
+  margin-bottom: 40px;
 }
 
 .product-card__info {
@@ -43,18 +45,18 @@ p {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  color: #616070;
+  color: var(--color-text-grey);
   margin-bottom: 16px;
 }
 
-.product-card__rating {
+.rating {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .rating__stars {
   display: flex;
-  padding-bottom: 24px;
 }
 
 .rating__star {
@@ -65,12 +67,12 @@ p {
   background-repeat: no-repeat;
 }
 
-.rating__star:nth-child(5) {
-  background-image: url(/src/images/star.svg);
-}
-
 .rating__star:not(:last-child) {
   margin-right: 4px;
+}
+
+.rating__star:nth-child(5) {
+  background-image: url(/src/images/star.svg);
 }
 
 .rating__reviews {
@@ -82,13 +84,14 @@ p {
 .product-card__price {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .product-card__item {
   font-weight: 400px;
   font-size: 12px;
   line-height: 18px;
+  color: var(--color-text-grey);
 }
 
 .product-card__value {
@@ -102,15 +105,17 @@ p {
   height: 40px;
   border-radius: 5px;
   color: #fff;
-  background-color: #00acdc;
+  font-weight: 700;
+  background-color: var(--button-color-blue);
   text-align: center;
   line-height: 40px;
   text-decoration: none;
+  text-transform: uppercase;
   margin-bottom: 16px;
 }
 
 .product-card__button:hover {
-  color: #00acdc;
-  background-color: #fff;
-  border: 1px solid #00acdc;
+  color: var(--button-color-blue);
+  background-color: var(--card--background-color);
+  border: 1px solid var(--button-color-blue);
 }
