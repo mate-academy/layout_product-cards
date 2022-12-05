@@ -1,19 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 /* #region card-block */
 
-.card {
-  width: 200px;
-}
-
 .card-block {
-  display: flex;
-  flex-direction: column;
   padding: 32px 16px 16px;
-  font-family: "Roboto", sans-serif;
+  width: 200px;
   font-style: normal;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
+  box-sizing: border-box;
 }
 
 /* #endregion */
@@ -50,7 +43,6 @@
 }
 
 .card-block__product-code {
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--subtext-color);
@@ -69,7 +61,6 @@
 }
 
 .card-block__text {
-  font-weight: 400;
   font-size: 12px;
   color: var(--subtext-color);
 }
@@ -84,21 +75,13 @@
 
 /* #region buy-button */
 
-.card-block__buy-button {
+.card-block__buy-link {
   display: flex;
   justify-content: center;
   background: var(--button-color);
   border: 1px solid transparent;
-  border-radius: 5px;
-}
-
-.card-block__buy-button:hover {
-  background: #fff;
-  border-color: var(--border-color);
   border-radius: var(--border-radius);
-}
 
-.card-block__buy-link {
   padding: 12px 70px;
   text-align: center;
   font-weight: 700;
@@ -110,6 +93,9 @@
 
 .card-block__buy-link:hover {
   color: var(--button-color);
+  background: #fff;
+  border-color: var(--button-color);
+  border-radius: var(--border-radius);
 }
 
 /* #endregion */
