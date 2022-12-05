@@ -1,4 +1,3 @@
-/* #region card */
 .card {
   width: min-content;
 }
@@ -25,9 +24,9 @@
   font-size: 12px;
   line-height: 18px;
   color: var(--black);
-  width: var(--blocks-size);
-  margin-top: 40px;
-  margin-left: 16px;
+  /* width: var(--blocks-size); */
+  margin: 40px 0 0;
+  padding: 0 var(--paddings);
 }
 
 .card__product-code {
@@ -35,23 +34,37 @@
   font-size: 10px;
   line-height: 14px;
   color: var(--grey-text);
-  margin-top: 4px;
-  margin-left: 16px;
-  width: 98px;
+  margin: 4px 0 0;
+  padding-left: var(--paddings);
+  /* width: 98px; */
+}
+
+.card__reviews {
+  /* width: var(--blocks-size); */
+  margin-top: 16px;
+  padding: 0 var(--paddings);
 }
 
 .card__stars {
-  width: var(--blocks-size);
-  margin-top: 16px;
-  margin-left: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__reviews-text {
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--black);
 }
 
 .card__price {
-  width: var(--blocks-size);
+  /* width: var(--blocks-size); */
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
-  margin-left: 16px;
+  padding: 0 var(--paddings);
 }
 
 .card__price-text {
@@ -59,6 +72,7 @@
   font-size: 12px;
   line-height: 18px;
   color: var(--grey-text);
+  margin: 0;
 }
 
 .card__price-item {
@@ -66,16 +80,18 @@
   font-size: 16px;
   line-height: 18px;
   color: var(--black);
+  margin: 0;
 }
 
 .card__buy-link {
-  width: var(--blocks-size);
+  /* width: var(--blocks-size); */
   height: 40px;
-  margin: 16px;
+  padding: 0 var(--paddings);
+  margin: 16px 0;
 }
 
 .card__buy-button {
-  width: var(--blocks-size);
+  width: 166px;
   height: 40px;
   background: var(--blue);
   border-radius: 5px;
@@ -86,6 +102,7 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--white);
+  cursor: pointer;
 }
 
 .card__buy-button:hover {
@@ -93,7 +110,4 @@
   border: 1px solid var(--blue);
   border-radius: 5px;
   color: var(--blue);
-  cursor: pointer;
 }
-
-/* #endregion */
