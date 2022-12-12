@@ -1,28 +1,3 @@
-:root {
-  --font-size-xs: 10px;
-  --font-size-s: 12px;
-  --font-size-m: 14px;
-  --font-size-l: 16px;
-  --color-main-text: #060b35;
-  --color-secondry-text: #616070;
-  --color-accent: #00acdc;
-}
-
-body,
-h2,
-p,
-ul {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.page {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -55,36 +30,6 @@ ul {
   margin-bottom: 16px;
 }
 
-.card__stars {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-
-.stars {
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.stars__star {
-  background: url("./images/star.svg") no-repeat center;
-  width: 16px;
-  height: 16px;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url("images/star-active.svg");
-}
-
 .card__reviews {
   font-size: var(--font-size-xs);
   font-weight: 400;
@@ -92,27 +37,27 @@ ul {
   color: var(--color-secondry-text);
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.price__text {
+.card__price-text {
   font-weight: 400;
   line-height: 18px;
   font-size: var(--font-size-s);
   color: #616070;
 }
 
-.price__product {
+.card__price-product {
   font-weight: 700;
   line-height: 18px;
   font-size: var(--font-size-l);
   color: var(--color-main-text);
 }
 
-.button-buy {
+.card__button-buy {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +71,7 @@ ul {
   margin: 0 auto;
 }
 
-.button-buy--hover:hover {
+.card__button-buy--hover:hover {
   border: 1px solid var(--color-accent);
   background-color: transparent;
   color: var(--color-accent);
