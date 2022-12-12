@@ -1,5 +1,8 @@
-body {
+html {
   font-family: "Roboto", sans-serif;
+}
+
+body {
   font-weight: 400;
   color: var(--primary-text-color);
 
@@ -36,7 +39,7 @@ body {
   font-size: 10px;
   line-height: 14px;
   color: var(--secondary-text-color);
-  margin: 0 0 4px;
+  margin: 0 0 16px;
 }
 
 .card__rate {
@@ -56,6 +59,10 @@ body {
   border-radius: 1px;
 }
 
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
 .stars :nth-child(-n+4) {
   background-image: url(images/star-active.svg);
 }
@@ -64,7 +71,7 @@ body {
   font-size: 10px;
   line-height: 14px;
   display: flex;
-  align-items: center;
+  align-self: center;
 }
 
 .card__price {
@@ -95,12 +102,12 @@ body {
   padding: 12px 0;
   border: 1px solid var(--accent-color);
   border-radius: 5px;
-  background: #fff;
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: #fff;
 }
 
 .card__btn-buy:hover {
-  background-color: var(--accent-color);
-  color: #fff;
+  background: #fff;
+  color: var(--accent-color);
   transition: 0.3s color;
 }
