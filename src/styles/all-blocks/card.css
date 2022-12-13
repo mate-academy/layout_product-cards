@@ -27,40 +27,50 @@ html {
   --main-color: #060b35;
   --secondary-color: #616070;
   --main-btn-color: #00acdc;
+
+  --card-pading-button: 12px 0;
+
+  --margin-imac: 40px;
+  --width-imac: 160px;
+  --height-imac: 134px;
+  --margin-title: 4px;
+  --margin-product-code: 16px;
+  --margin-rating-block: 23px;
+  --margin-card-price: 16px;
 }
 
 .card__imac {
-  width: 160px;
-  height: 134px;
+  width: var(--width-imac);
+  height: var(--height-imac);
   align-self: center;
-  margin-bottom: 40px;
+  margin-bottom: var(--margin-imac);
 }
 
 .card__title {
   font-weight: var(--font-weight-title);
   font-size: var(--font-size-title);
   line-height: var(--line-height-big);
-  margin-bottom: 4px;
+  margin-bottom: var(--margin-title);
 }
 
 .card__product-code {
   line-height: var(--line-height-normal);
   color: var(--secondary-color);
-  margin-bottom: 16px;
+  margin-bottom: var(--margin-product-code);
 }
 
 .card__rating-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 23px;
+  margin-bottom: var(--margin-rating-block);
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 16px;
+  margin-bottom: var(--margin-card-price);
 }
 
 .card__price-text {
@@ -86,7 +96,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 0;
+  padding: var(--card-pading-button);
 }
 
 .card__button:hover {
