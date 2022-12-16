@@ -1,27 +1,25 @@
 @import "./variables.css";
 
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: "Roboto", Helvetica, sans-serif;
   font-style: normal;
-  /* #region variables */
-  --card-width: 200px;
-  --black-color: #060b35;
-  --grey-color: #616070;
-  --white-color: #fff;
-  --blue-color: #00acdc;
-  --border-color-main: #f3f3f3;
-  /* #endregion */
 }
 
 .product {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: var(--card-width);
   border: 1px solid var(--border-color-main);
   border-radius: 5px;
   background: var(--white-color);
+}
+
+.product--width-200 {
+  width: var(--card-width);
 }
 
 .product__image {
@@ -39,12 +37,12 @@ body {
 }
 
 .product__code {
+  padding: 4px 84px 0 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--grey-color);
-  padding: 4px 84px 0 16px;
 }
 
 .product__review {
@@ -108,10 +106,10 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  text-decoration: none;
   margin: 16px;
   width: 166px;
   height: 40px;
+  text-decoration: none;
   background-color: var(--blue-color);
   border-radius: 5px;
   border-style: inherit;
