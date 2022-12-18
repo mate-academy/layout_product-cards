@@ -94,3 +94,17 @@ transparent border of the same width, and change its color on `:hover`
 add both.
 11. [FILE STRUCTURE] - You should create separate file for each BEM block
 12. [SEMANTICS] - Use semantic tags like h2, p ...
+13. [SEO] - `alt` atribute should describe the image if the image contains information (better description you have - better for you :))
+
+REALLY BAD example:
+```html
+<img alt="image" />
+```
+STILL BAD example:
+```html
+<img alt="phone" />
+```
+GOOD example:
+```html
+<img alt="Samsung Galaxy S22 2022 8/128GB Green" />
+```
