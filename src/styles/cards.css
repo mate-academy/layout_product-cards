@@ -1,20 +1,17 @@
-body {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .cards {
   box-sizing: border-box;
   width: 200px;
-  margin: 0 auto;
   background-color: #fff;
   border: solid 1px #f3f3f3;
   border-radius: 8px;
+  --product-name-price-color: #060b35;
+  --product-code-priceword-color: #616070;
+  --button-color: #00acdc;
+
 }
 
-.cards__productinfo {
-  padding: 0 8.2% 8.5% 8.1%;
+.cards__product-info {
+  padding: 0 8.1% 8.5%;
 }
 
 .cards__image {
@@ -29,50 +26,26 @@ body {
   margin-bottom: 22px;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  background-image: url("./images/star.svg") ;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 16px;
-  height: 16px;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--stars1 .stars__star:nth-child(-n+1),
-.stars--stars2 .stars__star:nth-child(-n+2),
-.stars--stars3 .stars__star:nth-child(-n+3),
-.stars--stars4 .stars__star:nth-child(-n+4),
-.stars--stars5 .stars__star:nth-child(-n+5) {
-  background-image: url("./images/star-active.svg");
-}
-
 .cards__price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.cards__productname {
+.cards__product-name {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--product-name-price-color);
   margin-bottom: 4px;
 
 }
 
-.cards__productcode {
+.cards__product-code {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(-product-code-priceword-color);
   margin-bottom: 16px;
 }
 
@@ -80,35 +53,35 @@ body {
   font-weight: 400;
   font-size: 10px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--product-name-price-color);
 }
 
 .cards__price-word {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(-product-code-priceword-color);
 }
 
 .cards__price-number {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--product-name-price-color);
 }
 
 .cards__buy-button {
   width: 166px;
   height: 40px;
-  border: none;
+  border: solid 1px transparent;
   border-radius: 5px;
-  background-color: #00acdc;
+  background-color: var(--button-color);
   text-transform: uppercase;
 }
 
 .cards__buy-button:hover {
   background-color: #fff;
-  border: solid 1px #00acdc;
+  border-color: var(--button-color) ;
   color: #00acdc;
   cursor: pointer;
 }
@@ -123,5 +96,5 @@ body {
 }
 
 .cards__buy-button:hover .cards__buy-link {
-  color: #00acdc;
+  color: var(--button-color);
 }
