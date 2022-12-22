@@ -1,18 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+:root {
+  --main-accent-color: #060b35;
+  --secondary-color: #616070;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
 body,
 h2,
 p {
   margin: 0;
   padding: 0;
-
-  --main-accent-color: #060b35;
-  --secondary-color: #616070;
 }
 
 .card {
-  box-sizing: border-box;
-  padding: 16px;
+  padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -22,16 +32,16 @@ p {
 }
 
 .card__image {
-  padding: 0 3px;
-  margin-top: 16px;
+  display: block;
+  margin: 0 auto;
   width: 160px;
   height: 134px;
 }
 
 .card__title {
   margin-top: 40px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
+  font-style: inherit;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -40,8 +50,8 @@ p {
 
 .card__product-code {
   margin-top: 4px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
+  font-style: inherit;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -63,9 +73,12 @@ p {
   height: 16px;
   width: 16px;
   background-image: url("images/star.svg");
-  margin-right: 4px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
 }
 
 .stars--1 .stars__star:nth-child(-n + 1),
@@ -102,8 +115,8 @@ p {
 }
 
 .card__price {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
+  font-style: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -112,12 +125,12 @@ p {
 
 .card__button {
   margin-top: 16px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
+  font-style: inherit;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  padding: 11px 70px;
+  padding: 11px 0;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -128,7 +141,6 @@ p {
 }
 
 .card__button:hover {
-  box-sizing: border-box;
   color: #00acdc;
   background: #fff;
   border: 1px solid #00acdc;
