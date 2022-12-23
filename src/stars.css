@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url(./images/star.svg) no-repeat center;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--1 .stars__star:first-child {
+  background-image: url(./images/star-active.svg);
+}
