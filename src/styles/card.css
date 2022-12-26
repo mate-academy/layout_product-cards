@@ -1,46 +1,37 @@
-body {
-  margin: 0;
-  box-sizing: border-box;
-  --color-blue: #00acdc;
-  --color-navy: #060b35;
-  --color-white: #fff;
-  --color-grey: #616070;
-}
-
 .card {
-  font-family: Roboto, sans-serif;
-  width: 198px;
+  width: 200px;
   border: 1px solid #f3f3f3;
   display: flex;
   flex-direction: column;
 }
 
-.card-img {
+.card__img {
   height: 134px;
   width: 160px;
   box-sizing: border-box;
 }
 
-.card-description {
+.card__description {
   font-weight: 500;
   font-size: 12px;
   color: var(--color-navy);
   line-height: 18px;
 }
 
-.card__item:not(:first-child) {
+.card__description,
+.card__code,
+.card__stars,
+.card__price,
+.card__button {
   margin: 0 16px;
 }
 
-.card__item:last-child {
-  margin-bottom: 16px;
-}
-
 .card__item:first-child {
-  margin: 32px 19px 36px;
+  margin: 0 19px;
+  padding: 32px 0 36px;
 }
 
-.card-code {
+.card__code {
   font-weight: 400;
   font-size: 10px;
   color: var(--color-grey);
@@ -48,40 +39,18 @@ body {
   padding-bottom: 18px;
 }
 
-.stars__star {
-  background-image: url(./images/star.svg);
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: center;
-  margin-right: 4px;
-}
-
-.stars__star:nth-child(-n+4) {
-  background-image: url(./images/star-active.svg);
-}
-
-.star {
+.card__stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.stars {
-  display: flex;
-  padding-right: 17px;
-}
-
-.stars:first-child {
-  margin-left: 16px ;
-}
-
-.star__review {
-  margin-right: 16px;
+.card__review {
   font-size: 10px;
+  padding-left: 17px;
 }
 
-.card-price {
+.card__price {
   display: flex;
   justify-content: space-between;
   padding-top: 23px;
@@ -89,24 +58,25 @@ body {
   align-items: center;
 }
 
-.price {
+.card__price-text {
   padding-right: 85px;
   font-weight: 400;
   color: var(--color-grey);
   font-size: 12px;
 }
 
-.price-value {
+.card__price-text-value {
   font-weight: 700;
   font-size: 16px;
   color: var(--color-navy);
 }
 
-.card-button {
+.card__button {
   background-color: var(--color-blue);
   border-radius: 5px;
   border: 1px solid var(--color-blue);
   box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
 .card-link {
@@ -122,7 +92,7 @@ body {
   text-transform: uppercase;
 }
 
-.card-button:hover {
+.card__button:hover {
   background-color: var(--color-white);
   border: 1px solid var(--color-blue);
 }
