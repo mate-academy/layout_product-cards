@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+p {
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  --font-color-main-accent: #060b35;
+  --font-color-description: #616070;
+  --link-color: #00acdc;
+}
+
+.card__img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__info {
+  margin-bottom: 16px;
+}
+
+.card__text-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--font-color-main-accent);
+}
+
+.card__product-code {
+  font-size: 10px;
+  color: var(--font-color-description);
+}
+
+.card__stars-text {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card__stars {
+  display: flex;
+}
+
+.card__item {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(images/star.svg) no-repeat center;
+}
+
+.card__stars--1 .card__item:nth-child(-n + 1),
+.card__stars--2 .card__item:nth-child(-n + 2),
+.card__stars--3 .card__item:nth-child(-n + 3),
+.card__stars--4 .card__item:nth-child(-n + 4),
+.card__stars--5 .card__item:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__text-reviews {
+  font-size: 10px;
+  color: var(--font-color-main-accent);
+}
+
+.card__price {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__text-price {
+  font-size: 12px;
+  color: var(--font-color-description);
+}
+
+.card__number-price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--font-color-main-accent);
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 40px;
+  border: 1px solid var(--link-color);
+  border-radius: 5px;
+  background-color: var(--link-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card__button:hover {
+  color: var(--link-color);
+  background-color: #fff;
+}
