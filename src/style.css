@@ -1,7 +1,11 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+body,
+h2,
+p {
+  margin: 0;
 }
 
 html {
@@ -16,9 +20,12 @@ html {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #fff;
+  --font-color-main-accent: #060b35;
+  --font-color-description: #616070;
+  --link-color: #00acdc;
 }
 
-.card__photo {
+.card__img {
   display: block;
   width: 160px;
   height: 134px;
@@ -26,20 +33,20 @@ html {
 }
 
 .card__info {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .card__text-name {
   font-weight: 500;
-  margin: 0 0 4px;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--font-color-main-accent);
 }
 
 .card__product-code {
   font-size: 10px;
-  color: #616070;
+  color: var(--font-color-description);
 }
 
 .card__stars-text {
@@ -86,27 +93,26 @@ html {
 
 .card__text-reviews {
   font-size: 10px;
-  color: #060b35;
+  color: var(--font-color-main-accent);
 }
 
 .card__price {
   margin-bottom: 16px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
 .card__text-price {
   font-size: 12px;
-  color: #616070;
+  color: var(--font-color-description);
 }
 
 .card__number-price {
   font-size: 16px;
   line-height: 18px;
-  font-weight: bold;
-  color: #060b35;
+  font-weight: 700;
+  color: var(--font-color-main-accent);
 }
 
 .card__button {
@@ -115,16 +121,16 @@ html {
   justify-content: center;
   text-decoration: none;
   height: 40px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--link-color);
   border-radius: 5px;
-  background-color: #00acdc;
-  color: white;
+  background-color: var(--link-color);
+  color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
 }
 
 .card__button:hover {
-  color: #00acdc;
-  background-color: white;
+  color: var(--link-color);
+  background-color: #fff;
 }
