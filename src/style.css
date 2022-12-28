@@ -1,0 +1,130 @@
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url(./images/star.svg) no-repeat center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
+
+:root {
+  --font-dark: #060b35;
+  --font-light: #616070;
+  --button-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+  margin-left: 3px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--font-dark);
+  line-height: 150%;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  color: var(--font-light);
+  margin-bottom: 16px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  color: var(--font-dark);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--font-light);
+}
+
+.card__price-amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 112%;
+  color: var(--font-dark);
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--button-color);
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+  height: 40px;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: var(--button-color);
+}
