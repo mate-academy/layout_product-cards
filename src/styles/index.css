@@ -1,9 +1,12 @@
 
-body {
+body,
+h2,
+p {
   margin: 0;
+  padding: 0;
 }
 
-.Card {
+.card {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   box-sizing: border-box;
@@ -17,31 +20,35 @@ body {
   padding: 0 16px;
 }
 
-.Card__image {
+.card__image {
   width: 160px;
   height: 134px;
   margin-bottom: 40px;
   margin-top: 32px;
 }
 
-.Card__item {
+.card__item {
   display: flex;
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
   color: hsl(234, 80%, 12%);
+  margin-bottom: 4px;
 }
 
-.Card__code {
+.card__code {
   display: flex;
+  justify-content: left;
+  width: 100%;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
   color: #616070 ;
   margin-bottom: 16px;
+
 }
 
-.Card__container {
+.card__container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -70,13 +77,7 @@ body {
   background-image: url(images/star.svg);
 }
 
-.Card__wrap {
-  display: flex;
-  justify-content: left;
-  width: 100%;
-}
-
-.Card__reviews {
+.card__reviews {
   display: flex;
   font-size: 10px;
   line-height: 14px;
@@ -89,29 +90,32 @@ body {
 
 }
 
-.Card .Card__container:nth-last-child(2) {
+.card .card__container:nth-last-child(2) {
   margin-bottom: 16px;
 }
 
-.Card__price {
+.card__price {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: #616070;
 }
 
-.Card__price-number {
+.card__price-number {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: hsl(234, 80%, 12%);
 }
 
-.Card__btn {
+.card__button-link {
   display: flex;
   width: 100%;
   border-radius: 5px;
   background-color: hsl(193, 100%, 43%);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
   height: 40px;
   font-size: 14px;
   line-height: 16px;
@@ -121,13 +125,7 @@ body {
   text-align: center;
 }
 
-.a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: hsl(0, 0%, 100%);
-}
-
-.Card__btn:hover {
+.card__button-link:hover {
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(193, 100%, 43%);
