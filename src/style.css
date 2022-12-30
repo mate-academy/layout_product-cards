@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-general-text);
+
+  --color-of-background-light: #fff;
+  --color-general-text: #060b35;
+  --color-secondary-text: #616070;
+  --coor-blue: #00acdc;
+  --color-card-background: #f3f3f3;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 5px;
+  background-color: var (--color-of-background-light);
+  border: 1px solid var(--color-card-background);
+  padding: 32px 16px 16px;
+}
+
+.container__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 3px;
+}
+
+.container__title {
+  margin-top: 40px;
+  line-height: 18px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.container__product-code {
+  margin-bottom: 16px;
+  color: var(--color-secondary-text);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.container__feedback {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background: url(images/star.svg) no-repeat center;
+  margin-right: 4px;
+}
+
+.stars__star:nth-child(-n+1),
+.stars__star:nth-child(-n+2),
+.stars__star:nth-child(-n+3),
+.stars__star:nth-child(-n+4) {
+  background: url(images/star-active.svg) no-repeat center;
+}
+
+.container__reviews {
+  font-size: 10px;
+}
+
+.container__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: flex-end;
+}
+
+.container__price-label {
+  font-weight: 400;
+  color: var(--color-secondary-text);
+}
+
+.container__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.container__button-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 166px;
+  border-radius: 5px;
+  background: var(--coor-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--color-of-background-light);
+  text-transform: uppercase;
+}
+
+.container__button-buy:hover {
+  color: var(--coor-blue);
+  border: 1px solid var(--coor-blue);
+  background: var(--color-of-background-light);
+}
