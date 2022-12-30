@@ -1,8 +1,5 @@
 .stars {
   display: flex;
-  align-self: flex-start;
-  margin-left: 17px;
-  margin-bottom: 24px;
 }
 
 .stars__star {
@@ -14,15 +11,10 @@
   margin-right: 4px;
 }
 
-.stars__star:nth-child(-n+4) {
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
   background-image: url(../../images/star-active.svg);
-}
-
-.stars__reviews {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  margin-top: auto;
-  margin-left: 19px;
-  color: var(--color-dark);
 }
