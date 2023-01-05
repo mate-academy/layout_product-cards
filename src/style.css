@@ -5,14 +5,8 @@ html {
   --color-accent: #00acdc;
 }
 
-body {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
+body,
+h2,
 p {
   margin: 0;
 }
@@ -23,16 +17,13 @@ p {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  padding: 32px 0 16px;
 }
 
 .product-card__img {
   width: 160px;
   height: 134px;
-  padding: 32px 19px 40px;
-}
-
-.product-card__text {
-  padding: 0 16px;
+  margin: 0 auto 40px;
 }
 
 .product-card__name {
@@ -40,6 +31,7 @@ p {
   font-size: 12px;
   line-height: 150%;
   color: var(--color-main-text);
+  margin: 0 16px 4px;
 }
 
 .product-card__code {
@@ -47,16 +39,14 @@ p {
   font-size: 10px;
   line-height: 140%;
   color: var(--color-secondary-text);
-  padding-top: 4px;
+  margin: 0 16px 16px;
 }
 
-.rating {
+.product-card__rating {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  margin: 0 16px 22px;
   justify-content: space-between;
-  padding-top: 16px;
-  align-content: center;
-  text-align: center;
 }
 
 .stars {
@@ -70,52 +60,45 @@ p {
   background-position: center;
   height: 16px;
   width: 16px;
-  margin-right: 4px;
 }
 
 .stars--active :nth-child(-n+4) {
   background-image: url(/images/star-active.svg);
+  margin-right: 4px;
 }
 
-.rating__text {
+.product-card__rating-text {
   font-size: 10px;
-  line-height: 180%;
-  text-align: center;
+  line-height: 170%;
   color: var(--color-main-text);
-
 }
 
-.price {
+.product-card__price {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-top: 21px;
-  padding-bottom: 16px;
+  margin: 0 16px 16px;
   align-items: center;
 }
 
-.price__text {
-  font-weight: 400;
+.product-card__price-text {
   font-size: 12px;
   color: var(--color-secondary-text);
 }
 
-.price__sum {
+.product-card__price-sum {
   font-weight: 700;
   font-size: 16px;
   color: var(--color-main-text);
 }
 
-.button {
+.product-card__button {
   display: flex;
   width: 166px;
-  margin-bottom: 16px;
-  height: 40px;
   text-align: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
-.button__buy {
+.product-card__button-buy {
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -128,7 +111,7 @@ p {
   text-decoration: none;
 }
 
-.button__buy:hover {
+.product-card__button-buy:hover {
   color: var(--color-accent);
   background-color: #fff;
   border: 1px solid var(--color-accent);
