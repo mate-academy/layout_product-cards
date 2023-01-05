@@ -7,11 +7,8 @@ body {
   --color-bground: #fff;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .card {
+  box-sizing: border-box;
   width: 200px;
   border: 1px solid #f3f3ff;
   border-radius: 5px;
@@ -39,12 +36,36 @@ body {
 }
 
 .card__code {
-  font-style: normal;
+  width: 98px;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--color-second-text);
   padding-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(n) {
+  background-image: url(./images/star-active.svg);
 }
 
 .card__container-reviews {
