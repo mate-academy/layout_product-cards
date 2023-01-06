@@ -1,0 +1,37 @@
+.star-box {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.star-box__stars {
+  display: flex;
+}
+
+.star-box__stars-star {
+  content: " ";
+  background-image: url(../../images/star-active.svg);
+  background-repeat: no-repeat;
+
+  background-position: 50%;
+
+  height: 16px;
+  width: 16px;
+}
+
+.star-box__stars-star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.star-box__reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 10px;
+}
+
+.star-box__stars > .star-box__stars-star:last-child {
+  background-image: url(../../images/star.svg);
+}
