@@ -1,23 +1,10 @@
-html {
-  font-family: Roboto, sans-serif;
-  --color-main-text: #060b37;
-  --color-secondary-text: #616070;
-  --color-accent: #00acdc;
-}
-
-body,
-h2,
-p {
-  margin: 0;
-}
-
 .product-card {
-  width: 198px;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  padding: 32px 0 16px;
+  padding: 32px 16px 16px;
 }
 
 .product-card__img {
@@ -31,40 +18,21 @@ p {
   font-size: 12px;
   line-height: 150%;
   color: var(--color-main-text);
-  margin: 0 16px 4px;
+  margin-bottom: 4px;
 }
 
 .product-card__code {
-  font-weight: 400;
   font-size: 10px;
   line-height: 140%;
   color: var(--color-secondary-text);
-  margin: 0 16px 16px;
+  margin-bottom: 16px;
 }
 
 .product-card__rating {
   display: flex;
   flex-direction: row-reverse;
-  margin: 0 16px 22px;
+  margin-bottom: 22px;
   justify-content: space-between;
-}
-
-.stars {
-  display: flex;
-  height: 16px;
-}
-
-.stars__star {
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 16px;
-  width: 16px;
-}
-
-.stars--active :nth-child(-n+4) {
-  background-image: url(/images/star-active.svg);
-  margin-right: 4px;
 }
 
 .product-card__rating-text {
@@ -76,7 +44,7 @@ p {
 .product-card__price {
   display: flex;
   justify-content: space-between;
-  margin: 0 16px 16px;
+  margin-bottom: 16px;
   align-items: center;
 }
 
@@ -93,26 +61,27 @@ p {
 
 .product-card__button {
   display: flex;
-  width: 166px;
-  text-align: center;
-  margin: 0 auto;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .product-card__button-buy {
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--color-accent);
   color: white;
+  width: 100%;
   font-weight: 700;
   font-size: 14px;
-  line-height: 290%;
+  line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+.product-card__button:hover {
+  background-color: #fff;
+}
+
 .product-card__button-buy:hover {
   color: var(--color-accent);
-  background-color: #fff;
-  border: 1px solid var(--color-accent);
 }
