@@ -5,49 +5,62 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product cards</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
   </head>
   <body>
     <div class="product-card" data-qa="card">
       <img
         src="./images/imac.jpeg"
-        alt="imac"
+        alt="Apple A1419 iMac 27inc"
         class="product-card__image image-container"
       >
 
-      <h3 class="product-card__name">
+      <h3 class="product-card__name name-container">
         APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
       </h3>
 
       <p class="product-card__code code-container">
         Product code: 195434
       </p>
+      <div class="stars-container">
+        <div class="stars">
+          <div class="stars__image stars__image--stars_4">
+            <div class="stars__star"></div>
 
-      <div class="stars">
-        <div class="stars__image stars__image--stars_4">
-          <div class="stars__star"></div>
+            <div class="stars__star"></div>
 
-          <div class="stars__star"></div>
+            <div class="stars__star"></div>
 
-          <div class="stars__star"></div>
+            <div class="stars__star"></div>
 
-          <div class="stars__star"></div>
+            <div class="stars__star"></div>
+          </div>
 
-          <div class="stars__star"></div>
+          <div class="stars__text">Reviews: 5</div>
         </div>
-
-        <div class="stars__text">Reviews: 5</div>
       </div>
 
       <p class="product-card__price price-container">
         <span>Price:</span>
-
+        <!-- I can`t do it with class name, because BEMlint didn`t let me
+        name it smth. like product-card__price-title and ...-amount.
+        Also the only way to fix it that I found to delete classes
+        in spans and increase specificity in CSS-->
         <span>$2,199</span>
       </p>
 
       <a
         href="#"
-        class="product-card__button"
+        class="product-card__button button-container"
         data-qa="hover"
       >
         Buy
