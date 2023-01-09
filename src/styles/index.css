@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body,
+p {
+  margin: 0;
+
+  --white-for-card: #fff;
+  --blue-for-card: #00acdc;
+  --black--for-card: #060b35;
+  --grey--for-card: #616070;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card_img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+  margin-left: 3px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+  color: var(--black--for-card);
+}
+
+.card__code {
+  color: var(--grey--for-card);
+  font-weight: 400;
+  font-size: 10px;
+  margin-bottom: 16px;
+  line-height: 14px;
+}
+
+.card__rating {
+  margin-bottom: 24px;
+}
+
+.card__rating,
+.card__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--black--for-card);
+}
+
+.card__price {
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--grey--for-card);
+}
+
+.card__price-money {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--black--for-card);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: var(--blue-for-card);
+  color: var(--white-for-card);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--blue-for-card);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.link:hover {
+  background-color: var(--white-for-card);
+  color: var(--blue-for-card);
+}
