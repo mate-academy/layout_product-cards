@@ -1,0 +1,143 @@
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+.page {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  --margin-top: 16px;
+}
+
+.page__card {
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.card__img {
+  margin-top: var(--margin-top);
+
+  text-align: center;
+}
+
+.card__name {
+  margin-top: 36px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  margin-top: 4px;
+
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #616070;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: var(--margin-top);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars * {
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star {
+  margin-right: 4px;
+
+  width: 16px;
+  height: 16px;
+}
+
+.stars--1 :nth-child(1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__reviews-amount {
+  display: block;
+
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 24px;
+}
+
+.card__text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__total {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: var(--margin-top);
+  padding: 11px 55px;
+
+  border: 1px solid #00acdc;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #00acdc;
+  border-radius: 5px;
+}
+
+.card__btn:hover {
+  border: 1px solid #00acdc;
+
+  color: #00acdc;
+  background-color: #fff;
+}
