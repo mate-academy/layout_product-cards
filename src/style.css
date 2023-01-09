@@ -92,30 +92,65 @@
 }
 
 .card__buy {
-  text-transform: uppercase;
   margin: 16px;
   padding: 0;
   border: 0;
-  background: var(--color-background-buy-card);
-  border-radius: 5px;
 }
 
 .card__link {
   font-family: "Roboto", sans-serif;
-  display: inline-block;
-  text-align: center;
+  display: block;
+  font-size: 1px;
   width: 100%;
   font-weight: 700;
-  font-size: 14px;
   line-height: 40px;
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
+  background: var(--color-background-buy-card);
+  border-radius: 5px;
+  position: relative;
 }
 
-.card__link:hover {
+.card__link::before {
+  content: attr(data-name);
+  position: absolute;
+  font-size: 14px;
+  left: 0;
+  top: 0;
+  width: 100%;
   color: var(--color-background-buy-card);
   line-height: 38px;
-  background: #fff;
+  background-color: #fff;
   border: 1px solid var(--color-background-buy-card);
   border-radius: 5px;
+  transform: rotateX(90deg) translateY(40px);
+  transform-origin: 50% 100%;
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+.card__link:hover::before {
+  transform: rotateX(0deg)translateY(0);
+}
+
+.card__link::after {
+  content: attr(data-name);
+  position: absolute;
+  font-size: 14px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  line-height: 38px;
+  background-color: var(--color-background-buy-card);
+  border-radius: 5px;
+  transform: rotateX(0deg) translateY();
+  transform-origin: 50% 0;
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+.card__link:hover::after {
+  transform: rotateX(90deg)translateY(-38px);
 }
