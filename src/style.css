@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  --color-fist-text: #060b35;
+  --color-second-text: #616070;
+  --color-blu: #00acdc;
+  --color-bground: #fff;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3ff;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: var(--color-bground);
+}
+
+.card__img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__name {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-fist-text);
+  margin-bottom: 4px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color-second-text);
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(n) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__container-reviews {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.reviews-text {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color-fist-text);
+}
+
+.card__conteiner-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-second-text);
+  line-height: 18px;
+}
+
+.card__price {
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  color: var(--color-fist-text);
+}
+
+.card__button-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  background: var(--color-blu);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--color-bground);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.card__button-buy:hover {
+  background: var(--color-bground);
+  border: 1px solid var(--color-blu);
+  color: var(--color-blu);
+}
