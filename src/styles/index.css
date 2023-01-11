@@ -1,18 +1,25 @@
-body,
-div,
+@import "./stars.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #060b35;
+}
+
+h2,
 p,
 a {
   margin: 0;
   padding: 0;
-  color: #060b35;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
 }
 
 .card {
-  padding: 32px 19px 16px;
   width: 200px;
+  padding: 32px 0 16px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -36,13 +43,14 @@ a {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
+  margin-bottom: 4px;
 }
 
 .card__code {
   font-weight: 400;
   font-size: 10px;
   color: #616070;
-  margin: 4px 0 16px;
+  margin-bottom: 16px;
 }
 
 .card__rating {
@@ -52,24 +60,9 @@ a {
   margin-bottom: 24px;
 }
 
-.stars {
-  display: flex;
-}
-
 .card__reviews {
   font-weight: 400;
   font-size: 10px;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background: url(./images/star-active.svg) center no-repeat;
-  margin-right: 4px;
-}
-
-.stars__star:nth-child(n+5) {
-  background: url(./images/star.svg) center no-repeat;
 }
 
 .card__price {
@@ -103,10 +96,10 @@ a {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  border: 1px solid #00acdc;
 }
 
-.card__buy-button--is-active:hover {
+.card__buy-button:hover {
   background: #fff;
   color: #00acdc;
-  border: 1px solid #00acdc;
 }
