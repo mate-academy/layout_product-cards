@@ -1,0 +1,32 @@
+.card__stars-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 var(--margin-left-right) 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:not(:last-of-type) {
+  margin-right: 4px;
+}
+
+.stars__stars--0 :nth-of-type(-n),
+.stars__stars--1 :nth-of-type(-n+1),
+.stars__stars--2 :nth-of-type(-n+2),
+.stars__stars--3 :nth-of-type(-n+3),
+.stars__stars--4 :nth-of-type(-n+4),
+.stars__stars--5 :nth-of-type(n) {
+  background-image: url(/images/star-active.svg);
+}
