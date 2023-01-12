@@ -5,6 +5,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   --color-grey: #616070;
   --color-blue: #00acdc;
@@ -18,7 +22,6 @@ body {
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   padding-top: 32px;
-  box-sizing: border-box;
 }
 
 .picture-bem1__elem {
@@ -28,7 +31,7 @@ body {
   position: relative;
 }
 
-.bem-stars {
+.stars {
   display: flex;
   padding: 0 16px;
 }
@@ -37,10 +40,11 @@ body {
   margin: 0 19px;
 }
 
-.bem-stars__star-row--active1,
-.bem-stars__star-row--active2,
-.bem-stars__star-row--active3,
-.bem-stars__star-row--active4 {
+.stars :nth-child(1),
+.stars :nth-child(2),
+.stars :nth-child(3),
+.stars :nth-child(4),
+.stars :nth-child(5) {
   width: 16px;
   height: 16px;
   border-radius: 0.5px;
@@ -65,14 +69,14 @@ body {
   margin-top: 4px;
 }
 
-.star {
+.card__review {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
   align-items: center;
 }
 
-.bem-stars__star-row--passive5 {
+.stars :nth-child(5) {
   width: 16px;
   height: 16px;
   border-radius: 0.5px;
@@ -96,7 +100,7 @@ body {
   margin-top: 24px;
 }
 
-.elem1 {
+.price {
   font-style: "Regular";
   font-size: 12px;
   line-height: 18px;
@@ -104,7 +108,7 @@ body {
   color: var(--color-grey);
 }
 
-.elem2 {
+.cost {
   font-style: "Bold";
   font-weight: 700;
   font-size: 16px;
@@ -126,11 +130,10 @@ body {
   color: white;
   margin: 16px;
   line-height: 16px;
-  box-sizing: border-box;
   border: 1px solid transparent;
 }
 
-.bem-stars :not(:last-child) {
+.stars :not(:last-child) {
   margin-right: 4px;
 }
 
