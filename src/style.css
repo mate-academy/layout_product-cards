@@ -5,6 +5,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  --black: #060b35;
+  --grey: #616070;
+  --blue: #00acdc;
 }
 
 .product-card {
@@ -12,7 +15,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 200px;
-  height: 406px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 16px 16px;
@@ -25,7 +27,7 @@ body {
 }
 
 .product-card__title {
-  color: #060b35;
+  color: var(--black);
   line-height: 18px;
   font-size: 12px;
   font-weight: 500;
@@ -34,7 +36,7 @@ body {
 .product-card__code {
   width: 100%;
   padding-top: 4px;
-  color: #616070;
+  color: var(--grey);
   line-height: 14px;
   font-size: 10px;
   font-weight: 400;
@@ -66,7 +68,7 @@ body {
 }
 
 .product-card__reviews {
-  color: #060b35;
+  color: var(--black);
   line-height: 14px;
   font-size: 10px;
   font-weight: 400;
@@ -80,14 +82,14 @@ body {
 }
 
 .product-card__price-title {
-  color: #616070;
+  color: var(--grey);
   line-height: 18px;
   font-size: 12px;
   font-weight: 400;
 }
 
 .product-card__price-value {
-  color: #060b35;
+  color: var(--black);
   line-height: 18px;
   font-size: 16px;
   font-weight: 700;
@@ -98,8 +100,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-grow: 1;
-  background-color: #00acdc;
+  height: 40px;
+  background-color: var(--blue);
   border-radius: 5px;
   text-transform: uppercase;
   text-decoration: none;
@@ -111,6 +113,6 @@ body {
 
 .product-card__link:hover {
   background-color: transparent;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  border: 1px solid var(--blue);
+  color: var(--blue);
 }
