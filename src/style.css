@@ -2,7 +2,8 @@ html {
   --main-color: #00acdc;
   --text-accent-color: #060b35;
   --text-secondary-color: #616070;
-
+  --border-color: #f3f3f3;
+  --white-color: #fff;
   font-family: Roboto, sans-serif;
   font-size: 10px;
   line-height: 14px;
@@ -13,13 +14,16 @@ body {
   margin: 0;
 }
 
-.card {
+* {
   box-sizing: border-box;
+}
+
+.card {
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 32px 16px 16px;
-  background: #fff;
+  background: var(--white-color);
 }
 
 .card__image {
@@ -75,12 +79,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   box-sizing: border-box;
   height: 40px;
   border: 1px solid var(--main-color);
   border-radius: 5px;
-
   font-size: 14px;
   line-height: 16px;
   color: #fff;
@@ -104,20 +106,11 @@ body {
   width: 16px;
   height: 16px;
   margin-right: 4px;
-
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(./images/star-active.svg);
+.stars--4 :nth-child(-n + 4) {
+  background: url(./images/star-active.svg) no-repeat center;
 }
