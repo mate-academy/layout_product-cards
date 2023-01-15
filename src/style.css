@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+
+/* #region reset */
+body,
+h1,
+h3,
+p {
+  margin: 0;
+}
+/* #endregion */
+
+.card {
+  --buy-link-color: #00acdc;
+  --white: #fff;
+  --title-color: #060b35;
+  --code-label-color: #616070;
+  --block-width: 166px;
+  --margin: 16px;
+  --star-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  width: 200px;
+  box-sizing: border-box;
+  background: var(--white);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card-img {
+  width: 81%;
+  margin-top: calc(2 * var(--margin));
+  margin-bottom: 40px;
+}
+
+.card-description {
+  width: var(--block-width);
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card-code {
+  width: var(--block-width);
+  color: var( --code-label-color);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: var(--margin);
+}
+
+/* #region rate */
+.card-rate {
+  width: var(--block-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* #region stars */
+.stars__star {
+  height: var(--star-size);
+  width: var(--star-size);
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--0 > * ,
+.stars--1 > *:not(:first-child),
+.stars--2 :nth-child(n+2),
+.stars--3 :nth-child(n+3),
+.stars--4 :last-child {
+  background-image: url(images/star.svg);
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+/* #endregion */
+
+.card-rate__reviews {
+  color: var(--title-color);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+/* #endregion */
+
+/* #region price */
+.card-price {
+  width: var(--block-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--margin);
+  align-items: flex-end;
+}
+
+.card-price__label {
+  font-weight: 400;
+  font-size: 12px;
+  color: var( --code-label-color);
+  line-height: 18px;
+}
+
+.card-price__price {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+/* #endregion */
+
+/* #region buy  */
+.card-buy {
+  display: block;
+  width: var(--block-width);
+  height: 40px;
+  box-sizing: border-box;
+  background: var(--buy-link-color);
+  border-radius: 5px;
+  margin-bottom: var(--margin);
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid var(--buy-link-color);
+}
+
+.card-buy:hover {
+  color: var(--buy-link-color);
+  background-color: var(--white);
+}
+/* #endregion */
