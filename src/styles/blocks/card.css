@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@500&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -6,13 +8,21 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --main-color-text: #060b35;
+  --secondary-color-text: #616070;
+  --border-color: #f3f3f3;
+  --card-background-color: #fff;
+  --background-button: #00acdb;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   width: 200px;
   padding: 32px 16px 16px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  background: var(--card-background-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
 }
 
@@ -31,7 +41,7 @@ html {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
-  color: #060b35;
+  color: var(--main-color-text);
   padding-top: 40px;
 }
 
@@ -39,7 +49,7 @@ html {
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
-  color: #616070;
+  color: var(--secondary-color-text);
   padding-top: 4px;
 }
 
@@ -61,14 +71,14 @@ html {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  color: #616070;
+  color: var(--secondary-color-text);
 }
 
-.card__price-namber {
+.card__price-number {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  color: #060b35;
+  color: var(--main-color-text);
 }
 
 .card__link {
@@ -83,20 +93,19 @@ html {
   text-transform: uppercase;
   height: 40px;
   width: 166px;
-  bottom: 17px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
-  background-color: #00acdb;
+  background-color: var(--background-button);
   border-radius: 5px;
 }
 
 .card__link-buy:hover {
   background-color: #fff;
-  border: 1px solid #00acdb;
+  border: 1px solid var(--background-button);
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
-  color: #00acdb;
+  color: var(--background-button);
 }
