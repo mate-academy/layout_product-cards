@@ -2,7 +2,7 @@
 
 /* #region reset */
 body,
-h1,
+h2,
 h3,
 p {
   margin: 0;
@@ -30,13 +30,13 @@ p {
   border-radius: 5px;
 }
 
-.card-img {
+.card__img {
   width: 81%;
   margin-top: calc(2 * var(--margin));
   margin-bottom: 40px;
 }
 
-.card-description {
+.card__description {
   width: var(--block-width);
   color: var(--title-color);
   font-weight: 500;
@@ -45,7 +45,7 @@ p {
   margin-bottom: 4px;
 }
 
-.card-code {
+.card__code {
   width: var(--block-width);
   color: var( --code-label-color);
   font-weight: 400;
@@ -55,7 +55,7 @@ p {
 }
 
 /* #region rate */
-.card-rate {
+.card__rate-container {
   width: var(--block-width);
   display: flex;
   justify-content: space-between;
@@ -63,12 +63,12 @@ p {
   margin-bottom: 24px;
 }
 
+/* #region stars */
 .stars {
   display: flex;
   justify-content: space-between;
 }
 
-/* #region stars */
 .stars__star {
   height: var(--star-size);
   width: var(--star-size);
@@ -94,7 +94,7 @@ p {
 }
 /* #endregion */
 
-.card-rate__reviews {
+.card__rate-count {
   color: var(--title-color);
   font-weight: 400;
   font-size: 10px;
@@ -104,7 +104,7 @@ p {
 /* #endregion */
 
 /* #region price */
-.card-price {
+.card__price-container {
   width: var(--block-width);
   display: flex;
   flex-direction: row;
@@ -113,14 +113,14 @@ p {
   align-items: flex-end;
 }
 
-.card-price__label {
+.card__price-label {
   font-weight: 400;
   font-size: 12px;
   color: var( --code-label-color);
   line-height: 18px;
 }
 
-.card-price__price {
+.card__price {
   color: var(--title-color);
   font-weight: 700;
   font-size: 16px;
@@ -129,7 +129,7 @@ p {
 /* #endregion */
 
 /* #region buy  */
-.card-buy {
+.card__buy {
   display: block;
   width: var(--block-width);
   height: 40px;
@@ -147,7 +147,7 @@ p {
   border: 1px solid var(--buy-link-color);
 }
 
-.card-buy:hover {
+.card__buy:hover {
   color: var(--buy-link-color);
   background-color: var(--white);
 }
