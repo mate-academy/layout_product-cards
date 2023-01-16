@@ -1,15 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
 
-/* #region reset */
-body,
-h2,
-h3,
-p {
-  margin: 0;
-}
-/* #endregion */
-
-.card {
+html {
   --buy-link-color: #00acdc;
   --white: #fff;
   --title-color: #060b35;
@@ -18,11 +9,25 @@ p {
   --margin: 16px;
   --star-size: 16px;
 
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  color: var( --code-label-color);
+  line-height: 14px;
+
+}
+
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  font-family: Roboto, sans-serif;
   width: 200px;
   box-sizing: border-box;
   background: var(--white);
@@ -30,14 +35,19 @@ p {
   border-radius: 5px;
 }
 
+.card > * {
+  display: flex;
+  width: var(--block-width);
+  margin-bottom: var(--margin);
+  box-sizing: border-box;
+}
+
 .card__img {
   width: 81%;
-  margin-top: calc(2 * var(--margin));
-  margin-bottom: 40px;
+  margin: calc(2 * var(--margin)) auto  40px;
 }
 
 .card__description {
-  width: var(--block-width);
   color: var(--title-color);
   font-weight: 500;
   font-size: 12px;
@@ -46,24 +56,17 @@ p {
 }
 
 .card__code {
-  width: var(--block-width);
-  color: var( --code-label-color);
   font-weight: 400;
   font-size: 10px;
-  line-height: 14px;
-  margin-bottom: var(--margin);
 }
 
-/* #region rate */
 .card__rate-container {
   width: var(--block-width);
-  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 24px;
 }
 
-/* #region stars */
 .stars {
   display: flex;
   justify-content: space-between;
@@ -92,31 +95,21 @@ p {
 .stars--5 :nth-child(n) {
   background-image: url(images/star-active.svg);
 }
-/* #endregion */
 
 .card__rate-count {
   color: var(--title-color);
   font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
 }
 
-/* #endregion */
-
-/* #region price */
 .card__price-container {
-  width: var(--block-width);
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: var(--margin);
   align-items: flex-end;
 }
 
 .card__price-label {
   font-weight: 400;
   font-size: 12px;
-  color: var( --code-label-color);
   line-height: 18px;
 }
 
@@ -126,17 +119,12 @@ p {
   font-size: 16px;
   line-height: 18px;
 }
-/* #endregion */
 
-/* #region buy  */
 .card__buy {
   display: block;
-  width: var(--block-width);
   height: 40px;
-  box-sizing: border-box;
   background: var(--buy-link-color);
   border-radius: 5px;
-  margin-bottom: var(--margin);
   text-decoration: none;
   color: var(--white);
   font-weight: 700;
@@ -151,4 +139,3 @@ p {
   color: var(--buy-link-color);
   background-color: var(--white);
 }
-/* #endregion */
