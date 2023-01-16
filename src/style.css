@@ -1,0 +1,164 @@
+/* #region root-style */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --color-background-buy-card: #00acdc;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+  color: #060b35;
+}
+/* #endregion */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__picture {
+  padding: 32px 19px 36px;
+}
+
+.card__images {
+  height: 134px;
+  width: 160px;
+}
+
+.card__name {
+  padding: 0 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__code {
+  color: #616070;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 4px 16px 0;
+}
+
+/* #region stars-review */
+.card__reviews {
+  display: flex;
+  align-items: center;
+  padding: 16px 16px 0;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.stars {
+  display: flex;
+  padding-right: 17px;
+  gap: 4px;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+/* #endregion */
+
+/* #region price */
+.card__prices {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 24px 16px 0;
+}
+
+.card__price:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-right: 86px;
+  color: #616070;
+}
+
+.card__price:last-child {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+/* #endregion */
+
+/* #region buy */
+.card__link {
+  margin: 16px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  font-size: 0.1px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--color-background-buy-card);
+  border-radius: 5px;
+  position: relative;
+}
+/* #endregion */
+
+/* #region transition-button */
+.card__link::before {
+  content: attr(data-name);
+  position: absolute;
+  font-size: 14px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: var(--color-background-buy-card);
+  line-height: 38px;
+  background-color: #fff;
+  border: 1px solid var(--color-background-buy-card);
+  border-radius: 5px;
+  transform: rotateX(90deg) translateY(40px);
+  transform-origin: 50% 100%;
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+.card__link:hover::before {
+  transform: rotateX(0deg)translateY(0);
+}
+
+.card__link::after {
+  content: attr(data-name);
+  position: absolute;
+  font-size: 14px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  line-height: 38px;
+  background-color: var(--color-background-buy-card);
+  border-radius: 5px;
+  transform: rotateX(0deg) translateY();
+  transform-origin: 50% 0;
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+.card__link:hover::after {
+  transform: rotateX(90deg)translateY(-38px);
+}
+/* #endregion */
