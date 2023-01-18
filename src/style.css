@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -33,13 +41,13 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  margin: 0;
+  margin-bottom: 4px;
 }
 
 .card__code {
   font-weight: 400;
   font-size: 10px;
-  margin: 4px 0 0;
+  margin-bottom: 16px;
   color: var(--light);
   line-height: 14px;
 }
@@ -47,7 +55,7 @@ body {
 .card__review {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .card__stars {
@@ -58,12 +66,13 @@ body {
   background: url(images/star.svg) no-repeat center;
   width: 16px;
   height: 16px;
+}
+
+.card__stars-star:not(:last-child) {
   margin-right: 4px;
 }
 
 .card__count {
-  order: 1;
-  flex-grow: 0;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -75,7 +84,7 @@ body {
 .price {
   display: flex;
   justify-content: space-between;
-  margin: 24px 0 16px;
+  margin-bottom: 16px;
   line-height: 18px;
 }
 
@@ -100,11 +109,12 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
-  height: 40px;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 12px 69px;
+  border: 1px solid var(--main);
 }
 
 .card__stars--4 :nth-child(-n+4) {
@@ -112,8 +122,6 @@ body {
 }
 
 .buy:hover {
-  border: 1px solid var(--main);
-  border-radius: 5px;
   background-color: transparent;
   color: var(--main);
 }
