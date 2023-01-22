@@ -1,3 +1,5 @@
+/* #region Normalize */
+
 :root {
   --main-accent: #060b35;
   --secondary: #616070;
@@ -11,9 +13,134 @@
 
 body {
   margin: 0;
+  padding: 0;
   background-color: var(--white);
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
   color: var(--main-accent);
 }
+
+p {
+  margin: 0;
+}
+
+/* #endregion */
+
+.card {
+  width: 166px;
+  height: min-content;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid var(--card-border-color);
+}
+
+.card__img {
+  display: flex;
+  margin: auto;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.card__title {
+  display: flex;
+  margin-bottom: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-accent);
+}
+
+.card__vendor-code {
+  line-height: 14px;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+
+/* #region Stars */
+
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:last-child {
+  margin: 0;
+}
+
+.stars__star:nth-child(n+1) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(n) {
+  background-image: url(./images/star-active.svg);
+}
+
+/* #endregion */
+
+/* #region Price */
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-container-price-word {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary);
+}
+
+.card__price-container-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* #endregion */
+
+/* #region Main button */
+
+.card__main-button {
+  padding: 12px 70px;
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--blue-accent);
+  transition: ease-in-out 0.3s;
+}
+
+.card__main-button:hover {
+  color: var(--blue-accent);
+  background-color: var(--white);
+  border: 1px solid var(--blue-accent);
+}
+
+/* #endregion */
