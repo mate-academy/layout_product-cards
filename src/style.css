@@ -1,11 +1,13 @@
 * {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: rgba(6, 11, 53, 1);
   --main-blue: rgba(0, 172, 220, 1);
+
 }
 
 .card {
@@ -19,7 +21,8 @@
 
 .card__image {
   width: 160px ;
-  margin: 20px auto 40px;
+  height: 134px;
+  margin: 16px auto 40px;
 }
 
 .stars {
@@ -41,8 +44,8 @@
 /* .stars--1 :first-child{ */
 /* .stars--2 :nth-child(-n+2){ */
 /* .stars--3 :nth-child(-n+3){  */
-.stars--4 :nth-child(-n+4){
-/* .stars--5 .stars__star:nth-child(n) { */
+.stars--4 :nth-child(-n+4) {
+  /* .stars--5 .stars__star:nth-child(n) { */
   background: url(images/star-active.svg) center no-repeat;
 }
 
@@ -50,6 +53,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: flex-end;
 }
 
 .card__product-text {
@@ -67,7 +72,6 @@
 .card__reviews-amount {
   font-size: 10px;
   line-height: 14px;
-  margin-bottom: 16px;
 }
 
 .card__price {
@@ -93,7 +97,7 @@
   font-weight: 700;
   text-decoration: none;
   text-align: center;
-  background:var(--main-blue);
+  background: var(--main-blue);
   border-style: none;
   border-radius: 5px;
   padding: 12px 70px;
