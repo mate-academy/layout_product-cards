@@ -6,16 +6,18 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.card {
+  width: var(--card-width);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
 .card__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: var(--card-width);
-  margin: auto;
-  padding: 32px 16px 16px;
 
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
 .card__product-image {
@@ -97,7 +99,15 @@ html {
   text-transform: uppercase;
   color: #fff;
 
-  padding: 12px 70px; /* mb 70.5px*/
-  background-color: var(--buy-link-bg-color);
+  padding: 11px 69px;
+  background-color: var(--buy-link-color);
+
+  border: 1px solid transparent;
   border-radius: 5px;
+}
+
+.card__buy-link:hover {
+  color: var(--buy-link-color);
+  border-color: var(--buy-link-color);
+  background-color: #fff;
 }
