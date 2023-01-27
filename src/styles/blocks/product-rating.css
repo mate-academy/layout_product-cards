@@ -9,10 +9,11 @@
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 4px;
+  cursor: pointer;
 }
 
-.product-rating__star:last-child {
-  margin-right: 0;
+.product-rating__star:not(:last-child) {
+  margin-right: 4px;
 }
 
 .product-rating__stars--active-1 :first-child,
@@ -21,11 +22,4 @@
 .product-rating__stars--active-4 :nth-child(-n+4),
 .product-rating__stars--active-5 :nth-child(-n+5) {
   background-image: url("../../images/star-active.svg");
-}
-
-.product-rating__reviews {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  color: var(--primary);
 }
