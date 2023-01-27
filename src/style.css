@@ -69,6 +69,10 @@
   height: 16px;
 }
 
+.stars__star:not(:first-child) {
+  margin-left: 4px;
+}
+
 .stars--0 .stars__star:nth-child(n+1),
 .stars--1 .stars__star:nth-child(n+2),
 .stars--2 .stars__star:nth-child(n+3),
@@ -107,34 +111,24 @@
   color: #060b35;
 }
 
-.button {
-  width: 166px;
-  height: 40px;
-  background-color: #00acdc;
-  border-radius: 5px;
-}
-
-.button__buy {
+.card__button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-decoration: none;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  color: #fff;
-  margin-bottom: 16px;
-}
-
-.button__buy:hover {
-  color: #00acdc;
-  border: 1px solid #00acdc;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #00acdc;
   border-radius: 5px;
+  border: transparent;
   height: 40px;
+  color: #ffff;
 }
 
-.button:hover {
-  background-color: #fff;
+.card__button:hover {
+  background: #ffff;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  color: #00acdc;
 }
