@@ -1,17 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-  font-style: 12px;
-}
-
-.body {
-  margin: 0;
-}
-
 .card {
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
 
@@ -37,6 +25,9 @@ html {
   font-weight: 500;
   font-size: 12px;
   color: #060b35;
+  height: 36px;
+  width: 166px;
+  line-height: 18px;
 
   margin-bottom: 4px;
 }
@@ -69,7 +60,6 @@ html {
   align-items: center;
 
   margin-bottom: 16px;
-  margin-top: 0;
 
   font-weight: 400;
   font-size: 12px;
@@ -88,6 +78,7 @@ html {
   border-radius: 5px;
 
   font-weight: 700;
+  font-size: 14px;
 
   width: 166px;
   height: 40px;
@@ -95,7 +86,7 @@ html {
 
   text-align: center;
   line-height: 40px;
-  
+
   color: white;
   text-transform: uppercase;
 }
@@ -105,26 +96,4 @@ html {
   border: 1px solid rgba(0, 172, 220, 1);
   border-radius: 5px;
   color: rgba(0, 172, 220, 1);
-}
-
-.stars {
-  display: flex;
-  height: 16px;
-}
-
-.stars__star {
-  margin-right: 4px;
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(images/star.svg);
-}
-
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--4 > .stars__star:nth-child(-n+4) {
-  background-image: url(images/star-active.svg);
 }
