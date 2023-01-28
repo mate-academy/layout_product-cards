@@ -1,14 +1,12 @@
 body,
 h2, /* decided to start from h2, assuming h1 will be
 used for more significant semantics */
-h3,
-h4 {
+p {
   margin: 0;
 }
 
 .card {
   width: 200px;
-  max-height: fit-content;
   /* to include border in block model */
   box-sizing: border-box;
 
@@ -24,7 +22,7 @@ h4 {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
-  font-family: roboto, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
   color: #060b35;
 }
 
@@ -108,14 +106,16 @@ h4 {
 }
 
 .card__buy-button {
+  margin-top: 16px;
   display: flex;
   height: 40px;
-  margin-top: 16px;
 
   justify-content: center;
   align-items: center;
 
   background: #00acdc;
+  box-sizing: border-box;
+  border: 1px solid transparent;
   border-radius: 5px;
 
   font-weight: 700;
@@ -127,8 +127,7 @@ h4 {
 }
 
 .card__buy-button:hover {
-  box-sizing: border-box;
   background-color: transparent;
   color: #00acdc;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
 }
