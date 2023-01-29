@@ -1,4 +1,11 @@
+@import "./blocks/card.css";
+@import "./blocks/star.css";
+
 html {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --blue-color: #00acdc;
+
   font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
@@ -7,110 +14,4 @@ body,
 p,
 h1 {
   margin: 0;
-}
-
-.card {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: center;
-  width: 200px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  padding: 32px 16px 16px;
-}
-
-.card__image {
-  align-self: center;
-  width: 160px;
-  height: 134px;
-  margin-bottom: 40px;
-}
-
-.card__title {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 500;
-  line-height: 18px;
-  color: #060b35;
-  margin-bottom: 4px;
-}
-
-.card__code {
-  line-height: 14px;
-  font-size: 10px;
-  color: #616070;
-  margin-bottom: 16px;
-}
-
-.card__rate {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 24px;
-}
-
-.stars {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-}
-
-.stars__star {
-  background: url(./images/star.svg) no-repeat center;
-  width: 16px;
-  height: 16px;
-}
-
-.stars__star:not(:last-child) {
-  background-image: url(./images/star-active.svg);
-  margin-right: 4px;
-}
-
-.card__review {
-  line-height: 14px;
-  color: #060b35;
-  font-size: 10px;
-}
-
-.card__price {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.card__text {
-  line-height: 18px;
-  color: #616070;
-  font-size: inherit;
-  font-weight: 400;
-}
-
-.card__cost {
-  line-height: 18px;
-  color: #060b35;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.card__btn {
-  color: #fff;
-  font-size: 14px;
-  line-height: 16px;
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-
-  background: #00acdc;
-  border-radius: 5px;
-  border: 1px solid #00acdc;
-  padding: 11px 0;
-
-  transition: 0.2s ease all;
-}
-
-.card__btn:hover {
-  color: #00acdc;
-  background: #fff;
 }
