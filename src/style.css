@@ -1,11 +1,12 @@
 ﻿:root {
   --color-light-blue: #00acdc;
-  --text-color: #060b35;
+  --text-color-dark: #060b35;
+  --text-color-gray: #616070;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
-
 }
 
 html {
@@ -34,12 +35,11 @@ html {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
-
-  color: var(--text-color);
+  color: var(--text-color-dark);
 }
 
 .product-card__code {
-  color: #616070;
+  color: var(--text-color-gray);
   margin-bottom: 16px;
 }
 
@@ -51,7 +51,7 @@ html {
 }
 
 .reviews_count {
-  color: var(--text-color);
+  color: var(--text-color-dark);
 }
 
 .stars {
@@ -62,7 +62,6 @@ html {
   width: 16px;
   height: 16px;
   margin-right: 4px;
-
   background-image: url("./images/star-active.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -83,39 +82,33 @@ html {
 .product-card__price-text {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--text-color-gray);
 }
 
 .product-card__price-actual-price {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
-
-  color: var(--text-color);
+  color: var(--text-color-dark);
 }
 
 .product-card__buy-link {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-
+  padding: 11px 0;
   border: 1px solid var(--color-light-blue);
   border-radius: 5px;
-
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-
   background-color: var(--color-light-blue);
 }
 
 .product-card__buy-link:hover {
   background-color: white;
-
   color: var(--color-light-blue);
 }
