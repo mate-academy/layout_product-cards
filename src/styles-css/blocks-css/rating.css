@@ -1,0 +1,25 @@
+.product-rating__stars {
+  display: flex;
+}
+
+.product-rating__star {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.product-rating__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.product-rating__stars--active-1 :first-child,
+.product-rating__stars--active-2 :nth-child(-n+2),
+.product-rating__stars--active-3 :nth-child(-n+3),
+.product-rating__stars--active-4 :nth-child(-n+4),
+.product-rating__stars--active-5 :nth-child(-n+5) {
+  background-image: url("../../images/star-active.svg");
+}
