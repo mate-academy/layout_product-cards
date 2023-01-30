@@ -1,39 +1,10 @@
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  border: none;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #060b35;
-}
-
 .card {
+  width: 200px;
+  padding: 32px 16px 16px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-}
-
-.container__card {
-  width: 200px;
-  padding: 32px 16px 16px;
 }
 
 .card__img {
@@ -93,6 +64,8 @@ body {
 }
 
 .card__buy {
+  height: 40px;
+  line-height: 40px;
   display: block;
   text-align: center;
   cursor: pointer;
@@ -101,37 +74,11 @@ body {
   background: #00acdc;
   border-radius: 5px;
   width: 100%;
-  padding: 12px 0;
+  border: 1px solid transparent;
 }
 
 .card__buy:hover {
   background-color: transparent;
   color: #00acdc;
-  border: 1px solid #00acdc;
-}
-
-.stars__star {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.stars {
-  display: flex;
-  justify-content: center;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(images/star-active.svg);
+  border-color: #00acdc;
 }
