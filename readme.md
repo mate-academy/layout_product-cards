@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://kirill-vypirovskyi.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://kirill-vypirovskyi.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
 ___
@@ -28,7 +28,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
 - Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
-and keep it operational. If you change `stars--4` modifier to `stars--2` or
+and keep it operational. If you change `stars__image--stars_4` modifier to `stars__image--stars_2` or
 other - number of selected stars should change correctly.
 - There should be only 2 BEM blocks in your code `card` and `stars` all the others are just card elements
 - Item with the text `Buy` should be a link.
