@@ -1,6 +1,4 @@
 .card {
-  display: flex;
-  flex-direction: column;
   width: 200px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
@@ -10,7 +8,7 @@
 
 .card__product-image {
   display: block;
-  align-self: center;
+  margin: 0 auto;
   width: 160px;
   height: 134px;
   margin-bottom: 40px;
@@ -30,13 +28,22 @@
 }
 
 .card__product-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   margin-bottom: 24px;
+}
+
+.card__reviews-amount {
+  font-size: 10px;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   margin-bottom: 16px;
 }
 
@@ -51,8 +58,10 @@
 }
 
 .card__buy-button {
-  display: block;
-  padding: 10.5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
   font-size: 14px;
   font-weight: var(--font-bold);
   text-transform: uppercase;
