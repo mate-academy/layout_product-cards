@@ -1,0 +1,24 @@
+.star {
+  display: flex;
+}
+
+.star__stars {
+  width: var(--star-width);
+  height: var(--star-height);
+  background-image: url(/src/images/star.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.star__stars:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .star__stars:nth-of-type(-n + 1),
+.stars--2 .star__stars:nth-of-type(-n + 2),
+.stars--3 .star__stars:nth-of-type(-n + 3),
+.stars--4 .star__stars:nth-of-type(-n + 4),
+.stars--5 .star__stars:nth-of-type(-n + 5) {
+  background-image: url(/src/images/star-active.svg);
+}
