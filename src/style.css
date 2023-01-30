@@ -1,0 +1,131 @@
+html {
+  font-family: "Roboto", sans-serif;
+  background: rgb(147, 137, 137);
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.productImg {
+  height: 134px;
+  padding: 16px 3px 0;
+  margin-bottom: 40px;
+}
+
+.card__productTitle {
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.smallText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__productCode {
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.ratingAndReviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ratingAndReviews__reviews,
+.price__priceAmount {
+  color: #060b35;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ratingAndReviews__stars--0 > .stars__star:nth-child(n) {
+  background-image: url(images/star.svg);
+}
+
+.ratingAndReviews__stars--1 > .stars__star:first-child,
+.ratingAndReviews__stars--2 > .stars__star:nth-child(-n + 2),
+.ratingAndReviews__stars--3 > .stars__star:nth-child(-n + 3),
+.ratingAndReviews__stars--4 > .stars__star:nth-child(-n + 4),
+.ratingAndReviews__stars--5 > .stars__star:nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price__priceText {
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.buyBtn {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  background-color: #00acdc;
+}
+
+.buyBtn:hover {
+  background-color: #fff;
+}
+
+.buyLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.buyLink:hover {
+  color: #00acdc;
+}
