@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+
+  --dark-grey-color: #060b35;
+  --light-grey-color: #616070;
+  --blue-color: #00acdc;
+}
+
+.card {
+  margin: 0;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  margin-bottom: 40px;
+  width: 160px;
+  height: 134px;
+  align-self: center;
+}
+
+.card__title {
+  color: var(--dark-grey-color);
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.card__description {
+  color: var(--light-grey-color);
+  margin: 0 0 16px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.card__reviews {
+  margin: 0 0 24px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url(images/star.svg) center no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background: url(images/star-active.svg) center no-repeat;
+}
+
+.rating__count {
+  color: var(--dark-grey-color);
+  margin: 0;
+  padding-top: 2px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.card__price {
+  margin: 0 0 16px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__name {
+  color: var(--light-grey-color);
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.price__value {
+  color: var(--dark-grey-color);
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.button {
+  color: white;
+  width: 166px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+
+.button:hover {
+  color: var(--blue-color);
+  background-color: white;
+}
