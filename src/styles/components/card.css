@@ -12,6 +12,7 @@
 .card__image {
   width: 160px;
   height: 134px;
+
   margin: 16px auto 0;
 }
 
@@ -34,18 +35,14 @@
 }
 
 .card__rating {
+  display: flex;
+  justify-content: space-between;
+
   margin-top: 16px;
 }
 
-.rating {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rating__reviews-number {
-  display: flex;
-  align-items: flex-end;
-
+.card__rating-number {
+  text-align: right;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -53,28 +50,20 @@
 }
 
 .card__price {
+  display: flex;
+  justify-content: space-between;
+
   margin-top: 24px;
 }
 
-.price {
-  display: flex;
-  justify-content: space-between;
-}
-
-.price__title {
-  display: flex;
-  align-items: flex-end;
-
+.card__price-title {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
 }
 
-.price__amount {
-  display: flex;
-  align-items: flex-end;
-
+.card__price-amount {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -82,14 +71,17 @@
 }
 
 .card__buy-button {
-  margin-top: 16px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 40px;
 
-.buy-button {
+  margin-top: 16px;
+
   border: 1px solid var(--button-color);
   border-radius: 5px;
   background-color: var(--button-color);
-  padding: 11px 70px;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -99,7 +91,7 @@
   color: var(--card-bg);
 }
 
-.buy-button:hover {
+.card__buy-button:hover {
   background-color: var(--card-bg);
   color: var(--button-color);
 }
