@@ -1,27 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-:root {
-  --dark-text: #060b35;
-  --light-text: #616070;
-  --blue-button: #00acdc;
-}
-
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
 .card {
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
-  height: 408px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow: hidden;
 }
 
 .card__picture {
@@ -51,46 +36,6 @@ body {
   color: var(--light-text);
 }
 
-.stars {
-  align-self: flex-start;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 16px 0 0 16px;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-image: url("./images/star.svg");
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:first-child,
-.stars--2 .stars__star:first-child,
-.stars--2 .stars__star:nth-child(2),
-.stars--4 .stars__star:not(:last-child),
-.stars__block .stars--5 .stars__star,
-.stars--3 .stars__star:first-child,
-.stars--3 .stars__star:nth-child(2),
-.stars--3 .stars__star:nth-child(3) {
-  background-image: url("./images/star-active.svg");
-}
-
-.stars__reviews {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 10px;
-  margin-left: 22px;
-}
-
 .card__price {
   padding: 0;
   margin: 25px 16px 0;
@@ -118,21 +63,25 @@ body {
   width: 166px;
   height: 40px;
   background: #00acdc;
-  border-radius: 5px;
   cursor: pointer;
+
   font-weight: 700;
   font-size: 14px;
+  text-align: center;
+  text-decoration: none;
   color: #fff;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  border: 1px solid var(--blue-button);
-  text-align: center;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+
   margin: 17px 16px 0;
 }
 
