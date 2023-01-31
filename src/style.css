@@ -1,0 +1,117 @@
+:root {
+  --color-light-blue: #00acdc;
+  --text-color-dark: #060b35;
+  --text-color-light: #616070;
+  --main-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+.product {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  padding: 32px 16px 16px;
+}
+
+.product__image {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.product__name {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color-dark);
+}
+
+.product__code {
+  margin-bottom: 16px;
+  color: var(--text-color-light);
+}
+
+.product__raiting {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.product__stars {
+  display: flex;
+}
+
+.stars {
+  height: 16px;
+  width: 16px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars:not(:last-child) {
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.product__count {
+  color: var(--text-color-dark);
+}
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.price-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color-light);
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color-dark);
+}
+
+.product__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--color-light-blue);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: var(--main-color);
+  background-color: var(--color-light-blue);
+}
+
+.product__buy:hover {
+  background-color: var(--main-color);
+  color: var(--color-light-blue);
+}
