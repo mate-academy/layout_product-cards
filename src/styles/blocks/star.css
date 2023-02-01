@@ -1,15 +1,24 @@
 .stars-Wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .stars-Wrapper__row {
-  display: none;
-  flex-direction: row;
+  display: flex;
 }
 
-.stars-Wrapper__star {
+.stars-Wrapper__card-reviews {
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--black-color-for-text);
+}
+
+.stars-Wrapper__row--stars-4 {
+  display: flex;
+}
+
+.star {
   width: 16px;
   height: 16px;
   background-image: var(--star);
@@ -17,24 +26,14 @@
   background-position: center;
 }
 
-.stars-Wrapper__star:not(:last-child) {
+.star:not(:last-child) {
   margin-right: 4px;
 }
 
-.stars-Wrapper__row:nth-child(n+2) .stars-Wrapper__star:nth-child(1),
-.stars-Wrapper__row:nth-child(n+3) .stars-Wrapper__star:nth-child(2),
-.stars-Wrapper__row:nth-child(n+4) .stars-Wrapper__star:nth-child(3),
-.stars-Wrapper__row:nth-child(n+5) .stars-Wrapper__star:nth-child(4),
-.stars-Wrapper__row:nth-child(n+6) .stars-Wrapper__star:nth-child(5) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: var(--light-star);
-}
-
-.stars-Wrapper__card-reviews {
-  font-size: 10px;
-  line-height: 18px;
-  color: var(--black-color-for-text);
-}
-
-.stars-Wrapper__row--stars-4 {
-  display: flex;
 }
