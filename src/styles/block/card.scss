@@ -1,0 +1,76 @@
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+
+  &__product-image {
+    display: block;
+
+    width: 160px;
+    height: 134px;
+
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    @extend %text-big;
+    font-weight: 500;
+    color: $c-main;
+
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @extend %text-small;
+    color: $c-secondary;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    @extend %flex-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-count {
+    @extend %text-small;
+    color: $c-main;
+  }
+
+  &__price {
+    @extend %flex-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $c-main;
+  }
+
+  &__price-title {
+    @extend %text-big;
+    color: $c-secondary;
+  }
+
+  &__buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16;
+    font-weight: 700;
+    background: $c-blue;
+    color: $c-white;
+    border: 1px solid $c-blue;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $c-blue;
+      background: $c-white;
+    }
+  }
+}
