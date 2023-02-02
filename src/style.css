@@ -1,12 +1,5 @@
 * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
-}
-
-title {
-  display: none;
 }
 
 html {
@@ -15,6 +8,7 @@ html {
 }
 
 .card {
+  display: flex;
   flex-direction: column;
   width: 200px;
   padding: 0  16px 16px;
@@ -25,7 +19,7 @@ html {
 .card__image {
   height: 134px;
   width: 160px;
-  margin-top: 32px;
+  margin: 32px auto 0 ;
 }
 
 .card__description {
@@ -40,7 +34,6 @@ html {
 
 .card__product-code {
   margin-top: 4px;
-  align-self: flex-start;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
@@ -48,8 +41,13 @@ html {
 }
 
 .stars-container {
+  display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.stars-container__stars {
+  display: flex;
 }
 
 .card__stars-container {
@@ -74,7 +72,9 @@ html {
 }
 
 .stars-container__reviews {
-  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
@@ -82,6 +82,7 @@ html {
 }
 
 .price {
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
@@ -120,6 +121,9 @@ html {
 }
 
 .button__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 0;
