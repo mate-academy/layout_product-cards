@@ -2,10 +2,17 @@
   display: flex;
   flex-direction: column;
   width: 200px;
-  background-color: #fff;
-  border: 1px solid #f3f3f3e5;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
   border-radius: 5px;
   padding: 32px 16px 16px;
+
+  --card-background-color: #fff;
+  --card-border-color: #f3f3f3;
+  --card-text-color: #060b35;
+  --another-text-color: #616070;
+  --button-color: #00acdc;
+  --hover-button-color: #fff;
 }
 
 .card__img {
@@ -19,13 +26,11 @@
   font-weight: 500;
   line-height: 18px;
   margin: auto;
-  color: #060b35;
+  color: var(--card-text-color);
 }
 
 .card__code {
-  font-size: 10px;
-  font-weight: 400;
-  color: #616070;
+  color: var(--another-text-color);
   line-height: 14px;
   margin-top: 4px;
   margin-bottom: 16px;
@@ -40,14 +45,14 @@
 .price__text {
   font-size: 12px;
   font-weight: 400;
-  color: #616070;
+  color: var(--another-text-color);
   line-height: 17px;
 }
 
 .price__amount {
   font-size: 16px;
   font-weight: 700;
-  color: #060b35;
+  color: var(--card-text-color);
   line-height: 17px;
 }
 
@@ -55,9 +60,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00acdc;
-  width: 165px;
-  height: 39px;
+  background-color: var(--button-color);
+  width: 166px;
+  height: 40px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 700;
@@ -67,7 +72,7 @@
 }
 
 .card__button:hover {
-  background-color: #fff;
-  color: #00acdc;
-  border: 1px solid #00acdc;
+  background-color: var(--hover-button-color);
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
 }
