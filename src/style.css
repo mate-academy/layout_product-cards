@@ -1,8 +1,16 @@
 @import './styles/stars.css';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 400;
+
+  --sky-blue: #00acdc;
+  --main-text-color: #060b35;
+  --additional-text-color: #616070;
 }
 
 body, h2, p {
@@ -12,7 +20,6 @@ body, h2, p {
 
 .card {
   padding: 16px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -22,6 +29,7 @@ body, h2, p {
 }
 
 .card__image {
+  box-sizing: content-box;
   padding-top: 16px;
   width: 160px;
   height: 134px;
@@ -31,16 +39,16 @@ body, h2, p {
 .card__name {
   font-size: 12px;
   font-weight: 500;
-  line-height: 18px;
-  color: #060b35;
+  line-height: 1.5;
+  color: var(--main-text-color);
   margin-bottom: 4px;
 }
 
 .card__code {
   align-self: flex-start;
   font-size: 10px;
-  line-height: 14px;
-  color: #616070;
+  line-height: 1.4;
+  color: var(--additional-text-color);
   margin-bottom: 16px;
 }
 
@@ -54,8 +62,8 @@ body, h2, p {
 
 .card__number-of-reviews {
   font-size: 10px;
-  line-height: 14px;
-  color: #060b35;
+  line-height: 1.4;
+  color: var(--main-text-color);
   text-align: right;
 }
 
@@ -69,26 +77,26 @@ body, h2, p {
 
 .card__price-text {
   font-size: 12px;
-  line-height: 18px;
-  color: #616070;
+  line-height: 1.5;
+  color: var(--additional-text-color);
 }
 
 .card__price-number {
   font-weight: 700;
   font-size: 16px;
-  line-height: 18px;
-  color: #060b35;
+  line-height: 1.125;
+  color: var(--main-text-color);
 }
 
 .card__button {
   display: flex;
   align-items: center;
   font-weight: 700;
-  width: calc(100% - 2px);
-  height: 38px;
-  background: #00acdc;
+  width: 100%;
+  height: 40px;
+  background: var(--sky-blue);
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--sky-blue);
   text-align: center;
   justify-content: center;
   vertical-align: center;
@@ -96,10 +104,9 @@ body, h2, p {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 14px;
-  line-height: 16px;
 }
 
 .card__button:hover {
   background-color: #fff;
-  color: #00acdc;
+  color: var(--sky-blue);
 }
