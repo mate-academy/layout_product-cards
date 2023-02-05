@@ -1,0 +1,112 @@
+@import './styles/stars.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+
+  --sky-blue: #00acdc;
+  --main-text-color: #060b35;
+  --additional-text-color: #616070;
+}
+
+body, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.card__image {
+  box-sizing: content-box;
+  padding-top: 16px;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.card__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--main-text-color);
+  margin-bottom: 4px;
+}
+
+.card__code {
+  align-self: flex-start;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--additional-text-color);
+  margin-bottom: 16px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.card__number-of-reviews {
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--main-text-color);
+  text-align: right;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--additional-text-color);
+}
+
+.card__price-number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+  color: var(--main-text-color);
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  width: 100%;
+  height: 40px;
+  background: var(--sky-blue);
+  border-radius: 5px;
+  border: 1px solid var(--sky-blue);
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: var(--sky-blue);
+}
