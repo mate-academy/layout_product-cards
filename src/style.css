@@ -1,0 +1,113 @@
+html {
+  --blue-color: #00acdc;
+  --text-color-bolt: #060b35;
+  --line-height-L: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  line-height: var(--line-height-L);
+  font-weight: 500;
+  color: var(--text-color-bolt);
+  margin-bottom: 4px;
+}
+
+.card__code {
+  margin-bottom: 16px;
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(../src/images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(../src/images/star-active.svg);
+}
+
+.card__price-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__price-title {
+  font-size: 1.2rem;
+  line-height: var(--line-height-L);
+
+}
+
+.card__price {
+  font-size: 1.6rem;
+  line-height: var(--line-height-L);
+  font-weight: bold;
+  color: var(--text-color-bolt);
+}
+
+.card__buy {
+  box-sizing: border-box;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--blue-color);
+  font-size: 1.4rem;
+  line-height: 16px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--blue-color);
+}
+
+.card__buy:hover {
+  color: var(--blue-color);
+  background-color: white;
+}
