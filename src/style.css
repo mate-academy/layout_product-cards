@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  padding: 0;
+}
+
+.card {
+  width: 200px;
+  height: 406px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  object-fit: contain;
+  object-position: center;
+  display: inline-flex;
+  margin: 16px 3px 40px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: inherit;
+  color: #060b35;
+  font-style: normal;
+  vertical-align: top;
+  text-align: left;
+  padding-bottom: 4px;
+  margin: 0;
+}
+
+.card__type {
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #616070;
+  font-style: normal;
+  margin: 0;
+  padding-bottom: 16px;
+}
+  
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.stars__block {
+  display: flex;
+}
+
+.stars__review {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  padding-left: 17px;
+  margin: 0;
+}
+  
+.stars__star {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+  
+/*.stars__star:not(:last-child) {
+  padding-right: 4px;
+}*/
+  
+.stars__star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price-label {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+  padding-top: 24px;
+  margin: 0;
+}
+
+.card__price-value {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #060b35;
+  padding-top: 24px;
+  margin: 0;
+}
+
+.card__buy-link {
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  color: #f3f3f3;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 12px 70px 12px 69px;
+  margin-top: 16px;
+}
+
+.card__buy-link:hover {
+  background-color: #f3f3f3;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
