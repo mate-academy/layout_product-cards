@@ -1,18 +1,20 @@
-/* #region Card */
+* {
+  box-sizing: border-box;
+}
+
 .card {
   display: flex;
+  flex-direction: column;
   width: 200px;
   padding: 32px 16px 16px;
-  box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  flex-direction: column;
 }
 
 .card__box-img {
   display: flex;
   padding: 0 3px;
-  margin: 0 0 40px;
+  margin-bottom: 40px;
 }
 
 .card__img {
@@ -21,10 +23,10 @@
 }
 
 .card__name {
-  font-weight: 500;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 18px;
-  margin: 0 0 4px;
+  font-weight: 500;
 }
 
 .card__code,
@@ -34,17 +36,17 @@
 }
 
 .card__code {
+  margin-bottom: 16px;
   font-size: 10px;
   line-height: 14px;
-  color: var(--color-text-code-price);
-  margin: 0 0 16px;
+  color: var(--color-text-code_price);
 }
 
 .card__evaluation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 24px;
+  margin-bottom: 24px;
 }
 
 .card__reviews {
@@ -54,37 +56,35 @@
 .card__price {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 16px;
+  margin-bottom: 16px;
 }
 
 .card__text-price {
   font-size: 12px;
   line-height: 18px;
-  color: var(--color-text-code-price);
+  color: var(--color-text-code_price);
 }
 
 .card__digit-price {
-  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 700;
 }
 
 .card__button {
   height: var(--button-height);
-  color: var(--button-color-text-bgc-hover);
-  background-color: var(--button-color);
-  box-sizing: border-box;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 700;
   font-size: 14px;
   line-height: var(--button-height);
+  font-weight: 700;
   text-align: center;
+  text-decoration: none;
+  color: var(--button-color-text_bgc-hover);
+  background-color: var(--button-color);
   border: 1px solid var(--button-color);
+  border-radius: 5px;
 }
 
-.card:hover .card__button {
+.card__button:hover {
   color: var(--button-color);
-  background-color: var(--button-color-text-bgc-hover);
+  background-color: var(--button-color-text_bgc-hover);
 }
-/* #endregion */
