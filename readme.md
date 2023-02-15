@@ -1,6 +1,6 @@
 # Product cards
 
-Replace `F-u-n-H-o-u-s-e` with your Github username and copy the links to Pull Request description:
+Replace `<your_account>` with your Github username and copy the links to Pull Request description:
 
 - [DEMO LINK](https://F-u-n-H-o-u-s-e.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://F-u-n-H-o-u-s-e.github.io/layout_product-cards/report/html_report/)
