@@ -1,3 +1,155 @@
+@font-face {
+  font-family: Roboto;
+  src: url(font/Roboto-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(font/Roboto-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(font/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
+  box-sizing: border-box;
   margin: 0;
+}
+
+.card {
+  width: 198px;
+  height: 408px;
+  border: 1px #f3f3f3 solid;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  padding: 32px 19px 0;
+}
+
+.card__link {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  width: 166px;
+  height: 36px;
+  padding: 36px 16px 0;
+  color: #060b35;
+}
+
+.card__code {
+  font-size: 10px;
+  font-family: Roboto, serif;
+  font-weight: 400;
+  color: #616070;
+  width: 98px;
+  height: 14px;
+  padding: 4px 0 0 16px;
+}
+
+.card__grade {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  padding: 16px 16px 0;
+}
+
+.stars-4__star {
+  display: flex;
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-position: 50%;
+}
+
+.stars-4 {
+  display: flex;
+}
+
+div.stars-4 div:nth-child(-n + 4) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__grade-stars {
+  display: inline-block;
+}
+
+.card__grade-reviews {
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 10px;
+  line-height: 14px;
+  font-family: Roboto, serif;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  padding: 24px 16px 0;
+}
+
+.card__price-text {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__price-dollars {
+  font-family: Roboto, serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button {
+  padding: 18px 16px;
+}
+
+.card__buy {
+  padding: 16px;
+}
+
+.card__buy-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 166px;
+  height: 40px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #00acdc;
+  font-family: Roboto, serif;
+  font-weight: 700;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__buy-buy:hover {
+  background-color: #fff;
+  color: #00acdc;
 }
