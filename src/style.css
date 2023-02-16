@@ -22,6 +22,9 @@
 body {
   box-sizing: border-box;
   margin: 0;
+  --color-buy: #00acdc;
+  --color-text: #060b35;
+  --color-transparent: #616070;
 }
 
 .card {
@@ -44,14 +47,14 @@ body {
   width: 166px;
   height: 36px;
   padding: 36px 16px 0;
-  color: #060b35;
+  color: var(--color-text);
 }
 
 .card__code {
   font-size: 10px;
   font-family: Roboto, serif;
   font-weight: 400;
-  color: #616070;
+  color: var(--color-transparent);
   width: 98px;
   height: 14px;
   padding: 4px 0 0 16px;
@@ -79,7 +82,7 @@ body {
   display: flex;
 }
 
-div.stars-4 div:nth-child(-n + 4) {
+.stars-4 :nth-child(-n + 4) {
   background-image: url("images/star-active.svg");
 }
 
@@ -95,7 +98,7 @@ div.stars-4 div:nth-child(-n + 4) {
   line-height: 14px;
   font-family: Roboto, serif;
   font-weight: 400;
-  color: #060b35;
+  color: var(--color-text);
 }
 
 .card__price {
@@ -111,7 +114,7 @@ div.stars-4 div:nth-child(-n + 4) {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--color-transparent);
 }
 
 .card__price-dollars {
@@ -119,7 +122,7 @@ div.stars-4 div:nth-child(-n + 4) {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-text);
 }
 
 .card__button {
@@ -140,10 +143,10 @@ div.stars-4 div:nth-child(-n + 4) {
   color: #fff;
   font-size: 14px;
   line-height: 16px;
-  background-color: #00acdc;
+  background-color: var(--color-buy);
   font-family: Roboto, serif;
   font-weight: 700;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--color-buy);
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
@@ -151,5 +154,5 @@ div.stars-4 div:nth-child(-n + 4) {
 
 .card__buy-buy:hover {
   background-color: #fff;
-  color: #00acdc;
+  color: var(--color-buy);
 }
