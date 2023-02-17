@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+.card {
+  font-family: Roboto, Helvetica, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  margin-bottom: 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__tittle {
+  margin-bottom: 4px;
+  color: #060b35;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.card__code {
+  line-height: 14px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 400;
+  color: #616070;
+}
+
+.card__rating {
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+  color: #060b35;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.stars_star {
+  width: 16px;
+  height: 16px;
+  background: url(/src/images/star.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.stars_star:not(:last-child) {
+  background: url(/src/images/star-active.svg) no-repeat center;
+}
+
+.card__price {
+  margin-bottom: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price p:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+}
+
+.card__price p:last-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+}
+
+.card__button {
+  line-height: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 69px 11px 70px;
+  background-color: #00acdc;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
