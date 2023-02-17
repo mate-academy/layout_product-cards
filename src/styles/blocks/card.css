@@ -1,14 +1,10 @@
 .card {
   width: 200px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  box-sizing: border-box;
-  padding: 16px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 400;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 16px;
 }
 
 .card__product-preview {
@@ -21,28 +17,19 @@
 }
 
 .card__product-name {
-  color: #060b35;
+  color: var(--font-color);
   font-weight: 500;
   font-size: 12px;
-  line-height: 150%;
-  padding-top: 20px;
-  margin: 0;
+  line-height: 18px;
+  margin: 20px 0 0;
 }
 
 .card__product-code {
   padding-top: 4px;
   font-size: 10px;
-  line-height: 140%;
-  color: #616070;
   font-weight: 400;
+  color: #616070;
   margin: 0;
-}
-
-.card__reviews {
-  font-size: 10px;
-  line-height: 140%;
-  text-align: right;
-  color: #060b35;
 }
 
 .card__rating {
@@ -50,30 +37,35 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  text-align: right;
+  color: var(--font-color);
 }
 
 .card__price {
-  padding-top: 8px;
+  padding-top: 7px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card__price-text {
   font-size: 12px;
-  line-height: 18px;
   color: #616070;
 }
 
 .card__price-tag {
   font-weight: 700;
   font-size: 16px;
-  line-height: 112%;
-  color: #060b35;
+  color: var(--font-color);
   font-style: bold;
 }
 
 .card__buy-button {
-  box-sizing: border-box;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -81,23 +73,18 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
-  line-height: 114%;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  background: #00acdc;
+  background: var(--button-color);
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 5px;
 }
 
-.card:hover {
-  cursor: pointer;
-}
-
-.card:hover .card__buy-button {
-  color: #00acdc;
+.card__buy-button:hover {
+  color: var(--button-color);
   background-color: #fff;
-  border-color: #00acdc;
+  border-color: var(--button-color);
 }
 
 .card > * {
