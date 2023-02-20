@@ -22,6 +22,8 @@
 :root {
   --color-blue: #00acdc;
   --color-white: #fff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 * {
@@ -29,8 +31,7 @@
 }
 
 h1,
-h2,
-h3 {
+p {
   margin: 0;
   padding: 0;
 }
@@ -45,7 +46,10 @@ h3 {
   flex-direction: column;
   align-items: center;
 
-  margin: 0 16px;
+  /* margin: 0 16px; */
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 }
 
 .card__img {
@@ -55,6 +59,7 @@ h3 {
 .card__img-logo {
   width: 160px;
   height: 134px;
+  box-sizing: border-box;
 }
 
 .card__name {
@@ -65,7 +70,6 @@ h3 {
   font-size: 12px;
   line-height: 18px;
 
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #060b35;
 }
@@ -77,8 +81,6 @@ h3 {
   font-size: 10px;
   line-height: 14px;
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   color: #616070;
 }
 
@@ -90,24 +92,27 @@ h3 {
 
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 19px;
+  padding: 0;
 }
 
 .card__reviews-stars {
   display: flex;
-  align-items: center;
+  
 }
 
 .card__reviews-quantity {
   font-size: 10px;
   line-height: 14px;
   
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   color: #060b35;
 
   display: flex;
-  align-items: center;
-  
+  align-items: flex-end;
+  text-align: right;
+
 }
 
 .stars__star {
@@ -115,12 +120,9 @@ h3 {
   height: 16px;
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
-  background-position: center;
-
-  
 }
 
-.stars .stars__star:nth-child(-n+4) {
+.stars--4 .stars__star:nth-child(-n+4) {
   background-image: url(images/star-active.svg);
   margin-right: 4px;
 }
@@ -138,8 +140,6 @@ h3 {
   font-size: 12px;
   line-height: 18px;
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   color: #616070;
 }
 
@@ -147,14 +147,12 @@ h3 {
   font-size: 16px;
   line-height: 18px;
  
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: #060b35;
 }
 
 .card__btn {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 16px;
 }
 
 .btn-buy {
@@ -162,11 +160,13 @@ h3 {
   height: 40px;
   border-radius: 5px;
   background-color: #00acdc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
   font-size: 14px;
   line-height: 16px;
 
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: var(--color-white);
   border: 0;
