@@ -1,163 +1,120 @@
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap);
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 406px;
-  width: 198px;
+  width: 200px;
+  background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 0;
 }
 
 .card__image {
-  margin-top: 32px;
-  width: 160px;
   height: 134px;
-  background-image: url(./images/imac.jpeg);
-  background-size: contain;
+  width: 160px;
+  align-self: center;
 }
 
-.content {
-  width: 166px;
-  height: 36px;
-  margin-top: 40px;
-  font-size: 12px;
+.card__content {
+  padding-top: 40px;
   font-weight: 500;
+  font-size: 12px;
   line-height: 18px;
-  text-align: left;
+  color: #060b35;
 }
 
-.code {
-  height: 14px;
-  width: 166px;
-  margin-top: 4px;
-
-  color: #616070;
-  font-size: 10px;
+.card__code {
   font-weight: 400;
+  font-size: 10px;
   line-height: 14px;
-  text-align: left;
+  padding-top: 4px;
+  color: #616070;
 }
 
 .stars {
   display: flex;
-  flex-direction: row;
-  margin-top: 16px;
-  width: 166px;
+  height: 16px;
+  gap: 4px;
+  width: 96px;
 }
 
 .stars__star {
-  height: 12px;
-  width: 13px;
-  margin: 0 4px;
-  background-image: url("./images/star.svg");
-  outline-color: gray;
+  background-image: url(./images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.stars .stars__star:nth-child(-n+4) {
-  background-image: url("./images/star-active.svg");
+.stars__star :nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
-.stars > div:nth-child(6) {
-  height: max-content;
-  width: 80px;
-  text-align: right;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-}
-
-.price {
+.block__stars {
   display: flex;
-  margin-top: 24px;
-  width: 166px;
-  height: 20px;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-top: 16px;
+  gap: 17px;
 }
 
-.price > div:nth-child(1) {
-  width: 31px;
-  height: 18px;
+.block__review-text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  align-self: flex-end;
+  color: #060b35;
+
+}
+
+.card__price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.card__price-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  text-align: left;
   color: #616070;
 }
 
-.price > div:nth-child(2) {
-  width: max-content;
-  height: 18px;
+.card__price {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  display: flex;
-  align-items: flex-end;
-  text-align: right;
   color: #060b35;
-}
-
-.button {
-  display: flex;
-  width: 166px;
-  height: 40px;
-  margin-top: 16px;
-  background: #00acdc;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background: #fff;
-  border: 2px solid #00acdc;
+  align-self: flex-end;
 }
 
 .link {
-  width: 170px;
-  height: 40px;
-  margin: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 40px;
-  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #00acdc;
   text-decoration: none;
   color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 16px;
+  padding: 11px 69px 11px 68px;
 }
 
 .link:hover {
+  background: #fff;
+  border-color: #00acdc;
   color: #00acdc;
 }
