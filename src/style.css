@@ -6,24 +6,20 @@ body {
 }
 
 .productcard {
-  box-sizing: border-box;
+  padding: 32px 16px 16px;
   width: 200px;
   height: 408px;
   border-radius: 5px;
-  position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(243, 243, 243, 1);
-}
-
-.images {
-  margin: 32px 19px 0;
+  box-sizing: border-box;
 }
 
 .images_item {
   width: 160px;
   height: 134px;
-
+  margin: 0 3px;
 }
 
 .description {
@@ -32,14 +28,13 @@ body {
 }
 
 .description__name {
+  margin-top: 36px;
   font-family: "Roboto", sans-serif ;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  text-align: left;
-  padding: 36px 16px;
-  padding-bottom: 0;
   color: rgba(6, 11, 53, 1);
+  align-items: start;
 }
 
 .description_code {
@@ -47,34 +42,34 @@ body {
   font-family: "Roboto", sans-serif ;
   font-size: 10px;
   line-height: 14px;
-  padding: 4px 0 0 16px;
   text-align: left;
   font-weight: 400;
+  margin-top: 4px;
 }
 
 .description__rating {
   display: flex;
   justify-content: space-between;
-  padding: 14px 16px 16px;
+  margin-top: 16px;
+  align-items: center;
 }
 
-.stars {
+.stars--4 {
   display: flex;
-  padding: 4px 0 0 2px;
 }
 
-.star {
+.stars_star {
   width: 16px;
   height: 16px;
-  padding-left: 4px;
-}
-
-.star:nth-child(-n+4) {
-  background: url(images/star-active.svg) no-repeat;
-}
-
-.star:nth-child(5) {
   background: url(images/star.svg) no-repeat;
+  margin-right: 4px;
+  background-position: center;
+
+}
+
+.stars--4 .stars_star:nth-child(-n+4) {
+  background: url(images/star-active.svg) no-repeat;
+  background-position: center;
 }
 
 .description__reviews {
@@ -83,15 +78,13 @@ body {
   font-weight: 400;
   line-height: 14px;
   color: rgba(6, 11, 53, 1);
-  align-items: center;
-  justify-content: center;
-  padding: 4px 0 0 16px;
+  padding-top: 1px;
 }
 
 .description__price {
   display: flex;
   justify-content: space-between;
-  margin: 6px 16px 0 ;
+  margin-top: 24px ;
 }
 
 .description__title {
@@ -111,10 +104,11 @@ body {
 }
 
 .description__link {
+  border: 1px solid transparent;
   width: 166px;
   height: 40px;
   background: rgba(0, 172, 220, 1);
-  margin: 17px 16px 0;
+  margin-top: 16px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -130,6 +124,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   font-style: bold;
+
 }
 
 .description__link:hover {
