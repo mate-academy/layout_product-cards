@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --major-text-color: #060b35;
+  --minor-text-color: #616070;
+  --light-blue-color: #00acdc;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px ;
+  width: 166px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  margin: 0 3px 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  color: var(--major-text-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card__code {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 16px;
+  color: var(--minor-text-color);
+}
+
+.card__rate-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--major-text-color);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars--4 :nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.card__price {
+  font-weight: 400;
+  color: var(--minor-text-color);
+  line-height: 18px;
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--major-text-color);
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: var(--light-blue-color);
+  border-radius: 5px;
+  border: 1px solid var(--light-blue-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__button:hover {
+  background: #fff;
+  color: var(--light-blue-color);
+  border-color: var(--light-blue-color);
+}
