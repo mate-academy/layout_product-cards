@@ -1,18 +1,16 @@
-/* #region imports */
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
-/* #endregion */
-
-/* reset/tech-styles/variables */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  outline-color: var(--secondary-color);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
   --main-text-color: #060b35;
   --secondary-color: #00acdc;
 }
@@ -23,14 +21,12 @@ a {
 }
 
 .container {
-  margin: 0 auto;
+  display: flex;
   max-width: 1200px;
   min-height: 100vh;
-  display: flex;
+  margin: 0 auto;
 }
-/* #endregion */
 
-/* #region stars */
 .stars {
   display: flex;
   align-items: center;
@@ -54,9 +50,6 @@ a {
   background: url(images/star-active.svg) center no-repeat;
 }
 
-/* #endregion */
-
-/* #region card */
 .card {
   max-width: 200px;
   padding: 32px 16px 16px;
@@ -71,32 +64,35 @@ a {
 
 .card__link {
   display: block;
+  outline-color: var(--secondary-color);
 }
 
 .card__img {
-  text-align: center;
   display: block;
   max-width: 100%;
   padding: 0 3px;
   margin-bottom: 40px;
+  text-align: center;
+  outline-color: var(--secondary-color);
 }
 
 .card__title {
   display: block;
+  margin-bottom: 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: var(--main-text-color);
-  margin-bottom: 4px;
+  outline-color: var(--secondary-color);
 
 }
 
 .card__product-code {
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 10px;
   line-height: 140%;
   color: #616070;
-  margin-bottom: 16px;
 }
 
 .card__stars {
@@ -113,6 +109,7 @@ a {
   line-height: 14px;
   color: var(--main-text-color);
   transition: 0.5s color;
+  outline-color: var(--secondary-color);
 
 }
 
@@ -128,12 +125,12 @@ a {
 
 .card__stars-review:after {
   content: "";
+  position: absolute;
   height: 1px;
   width: 100%;
-  background-color: var(--secondary-color);
-  position: absolute;
   bottom: 0;
   left: 0;
+  background-color: var(--secondary-color);
   transform: scaleX(0);
   transform-origin: right;
   transition: 0.5s transform;
@@ -162,26 +159,23 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--secondary-color);
-  text-align: center;
-  border-radius: 5px;
   width: 166px;
   height: 40px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 114%;
-  text-transform: uppercase;
   color: #fff;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  text-transform: uppercase;
   border: 1px solid transparent;
   transition: 1s all;
   outline-color: var(--main-text-color);
 }
 
 .card__button:hover {
+  color: var(--secondary-color);
   background: none;
   border-color: var(--secondary-color);
-  color: var(--secondary-color);
-
 }
-
-/* #endregion */
