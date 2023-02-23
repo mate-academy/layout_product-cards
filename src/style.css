@@ -5,11 +5,14 @@
   --dark: #060b35;
 }
 
+html {
+  font-family: "Roboto", sans-serif ;
+}
+
 body,
 h2,
 p {
   margin: 0;
-  font-family: "Roboto", sans-serif ;
 }
 
 .card {
@@ -22,7 +25,7 @@ p {
   box-sizing: border-box;
 }
 
-.images_item {
+.card_images {
   width: 160px;
   height: 134px;
   margin: 0 3px;
@@ -37,11 +40,10 @@ p {
   align-items: start;
 }
 
-.card_code {
+.card__code {
   color: #616070;
   font-size: 10px;
   line-height: 14px;
-  font-weight: 400;
   margin-top: 4px;
 }
 
@@ -60,8 +62,11 @@ p {
   width: 16px;
   height: 16px;
   background: url(images/star.svg) no-repeat;
-  margin-right: 4px;
   background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
 }
 
 .stars--1 .stars__star:first-child,
@@ -116,6 +121,7 @@ p {
   color: #fff;
   box-sizing: border-box;
   border: 1px solid var(--blue);
+  text-transform: uppercase;
 }
 
 .card__button:hover {
