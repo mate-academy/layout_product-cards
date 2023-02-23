@@ -4,7 +4,6 @@
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  background-color: #fff;
 }
 
 .card-content__image {
@@ -15,16 +14,16 @@
 }
 
 .card-content__produсt {
+  margin: 0 0 4px;
   line-height: 18px;
   font-weight: 500;
   font-size: 12px;
   color: var(--deepblue);
-  margin: 0;
+  
 }
 
 .card-content__code {
-  padding-top: 4px;
-  font-weight: 400;
+  margin: 0 0 16px;
   font-size: 10px;
   line-height: 14px;
   color: var(--grey);
@@ -34,8 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 16px;
-
+  margin: 0 0 24px;
 }
 
 .stars {
@@ -43,7 +41,6 @@
 }
 
 .stars__star {
-  margin-left: 4px;
   width: 16px;
   height: 16px;
   line-height: 14px;
@@ -52,8 +49,8 @@
   background-repeat: no-repeat;
 }
 
-.stars__star:first-child {
-  margin-left: 0;
+.stars__star:not(:first-child) {
+  margin-left: 4px;
 }
 
 .stars--0 .stars__star:nth-of-type(-n),
@@ -66,7 +63,7 @@
 }
 
 .card-content__reviews-number {
-  font-weight: 400;
+  margin: 0;
   font-size: 10px;
   line-height: 14px;
   color: var(--deepblue);
@@ -76,12 +73,11 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 24px 0 16px;
+  margin-bottom: 16px;
   line-height: 18px;
 }
 
 .card-content__price-name {
-  font-weight: 400;
   font-size: 12px;
   color: var(--grey);
   margin: 0;
@@ -94,30 +90,24 @@
   margin: 0;
 }
 
-.card-content__button {
-  padding: 0;
-  width: 100%;
-  height: 40px;
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
-  border-radius: 5px;
-
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .card-content__button-link {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  box-sizing: border-box;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
   border-radius: 5px;
 
-  height: 100%;
-  width: 100%;
-  
-  font-family: Roboto, sans-serif;
+  padding: 11px 0;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
   text-decoration: none;
+  text-transform: uppercase;
   color: #fff;
 }
 
