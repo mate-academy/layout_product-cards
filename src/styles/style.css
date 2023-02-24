@@ -1,8 +1,10 @@
 .home-page {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  font-weight: 400;
-  color: #060b35;
+  font-weight: 500;
+  --main-color: #060b35;
+  --second-color: #616070;
 }
 
 .product {
@@ -17,20 +19,24 @@
 }
 
 .product__image {
-  width: 160px;
+  margin: 0 auto 40px;
   height: 134px;
-  margin-bottom: 32px;
 }
 
 .product__name {
-  font-size: inherit;
+  font-family: inherit;
   font-weight: 500;
-  padding-bottom: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-color);
+  margin-bottom: 4px;
 }
 
 .product__code {
   font-size: 10px;
-  color: #616070;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--second-color);
 }
 
 .price {
@@ -42,18 +48,24 @@
 
 .price__text {
   font-family: inherit;
-  color: #616070;
+  color: var(--second-color);
   font-size: 12px;
+  line-height: 14px;
   font-weight: 400;
 }
 
 .price__value {
   font-family: inherit;
   font-size: 16px;
+  line-height: 18px;
   font-weight: 700;
 }
 
 .button {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 40px;
   background-color: #00acdc;
   border-radius: 5px;
   border: none;
@@ -62,9 +74,9 @@
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  height: 40px;
+  line-height: 16px;
   text-align: center;
-  line-height: 40px;
+  justify-content: center;
   text-transform: uppercase;
 }
 
@@ -72,6 +84,6 @@
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #00acdc;
-
+  cursor: pointer;
   color: #00acdc;
 }
