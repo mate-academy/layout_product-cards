@@ -1,4 +1,4 @@
-# card cards
+# Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
  - [DEMO LINK](https://M1k1ta.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://M1k1ta.github.io/layout_product-cards/report/html_report/)
@@ -9,10 +9,10 @@ ___
 > Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
 ___
 
-## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_card-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
+## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
 ## The task
-Create a pages with card card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
+Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
 
 ### Requirements:
 - reset browser's default margins
@@ -23,7 +23,7 @@ Create a pages with card card using `flexbox` basing on [the mockup](https://www
 - add `data-qa="card"` attribute to the card block
 - add `data-qa="hover"` attribute to the link
 
---> [CHECKLIST](https://github.com/mate-academy/layout_card-cards/blob/master/checklist.md)
+--> [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md)
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
