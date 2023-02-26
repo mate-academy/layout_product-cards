@@ -1,3 +1,4 @@
+/* #region default styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +12,8 @@ body {
   font-size: 10px;
 }
 
+/* #endregion */
+
 .card {
   width: 200px;
   display: flex;
@@ -23,40 +26,59 @@ body {
   box-sizing: border-box;
 }
 
+/* #region image */
 .card__img {
   width: 160px;
   height: 134px;
 }
 
-.card__info {
-  padding-top: 40px;
-  margin-bottom: 16px;
-  display: flex;
-  flex-direction: column;
+/* #endregion */
+
+/* #region default text styles */
+.big-text {
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 18px;
 }
 
-.card__info-description {
+.small-text {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 14px;
+}
+/* #endregion */
+
+/* #region card description */
+.card__title {
+  padding-top: 40px;
+  color: #060b35;
   font-weight: 500;
   font-size: 1.2em;
-  line-height: 18px;
-  color: #060b35;
-  margin-bottom: 4px;
 }
 
-.card__info-subtitle {
-  font-weight: 400;
-  line-height: 14px;
+.card__subtitle {
   color: #616070;
+  padding-top: 4px;
+  width: 100%;
 }
+/* #endregion */
 
-.card__stars {
+/* #region reviews */
+.reviews {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 24px;
+  padding-top: 16px;
+  gap: 17px;
 }
 
+.reviews__text {
+  color: #060b35;
+}
+/* #endregion */
+
+/* #region stars */
 .stars {
   display: flex;
 }
@@ -78,51 +100,39 @@ body {
   background-image: url(./images/star-active.svg);
 }
 
-.card__start-reviews {
-  font-weight: 400;
-  line-height: 14px;
-  color: #060b35;
-}
+/* #endregion */
 
+/* #region payment */
 .card__payment {
+  padding: 24px 0 16px;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
 }
 
 .card__payment-subtitle {
-  font-weight: 400;
-  font-size: 1.2em;
-  line-height: 18px;
   color: #616070;
+  font-size: 1.2em;
 }
+/* #endregion */
 
-.card__payment-price {
-  color: #060b35;
-  font-weight: 700;
-  font-size: 1.6em;
-  line-height: 18px;
-}
-
-.card__btn-link-buy {
-  background-color: #00acdc;
-  text-decoration: none;
-  color: #fff;
+/* #region button */
+.card__btn {
   font-size: 1.4em;
   line-height: 16px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-decoration: none;
+  padding: 11px 69px 11px 70px;
+  color: #fff;
   text-transform: uppercase;
-  padding: 12px 70px 12px 69px;
+  background-color: #00acdc;
   border-radius: 5px;
+  border: 1px solid #00acdc;
 }
 
-.card__btn-link-buy:hover {
-  border: 1px solid #00acdc;
-  background-color: #fff;
+.card__btn:hover {
   color: #00acdc;
+  border-color: #00acdc;
+  background-color: #fff;
 }
+/* #endregion */
