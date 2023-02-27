@@ -12,16 +12,15 @@
 
 .card__link {
   display: block;
-  outline-color: var(--secondary-color);
+  outline-color: var(--link-color);
 }
 
 .card__img {
   display: block;
-  max-width: 100%;
-  padding: 0 3px;
+  max-width: 160px;
+  margin: 0 auto;
   margin-bottom: 40px;
-  text-align: center;
-  outline-color: var(--secondary-color);
+  outline-color: var(--link-color);
 }
 
 .card__title {
@@ -30,7 +29,8 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  outline-color: var(--secondary-color);
+  text-decoration: none;
+  outline-color: var(--link-color);
 
 }
 
@@ -39,7 +39,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 140%;
-  color: #616070;
+  color: var(--secondary-color);
 }
 
 .card__stars {
@@ -54,13 +54,12 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
+  text-decoration: none;
   transition: 0.5s color;
-  outline-color: var(--secondary-color);
-
 }
 
 .card__stars-review:hover {
-  color: var(--secondary-color);
+  color: var(--link-color);
 }
 
 .card__stars-review:hover::after {
@@ -76,26 +75,26 @@
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--link-color);
   transform: scaleX(0);
   transform-origin: right;
   transition: 0.5s transform;
 }
 
-.card__prices {
+.card__price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.card__price {
-  color: #616070;
+.card__price-label {
+  color: var(--secondary-color);
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
 }
 
-.card__value {
+.card__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 112%;
@@ -105,22 +104,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 166px;
   height: 40px;
   text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 114%;
   color: #fff;
-  background: var(--secondary-color);
+  background: var(--link-color);
   border-radius: 5px;
   text-transform: uppercase;
   border: 1px solid transparent;
-  transition: 1s all;
+  transition: color 1s, background 1s;
+  text-decoration: none;
 }
 
 .card__button:hover {
-  color: var(--secondary-color);
+  color: var(--link-color);
   background: none;
-  border-color: var(--secondary-color);
+  border-color: var(--link-color);
 }
