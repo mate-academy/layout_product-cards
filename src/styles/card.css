@@ -8,6 +8,10 @@
   border-radius: 5px;
   padding: 32px 16px 16px;
   box-sizing: border-box;
+
+  --primaryColor: #00acdc;
+  --primaryTextColor: #060b35;
+  --secondaryTextColor: #616070;
 }
 
 .card__img {
@@ -29,13 +33,13 @@
 
 .card__title {
   padding-top: 40px;
-  color: #060b35;
+  color: var(--primaryTextColor);
   font-weight: 500;
   font-size: 1.2em;
 }
 
 .card__subtitle {
-  color: #616070;
+  color: var(--secondaryTextColor);
   padding-top: 4px;
   width: 100%;
 }
@@ -46,11 +50,11 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 16px;
-  gap: 17px;
 }
 
 .reviews__text {
-  color: #060b35;
+  color: var(--primaryTextColor);
+  padding-left: 17px;
 }
 
 .card__payment {
@@ -62,7 +66,7 @@
 }
 
 .card__payment-subtitle {
-  color: #616070;
+  color: var(--secondaryTextColor);
   font-size: 1.2em;
 }
 
@@ -73,13 +77,12 @@
   padding: 11px 69px 11px 70px;
   color: #fff;
   text-transform: uppercase;
-  background-color: #00acdc;
+  background-color: var(--primaryColor);
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--primaryColor);
 }
 
 .card__btn:hover {
-  color: #00acdc;
-  border-color: #00acdc;
+  color: var(--primaryColor);
   background-color: #fff;
 }
