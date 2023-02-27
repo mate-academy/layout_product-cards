@@ -1,89 +1,86 @@
-@import "./variablesForCards.css";
+@import "./variables.css";
 
-.card-block {
+.card {
   display: flex;
-  flex-wrap: wrap;
-  width: 200px;
+  flex-direction: column;
+  max-width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
-.card-block__image {
+.card__image {
+  margin: 0 auto;
   width: 160px;
-  margin: 32px auto 0;
+  height: 134px;
 }
 
-.card-block__product-title {
-  margin: 40px 16px 0;
+.card__title {
+  color: var(--main-dark-color);
+  margin-top: 40px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--main-dark-color);
   line-height: 18px;
-  font-family: inherit;
 }
 
-.card-block__product-code {
-  font-family: inherit;
+.card__code {
   font-weight: 400;
   color: var(--main-grey-color);
   font-size: 10px;
   line-height: 14px;
-  margin: 4px 16px 0;
+  margin-top: 4px;
 }
 
-.card-block__stars-and-reviewes {
+.card__stars-and-reviewes {
   display: flex;
-  flex-wrap: nowrap;
-  font-family: inherit;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 16px 0;
+  margin-top: 16px;
   flex-grow: 1;
 }
 
-.card-block__reviews {
+.card__reviews {
   font-size: 10px;
   font-weight: 400;
   color: var(--main-dark-color);
 }
 
-.card-block__price {
+.card__price {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  margin: 24px 16px 0;
+  margin-top: 24px;
   line-height: 18px;
 }
 
-.price-word {
+.card__price-word {
   color: var(--main-grey-color);
   font-weight: 400;
   font-size: 12px;
-
 }
 
-.price-value {
+.card__price-value {
   color: var(--main-dark-color);
   font-weight: 700;
   font-size: 16px;
 }
 
-.card-block__buy-button {
+.card__buy-button {
   width: 100%;
-  flex-grow: 1;
-  margin: 16px;
+  margin-top: 16px;
   border-radius: 5px;
-  border: 1px solid var(--blue-button-color);
+  border: 1px solid transparent;
   background-color: var(--blue-button-color);
   text-align: center;
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
-  line-height: 40px;
+  line-height: 38px;
 }
 
-.card-block__buy-button:hover {
+.card__buy-button:hover {
   border-color: var(--blue-button-color);
   background-color: white;
   color: var(--blue-button-color);
