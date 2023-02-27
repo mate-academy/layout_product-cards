@@ -1,10 +1,11 @@
 body {
-  font-family: "Roboto", Arial, sans-serif;
-  color: #060b35;
-  background-color: fff;
-  font-weight: 500;
-
+  --prim-color: #var(--prim-color);
   --secondary-color: #616070;
+
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--prim-color);
+  background-color: fff;
+  font-weight: 400;
 }
 
 .card {
@@ -12,6 +13,15 @@ body {
   border-radius: 5px;
   max-width: 200px;
   padding: 32px 16px 16px;
+}
+
+.card__link,
+.card__product,
+.card__stars,
+.card__button {
+  text-decoration: none;
+  color: var(--prim-color);
+  display: inline-block;
 }
 
 .card__image {
@@ -29,13 +39,13 @@ body {
 }
 
 .card__product {
+  font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   padding-bottom: 4px;
 }
 
 .card__code {
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--secondary-color);
@@ -56,7 +66,6 @@ body {
 }
 
 .stars-container__review {
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
 }
@@ -68,7 +77,6 @@ body {
 }
 
 .card__price {
-  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: var(--secondary-color);
