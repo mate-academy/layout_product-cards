@@ -37,3 +37,4 @@ other - number of selected stars should change correctly.
 ---
 ![screenshot](./references/card-example.png)
 
+
