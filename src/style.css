@@ -57,27 +57,28 @@ p {
   align-self: stretch;
 }
 
-.product__star {
+.stars {
   display: flex;
 }
 
-.product__stars {
+.stars__star {
   width: 16px;
   height: 16px;
+  background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.product__stars:not(:last-child) {
+.stars__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.product__star > :nth-child(-n + 4) {
+.stars--1 > .stars__star:nth-child(-n + 1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4),
+.stars--5 > .stars__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
-}
-
-.product__star > :nth-child(5) {
-  background-image: url(images/star.svg);
 }
 
 .product__reviews {
