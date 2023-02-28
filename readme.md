@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://M1k1ta.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://M1k1ta.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
 ___
@@ -23,7 +23,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 - add `data-qa="card"` attribute to the card block
 - add `data-qa="hover"` attribute to the link
 
---> [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md)
+--> [CHECKLIST](https://github.com/mate-academy/layout_card-cards/blob/master/checklist.md)
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
