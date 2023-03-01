@@ -1,9 +1,19 @@
-.stars {
+.stars__container {
   display: flex;
   width: 96px;
 }
 
-.stars__star {
+.stars__reviews-text {
+  font-weight: 400;
+  font-size: 10px;
+  color: #060b35;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars__container-star {
   background-image: url(/images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -11,10 +21,14 @@
   width: 16px;
 }
 
-.stars__star:not(:last-child) {
+.stars__container-star:not(:last-child) {
   margin-right: 4px;
 }
 
-.stars--4 > .stars__star:nth-child(n + 5) {
+.stars__container--0 > .stars__container-star,
+.stars__container--1 > .stars__container-star:not(:first-child),
+.stars__container--2 > .stars__container-star:nth-child(n + 3),
+.stars__container--3 > .stars__container-star:nth-child(n + 4),
+.stars__container--4 > .stars__container-star:nth-child(n + 5) {
   background-image: url(/images/star.svg);
 }
