@@ -1,10 +1,45 @@
-@import "../../layout_stars/src/style.css";
+p {
+  margin: 0;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--2 .stars__star:nth-child(-n+2) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--3 .stars__star:nth-child(-n+3) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(../images/star-active.svg);
+}
 
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
+  margin: 0;
 }
 
 .card {
@@ -27,38 +62,41 @@ body {
   height: 134px;
 }
 
-.card__title {
-  margin-top: 5px;
-}
-
 .card__description {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
   line-height: 18px;
   color: #060b35;
 }
 
-.card__product_code {
-  margin-top: 4px;
-}
-
 .card__code {
-  font-weight: 400;
-  font-size: 10px;
+  margin-top: 4px;
   line-height: 14px;
   color: #616070;
-}
-
-.card__stars-reviews {
   font-weight: 400;
   font-size: 10px;
-  line-height: 16px;
+}
+
+.card__reviews {
+  text-decoration: none;
   color: #060b35;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.card__rating {
+  line-height: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card__stars {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 16px;
+  line-height: 16px;
 }
 
 .card__prices {
@@ -92,7 +130,6 @@ body {
   color: #fff;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
   padding: 10px 68px;
   background: #00acdc;
   border: 1px solid transparent;
@@ -106,11 +143,6 @@ body {
   padding-left: 69px;
   padding-right: 69px;
   padding-bottom: 11px;
-}
-
-.stars {
-  display: flex;
-  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */
