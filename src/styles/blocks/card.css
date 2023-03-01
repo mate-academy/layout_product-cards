@@ -1,16 +1,4 @@
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-
-  --text-color_main-accent: #060b35;
-  --text-color_secondary-color: #616070;
-  --accent-color: #00acdc;
-}
-
 .product-card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 200px;
@@ -49,14 +37,14 @@ html {
   margin-bottom: 24px;
 }
 
-.reviews-ammount {
+.product-card__reviews-ammount {
   font-size: 10px;
   font-weight: 400;
   line-height: 16px;
   color: var(--text-color_secondary-color);
 }
 
-.product-card__price {
+.product-card__price-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,19 +54,17 @@ html {
   color: var(--text-color_secondary-color);
 }
 
-.price-ammount {
+.product-card__price-ammount {
   font-size: 16px;
   font-weight: 700;
   color: var(--text-color_main-accent);
 }
 
-.button {
-  box-sizing: border-box;
+.product-card__button-buy {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 166px;
-  height: 40px;
+  padding: 11px;
   background: var(--accent-color);
   border: 1px solid transparent;
   border-radius: 5px;
@@ -88,10 +74,10 @@ html {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
-  transition: all 0.3s;
+  transition: background 0.3s, color 0.3s, border-color  0.3s;
 }
 
-.button:hover {
+.product-card__button-buy:hover {
   background: #fff;
   color: var(--accent-color);
   border-color: var(--accent-color);
