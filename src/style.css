@@ -1,0 +1,129 @@
+/* #region reset */
+a,
+p {
+  margin: 0;
+  text-decoration: none;
+}
+/* #endregion */
+/* #region variables*/
+:root {
+  --img-gap: calc(50% - 160px / 2);
+  --padding-elements: 0 16px;
+}
+/* #endregion */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card {
+  width: 198px;
+  height: 406px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  margin: 32px var(--img-gap) 40px;
+  width: 160px;
+  height: 134px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card__title {
+  margin-bottom: 4px;
+  padding: var(--padding-elements);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  display: inline-block;
+}
+
+.card__code {
+  margin-bottom: 16px;
+  padding: var(--padding-elements);
+  display: flex;
+  color: #616070;
+}
+
+.card__stars {
+  padding: var(--padding-elements);
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__reviews {
+  margin-top: 2px;
+  display: flex;
+}
+
+.stars {
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin: 0 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__price {
+  margin-bottom: 16px;
+  padding: var(--padding-elements);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price-title {
+  color: #616070;
+}
+
+.card__price-number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__btn {
+  width: 166px;
+  height: 40px;
+  margin: 0 16px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 38px;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__btn:hover {
+  transition: all 0.5s;
+  background-color: #fff;
+  color: #00acdc;
+}
