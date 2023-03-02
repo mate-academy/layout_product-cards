@@ -1,11 +1,12 @@
 1. [STYLES] - Get used to style all elements using classes. And don't increase
-selectors specificity unless completely necessary.
-2. [STYLES] - Remember to use fallback fonts - alternative font-family in case 
-the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
+   selectors specificity unless completely necessary.
+2. [STYLES] - Remember to use fallback fonts - alternative font-family in case
+   the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
 3. [CODE STYLE] - Add empty lines between multiline sibling blocks of HTML.
-But don't add empty lines between parent and child elements
+   But don't add empty lines between parent and child elements
 
 GOOD example:
+
 ```html
 <ul>
   <li class="nav__item">
@@ -21,10 +22,11 @@ GOOD example:
   </li>
 </ul>
 ```
+
 BAD example:
+
 ```html
 <ul>
-
   <li class="nav__item">
     <a href="#home">Home</a>
   </li>
@@ -34,29 +36,28 @@ BAD example:
   <li class="nav__item">
     <a href="#contacts">Contacts</a>
   </li>
-
 </ul>
 ```
 
 4. [TASK] - Make sure to reuse part of [Stars task](https://github.com/mate-academy/layout_stars)
-here, and keep it operational in case you change block modifier.
+   here, and keep it operational in case you change block modifier.
 5. [BEM] - Check your BEM structure using BEM-linter (`npm run lint`) and
-[this list](https://mate-academy.github.io/fe-program/css/typical-bem-mistakes)
+   [this list](https://mate-academy.github.io/fe-program/css/typical-bem-mistakes)
 6. [BEM] - Don't make BEM structure too complicated. You don't need to create
-separate blocks for anything other than card itself and stars.
+   separate blocks for anything other than card itself and stars.
 7. [BEM & STYLES] - Don't add external styles (positioning or margins) to
-BEM-blocks. Use mix where necessary and move all external styles under element
-selector.
+   BEM-blocks. Use mix where necessary and move all external styles under element
+   selector.
 
 GOOD example
+
 ```html
 <!--index.html-->
 <div class="container">
-  <div class="container__card card">
-    ...
-  </div>
+  <div class="container__card card">...</div>
 </div>
 ```
+
 ```css
 /*styles.css*/
 .container__card {
@@ -70,14 +71,14 @@ GOOD example
 ```
 
 BAD example
+
 ```html
 <!--index.html-->
 <div class="container">
-  <div class="card">
-    ...
-  </div>
+  <div class="card">...</div>
 </div>
 ```
+
 ```css
 .card {
   margin: 48px 24px;
@@ -87,24 +88,29 @@ BAD example
 ```
 
 8. [STYLES] - Don't hardcode exact height size. Add necessary paddings according to mockup
-and let content dictate the container size.
+   and let content dictate the container size.
 9. [STYLES] - Don't add new border to the element on hover. Add default
-transparent border of the same width, and change its color on `:hover`
+   transparent border of the same width, and change its color on `:hover`
 10. [STYLES] - Be consistent with your margins. Add only top or bottom, don't
-add both.
+    add both.
 11. [FILE STRUCTURE] - You should create separate file for each BEM block
 12. [SEMANTICS] - Use semantic tags like h2, p ...
 13. [SEO] - `alt` atribute should describe the image if the image contains information (better description you have - better for you :))
 
 REALLY BAD example:
+
 ```html
 <img alt="image" />
 ```
+
 STILL BAD example:
+
 ```html
 <img alt="phone" />
 ```
+
 GOOD example:
+
 ```html
 <img alt="Samsung Galaxy S22 2022 8/128GB Green" />
 ```
