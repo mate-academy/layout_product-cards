@@ -1,4 +1,8 @@
 /* #region reset */
+* {
+  box-sizing: border-box;
+}
+
 a,
 p {
   margin: 0;
@@ -7,8 +11,16 @@ p {
 /* #endregion */
 /* #region variables*/
 :root {
-  --img-gap: calc(50% - 160px / 2);
-  --padding-elements: 0 16px;
+  --card-width: 200px;
+  --img-width: var(--card-width) - 32px;
+  --img-gap: calc((var(--card-width) - var(--card-width)) / 2);
+
+  --color-btn-1: #fff;
+  --color-btn-2: #00acdc;
+  --color-text-1: #060b35;
+  --color-text-2: #616070;
+  --color-border: #f3f3f3;
+  --color-bgc: #fff;
 }
 /* #endregion */
 
@@ -20,51 +32,48 @@ body {
 }
 
 .card {
-  width: 198px;
-  height: 406px;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
+  max-width: 200px;
+  min-height: 406px;
+  padding: 0 16px 16px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
 
 .card__img {
-  margin: 32px var(--img-gap) 40px;
-  width: 160px;
-  height: 134px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  margin: 32px calc(var(--img-gap) + 3px) 40px;
+  max-width: 160px;
+  width: var(--img-width);
+  min-height: 134px;
 }
 
 .card__title {
   margin-bottom: 4px;
-  padding: var(--padding-elements);
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
-  display: inline-block;
+  color: var(--color-text-1);
 }
 
 .card__code {
   margin-bottom: 16px;
-  padding: var(--padding-elements);
   display: flex;
-  color: #616070;
+  color: var(--color-text-2);
 }
 
 .card__stars {
   margin-bottom: 24px;
-  padding: var(--padding-elements);
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card__reviews {
   margin-top: 2px;
   display: flex;
+  color: var(--color-text-1);
 }
 
 .stars {
@@ -90,7 +99,6 @@ body {
 
 .card__price {
   margin-bottom: 16px;
-  padding: var(--padding-elements);
   font-size: 12px;
   display: flex;
   justify-content: space-between;
@@ -98,7 +106,7 @@ body {
 }
 
 .card__price-title {
-  color: #616070;
+  color: var(--color-text-2);
 }
 
 .card__price-number {
@@ -108,22 +116,19 @@ body {
 }
 
 .card__btn {
-  width: 166px;
-  height: 40px;
-  margin: 0 16px 16px;
   font-weight: 700;
   font-size: 14px;
   line-height: 38px;
   border-radius: 5px;
-  border: 1px solid #00acdc;
-  background-color: #00acdc;
-  color: #fff;
+  border: 1px solid var(--color-btn-2);
+  background-color: var(--color-btn-2);
+  color: var(--color-btn-1);
   text-transform: uppercase;
   text-align: center;
 }
 
 .card__btn:hover {
   transition: all 0.5s;
-  background-color: #fff;
-  color: #00acdc;
+  background-color: var(--color-btn-1);
+  color: var(--color-btn-2);
 }
