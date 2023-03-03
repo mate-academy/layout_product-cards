@@ -1,0 +1,27 @@
+.card__stars {
+  display: flex;
+  padding: 0 16px;
+  margin: 16px 0 0;
+  align-items: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:nth-last-child(n) {
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:not(:nth-child(n+5)) {
+  background-image: url(/images/star-active.svg);
+}
+
+.stars__reviews {
+  font-size: 10px;
+  margin-left: 14px;
+}
