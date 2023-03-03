@@ -1,0 +1,111 @@
+.card {
+  background: var(--clear_white-color);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  max-width: 200px;
+}
+
+.card__logo {
+  align-self: center;
+  height: 134px;
+  width: 160px;
+  margin: 32px 0 40px;
+}
+
+.card__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+  color: var(--dark_blue-for-text);
+}
+
+.card__code {
+  margin-bottom: 16px ;
+  color: var(--gray-for-text);
+}
+
+.card__raiting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars__star:nth-child(n):not(.stars__star:nth-child(5)) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__rating-number {
+  color: var(--dark_blue-for-text);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 18px;
+  color: var(--gray-for-text) ;
+}
+
+.card__price-amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark_blue-for-text);
+}
+
+.card__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button-buy {
+  transition: 0.5s ease-in-out;
+
+  margin-bottom: 16px;
+  border: 1px solid var(--blue-color);
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+
+  background-color: var(--blue-color);
+
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--clear_white-color);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__button-buy:hover {
+  background-color: var(--clear_white-color);
+  color: var(--blue-color);
+}
