@@ -1,6 +1,8 @@
 html {
   font-size: 10px;
   line-height: 14px;
+  --color1: #616070;
+  --color2: #00acdc;
 }
 
 body {
@@ -18,8 +20,11 @@ a {
   text-decoration: none;
 }
 
-.card {
+* {
   box-sizing: border-box;
+}
+
+.card {
   max-width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -33,34 +38,34 @@ a {
   margin: 0 3px 40px;
 }
 
-.info_title {
+.card__title {
   margin: 0 0 4px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
 }
 
-.info_description {
+.card__description {
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
-  color: #616070;
+  color: var(--color1);
   margin: 0 0 16px;
 }
 
-.review_block {
+.card__review {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 24px;
 }
 
-.review_stars {
+.stars {
   display: flex;
   justify-content: space-between;
 }
 
-.review_star {
+.stars__star {
   margin-right: 4px;
   display: block;
   background-image: url("./images/star.svg");
@@ -70,42 +75,42 @@ a {
   background-position: center;
 }
 
-.review_star:nth-child(-n + 4) {
+.stars__star:nth-child(-n + 4) {
   background-image: url("./images/star-active.svg");
 }
 
-.review_text {
+.card__text {
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
 }
 
-.price_block {
+.price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.price_text {
+.price__text {
   font-weight: 400;
   font-size: 12px;
-  color: #616070;
+  color: var(--color1);
 }
 
-.price_value {
+.price__value {
   line-height: 18px;
   font-weight: 700;
   font-size: 16px;
 }
 
-.info_buy {
+.card__btn {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   height: 40px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--color2);
   border-radius: 5px;
   font-size: 14px;
   line-height: 16px;
@@ -113,11 +118,11 @@ a {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #00acdc;
+  background-color: var(--color2);
 }
 
-.info_buy:hover {
-  color: #00acdc;
+.card__btn:hover {
+  color: var(--color2);
   background-color: #fff;
   transition: 0.3s;
 }
