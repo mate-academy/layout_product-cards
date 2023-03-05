@@ -23,16 +23,9 @@ body {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 16px 16px;
-  display: flex;
-  flex-wrap: wrap;
   --card-text-color-primary: #060b35;
   --card-text-color-secondary: #616070;
   --theme-color-primary: #00acdc;
-}
-
-.card__content,
-.card__button {
-  flex: 0 1 100%;
 }
 
 .card__content {
@@ -96,8 +89,10 @@ body {
 
 /* #region Button */
 .button {
-  display: block;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   padding: 11px;
   background-color: var(--theme-color-primary);
   color: #fff;
@@ -105,6 +100,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s all;
+  word-break: break-all;
 }
 
 .card__button {
