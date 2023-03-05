@@ -1,31 +1,34 @@
+@import "./stars.css";
+
 html {
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
-.product-card {
-  height: 356px;
-  width: 166px;
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
   border: 1px solid #f3f3f3;
   padding: 32px 16px 16px;
 }
 
-.product-card__img {
-  display: flex;
-  justify-content: center;
+.card__img-iMac {
   margin-bottom: 40px;
-}
-
-.product-img_iMac {
   height: 134px;
   width: 160px;
+  align-self: center;
 }
 
-.product-name {
+.card__name {
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -34,98 +37,76 @@ body {
   margin-bottom: 4px;
 }
 
-.product-name,
-.rating__reviews,
-.price__amount {
+.card__name,
+.card__rating-reviews,
+.card__prise-amount {
   color: #060b35;
 }
 
-.product-code,
-.price__word {
+.card__code,
+.card__prise-word {
   color: #616070;
 }
 
-.product-code {
+.card__code {
   margin-bottom: 16px;
 }
 
-.rating__reviews,
-.product-code {
+.card__rating-reviews,
+.card__code {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
 }
 
-.rating {
+.card__rating {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 24px;
 }
 
-.rating__reviews {
-  align-self: center;
-}
-
-.rating__stars {
-  display: flex;
-}
-
-.rating__stars-active {
-  background: no-repeat url(./images/star-active.svg);
-}
-
-.rating__stars-no-active {
-  background: no-repeat url(./images/star.svg);
-}
-
-.rating__stars-active,
-.rating__stars-no-active {
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-}
-
-.price {
+.card__prise {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
-  align-self: center;
 }
 
-.price__word {
+.card__prise-word {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
 
-.price__amount {
+.card__prise-amount {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
 }
 
-.button {
-  width: 166px;
-  height: 40px;
-  background: #00acdc;
-  border-radius: 5px;
-  border: 0;
-
+.card__button-link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  height: 40px;
+
+  background-color: #00acdc;
+  border-radius: 5px;
 
   color: #fff;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  text-transform: uppercase;
   text-decoration: none;
+
+  margin-bottom: 16px;
 }
 
-.button:hover {
-  width: 164px;
-  height: 38px;
-  background: #f3f3f3;
+.card__button-link:hover {
+  background-color: #f3f3f3;
   border: 1px solid #00acdc;
   border-radius: 5px;
   color: #00acdc;
