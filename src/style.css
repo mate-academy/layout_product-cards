@@ -1,16 +1,20 @@
-body {
-  margin: 0;
+html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
+}
+
+* {
   box-sizing: border-box;
+}
+
+body,
+p {
+  margin: 0;
   --background-color: #fff;
   --second-background-color: #00acdc;
   --text-color: #060b35;
   --second-text-color: #616070;
-}
-
-p {
-  margin: 0;
+  --border-color: #f3f3f3;
 }
 
 .card {
@@ -18,7 +22,7 @@ p {
   flex-direction: column;
   width: 200px;
   background-color: var(--background-color);
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
 }
 
@@ -35,7 +39,7 @@ p {
 
 .card__text_monoblock {
   margin: 0;
-  margin-left: calc(50% - 166px / 2);
+  margin-left: 16px;
   display: flex;
   font-weight: 500;
   font-size: 12px;
@@ -45,8 +49,7 @@ p {
 
 .card__text_code {
   margin-top: 4px;
-  margin-left: calc(50% - 98px / 2 - 34px);
-  font-weight: 400;
+  margin-left: 16px;
   font-size: 10px;
   line-height: 14px;
   color: var(--second-text-color);
@@ -79,7 +82,6 @@ p {
   flex-grow: 1;
   margin-right: 16px;
   text-align: right;
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--text-color);
@@ -95,7 +97,6 @@ p {
 .card__price_word {
   flex-grow: 1;
   margin-left: 16px;
-  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: var(--second-text-color);
@@ -116,7 +117,6 @@ p {
   height: 40px;
   text-align: center;
   margin: 16px;
-  margin-left: calc(50% - 166px / 2);
   background-color: var(--second-background-color);
   border-radius: 5px;
   text-decoration: none;
