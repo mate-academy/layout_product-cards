@@ -1,0 +1,142 @@
+html {
+  margin: 0;
+}
+
+:root {
+  --mainColor: #060b35;
+  --blueAccent: #00acdc;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.card--size {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  
+}
+
+.card__logo {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+h1 {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--mainColor);
+  margin: 0 0 4px;
+}
+
+p {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--mainColor);
+  margin: 0;
+}
+
+.product-code {
+  margin-bottom: 16px;
+}
+
+.section-stars {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-stars__section {
+  display: flex;
+}
+
+.section-stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.section-stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.section-stars__section--star-0 :nth-child(-n+0),
+.section-stars__section--star-1 :nth-child(-n+1),
+.section-stars__section--star-2 :nth-child(-n+2),
+.section-stars__section--star-3 :nth-child(-n+3),
+.section-stars__section--star-4 :nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.section__reviews {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.section-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-price__info {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: var(--mainColor);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.section-price__price {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card__button {
+  margin: auto;
+  color: #fff;
+  width: 166px;
+  height: 40px;
+  background-color: var(--blueAccent);
+  border: none;
+  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__button:hover {
+  border: 1px solid var(--blueAccent);
+  background-color: #fff;
+  border-radius: 5px;
+  color: #00acdc;
+}
