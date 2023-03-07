@@ -1,47 +1,55 @@
-
+/* #region reset  */
 body {
   margin: 0;
   padding: 0;
+}
+/* #endregion */
+
+/* #region card-container  */
+.card-container {
+  display: flex;
   font-family: Roboto, sans-serif;
   font-style: normal;
 }
+/* #endregion */
 
-.card-container {
-  display: flex;
-}
-
+/* #region card-product */
 .card-product {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 198px;
+  height: 406px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  width: 198px;
-  height: 406px;
 }
+/* #endregion */
 
+/* #region card image */
 .card-product__image {
-  margin-top: 32px;
-  margin-left: 19px;
   height: 134px;
   width: 160px;
+  margin-top: 32px;
+  margin-left: 19px;
 }
 
 .card-product__image_size {
   height: 134px;
   width: 160px;
 }
+/* #endregion */
 
+/* #region name and rate */
 .card-product__name {
-  margin-top: 40px;
-  margin-left: 16px;
   width: 166px;
   height: 36px;
+  margin-top: 40px;
+  margin-left: 16px;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
   font-weight: 500;
+  color: #060b35;
 }
 
 .card-product__code {
@@ -50,26 +58,27 @@ body {
   margin-top: 4px;
   margin-left: 16px;
   font-size: 10px;
-  color: #616070;
   line-height: 14px;
+  color: #616070;
 }
 
 .card-product__reviews {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
   line-height: 16px;
 }
 
 .card-product__reviews_stars {
   display: flex;
-  margin-left: 16px;
 }
 
 .stars_star {
-  margin-right: 4px;
   width: 16px;
   height: 16px;
+  margin-right: 4px;
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -81,33 +90,35 @@ body {
 
 .card-product__reviews_rate {
   display: flex;
-  font-weight: 400;
-  margin-right: 16px;
   font-size: 10px;
-
+  font-weight: 400;
 }
+/* #endregion */
 
+/* #region card price */
 .card-product__price {
-  line-height: 18px;
-  margin-top: 24px;
   display: flex;
   justify-content: space-between;
+  margin-top: 24px;
+  line-height: 18px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .card-product__price_title {
-  margin-left: 16px;
   font-size: 12px;
-  color: #616070;
   font-weight: 400;
+  color: #616070;
 }
 
 .card-product__price_money {
-  margin-right: 16px;
   font-size: 16px;
   font-weight: 700;
   color: #060b35;
 }
+/* #endregion */
 
+/* #region card buy */
 .card-product__buy {
   display: flex;
   text-align: center;
@@ -115,22 +126,23 @@ body {
 }
 
 .card-product__buy_btn {
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 166px;
   height: 38px;
-  text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  background-color: #00acdc;
-  border-radius: 5px;
-  border: 1px solid #00acdc;
   line-height: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  color: #fff;
 }
 
 .card-product__buy_btn:hover {
   background-color: #fff;
   color: #00acdc;
 }
+/* #endregion */
