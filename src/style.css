@@ -1,6 +1,26 @@
-html {
+* {
   margin: 0;
 }
+
+/* .card__info-product {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--mainColor);
+  margin: 0 0 4px;
+} */
+
+/* p {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--mainColor);
+  margin: 0;
+} */
 
 :root {
   --mainColor: #060b35;
@@ -19,7 +39,6 @@ html {
   display: flex;
   flex-direction: column;
   padding: 32px 16px 16px;
-  
 }
 
 .card__logo {
@@ -29,7 +48,7 @@ html {
   height: 134px;
 }
 
-h1 {
+.product-name {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -39,32 +58,28 @@ h1 {
   margin: 0 0 4px;
 }
 
-p {
+.product-code {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: var(--mainColor);
-  margin: 0;
+  color: #616070;
+  margin: 0 0 16px;
 }
 
-.product-code {
-  margin-bottom: 16px;
-}
-
-.section-stars {
+.card__stars {
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-bottom: 24px;
 }
 
-.section-stars__section {
+.card__stars-section {
   display: flex;
 }
 
-.section-stars__star {
+.card__stars-star {
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -72,15 +87,15 @@ p {
   width: 16px;
 }
 
-.section-stars__star:not(:last-child) {
+.card__stars-star:not(:last-child) {
   margin-right: 4px;
 }
 
-.section-stars__section--star-0 :nth-child(-n+0),
-.section-stars__section--star-1 :nth-child(-n+1),
-.section-stars__section--star-2 :nth-child(-n+2),
-.section-stars__section--star-3 :nth-child(-n+3),
-.section-stars__section--star-4 :nth-child(-n+4) {
+.card__stars-section--star-0 :nth-child(-n+0),
+.card__stars-section--star-1 :nth-child(-n+1),
+.card__stars-section--star-2 :nth-child(-n+2),
+.card__stars-section--star-3 :nth-child(-n+3),
+.card__stars-section--star-4 :nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -88,7 +103,7 @@ p {
   width: 16px;
 }
 
-.section__reviews {
+.card__stars-reviews {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -96,13 +111,13 @@ p {
   line-height: 14px;
 }
 
-.section-price {
+.card__price-block {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.section-price__info {
+.card__info {
   font-family: Roboto, sans-serif;
   font-style: normal;
   color: var(--mainColor);
@@ -111,7 +126,7 @@ p {
   line-height: 18px;
 }
 
-.section-price__price {
+.card__price {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
