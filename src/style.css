@@ -2,12 +2,17 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
+
+  --border-color: #f3f3f3;
+  --dark: #060b35;
+  --gray: #616070;
+  --blue: #00acdc;
 }
 
 .card {
   box-sizing: border-box;
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 32px 16px 16px;
   background: #fff;
@@ -25,14 +30,15 @@ body {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
-  color: #060b35;
+  color: var(--dark);
 }
 
 .card__id {
+  margin: 0;
   margin-bottom: 16px;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--gray);
 }
 
 .card__review-div {
@@ -59,47 +65,50 @@ body {
   margin-right: 0;
 }
 
-.stars-1 .star:nth-child(-n+1),
-.stars-2 .star:nth-child(-n+2),
-.stars-3 .star:nth-child(-n+3),
-.stars-4 .star:nth-child(-n+4),
-.stars-5 .star:nth-child(-n+5) {
+.stars--1 .star:nth-child(-n+1),
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star:nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
-.reviews-amount {
+.card__reviews-amount {
   font-size: 10px;
   line-height: 14px;
-  color: #060b35;
+  color: var(--dark);
+  margin: 0;
 }
 
-.price-div {
+.card__price-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.price-text {
+.card__price-text {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--gray);
+  margin: 0;
 }
 
-.price-tag {
+.card__price-tag {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
-  color: #060b35;
+  color: var(--dark);
+  margin: 0;
 }
 
-.button {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   height: 40px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--blue);
   border-radius: 5px;
   font-size: 14px;
   line-height: 16px;
@@ -107,10 +116,10 @@ body {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
 
 .button:hover {
-  color: #00acdc;
+  color: var(--blue);
   background-color: #fff;
 }
