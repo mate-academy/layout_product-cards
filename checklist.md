@@ -41,7 +41,7 @@ BAD example:
 4. [TASK] - Make sure to reuse part of [Stars task](https://github.com/mate-academy/layout_stars)
 here, and keep it operational in case you change block modifier.
 5. [BEM] - Check your BEM structure using BEM-linter (`npm run lint`) and
-[this list](https://mate-academy.github.io/fe-program/css/typical-bem-mistakes)
+[this list](https://mate-academy.github.io/fe-program/css/typical-bem-mistakes-en)
 6. [BEM] - Don't make BEM structure too complicated. You don't need to create
 separate blocks for anything other than card itself and stars.
 7. [BEM & STYLES] - Don't add external styles (positioning or margins) to
