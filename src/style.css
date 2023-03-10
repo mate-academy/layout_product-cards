@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -10,7 +14,6 @@ body {
 }
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
@@ -55,14 +58,14 @@ body {
 .star {
   width: 16px;
   height: 16px;
-  margin-right: 4px;
+  margin-right: 0;
   background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.star:last-child {
-  margin-right: 0;
+.star:not(:last-child) {
+  margin-right: 4px;
 }
 
 .stars--1 .star:nth-child(-n+1),
@@ -119,7 +122,7 @@ body {
   background-color: var(--blue);
 }
 
-.button:hover {
+.card__button:hover {
   color: var(--blue);
   background-color: #fff;
 }
