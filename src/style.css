@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  --border-color: #f3f3f3;
+  --dark: #060b35;
+  --gray: #616070;
+  --blue: #00acdc;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.card__id {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--gray);
+}
+
+.card__review-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  margin-right: 0;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .star:nth-child(-n+1),
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__reviews-amount {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--dark);
+  margin: 0;
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--gray);
+  margin: 0;
+}
+
+.card__price-tag {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--dark);
+  margin: 0;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--blue);
+}
+
+.card__button:hover {
+  color: var(--blue);
+  background-color: #fff;
+}
