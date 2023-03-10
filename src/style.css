@@ -1,7 +1,6 @@
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  --color-blue: #00acdc;
 }
 
 * {
@@ -15,6 +14,9 @@ body {
 }
 
 .card {
+  --color-blue: #00acdc;
+  --color-main-accent: #060b35;
+  --color-secondary: #616070;
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -22,7 +24,7 @@ body {
   line-height: 14px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  color: #616070;
+  color: var(--color-secondary);
   padding: 16px;
 }
 
@@ -38,13 +40,13 @@ body {
   font-size: 12px;
   line-height: 18px;
   margin-top: 40px;
-  color: #060b35;
+  color: var(--color-main-accent);
 }
 
 .card__code {
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--color-secondary);
   margin-top: 4px;
 }
 
@@ -62,7 +64,7 @@ body {
   background-position: center;
 }
 
-.stars--1 .stars__star:nth-child(1),
+.stars--1 .stars__star:nth-child(-n+1),
 .stars--2 .stars__star:nth-child(-n+2),
 .stars--3 .stars__star:nth-child(-n+3),
 .stars--4 .stars__star:nth-child(-n+4),
@@ -92,14 +94,14 @@ body {
 .card__price-word {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--color-secondary);
 }
 
 .card__price-sum {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-main-accent);
 }
 
 .card__button-buy {
