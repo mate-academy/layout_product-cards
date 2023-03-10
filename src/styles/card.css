@@ -1,23 +1,27 @@
-.Card {
+.card {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-
+  max-width: 200px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
-.Card__Image {
+.card__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+}
+
+.card__image {
   display: flex;
   flex-grow: 1;
 
-  margin: 32px 19px 40px;
+  margin: 0 var(--card-image-horizontal-margins) 40px;
   max-width: 160px;
   height: 134px;
 }
 
-.Card__Title {
+.card__title {
   align-self: center;
   max-width: 166px;
 
@@ -30,7 +34,7 @@
   color: var(--color-main-accent);
 }
 
-.Card__ProductCode {
+.card__product-code {
   margin-left: var(--outside-card-items-margin);
   margin-bottom: 16px;
 
@@ -40,7 +44,7 @@
   color: var(--color-secondary);
 }
 
-.Card__Review {
+.card__review {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +53,7 @@
 
 }
 
-.Card__ReviewsCount {
+.card__reviews-count {
   padding-top: 2px;
 
   font-size: 10px;
@@ -60,7 +64,7 @@
   color: var(--color-main-accent);
 }
 
-.Card__Price {
+.card__price {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,20 +72,20 @@
   margin: 0 var(--outside-card-items-margin) 16px;
 }
 
-.Card__PriceTitle {
+.card__price-title {
   font-size: 12px;
   line-height: 18px;
   color: var(--color-secondary);
 }
 
-.Card__PriceValue {
+.card__price-value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: var(--color-main-accent);
 }
 
-.Card__BuyLink {
+.card__buy-link {
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -104,7 +108,7 @@
   background-color: var(--color-blue-accent);
 }
 
-.Card__BuyLink:hover {
+.card__buy-link:hover {
   color: var(--color-blue-accent);
   border-color: var(--color-blue-accent);
   background-color: #fff;
