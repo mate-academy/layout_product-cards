@@ -26,24 +26,22 @@ body {
 }
 
 .card {
-  width: 198px;
+  width: 200px;
+  box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
-.image-container {
-  margin: 32px 19px 36px;
+.card__image-container {
+  margin-bottom: 36px;
 }
 
-.image-container__image {
-  width: 100%;
+.card__image {
+  width: 160px;
   height: 134px;
   object-fit: cover;
   object-position: center;
-}
-
-.about-product {
-  margin: 0 16px;
 }
 
 .name {
@@ -52,7 +50,7 @@ body {
   line-height: 18px;
 }
 
-.about-product__name {
+.card__name {
   font-size: 12px;
   font-weight: 500;
   color: var(--dark-blue-color);
@@ -63,24 +61,21 @@ body {
   height: 14px;
 }
 
-.about-product__code {
-  font-weight: 400;
+.card__code {
   font-size: 10px;
   color: var(--gray-color);
 }
 
-.about-product__marks {
+.card__marks {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
 }
 
-.about-product__stars {
+.card__stars {
   display: flex;
   flex-direction: column;
-  width: 100px;
-  height: 16px;
 }
 
 .stars {
@@ -88,13 +83,10 @@ body {
   align-items: center;
 }
 
-.star {
+.stars__star {
   width: 16px;
   height: 16px;
-  margin: 0 5px 0 2px;
-}
-
-.stars__star {
+  margin-right: 4px;
   background-image: url("images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -108,42 +100,33 @@ body {
   background-image: url("images/star-active.svg");
 }
 
-.about-product__reviews {
-  font-weight: 400;
+.card__reviews {
   font-size: 10px;
-  color: #060b35;
+  color: (--dark-blue-color);
 }
 
-.about-product__price {
+.card__price {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 23px;
 }
 
-.price-content {
-  color: #616070;
-}
-
-.about-product__price-content {
-  font-weight: 400;
+.card__price-content {
   font-size: 12px;
+  color: var(--gray-color);
 }
 
-.price-digit {
+.card__price-digit {
+  font-weight: 700;
   color: var(--dark-blue-color);
 }
 
-.about-product__price-digit {
-  font-weight: 700;
-  font-size: 16px;
+.card__button-container {
+  margin-top: 16px;
 }
 
-.button {
-  margin: 16px 0;
-}
-
-.button__container {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,14 +138,14 @@ body {
   padding: 12px 70px 12px 69px;
 }
 
-.button__link {
+.card__link {
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
   border-radius: 5px;
 }
 
-.button__link:hover {
+.card__link:hover {
   color: var(--light-blue-color);
   padding: 11px 69px 11px 68px;
   background-color: var(--white-color);
