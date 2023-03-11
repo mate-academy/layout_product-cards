@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-items: center;
   width: 200px;
-  padding: 32px 19px 19px;
+  padding: 32px 16px 16px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
   background: #fff;
+  border: 1px solid #f3f3f3;
 }
 
 :root {
@@ -18,14 +18,14 @@
 .card-img {
   max-height: 134px;
   margin-bottom: 40px;
-  width: 160px;
+  object-fit: contain;
 }
 
 .card__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--main-accent-color);
 }
 
@@ -56,31 +56,23 @@
   color: var(--main-accent-color);
 }
 
-.card__button {
+.card__button .card__buy-link {
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 11px 0;
-  background-color: var(--giganiga-blue-color);
-  border-radius: 5px;
-  border: 1px solid var(--giganiga-blue-color);
-}
-
-.card__button:hover {
-  background: #fff;
-  border-color: var(--giganiga-blue-color);
-  border-radius: 5px;
-}
-
-.card_buy {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 700;
+  width: 166px;
+  padding: 14px;
   font-size: 14px;
-  line-height: 16px;
+  border-radius: 5px;
+  background-color: var(--giganiga-blue-color);
+  text-decoration: none;
   color: #fff;
+  font-weight: 700;
 }
 
-.card__button:hover .card_buy {
+.card__buy-link:hover {
+  background-color: #fff;
   color: var(--giganiga-blue-color);
+  border: 1px solid var(--giganiga-blue-color);
 }
