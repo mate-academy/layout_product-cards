@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  --font-color__h1: #060b35;
+  --font-color__p: #616070;
+  --font-color__box: #00acdc;
+  --font-color__hover: white;
+}
+
+p {
+  margin: 0;
+}
+
+.block {
+  width: 200px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.block__card {
+  margin: 32px 16px 0;
+}
+
+.photo {
+  margin-left: 3px;
+  width: 160px;
+  height: 134px;
+}
+
+.discription {
+  margin-top: 36px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 500;
+  width: 166px;
+  height: 36px;
+  align-items: center;
+  line-height: 18px;
+  color: var(--font-color__h1);
+}
+
+.code {
+  font-size: 10px;
+  margin-top: 4px;
+  color: var(--font-color__p);
+
+}
+
+.reviews {
+  font-size: 10px;
+  color: var(--font-color__h1);
+  line-height: 16px;
+}
+
+.rev {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.stars {
+  display: flex;
+  margin-bottom: 1px;
+
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--0 > .stars__star:nth-child(0),
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
+
+.block__price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  line-height: 18px;
+}
+
+.price {
+  font-size: 12px;
+  color: var(--font-color__p);
+}
+
+.price_digit {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.box {
+  display: flex;
+  margin: 16px 0;
+  border-radius: 5px;
+  background: var(--font-color__box);
+  width: 166px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--font-color__hover) ;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--font-color__box);
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+
+}
+
+.box:hover {
+  background-color: var(--font-color__hover);
+  cursor: pointer;
+}
+
+.buy:hover {
+  color: var(--font-color__box);
+  cursor: pointer;
+}
