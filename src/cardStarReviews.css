@@ -1,0 +1,31 @@
+.card__star-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.star {
+  display: flex;
+}
+
+.star__stars {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__star :nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.star__stars:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__reviews {
+  font-weight: 400;
+  color: var(--text-color);
+}
