@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  margin: 0;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__imac--image {
+  display: block;
+  position: relative;
+  height: 134px;
+  width: 160px;
+  margin-left: 3px;
+  margin-bottom: 40px;
+}
+
+/* I wanted to group the texts by groups of colors and styles,
+however, the linter didn't like that, so I quit that approach */
+
+.card__text--title {
+  margin: 0;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #060b35;
+  font-style: normal;
+}
+
+.card__text--sub {
+  margin: 4px 0;
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #616070;
+  font-style: normal;
+}
+
+.card__reviews,
+.card__price {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  width: 166px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__text--review {
+  margin: 0;
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #060b35;
+  font-style: normal;
+}
+
+.card__text--price--title {
+  margin: 0;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+  font-style: normal;
+}
+
+.card__text--price--value {
+  margin: 0;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+  font-style: normal;
+  text-align: right;
+}
+
+.card__button {
+  margin-top: 4px;
+  padding: 0;
+  width: 166px;
+  height: 40px;
+  background: #00acdc;
+  border-radius: 5px;
+  border: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* we were told to reuse stars from previous task and to keep the styles
+so the stars depend on the value of stars--N, so I'm pasting it here */
+
+.stars {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+/* Hover function */
+
+.card__button:hover {
+  background: transparent;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
