@@ -1,38 +1,32 @@
 .card {
   font-family: "Roboto", Arial, sans-serif;
   width: 200px;
-  padding-top: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
+  padding: 32px var(--spacing) var(--spacing);
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   display: flex;
   flex-direction: column;
 }
 
-.card__product-img {
-  width: 160px;
-  height: 134px;
+.card__image {
   margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  align-self: center;
 }
 
-.card__product-name {
+.card__title {
   font-size: var(--font-size-medium);
-  line-height: 18px;
+  line-height: var(--font-height-medium);
   font-weight: 500;
   color: var(--main-font-color);
   margin-bottom: 4px;
 }
 
-.card__product-code {
+.card__code {
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-normal);
+  font-weight: normal;
   color: var(--secondary-font-color);
-  line-height: 14px;
-  margin-bottom: 16px;
+  line-height: var(--font-height-small);
+  margin-bottom: var(--spacing);
 }
 
 .card__review-wrapper {
@@ -42,25 +36,25 @@
   margin-bottom: 24px;
 }
 
-.card__review-score {
-  font-weight: var(--font-weight-normal);
+.card__review {
+  font-weight: normal;
   font-size: var(--font-size-small);
   color: var(--main-font-color);
-  line-height: 14px;
+  line-height: var(--font-height-small);
 }
 
 .card__price-wrapper {
   display: flex;
   justify-content: space-between;
   font-size: var(--font-size-medium);
-  line-height: 18px;
+  line-height: var(--font-height-medium);
   color: var(--secondary-font-color);
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing);
 }
 
-.card__price-number {
+.card__price {
   font-size: 16px;
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   color: var(--main-font-color);
 }
 
@@ -68,20 +62,20 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 40px;
-  background-color: var(--button-color);
+  background-color: var(--blue-color-accent);
   border: 1px solid transparent;
   border-radius: 5px;
 }
 
 .card__link:hover {
-  color: var(--button-color);
-  border-color: var(--button-color);
+  color: var(--blue-color-accent);
+  border-color: var(--blue-color-accent);
   background-color: transparent;
 }
