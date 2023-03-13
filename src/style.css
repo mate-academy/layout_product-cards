@@ -1,6 +1,10 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+
+  --main-color: #00acdc;
+  --text-accent-color: #060b35;
+  --text-secondary-color: #616070;
 }
 
 .card {
@@ -22,24 +26,23 @@ body {
   font-weight: 500;
   line-height: 18px;
   margin: 0 16px;
-  color: #060b35;
+  color: var(--text-accent-color);
 }
 
 .card__product-code {
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
-  color: #060b35;
+  color: var(--text-accent-color);
   font-style: initial;
   margin: 4px 0 16px 16px;
 }
 
-.card__reviews-star {
+.card__review {
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin: 0 16px 24px;
-
 }
 
 .stars {
@@ -60,12 +63,12 @@ body {
   background-image: url(./images/star-active.svg);
 }
 
-.card__reviews-star-reviews {
+.card__review-count {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
   text-align: right;
-  color: #060b35;
+  color: var(--text-accent-color);
 }
 
 .card__price {
@@ -75,20 +78,20 @@ body {
 }
 
 .card__price-text {
-  color: #616070;
+  color: var(--text-secondary-color);
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
 }
 
-.card__price-price {
-  color: #060b35;
+.card__price-value {
+  color: var(--text-accent-color);
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
 }
 
-.card__bottom {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,10 +105,10 @@ body {
   line-height: 16px;
 }
 
-.card__bottom:hover {
+.card__button:hover {
   box-sizing: border-box;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--main-color);
   background-color: #ffff;
-  color: #00acdc;
+  color: var(--main-color);
   cursor: pointer;
 }
