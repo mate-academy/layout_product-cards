@@ -1,0 +1,121 @@
+:root {
+  --textColorPrimary: #060b35;
+  --textColorSecondary: #616070;
+  --buttonCyan: #00acdc;
+  --lhSmall: 14px;
+  --lhBig: 18px;
+  --fsSmall: 10px;
+  --fsBig: 12px;
+  --fwLow: 400;
+  --fwMid: 500;
+  --fwHigh: 700;
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  margin: 0;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__imac {
+  display: flex;
+  justify-content: center;
+}
+
+.card__imac-image {
+  display: block;
+  position: relative;
+  height: 134px;
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+/* I wanted to group the texts by groups of colors and styles,
+however, the linter didn't like that, so I quit that approach */
+
+.card__text-title {
+  margin: 0;
+  line-height: var(--lhBig);
+  font-size: var(--fsBig);
+  font-weight: var(--fwMid);
+  color: var(--textColorPrimary);
+  font-style: normal;
+}
+
+.card__text-sub {
+  margin: 4px 0;
+  line-height: var(--lhSmall);
+  font-size: var(--fsSmall);
+  font-weight: var(--fwLow);
+  color: var(--textColorSecondary);
+  font-style: normal;
+}
+
+.card__reviews,
+.card__price {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  width: 166px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__text-review {
+  margin: 0;
+  line-height: var(--lhSmall);
+  font-size: var(--fsSmall);
+  font-weight: var(--fwLow);
+  color: var(--textColorPrimary);
+  font-style: normal;
+}
+
+.card__text-price-title {
+  margin: 0;
+  line-height: var(--lhBig);
+  font-size: var(--fsBig);
+  font-weight: var(--fwLow);
+  color: var(--textColorSecondary);
+  font-style: normal;
+}
+
+.card__text-price-value {
+  margin: 0;
+  line-height: var(--lhBig);
+  font-size: 16px;
+  font-weight: var(--fwHigh);
+  color: #060b35;
+  font-style: normal;
+  text-align: right;
+}
+
+.card__button {
+  margin-top: 4px;
+  padding: 12px 0;
+  width: 166px;
+  background: var(--buttonCyan);
+  border-radius: 5px;
+  border: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: var(--fwHigh);
+  color: #fff;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Hover function */
+
+.card__button:hover {
+  background: transparent;
+  color: var(--buttonCyan);
+  border: 1px solid var(--buttonCyan);
+}
