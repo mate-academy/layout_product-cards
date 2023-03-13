@@ -1,15 +1,20 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+}
 
+:root {
   --main-color: #00acdc;
   --text-accent-color: #060b35;
   --text-secondary-color: #616070;
   --button-color: #fff;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 200px;
@@ -60,7 +65,11 @@ body {
   margin-right: 4px;
 }
 
-.stars--4 :nth-child(-n+4) {
+.stars--1 :first-child,
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -107,7 +116,6 @@ body {
 }
 
 .card__button:hover {
-  box-sizing: border-box;
   border: 1px solid var(--main-color);
   background-color: var(--button-color);
   color: var(--main-color);
