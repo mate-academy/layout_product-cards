@@ -1,5 +1,5 @@
-html {
-  --mainColor: #00acdc;
+:root {
+  --primary-color: #00acdc;
 }
 
 .card {
@@ -54,11 +54,11 @@ html {
 .card__price {
   display: flex;
   padding-top: 24px;
+  justify-content: space-between;
 }
 
 .card__value-text {
   text-align: left;
-  flex-grow: 1;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -67,7 +67,6 @@ html {
 
 .card__price-number {
   text-align: right;
-  flex-grow: 1;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -77,15 +76,12 @@ html {
 .card__button {
   box-sizing: border-box;
   margin-top: 16px;
-  background: var(--mainColor);
+  background: var(--primary-color);
   border-radius: 5px;
   bottom: 17px;
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid var(--mainColor);
-}
-
-.card__button-link {
+  border: 1px solid var(--primary-color);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -95,8 +91,7 @@ html {
   text-decoration: none;
 }
 
-.card__button:hover,
-.card__button-link:hover {
+.card__button:hover {
   background: white;
-  color: var(--mainColor);
+  color: var(--primary-color);
 }
