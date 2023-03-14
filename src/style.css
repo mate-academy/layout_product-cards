@@ -7,7 +7,7 @@
   --main-color: #00acdc;
   --text-accent-color: #060b35;
   --text-secondary-color: #616070;
-  --button-color: #fff;
+  --background_button-color: #fff;
 }
 
 body {
@@ -17,12 +17,16 @@ body {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 32px 16px 0;
   max-width: 200px;
   border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: var(--background_button-color);
 }
 
 .card__img {
-  margin: 32px 19px 40px;
+  margin: 0 auto 40px;
   width: 160px;
   height: 134px;
 }
@@ -31,24 +35,25 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  margin: 0 16px;
+  margin-bottom: 4px;
   color: var(--text-accent-color);
 }
 
 .card__product-code {
+  align-self: start;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
   color: var(--text-accent-color);
   font-style: initial;
-  margin: 4px 0 16px 16px;
+  margin-bottom: 16px;
 }
 
 .card__review {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin: 0 16px 24px;
+  margin-bottom: 24px;
 }
 
 .stars {
@@ -84,7 +89,7 @@ body {
 .card__price {
   display: flex;
   justify-content: space-between;
-  margin: 0 16px;
+  margin-bottom: 16px;
 }
 
 .card__price-text {
@@ -107,17 +112,19 @@ body {
   align-items: center;
   background-color: var(--main-color);
   height: 40px;
+  border: 1px solid var(--main-color);
   border-radius: 5px;
-  margin: 16px;
-  color: var(--button-color);
+  margin-bottom: 16px;
+  color: var(--background_button-color);
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .card__button:hover {
-  border: 1px solid var(--main-color);
-  background-color: var(--button-color);
+  border-color: 1px solid var(--main-color);
+  background-color: var(--background_button-color);
   color: var(--main-color);
-  cursor: pointer;
 }
