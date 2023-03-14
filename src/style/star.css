@@ -1,17 +1,21 @@
 .stars {
   display: flex;
-  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.stars--4 .stars__star:nth-child(-n+5) {
-  background: url(../images/star-active.svg)  no-repeat;
-  width: 16px;
-  height: 16px;
+.stars__star {
   margin-right: 4px;
-}
-    
-.stars--4 .stars__star:nth-child(n+5) {
   width: 16px;
   height: 16px;
-  background: url(../images/star.svg)  no-repeat;
+  background: center no-repeat url(../images/star.svg);
+}
+
+.stars__star :first-child {
+  margin-right: 0;
+}
+
+.stars__star:nth-child(-n+4) {
+  background: center no-repeat url(../images/star-active.svg);
 }
