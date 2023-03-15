@@ -2,18 +2,19 @@
   --textCol--color: #060b35;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
+}
+
+html {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -28,12 +29,8 @@ body {
   margin: 0 auto 40px;
 }
 
-.stars :last-child {
-  margin-right: 0;
-}
-
 .card_descript {
-  margin: 0 0 4px;
+  margin-bottom: 4px;
 
   font-weight: 500;
   font-size: 12px;
@@ -42,37 +39,38 @@ body {
   color: var(--textCol--color);
 }
 
+.card_code {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+
+  color: #616070;
+  margin-bottom: 16px;
+}
+
 .card_rew {
-  height: 16px;
   margin-bottom: 24px;
-  margin-top: 16px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.card_code {
-  font-size: 10px;
-  line-height: 14px;
-
-  color: #616070;
-}
-
 .review {
   color: var(--textCol--color);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
 }
 
 .card_price {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  margin-bottom: 16px;
 }
 
 .price {
-  width: 32px;
-  height: 18px;
-
+  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
 
@@ -80,19 +78,16 @@ body {
 }
 
 .price_value {
-  width: 79px;
-  height: 18px;
-  line-height: 18px;
-
   font-weight: 700;
   font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
 }
 
 .card_buy {
   width: 100%;
   padding: 12px 0;
 
-  box-sizing: border-box;
   border: 1px solid transparent;
   border-radius: 5px;
 
@@ -100,9 +95,8 @@ body {
   color: #fff;
   background-color: #00acdc;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  text-align: center;
 
   text-transform: uppercase;
   font-size: 14px;
@@ -112,6 +106,6 @@ body {
 
 .card_buy:hover {
   background-color: white;
-  border: 1px solid #00acdc;
+  border-color: #00acdc;
   color: #00acdc;
 }
