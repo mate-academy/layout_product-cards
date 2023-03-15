@@ -1,48 +1,33 @@
 * {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
 }
-  
+
 .stars {
   display: flex;
 }
-  
+
 .stars > div {
-  background-image: url(images/star-active.svg);
+  background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 16px;
   width: 16px;
   display: inline-block;
 }
-  
+
 .stars :not(:last-of-type) {
   margin-right: 4px;
 }
-  
-.stars--0 > div:nth-child(n + 1) {
-  background-image: url(images/star.svg);
-}
-  
-.stars--1 > div:nth-child(n + 2) {
-  background-image: url(images/star.svg);
-}
-  
-.stars--2 > div:nth-child(n + 3) {
-  background-image: url(images/star.svg);
-}
-  
-.stars--3 > div:nth-child(n + 4) {
-  background-image: url(images/star.svg);
-}
-  
-.stars--4 > div:nth-child(n + 5) {
-  background-image: url(images/star.svg);
-}
-  
-.stars--5 > div:nth-child(n + 6) {
-  background-image: url(images/star.svg);
+
+.stars--0 .stars__star:nth-child(-n),
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
 }
