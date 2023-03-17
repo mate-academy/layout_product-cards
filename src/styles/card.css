@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 .card {
   width: 200px;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   border: #f3f3f3 1px solid;
   padding: 32px 16px 16px;
 }
@@ -29,30 +32,36 @@
 
 .card__code {
   font-size: 10px;
-  padding-top: 5px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 20px;
   color: var(--secondary);
 }
 
 .card__rate {
   display: flex;
-  padding-top: 18px;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
 }
 
 .card__reviews {
   font-size: 10px;
+  font-weight: 400;
   color: var(--main-color);
 }
 
 .card__price-zone {
-  padding-top: 23px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  margin-bottom: 16px;
+  line-height: 18px;
 }
 
 .card__price-name {
+  font-size: 12px;
+  font-weight: 400;
   color: var(--secondary);
 }
 
@@ -63,15 +72,17 @@
 }
 
 .card__button {
-  margin-top: 16px;
-  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  box-sizing: border-box;
-  border: transparent 1px solid;
+  border: 1px solid var(--button-color);
   background-color: var(--button-color);
 }
 
 .card__link {
+  width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
@@ -80,6 +91,7 @@
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card__button:hover {
