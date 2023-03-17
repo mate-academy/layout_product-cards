@@ -1,0 +1,37 @@
+.stars {
+  display: flex;
+}
+
+.container__stars {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__stars-4 {
+  display: flex;
+}
+
+.stars__stars-1 :first-child,
+.stars__stars-2 :nth-child(-n+2),
+.stars__stars-3 :nth-child(-n+3),
+.stars__stars-4 :nth-child(-n+4),
+.stars__stars-5 > * {
+  background-image: url(images/star-active.svg);
+}
+
+.stars__reviews {
+  justify-self: end;
+  font-size: 10px;
+  line-height: 14px;
+}
