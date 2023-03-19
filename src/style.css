@@ -1,0 +1,149 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  --dark-blue: #060b35;
+  --lghit-grey: #616070;
+  --lghit-blue: #00acdc;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+}
+
+.card,
+.card--hover {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 198px;
+  height: 406px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  margin: 32px 19px 40px;
+  background-image: url(images/imac.jpeg);
+  background-size: 160px 134px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__info {
+  margin: 0 16px 4px;
+  width: 166px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dark-blue);
+}
+
+.card__product-code {
+  margin: 0 84px 16px 16px;
+  width: 98px;
+  height: 14px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--lghit-grey);
+}
+
+.review {
+  margin: 0 16px 24px;
+  display: flex;
+  width: 166px;
+  height: 16px;
+}
+
+.review__stars {
+  display: flex;
+  justify-content: space-between;
+  width: 96px;
+  height: 16px;
+}
+
+.review__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-size: 13px 12px;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.review__stars--4 .review__star:nth-child(-n + 4) {
+  background-image: url(images/star-active.svg);
+}
+
+.review__text {
+  margin-left: 17px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  width: 53px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--dark-blue);
+}
+
+.card__price-block {
+  margin: 0 16px 16px;
+  width: 166px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  width: 31px;
+  height: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--lghit-grey);
+}
+
+.card__price-number {
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  width: 50px;
+  height: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-blue);
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 16px 16px;
+  width: 164px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: var(--lghit-blue);
+  border: 1px solid var(--lghit-blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: var(--white);
+  border: 1px solid var(--lghit-blue);
+  color: var(--lghit-blue);
+}
