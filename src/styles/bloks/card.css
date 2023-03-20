@@ -1,4 +1,4 @@
-.container {
+.card {
   width: 198px;
 
   display: flex;
@@ -12,64 +12,88 @@
   background-color: white;
 }
 
-.container__image {
-  margin-top: 32px;
-  background: no-repeat url(/src//images/imac.jpeg) top;
-  background-size: 160px 134px;
-}
-
-.container__card {
-  margin-top: 174px;
+.card__description {
   padding: 0 16px 16px;
+  display: block;
 }
 
-.container__star {
+.card__image {
+  margin-top: 32px;
+}
+
+.card__title {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color);
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--text-second-color);
+  line-height: 14px;
+}
+
+.card__star {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.container__price {
+.card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-color);
+}
+
+.card__price {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.container__text1 {
+.card__price-text {
+  font-weight: 400;
   font-size: 12px;
+  line-height: 18px;
+  color: var(--text-second-color);
+}
+
+.card__price-value {
   font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color);
 }
 
-.container__text2 {
-  font-size: 10px;
-}
-
-.container__text3 {
-  font-size: 10px;
-}
-
-.container__text4 {
-  font-size: 12px;
-}
-
-.container__text5 {
-  font-size: 12px;
+.card__buy {
   font-weight: 700;
-}
+  font-size: 14px;
+  line-height: 16px;
 
-.container__button {
-  height: 40px;
+  padding: 12px;
   width: 166px;
-  color: white;
-  background-color: #00acdc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--text-third-color);
+  background-color: var(--main-color);
   background-position: center;
   border-radius: 5px;
-  border: 1px solid #00acdc;
 }
 
-.container__button:hover {
-  color: #00acdc;
-  background-color: white;
+.card__buy:hover {
+  color: var(--main-color);
+  background-color: var(--text-third-color);
+  border: 1px solid var(--main-color);
 }
