@@ -1,4 +1,6 @@
-/* root */
+@import url(./reset.css);
+@import url(./stars.css);
+
 :root {
   --main-color: rgb(6, 11, 53);
   --secoundary-color: rgb(97, 96, 112);
@@ -9,23 +11,6 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-/* reset */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-p,
-h1,
-h2 {
-  margin: 0;
-}
-
-/* card */
-
 .card {
   width: 200px;
   display: flex;
@@ -35,20 +20,17 @@ h2 {
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
+  padding: 32px var(--distance-to-border) 16px;
 }
-
-/* image */
 
 .card__image {
   width: 160px;
   height: 134px;
-  margin-top: 32px;
+  margin-bottom: 40px;
 }
 
-/* description */
-
 .card__description {
-  margin: 40px var(--distance-to-border) 16px;
+  margin-bottom: 16px;
 }
 
 .card__product-name {
@@ -66,52 +48,18 @@ h2 {
   color: var(--secoundary-color);
 }
 
-/* review */
-
 .card__review {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 0 0 22px;
+  margin-bottom: 22px;
 }
 
 .card__reviews-info {
   font-size: 10px;
   line-height: 18px;
   color: var(--main-color);
-  padding-right: var(--distance-to-border);
 }
-
-.card__stars {
-  padding-left: var(--distance-to-border);
-}
-
-/* stars */
-
-.stars {
-  display: flex;
-  flex-direction: row;
-}
-
-.stars_star {
-  height: 16px;
-  width: 16px;
-  background: no-repeat center url(./images/star.svg);
-}
-
-.stars_star:nth-child(-n + 4) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars_star:nth-child(-n + 1),
-.stars--2 .stars_star:nth-child(-n + 2),
-.stars--3 .stars_star:nth-child(-n + 3),
-.stars--4 .stars_star:nth-child(-n + 4),
-.stars--5 .stars_star:nth-child(-n + 5) {
-  background-image: url(./images/star-active.svg);
-}
-
-/* price */
 
 .card__price {
   display: flex;
@@ -122,7 +70,6 @@ h2 {
 }
 
 .card__price-text {
-  padding-left: var(--distance-to-border);
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -130,13 +77,10 @@ h2 {
 }
 
 .card__money-amount {
-  padding-right: var(--distance-to-border);
   font-size: 16px;
   line-height: 17px;
   font-weight: 700;
 }
-
-/* button */
 
 .card__button {
   padding: 12px 69px;
@@ -146,7 +90,6 @@ h2 {
   color: #fff;
   border: 1px solid #00acdc;
   text-decoration: none;
-  margin-bottom: 16px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
