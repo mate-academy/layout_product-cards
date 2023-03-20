@@ -1,18 +1,23 @@
+
+* {
+  box-sizing: border-box;
+}
+
 .card-container {
   display: flex;
   font-style: normal;
 }
 
 .card-product {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 406px;
-  padding: 32px 16px 16px ;
-  background: #fff;
+  height: 400px;
+  padding: 32px 16px 16px;
+  background: var(--moyo-card-product-background-color);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  color: var(--moyo-card-product-color);
 }
 
 .card-product__image {
@@ -30,7 +35,7 @@
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
-  color: #060b35;
+  color: var(--moyo-card-product__name-color);
 }
 
 .card-product__code {
@@ -38,6 +43,7 @@
   margin-top: 4px;
   font-size: 10px;
   line-height: 14px;
+  color: var(--moyo-card-product__code-color);
 }
 
 .card-product__price {
@@ -49,13 +55,13 @@
 
 .card-product__price_title {
   font-size: 12px;
-  color: #616070;
+  color: var(--moyo-card-product__price_title-color);
 }
 
 .card-product__price_money {
   font-size: 16px;
   font-weight: 700;
-  color: #060b35;
+  color: var(--moyo-card-product__price_money-color);
 }
 
 .card-product__buy {
@@ -74,11 +80,11 @@
   text-decoration: none;
   background-color: var(--moyo-btn-color);
   border: 1px solid var(--moyo-btn-color);
-  color: #fff;
+  color: var(--moyo-card-product__buy_btn-color);
 }
 
 .card-product__buy_btn:hover {
-  background-color: #fff;
+  background-color: var(--moyo-card-product__buy_btn-hover-color);
   color: var(--moyo-btn-color);
 }
 
@@ -86,4 +92,10 @@
   --moyo-btn-color: #00acdc;
   --moyo-card-product-color: #060b35;
   --moyo-card-product__code-color: #616070;
+  --moyo-card-product__name-color: #060b35;
+  --moyo-card-product__buy_btn-color: #fff;
+  --moyo-card-product__buy_btn-hover-color: #fff;
+  --moyo-card-product__price_title-color: #616070;
+  --moyo-card-product-background-color: #fff;
+  --moyo-card-product__price_money-color: #060b35;
 }
