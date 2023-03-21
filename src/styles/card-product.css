@@ -11,12 +11,10 @@ html {
 }
 
 .card-product {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-sizing: content-box;
   border: 1px solid #f3f3f3;
   width: 166px;
   border-radius: 5px;
@@ -30,7 +28,7 @@ html {
   margin-top: 16px;
 }
 
-.card-product__text-information {
+.card-product__information {
   display: flex;
   flex-direction: column;
 }
@@ -40,6 +38,7 @@ html {
   font-size: 12px;
   line-height: 18px;
   margin-top: 40px;
+  margin-bottom: 0;
   color: var(--primary-color);
 }
 
@@ -51,22 +50,28 @@ html {
   color: var(--secondary-color);
 }
 
-.card-product__raiting {
+.card-product__rating-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   margin-top: 16px;
   width: 166px;
 }
 
-.card-product__raiting-reviews {
+.card-product__review {
   font-weight: 400;
+  /* height: 16px;
+  width: 53px; */
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
   font-size: 10px;
   line-height: 14px;
   color: var(--primary-color);
 }
 
-.card-product__price {
+.card-product__price-wrapper {
   display: flex;
   justify-content: space-between;
   width: 166px;
@@ -80,14 +85,14 @@ html {
   color: var(--secondary-color);
 }
 
-.card-product__price-value {
+.card-product__price {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
 }
 
 .card-product__button {
-  width: 100%;
+  width: 166px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -97,6 +102,10 @@ html {
   border-radius: 5px;
   color: var(--bg-color-white);
   margin-top: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .card-product__button:hover {
