@@ -1,8 +1,6 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://anna-chovnova.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://anna-chovnova.github.io/layout_product-cards/report/html_report/)
-
+  
 > Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
 ___
 
