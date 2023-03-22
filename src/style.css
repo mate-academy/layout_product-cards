@@ -1,16 +1,22 @@
+* {
+  box-sizing: border-box;
+
+}
+
 html {
   font-family: Roboto, sans-serif;
   color: #060b35;
-  --secondary-color: #616070;
-  --button-color: #00acdc;
 }
 
-* {
+body,
+p {
   margin: 0;
-  box-sizing: border-box;
 }
 
 .card {
+  --secondary-color: #616070;
+  --button-color: #00acdc;
+  --white-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +32,6 @@ html {
 }
 
 .card__title {
-
   font-size: 12px;
   margin: 40px 16px 0;
   line-height: 18px;
@@ -38,16 +43,13 @@ html {
   line-height: 14px;
   color: var(--secondary-color);
   align-self: start;
-  padding-left: 16px;
+  margin-left: 16px;
   margin-top: 4px;
-  margin-bottom: 16px;
-
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 16px;
 }
 
 .stars {
@@ -64,9 +66,9 @@ html {
 
 .container__reviews {
   font-size: 10px;
-  line-height: 16px;
+  line-height: 14px;
   margin-left: 22px;
-
+  align-self: flex-end;
 }
 
 .stars__star:nth-child(-n+4) {
@@ -79,14 +81,12 @@ html {
   display: flex;
   align-items: center;
   margin-top: 24px;
-
 }
 
 .card__price-text {
   font-size: 12px;
   color: var(--secondary-color);
   margin-right: 85px;
-
 }
 
 .card__price-count {
@@ -95,7 +95,7 @@ html {
 }
 
 .card__buy-btn {
-  color: #fff;
+  color: var(--white-color);
   background-color: var(--button-color);
   text-decoration: none;
   width: 166px;
@@ -107,12 +107,10 @@ html {
   font-weight: 700;
   line-height: 40px;
   border: 1px solid var(--button-color);
-
 }
 
 .card__buy-btn:hover {
-
-  color: #00acdc;
-  background-color: #fff;
+  color: var(--button-color);
+  background-color: var(--white-color);
   border: 1px solid var(--button-color);
 }
