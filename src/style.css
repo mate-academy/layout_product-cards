@@ -1,28 +1,37 @@
+@import "./blocks/variables.css";
+@import "./blocks/normalize.css";
+@import "./blocks/stars.css";
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-second-color);
+  background-color: white;
+}
+
+body {
+  margin: 0;
+}
+
 .card {
-  width: 198px;
-
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  align-items: center;
-
-  border: 1px transparent;
+  width: 200px;
+  padding: 32px 16px 16px;
   border-radius: 5px;
+  border: 1px solid white;
   box-shadow: 0 1px 8px rgba(61, 78, 97, 0.1);
   background-color: white;
 }
 
-.card__description {
-  padding: 0 16px 16px;
-  display: block;
-}
-
 .card__image {
-  margin-top: 32px;
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
 }
 
 .card__title {
-  margin-top: 40px;
+  margin: 0 0 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -30,65 +39,51 @@
 }
 
 .card__code {
-  font-weight: 400;
-  font-size: 10px;
-  color: var(--text-second-color);
-  line-height: 14px;
+  margin-bottom: 16px;
 }
 
-.card__star {
+.card__review-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
 }
 
-.card__reviews {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
+.card__review {
   color: var(--text-color);
 }
 
-.card__price {
+.card__price-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .card__price-text {
-  font-weight: 400;
   font-size: 12px;
-  line-height: 18px;
-  color: var(--text-second-color);
 }
 
 .card__price-value {
-  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+  font-weight: bold;
   color: var(--text-color);
 }
 
 .card__buy {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-
-  padding: 12px;
-  width: 166px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-
   color: var(--text-third-color);
-  background-color: var(--main-color);
-  background-position: center;
+  background: var(--main-color);
   border-radius: 5px;
 }
 
