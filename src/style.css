@@ -1,13 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
 
 .product-card {
   width: 200px;
-  height: 406px;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -36,7 +38,6 @@ body {
 
 .product-card__code {
   margin-top: 4px;
-  height: 14px;
   font-size: 10px;
   line-height: 14px;
   color: #616070;
@@ -74,17 +75,21 @@ body {
 .product-card__price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 24px;
-  line-height: 18px;
 }
 
 .product-card__price-name {
+  margin: 0;
   font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: flex-end;
   color: #616070;
 }
 
 .product-card__price-value {
-  font-size: 16px;
+  margin: 0;
   font-weight: 700;
   color: #060b35;
 }
@@ -105,12 +110,11 @@ body {
   text-transform: uppercase;
   color: #fff;
   background-color: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
 }
 
 .product-card__button:hover {
   background: #fff;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
   color: #00acdc;
 }
