@@ -1,14 +1,11 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   font-family: Roboto, sans-serif;
-}
-
-ul {
-  margin: 0;
+  padding: 0;
 }
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -142,10 +139,13 @@ ul {
 }
 
 .stars {
-  padding: 0;
   display: flex;
 }
 
-.stars--4 li:nth-child(-n + 4) {
+.stars--1 li:first-child,
+.stars--2 li:nth-child(-n + 2),
+.stars--3 li:nth-child(-n + 3),
+.stars--4 li:nth-child(-n + 4),
+.stars--5 li:nth-child(n) {
   background-image: url(./images/star-active.svg);
 }
