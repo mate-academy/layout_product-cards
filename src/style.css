@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html * {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+body * {
+  margin: 0;
+}
+
+.card {
+  height: 403px;
+  width: 200px;
+  padding: 30px 14px 15px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  font-size: 11px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.card__image {
+  display: block;
+  height: 134px;
+  width: 160px;
+  margin: 0 auto 45px;
+}
+
+.card__name {
+  display: block;
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.card__code {
+  margin-bottom: 15px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.stars__star {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  margin-right: 4px;
+  border-radius: 0.5px;
+  background: url(images/star.svg) center no-repeat;
+}
+
+.stars__star:last-of-type {
+  margin-right: 0;
+}
+
+.stars--0 > .stars__star:nth-child(-n+0),
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background: url(images/star-active.svg) center no-repeat;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card__price-value {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  border-style: none;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
+}
+
+.card__button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card__button-text:hover {
+  color: #00acdc;
+}
