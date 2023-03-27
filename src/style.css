@@ -1,0 +1,125 @@
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+
+  --margin-left-right: 16px;
+  --main-color-button-buy: #00acdc;
+  --color-button-buy: #fff;
+}
+
+body h1 {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  padding: 32px 19px 40px;
+}
+
+.card__product-name {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 var(--margin-left-right) 4px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__product-code {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #616070;
+  margin: 0 var(--margin-left-right) 16px;
+}
+
+.card__review {
+  display: flex;
+  margin: 0 var(--margin-left-right) 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+  width: min-content;
+  --image-active-star: url("./images/star-active.svg");
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin: 0;
+}
+
+.stars--amount_1 .stars__star:nth-child(-n + 1),
+.stars--amount_2 .stars__star:nth-child(-n + 2),
+.stars--amount_3 .stars__star:nth-child(-n + 3),
+.stars--amount_4 .stars__star:nth-child(-n + 4),
+.stars--amount_5 .stars__star:nth-child(-n + 5) {
+  background-image: var(--image-active-star);
+}
+
+.card__amount-review {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card__price-box {
+  display: flex;
+  margin: 0 var(--margin-left-right) 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__price {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__button-buy {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  background: var(--main-color-button-buy);
+  border-radius: 5px;
+  margin: 0 var(--margin-left-right) 16px;
+  color: var(--color-button-buy);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__button-buy:hover {
+  color: var(--main-color-button-buy);
+  background-color: var(--color-button-buy);
+  border: 1px solid var(--main-color-button-buy);
+}
