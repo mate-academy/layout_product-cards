@@ -3,8 +3,7 @@
   --secondary_text: #616070;
   --design_color: #00acdc;
   --background_color_buy: #fff;
-  --left_position: calc(50% - 166px / 2);
-  --width: 166px;
+  --border_color: 1px solid var(--design_color);
 }
 
 * {
@@ -17,63 +16,49 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 408px;
   background-color: var(--background_color_buy);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
 .card__img-imac {
-  background-image: url(./images/imac.jpeg);
-  background-size: 160px 134px;
   width: 160px;
   height: 134px;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: calc(50% - 160px / 2);
-  top: 32px;
+  display: block;
+  margin: 0 auto 40px;
 }
 
 .card__about {
-  position: absolute;
-  width: var(--width);
-  height: 36px;
-  left: var(--left_position);
-  bottom: 164px;
   font-weight: 500;
   line-height: 18px;
   font-size: 12px;
-  text-align: left;
   color: var(--main_text);
+  margin: 0 0 4px;
 }
 
 .card__id {
-  position: absolute;
-  width: 98px;
-  height: 14px;
-  left: calc(50% - 98px / 2 - 34px);
-  bottom: 146px;
+  margin: 0 0 17px;
   font-weight: 400;
   font-size: 10px;
   color: var(--secondary_text);
 }
 
 .card__rating {
-  position: absolute;
-  width: var(--width);
-  height: 16px;
-  left: 18px;
-  top: 276px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 23px;
 }
 
 .stars {
@@ -83,9 +68,7 @@ html {
 .stars__star {
   width: 16px;
   height: 16px;
-  background-image: url(./images/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(./images/star.svg) center no-repeat;
 }
 
 .stars__star:not(:last-child) {
@@ -101,41 +84,35 @@ html {
 }
 
 .card__reviews {
+  margin: 0;
   font-weight: 400;
   font-size: 10px;
   color: var(--main_text);
 }
 
 .card__price {
-  position: absolute;
-  width: var(--width);
-  height: 18px;
-  left: var(--left_position);
-  bottom: 72px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .card__text {
+  margin: 0;
   font-size: 12px;
   font-weight: 400;
   color: var(--secondary_text);
 }
 
 .card__value {
-  padding-bottom: 1px;
+  margin: 0;
   font-size: 16px;
   font-weight: 700;
   color: var(--main_text);
 }
 
 .card__button {
-  position: absolute;
-  width: var(--width);
-  height: 40px;
-  left: var(--left_position);
-  bottom: 16px;
+  padding: 11px 0 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,5 +127,5 @@ html {
 .card__button:hover {
   color: var(--design_color);
   background-color: var(--background_color_buy);
-  border: 1px solid var(--design_color);
+  border: var(--border_color);
 }
