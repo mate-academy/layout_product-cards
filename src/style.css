@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --main-font-color: #060b35;
+  --secondary-font-color: #616070;
+  --blue-elements-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 0 16px 16px;
+}
+
+.card__img {
+  align-self: center;
+  width: 160px;
+  height: 134px;
+  margin-top: 32px;
+}
+
+.card__name {
+  align-self: center;
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-font-color);
+}
+
+.card__product-code {
+  color: var(--secondary-font-color);
+  line-height: 14px;
+  margin-top: 4px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.card__reviews {
+  color: var(--main-font-color);
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.stars__star {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-image: url(./images/star.svg);
+}
+
+.stars__star:not(:first-child) {
+  margin-left: 4px;
+}
+
+.stars--5 .stars__star,
+.stars--1 .stars__star:not(:nth-child(n+2)),
+.stars--2 .stars__star:not(:nth-child(n+3)),
+.stars--3 .stars__star:not(:nth-child(n+4)),
+.stars--4 .stars__star:not(:nth-child(n+5)) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.card__price-name {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary-font-color);
+}
+
+.card__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-font-color);
+}
+
+.card__buy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--blue-elements-color);
+  border: 1px solid var(--blue-elements-color);
+  border-radius: 5px;
+  margin-top: 16px;
+}
+
+.card--hover:hover .card__buy-button {
+  color: var(--blue-elements-color);
+  background-color: #fff;
+}
