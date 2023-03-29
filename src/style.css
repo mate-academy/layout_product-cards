@@ -1,0 +1,132 @@
+:root {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --card-border-color: #f3f3f3;
+  --light-color: #fff;
+  --link-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+.card {
+  padding: 32px 16px 16px;
+  width: 200px;
+  border: 1px solid var(--card-border-color);
+  border-radius: 5px;
+  background-color: var(--light-color);
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.img {
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-color);
+}
+
+.card__info {
+  margin-bottom: 16px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-color);
+}
+
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__review {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--main-color);
+}
+
+.card__price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary-color);
+}
+
+.card__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 70px;
+  background: var(--link-color);
+  color: var(--light-color);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  max-width: 100%;
+  min-height: 40px;
+}
+
+.card__link:hover {
+  background-color: var(--light-color);
+  color: var(--btn-color);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
