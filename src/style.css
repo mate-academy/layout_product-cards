@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --main-colur: #060b35;
+  --grey-colour: #616070;
+  --blue-colur: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+div,
+h1,
+h2 {
+  margin: 0;
+}
+
+.laptop {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 10px ;
+  justify-content: center;
+}
+
+.laptop__card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 0 16px 16px;
+}
+
+.laptop__img {
+  align-self: center;
+  width: 160px;
+  height: 134px;
+  margin-top: 32px;
+}
+
+.laptop__name {
+  width: 166px;
+  height: 36px;
+  margin: 40px 0 0;
+  bottom: 165px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-colur);
+}
+
+.laptop__code {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 4px 0 0;
+  line-height: 14px;
+  width: 98px;
+  height: 14px;
+  bottom: 147px;
+  color: var(--grey-colour);
+}
+
+.laptop__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.stars__star {
+  background-position: center;
+  flex-direction: row;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.stars--4 .stars__star:nth-child(-n+4) {
+  background-image: url(images/star-active.svg);
+}
+
+.laptop__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.laptop__price-name {
+  color: var(--grey-colour);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.laptop__price-money {
+  columns: var(--main-colur);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.laptop__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: inherit;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--blue-colur);
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  bottom: 17px;
+  margin-top: 16px;
+}
+
+.laptop__button:hover {
+  color: var(--blue-colur);
+  background-color: #fff;
+  border: 1px solid var(--blue-colur);
+  border-radius: 5px;
+}
