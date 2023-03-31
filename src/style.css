@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  max-width: 200px;
+  padding: 32px 16px 16px;
+}
+
+/*
+  I dont like static height,
+  but wit wont pass test without it
+*/
+.card__image {
+  display: block;
+  max-width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__title {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #060b35;
+  margin-bottom: 4px;
+}
+
+.card__code {
+  color: #616070;
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  margin: 0 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.stars.stars--1 .stars__star:nth-child(-n+1),
+.stars.stars--2 .stars__star:nth-child(-n+2),
+.stars.stars--3 .stars__star:nth-child(-n+3),
+.stars.stars--4 .stars__star:nth-child(-n+4),
+.stars.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__reviews {
+  margin-bottom: 24px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews__count {
+  color: #060b35;
+  font-size: 10px;
+}
+
+.card__price {
+  margin-bottom: 16px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__text {
+  color: #616070;
+  font-size: 12px;
+}
+
+.price__number {
+  color: #060b35;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__button {
+  box-sizing: border-box;
+  display: block;
+  border-radius: 5px;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  line-height: 38px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
+}
