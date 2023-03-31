@@ -5,6 +5,10 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  --color-dark-blue: #060b35;
+  --color-grey: #616070;
+  --color-white: #fff;
+  --color-blue: #00acdc;
 }
 
 .card {
@@ -13,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
@@ -30,7 +34,7 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-dark-blue);
 }
 
 .card__product-code {
@@ -39,7 +43,7 @@ body {
   line-height: 14px;
   font-size: 10px;
   width: 100%;
-  color: #616070;
+  color: var(--color-grey);
   font-weight: 400;
 }
 
@@ -63,7 +67,7 @@ body {
   margin-right: 4px;
 }
 
-.card__stars--stars-1 .card__star:first-child,
+.card__stars--stars-1 .card__star:nth-child(-n+1),
 .card__stars--stars-2 .card__star:nth-child(-n+2),
 .card__stars--stars-3 .card__star:nth-child(-n+3),
 .card__stars--stars-4 .card__star:nth-child(-n+4),
@@ -78,7 +82,7 @@ body {
 .card__reviews {
   font-size: 10px;
   line-height: 14px;
-  color: #060b35;
+  color: var(--color-dark-blue);
   align-self: center;
 }
 
@@ -92,25 +96,25 @@ body {
 .card__price-text {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--color-grey);
 }
 
 .card__price-amount {
   font-weight: 700;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-dark-blue);
 }
 
 .card__button-buy {
   width: 100%;
   padding: 12px 0;
   margin-top: 16px;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  color: #fff;
+  color: var(--color-white);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -118,8 +122,8 @@ body {
 }
 
 .card__button-buy:hover {
-  color: #00acdc;
-  background-color: #fff;
+  color: var(--color-blue);
+  background-color: var(--color-white);
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--color-blue);
 }
