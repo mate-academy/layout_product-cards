@@ -2,13 +2,21 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  color: #060b35;
+html {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   font-family: "Roboto", sans-serif;
+
+  --dark-blue: #060b35;
+  --light-grey: #616070;
+  --light-blue: #00acdc;
+
+}
+
+body {
+  margin: 0;
+  color: var(--dark-blue);
 }
 
 .card {
@@ -38,7 +46,7 @@ body {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--light-grey);
   margin-bottom: 16px;
 }
 
@@ -53,7 +61,7 @@ body {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #060b35;
+  color: var(--dark-blue);
 }
 
 .stars {
@@ -84,19 +92,19 @@ body {
 
 .card__price-text {
   font-weight: 400;
-  color: #616070;
+  color: var(--light-grey)git add ./src;
 }
 
 .card__price-number {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--dark-blue);
 }
 
 .card__btn {
   height: 40px;
-  background: #00acdc;
+  background: var(--light-blue);
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
@@ -104,7 +112,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--light-blue);
   transition: 0.4s ease-in-out;
   cursor: pointer;
   width: 100%;
@@ -115,7 +123,7 @@ body {
 }
 
 .card__btn:hover {
-  color: #00acdc;
+  color: var(--light-blue);
   background-color: #fff;
   transition: 0.4s ease-in-out;
 }
