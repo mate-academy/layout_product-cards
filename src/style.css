@@ -1,7 +1,18 @@
+:root {
+  --button-color: #00acdc;
+  --button-hover-color: #fff;
+  --main-color: #060b35;
+  --second-color: #616070;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .card {
@@ -9,7 +20,6 @@
   flex-direction: column;
   width: 200px;
   padding: 16px;
-  font-family: Roboto, Arial, sans-serif;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
@@ -33,7 +43,7 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 500;
-  color: #060b35;
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -41,7 +51,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: var(--second-color);
 }
 
 .product-rate {
@@ -68,7 +78,23 @@
   margin-right: 4px;
 }
 
-.star--active {
+.active-stars-1 .star:nth-child(-n+1) {
+  background-image: url(./images/star-active.svg);
+}
+
+.active-stars-2 .star:nth-child(-n+2) {
+  background-image: url(./images/star-active.svg);
+}
+
+.active-stars-3 .star:nth-child(-n+3) {
+  background-image: url(./images/star-active.svg);
+}
+
+.active-stars-4 .star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.active-stars-5 .star:nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
@@ -76,7 +102,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #060b35;
+  color: var(--main-color);
 }
 
 .product-price {
@@ -88,7 +114,7 @@
 .product-price__price {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--second-color);
   font-weight: 400;
 }
 
@@ -96,12 +122,12 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--main-color);
 }
 
 .buy-button {
   width: 100%;
-  background: #00acdc;
+  background: var(--button-color);
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
@@ -109,11 +135,11 @@
   text-transform: uppercase;
   padding: 11px 0;
   border: 1px solid transparent;
-  color: #fff;
+  color: var(--button-hover-color);
 }
 
 .card:hover .buy-button {
-  background: #fff;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  background: var(--button-hover-color);
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
 }
