@@ -1,12 +1,17 @@
 .star {
-  width: 16px;
+  display: flex;
   height: 16px;
-  background-image: url("images/star.svg");
+  width: 16px;
+  background-image: url("./images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 4px;
 }
 
-.product-rating div:nth-child(-n+4) {
-  background-image: url("images/star-active.svg");
+.product-rating--1 .star:first-child,
+.product-rating--2 .star:nth-child(-n+2),
+.product-rating--3 .star:nth-child(-n+3),
+.product-rating--4 .star:nth-child(-n+4),
+.product-rating--5 .star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
 }
