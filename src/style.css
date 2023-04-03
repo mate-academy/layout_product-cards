@@ -1,14 +1,22 @@
 /* stylelint-disable font-family-no-missing-generic-family-keyword */
+:root {
+  ---blue: #00acdc;
+}
+
+body {
+  font-family: "Roboto";
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 198px;
-  font-family: "Roboto";
+  max-width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 0;
+  box-sizing: border-box;
 }
 
 .card__image {
@@ -52,7 +60,6 @@
 }
 
 .card__describe-reviewer_count {
-  font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -114,13 +121,13 @@
   width: 100%;
   max-width: 166px;
   height: 40px;
-  background: #00acdc;
+  background: var(---blue);
   border-radius: 5px;
   margin-top: 16px;
 }
 
 .card__buy:hover {
-  color: #00acdc;
+  color: var(---blue);
   background-color: transparent;
-  border: 1px solid #00acdc;
+  border: 1px solid var(---blue);
 }
