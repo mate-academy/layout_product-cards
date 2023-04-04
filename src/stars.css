@@ -1,0 +1,40 @@
+/* #region stars */
+.card__stars-review {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+  
+.card__text-review {
+  font-weight: 400;
+  font-size: 10px;
+  align-self: center;
+  color: var(--color-name);
+}
+  
+.stars {
+  display: flex;
+}
+  
+.stars__star {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 0.5px;
+  background-image: url(./images/star.svg);
+}
+  
+.stars__star:not(:first-child) {
+  margin-left: 4px;
+}
+  
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+/* #endregion */
