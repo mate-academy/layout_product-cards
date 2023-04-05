@@ -1,0 +1,19 @@
+.stars--4 {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.stars__star {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background: url(../../images/star-active.svg) no-repeat center;
+}
+
+.stars--0 .stars__star,
+.stars--1 .stars__star:not(:first-child),
+.stars--2 .stars__star:nth-child(1n+3),
+.stars--3 .stars__star:nth-child(1n+4),
+.stars--4 .stars__star:nth-child(1n+5) {
+  background-image: url(../../images/star.svg);
+}
