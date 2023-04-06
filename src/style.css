@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Inter:wght@300;400;700;800&family=Roboto+Condensed:ital,wght@1,300;1,400;1,700&family=Roboto:wght@400;500;700&display=swap");
 
-* {
-  box-sizing: border-box;
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  --main-color: #00acdc;
 }
 
-body {
-  margin: 0;
-  --main-color: #00acdc;
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -20,8 +21,6 @@ p {
 
 .card {
   padding: 32px 16px 16px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   background-color: #fff;
   border-radius: 5px;
   width: 200px;
@@ -75,30 +74,10 @@ p {
   background-position: center;
 }
 
-.stars-block--stars--1 > .stars-block__star:nth-child(1) {
-  background-image: url("./images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars-block--stars--2 > .stars-block__star:nth-child(-n+2) {
-  background-image: url("./images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars-block--stars--3 > .stars-block__star:nth-child(-n+3) {
-  background-image: url("./images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars-block--stars--4 > .stars-block__star:nth-child(-n+4) {
-  background-image: url("./images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
+.stars-block--stars--1 > .stars-block__star:nth-child(1),
+.stars-block--stars--2 > .stars-block__star:nth-child(-n+2),
+.stars-block--stars--3 > .stars-block__star:nth-child(-n+3),
+.stars-block--stars--4 > .stars-block__star:nth-child(-n+4),
 .stars-block--stars--5 > .stars-block__star:nth-child(n) {
   background-image: url("./images/star-active.svg");
   background-repeat: no-repeat;
@@ -119,7 +98,6 @@ p {
 
 .card__price-text {
   color: #616070;
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -127,7 +105,6 @@ p {
 
 .card__price-sum {
   color: #060b35;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
