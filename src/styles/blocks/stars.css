@@ -1,0 +1,38 @@
+/* stylelint-disable no-descending-specificity */
+/* #region stars */
+
+.stars {
+  display: flex;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--5 .stars__star,
+.stars--1 .stars__star,
+.stars--2 .stars__star,
+.stars--3 .stars__star,
+.stars--4 .stars__star {
+  display: flex;
+  background-image: url("/images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star,
+.stars--0 .stars__star,
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
+.stars--4 .stars__star:last-child {
+  display: flex;
+  background-image: url("/images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+/* #endregion */
