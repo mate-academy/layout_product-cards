@@ -1,0 +1,136 @@
+:root {
+  --color-main: #060b35;
+  --color-secondary: #616070;
+  --border-radius: 5px;
+  --border-decoration: 1px solid #f3f3f3;
+  --button-color: #00acdc;
+  --button-text-color: #fff;
+  --button-color-hover: #fff;
+  --button-text-color-hover: #00acdc;
+  --button-border-hover: 1px solid #00acdc;
+  --card-background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  width: 200px;
+}
+
+body {
+  margin: 0;
+}
+
+.product {
+  padding: 32px 16px 16px;
+  background: var(--card-background-color);
+  border: var(--border-decoration);
+  border-radius: var(--border-radius);
+}
+
+.product__card {
+  display: flex;
+}
+
+.product__image {
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.product__name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-main);
+  margin-bottom: 18px;
+}
+
+.product__name-apple {
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.product__name-code {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.product__ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.ratings-stars {
+  display: flex;
+}
+
+.ratings-stars__star {
+  height: 16px;
+  width: 16px;
+  background: url(./images/star.svg) center no-repeat;
+}
+
+.ratings-stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.ratings-stars--1 .ratings-stars__star:nth-child(-n+1),
+.ratings-stars--2 .ratings-stars__star:nth-child(-n+2),
+.ratings-stars--3 .ratings-stars__star:nth-child(-n+3),
+.ratings-stars--4 .ratings-stars__star:nth-child(-n+4),
+.ratings-stars--5 .ratings-stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.product__ratings-reviews {
+  line-height: 16px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-main);
+}
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.product__price-price {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.product__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__buy-link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 69px 11px;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  border-radius: var(--border-radius);
+}
+
+.product__buy-link:hover {
+  color: var(--button-text-color-hover);
+  background-color: var(--button-color-hover);
+  border: var(--button-border-hover);
+}
