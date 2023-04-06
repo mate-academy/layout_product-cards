@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  --main-color: #00acdc;
 }
 
 a {
@@ -74,8 +75,34 @@ p {
   background-position: center;
 }
 
-.stars-block--stars-4 .stars-block__star:nth-child(-n+4) {
+.stars-block--stars--1 > .stars-block__star:nth-child(1) {
   background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars-block--stars--2 > .stars-block__star:nth-child(-n+2) {
+  background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars-block--stars--3 > .stars-block__star:nth-child(-n+3) {
+  background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars-block--stars--4 > .stars-block__star:nth-child(-n+4) {
+  background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars-block--stars--5 > .stars-block__star:nth-child(n) {
+  background-image: url("./images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .reviews {
@@ -85,17 +112,20 @@ p {
 }
 
 .card__price {
-  color: #616070;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
   margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
 }
 
-.card__price span {
+.card__price-text {
+  color: #616070;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price-sum {
   color: #060b35;
   font-style: normal;
   font-weight: 700;
@@ -104,12 +134,12 @@ p {
 }
 
 .card__link {
-  background-color: #00acdc;
+  background-color: var(--main-color);
   color: #fff;
   border-radius: 5px;
   width: 166px;
   height: 40px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--main-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -117,7 +147,7 @@ p {
   padding-top: 12px;
 }
 
-.card:hover .card__link {
+.card__link:hover {
   background-color: inherit;
-  color: #00acdc;
+  color: var(--main-color);
 }
