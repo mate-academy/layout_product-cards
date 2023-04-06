@@ -6,7 +6,10 @@
 
 body {
   margin: 0;
-  /* background-color: gray; */
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -33,10 +36,6 @@ p {
   margin-bottom: 40px;
 }
 
-/* .card__info {
-
-} */
-
 .card__title {
   max-width: 166px;
   font-weight: 500;
@@ -61,22 +60,22 @@ p {
   margin-bottom: 24px;
 }
 
-.card__stars {
+.stars-block {
   display: flex;
   width: 96px;
   justify-content: space-between;
 }
 
-.star {
-  background-image: url("./images/star-active.svg");
+.stars-block__star {
+  background-image: url("./images/star.svg");
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.star:last-child {
-  background-image: url("./images/star.svg");
+.stars-block--stars-4 .stars-block__star:nth-child(-n+4) {
+  background-image: url("./images/star-active.svg");
 }
 
 .reviews {
@@ -104,7 +103,7 @@ p {
   line-height: 18px;
 }
 
-.card__button {
+.card__link {
   background-color: #00acdc;
   color: #fff;
   border-radius: 5px;
@@ -115,9 +114,10 @@ p {
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+  padding-top: 12px;
 }
 
-.card:hover .card__button {
+.card:hover .card__link {
   background-color: inherit;
   color: #00acdc;
 }
