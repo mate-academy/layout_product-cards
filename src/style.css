@@ -1,0 +1,189 @@
+/* #region Reset */
+:root {
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  --Main-accent: #060b35;
+  --Secondary: #616070;
+  --Blue-accent: #00acdc;
+
+}
+
+body {
+  margin: 0;
+}
+/* #endregion */
+/* #region Card */
+.card {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 198px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__product-photo {
+  position: absolute;
+  left: 19px;
+  top: 32px;
+  width: 160px;
+  height: 134px;
+  background-image: url("images/imac.jpeg");
+  background-position: center;
+  background-size: 160px 134px;
+}
+
+.card__product-title {
+  text-decoration: none;
+  position: absolute;
+  width: 166px;
+  left: 16px;
+  top: 206px;
+  color: #060b35;
+}
+
+.card__product-code {
+  position: relative;
+  width: 98px;
+  height: 14px;
+  top: 246px;
+  left: 16px;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.card__stars {
+  position: absolute;
+  left: 16px;
+  top: 276px;
+  height: 16px;
+  width: 166px;
+}
+
+.card__review {
+  position: absolute;
+  left: 135px;
+  top: 276px;
+  height: 16px;
+  width: 53px;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--Main-accent);
+}
+
+.card__price {
+  position: absolute;
+  left: 16px;
+  top: 316px;
+  width: 31px;
+  height: 18px;
+  color: var(--Secondary);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.card__amount {
+  position: absolute;
+  text-align: right;
+  left: 132px;
+  top: 316px;
+  width: 50px;
+  height: 18px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Main-accent);
+}
+
+.card__button {
+  box-sizing: border-box;
+  position: absolute;
+  text-transform: uppercase;
+  height: 40px;
+  width: 166px;
+  left: 16px;
+  bottom: 16px;
+  border: 1px solid var(--Blue-accent);
+  border-radius: 5px ;
+  background-color: var(--Blue-accent);
+  color: #fff;
+  text-align: center;
+  line-height: 38px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: var(--Blue-accent);
+}
+/* #endregion */
+/* #region Stars */
+.stars {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+  line-height: 16px;
+}
+
+.stars--1 > .stars__star:not(:nth-child(n+2)) {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.stars--2 > .stars__star:not(:nth-child(n+3)) {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.stars--3 > .stars__star:not(:nth-child(n+4)) {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.stars--4 > .stars__star:not(:nth-child(n+5)) {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.stars--5 > .stars__star:not(:nth-child(n+6)) {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion */
