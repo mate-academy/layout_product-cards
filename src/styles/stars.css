@@ -8,38 +8,24 @@
 
 .stars {
   display: flex;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  width: 96px;
-  height: 16px;
 }
 
-.stars-star {
+.stars__star {
+  background-image: url("/images/star.svg");
   height: 16px;
   width: 16px;
-  background-image: url(/images/star-active.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.stars--1 {
-  background-image: url(/images/star-active.svg);
-}
-
-.stars--2 {
-  background-image: url(/images/star-active.svg);
-}
-
-.stars--3 {
-  background-image: url(/images/star-active.svg);
-}
-
-.stars--4 {
-  background-image: url(/images/star-active.svg);
-}
-
-.stars--5 {
-  background-image: url(/images/star.svg);
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url("/images/star-active.svg");
 }
