@@ -16,6 +16,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --btn-color: #00acdc;
+}
+
 .product {
   display: flex;
   flex-direction: column;
@@ -55,25 +59,25 @@ body {
   margin-bottom: 24px;
 }
 
-.product__rating-stars {
+.stars {
   display: flex;
 }
 
-.product__rating-star {
+.stars__star {
   height: 16px;
   width: 16px;
   margin-right: 4px;
-  background-image: url(./images/star-active.svg);
+  background-image: url(./images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.product__rating-star:last-child {
-  padding-right: 0;
+.stars__star:last-child {
+  margin-right: 0;
 }
 
-.product__rating-star:nth-child(n + 5) {
-  background-image: url(./images/star.svg);
+.stars--0 .stars__star:nth-child(-N+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .product__rating-reviews {
@@ -104,7 +108,8 @@ body {
 }
 
 .product__button {
-  background-color: #00acdc;
+  background-color: var(--btn-color);
+  border: 1px solid var(--btn-color);
   border-radius: 5px;
   padding: 12px 0;
   width: 100%;
@@ -113,10 +118,9 @@ body {
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
-  border: 1px solid #00acdc;
 }
 
 .product__button:hover {
   background-color: #fff;
-  color: #00acdc;
+  color: var(--btn-color);
 }
