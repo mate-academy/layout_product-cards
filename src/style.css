@@ -1,0 +1,110 @@
+html {
+  --main-text-color: #060b35;
+  --secondary-text-color: #616070;
+  --button-color: #00acdc;
+  font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: white;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  margin: 0 3px 40px;
+}
+
+.card__name {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.card__code {
+  color: var(--secondary-text-color);
+  margin: 0 0 16px;
+  font-weight: 400;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 24px;
+}
+
+.stars {
+  display: flex;
+  /* flex-direction: row; */
+}
+
+.stars__star {
+  /* display: flex; */
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
+  align-self: center;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px;
+}
+
+.card__price-tag {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price-amount {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 40px;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  background-color: var(--button-color);
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+}
+
+.card__button:hover {
+  background-color: white;
+  color: var(--button-color);
+}
