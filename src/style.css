@@ -1,16 +1,20 @@
-body {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
+  padding: 0;
 }
 
-/* #region card */
 .card__text,
-.card__text--name-product,
-.card__text--product-code,
-.card__text--review,
+.card__name,
+.card__code,
+.card__review,
 .card__price,
-.card__cost,
-.card__button,
-.card__text--button {
+.card__cost {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -30,6 +34,10 @@ body {
   border-radius: 5px;
 }
 
+.card__objects {
+  padding: 0 16px;
+}
+
 .card__image {
   margin: 32px 19px 40px;
 
@@ -37,15 +45,11 @@ body {
   height: 134px;
 }
 
-.card__text {
-  margin: 0 16px;
-}
-
-.card__text--name-product {
+.card__name {
   margin-bottom: 4px;
 }
 
-.card__text--product-code {
+.card__code {
   margin-bottom: 16px;
 
   font-weight: 400;
@@ -60,16 +64,14 @@ body {
 }
 
 .card__display--flex-b24 {
-  margin: 0 16px 24px;
+  margin-bottom: 24px;
 }
 
 .card__display--flex-b16 {
   margin-bottom: 16px;
 }
 
-.card__text--review {
-  margin: 0;
-
+.card__review {
   display: flex;
   align-items: center;
 
@@ -79,15 +81,11 @@ body {
 }
 
 .card__price {
-  margin: 0;
-
   font-weight: 400;
   color: #616070;
 }
 
 .card__cost {
-  margin: 0;
-
   font-weight: 700;
   font-size: 16px;
 }
@@ -119,9 +117,6 @@ body {
   color: #00acdc;
 }
 
-/* #endregion */
-
-/* #region stars */
 .stars {
   display: flex;
   max-width: min-content;
@@ -141,23 +136,10 @@ body {
   margin-left: 0;
 }
 
-.stars--1 > .stars__star:nth-child(-n+1) {
-  background-image: url(../../images/star-active.svg);
-}
-
-.stars--2 > .stars__star:nth-child(-n+2) {
-  background-image: url(../../images/star-active.svg);
-}
-
-.stars--3 > .stars__star:nth-child(-n+3) {
-  background-image: url(../../images/star-active.svg);
-}
-
-.stars--4 > .stars__star:nth-child(-n+4) {
-  background-image: url(../../images/star-active.svg);
-}
-
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
 .stars--5 > .stars__star:nth-child(-n+5) {
   background-image: url(../../images/star-active.svg);
 }
-/* #endregion */
