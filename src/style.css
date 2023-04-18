@@ -1,0 +1,127 @@
+:root {
+  --main_text: #060b35;
+  --secondary_text: #616070;
+  --design_color: #00acdc;
+  --background_color_buy: #fff;
+  --border_color: 1px solid var(--design_color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: var(--background_color_buy);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__img-imac {
+  width: 160px;
+  height: 134px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.card__about {
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 12px;
+  color: var(--main_text);
+  margin: 0 0 4px;
+}
+
+.card__id {
+  margin: 0 0 17px;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--secondary_text);
+}
+
+.card__rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url("images/star.svg") center no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
+}
+
+.card__reviews {
+  margin: 0;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--main_text);
+}
+
+.card__price {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary_text);
+}
+
+.card__value {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main_text);
+}
+
+.card__button {
+  padding: 11px 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--design_color);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--background_color_buy);
+}
+
+.card__button:hover {
+  color: var(--design_color);
+  background-color: var(--background_color_buy);
+  border: var(--border_color);
+}
