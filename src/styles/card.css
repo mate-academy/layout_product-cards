@@ -1,4 +1,7 @@
-/* #region card */
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Roboto, sans-serif;
 
@@ -16,21 +19,22 @@ div {
 }
 
 .card {
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 198px;
+  width: 200px;
   border: solid #f3f3f3 1px;
   border-radius: var(--main-border-radius);
 }
 
-.card__imac-img {
+.card__image {
+  padding-right: 3px;
+  padding-left: 3px;
   height: 134px;
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .card__name {
-  width: 166px;
   margin-top: 40px;
   color: var(--text-color);
   font-weight: 500;
@@ -38,12 +42,12 @@ div {
   line-height: 18px;
 }
 
-.card__code {
+.card__container-code {
   margin-top: 4px;
-  margin-right: auto;
-  padding-left: 16px;
+}
+
+.card__code {
   line-height: 14px;
-  font-weight: 400;
   font-size: 10px;
   color: var(--secondary-text-color);
 }
@@ -52,12 +56,10 @@ div {
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
-  width: 166px;
   align-items: center;
 }
 
-.card__revievs {
-  font-weight: 400;
+.card__reviews {
   font-size: 10px;
   color: var(--text-color);
 }
@@ -65,13 +67,11 @@ div {
 .card__cost {
   margin-top: 24px;
   display: flex;
-  width: 166px;
   justify-content: space-between;
   align-items: center;
 }
 
-.card__prise {
-  font-weight: 400;
+.card__price {
   font-size: 12px;
   line-height: 18px;
   color: var(--secondary-text-color);
@@ -86,9 +86,7 @@ div {
 }
 
 .card__button {
-  box-sizing: border-box;
   margin-top: 16px;
-  margin-bottom: 16px;
   border: transparent 1px;
   border-radius: var(--main-border-radius);
   width: 166px;
@@ -107,4 +105,3 @@ div {
   color: var(--button-color);
   border: solid var(--button-color) 1px;
 }
-/* #endregion */
