@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: rgba(6, 11, 53, 1);
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --color: rgba(97, 96, 112, 1);
+  --button-color: rgba(0, 172, 220, 1);
+  --hover-button-color: rgba(255, 255, 255, 1);
+}
+
+.card {
+  padding: 32px 16px 16px;
+  width: 198px;
+  background: var(--hover-button-color);
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  margin-bottom: 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__code {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color);
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  justify-content: flex-end;
+  display: flex;
+  margin-top: -40px;
+}
+
+.stars {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.stars_star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url("images\star.svg");
+  background-repeat: no-repeat;
+}
+
+.stars--1 .stars_star:nth-child(-n+1),
+.stars--2 .stars_star:nth-child(-n+2),
+.stars--3 .stars_star:nth-child(-n+3),
+.stars--4 .stars_star:nth-child(-n+4),
+.stars--5 .stars_star:nth-child(-n+5) {
+  background-image: url("images\star-active.svg");
+}
+
+.card__price {
+  color: var(--color);
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.card__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -35px;
+}
+
+.card__link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--button-color);
+  border: var(--button-color);
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--hover-button-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__link:hover {
+  background-color: var(--hover-button-color);
+  color: var(--button-color);
+  border: var(--button-color) solid 1px;
+}
