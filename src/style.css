@@ -1,0 +1,139 @@
+@import url(reset.css);
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: rgb(147, 147, 148);
+  font-style: normal;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 32px auto 40px;
+}
+
+.card__description {
+  margin: 0 16px;
+  margin-bottom: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  margin: 0 16px 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: 16px;
+  color: #616070;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 24px;
+}
+
+.card__reviews {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 16px;
+}
+
+.price-container__price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price-container__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button {
+  margin: 0 16px 16px ;
+  padding: 0;
+  max-width: 100%;
+  height: 40px;
+  background: #00acdc;
+  border: none;
+  border-radius: 5px;
+}
+
+.card__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+}
+
+.card__link:hover {
+  color: #00acdc;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("./images/star.svg");
+  height: 16px;
+  width: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url("./images/star-active.svg");
+}
