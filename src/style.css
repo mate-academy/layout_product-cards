@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: #060b35;
+}
+
+body {
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 16px 16px;
+
+  max-width: 200px;
+
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  padding: 0 3px;
+
+  width: 166px;
+  height: 134px;
+}
+
+.article-title {
+  margin-top: 40px;
+}
+
+.card__article-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.product-code {
+  margin-top: 4px;
+}
+
+.card__product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  color: #616070;
+}
+
+.item-rating {
+  margin-top: 16px;
+}
+
+.card__item-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* #region stars */
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url(./images/star.svg) no-repeat center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background: url(./images/star-active.svg) no-repeat center;
+}
+
+/* #endregion */
+
+.reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+}
+
+.price-field {
+  padding-top: 24px;
+}
+
+.card__price-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #616070;
+}
+
+.price-number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 112%;
+}
+
+.btn {
+  margin-top: 16px;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 166px;
+  height: 40px;
+
+  background: #00acdc;
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 114%;
+  color: #fff;
+
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card__btn:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+
+  color: #00acdc;
+}
