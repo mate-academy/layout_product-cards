@@ -1,0 +1,150 @@
+:root {
+  --dark: #060b35;
+  --cerulean: #00acdc;
+  --gray: #616070;
+  --white: #fff;
+  --white-smoke: #f3f3f3;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: medium;
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 700;
+  font-style: bold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+html {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 198px;
+  height: 406px;
+  border: 1px solid var(--white-smoke);
+  border-radius: 5px;
+}
+
+.card__img {
+  margin: 32px auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__inform {
+  margin: 0 16px;
+}
+
+.card__product-name {
+  line-height: 18px;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  color: var(--gray);
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.card__reviews {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.reviews-title {
+  font-size: 10px;
+  color: var(--dark);
+  margin: 0;
+}
+
+.price {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.price__title {
+  margin: 0;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.price__amount {
+  margin: 0;
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card__button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  text-align: center;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  background-color: var(--cerulean);
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__button:hover {
+  color: var(--cerulean);
+  background-color: var(--white);
+  border: 1px solid var(--cerulean);
+  border-radius: 5px;
+}
