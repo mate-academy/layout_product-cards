@@ -1,5 +1,4 @@
-/* #region stars */
-.stars {
+.reviews {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -11,29 +10,30 @@
   height: 16px;
   width: 16px;
   border-radius: 0.5px;
-  margin-right: 4px;
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
-.stars--position {
-  margin: 0 0 24px;
+.reviews__stars--position {
+  margin-bottom: 24px;
 }
 
-.stars-star:nth-child(5) {
-  margin-right: 0;
+.reviews__stars-star:not(:last-child) {
+  margin-right: 4px;
 }
 
-.stars--4 .stars-star:nth-child(-n+4) {
+.reviews__stars--1 .stars-star:nth-child(-n+1),
+.reviews__stars--2 .stars-star:nth-child(-n+2),
+.reviews__stars--3 .stars-star:nth-child(-n+3),
+.reviews__stars--4 .stars-star:nth-child(-n+4),
+.reviews__stars--5 .stars-star:nth-child(-n+5) {
   background-image: url(../images/star-active.svg);
 }
 
-.stars__reviews {
+.reviews__card {
   font-size: 10px;
   line-height: 14px;
   color: var(--text-accent-color);
   font-weight: 400;
-  padding-left: 22px;
+  padding-left: 18px;
 }
-/* #endregion */
