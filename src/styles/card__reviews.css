@@ -1,39 +1,45 @@
-.reviews {
+.card__reviews {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
 }
 
-.stars-star {
-  background-image: url(../images/star.svg);
-  height: 16px;
-  width: 16px;
-  border-radius: 0.5px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.reviews__stars--position {
+.card__reviews--position {
   margin-bottom: 24px;
 }
 
-.reviews__stars-star:not(:last-child) {
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stars-star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 0.5px;
+}
+
+.stars-star:not(:last-child) {
   margin-right: 4px;
 }
 
-.reviews__stars--1 .stars-star:nth-child(-n+1),
-.reviews__stars--2 .stars-star:nth-child(-n+2),
-.reviews__stars--3 .stars-star:nth-child(-n+3),
-.reviews__stars--4 .stars-star:nth-child(-n+4),
-.reviews__stars--5 .stars-star:nth-child(-n+5) {
+.stars--1 .stars-star:nth-child(-n+1),
+.stars--2 .stars-star:nth-child(-n+2),
+.stars--3 .stars-star:nth-child(-n+3),
+.stars--4 .stars-star:nth-child(-n+4),
+.stars--5 .stars-star:nth-child(-n+5) {
   background-image: url(../images/star-active.svg);
 }
 
-.reviews__card {
+.card__rev {
   font-size: 10px;
   line-height: 14px;
   color: var(--text-accent-color);
   font-weight: 400;
-  padding-left: 18px;
 }
