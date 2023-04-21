@@ -1,0 +1,121 @@
+@import "./star.css";
+
+:root {
+  --main-text-color: #060b35;
+  --secondary-text-color: #616070;
+
+  /* button bg and :hover border+text color */
+  --button-bg-color: #00acdc;
+
+  --button-text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  text-align: center;
+
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__iMacImage {
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+}
+
+.card__itemName {
+  width: 166px;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 18px;
+  text-align: start;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+
+.card__productCode {
+  margin-bottom: 16px;
+
+  text-align: start;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-text-color);
+}
+
+.card__reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 23px;
+
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--main-text-color);
+}
+
+.card__priceContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceText {
+  float: left;
+
+  margin-bottom: 16px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--secondary-text-color);
+}
+
+.priceTag {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  font-weight: 700;
+  text-align: end;
+  color: var(--main-text-color);
+}
+
+.card__buyButton {
+  display: block;
+
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--button-text-color);
+
+  background: var(--button-bg-color);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.card__buyButton:hover {
+  color: var(--button-bg-color);
+  background: white;
+  border-color: var(--button-bg-color);
+}
