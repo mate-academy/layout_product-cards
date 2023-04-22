@@ -3,6 +3,13 @@
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  font-style: normal;
+
+  --color-blue: #00acdc;
+  --color-dark: #060b35;
+  --color-gray: #616070;
+  --color-white: #fff;
+
 }
 
 .card {
@@ -13,7 +20,7 @@ html {
   height: 406px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .card__image {
@@ -25,21 +32,18 @@ html {
 .card__description {
   margin: 0 16px;
   margin-bottom: 4px;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-dark);
 }
 
 .card__code {
   margin: 0 16px 16px;
-  font-style: normal;
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   margin-bottom: 16px;
-  color: #616070;
+  color: var(--color-gray);
 }
 
 .card__rating {
@@ -50,30 +54,27 @@ html {
 }
 
 .card__reviews {
-  font-style: normal;
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
 }
 
-.price-container {
+.card__price-container {
   display: flex;
   justify-content: space-between;
   margin: 0 16px 16px;
 }
 
-.price-container__price {
-  font-weight: 400;
+.card__price {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--color-gray);
 }
 
-.price-container__value {
+.card__value {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-dark);
 }
 
 .card__button {
@@ -81,7 +82,7 @@ html {
   padding: 0;
   max-width: 100%;
   height: 40px;
-  background: #00acdc;
+  background: var(--color-blue);
   border: none;
   border-radius: 5px;
 }
@@ -96,17 +97,17 @@ html {
   line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .card__button:hover {
-  background-color: #fff;
-  border: 1px solid #00acdc;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-blue);
   border-radius: 5px;
 }
 
 .card__link:hover {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .stars {
