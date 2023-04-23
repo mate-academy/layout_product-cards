@@ -108,3 +108,19 @@ GOOD example:
 ```html
 <img alt="Samsung Galaxy S22 2022 8/128GB Green" />
 ```
+
+14. [CODE STYLE] - If the HTML-element has long attribute values or number of
+attributes is more than 2 - start each one, including the first, on the new
+line with 2-space indentation related to tag. Tag’s closing bracket should be
+on the same level as opening one.
+        <details>
+          <summary>BAD examples</summary>
+            ![html-attributes-bad-example-1](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-1.png)
+            ![html-attributes-bad-example-2](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-2.png)
+            ![html-attributes-bad-example-3](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-3.png)
+            ![html-attributes-bad-example-4](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-4.png)
+        </details>
+        <details>
+          <summary>GOOD example</summary>
+            ![html-attributes-good-example-1](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-good-1.png)
+        </details>
