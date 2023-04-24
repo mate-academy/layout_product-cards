@@ -1,4 +1,6 @@
-@import "./star.css";
+@import "./reset.css";
+@import "./normalize.css";
+@import "./stars.css";
 
 :root {
   --main-text-color: #060b35;
@@ -8,20 +10,6 @@
   --button-bg-color: #00acdc;
 
   --button-text-color: #fff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Roboto", Helvetica, sans-serif;
-}
-
-h2,
-p {
-  margin: 0;
 }
 
 .card {
@@ -100,13 +88,13 @@ p {
 }
 
 .card__buyButton {
-  display: block;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   height: 40px;
   font-weight: 700;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   color: var(--button-text-color);
 
