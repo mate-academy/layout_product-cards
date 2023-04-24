@@ -1,18 +1,11 @@
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  box-sizing: border-box;
-
-}
-
 .card {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   width: 200px;
   height: 406px;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-card-border);
   border-radius: 5px;
   padding: 32px 16px 16px;
 
@@ -45,43 +38,30 @@ body {
   margin-top: 0;
   margin-bottom: 4px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--color-dark);
 
 }
 
 .card_product-code {
   font-weight: 400;
   font-size: 10px;
-  color: #616070;
+  color: var(--color-grey);
   margin-bottom: 17px;
   margin-top: 0;
 }
 
 /* #endregion */
 
-/* #region stars */
+/* #region review */
 
-.stars {
+.card_reviews {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.stars__star {
-  background-image: url(images/star.svg);
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  margin-right: 4px;
-  background-position: center;
-}
-
-.stars--4 > .stars__star:nth-child(-n + 4) {
-  background-image: url(images/star-active.svg);
-}
-
-.stars__reviews-amoumt {
-  color: #060b35;
+.card_reviews-amoumt {
+  color: var(--color-dark);
   font-weight: 400;
   font-size: 10px;
   margin: 0;
@@ -101,7 +81,7 @@ body {
 }
 
 .card__price_title {
-  color: #616070;
+  color: var(--color-grey);
   font-weight: 400;
   font-size: 12px;
   width: 31px;
@@ -109,7 +89,7 @@ body {
 
 .card__price_price-amoumt {
   display: block;
-  color: #060b35;
+  color: var(--color-dark);
   font-weight: 700;
   font-size: 16px;
   width: 50px;
@@ -124,26 +104,23 @@ body {
   display: flex;
   box-sizing: border-box;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 12px 70px;
 
-  background: #00acdc;
-  color: #fff;
+  width: 166px;
+  height: 41px;
+
+  text-decoration: none;
+  background: var(--color-blue);
+  color: var(--color-light);
   font-weight: 700;
   font-size: 14px;
+  border: 1px solid var(--color-light);
   border-radius: 5px;
-  width: 166px;
-  height: 40px;
-  text-decoration: none;
 }
 
-.card__buy-button:hover {
-  box-sizing: border-box;
-  width: 166px;
-  height: 40px;
-  background: #fff;
-  color: #00acdc;
-  border: solid #00acdc;
-
+.card__buy-button--hover:hover {
+  color: var(--color-blue);
+  border-color: var(--color-blue);
+  background: var(--color-light);
 }
 /* #endregion */
