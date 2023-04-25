@@ -1,0 +1,39 @@
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  border-radius: 0.5px;
+  background-image: url("../../images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stars__star:last-of-type {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:first-of-type,
+.stars--2 .stars__star:nth-of-type(-n + 2),
+.stars--3 .stars__star:nth-of-type(-n + 3),
+.stars--4 .stars__star:nth-of-type(-n + 4),
+.stars--5 .stars__star:nth-of-type(-n + 5) {
+  background-image: url("../../images/star-active.svg");
+}
+
+.card__rating-text {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: right;
+  color: #060b35;
+}
