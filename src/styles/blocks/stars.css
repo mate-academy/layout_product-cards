@@ -1,13 +1,12 @@
-.stars {
+.card-stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.stars__list {
+.stars {
   display: flex;
-  align-items: center;
 }
 
 .stars__star {
@@ -24,11 +23,15 @@
   margin-right: 0;
 }
 
-.stars__list--4 .stars__star:nth-of-type(-n + 4) {
+.stars--1 .stars__star:first-of-type,
+.stars--2 .stars__star:nth-of-type(-n + 2),
+.stars--3 .stars__star:nth-of-type(-n + 3),
+.stars--4 .stars__star:nth-of-type(-n + 4),
+.stars--5 .stars__star:nth-of-type(-n + 5) {
   background-image: url("../../images/star-active.svg");
 }
 
-.stars-text {
+.card-stars__text {
   font-size: 10px;
   line-height: 14px;
   text-align: right;
