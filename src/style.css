@@ -39,21 +39,21 @@ body {
   border: rgb(245, 245, 245) solid 0.5px;
   border-radius: 5px;
   width: 200px;
-  height: 408px;
+  padding: 1px;
 }
 
 .card__image {
   width: 160px;
   height: 134px;
-  margin-top: 32px;
-  margin-left: 19px;
+  margin-top: 31px;
+  margin-left: 18px;
   margin-right: 19px;
 }
 
 .card__title {
   display: flex;
   margin-top: 40px;
-  margin-left: 16.5px;
+  margin-left: 15.5px;
   margin-right: 16px;
   margin-bottom: 4px;
   color: var(--main-text-color);
@@ -67,11 +67,10 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 0;
-  margin-left: 16.5px;
+  margin-left: 15.5px;
   margin-bottom: 16px;
   color: #616070;
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
 
 }
@@ -81,7 +80,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 1px;
 }
 
 .stars__start {
@@ -96,7 +94,11 @@ body {
   background-size: contain;
 }
 
-.stars .stars__start:nth-child(-n+4) {
+.stars--1 .stars__start:nth-child(-n+1),
+.stars--2 .stars__start:nth-child(-n+2),
+.stars--3 .stars__start:nth-child(-n+3),
+.stars--4 .stars__start:nth-child(-n+4),
+.stars--5 .stars__start:nth-child(-n+5) {
   background-image: url("images/star-active.svg");
 }
 
@@ -116,7 +118,6 @@ body {
   text-decoration: none;
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
   margin-right: 44px;
   margin-top: 24px;
 }
@@ -140,7 +141,7 @@ body {
   width: 166px;
   height: 40px;
   
-  font-size: 14px;
+  font-size: 14px; /* not default for button*/
   line-height: 16px;
   font-weight: 700;
   text-decoration: none;
@@ -148,11 +149,11 @@ body {
   color: white;
   background: #00acdc;
   border-radius: 5px;
-  border: #00acdc solid;
+  border: 1px #00acdc solid;
 }
 
 .card__buybutton:hover {
   background-color: white;
   color: #00acdc;
-  border: 1px #00acdc solid ;
+  border-color: #00acdc;
 }
