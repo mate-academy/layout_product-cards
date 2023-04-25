@@ -3,39 +3,7 @@
 }
 
 .page {
-  margin: 0;
   font-family: "Roboto", sans-serif;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  width: 200px;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-
-.product_name {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #060b35;
-  margin-bottom: 4px;
-  margin-block-start: 0;
-}
-
-.product_code {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  color: #616070;
-}
-
-.image {
-  width: 160px;
-  height: 134px;
-  margin: 16px auto 40px;
 }
 
 .stars_section {
@@ -57,7 +25,11 @@
   background: url("./images/star.svg") no-repeat center;
 }
 
-.stars--4 .star:nth-child(-n+4) {
+.stars--1 .star:nth-child(-n+1),
+.stars--2 .star:nth-child(-n+2),
+.stars--3 .star:nth-child(-n+3),
+.stars--4 .star:nth-child(-n+4),
+.stars--5 .star:nth-child(n) {
   background-image: url("./images/star-active.svg");
 }
 
@@ -67,11 +39,6 @@
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
-}
-
-.product_price {
-  display: flex;
-  justify-content: space-between;
 }
 
 .price {
@@ -87,12 +54,7 @@
   line-height: 18px;
 }
 
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-.buy_button {
+.card_product-buy-button {
   display: flex;
   background-color: #00acdc;
   color: white;
@@ -110,7 +72,7 @@ p {
   margin-top: 16px;
 }
 
-.buy_button:hover {
+.card_product-buy-button:hover {
   background-color: white;
   color: #00acdc;
   border-color: #00acdc;
