@@ -34,6 +34,6 @@ other - number of selected stars should change correctly.
 - Item with the text `Buy` should be a link.
 - Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
 
---
+---
 ![screenshot](./references/card-example.png)
 
