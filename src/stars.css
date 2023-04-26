@@ -1,0 +1,36 @@
+.star-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.star-container__stars {
+  display: flex;
+  list-style: none;
+}
+
+.star-container__stars-star {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star-container__stars--1 .star-container__stars-star:nth-child(-n + 1),
+.star-container__stars--2 .star-container__stars-star:nth-child(-n + 2),
+.star-container__stars--3 .star-container__stars-star:nth-child(-n + 3),
+.star-container__stars--4 .star-container__stars-star:nth-child(-n + 4),
+.star-container__stars--5 .star-container__stars-star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star-container__reviews {
+  font-weight: 400;
+  line-height: 14px;
+  color: #060b35;
+}
