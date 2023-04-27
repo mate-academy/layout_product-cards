@@ -43,27 +43,11 @@ a {
 
 .card__img {
   position: relative;
+  display: block;
   width: 160px;
-  height: 0;
-  padding-bottom: 134px;
+  height: 134px;
   background-color: var(--color-grey);
   margin: 0 auto 40px;
-}
-
-.card__img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.card__head {
-  position: relative;
-  width: 100%;
-  margin-bottom: 16px;
 }
 
 .card__title {
@@ -82,6 +66,7 @@ a {
   font-size: 10px;
   line-height: 14px;
   color: var(--color-grey);
+  margin-bottom: 16px;
 }
 
 .card__stars,
@@ -98,7 +83,7 @@ a {
   margin-bottom: 16px;
 }
 
-.card__stars p {
+.card__reviews {
   position: relative;
   top: 1px;
   font-size: 10px;
@@ -114,11 +99,9 @@ a {
   color: var(--color-grey);
 }
 
-.card__price strong {
-  position: relative;
+.card__price p:last-child {
   font-size: 16px;
   font-weight: 700;
-  line-height: 18px;
   color: var(--color-black);
   text-transform: uppercase;
 }
@@ -129,13 +112,12 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 40px;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   color: var(--color-white);
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 11.2px 20px;
   border-radius: 5px;
   border: 1px solid var(--color-blue);
   background-color: var(--color-blue);
@@ -152,14 +134,6 @@ a {
   transform: translateY(5px);
 }
 
-.card__img:last-child,
-.card__head:last-child,
-.card__title:last-child,
-.card__stars:last-child,
-.card__price:last-child {
-  margin-bottom: 0;
-}
-
 /* stars */
 .stars {
   position: relative;
@@ -172,10 +146,7 @@ a {
   display: block;
   width: 16px;
   height: 16px;
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
+  background: url("images/star.svg") no-repeat center;
 }
 
 .stars__star:not(:last-child) {
