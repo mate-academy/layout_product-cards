@@ -1,15 +1,14 @@
-.home-page {
+html {
   font-family: Roboto, sans-serif;
-  font-style: normal;
 }
 
-.home-page__content {
+body {
   margin: 0;
 }
 
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 .container {
   display: flex;
@@ -18,35 +17,47 @@
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
+  padding-left: 4px;
 }
 
-.image {
+.card {
+  padding: 16px;
+  padding-top: 28px;
+}
+
+.card__image {
   width: 160px;
   height: 134px;
-  padding: 20px 16px;
 }
 
 .card__list {
-  padding: 16px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 16px;
+  padding-top: 40px;
+  color: #060b35;
+  padding-bottom: 6px;
 }
 
 .card__code {
   font-weight: 400;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 8px;
   color: #616070;
   width: 98px;
   height: 14px;
-  padding: 0 4px;
 }
 
 .stars {
   display: flex;
   justify-content: space-between;
-  padding: 2px 16px;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 0;
+}
+
+.stars__star--last-star {
+  padding-right: 30px;
 }
 
 .stars__star {
@@ -57,7 +68,7 @@
   height: 16px;
 }
 
-.stars__star:nth-child(n+5) {
+.stars__star--last-star:nth-child(n+5) {
   background-image: url("images/star.svg");
 }
 
@@ -67,46 +78,48 @@
   color: #060b35;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
-  padding: 12px 14px;
+  padding: 16px 0;
 }
 
-.price__price {
+.card__price-price {
   font-size: 12px;
   line-height: 18px;
   color: #616070;
 }
 
-.price__number {
+.card__price-number {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #060b35;
 }
 
-.buy {
+.card__buy {
   display: flex;
   justify-content: center;
-  padding-bottom: 16px;
+  padding-bottom: 4px;
 }
 
-.buy__now {
+.card__buy-now {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-shrink: 1;
   width: 166px;
   height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
   background: #00acdc;
   border-radius: 5px;
   text-decoration: none;
   color: #fff;
 }
 
-.buy__now:hover {
+.card__buy-now:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
