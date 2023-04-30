@@ -5,41 +5,47 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product cards</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500;1,700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div class="card" data-qa="card">
-      <div class="card__header">
-        <div class="card__content" >
-          <img
-            src="./images/imac.jpeg"
-            alt="imac"
-            class="card__page "
-          >
-          <div class="card__information">
-            <p class="card__text">APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)</p>
-            <span class="card__product-code" >Product code: 195434</span>
-            <div class="card__container">
-              <div class="card__stars">
-                <div class="card__star-1"></div>
-                <div class="card__star-2"></div>
-                <div class="card__star-3"></div>
-                <div class="card__star-4"></div>
-                <div class="card__star-5"></div>
-                <div class="card__reviews">Reviews: 5</div>
-              </div>
-            </div>
-            <div class="card__cost-content">Price:
-              <div class="card__cost">$2,199</div>
-            </div>
-            <div class="card__button-section card__button-section--hover">
-              <a
-                href="#"
-                class="card__link card__link--hover"
-                data-qa="hover"
-              ><button type="submit" class="card__button">Buy</button></a>
-            </div>
-          </div>
+      <article class="card__content" >
+        <img
+          src="./images/imac.jpeg"
+          alt="imac"
+          class="card__page"
+        >
+      </article>
+
+      <p class="card__text">APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)</p>
+      <p class="card__product-code" >Product code: 195434</p>
+
+      <article class="card__container">
+        <div class="card__stars">
+          <div class="card__star star-1"></div>
+          <div class="card__star star-2"></div>
+          <div class="card__star star-3"></div>
+          <div class="card__star star-4"></div>
+          <div class="card__star star-5"></div>
         </div>
+        <div class="card__review">
+          <p class="card__reviews">Reviews: 5</p>
+        </div>
+      </article>
+      <article class="card__costs">
+        <p class="card__cost card__cost-title--style_smoll">Price:</p>
+        <p class="card__cost card__cost-content--style_bold">$2,199</p>
+      </article>
+
+      <div class="card__button-section card__button-section--hover">
+        <a
+          href="#"
+          class="card__link card__link--hover"
+          data-qa="hover"
+        ><button type="submit" class="card__button">Buy</button></a>
       </div>
     </div>
   </body>
