@@ -14,7 +14,7 @@ ___
 ## The task
 Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
 
-irements:
+### Requirements:
 - reset browser's default margins
 - card width is `200px` including border
 - use images from [src/images](src/images)
@@ -33,7 +33,6 @@ other - number of selected stars should change correctly.
 - There should be only 2 BEM blocks in your code `card` and `stars` all the others are just card elements
 - Item with the text `Buy` should be a link.
 - Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
-### Requ
+
 ---
 ![screenshot](./references/card-example.png)
-
