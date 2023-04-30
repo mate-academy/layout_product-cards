@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --colorTextGrey: #616070;
+  --colorTextDark: #060b35;
+  --blue: #00acdc;
+  --padingCard: 16px;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.card {
+  max-width: 200px;
+  padding: 32px var(--padingCard) 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 0 3px 40px;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 0 0 4px;
+  color: var(--colorTextDark);
+}
+
+.card__product-code {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--colorTextGrey);
+  margin-bottom: 16px;
+}
+
+.card__product-rating {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--colorTextDark);
+}
+
+.card__prise {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__prise-nema {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--colorTextGrey);
+}
+
+.card__prise-par {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--colorTextDark);
+}
+
+.card__btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: var(--blue);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.card__btn:hover {
+  background-color: #fff;
+  color: var(--blue);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: center no-repeat url("images/star.svg");
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n +2),
+.stars--3 .stars__star:nth-child(-n +3),
+.stars--4 .stars__star:nth-child(-n +4),
+.stars--5 .stars__star:nth-child(-n +5) {
+  background-image: url("images/star-active.svg");
+}
