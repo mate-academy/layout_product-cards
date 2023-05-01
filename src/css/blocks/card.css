@@ -1,35 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-.stars {
-  display: flex;
-  justify-content: start;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  display: block;
-  background: url(images/star.svg) no-repeat center center;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(images/star-active.svg);
-}
-
 .card {
   width: 200px;
   background: #fff;
@@ -51,11 +19,12 @@ body {
 .card__featured-image {
   width: 160px;
   height: 134px;
-  margin: 16px auto 40px;
+  margin: 16px auto 0;
   display: block;
 }
 
 .card__title {
+  margin-top: 40px;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -64,7 +33,6 @@ body {
 
 .card__product-code {
   margin-top: 4px;
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--card-additional-text);
@@ -78,7 +46,6 @@ body {
 }
 
 .card__reviews-count {
-  font-weight: 400;
   font-size: 10px;
   line-height: 15px;
   color: var(--card-text);
@@ -117,10 +84,11 @@ body {
   font-size: 14px;
   line-height: 16px;
   margin-top: 16px;
+  border: 1px solid transparent;
 }
 
 .card__buy-link:hover {
   background: #fff;
-  border: 1px solid var(--card-main-color);
+  border-color: var(--card-main-color);
   color: var(--card-main-color);
 }
