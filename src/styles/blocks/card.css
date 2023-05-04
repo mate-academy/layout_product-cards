@@ -1,20 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
+  --color-white: #fff;
   --color-text-dark: #060b35;
   --color-text-light-grey: #616070;
   --color-blue-button: #00acdc;
-  --color-white: #fff;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  margin: 0;
 }
 
 .card {
@@ -26,6 +14,7 @@ body {
   background: var(--color-white);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  font-family: "Roboto", sans-serif;
 }
 
 .card__picture {
@@ -42,9 +31,6 @@ body {
   line-height: 18px;
   color: var(--color-text-dark);
   margin-top: 40px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
 }
 
 .card__product-code {
@@ -54,7 +40,6 @@ body {
   line-height: 14px;
   color: var(--color-text-light-grey);
   margin-top: 4px;
-  margin-bottom: 0;
 }
 
 .card__reviews {
@@ -63,34 +48,12 @@ body {
   justify-content: space-between;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-  background-image: url(images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars--1 :nth-child(-n + 1),
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(-n + 5) {
-  background-image: url(images/star-active.svg);
-}
-
 .card__reviews-count {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: var(--color-text-dark);
-  margin: 0;
-  padding: 0;
+  /* padding: 0; */
   align-self: flex-end;
 }
 
@@ -106,7 +69,6 @@ body {
   font-size: 12px;
   line-height: 18px;
   color: var(--color-text-light-grey);
-  margin: 0;
 }
 
 .card__price-value {
@@ -114,7 +76,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  margin: 0;
 }
 
 .card__buy-link {
@@ -133,7 +94,7 @@ body {
   padding: 11px 0;
   justify-content: center;
   margin-top: 16px;
-  border: 1px solid var(--color-blue-button);
+  border: 1px solid transparent;
 }
 
 .card__buy-link:hover {
