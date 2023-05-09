@@ -3,7 +3,7 @@ p {
   margin: 0;
 }
 
-.product-card {
+.card {
   width: 198px;
   border: 1px solid #f3f3f3;
   background-color: #fff;
@@ -11,29 +11,24 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-/* #region product img*/
-
-.product-card__mac-image {
+.card__mac-image {
   width: 160px;
   height: 134px;
   padding: 32px 19px 0;
 }
 
-/* #endregion */
-
-/* #region main-info title */
-.product-card__product-title {
-  padding: 40px 16px 0;
+.card__title {
+  padding: 35px 16px 0;
 }
 
-.product-card__product-name {
+.card__name {
   font-weight: 500;
   font-size: 12px;
   color: #060b35;
   line-height: 18px;
 }
 
-.product-card__product-code {
+.card__code {
   color: #616070;
   font-size: 10px;
   font-weight: 400;
@@ -41,12 +36,7 @@ p {
   line-height: 14px;
 }
 
-/* #endregion */
-
-/* #region main-info title */
-
-/* #region main-info stats */
-.product-card__product-statistics {
+.card__stats {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,11 +44,11 @@ p {
   gap: 19px;
 }
 
-.product-card__product-stars {
+.stars-N {
   display: flex;
 }
 
-.product-card__stars {
+.stars-N__star {
   background-image: url(./images/star.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -66,65 +56,56 @@ p {
   height: 16px;
 }
 
-.product-card__product-stars .product-card__stars:nth-child(-n+4) {
+.stars-N__star:nth-child(-n+4) {
   background-image: url(./images/star-active.svg);
 }
 
-.star:not(:last-child) {
+.stars-N__star:not(:last-child) {
   margin-right: 4px;
 }
 
-.review {
+.card__review {
   font-weight: 400;
   font-size: 10px;
   color: #060b35;
 }
-/* #endregion */
 
-/* #region main-info price */
-
-.product-card__product-price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 16px 0;
 }
 
-.product-card__price-name {
+.card__price-name {
   font-weight: 400;
   font-size: 12px;
   color: #616070;
 }
 
-.product-card__price-cost {
+.card__price-cost {
   color: #060b35;
 }
 
-/* #endregion */
-
-/* #region button */
-.product-card__buy-button {
-  padding: 16px;
-}
-
-.product-card__btn {
+.card__btn {
+  display: inline-block;
+  margin: 16px;
   width: 166px;
   height: 40px;
-  text-transform: uppercase;
   border-radius: 5px;
   background-color: #00acdc;
+  text-align: center;
+  line-height: 40px;
   color: #fff;
+  border: 1px solid #00acdc;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
   font-weight: 700;
   font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  border: none;
 }
 
-.product-card__btn:hover {
+.card__btn:hover {
   background-color: #fff;
-  border: 1px solid #00acdc;
   color: #00acdc;
 }
-
-/* #endregion */
