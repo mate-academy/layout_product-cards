@@ -1,0 +1,27 @@
+/* blocks elem with stars-rate parameters */
+.stars {
+  display: flex;
+
+  padding: 0;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+
+  margin-right: 4px;
+
+  list-style-type: none;
+
+  background-image: url(../../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--0 > .stars__star,
+.stars--1 :not(:first-child),
+.stars--2 > .stars__star:nth-child(n+3),
+.stars--3 > .stars__star:nth-child(n+4),
+.stars--4 :last-child {
+  background-image: url(../../images/star.svg);
+}
