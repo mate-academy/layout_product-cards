@@ -1,0 +1,129 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.body {
+  margin: 0;
+  --card-border-color: #f3f3f3;
+  --main-text-color: #060b35;
+  --minor-text-color: #616070;
+  --link-style-color: #00acdc;
+  --regular-white: #fff;
+
+}
+
+.card {
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--card-border-color);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.card__img {
+  padding-top: 32px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.card__name {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--main-text-color);
+  padding-left: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card__code {
+  padding-top: 5px;
+  margin: 0;
+  font-size: 10px;
+  color: var(--minor-text-color);
+  padding-left: 16px;
+}
+
+.card__price-text {
+  display: flex;
+  font-size: 12px;
+  color: var(--minor-text-color);
+  padding-left: 16px;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-text-color);
+  padding-left: 85px;
+  padding-top: 23px;
+}
+
+.card__link {
+  width: 164px;
+  height: 38px;
+  margin: 0 auto;
+  line-height: 38px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+
+  background: var(--link-style-color);
+  border: 1px solid var(--link-style-color);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--regular-white);
+}
+
+.card__link:hover {
+  color: var(--link-style-color);
+  background-color: var(--regular-white);
+}
+
+.card__rate {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.card__reviews-text {
+  padding-left: 19px;
+  margin: 0;
+
+  font-size: 10px;
+  color: var(--main-text-color);
+  margin-top: 18px;
+}
+
+.stars {
+  padding-top: 16px;
+  padding-left: 16px;
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--1 :nth-child(1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
