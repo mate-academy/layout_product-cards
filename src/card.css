@@ -1,24 +1,3 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("./fonts/Roboto-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./fonts/Roboto-Medium.ttf");
-  font-style: medium;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./fonts/Roboto-Bold.ttf");
-  font-style: bold;
-  font-weight: 700;
-}
-
 .card {
   width: 200px;
   background: #fff;
@@ -32,13 +11,12 @@
 
   padding-top: 32px;
   padding-bottom: 16px;
-}
 
-.card * {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   color: #060b35;
+
+  --secondary-color: #616070;
+  --secondary-font-size: 10px;
+  --secondary-line-height: 14px;
 }
 
 .card__img {
@@ -58,9 +36,9 @@
 .card__pcode {
   width: 166px;
   margin-bottom: 16px;
-  font-size: 10px;
-  line-height: 14px;
-  color: #616070;
+  font-size: var(--secondary-font-size);
+  line-height: var(--secondary-line-height);
+  color: var(--secondary-color);
 }
 
 .card__stars-line {
@@ -72,8 +50,8 @@
   justify-content: space-between;
   align-items: center;
 
-  font-size: 10px;
-  line-height: 14px;
+  font-size: var(--secondary-font-size);
+  line-height: var(--secondary-line-height);
 }
 
 .card__price {
@@ -87,7 +65,7 @@
 .card__price-text {
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
+  color: var(--secondary-color);
 }
 
 .card__price-price {
