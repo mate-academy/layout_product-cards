@@ -1,0 +1,109 @@
+:root {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  --moyo-main-color: #00acdc;
+  --text-main-color: #060b35;
+  --text-secondary-color: #616070;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  max-width: 160px;
+  margin: 0 auto 40px;
+}
+
+.card__description {
+  color: var(--text-main-color);
+  margin-bottom: 4px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.card__code {
+  display: flex;
+  margin-bottom: 16px;
+  color: var(--text-secondary-color);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  color: var(--text-main-color);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: var(--text-secondary-color);
+}
+
+.card__price_value {
+  font-size: 16px;
+  color: var(--text-main-color);
+}
+
+.card__buy-button {
+  box-sizing: border-box;
+  background: var(--moyo-main-color);
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 14;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card__buy-button:hover {
+  border: 1px solid var(--moyo-main-color);
+  color: var(--moyo-main-color);
+  background: #fff;
+}
