@@ -1,11 +1,18 @@
 :root {
+  --moyo-main-color: #00acdc;
+  --text-main-color: #060b35;
+  --text-secondary-color: #616070;
+}
+
+html {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  --moyo-main-color: #00acdc;
-  --text-main-color: #060b35;
-  --text-secondary-color: #616070;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -16,7 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -24,7 +30,8 @@ body {
 }
 
 .card__image {
-  max-width: 160px;
+  width: 160px;
+  height: 134px;
   margin: 0 auto 40px;
 }
 
@@ -36,7 +43,6 @@ body {
 }
 
 .card__code {
-  display: flex;
   margin-bottom: 16px;
   color: var(--text-secondary-color);
   font-size: 10px;
@@ -50,6 +56,7 @@ body {
   color: var(--text-main-color);
   font-size: 10px;
   line-height: 14px;
+  align-items: flex-end;
 }
 
 .stars {
@@ -79,16 +86,17 @@ body {
   align-items: flex-end;
   margin-bottom: 16px;
   font-size: 12px;
+  line-height: 18px;
   color: var(--text-secondary-color);
 }
 
 .card__price_value {
   font-size: 16px;
   color: var(--text-main-color);
+  font-weight: 500;
 }
 
 .card__buy-button {
-  box-sizing: border-box;
   background: var(--moyo-main-color);
   border-radius: 5px;
   width: 166px;
