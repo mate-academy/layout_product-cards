@@ -22,10 +22,9 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   width: 200px;
-  height: 480px;
+  height: 408px;
   background: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 95%);
   border-radius: 5px;
@@ -39,9 +38,9 @@ nav {
   width: 160px;
   height: 134px;
   background: url(./images/imac.jpeg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: space;
 }
 
 .Card-ProductData {
@@ -49,7 +48,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  height: 36;
+  margin: 40px 0 16px;
 }
 
 .Card-DeviceName {
@@ -73,6 +72,10 @@ nav {
   justify-content: space-between;
 }
 
+.Card-Price {
+  margin-top: 24px;
+}
+
 .StarsContainer-Stars {
   display: none;
 }
@@ -89,15 +92,15 @@ nav {
   margin-right: 4px;
 }
 
-.StarsContainer-Stars_0 .StarsContainer-Star:nth-child(n),
-.StarsContainer-Stars_1 .StarsContainer-Star:nth-child(n + 2),
-.StarsContainer-Stars_2 .StarsContainer-Star:nth-child(n + 3),
-.StarsContainer-Stars_3 .StarsContainer-Star:nth-child(n + 4),
-.StarsContainer-Stars_4 .StarsContainer-Star:nth-child(n + 5) {
+.StarsContainer-Stars--0 .StarsContainer-Star:nth-child(n),
+.StarsContainer-Stars--1 .StarsContainer-Star:nth-child(n + 2),
+.StarsContainer-Stars--2 .StarsContainer-Star:nth-child(n + 3),
+.StarsContainer-Stars--3 .StarsContainer-Star:nth-child(n + 4),
+.StarsContainer-Stars--4 .StarsContainer-Star:nth-child(n + 5) {
   background-image: url(./images/star.svg);
 }
 
-.StarsContainer-Stars_5 {
+.StarsContainer-Stars--4 {
   display: flex;
 }
 
@@ -136,6 +139,7 @@ nav {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  margin-top: 16px;
 }
 
 .Card-BuyButton:hover {
