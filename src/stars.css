@@ -1,0 +1,23 @@
+
+.card__stars {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.card__stars :nth-child(n) {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__stars--1 :nth-child(-n+1),
+.card__stars--2 :nth-child(-n+2),
+.card__stars--3 :nth-child(-n+3),
+.card__stars--4 :nth-child(-n+4),
+.card__stars--5 :nth-child(n) {
+  background-image: url(images/star-active.svg);
+}
