@@ -1,0 +1,146 @@
+:root {
+  --main-accent-color: #060b35;
+  --secondary-color: #616070;
+  --background-button-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 408px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  height: 134px;
+  width: 160px;
+  margin: 32px 19px 40px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--main-accent-color);
+  padding: 0 16px;
+  margin: 0;
+}
+
+.card__product-code {
+  display: flex;
+  padding: 4px 0 16px 16px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-color);
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+  padding: 0 16px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: 50%;
+}
+
+.stars :not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.reviews {
+  justify-content: flex-end;
+  font-size: 10px;
+  line-height: 14px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  row-gap: 85px;
+}
+
+.price-text {
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--secondary-color);
+  margin: 0;
+
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  color: var(--main-accent-color);
+  margin: 0;
+  padding-right: 16px;
+}
+
+.button {
+  margin: 0 16px;
+  width: 166px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--background-button-color);
+  border: 0 solid;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.button:hover {
+  background: #fff;
+  border: 1px solid var(--background-button-color);
+  border-radius: 5px;
+  color: var(--background-button-color);
+}
