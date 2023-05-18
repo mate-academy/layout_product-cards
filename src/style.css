@@ -1,0 +1,136 @@
+:root {
+  --color-text: #616070;
+  --button-color: #fff;
+  --button-background: #00acdc;
+  --button-border: 1px solid #00acdc;
+  --button-hover-color: #00acdc;
+  --button-hover-background: #fff;
+  --border-color: #00acdc;
+  --color-bold: #060b35;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.card__image {
+  margin: 16px auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.card__title {
+  color: var(--color-bold);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.card__product {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.card__raiting {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 0 24px;
+}
+
+p {
+  margin: 0;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat ;
+  width: 16px;
+  height: 16px;
+  background-position: center;
+}
+
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+  margin-right: 4px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color-bold);
+}
+
+.card__price {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__value {
+  font-size: 12px;
+  color: var(--color-text);
+}
+
+.card__amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-bold);
+}
+
+a {
+  margin: 0 auto;
+}
+
+.card__button {
+  text-align: center;
+  height: 40px;
+  width: 166px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--button-background);
+  color: var(--button-color);
+  border: var(--button-border);
+  border-radius: 5px;
+}
+
+.card__button:hover {
+  color: var(--button-hover-color);
+  background: var(--button-hover-background);
+  border-color: var(--border-color);
+}
