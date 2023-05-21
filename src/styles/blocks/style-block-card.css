@@ -3,20 +3,15 @@
   flex-direction: column;
   border: 1px solid hsl(0, 0%, 95%);
   border-radius: 5px;
-}
-
-.card--size {
-  box-sizing: border-box;
   width: 200px;
-
+  padding: 32px 16px 16px;
 }
 
 .card__image {
-  display: flex;
   background-size: cover;
   height: 134px;
   width: 160px;
-  margin: 32px auto 40px;
+  margin: 0 auto 40px;
 }
 
 .card__title {
@@ -24,23 +19,39 @@
   font-size: 12px;
   line-height: 18px;
   color: hsl(234, 80%, 12%);
-  width: 166px;
-  /* height: 36px; */
-  margin: 0 16px 4px;
+  margin-bottom: 4px;
 }
 
 .card__subtitle {
-  width: 98px;
-  /* height: 14px; */
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   text-align: left;
   color: #616070;
-  margin: 0 0 16px 16px;
+  margin-bottom: 16px;
 }
 
-.card__prise {
+.card__reting {
+  display: flex;
+  height: 16px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__reviews {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: right;
+  color: hsl(234, 80%, 12%);
+}
+
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -49,18 +60,14 @@
   margin: 0 auto 16px;
 }
 
-.card__prise-title {
-  width: 31px;
-  /* height: 18px; */
+.card__price-title {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
 }
 
-.card__prise-cost {
-  width: 50px;
-  /* height: 18px; */
+.card__price-cost {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -68,8 +75,7 @@
   color: hsl(234, 80%, 12%);
 }
 
-.card__buttom {
-  box-sizing: border-box;
+.card__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,17 +85,17 @@
   border-radius: 5px;
   text-decoration: none;
   color: white;
+  border: 1px solid transparent;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
   margin: 0 auto 16px;
-  border: 1px solid transparent;
 }
 
-.card__buttom:hover {
-  box-sizing: border-box;
+.card__link:hover {
   color: #00acdc;
   background: hsl(0, 0%, 100%);
   border-color: hsl(193, 100%, 43%);
