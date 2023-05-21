@@ -1,20 +1,32 @@
 /* #region reset */
-.page-cards {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-
+:root {
   --color-main: rgb(6, 11, 53);
   --color-second: rgb(97, 96, 112);
   --color-blue: rgb(0, 172, 220);
+  --color-white: rgb(255, 255, 255);
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.page-cards {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
 }
 
 .page-cards__content {
   margin: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
 /* #endregion */
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   border: 1px solid rgb(243, 243, 243);
   border-radius: 5px;
@@ -114,7 +126,7 @@
   font-size: 14px;
   line-height: 16px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
 
   background: var(--color-blue);
   border: 1px solid var(--color-blue);
@@ -128,6 +140,6 @@
 
 .card__btn:hover {
   color: var(--color-blue);
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
 }
 /* #endregion */
