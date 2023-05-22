@@ -13,7 +13,7 @@ ___
 
 ## The task
 
-> In order to use SCSS delete the `style.css` file and change the `<link>` in the `index.html` to:
+> ❗️❗️❗️ In order to use SCSS delete the `style.css` file and change the `<link>` in the `index.html` to:
 ```html
 <link rel="stylesheet" href="./styles/index.scss">
 ```
