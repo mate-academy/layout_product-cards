@@ -38,24 +38,7 @@ body {
     color: $extraTextColor;
     font-size: 10px;
     margin-top: 4px;
-    margin-bottom: 20px;
-  }
-
-  &__rating {
-    display: flex;
-    justify-content: space-around;
-
-    &-star {
-      width: 16px;
-      height: 16px;
-      margin: 0 2px;
-      background-image: url(../images/star-active.svg);
-      background-repeat: no-repeat;
-    }
-
-    &-star:last-child {
-      background-image: url(../images/star.svg);
-    }
+    margin-bottom: 19px;
   }
 
   &__reviews {
@@ -65,20 +48,21 @@ body {
 
   &__reviews-qty {
     width: 55px;
-    padding-left: 5px;
+    padding-left: 6px;
     font-size: 10px;
     color: $baseTextColor;
+    text-align: right;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 21px;
     margin-bottom: 16px;
 
     &-text {
-      color: $baseTextColor;
+      color: $extraTextColor;
       font-size: 12px;
     }
 
@@ -91,11 +75,15 @@ body {
 
   &__button-buy {
     cursor: pointer;
-    width: 100%;
+    display: block;
     height: 40px;
+    width: 166px;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
+    padding-top: 10px;
+    text-align: center;
     text-transform: uppercase;
     background-color: $baseButtonColor;
     border: 1px solid $baseButtonColor;
@@ -105,5 +93,22 @@ body {
       background-color: #fff;
       color: $baseButtonColor;
     }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 0;
+    padding-bottom: 14px;
+    margin: 2px 2px 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
   }
 }
