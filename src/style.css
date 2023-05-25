@@ -1,3 +1,139 @@
-body {
+/* stylelint-disable-next-line no-empty-source */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Під'єднюємо кольори і в подальшому їх використовуємо в коді */
+:root {
+  --white-color: #fff;
+  --dark-blue-color: #060b35;
+  --gray-color: #616070;
+  --light-blue-color: #00acdc;
+}
+
+/* Це говорить браузеру враховувати любі коднони
+і внутрішні відступи в значеннях */
+* {
+  box-sizing: border-box;
+}
+/* Закоментовані параметри відцентровують контент по середині дисплею */
+.page {
   margin: 0;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.card {
+  width: 200px; /*ширина*/
+  box-sizing: border-box; /*враховування кордонів відступу*/
+  border-radius: 5px; /*заокрулює края блоку*/
+  border: 1px solid #f3f3f3; /*добавляємо до заокруглееня ще колір-тінь*/
+  padding: 32px 16px 16px; /*це відступи.відступили від країв блоку*/
+
+  display: flex; /*властивість яка нам дає гнучкість в вирівнюванні контенту*/
+  flex-direction: column; /*розташовує контент в ряд, з верху в низ*/
+  font-family: "Roboto", sans-serif; /*задаємо шрифт*/
+  font-size: 10px; /*розмір шрифту*/
+  line-height: 14px; /*встановлює пустий відступ між строками.*/
+  color: var(--dark-blue-color); /*var колір*/
+  background-color: var(--white-color); /*var задній фон кольору*/
+
+}
+
+.card__image {
+  display: flex; /*властивість яка нам дає гнучкість в вирівнюванні контенту*/
+  justify-content: center; /*відцентровує контент в flex боксі*/
+  margin-bottom: 40px; /*робить від контенту відступ вниз*/
+}
+
+.card__image-img {
+  width: 160px; /*ширина*/
+  height: 134px; /*висота*/
+}
+
+.card__title {
+  font-weight: 500; /*жирність шрифту*/
+  font-size: 12px; /*розмір шрифту*/
+  line-height: 18px; /*встановлює пустий відступ між строками або шрифтом.*/
+  margin-bottom: 4px; /*робить від контенту відступ вниз*/
+}
+
+.card__product-code {
+  color: var(--gray-color); /*var колір*/
+  margin-bottom: 16px; /*робить від контенту відступ вниз*/
+}
+
+.card__rewievs,
+.card__price {
+  display: flex; /*властивість яка нам дає гнучкість в вирівнюванні контенту*/
+  justify-content: space-between; /*робить відступ контенту який в одній строці,
+  по краях, типу один текст зліва блоку,
+  в центрі пусто, другий текст з права блоку*/
+
+  align-items: center; /*вирівнювання елементів уздовж поперечної осі.
+  center по центру*/
+}
+
+.card__rewievs {
+  margin-bottom: 24px; /*робить від контенту відступ вниз*/
+}
+
+.card__price {
+  margin-bottom: 16px; /*робить від контенту відступ вниз*/
+}
+
+.price-title {
+  font-size: 12px; /*розмір шрифту*/
+  line-height: 18px; /*встановлює пустий відступ між строками або шрифтом.*/
+}
+
+.price-value {
+  font-weight: 700; /*жирність шрифту*/
+  font-size: 16px; /*розмір шрифту*/
+  line-height: 18px; /*встановлює пустий відступ між строками або шрифтом.*/
+}
+
+.card__link {
+  color: var(--white-color); /*var колір*/
+  background-color: var(--light-blue-color); /*var задній фон кольору*/
+  padding: 12px 70px 12px 69px; /*це відступи.відступили від країв блоку*/
+  text-decoration: none; /*забирає підкреслення знизу шрифту*/
+  font-weight: 700; /*жирність шрифту*/
+  font-size: 14px; /*розмір шрифту*/
+  border-radius: 5px; /*заокрулює края блоку*/
+  display: flex; /*властивість яка нам дає гнучкість в вирівнюванні контенту*/
+  align-items: center; /*вище описав*/
+  justify-content: center; /*вище описав*/
+  line-height: 16px; /*встановлює пустий відступ між строками або шрифтом.*/
+
+}
+
+.card__link:hover {
+  background-color: var(--white-color);
+  border: 1px solid #00acdc;
+  color: var(--light-blue-color);
+  padding: 11px 69px 11px 68px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url("../src/images/star.svg");
+  background-repeat: no-repeat; /*фонове зображення не повторюється,
+  залишається лише одне всередині елемента.*/
+  background-position: center; /*встановлює початкову позицію для
+  кожного фонового зображення*/
+  margin-right: 4px;
+}
+
+.stars--0 .stars__star:nth-child(-n) ,
+.stars--1 .stars__star:nth-child(-n+1) ,
+.stars--2 .stars__star:nth-child(-n+2) ,
+.stars--3 .stars__star:nth-child(-n+3) ,
+.stars--4 .stars__star:nth-child(-n+4) ,
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("./images/star-active.svg");
 }
