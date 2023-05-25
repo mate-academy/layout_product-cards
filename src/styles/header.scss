@@ -1,0 +1,59 @@
+.logo {
+  @include square($logoSize);
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  display: flex;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 60px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $main-color;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-blue-color;
+    }
+  }
+}
+
+.is-active {
+  color: $main-blue-color;
+}
+
+.is-active::after {
+  display: block;
+  position: relative;
+  bottom: 4px;
+  content: "";
+  background: $main-blue-color;
+  border-radius: 8px;
+  height: 4px;
+}

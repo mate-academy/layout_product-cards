@@ -1,0 +1,26 @@
+.content {
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    padding-top: 50px;
+    padding-bottom: 72px;
+
+    width: $cardWidth * $cardsAmount + ($cardsAmount - 1) * $gapX;
+  }
+
+  &__card {
+    margin-right: $gapX;
+    margin-bottom: $gapY;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
+  }
+}
