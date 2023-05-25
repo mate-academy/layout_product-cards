@@ -11,29 +11,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  margin-bottom: 4px;
-}
-
-p {
-  font-weight: 400;
-  color: $secondary-color;
-}
-
-.price-text {
-  font-size: 12px;
-  line-height: 18px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -57,8 +34,17 @@ p {
     }
   }
 
+  &__product-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
   &__product-code {
     margin-bottom: 16px;
+    font-weight: 400;
+    color: $secondary-color;
   }
 
   &__review {
@@ -78,6 +64,17 @@ p {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__link {
@@ -94,6 +91,13 @@ p {
     align-items: center;
     justify-content: center;
     line-height: 16px;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    padding: 11px 69px 11px 68px;
   }
 }
 
@@ -116,14 +120,5 @@ p {
     height: 16px;
     width: 16px;
     margin-right: 4px;
-  }
-}
-
-a[data-qa="hover"] {
-  &:hover {
-    background-color: #fff;
-    border: 1px solid #00acdc;
-    color: #00acdc;
-    padding: 11px 69px 11px 68px;
   }
 }
