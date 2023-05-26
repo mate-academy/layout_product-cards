@@ -2,15 +2,16 @@ $main-color: #060b35;
 $secondary-color: #616070;
 $white-color: #fff;
 $lightblue-color: #00acdc;
+$big_line-height: 18px;
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -39,13 +40,12 @@ body {
   &__product-title {
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: $big_line-height;
     margin-bottom: 4px;
   }
 
   &__product-code {
     margin-bottom: 16px;
-    font-weight: 400;
     color: $secondary-color;
   }
 
@@ -70,29 +70,32 @@ body {
     &-value {
       font-weight: 700;
       font-size: 16px;
-      line-height: 18px;
+      line-height: $big_line-height;
     }
 
     &-text {
       font-size: 12px;
-      line-height: 18px;
+      line-height: $big_line-height;
     }
   }
 
   &__link {
-    color: $white-color;
-    text-transform: uppercase;
-    background-color: $lightblue-color;
-    padding: 12px 70px 12px 69px;
-    text-decoration: none;
-    border: none;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: $lightblue-color;
+    border: none;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 70px 12px 69px;
+
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 5px;
     line-height: 16px;
+    color: $white-color;
   }
 
   &__link:hover {
