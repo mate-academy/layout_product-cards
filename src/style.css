@@ -1,3 +1,10 @@
+:root {
+  --white-color: #fff;
+  --black-color: #060b35;
+  --grey-color: #616070;
+  --blue-color: #00acdc;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -13,7 +20,7 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: var(--white-color);
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
@@ -30,16 +37,24 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #060b35;
+  color: var(--black-color);
   padding-top: 40px;
+}
+
+.iMac {
+  margin: 0;
 }
 
 .card__code {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
-  padding-top: 4px;
+  color: var(--grey-color);
+  margin-top: 4px;
+}
+
+.product_code {
+  margin: 0;
 }
 
 .card__rate {
@@ -47,36 +62,28 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin: 0;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .stars {
   display: flex;
 }
 
-.stars__star-last-star {
-  padding-left: 17px;
-  width: 16px;
-  height: 16px;
-}
-
 .stars__star {
-  background-image: url("./images/star-active.svg");
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  border-radius: 0.5px;
-  margin-right: 4px;
-
-}
-
-.stars__star-last-star:nth-child(n+5) {
   background-image: url(./images/star.svg);
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
   border-radius: 0.5px;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--5 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
 }
 
 .card__reviews {
@@ -84,7 +91,7 @@ body {
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
-  color: #060b35;
+  color: var(--black-color);
 }
 
 .card__price {
@@ -96,8 +103,8 @@ body {
   margin: 0;
   font-size: 12px;
   line-height: 18px;
-  color: #616070;
-  padding-top: 24px;
+  color: var(--grey-color);
+  margin-top: 24px;
 }
 
 .card__price-number {
@@ -105,12 +112,12 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  padding-top: 24px;
-  color: #060b35;
+  margin-top: 24px;
+  color: var(--black-color);
 }
 
 .card__buy {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .card__buy-now {
@@ -118,15 +125,15 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 166px;
+  width: 100%;
   height: 40px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  background: #00acdc;
+  background: var(--blue-color);
   border-radius: 5px;
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
   margin: 0 auto;
 }
 
@@ -134,7 +141,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #fff;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  background: var(--white-color);
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
 }
