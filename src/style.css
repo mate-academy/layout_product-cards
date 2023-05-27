@@ -1,0 +1,125 @@
+/* #region page */
+:root {
+  --background-color: #fff;
+  --main-accent-color: #060b35;
+  --secondary-color: #616070;
+  --blue-accent-color: #00acdc;
+}
+
+.page {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.page__body,
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 166px;
+  background: var(--background-color);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+/* #endregion */
+/* #region image */
+.card__imac-image {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+/* #endregion */
+/* #region name */
+.card__name-product {
+  color: var(--main-accent-color);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+/* #endregion */
+/* #region code */
+.card__code-product {
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+/* #endregion */
+/* #region stars */
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url("images/star-active.svg");
+}
+
+.stars__reviews {
+  color: var(--main-accent-color);
+  margin: 0;
+  text-align: end;
+}
+/* #endregion */
+/* #region price */
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.card__price-p {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--secondary-color);
+}
+
+.card__price-sum {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--main-accent-color);
+}
+/* #endregion */
+/* #region button */
+.card__button-buy {
+  color: var(--background-color);
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--blue-accent-color);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  padding: 12px 70px;
+}
+
+.card__button-buy:hover {
+  color: var(--blue-accent-color);
+  border: 1px solid var(--blue-accent-color);
+  background: var(--background-color);
+  padding: 11px 69px;
+}
+/* #endregion */
