@@ -1,0 +1,90 @@
+.card {
+  @extend %text;
+  display: flex;
+  width: 200px;
+  padding: 32px 16px 16px;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__product-images {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__product-name {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $main-color;
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+    align-self: start;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+
+  &__stars-reviews {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__reviews-text {
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: right;
+    color: $main-color;
+  }
+
+  &__price {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+
+    &-sum {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $main-color;
+    }
+  }
+
+  &__buy-link {
+    width: 166px;
+    padding: 10.5px 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: $blue-color;
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+
+    &:hover {
+      color: $blue-color;
+      background: #fff;
+    }
+  }
+}
