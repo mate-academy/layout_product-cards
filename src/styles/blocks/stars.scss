@@ -1,0 +1,28 @@
+/* stylelint-disable no-descending-specificity */
+.stars {
+  display: flex;
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &__star {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+  }
+
+  @for $starCount from 1 through 5 {
+    &--#{$starCount} &__star {
+      background-image: url(/images/star.svg);
+    }
+  }
+
+  @for $starActive from 1 through 5 {
+    &--#{$starActive} &__star:nth-child(-n + #{$starActive}) {
+      background-image: url(/images/star-active.svg);
+    }
+  }
+}
