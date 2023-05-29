@@ -1,3 +1,134 @@
+$color-main-accent: #060b35;
+$color-secondary: #616070;
+$color-blue-accent: #00acdc;
+$color-white: #fff;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 16px 3px 40px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-main-accent;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-secondary;
+    margin-bottom: 16px;
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .stars {
+    display: flex;
+
+    .stars__star {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+    }
+
+    .stars__star:last-child {
+      background-image: url(../images/star.svg);
+      margin-right: 0;
+    }
+
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-main-accent;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    margin-bottom: 16px;
+
+    .price-title {
+      font-weight: 400;
+      font-size: 12px;
+      color: $color-secondary;
+    }
+
+    .price-value {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-main-accent;
+    }
+  }
+
+  &__btn {
+    .btn-link {
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+      font-weight: 700;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $color-blue-accent;
+      border: 1px solid $color-blue-accent;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-blue-accent;
+      }
+    }
+  }
 }
