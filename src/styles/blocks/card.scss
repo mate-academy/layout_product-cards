@@ -5,7 +5,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   width: 200px;
   background: $color-background;
   border: 1px solid #f3f3f3;
@@ -61,21 +60,17 @@
   }
 }
 
-.reviews {
-  font-size: 10px;
-  padding-top: 12px;
-  color: $color-main-accent;
+.reviews-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 19px;
 
-  &-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 19px;
-  }
-
-  &--position {
-    margin-left: 22px;
+  &__reviews {
+    font-size: 10px;
+    padding-top: 12px;
+    color: $color-main-accent;
   }
 }
 
@@ -91,15 +86,11 @@
     padding-top: 8px;
     color: $color-secondary-accent;
   }
-}
 
-.amount {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 3px;
-  color: $color-main-accent;
-
-  &--position {
-    margin-left: 85px;
+  &__amount {
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 3px;
+    color: $color-main-accent;
   }
 }
