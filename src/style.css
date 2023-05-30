@@ -1,22 +1,124 @@
 body {
   margin: 0;
   font-family: "Roboto", arial, sans-serif;
+}
 
+.card {
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 }
 
 .card__image {
   width: 160px;
   height: 134px;
+  margin: 32px 0 40px;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .card__title {
+  margin: 0 16px 4px;
   font-weight: 500;
   font-size: 12px;
+  line-height: 18px;
   color: #060b35;
 }
 
-.card__text {
+.card__description {
+  margin: 0 0 16px 16px;
   font-weight: 400;
+  line-height: 14px;
   font-size: 10px;
   color: #616070;
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 16px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars__star {
+  background-image: url("./images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.stars > .stars__star:not(:nth-child(5)) {
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star:not(:nth-child(n+5)) {
+  background-image: url("./images/star-active.svg");
+}
+
+.card__review {
+  margin: 0;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.card__price {
+  margin: 24px 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__total {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.card__amount {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__button {
+  margin: 16px;
+  background-color: #00acdc;
+  border-radius: 5px;
+}
+
+.card__link {
+  display: block;
+  text-align: center;
+  padding: 12px 69px 12px 68px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+}
+
+.card__link:hover {
+  color: #00acdc;
 }
