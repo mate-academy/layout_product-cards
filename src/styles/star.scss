@@ -1,0 +1,25 @@
+.stars {
+  height: 16px;
+  margin: 0;
+  padding: 0;
+
+  &__star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-right: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  & .stars__star {
+    background-image: url(../images/star.svg);
+  }
+
+  @for $index from 1 through 5 {
+    &--#{$index} &__star:nth-of-type(-n+#{$index}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+}
