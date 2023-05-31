@@ -2,12 +2,17 @@
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  max-width: 166px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
 
-  &__photo {
-    display: flex;
-    justify-content: center;
+  &__image {
+    width: 160px;
+    height: 134px;
     margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__name {
@@ -19,7 +24,6 @@
   }
 
   &__code {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $thin-text-color;
@@ -27,4 +31,17 @@
     margin-bottom: 16px;
   }
 
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    &-num {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      margin: 0;
+    }
+  }
 }
