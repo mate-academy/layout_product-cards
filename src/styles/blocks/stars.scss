@@ -1,0 +1,23 @@
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+
+  &--1 &__star:nth-child(-n + #{$stars-numbers}),
+  &--2 &__star:nth-child(-n + #{$stars-numbers}),
+  &--3 &__star:nth-child(-n + #{$stars-numbers}),
+  &--4 &__star:nth-child(-n + #{$stars-numbers}),
+  &--5 &__star:nth-child(-n + #{$stars-numbers}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
