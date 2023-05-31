@@ -12,12 +12,10 @@
       margin-left: 4px;
     }
   }
-
-  &--1 &__star:nth-child(-n + #{$stars-numbers}),
-  &--2 &__star:nth-child(-n + #{$stars-numbers}),
-  &--3 &__star:nth-child(-n + #{$stars-numbers}),
-  &--4 &__star:nth-child(-n + #{$stars-numbers}),
-  &--5 &__star:nth-child(-n + #{$stars-numbers}) {
-    background-image: url(../images/star-active.svg);
+  
+  @for $stars-numbers from 1 through 5 {
+    &--#{$stars-numbers} &__star:nth-child(-n + #{$stars-numbers}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
