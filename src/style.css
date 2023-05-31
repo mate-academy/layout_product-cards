@@ -1,3 +1,143 @@
 body {
+  --description-and-rate-color: #060b35;
+  --code-and-price-color: #616070;
+  --cardBg-and-button-color: #fff;
+  --cardButton-color: #00acdc;
+  --common-lineHeight: 18px;
+
+  background-color: #e5e5e5;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   margin: 0;
+
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 406px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  background-color: var(--cardBg-and-button-color);
+  border-radius: 5px;
+}
+
+.card__devicePhoto {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__title {
+  margin: 0 0 4px;
+  width: 166px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: var(--common-lineHeight);
+  color: var(--description-and-rate-color);
+}
+
+.card__code {
+  margin: 0 0 16px;
+  width: 98px;
+  height: 14px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--code-and-price-color);
+}
+
+.card__rateBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 24px;
+  width: 166px;
+  height: 16px;
+}
+
+.stars {
+  width: 96px;
+  height: 16px;
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.review {
+  width: 53px;
+  height: 16px;
+  font-weight: 400;
+  text-align: right;
+  font-size: 10px;
+  line-height: var(--common-lineHeight);
+  color: var(--description-and-rate-color);
+}
+
+.card__price {
+  width: 166px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  line-height: var(--common-lineHeight);
+  margin: 0 0 16px;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: var(--common-lineHeight);
+  color: var(--code-and-price-color);
+}
+
+.priceValue {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: var(--common-lineHeight);
+  color: var(--description-and-rate-color);
+}
+
+.card__button {
+  display: block;
+  width: 166;
+  height: 40px;
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--cardBg-and-button-color);
+  background-color: var(--cardButton-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card__button:hover {
+  background-color: var(--cardBg-and-button-color);
+  color: var(--cardButton-color);
+  border: var(--cardButton-color) 1px solid;
 }
