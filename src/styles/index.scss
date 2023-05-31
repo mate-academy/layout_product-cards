@@ -31,11 +31,15 @@ p {
     line-height: 18px;
     font-weight: 500;
     margin-bottom: 4px;
+    color: $Main_text-color;
   }
 
   &__product-code {
     margin-bottom: 16px;
     line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $Secondary_text-color;
   }
 
   &__rating {
@@ -43,11 +47,14 @@ p {
     justify-content: space-between;
     margin-bottom: 24px;
 
-    .reviews {
+    .card__reviews {
       align-self: center;
+      font-size: 10px;
+      font-weight: 400;
+      color: $Main_text-color;
     }
 
-    .stars-container {
+    .card__stars {
       display: inline-block;
 
       .stars {
@@ -79,64 +86,38 @@ p {
     justify-content: space-between;
     align-items: baseline;
 
-    .price-title {
+    &-title {
       font-size: 12px;
       font-weight: 400;
+      color: $Secondary_text-color;
     }
 
-    .price-amount {
+    &-amount {
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
+      color: $Main_text-color;
     }
   }
 
-  &__product-code,
-  .reviews {
-    font-size: 10px;
-    font-weight: 400;
-  }
-
-  &__title,
-  .price-amount,
-  .reviews {
-    color: $Main_text-color;
-  }
-
-  &__product-code,
-  .price-title {
-    color: $Secondary_text-color;
-  }
-
-  &__buy-button {
+  &__button {
     height: 40px;
-    background-color: $Accent_color;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: center;
-    align-self: center;
+    padding: 12px 70px;
     box-sizing: border-box;
     border: 1px solid $Accent_color;
     border-radius: 5px;
+    background-color: $Accent_color;
 
-    .bb-link {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 40px;
-      text-transform: uppercase;
-      padding: 12px 70px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      border-color: $Accent_color;
+      color: $Accent_color;
     }
-  }
-
-  &__buy-button:hover {
-    background-color: #fff;
-    border-color: $Accent_color;
-    color: $Accent_color;
-  }
-
-  .bb-link:hover {
-    color: $Accent_color;
   }
 }
