@@ -1,10 +1,15 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
+body,
+h3,
+p {
+  margin: 0;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 .card {
@@ -45,31 +50,6 @@ body {
   color: #060b35;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background: url(./images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--0 .stars__star:nth-child(-n),
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background: url(./images/star-active.svg) no-repeat center;
-}
-
 .card__price {
   margin-top: 24px;
   display: flex;
@@ -79,15 +59,14 @@ body {
 .card__price-title {
   font-size: 12px;
   line-height: 18px;
-
   color: #616070;
 }
 
 .card__price-value {
+
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-
   color: #060b35;
 }
 
@@ -102,7 +81,7 @@ body {
   background: #00acdc;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -112,6 +91,8 @@ body {
 }
 
 .card__buylink:hover {
-  background: #fff;
+  background-color: #fff;
   color: #00acdc;
 }
+
+@import url("./styles/blocks/stars.css");
