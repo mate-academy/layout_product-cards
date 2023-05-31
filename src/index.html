@@ -1,13 +1,64 @@
-<!doctype html>
+<!-- #region HEAD -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
     <title>Product cards</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.scss">
   </head>
+  <!-- #endregion -->
   <body>
-    <h1>Product cards</h1>
+    <div class="product-card" data-qa="card">
+      <img
+        class="product-card__picture-item"
+        src="./images/imac.jpeg"
+        alt="APPLE A1419 iMac 27&quot; Retina 5K Monoblock (MNED2UA/A)"
+      >
+
+      <div class="product-card__describtion">
+        <div class="product-card__describtion-name">
+          APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+        </div>
+
+        <div class="product-card__describtion-product-code">
+          Product code: 195434
+        </div>
+
+        <div class="product-card__describtion-rating-info">
+          <div class="stars stars--4">
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+          </div>
+
+          <div class="product-card__describtion-rating-info-views">
+            Reviews: 5
+          </div>
+        </div>
+
+        <div class="product-card__describtion-price">
+          <div class="product-card__describtion-price-word">price:</div>
+
+          <div class="product-card__describtion-price-num">$2,199</div>
+        </div>
+      </div>
+
+      <div class="product-card__buy-button">
+        <a
+          class="product-card__buy-button-link"
+          href="#buy"
+          data-qa="hover"
+        >
+          buy
+        </a>
+      </div>
+    </div>
   </body>
 </html>
