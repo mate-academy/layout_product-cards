@@ -1,0 +1,98 @@
+.card {
+  margin: 20px;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  $darkBlue: #060b35;
+  $gray:#616070;
+  $mainColor: #00acdc;
+
+  &__img {
+    margin: 0 auto;
+    width: 160px;
+    margin-bottom: 29px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $darkBlue;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 0;
+    color: $gray;
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $gray;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $darkBlue;
+    }
+  }
+
+  &__buyButton {
+    display: flex;
+    background-color: $mainColor;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+    &-link {
+      display: block;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: white;
+    }
+  }
+
+  &__buyButton:hover {
+    background-color: white;
+    border: 1px solid $mainColor;
+
+    .card__buyButton-link {
+      color: $mainColor;
+    }
+  }
+}
