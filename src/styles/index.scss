@@ -13,18 +13,19 @@ body {
   --color-blue: #00acdc;
 }
 
-h2 {
+h2,
+p {
   margin: 0;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  padding: 32px 16px 16px;
 
   &__image {
     width: 160px;
@@ -39,11 +40,11 @@ h2 {
   }
 
   &__code {
+    margin-bottom: 16px;
+    margin-top: 0;
     color: #616070;
     font-size: 10px;
     line-height: 14px;
-    margin-bottom: 16px;
-    margin-top: 0;
   }
 
   &__rating {
@@ -56,33 +57,33 @@ h2 {
   &__reviews {
     font-size: 10px;
     line-height: 14px;
-    margin: 0;
   }
 
   &__price-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
     align-items: flex-end;
+    margin-bottom: 16px;
   }
 
   &__price-text {
     font-size: 12px;
-    margin: 0;
   }
 
   &__price-number {
     font-size: 16px;
     font-weight: 700;
-    margin: 0;
   }
 
   &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 11px;
     background: var(--color-blue);
     border-radius: 5px;
     border: 1px solid var(--color-blue);
-    width: 100%;
-    padding: 11px;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -90,9 +91,6 @@ h2 {
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__buy:hover {
