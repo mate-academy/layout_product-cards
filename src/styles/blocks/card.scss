@@ -3,12 +3,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
+h2,
+p {
   margin: 0;
 }
 
-p {
-  margin: 0 ;
+button {
+  padding: 0;
 }
 
 a {
@@ -16,6 +17,8 @@ a {
 }
 
 .product {
+  display: flex;
+  flex-direction: column;
   padding: 32px 16px 16px;
   width: 200px;
   box-sizing: border-box;
@@ -27,12 +30,12 @@ a {
     display: inline-block;
     width: 160px;
     height: 134px;
-    margin: 0 0 36px 3px;
+    margin: 0 auto;
+    padding-bottom: 40px;
   }
 
   &__title {
     margin-bottom: 4px;
-    width: 166px;
     color: $main-color;
     font-style: normal;
     font-weight: 500;
@@ -41,14 +44,12 @@ a {
   }
 
   &__code {
-    margin: 0;
     color: $secondary-color;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
   }
   &__order {
-    padding: 0;
     background-color: $accent-color;
     color: $card-color;
     box-sizing: border-box;
@@ -88,13 +89,12 @@ a {
 
 .product__price {
   margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .price {
-  display: flex;
-
   &__title {
-    margin-right: 85px;
     color: $secondary-color;
     font-weight: 400;
     font-size: 12px;
