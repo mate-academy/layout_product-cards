@@ -1,7 +1,10 @@
 .card {
   padding: 32px 16px 16px;
+  width: $card-width;
+
   border: 1px solid $card-border-color;
   border-radius: 5px;
+  background-color: #fff;
 
   &__photo {
     margin: auto;
@@ -23,7 +26,6 @@
   &__code {
     margin-top: 4px;
 
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $minor-text-color;
@@ -37,9 +39,6 @@
   }
 
   &__review {
-    align-self: center;
-
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $main-text-color;
@@ -47,13 +46,12 @@
 
   &__price {
     @include flex-space-between;
-    align-items: center;
+    // align-items: center;
 
     margin-top: 24px;
   }
 
-  &__title {
-    font-weight: 500;
+  &__label {
     font-size: 12px;
     line-height: 18px;
     color: $minor-text-color;
@@ -66,32 +64,27 @@
   }
 
   &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     margin-top: 16px;
-    width: 166px;
-  }
 
-  &__link {
-    padding: 11px 0;
-
-    display: block;
     text-decoration: none;
     text-transform: uppercase;
-    text-align: center;
-
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     color: #fff;
 
-    border: 1px solid transparent;
+    border: 1px solid $button-color;
     border-radius: 5px;
 
     background-color: $button-color;
-  }
 
-  &__link:hover {
-    background-color: #fff;
-    color: $button-color;
-    border-color: $button-color;
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+    }
   }
 }
