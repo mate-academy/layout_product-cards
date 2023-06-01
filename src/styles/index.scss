@@ -1,3 +1,119 @@
-body {
+$color--text: #060b35;
+$color--text--title: #616070;
+$color--button: #00acdc;
+
+.body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &__image {
+    margin: 32px 19px 0;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color--text;
+    margin: 36px 16px 4px;
+  }
+
+  &__code {
+    display: flex;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color--text--title;
+    margin: 0 16px 16px;
+  }
+
+  &__reting {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    display: flex;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color--text;
+    margin: 0;
+    align-items: flex-end;
+    margin-right: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 16px 16px;
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color--text;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $color--text--title;
+    }
+  }
+
+  &__button {
+    background: $color--button;
+    border: 1px solid $color--button;
+    border-radius: 5px;
+    height: 40px;
+    width: 166px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+    margin: 0 17px 16px;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: #fff;
+      color: $color--button;
+      border: 1px solid $color--button;
+      border-radius: 5px;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  margin-left: 16px;
+  box-sizing: border-box;
+
+  &__star {
+    background-image: url(/images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:first-child) {
+    margin-left: 4px;
+  }
+
+  &--0 &__star:nth-child(-n + 4) {
+    background-image: url(/images/star-active.svg);
+  }
 }
