@@ -12,13 +12,11 @@
     &:last-child {
       margin-right: 0;
     }
-  }
-}
 
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url("./images/star-active.svg");
+    @for $n from 1 through 5 {
+      &--#{$n} &__star::nth-child(-n + #{$n}) {
+        background-image: url("./images/star-active.svg");
+      }
+    }
+  }
 }
