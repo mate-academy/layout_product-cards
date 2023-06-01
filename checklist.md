@@ -2,6 +2,17 @@
 selectors specificity unless completely necessary.
 2. [STYLES] - Remember to use fallback fonts - alternative font-family in case 
 the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
+
+GOOD example:
+```css
+font-family: Roboto, Helvetica, sans-serif;
+```
+BAD example:
+```css
+font-family: Roboto, sans-serif;
+```
+
+
 3. [CODE STYLE] - Add empty lines between multiline sibling blocks of HTML.
 But don't add empty lines between parent and child elements
 
