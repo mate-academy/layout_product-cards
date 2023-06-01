@@ -3,6 +3,13 @@
 $color--text: #060b35;
 $color--text--title: #616070;
 $color--button: #00acdc;
+$width--product-cards: 200px;
+$width--card--image: 160px;
+$height--card--image: 134px;
+$border--thickness: 1px;
+$background--color--card: #fff;
+$width--button: 166px;
+$height--button: 40px;
 
 * {
   box-sizing: border-box;
@@ -14,15 +21,15 @@ $color--button: #00acdc;
 }
 
 .card {
-  width: 200px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  width: $width--product-cards;
+  background: $background--color--card;
+  border: $border--thickness solid #f3f3f3;
   border-radius: 5px;
 
   &__image {
     margin: 32px 19px 0;
-    width: 160px;
-    height: 134px;
+    width: $width--card--image;
+    height: $height--card--image;
   }
 
   &__title {
@@ -41,7 +48,7 @@ $color--button: #00acdc;
     margin: 0 16px 16px;
   }
 
-  &__reting {
+  &__rating {
     display: flex;
     justify-content: space-between;
   }
@@ -77,10 +84,10 @@ $color--button: #00acdc;
 
   &__button {
     background: $color--button;
-    border: 1px solid $color--button;
+    border: $border--thickness solid $color--button;
     border-radius: 5px;
-    height: 40px;
-    width: 166px;
+    height: $height--button;
+    width: $width--button;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
@@ -91,7 +98,7 @@ $color--button: #00acdc;
     &:hover {
       background-color: #fff;
       color: $color--button;
-      border: 1px solid $color--button;
+      border: $border--thickness solid $color--button;
       border-radius: 5px;
     }
   }
