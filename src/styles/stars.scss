@@ -11,7 +11,10 @@
       margin-right: 4px;
     }
   }
-  &--#{$starsCount} .stars__star:nth-child(-n + #{$starsCount}) {
+}
+
+@each $count in $starsCount {
+  .stars--#{$count} .stars__star:nth-child(-n + #{$count}) {
     background-image: url(../images/star-active.svg);
   }
 }
