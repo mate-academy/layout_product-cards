@@ -1,0 +1,93 @@
+.card {
+  @include flex-column;
+  width: $card-with;
+  padding: 32px 16px 16px;
+  background-color: $color-white;
+  box-sizing: border-box;
+  border: 1px solid $card-border-color;
+  border-radius: $border-radius;
+
+  &__img {
+    display: block;
+    width: $image-width;
+    height: $image-height;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $text-color-second;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    @include flex-row-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    @include flex-row-between;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+  }
+
+  &__price {
+    @include flex-row-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-title {
+      color: $text-color-second;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+    }
+
+    &-price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 112%;
+    }
+  }
+
+  &__link {
+    width: $button-width;
+    height: $button-height;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: $button-height;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background: $color-blue;
+    border: 1px solid $color-blue;
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin: 0;
+
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+  }
+}
