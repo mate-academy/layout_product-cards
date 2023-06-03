@@ -6,79 +6,90 @@
   border-radius: 5px;
   background: #{$background-main};
   border: 1px solid #{$gray-elements};
+
   &__image {
     height: 134px;
     width: 160px;
     margin: 32px 19px 40px;
   }
+
   &__container {
     padding: 0 16px 16px;
     width: fit-content;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #{$main-accent};
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    display: block;
+    margin-bottom: $main-margin-bottom;
+    font-size: 10px;
+    line-height: 14px;
+    color: #{$secondary};
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    display: block;
+    font-size: 10px;
+    line-height: 14px;
+    color: #{$main-accent};
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $main-margin-bottom;
+    align-items: center;
+
     &-title {
-      font-weight: 500;
       font-size: 12px;
       line-height: 18px;
-      color: #{$main-accent};
-      margin-bottom: 4px;
-    }
-    &-product-code {
-      display: block;
-      margin-bottom: 16px;
-      font-size: 10px;
-      line-height: 14px;
       color: #{$secondary};
     }
-    &-rating {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-    }
-    &-reviews {
-      display: block;
-      font-size: 10px;
-      line-height: 14px;
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
       color: #{$main-accent};
     }
-    &-price {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 16px;
-      align-items: center;
-      &-title {
-        font-size: 12px;
-        line-height: 18px;
-        color: #{$secondary};
-      }
-      &-value {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 18px;
-        color: #{$main-accent};
-      }
-    }
-    &-buy-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 16px;
-      height: 40px;
-      width: 166px;
-      background-color: #{$blue-accent};
+  }
+
+  &__buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $main-margin-bottom;
+    height: 40px;
+    width: 166px;
+    background-color: #{$blue-accent};
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background: #{$background-main};
+      box-sizing: border-box;
+      border: 1px solid #{$blue-accent};
       border-radius: 5px;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      &:hover {
-        background: #{$background-main};
-        box-sizing: border-box;
-        border: 1px solid #{$blue-accent};
-        border-radius: 5px;
-        color: #{$blue-accent};
-      }
+      color: #{$blue-accent};
     }
   }
 }
