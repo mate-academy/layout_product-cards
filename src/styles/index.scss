@@ -1,3 +1,145 @@
+
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
+  box-sizing: border-box;
+  --color__blue: #00acdc;
+  --color__white: #fff;
+  --color__dark-blue: #060b35;
+  --color__light-grey: #616070;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  min-height: 406px;
+  background-color: var(--color__white);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color__dark-blue);
+  margin-bottom: 4px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--color__ligth-grey);
+  margin-bottom: 16px;
+}
+
+.reting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 16px;
+  width: 166px;
+  margin-bottom: 24px;
+}
+
+.reting__stars {
+  display: flex;
+}
+
+.reting__star {
+  background-position: center;
+  background-image: url("../images/star.svg");
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.reting__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.reting__stars :nth-child(-n + 4) {
+  background-image: url("../images/star-active.svg");
+}
+
+.reting__review {
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 14px;
+  margin-right: 0;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-price__price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: 85px;
+  color: var(--color__light-grey);
+}
+
+.card-price__cost {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card-price__cost,
+.reting__review {
+  color: var(--color__dark-blue);
+}
+
+.card-button {
+  box-sizing: border-box;
+  display: block;
+  height: 40px;
+  background-color: var(--color__blue);
+  border: 1px solid var(--color__blue);
+  border-radius: 5px;
+}
+
+.card-button__buy {
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color__white);
+}
+
+.card-button__buy:hover {
+  color: var(--color__blue);
+  background-color: var(--color__white);
+  border: 1px solid var(--color__blue);
+  border-radius: 5px;
 }
