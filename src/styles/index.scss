@@ -9,9 +9,10 @@ body {
   --color__light-grey: #616070;
 }
 
-h2,
-h3 {
+h1,
+h2 {
   margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -42,6 +43,7 @@ h3 {
 }
 
 .card__code {
+  display: flex;
   font-weight: 400;
   font-style: normal;
   font-size: 10px;
@@ -52,6 +54,7 @@ h3 {
 
 .reting {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 16px;
@@ -81,11 +84,14 @@ h3 {
 }
 
 .reting__review {
-  font-weight: 400px;
+  box-sizing: border-box;
+  display: flex;
+  font-weight: 400;
   font-style: normal;
   font-size: 10px;
+  width: 53px;
   line-height: 14px;
-  margin-right: 0;
+  
 }
 
 .card-price {
@@ -99,7 +105,6 @@ h3 {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  margin-right: 85px;
   color: var(--color__light-grey);
 }
 
@@ -107,7 +112,11 @@ h3 {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
+  width: 50px;
   line-height: 18px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .card-price__cost,
@@ -115,31 +124,25 @@ h3 {
   color: var(--color__dark-blue);
 }
 
-.card-button {
+.card__button {
   box-sizing: border-box;
-  display: block;
-  height: 40px;
-  background-color: var(--color__blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--color__blue);
   border-radius: 5px;
-}
-
-.card-button__buy {
-  box-sizing: border-box;
-  display: block;
-  text-align: center;
-  line-height: 40px;
+  height: 40px;
+  background-color: var(--color__blue);
+  color: var(--color__white);
+  text-decoration: none;
+  text-transform: uppercase;
   font-weight: 700;
   font-style: normal;
   font-size: 14px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--color__white);
+  line-height: 16px;
 }
 
-.card-button__buy:hover {
-  color: var(--color__blue);
+.card__button:hover {
   background-color: var(--color__white);
-  border: 1px solid var(--color__blue);
-  border-radius: 5px;
+  color: var(--color__blue);
 }
