@@ -1,3 +1,11 @@
+:root {
+  --color-card-code: #616070;
+  --color-card-review: #060b35;
+  --color-buy-bacground: #00acdc;
+  --color-buy-text: white;
+
+}
+
 .card {
   border: solid 1px #f3f3f3;
   border-radius: 5px;
@@ -9,10 +17,13 @@
 }
 
 .card__img {
-  margin-top: 32px;
+  padding-top: 32px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 160px;
+  height: 134px;
+  padding-bottom: 40px;
 }
 
 .card__name {
@@ -25,14 +36,14 @@
 .card__code {
   font-weight: 400;
   font-size: 10px;
-  color: #616070;
+  color: var(--color-card-code);
   margin-top: 4px;
 }
 
 .card__review {
   font-weight: 400;
   font-size: 10px;
-  color: #060b35;
+  color: var(--color-card-review);
   line-height: 16px;
   margin-top: 0;
 }
@@ -53,7 +64,7 @@
 .card__price-text {
   font-size: 12px;
   font-weight: 400;
-  color: #616070;
+  color: var(--color-card-code);
   line-height: 18px;
   margin: 0;
 }
@@ -61,34 +72,28 @@
 .card__price-number {
   font-size: 16px;
   font-weight: 700;
-  color: #060b35;
+  color: var(--color-card-review);
   line-height: 18px;
   margin: 0;
 }
 
-.card__buy {
-  background-color: #00acdc;
-  border: solid 1px #00acdc;
+.card__buy-button {
+  box-sizing: border-box;
+  background-color: var(--color-buy-bacground);
+  border: solid 1px var(--color-buy-bacground);
   border-radius: 5px;
-  height: 38px;
+  height: 40px;
   text-align: center;
   margin: 16px 0;
-}
-
-.card:hover .card__buy {
-  background-color: white;
-}
-
-.card__buy-text {
-  color: white;
+  color: var(--color-buy-text);
   text-decoration: none;
   line-height: 40px;
   font-size: 14px;
-  /* padding: 13px 68px; */
   font-weight: 700;
   display: block;
 }
 
-.card:hover .card__buy-text {
-  color: #00acdc;
+.card__buy-button:hover {
+  background-color: var(--color-buy-text);
+  color: var(--color-buy-bacground);
 }
