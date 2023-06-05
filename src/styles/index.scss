@@ -1,3 +1,12 @@
+$color-blue: #00acdc;
+$color-white: #fff;
+$color-dark: #060b35;
+$color-second-white: #f3f3f3;
+$font-width: 400;
+$font-family: "Roboto", sans-serif;
+$font-size-first: 10px;
+$font-size-second: 12px;
+
 body {
   margin: 0;
 }
@@ -31,82 +40,112 @@ body {
   display: flex;
 }
 
-.button {
-  max-height: 50px;
-  margin-top: 8px;
-  text-decoration: none;
-  border: #00acdc solid 1px;
-  color: #fff;
-  background-color: #00acdc;
+.card__button {
+  width: 166px;
+  height: 40px;
   border-radius: 5px;
-  display: inline-block;
-  padding: 12px 70px;
-  font-style: normal;
+  background-color: $color-blue;
+  border: 0;
+  margin-top: 16px;
+}
+
+button {
+  padding: 0;
+}
+
+.button {
+  margin-top: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: $color-white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
   text-transform: uppercase;
-  align-content: center;
-  font-family: "Roboto", sans-serif;
 }
 
 .button:hover {
-  color: #00acdc;
-  background-color: #fff;
+  border: 1px solid $color-blue;
+  border-radius: 5px;
+  color: $color-blue;
+  background-color: $color-white;
+  cursor: pointer;
 }
 
 .imacBackground {
   width: 200px;
   height: 408px;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
+  background-color: $color-white;
+  border: 1px solid $color-second-white;
   border-radius: 5px;
   background-repeat: no-repeat;
 }
 
 .productCode {
+  width: 98px;
+  height: 14px;
+  line-height: 14px;
   margin-top: 4px;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family;
   font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
+  font-weight: $font-width;
+  font-size: $font-size-first;
   color: #616070;
 }
 
 .price {
-  margin-top: 22px;
-  font-family: "Roboto", sans-serif;
+  width: 31px;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 24px;
+  font-family: $font-family;
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: $font-width;
+  font-size: $font-size-second;
   color: #616070;
   display: inline;
   margin-right: 85px;
 }
 
 .money {
-  margin-top: 22px;
-  font-family: "Roboto", sans-serif;
+  width: 50px;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 24px;
+  font-family: $font-family;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  color: #060b35;
+  color: $color-dark;
   display: inline;
 }
 
 .review {
+  width: 53px;
+  height: 16px;
+  line-height: 14px;
   margin-top: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family;
   font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  color: #060b35;
+  font-weight: $font-width;
+  font-size: $font-size-first;
+  color: $color-dark;
   display: inline-block;
 }
 
 .text {
+  color: $color-dark;
+  line-height: 18px;
   margin-top: 40px;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: $font-size-second;
 }
 
 .card__review {
@@ -116,8 +155,8 @@ body {
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  background: $color-white;
+  border: 1px solid $color-second-white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -126,6 +165,5 @@ body {
 }
 
 h3 {
-  line-height: 1.4;
   margin-bottom: 0;
 }
