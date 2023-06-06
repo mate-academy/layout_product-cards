@@ -33,6 +33,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
+- If you use SCSS, check `background-image: url()` to be relative to the `main.scss`. So should start with `../images`.
 - Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
 and keep it operational. If you change `stars--4` modifier to `stars--2` or
 other - number of selected stars should change correctly.
