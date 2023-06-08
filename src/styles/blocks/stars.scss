@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  @for $star from 1 through 5 {
+    &--#{$star} &__star:nth-of-type(-n + #{$star}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
