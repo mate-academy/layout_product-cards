@@ -1,3 +1,145 @@
+:root {
+  --white-color: #fff;
+  --black-color: #060b35;
+  --grey-color: #616070;
+  --blue-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.card__list {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black-color);
+  padding-top: 40px;
+}
+
+.iMac {
+  margin: 0;
+}
+
+.card__code {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--grey-color);
+  margin-top: 4px;
+}
+
+.product_code {
+  margin: 0;
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  border-radius: 0.5px;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--5 .stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__reviews {
+  margin: 0;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--black-color);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price-price {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--grey-color);
+  margin-top: 24px;
+}
+
+.card__price-number {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 24px;
+  color: var(--black-color);
+}
+
+.card__buy {
+  margin-top: 16px;
+}
+
+.card__buy-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  background: var(--blue-color);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--white-color);
+  margin: 0 auto;
+}
+
+.card__buy-now:hover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--white-color);
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
 }
