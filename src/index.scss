@@ -4,17 +4,41 @@
 }
 
 body {
+  padding: 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
 }
 
-.container {
-  width: 200px;
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+  background-image: url(star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars--1 .stars__star:nth-of-type(1),
+.stars--2 .stars__star:nth-of-type(-n+2),
+.stars--3 .stars__star:nth-of-type(-n+3),
+.stars--4 .stars__star:nth-of-type(-n+4),
+.stars--5 .stars__star:nth-of-type(-n+5) {
+  background-image: url(star-active.svg);
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  width: 200px;
+  left: 1px;
+  top: 1px;
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
@@ -59,31 +83,6 @@ body {
   margin-bottom: 24px;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  margin-left: 4px;
-  background-image: url(star.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.stars__star:first-child {
-  margin-left: 0;
-}
-
-.stars--1 .stars__star:nth-of-type(1),
-.stars--2 .stars__star:nth-of-type(-n+2),
-.stars--3 .stars__star:nth-of-type(-n+3),
-.stars--4 .stars__star:nth-of-type(-n+4),
-.stars--5 .stars__star:nth-of-type(-n+5) {
-  background-image: url(star-active.svg);
-}
-
 .card__review-txt {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
@@ -102,13 +101,15 @@ body {
 .card__price-text {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  font-weight: 400;
   line-height: 18px;
+  letter-spacing: 0;
 }
 
 .card__price-amount {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: 0;
 }
@@ -118,7 +119,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #00acdc;
-  border: 1px solid transparent;
+  border: none;
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px 70px 12px 69px;
@@ -126,9 +127,10 @@ body {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  font-weight: 700;
   line-height: 16px;
   letter-spacing: 0;
-  height: 40px;
+  text-align: center;
 }
 
 .card__button-link:hover {
