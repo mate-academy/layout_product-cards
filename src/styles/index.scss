@@ -1,3 +1,136 @@
+$primary-color: #060b35;
+$description-color:#616070;
+$button-color:#00acdc;
+
 body {
   margin: 0;
 }
+/*--region card--*/
+.card {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: $primary-color;
+  box-sizing: border-box;
+  width: 199px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  // margin: auto;
+  padding: 32px 16px 16px;
+
+  &-title {
+    display: none;
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &__good {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    // background-repeat: no-repeat;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__description {
+    font-weight: 500;
+    line-height: 150%;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 10px;
+    color: $description-color;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__purchase {
+    box-sizing: border-box;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 14px;
+    background-color: $button-color;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+    }
+
+  }
+}
+
+.price {
+  color: $description-color;
+  line-height: 18px;
+}
+
+.money {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $primary-color;
+}
+
+/*--endregion--*/
+/*--region stars--*/
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/star.svg");
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+}
+
+.review {
+  font-size: 10px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url("../images/star-active.svg");
+}
+
+/*--endregion--*/
