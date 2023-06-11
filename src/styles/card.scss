@@ -1,0 +1,102 @@
+.card {
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  box-sizing: border-box;
+
+  &__outer {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px 16px;
+  }
+
+  &__img-cover {
+    margin: auto;
+  }
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__product-name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $product-name-font-color;
+    margin: 40px 0 4px;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $product-code-font-color;
+    margin-bottom: 16px;
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+
+  &__view {
+    font-size: 10px;
+    text-align: right;
+    color: $product-review-font-color;
+    display: flex;
+    align-self: center;
+  }
+
+  &__price-outer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 150%;
+    color: $product-price-font-color;
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    color: $product-value-font-color;
+    align-items: center;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    transition: all 144ms;
+
+    &--buy {
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+
+      background-color: $button-background-color;
+      color: $button-font-color;
+    }
+
+    &--buy:hover {
+      border: 1px solid $button-border-color-hover;
+      background-color: $button-background-color-hover;
+      color: $button-font-color-hover;
+    }
+  }
+}
