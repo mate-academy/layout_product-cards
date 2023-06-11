@@ -2,38 +2,37 @@ $primary-color: #060b35;
 $description-color:#616070;
 $button-color:#00acdc;
 
-body {
-  margin: 0;
-}
-/*--region card--*/
-.card {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+* {
   font-size: 12px;
   line-height: 14px;
   color: $primary-color;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  font-weight: 400;
   width: 200px;
   height: 406px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  // margin: auto;
   padding: 32px 16px 16px;
 
-  &-title {
-    display: none;
-  }
-
-  &__title {
-    display: none;
-  }
-
   &__good {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 160px;
     height: 134px;
-    left: calc(50% - 160px / 2);
-    margin: 0 auto 37px;
+    margin: 0 auto 40px;
   }
 
   &__description {
@@ -67,7 +66,6 @@ body {
   }
 
   &__purchase {
-    box-sizing: border-box;
     border: 1px solid $button-color;
     border-radius: 5px;
     text-decoration: none;
@@ -102,8 +100,6 @@ body {
   color: $primary-color;
 }
 
-/*--endregion--*/
-/*--region stars--*/
 .stars {
   display: flex;
 
@@ -122,6 +118,7 @@ body {
 }
 
 .review {
+  margin: 0;
   font-size: 10px;
 }
 
@@ -132,5 +129,3 @@ body {
 .stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url("../images/star-active.svg");
 }
-
-/*--endregion--*/
