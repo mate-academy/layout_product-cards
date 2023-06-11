@@ -1,0 +1,95 @@
+$card-width: fit-content;
+$card-padding: 16px;
+$card-parts-width: 166px;
+$card-parts-flex-direction: column; //also it can be row
+$card-space-between-elements: 16px; //$card-parts-width/10;
+$card-border: 1px solid #f3f3f3;
+$link-height: 40px;
+$card-link-first-color: #00acdc;
+$card-link-second-color: #fff;
+
+.card {
+  display: flex;
+  flex-direction: $card-parts-flex-direction;
+  width: $card-width;
+  border: $card-border;
+  padding: $card-padding;
+
+  &__view {
+    width: $card-parts-width;
+    height: $card-parts-width;
+    padding: $card-space-between-elements 3px;
+    margin-bottom: $card-space-between-elements / 2;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__product {
+    width: $card-parts-width;
+
+    & > * {
+      margin-top: $card-space-between-elements;
+    }
+
+    & p {
+      margin: 0;
+    }
+
+    &-name {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+      margin-bottom: $card-space-between-elements / 4;
+    }
+
+    &-code {
+      color: $text-color-secondary;
+    }
+
+    &-rating,
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &-price {
+      margin-top: $card-space-between-elements / 2 * 3;
+      line-height: 18px;
+
+      &-text {
+        font-size: 12px;
+        color: $text-color-secondary;
+      }
+
+      &-value {
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+
+    &-link-to-buy {
+      display: block;
+      height: $link-height;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      line-height: $link-height;
+      color: $card-link-second-color;
+      background-color: $card-link-first-color;
+      border-radius: 5px;
+      border: 1px solid $card-link-first-color;
+
+      &:hover {
+        background-color: $card-link-second-color;
+        color: $card-link-first-color;
+      }
+    }
+  }
+}
