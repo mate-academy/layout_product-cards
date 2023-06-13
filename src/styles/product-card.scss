@@ -1,9 +1,4 @@
-$width: 200px;
-$main-text-color: #060b35;
-$link-buy-color: #00acdc;
-
-.card {
-  font-family: "Roboto", Helvetica, sans-serif;
+.product-card {
   font-size: 12px;
   background-color: #fff;
 
@@ -12,7 +7,7 @@ $link-buy-color: #00acdc;
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
 
-  padding: 33px 16px 17px;
+  padding: 32px 16px 17px;
 
   display: flex;
   flex-direction: column;
@@ -22,6 +17,7 @@ $link-buy-color: #00acdc;
   &__img {
     max-width: $width - 40px;
     margin-bottom: 40px;
+    height: 134px;
   }
 
   &__title {
@@ -29,32 +25,18 @@ $link-buy-color: #00acdc;
     font-size: inherit;
     line-height: 18px;
     color: $main-text-color;
-    margin: 0 0 4px;
+    margin-bottom: 4px;
   }
 
   &__product-code {
     font-size: 10px;
     line-height: 14px;
-    margin: 0 0 16px;
+    margin-bottom: 16px;
     color: #616070;
   }
 
-  &__stars-and-reviews {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-
-  &__reviews {
-    margin: 0;
-    font-size: 10px;
-    color: $main-text-color;
-  }
-
   &__price {
-    margin: 0 0 16px;
+    margin-bottom: 16px;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -93,5 +75,18 @@ $link-buy-color: #00acdc;
     color: $link-buy-color;
     box-sizing: border-box;
     border: 1px solid $link-buy-color;
+  }
+}
+
+.product-card__raiting {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &-comments {
+    font-size: 10px;
+    color: $main-text-color;
   }
 }
