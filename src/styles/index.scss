@@ -8,6 +8,10 @@ $blue-color: #00acdc;
   align-items: center;
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -27,7 +31,6 @@ p {
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
 
   &__photo {
     width: 160px;
@@ -41,11 +44,11 @@ p {
     line-height: 18px;
     color: $main-color;
     margin-bottom: 4px;
-
+    margin-top: 0;
+    
   }
 
   &__code {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $secondary-color;
@@ -53,7 +56,7 @@ p {
 
   }
 
-  &__review {
+  &__rating {
     @include space-between-content;
     margin-bottom: 24px;
 
@@ -89,7 +92,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 166px;
-    height: 40px;
+    padding: 12px;
     background-color: $blue-color;
     border: 1px solid;
     border-color: #00acdc;
@@ -114,19 +117,20 @@ p {
   flex-direction: row;
 
   &__star {
-    margin-left: 4px;
     height: 16px;
     width: 16px;
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../images/star.svg) no-repeat center;
   }
 
-  & :first-child {
-    margin-left: 0;
+  & :not(:first-child) {
+    margin-left: 4px;
   }
 
-  &--4 :nth-child(-n + 4) {
+  &--1 :nth-child(1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(n) {
     background-image: url(../images/star-active.svg);
   }
 }
