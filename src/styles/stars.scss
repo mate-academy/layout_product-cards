@@ -1,11 +1,8 @@
 .stars {
   display: flex;
-  height: 16px;
 
   &__star {
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../images/star.svg) no-repeat center;
     width: 16px;
     height: 16px;
 
@@ -13,8 +10,8 @@
       margin-left: 4px;
     }
   }
-}
 
-.stars--4 :nth-child(-n+4) {
-  background-image: url(../images/star-active.svg);
+  &--#{$active-stars-count} :nth-child(-n + #{$active-stars-count}) {
+    background-image: url("../images/star-active.svg");
+  }
 }

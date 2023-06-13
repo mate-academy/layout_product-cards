@@ -1,20 +1,23 @@
 :root {
-  margin: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 10px;
   line-height: 140%;
 }
 
-body,
-p {
-  margin: 0;
+* {
   box-sizing: border-box;
 }
 
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .product {
-  box-sizing: border-box;
   width: 200px;
-  background-color: $card-bgc;
+  background-color: $card-bg-color;
   border: 1px solid $card-border-color;
   padding: 32px 16px 16px;
 
@@ -47,6 +50,7 @@ p {
   &__rating-reviews {
     color: $main-text-color;
     display: flex;
+    padding-top: 2px;
   }
 
   &__price {
@@ -78,16 +82,16 @@ p {
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    height: 40px;
+    padding: 12px;
     border: 1px solid transparent;
     border-radius: 5px;
-    background-color: $button-color;
-    color: $button_text-color;
+    background-color: $button-bg-color;
+    color: $button-text-color;
 
     &:hover {
-      background-color: #fff;
-      border-color: $button-color;
-      color: $button-color;
+      background-color: $button-hover-bg-color;
+      border-color: $button-hover-border-color;
+      color: $button-hover-text-color;
     }
   }
 }
