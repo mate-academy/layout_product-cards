@@ -1,3 +1,114 @@
+$baseButtonColor: #00acdc;
+$baseTextColor: #060b35;
+$extraTextColor: #616070;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  width: 200px;
+  height: 410px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 33px 20px 0;
+  }
+
+  &__information {
+    width: 166px;
+    margin: 36px 17px 16px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    color: $baseTextColor;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: $extraTextColor;
+    font-size: 10px;
+    margin-top: 4px;
+    margin-bottom: 19px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews-qty {
+    width: 55px;
+    padding-left: 6px;
+    font-size: 10px;
+    color: $baseTextColor;
+    text-align: right;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 21px;
+    margin-bottom: 16px;
+
+    &-text {
+      color: $extraTextColor;
+      font-size: 12px;
+    }
+
+    &-value {
+      color: $baseTextColor;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__button-buy {
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 166px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $baseButtonColor;
+    border: 1px solid $baseButtonColor;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      color: $baseButtonColor;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 0;
+    padding-bottom: 14px;
+    margin: 2px 2px 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
 }
