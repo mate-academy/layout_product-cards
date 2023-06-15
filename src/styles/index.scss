@@ -1,65 +1,98 @@
+@import './utils/variables.scss';
+
 body {
   margin: 0;
 }
 
-.page__body {
-  font-family: 'Roboto', sans-serif;
+.page {
+  font-family: "Roboto", sans-serif;
   width: 200px;
   height: 408px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
 }
 
 .card {
-  margin: 32px 16px 16px 16px;
+  margin: 32px 16px 16px;
   justify-content: center;
   flex-direction: column;
   display: flex;
   align-items: center;
-}
 
-.card__image {
-  width: 160px;
-  height: 134px;
-}
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
 
-.card__product-name{
-  margin-top: 40px;
-  font-size: 12px;
-  line-height: 18px;
-  color: #060B35;
-}
+  &__stars {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-right: auto;
+  }
 
-.card__product-code{
-  margin-top: 4px;
-  font-size: 10px;
-  line-height: 14px;
-  color: #616070;
-}
+  &__product-name {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-text-color;
+  }
 
-.card__stars{
-  display: flex;
-  margin-top: 16px;
-}
+  &__product-code {
+    margin-top: 4px;
+    margin-right: auto;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-text-color;
+  }
 
-.card__button {
-  width: 166px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #00ACDC;
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    color: $main-text-color;
 
-  color: #FFFFFF;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+    &--text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-text-color;
+    }
 
-.stars--reviews{
-  font-size: 10px;
-  line-height: 14px;
-  font-style: normal;
-  color: #060B35;
-  margin-left: 17px;
+    &--number {
+      font-size: 16px;
+      line-height: 18px;
+      margin-left: 85px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00acdc;
+
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #00acdc;
+      color:#00acdc;
+    }
+
+    &--text {
+      display: inline-block;
+    }
+  }
 }
 
 .stars {
@@ -79,10 +112,25 @@ body {
       margin-left: 4px;
     }
   }
+
+  &--reviews {
+    font-size: 10px;
+    line-height: 14px;
+    font-style: normal;
+    color: $main-text-color;
+    margin-left: 17px;
+  }
+
+  &--n :nth-child(-n + #{$stars-count}) {
+    background-image: url(../images/star-active.svg);
+  }
 }
 
 
-.stars--n :nth-child(-n+4) {
-  background-image: url(../images/star-active.svg);
-}
+
+
+
+
+
+
 
