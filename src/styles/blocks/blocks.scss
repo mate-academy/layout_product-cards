@@ -1,29 +1,3 @@
-$main-color: #060b35;
-$secondary-color: #616070;
-$blue-color: #00acdc;
-
-@mixin space-between-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -45,7 +19,7 @@ p {
     color: $main-color;
     margin-bottom: 4px;
     margin-top: 0;
-    
+
   }
 
   &__code {
@@ -109,28 +83,5 @@ p {
       background-color: #fff;
       color: $blue-color;
     }
-  }
-}
-
-.stars {
-  display: flex;
-  flex-direction: row;
-
-  &__star {
-    height: 16px;
-    width: 16px;
-    background: url(../images/star.svg) no-repeat center;
-  }
-
-  & :not(:first-child) {
-    margin-left: 4px;
-  }
-
-  &--1 :nth-child(1),
-  &--2 :nth-child(-n + 2),
-  &--3 :nth-child(-n + 3),
-  &--4 :nth-child(-n + 4),
-  &--5 :nth-child(n) {
-    background-image: url(../images/star-active.svg);
   }
 }
