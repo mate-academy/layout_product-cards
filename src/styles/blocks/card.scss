@@ -1,0 +1,90 @@
+$card-width: 200px;
+$card-font: roboto, helvetica, sans-serif;
+$card-color: #060b35;
+$card-buy-color: #00acdc;
+
+.card {
+  width: $card-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px 17px;
+  font-family: $card-font;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    max-width: $card-width -40px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $card-color;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+  }
+
+  &__raiting {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-comments {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $card-color;
+    }
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #616070;
+
+    &-bold {
+      font-weight: 700;
+      font-size: 16px;
+      color: $card-color;
+    }
+  }
+
+  &__buy {
+    margin-top: 16px;
+    display: block;
+    width: 166px;
+    height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background: $card-buy-color;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid $card-buy-color;
+      color: $card-buy-color;
+      background: #fff;
+    }
+  }
+}
