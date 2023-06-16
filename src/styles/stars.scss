@@ -16,14 +16,9 @@
     }
   }
 
-  &--reviews {
-    font-size: 10px;
-    line-height: 14px;
-    font-style: normal;
-    color: $main-text-color;
-  }
-
-  &--n :nth-child(-n + #{$stars-count}) {
-    background-image: url("../images/star-active.svg");
+  @for $i from 1 to 5 {
+    &--#{$i} .stars__star:nth-child(-n +#{$i}) {
+      background-image: url("../images/star-active.svg");
+    }
   }
 }
