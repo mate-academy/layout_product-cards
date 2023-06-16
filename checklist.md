@@ -1,6 +1,6 @@
 1. [STYLES] - Get used to style all elements using classes. And don't increase
 selectors specificity unless completely necessary.
-2. [STYLES] - Remember to use fallback fonts - alternative font-family in case 
+2. [STYLES] - Remember to use fallback fonts - alternative font-family in case
 the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
 
     GOOD example:
