@@ -1,11 +1,8 @@
 .card {
   padding: 0 16px;
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
 
   &__image {
+    margin-right: 3px;
     margin-top: 32px;
     width: 160px;
     height: 134px;
@@ -15,7 +12,7 @@
     display: flex;
     align-items: center;
     margin-top: 16px;
-    margin-right: auto;
+    justify-content: space-between;
   }
 
   &__product-name {
@@ -39,6 +36,7 @@
     align-items: center;
     margin-top: 24px;
     color: $main-text-color;
+    justify-content: space-between;
 
     &-text {
       font-size: 12px;
@@ -59,10 +57,11 @@
     justify-content: center;
     margin-top: 16px;
     margin-bottom: 16px;
-    width: 166px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     background-color: #00acdc;
+    box-sizing: border-box;
 
     color: #fff;
     font-size: 14px;
@@ -71,16 +70,12 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid rgba(0, 172, 220, 0);
+    border: 1px solid transparent;
 
     &:hover {
       background-color: #fff;
-      border: 1px solid rgba(0, 172, 220, 1);
+      border-color: #00acdc;
       color: #00acdc;
-    }
-
-    &-text {
-      display: inline-block;
     }
   }
 }
