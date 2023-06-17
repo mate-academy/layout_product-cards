@@ -4,15 +4,11 @@ $button-color: #00acdc;
 
 * {
   margin: 0;
-  // padding: 0;
-
 }
 
-// body {
-//   margin: 0;
-// }
-
 .card {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
@@ -20,18 +16,13 @@ $button-color: #00acdc;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   font-family: Roboto, sans-serif;
-}
 
-.card__image {
-  display: block;
-  margin: 0 auto 40px;
-  width: 160px;
-  height: 134px;
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
 
   &__tytle {
     margin-bottom: 4px;
@@ -64,6 +55,48 @@ $button-color: #00acdc;
     }
   }
 
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+
+    &-price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $accent-color;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    background: $button-color;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+
+    &:hover {
+      background: #fff;
+      color: $button-color;
+    }
+  }
 }
 
 .stars {
@@ -75,10 +108,10 @@ $button-color: #00acdc;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
-  }
 
-  &__star:not(:last-child) {
-    margin-right: 4px;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
   }
 }
 
@@ -88,47 +121,4 @@ $button-color: #00acdc;
 .stars--4 .stars__star:nth-child(-n+4),
 .stars--5 .stars__star:nth-child(-n+5) {
   background-image: url(../images/star-active.svg);
-}
-
-.card-content__price {
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &-title {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary-color;
-  }
-
-  &-price {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $accent-color;
-  }
-}
-
-.card-content__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 166px;
-  height: 40px;
-  background: $button-color;
-  border: 1px solid $button-color;
-  border-radius: 5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-
-  &:hover {
-    background: #fff;
-    color: $button-color;
-  }
 }
