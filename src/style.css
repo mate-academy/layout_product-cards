@@ -1,3 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 body {
   margin: 0;
+  padding: 0;
+  /* background-color: darkgray; */
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 202px;
+  height: 410px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #f3f3f3;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  background-image: url(./images/imac.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.card__title {
+  font-size: 12px;
+  color: #060b35;
+  line-height: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.card__id-good {
+  font-size: 10px;
+  color: #616070;
+  line-height: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  width: 96px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars__star {
+  background-image: url(./images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.stars--4 > .stars__star:nth-of-type(-n + 4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.rate__count-reviews {
+  font-size: 10px;
+  color: #060b35;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.card__price-title {
+  font-size: 12px;
+  color: #616070;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.card__price-text {
+  font-size: 16px;
+  color: #060b35;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.button {
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 16px;
+  transition: 0.3s color linear, 0.3s background-color linear;
+  border: 1px solid #00acdc;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
 }
