@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    @include large-text;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include small-text;
+    color: $base-color-light;
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    &-text {
+      @include small-text;
+      color: $base-color;
+
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      font-weight: 400;
+      @include large-text;
+      color: $base-color-light;
+    }
+
+    &-value {
+      text-align: right;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+}
