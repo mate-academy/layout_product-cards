@@ -1,0 +1,78 @@
+@import "../utils/mixins.scss";
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  /*#region img*/
+
+  &__image {
+    text-align: center;
+    margin-bottom: 37px;
+  }
+  &__image > img {
+    width: 160px;
+    height: 134px;
+  }
+  /*#endregion*/
+  /*#region text*/
+  &__text {
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+  &__code,
+  &__review {
+    font-size: 10px;
+  }
+  &__code {
+    color: $secondary;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+  &__review {
+    line-height: 5px;
+  }
+  /*#endregion*/
+  /*#region row*/
+  &__row {
+    @include flex;
+  }
+  &__row--top {
+    margin-bottom: 23px;
+  }
+  &__row--bottom {
+    margin-bottom: 16px;
+  }
+  /*#endregion*/
+  /*#region price*/
+  &__price-text {
+    color: $secondary;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  /*#endregion*/
+  /*#region button*/
+  &__button {
+    @include center;
+    height: 40px;
+    background-color: #00acdc;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #00acdc;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__button:hover {
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    background-color: #fff;
+    transition: 0.3s ease;
+  }
+  /*#endregion*/
+}
