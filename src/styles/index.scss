@@ -1,10 +1,13 @@
 $main-color: #060b35;
 $main-secondary: #616070;
 $buttom-color: #00acdc;
+$buttom-hover: #fff;
+$border: #f3f3f3;
 
 body {
   text-align: center;
   margin: 10px 100px;
+  font-family: "Roboto", sans-serif;
 }
 
 .card {
@@ -12,9 +15,8 @@ body {
   padding: 32px 16px 16px;
   flex-direction: column;
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
 
   &__photo {
     display: flex;
@@ -88,18 +90,18 @@ body {
     height: 40px;
     background-color: $buttom-color;
     border: 1px solid;
-    border-color: #00acdc;
+    border-color: $buttom-color;
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: $buttom-hover;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
 
     &:hover {
       border-color: $buttom-color;
-      background-color: #fff;
+      background-color: $buttom-hover;
       color: $buttom-color;
     }
   }
@@ -122,7 +124,11 @@ body {
     margin-left: 4px;
   }
 
-  &--4 :nth-child(-n+4) {
+  &--1 :nth-child(-n+1),
+  &--2 :nth-child(-n+2),
+  &--3 :nth-child(-n+3),
+  &--4 :nth-child(-n+4),
+  &--5 :nth-child(-n+5) {
     background-image: url(../images/star-active.svg);
   }
 }
