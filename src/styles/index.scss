@@ -1,6 +1,14 @@
+$main--text--color: #060b35;
+$secondary--text--color: #616070;
+
+$card--border--color: #f3f3f3;
+
+$main--button--color: #00acdc;
+$secondary--button--color: #fff;
+
 body {
   font-family: Roboto, sans-serif;
-  color: #060b35;
+  color: $main--text--color;
   line-height: 18px;
 
   margin: 0;
@@ -12,7 +20,7 @@ body {
   box-sizing: border-box;
   height: 408px;
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card--border--color;
   border-radius: 5px;
 }
 
@@ -29,7 +37,7 @@ body {
 .product__tittle {
   font-weight: 500;
   font-size: 12px;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
 }
 
 .product__code {
@@ -37,7 +45,7 @@ body {
   font-size: 10px;
   line-height: 14px;
   margin-bottom: 16px;
-  color: #616070;
+  color: $secondary--text--color;
 }
 
 .product__reviews {
@@ -63,7 +71,11 @@ body {
     background-position: center;
   }
 
-  &--4 :nth-child(-n+4) {
+  &--1 :nth-child(1),
+  &--2 :nth-child(-n+2),
+  &--3 :nth-child(-n+3),
+  &--4 :nth-child(-n+4),
+  &--5 :nth-child(n) {
     background-image: url(../images/star-active.svg);
   }
 }
@@ -77,7 +89,7 @@ body {
 .product__text {
   font-weight: 400;
   font-size: 12px;
-  color: #616070;
+  color: $secondary--text--color;
 }
 
 .product__cost {
@@ -95,11 +107,11 @@ body {
   box-sizing: border-box;
   height: 40px;
   width: 100%;
-  background-color: #00acdc;
-  color: #fff;
+  background-color: $main--button--color;
+  color: $secondary--button--color;
 
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid $main--button--color;
 
   font-weight: 700;
   font-size: 14px;
@@ -109,7 +121,7 @@ body {
   margin: 0 16px 16px;
 
   &:hover {
-    background-color: #fff;
-    color: #00acdc;
+    background-color: $secondary--button--color;
+    color: $main--button--color;
   }
 }
