@@ -1,0 +1,112 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  // background: $bg-color-white;
+  background: #fff;
+  padding: 32px 16px 16px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    // color: $main-accent;
+    color: #060b35;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    // color: $second-text-color ;
+    color: #616070;
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 24px;
+  }
+
+  &__review-number {
+    // color: $main-accent;
+    color: #060b35;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    font-size: 12px;
+    line-height: 18px;
+    // color: $second-text-color;
+    color: #616070;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    // color: $main-accent;
+    color: #060b35;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
+
+    text-decoration: none;
+    border-radius: 5px;
+    // background-color: $bg-color-blue;
+    background-color: #00acdc;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    // color: $bg-color-white;
+    color: #fff;
+  }
+
+  &__buy:hover {
+    background-color: #fff;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars-star {
+  height: 16px;
+  width: 16px;
+  background-image: url(/images/star.svg);
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  background-position: center;
+}
+
+.stars--1 > .stars-star:first-child,
+.stars--2 > .stars-star:nth-child(-n+2),
+.stars--3 > .stars-star:nth-child(-n+3),
+.stars--4 > .stars-star:nth-child(-n+4),
+.stars--5 > .stars-star:nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+}
