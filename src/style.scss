@@ -2,7 +2,7 @@ $main-color: #060b35 ;
 $secondary-color: #616070 ;
 
 * {
-  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -15,7 +15,6 @@ body {
 }
 
 .card {
-  box-sizing: border-box;
   background-color: #fff;
   width: 200px;
   padding: 32px 16px 16px;
@@ -26,12 +25,13 @@ body {
     width: 160px ;
     height: 134px ;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 
   }
 
   &__name {
     font-weight: 500;
+    margin: 0;
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 4px;
@@ -40,6 +40,7 @@ body {
   &__code {
     color: $secondary-color;
     font-weight: 400;
+    margin: 0;
     font-size: 10px;
     line-height: 14px;
     margin-bottom: 16px;
@@ -90,8 +91,10 @@ body {
   }
 
   &__review-box {
+    height: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 24px;
   }
 }
@@ -117,10 +120,7 @@ body {
     margin-left: 4px;
   }
 
-  &__star--1,
-  &__star--2,
-  &__star--3,
-  &__star--4 {
+  &--4 :nth-child(-n+4) {
     background-image: url(./images/star-active.svg);
   }
 }
