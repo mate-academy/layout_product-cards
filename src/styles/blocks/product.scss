@@ -1,28 +1,30 @@
 .product {
+  display: flex;
+  flex-direction: column;
   width: 200px;
   border: 1px solid $card--border--color;
   border-radius: 5px;
+  padding: 32px 16px 16px;
 
   &__image {
-    margin: 32px 19px 40px;
+    display: flex;
+    justify-content: center;
     height: 134px;
     width: 160px;
-  }
-
-  &__information {
-    margin: 0 16px;
+    margin: 0 auto;
+    margin-bottom: 40px;
   }
 
   &__title {
     font-weight: 500;
     font-size: 12px;
-    margin: 0 0 4px;
+    margin-bottom: 4px;
   }
 
   &__code {
     font-size: 10px;
     line-height: 14px;
-    margin: 0 0 16px;
+    margin-bottom: 16px;
     color: $secondary--text--color;
   }
 
@@ -38,7 +40,6 @@
 
   &__price {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 16px;
   }
@@ -55,10 +56,8 @@
   }
 
   &__link {
-    box-sizing: border-box;
     text-align: center;
     text-decoration: none;
-    height: 40px;
     background-color: $main--button--color;
     color: $secondary--button--color;
     border-radius: 5px;
@@ -67,7 +66,6 @@
     font-size: 14px;
     line-height: 40px;
     text-transform: uppercase;
-    margin: 0 16px 16px;
 
     &:hover {
       background-color: $secondary--button--color;

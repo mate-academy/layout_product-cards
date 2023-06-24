@@ -1,6 +1,5 @@
 .stars {
   display: flex;
-  flex-direction: row;
 
   &__star {
     margin-right: 4px;
@@ -11,6 +10,10 @@
     background-position: center;
   }
 
+  & :nth-last-child(1) {
+    margin: 0;
+  }
+
   &--1 :nth-child(1),
   &--2 :nth-child(-n + 2),
   &--3 :nth-child(-n + 3),
@@ -19,3 +22,5 @@
     background-image: url(../images/star-active.svg);
   }
 }
+
+
