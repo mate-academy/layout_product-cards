@@ -6,7 +6,7 @@ $secondary-color: #616070 ;
 }
 
 html {
-  font-family: "Roboto", "Manrope", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: $main-color;
 }
 
@@ -101,7 +101,6 @@ body {
 }
 
 .reviews {
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
 }
@@ -121,7 +120,9 @@ body {
     margin-left: 4px;
   }
 
-  &--4 :nth-child(-n+4) {
-    background-image: url(./images/star-active.svg);
+  @for $stars from 1 through 5 {
+    &--#{$stars} :nth-child(-n+#{$stars}) {
+      background-image: url(./images/star-active.svg);
+    }
   }
 }
