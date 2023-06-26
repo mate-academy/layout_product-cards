@@ -1,3 +1,111 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.card__img {
+  max-width: 100%;
+  width: 160px;
+  max-height: 100%;
+  height: 166px;
+  padding-top: 32px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+  color: #060b35;
+}
+
+.card__description {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.card__reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.card__reviews span {
+  font-size: 10px;
+  color: #060b35;
+}
+
+.card__price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.card__sum {
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+
+}
+
+.card__buy {
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+
+.card__buy:hover {
+  color: #00acdc;
+  background-color: #fff;
+}
+
+.card__stars {
+  display: flex;
+  // justify-content: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
 }
