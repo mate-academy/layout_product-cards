@@ -1,3 +1,131 @@
+$mainColor: #060b35;
+$secondaryColor: #616070;
+$buttonColor: #00acdc;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", "Helvetica", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+
+  &__content {
+    padding: 0 16px 15px;
+  }
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 32px auto 0;
+  }
+
+  &__title {
+    color: $mainColor;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 40px 0 0;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: $secondaryColor;
+    font-size: 10px;
+    margin: 4px 0 0;
+  }
+
+  &__reviews-wrapper {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__review {
+    font-size: 10px;
+    margin: 0;
+    color: $mainColor;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__price-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: $mainColor;
+    margin: 0;
+    line-height: 18px;
+  }
+
+  &__price-text {
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondaryColor;
+    margin: 0;
+  }
+
+  &__button {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    background-color: $buttonColor;
+    padding: 12px 0;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid $buttonColor;
+
+    &:hover {
+      transition: all 0.2s;
+      background-color: #fff;
+      color: $buttonColor;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/star.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} > :nth-child(-n+#{$i}) {
+      background-image: url("../images/star-active.svg");
+    }
+  }
 }
