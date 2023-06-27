@@ -42,5 +42,5 @@ other - number of selected stars should change correctly.
 - Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
 
 ---
-![screenshot](./references/card-example.png)
+![screenshot](./references/card-example.png) 
 
