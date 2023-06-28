@@ -1,5 +1,6 @@
 $main-text-color: #060b35;
 $secondary-text-color: #616070;
+$white-color: #ffff;
 $blue-color: #00acdc;
 
 * {
@@ -77,7 +78,7 @@ body {
 
     text-transform: uppercase;
     text-decoration: none;
-    color: #ffff;
+    color: $white-color;
     background-color: $blue-color;
     font-size: 14px;
     font-weight: 700;
@@ -86,7 +87,7 @@ body {
 
     &:hover {
       color: $blue-color;
-      background-color: #ffff;
+      background-color: $white-color;
     }
   }
 }
@@ -95,18 +96,22 @@ body {
   display: flex;
 
   &__star {
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
     height: 16px;
     width: 16px;
   }
 
-  &__star:last-child {
-    background-image: url(../images/star.svg);
-  }
-
   &__star:not(:last-child) {
     margin-right: 4px;
+  }
+
+  &--1 :nth-child(1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
   }
 }
