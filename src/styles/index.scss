@@ -1,3 +1,135 @@
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0;
+  // padding: 32px 16px 16px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    align-self: center;
+    padding: 32px 19px 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
+    padding: 40px 16px 0;
+    margin: 0;
+
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    margin: 0;
+    padding: 4px 84px 0 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0;
+
+    &-stars {
+      display: flex;
+
+      &-stars-star {
+        height: 16px;
+        width: 16px;
+        background-image: url("../images/star.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &-details {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: #060b35;
+
+    }
+  }
+
+  &__price-label {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px 0;
+    align-items: flex-end;
+
+    &-price {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+      margin: 0;
+
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060b35;
+      margin: 0;
+    }
+  }
+
+  &__buy-button {
+    padding: 16px;
+
+    &-content {
+      width: 166px;
+      height: 40px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      background-color: #00acdc;
+      border: none;
+
+      &:hover {
+        background-color: #fff;
+        color: #00acdc;
+        border: 1px solid #00acdc;
+      }
+
+    }
+
+  }
+}
+
+.card__reviews-stars-star {
+  height: 16px;
+  width: 16px;
+  background-image: url("../images/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.card__reviews-stars-star--isactive {
+  height: 16px;
+  width: 16px;
+  background-image: url("../images/star-active.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
