@@ -1,9 +1,14 @@
 /* #region root */
+$main-accent: #060b35;
+$secondary: #616070;
+$blue-accent: #00acdc;
+$white: #fff;
+
 :root {
-  --main-accent: #060b35;
-  --secondary: #616070;
-  --blue-accent: #00acdc;
-  --white: #fff;
+  --main-accent: #{$main-accent};
+  --secondary: #{$secondary};
+  --blue-accent: #{$blue-accent};
+  --white: #{$white};
 }
 
 body {
@@ -12,56 +17,67 @@ body {
 }
 
 /* #endregion */
+
 /* #region card */
+
 .card {
   width: 198px;
   height: 406px;
   display: flex;
+
   flex-direction: column;
+
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: #fff;
-}
 
-.card__img {
-  width: 160px;
-  height: 134px;
-  margin: auto 19px;
-  margin-top: 32px;
-  margin-bottom: 0;
-}
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: auto 19px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
 
-.card__span-1 {
-  width: 166px;
-  color: var(--main-accent);
-  font-size: 12px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 18px;
-  margin: auto 16px;
-  margin-top: 40px;
-  margin-bottom: 4px;
-}
+  &__span-1 {
+    width: 166px;
 
-.card__span-2 {
-  color: var(--secondary);
-  font-size: 10px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14px;
-  margin: 0 auto;
-  margin-left: 16px;
-  margin-top: 0;
+    color: var(--main-accent);
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+
+    margin: auto 16px;
+    margin-top: 40px;
+    margin-bottom: 4px;
+  }
+
+  &__span-2 {
+    color: var(--secondary);
+    font-size: 10px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+
+    margin: 0 auto;
+    margin-left: 16px;
+    margin-top: 0;
+  }
 }
 
 /* #endregion */
+
 /* #region stars */
+
 .card__stars-div {
   display: flex;
   justify-content: space-between;
+
   margin: auto 16px;
+
   margin-top: 16px;
 }
 
@@ -75,6 +91,7 @@ body {
   width: 16px;
   margin-right: 4px;
   background-repeat: no-repeat;
+
   background-position: center;
 }
 
@@ -92,11 +109,14 @@ body {
 }
 
 /* #endregion */
+
 /* #region price */
+
 .card__price-div {
   display: flex;
   margin: 0 16px;
   justify-content: space-between;
+
 }
 
 .card__price-1 {
@@ -106,6 +126,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+
   margin-left: 0;
 }
 
@@ -117,32 +138,41 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
+
   margin-right: 0;
 }
 
 /* #endregion */
+
 /* #region linkButton */
+
 .card__link {
   box-sizing: border-box;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+
   border-radius: 5px;
   background: var(--blue-accent);
   border: transparent 1px none;
   margin: auto 16px;
+
   margin-bottom: 16px;
   margin-top: 16px;
+
   width: 166px;
   height: 40px;
+
   color: var(--white);
+
   font-size: 14px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
+
   text-decoration: none;
   padding: auto;
 }
@@ -154,5 +184,3 @@ body {
 }
 
 /* #endregion */
-
-/*# sourceMappingURL=style.css.map */
