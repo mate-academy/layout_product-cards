@@ -18,7 +18,7 @@ ___
 <link rel="stylesheet" href="./styles/index.scss">
 ```
 
-Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
+Create a pages with product card usin `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
 
 ### Requirements:
 - reset browser's default margins
