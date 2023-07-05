@@ -1,0 +1,105 @@
+@import "stars";
+
+$color--text: #060b35;
+$color--text--title: #616070;
+$width--card--image: 160px;
+$height--card--image: 134px;
+$width--product-cards: 200px;
+$border--thickness: 1px;
+$background--color--card: #fff;
+$height--button: 40px;
+$width--button: 166px;
+$color--button: #00acdc;
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.card {
+  width: $width--product-cards;
+  background: $background--color--card;
+  border: $border--thickness solid #f3f3f3;
+  border-radius: 5px;
+
+  &_image {
+    margin: 32px 19px 0;
+    width: $width--card--image;
+    height: $height--card--image;
+  }
+
+  &_title {
+    margin: 36px 16px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color--text;
+  }
+
+  &_code {
+    display: flex;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color--text--title;
+    margin: 0 16px 16px;
+  }
+
+  &_rating {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_reviews {
+    display: flex;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color--text;
+    margin: 0;
+    align-items: flex-end;
+    margin-right: 16px;
+  }
+
+  &_price {
+    margin: 24px 16px 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color--text;
+    }
+
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      color: $color--text--title;
+    }
+  }
+
+  &_button {
+    margin: 0 17px 16px;
+    background: $color--button;
+    border: $border--thickness solid $color--button;
+    border-radius: 5px;
+    height: $height--button;
+    width: $width--button;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+
+    &:hover {
+      color: $color--button;
+      border: $border--thickness solid $color--button;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+}
