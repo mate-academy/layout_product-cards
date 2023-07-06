@@ -1,0 +1,211 @@
+/* #region CSS reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+input {
+  border: 1px solid #b0b0b0;
+  padding: 3px 5px 4px;
+  color: #979797;
+  width: 190px;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+/* #endregion */
+
+$grey-color: #616070;
+$blue-color: #00acdc;
+$white-color: #fff;
+$dark-color: #060b35;
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 198px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: $white-color;
+  margin: 0;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 32px 19px 0;
+  }
+
+  &__title {
+    margin: 40px 16px 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark-color;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey-color;
+    margin: 4px 84px 0 16px;
+  }
+
+  .stars {
+    margin: 16px 16px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__list {
+      display: flex;
+    }
+
+    &__list-item {
+      background-image: url(./images/star.svg);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      list-style: none;
+      margin-right: 4px;
+    }
+
+    &__list :nth-child(-n+4) {
+      background-image: url(./images/star-active.svg);
+    }
+
+    &__reviews {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      align-self: center;
+      color: $dark-color;
+    }
+  }
+
+  &__price {
+    margin: 24px 0 0 16px;
+    justify-self: left;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: $grey-color;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-amount {
+    margin: 24px 16px 0 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white-color;
+    background-color: $blue-color;
+    border: none;
+    margin: 16px 16px 0;
+
+    &:hover {
+      background-color: $white-color;
+      color: $blue-color;
+      border: 1px solid $blue-color;
+    }
+
+  }
+}
