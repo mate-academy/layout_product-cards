@@ -1,25 +1,22 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  font-family: Roboto, Helvetica, sans-serif;
+  background-color: #fff;
   width: 200px;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
   &__image {
+    @include spaceBetween();
+
     height: 134px;
     margin: 0 auto 40px;
   }
 
   &__title {
+    @include spaceBetween();
+
     color: $main-color;
     font-size: 12px;
     font-weight: 500;
@@ -27,30 +24,42 @@
     margin-bottom: 4px;
   }
 
-  &__code {
+  &__product-code {
+    @include spaceBetween();
+
     color: $secondary-color;
     font-size: 10px;
     line-height: 14px;
     margin-bottom: 16px;
   }
 
-  &__reviews {
-    color: $main-color;
-    font-size: 10px;
-    line-height: 14px;
-    text-decoration: none;
+  &__rating {
+    @include spaceBetween();
+    align-items: flex-end;
+
+    &-reviews {
+      color: $main-color;
+      font-size: 10px;
+      line-height: 14px;
+      text-decoration: none;
+    }
   }
 
-  &__price-text {
-    color: $secondary-color;
-    font-size: 12px;
-    line-height: 18px;
-    margin-top: 24px;
-  }
+  &__price {
+    @include spaceBetween();
+    align-items: flex-end;
 
-  &__price-value {
-    color: $main-color;
-    font-weight: 700;
+    &-text {
+      color: $secondary-color;
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 24px;
+    }
+
+    &-value {
+      color: $main-color;
+      font-weight: 700;
+    }
   }
 
   &__button {
