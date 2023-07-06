@@ -1,3 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
   margin: 0;
+  padding: 0;
+}
+
+$color_dark-purple: #060b35;
+$color_white-grey: #616070;
+$color_blue: #00acdc;
+
+.page {
+
+  &__card {
+    display: flex;
+    max-width: 200px;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    padding: 32px 16px 16px;
+  }
+}
+
+.card {
+
+  &__image {
+    height: 134px;
+    background: url(../images/imac.jpeg) center no-repeat;
+    background-size: 160px  134px;
+    margin-bottom: 40px;
+  }
+
+  &__info {
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    padding: 12px 0;
+    background-color: $color_blue;
+    transition: all 0.3s ease 0s;
+
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color_blue;
+      background-color: #fff;
+      border: 1px solid $color_blue;
+    }
+  }
+}
+
+.info-card {
+
+  &__main {
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-info {
+
+  &__title {
+    color: $color_dark-purple;
+    margin: 0;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__poduct-code {
+    color: $color_white-grey;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+}
+
+.review-info {
+
+  &__cout {
+    color: $color_dark-purple;
+    font-size: 10px;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) center no-repeat;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
+
+.stars--4 .stars__star:nth-child(-1n + 4) {
+  background: url(../images/star-active.svg) center no-repeat;
+}
+
+.price-info {
+
+  &__legend {
+    color: $color_white-grey;
+  }
+
+  &__value {
+    color: $color_dark-purple;
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
