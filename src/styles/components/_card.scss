@@ -1,0 +1,91 @@
+.card {
+  width: $card-w;
+  padding: $spacer * 4 $spacer * 2 $spacer * 2;
+  display: flex;
+  flex-direction: column;
+  background-color: $card-bg-clr;
+  border: 1px solid $card-bd-clr;
+  border-radius: 0.5rem;
+
+  &__img {
+    width: $img-w;
+    height: $img-h;
+    margin: 0 auto $spacer * 5;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    width: 166px;
+    height: $spacer * 5;
+    color: $main-clr;
+    background-color: $blue-accent-clr;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-transform: uppercase;
+    border: 1px solid $blue-accent-clr;
+    border-radius: $btn-bdrs;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue-accent-clr;
+      background-color: $main-clr;
+    }
+  }
+}
+  .content {
+
+    &__title {
+      color:$main-accent;
+      font-size: $card-title-fsz;
+      font-weight: 500;
+      line-height: 1.8rem;
+      margin: 0 0 0.4rem;
+    }
+
+    &__subtitle {
+      margin-bottom: $spacer * 2;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+      color: $secondary-clr;
+      font-style: normal;
+    }
+
+    &__stars {
+      margin-bottom: $spacer * 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      line-height: 1.4rem;
+      font-size: 1rem;
+    }
+      .reviews {
+        color: $main-accent;
+        font-weight: 400;
+    }
+
+    &__price-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $spacer * 2;
+      align-items: center;
+
+      .price {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $secondary-clr;
+
+        &_value {
+          color: $main-accent;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1.8rem;
+        }
+      }
+    }
+}
