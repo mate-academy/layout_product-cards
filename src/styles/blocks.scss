@@ -5,6 +5,7 @@
 .card {
   font-family: $body-font;
   width: $card-width;
+  height: $card-height;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -21,7 +22,6 @@
   &__text {
     display: flex;
     flex-direction: column;
-    width: 166px;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -44,13 +44,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 16px;
     margin-top: 16px;
     margin-bottom: 24px;
   }
 
   &__reviews {
-    text-align: right;
     font-size: 10px;
     font-family: $body-font;
     font-style: normal;
@@ -83,7 +81,10 @@
   }
 
   &__button-buy {
-    display: block;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
     background-color: $button-color;
     color: #fff;
     text-decoration: none;
@@ -92,7 +93,6 @@
     line-height: 16px;
     font-weight: 700;
     border-radius: 5px;
-    padding: 12px 70px 12px 69px;
     margin-top: 16px;
   }
 
