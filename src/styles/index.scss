@@ -1,3 +1,241 @@
-body {
+// @use './utils/variables';
+// @use './utils/functions';
+
+
+// @use './utils/reset-enviro';
+// @use './more_styles/card.scss';
+// @use './more_styles/stars.scss';
+
+
+
+$background-size-h: 408px;
+$background-size-w: 200px;
+$blue-accent:  #00acdc;
+$button-h: 40px;
+$button-w: 166px;
+$border-radius: 5px;
+$star-size: 16px;
+
+/* #region Reset*/
+
+
+*, *::before, *::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+/* #endregion*/
+
+.card {
+  width: #{$background-size-w};
+  height: #{$background-size-h};
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+
+}
+
+.element {
+  position: absolute;
+}
+
+.background {
+  height: #{$background-size-h};
+  width: #{$background-size-w};
+  border-radius: #{$border-radius};
+  border: 1px solid #f3f3f3;
+  background:#fff;
+
+
+
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+  flex-shrink: 0;
+  fill: url(../images/imac.jpeg), lightgray 50% / contain no-repeat;
+  // background-image: url();
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  margin-top: 33px;
+  margin-left: 20px;
+
+}
+
+.product {
+  width: 166px;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  &__text {
+    color:#060b35;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    left: 17px;
+    top: 207px;
+  }
+
+  &-code {
+    color:#616070;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    left: 17px;
+    top: 247px;
+  }
+}
+
+
+.reviews {
+  width: 53px;
+  height: 16px;
+  flex-shrink: 0;
+  left: 130px;
+  top: 276px;
+}
+
+.reviews-text {
+  color:#060b35;
+  text-align: right;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.price {
+  color: #616070;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  left: 17px;
+  top: 317px;
+}
+
+.price-num {
+  color: #060B35;
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  left: 133px;
+  top: 317px;
+  text-justify: auto;
+}
+
+.buy-button {
+  width: #{$button-w};
+  height: #{$button-h};
+  flex-shrink: 0;
+  border-radius: #{$border-radius};
+  background: #{$blue-accent};
+  left: 17px;
+  top: 351px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link:hover {
+    position: absolute;
+    width: #{$button-w};
+    height: #{$button-h};
+    flex-shrink: 0;
+    border-radius: #{$border-radius};
+    border: 1px solid #{$blue-accent};
+    color: #{$blue-accent};
+    background-color: #fff;
+
+  }
+}
+
+
+
+
+
+.block_stars {
+  flex-shrink: 0;
+  position: absolute;
+  left: 19px;
+  top: 279px;
+}
+
+/* #region Stars*/
+
+
+.stars {
+
+  display: flex;
+
+  &__star {
+  height: #{$star-size};
+  width: #{$star-size};
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  }
+
+  &__star:not(:last-of-type) {
+  margin-right: 4px;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      position: relative;
+      bottom: calc(#{$star-size} * #{$i});
+    }
+
+    // &--#{$i} &__star:nth-child(-n+#{$i}) {
+    // background-image: url(../images/star-active.svg);
+    // opacity: 0;
+    // }
+  }
+}
+
+.stars--1 > .stars__star:nth-child(-n + 1) {
+  background-image: url(../images/star-active.svg);
+  opacity: 0;
+}
+
+.stars--2 > .stars__star:nth-child(-n + 2) {
+  background-image: url(../images/star-active.svg);
+  opacity: 0;
+}
+
+.stars--3 > .stars__star:nth-child(-n + 3) {
+  background-image: url(../images/star-active.svg);
+  opacity: 0;
+}
+
+.stars--4 > .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+
+}
+
+.stars--5 > .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+  opacity: 0;
+}
+/* #endregion*/
