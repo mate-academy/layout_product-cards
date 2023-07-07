@@ -1,13 +1,3 @@
-// @use './utils/variables';
-// @use './utils/functions';
-
-
-// @use './utils/reset-enviro';
-// @use './more_styles/card.scss';
-// @use './more_styles/stars.scss';
-
-
-
 $background-size-h: 408px;
 $background-size-w: 200px;
 $blue-accent:  #00acdc;
@@ -15,11 +5,14 @@ $button-h: 40px;
 $button-w: 166px;
 $border-radius: 5px;
 $star-size: 16px;
+$main-color:#060b35;
+$side-text-color: #616070;
+$light-color: #fff;
+$border-color: #f3f3f3;
 
-/* #region Reset*/
-
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,7 +22,6 @@ $star-size: 16px;
 a {
   text-decoration: none;
 }
-/* #endregion*/
 
 .card {
   width: #{$background-size-w};
@@ -38,99 +30,80 @@ a {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  position: relative;
-}
-
-.element {
-  position: absolute;
-}
-
-.background {
-  height: #{$background-size-h};
-  width: #{$background-size-w};
   border-radius: #{$border-radius};
-  border: 1px solid #f3f3f3;
-  background:#fff;
+  border: 1px solid #{$border-color};
+  background: #{$light-color};
+  padding: 32px 16px 16px;
 }
 
 .image {
   width: 160px;
   height: 134px;
   flex-shrink: 0;
-  background-image: url(../images/imac.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-top: 33px;
-  margin-left: 20px;
-
+  margin-left: 3px;
 }
 
 .product {
-  width: 166px;
   flex-direction: column;
   flex-shrink: 0;
-
-  &__text {
-    color:#060b35;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    left: 17px;
-    top: 207px;
-  }
+  color: #{$main-color};
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin-top: 36px;
 
   &-code {
-    color:#616070;
+    color: #{$side-text-color};
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
-    left: 17px;
-    top: 247px;
+    margin-top: 4px;
   }
 }
 
-.reviews {
-  width: 53px;
-  height: 16px;
-  flex-shrink: 0;
-  left: 130px;
-  top: 276px;
+.block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
 }
 
-.reviews-text {
-  color:#060b35;
+.reviews {
+  flex-shrink: 0;
+  color: #{$main-color};
   text-align: right;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  // justify-content: flex-end;
 }
 
 .price {
-  color: #616070;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  align-items: flex-start;
+
+}
+
+.price-text {
+  color: #{$side-text-color};
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  left: 17px;
-  top: 317px;
 }
 
 .price-num {
-  color: #060B35;
+  color: #{$main-color};
   text-align: right;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
-  left: 133px;
-  top: 317px;
-  text-justify: auto;
 }
 
 .buy-button {
@@ -139,9 +112,7 @@ a {
   flex-shrink: 0;
   border-radius: #{$border-radius};
   background: #{$blue-accent};
-  left: 17px;
-  top: 351px;
-  color: #fff;
+  color: #{$light-color};
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -151,77 +122,38 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 16px;
 
-  &__link:hover {
-    position: absolute;
+  &:hover {
     width: #{$button-w};
     height: #{$button-h};
     flex-shrink: 0;
     border-radius: #{$border-radius};
     border: 1px solid #{$blue-accent};
     color: #{$blue-accent};
-    background-color: #fff;
+    background-color: #{$light-color};
   }
 }
-
-.block_stars {
-  flex-shrink: 0;
-  position: absolute;
-  left: 19px;
-  top: 279px;
-}
-
-/* #region Stars*/
 
 .stars {
   display: flex;
 
   &__star {
-  height: #{$star-size};
-  width: #{$star-size};
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  position: relative;
+    height: #{$star-size};
+    width: #{$star-size};
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
   }
 
   &__star:not(:last-of-type) {
-  margin-right: 4px;
-  }
-
-  @for $i from 1 through 5 {
-    &--#{$i} {
-      position: relative;
-      bottom: calc(#{$star-size} * #{$i});
-    }
-
-    // &--#{$i} &__star:nth-child(-n+#{$i}) {
-    // background-image: url(../images/star-active.svg);
-    // opacity: 0;
-    // }
+    margin-right: 4px;
   }
 }
 
-.stars--1 > .stars__star:nth-child(-n + 1) {
-  background-image: url(../images/star-active.svg);
-  opacity: 0;
-}
-
-.stars--2 > .stars__star:nth-child(-n + 2) {
-  background-image: url(../images/star-active.svg);
-  opacity: 0;
-}
-
-.stars--3 > .stars__star:nth-child(-n + 3) {
-  background-image: url(../images/star-active.svg);
-  opacity: 0;
-}
-
-.stars--4 > .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
+.stars--1 > .stars__star:nth-child(-n + 1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4),
 .stars--5 > .stars__star:nth-child(-n + 5) {
   background-image: url(../images/star-active.svg);
-  opacity: 0;
 }
-/* #endregion*/
