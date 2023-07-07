@@ -1,0 +1,26 @@
+.StarsContainer {
+  &-Stars {
+    display: flex;
+  }
+
+  &-Star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star-active.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+  }
+
+  &-Stars--0 &-Star:nth-child(n),
+  &-Stars--1 &-Star:nth-child(n + 2),
+  &-Stars--2 &-Star:nth-child(n + 3),
+  &-Stars--3 &-Star:nth-child(n + 4),
+  &-Stars--4 &-Star:nth-child(n + 5) {
+    background-image: url(../images/star.svg);
+  }
+}
