@@ -1,14 +1,16 @@
 /* #region generic */
 html {
-  font-family: 'Roboto', sans-serif;
-  --main-accent: #060B35;
+  font-family: "Roboto", sans-serif;
+  --main-accent: #060b35;
   --secondary: #616070;
+  --blue-accent: #00ACDC;
   font-style: normal;
 }
 
 body {
   margin: 0;
 }
+
 /* #endregion*/
 /* #region card */
 .card {
@@ -19,71 +21,69 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+
+  &-image {
+    width: 160px;
+    height: 134px;
+    flex-shrink: 0;
+
+    margin-top: 32px;
+  }
+
+  &-main-text {
+    color: var(--main-accent);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 166px;
+
+    margin-top: 40px;
+  }
+
+  &-subtitle-text {
+    align-self: flex-start;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    margin-top: 4px;
+    margin-left: 16px;
+    // margin-bottom: 0px;
+    text-align: left;
+  }
+
+  &-price-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &-price {
+    margin: 0 0 0 16px;
+
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &-price-num {
+    margin: 0 16px 0 0;
+
+    color: var(--main-accent);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
 }
 
-.card-image {
-  width: 160px;
-  height: 134px;
-  flex-shrink: 0;
-
-  margin-top: 32px;
-}
-
-.card-main-text {
-  color: var(--main-accent);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  width: 166px;
-
-  margin-top: 40px;
-  margin-bottom: 0px;
-}
-
-.card-subtitle-text {
-  align-self: flex-start;
-  color: var(--secondary);
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-
-  margin-top: 4px;
-  margin-left: 16px;
-  margin-bottom: 0px;
-  text-align: left;
-}
-
-.card-price-container {
-  display: flex; /* Display the container as flex */
-  justify-content: space-between; /* Position elements at the opposite sides */
-  width: 100%; /* Take up the full width of the container */
-  margin-top: 24px;
-}
-
-.card-price {
-  margin-top: 4px;
-  margin-left: 16px;
-
-  color: var(--secondary);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-.card-price-num {
-  margin-top: 4px;
-  margin-right: 16px;
-
-  color: var(--main-accent);
-  // text-align: right;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-}
 
 
 /* #endregion */
@@ -96,16 +96,28 @@ body {
 
   margin-top: 16px;
 }
+
 .stars {
   display: flex;
-}
 
-.stars__star {
-  background-image: url(../images/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
+  &__star {
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+
+  &-reviews {
+    display: flex;
+    color: var(--main-accent);
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    margin: 0;
+  }
 }
 
 .stars--1 :nth-child(1),
@@ -115,16 +127,31 @@ body {
 .stars--5 :nth-child(1n) {
   background-image: url(../images/star-active.svg);
 }
+/* #endregion */
+/* #region button */
+.card-button-buy {
+  margin-top: 16px;
+  margin-bottom: 17px;
 
-.stars-reviews {
-  display: flex;
-  color: var(--main-accent);
-  text-align: right;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
+  display: inline-block;
+  width: 166px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--blue-accent);
 
-  margin: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #FFF;
+    color: var(--blue-accent);
+    border: 1px solid var(--blue-accent);
+  }
 }
 /* #endregion */
-
