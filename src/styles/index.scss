@@ -1,3 +1,130 @@
+/* #region generic */
+html {
+  font-family: 'Roboto', sans-serif;
+  --main-accent: #060B35;
+  --secondary: #616070;
+  font-style: normal;
+}
+
 body {
   margin: 0;
 }
+/* #endregion*/
+/* #region card */
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.card-image {
+  width: 160px;
+  height: 134px;
+  flex-shrink: 0;
+
+  margin-top: 32px;
+}
+
+.card-main-text {
+  color: var(--main-accent);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 166px;
+
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.card-subtitle-text {
+  align-self: flex-start;
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+
+  margin-top: 4px;
+  margin-left: 16px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.card-price-container {
+  display: flex; /* Display the container as flex */
+  justify-content: space-between; /* Position elements at the opposite sides */
+  width: 100%; /* Take up the full width of the container */
+  margin-top: 24px;
+}
+
+.card-price {
+  margin-top: 4px;
+  margin-left: 16px;
+
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.card-price-num {
+  margin-top: 4px;
+  margin-right: 16px;
+
+  color: var(--main-accent);
+  // text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+
+/* #endregion */
+/* #region stars */
+.card-stars {
+  display: flex;
+  width: 166px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-top: 16px;
+}
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars--1 :nth-child(1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(1n) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars-reviews {
+  display: flex;
+  color: var(--main-accent);
+  text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+
+  margin: 0;
+}
+/* #endregion */
+
