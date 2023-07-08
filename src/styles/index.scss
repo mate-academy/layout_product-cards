@@ -6,19 +6,17 @@ $color-blue-accent: #00acdc;
 
 body {
   margin: 0;
-
   font-family: $body-font;
   font-size: $font-size;
 }
 
 .card {
   box-sizing: border-box;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-
   padding: 16px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,9 +39,7 @@ body {
   &__code {
     width: 100%;
     color: $color-secondary;
-
     padding-bottom: 16px;
-
     line-height: 14px;
   }
 
@@ -85,28 +81,24 @@ body {
 
   .card__buy-button {
     width: 100%;
-    height: 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 5px;
     background-color: $color-blue-accent;
     color: #fff;
-    
     font-size: $font-size + 4px;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
+    line-height: normal;
+    padding: 13px 0;
 
     &:hover {
       color: $color-blue-accent;
       background-color: #fff;
       border: 1px solid $color-blue-accent;
     }
-
-    text-decoration: none;
-    line-height: normal;
   }
 }
 
@@ -119,11 +111,9 @@ body {
   width: 16px;
   height: 16px;
   margin-right: 4px;
-
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
-
   display: flex;
   flex-wrap: wrap;
 }
