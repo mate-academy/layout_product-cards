@@ -1,29 +1,29 @@
 @import "../utilis/variables";
 
 .card {
-  max-width: 200px;
+  max-width: $card-max-width;
   width: 100%;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  border: $card-border;
+  border-radius: $border-radius;
   padding: 32px 16px 16px;
 
   &__image {
-    width: 160px;
-    height: 134px;
-    margin: 0 auto 36px 3px;
+    width: $image-width;
+    height: $image-height;
+    margin: $image-margin;
   }
 
   &__title {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
+    font-size: $title-font-size;
+    font-weight: $thinner-font-weight;
+    line-height: $bigger-line-height;
     color: $text-dark;
     margin: 0 0 4px;
   }
 
   &__code {
-    margin-bottom: 16px;
     color: $text-gray;
+    margin-bottom: 16px;
   }
 
   &__rating {
@@ -39,15 +39,15 @@
     margin-bottom: 16px;
 
     &-amount {
-      font-size: 16px;
-      line-height: 18px;
-      font-weight: 700;
+      font-size: $price-amount-font-size;
+      line-height: $bigger-line-height;
+      font-weight: $bolder-font-weight;
       color: $text-dark;
     }
 
     &-caption {
-      font-size: 12px;
-      line-height: 18px;
+      font-size: $price-caption-font-size;
+      line-height: $bigger-line-height;
       color: $text-gray;
     }
   }
@@ -56,12 +56,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: $link-font-size;
+    font-weight: $bolder-font-weight;
     color: $color-white;
     text-decoration: none;
-    border: 1px solid $color-blue;
-    border-radius: 5px;
+    text-transform: uppercase;
+    border: $link-border;
+    border-radius: $border-radius;
     background-color: $color-blue;
     padding: 12px;
 
