@@ -1,0 +1,74 @@
+@import "../utilis/variables";
+
+.card {
+  max-width: $card-max-width;
+  width: 100%;
+  border: $card-border;
+  border-radius: $border-radius;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+    margin: $image-margin;
+  }
+
+  &__title {
+    font-size: $title-font-size;
+    font-weight: $thinner-font-weight;
+    line-height: $bigger-line-height;
+    color: $text-dark;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    color: $text-gray;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-amount {
+      font-size: $price-amount-font-size;
+      line-height: $bigger-line-height;
+      font-weight: $bolder-font-weight;
+      color: $text-dark;
+    }
+
+    &-caption {
+      font-size: $price-caption-font-size;
+      line-height: $bigger-line-height;
+      color: $text-gray;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $link-font-size;
+    font-weight: $bolder-font-weight;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: $link-border;
+    border-radius: $border-radius;
+    background-color: $color-blue;
+    padding: 12px;
+
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+  }
+}
