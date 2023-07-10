@@ -1,14 +1,5 @@
-$background-size-h: 408px;
-$background-size-w: 200px;
-$blue-accent:  #00acdc;
-$button-h: 40px;
-$button-w: 166px;
-$border-radius: 5px;
-$star-size: 16px;
-$main-color:#060b35;
-$side-text-color: #616070;
-$light-color: #fff;
-$border-color: #f3f3f3;
+@import "./utils/_variables.scss";
+@import "./more_styles/stars.scss";
 
 *,
 *::before,
@@ -78,7 +69,6 @@ a {
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  // justify-content: flex-end;
 }
 
 .price {
@@ -133,27 +123,4 @@ a {
     color: #{$blue-accent};
     background-color: #{$light-color};
   }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    height: #{$star-size};
-    width: #{$star-size};
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-  }
-
-  &__star:not(:last-of-type) {
-    margin-right: 4px;
-  }
-}
-
-.stars--1 > .stars__star:nth-child(-n + 1),
-.stars--2 > .stars__star:nth-child(-n + 2),
-.stars--3 > .stars__star:nth-child(-n + 3),
-.stars--4 > .stars__star:nth-child(-n + 4),
-.stars--5 > .stars__star:nth-child(-n + 5) {
-  background-image: url(../images/star-active.svg);
 }
