@@ -1,6 +1,10 @@
 $main-color: #060b35;
 $secondary-color: #616070;
 $main-padding: 16px;
+$border-color: #f3f3f3;
+$main-color-for-style: #00acdc;
+$card-background-color: linear-gradient(0deg, #fff, #fff);
+$text-color-linksAndButtons: #fff;
 
 @mixin centered-flexbox {
   display: flex;
@@ -14,16 +18,15 @@ $main-padding: 16px;
   font-family: "Roboto", Helvetica, sans-serif;
 }
 
-
 .card {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
   max-width: 200px;
-  height: 408px;
-  border: 1px solid #f3f3f3;
+  padding-bottom: $main-padding;
+  border: 1px solid $border-color;
   border-radius: 5px;
-  background-color: linear-gradient(0deg, #fff, #fff);
+  background-color: $card-background-color;
 
   &__photo {
     width: 160px;
@@ -83,13 +86,13 @@ $main-padding: 16px;
   &__button {
     width: 166px;
     height: 40px;
-    background: #00acdc;
+    background: $main-color-for-style;
     margin: 0 auto;
     border-radius: 5px;
 
     &:hover {
-      background-color: #fff;
-      border: 1px solid #00acdc;
+      background-color: $text-color-linksAndButtons;
+      border: 1px solid $main-color-for-style;
     }
   }
 
@@ -97,14 +100,14 @@ $main-padding: 16px;
     display: block;
     text-align: center;
     line-height: 40px;
-    color: #fff;
+    color: $text-color-linksAndButtons;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
 
     &:hover {
-      color: #00acdc;
+      color: $main-color-for-style;
     }
   }
 }
@@ -132,6 +135,3 @@ $main-padding: 16px;
     }
   }
 }
-
-
-
