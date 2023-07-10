@@ -1,22 +1,7 @@
-$mainTxtColor: #060b35;
-$secondaryTxtColor: #616070;
-$cardMainCol: #fff;
-$cardBorder: #f3f3f3;
-$cardBtnColor: #00acdc;
-$gap: 16px;
-$mainFont: "Roboto", sans-serif;
-
-@mixin base($color, $borderCol) {
-  background-color: $color;
-  border: 1px solid $borderCol;
-  border-radius: 5px;
-}
-
-@mixin font($weight, $size, $line: $size) {
-  font-size: $size;
-  line-height: $line;
-  font-weight: $weight;
-}
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./partials/card.scss";
+@import "./partials/stars.scss";
 
 *,
 *::after,
@@ -25,93 +10,7 @@ $mainFont: "Roboto", sans-serif;
   margin: 0;
 }
 
-.card {
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
+body {
+  @include font(400, 10px, 14px);
   font-family: $mainFont;
-  color: $mainTxtColor;
-  padding: 32px $gap $gap;
-  @include base($cardMainCol, $cardBorder);
-
-  &__product-preview {
-    display: block;
-    width: 160px;
-    height: 134px;
-    margin: 0 auto 40px;
-  }
-
-  &__product-name {
-    @include font(500, 12px, 18px);
-    margin-bottom: 4px;
-  }
-
-  &__product-code {
-    @include font(400, 10px, 14px);
-    color: $secondaryTxtColor;
-    margin-bottom: $gap;
-  }
-
-  &__rates {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 24px;
-  }
-
-  &__reviews {
-    @include font(400, 10px, 14px);
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: $gap;
-
-    &-txt {
-      @include font(400, 12px, 18px);
-      color: $secondaryTxtColor;
-    }
-
-    &-value {
-      @include font(700, 16px, 18px);
-    }
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    color: $cardMainCol;
-    @include font(700, 14px);
-    @include base($cardBtnColor, $cardBtnColor);
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.3s all ease-in;
-
-    &:hover {
-      background-color: $cardMainCol;
-      color: $cardBtnColor;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: $gap;
-    height: $gap;
-    margin-right: 4px;
-  }
-
-  @for $i from 1 through 5 {
-    &--#{$i} &__star:nth-child(-n+#{$i}) {
-      background-image: url(../images/star-active.svg);
-    }
-  }
 }

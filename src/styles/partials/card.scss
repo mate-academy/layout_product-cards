@@ -1,0 +1,66 @@
+
+.card {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  color: $mainTxtColor;
+  padding: 32px $gap $gap;
+  @include base($cardMainCol, $cardBorder);
+
+  &__product-preview {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__product-name {
+    @include font(500, 12px, 18px);
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    color: $secondaryTxtColor;
+    margin-bottom: $gap;
+  }
+
+  &__rates {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $gap;
+
+    &-text {
+      @include font(400, 12px, 18px);
+      color: $secondaryTxtColor;
+    }
+
+    &-amount {
+      @include font(700, 16px, 18px);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: $cardMainCol;
+    @include font(700, 14px);
+    @include base($cardBtnColor, $cardBtnColor);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s all ease-in;
+
+    &:hover {
+      background-color: $cardMainCol;
+      color: $cardBtnColor;
+    }
+  }
+}
