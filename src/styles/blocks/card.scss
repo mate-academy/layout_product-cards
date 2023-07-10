@@ -1,0 +1,81 @@
+.card {
+  padding: 32px 16px 16px;
+  width: 200px;
+  background-color: $white-color;
+  border: 1px solid $lightgrey-color;
+  border-radius: 5px;
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $dark-card-text-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 40px auto 0;
+  }
+
+  &__code {
+    color: $light-card-text-color;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+    margin: 4px auto 0;
+  }
+
+  &__review {
+    @include contentFlexCenterSpaceBetween;
+
+    margin-top: 16px;
+  }
+
+  &__price {
+    @include contentFlexCenterSpaceBetween;
+
+    margin: 24px auto 0;
+  }
+
+  &__button {
+    @include contentFlexCenterCenter;
+
+    background-color: $button-color;
+    color: $white-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    margin-top: 16px;
+  }
+
+  &__button:hover {
+    color: $button-color;
+    border: 1px solid $button-color;
+    background-color: $white-color;
+  }
+}
+
+.price {
+  &__title {
+    color: $light-card-text-color;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__value {
+    color: $dark-card-text-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0;
+  }
+}
