@@ -1,0 +1,20 @@
+.card__stars {
+  display: flex;
+
+  &-item {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+    margin-right: 0;
+  }
+
+  &--1 .card__stars-item:nth-child(-n+1),
+  &--2 .card__stars-item:nth-child(-n+2),
+  &--3 .card__stars-item:nth-child(-n+3),
+  &--4 .card__stars-item:nth-child(-n+4),
+  &--5 .card__stars-item:nth-child(-n+5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
