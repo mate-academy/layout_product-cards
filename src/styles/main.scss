@@ -1,14 +1,4 @@
-$body-font: roboto, sans-serif;
-$main-accent-color: #060b35;
-$secondary-color: #616070;
-$blue-accent-color: #00acdc;
-$white: #fff;
-$concrete-color: #f3f3f3;
-
-body {
-  margin: 0;
-  font-family: $body-font;
-}
+@import "./index.scss";
 
 .card {
   display: flex;
@@ -134,14 +124,15 @@ body {
     background-position: 50%;
     height: 16px;
     width: 16px;
-    margin-right: 4px;
   }
 
   &__star:not(:last-of-type) {
     margin-right: 4px;
   }
-}
 
-.stars--4 .stars__star:nth-child(-n+4) {
-  background-image: url(./images/star-active.svg);
+    @for $i from 1 through 4 {
+      .stars__star:nth-child(-n + #{$i}) {
+    background-image: url(./images/star-active.svg);
+      }
+    }
 }
