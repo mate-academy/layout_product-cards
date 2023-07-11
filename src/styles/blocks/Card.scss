@@ -1,4 +1,4 @@
-.Card {
+.card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,13 +9,13 @@
   border-radius: 5px;
   padding: 32px 16px 16px;
 
-  &-Image {
+  &__image {
     width: 160px;
     height: 134px;
     display: block;
   }
 
-  &-ProductData {
+  &__product-data {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -23,33 +23,28 @@
     margin-top: 40px;
   }
 
-  &-DeviceName {
+  &__product-name {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     color: $main-text-color;
   }
 
-  &-DeviceCode {
+  &__product-code {
     font-size: 10px;
     line-height: 14px;
     color: $secondary-text-color;
     margin-top: 4px;
   }
 
-  &-StarsAndReviews,
-  &-Price {
-    margin-top: 16px;
+  &__stars-and-reviews,
+  &__price {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
 
-  &-Price {
-    margin-top: 24px;
-  }
-
-  &-Reviews {
+  &__reviews {
     font-size: 10px;
     line-height: 14px;
     display: flex;
@@ -58,34 +53,32 @@
     color: $main-text-color;
   }
 
-  &-PriceText {
+  &__price-text {
     font-size: 12px;
     line-height: 18px;
     color: $secondary-text-color;
   }
 
-  &-PriceValue {
-    font-weight: 700;
+  &__price-value {
     font-size: 16px;
     line-height: 18px;
     color: $main-text-color;
   }
 
-  &-BuyButton {
+  &__buy-button {
     width: 100%;
     height: 40px;
     background: $button-color;
     border-radius: 5px;
     border: 1px solid transparent;
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 14px;
+    font-weight: 700;
     line-height: 40px;
     color: hsl(0, 0%, 100%);
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-    margin-top: 16px;
 
     &:hover {
       background: hsl(0, 0%, 100%);
@@ -93,5 +86,14 @@
       border: 1px solid $button-color;
       line-height: 38px;
     }
+  }
+
+  &__stars-and-reviews--top-gap,
+  &__buy-button--top-gap {
+    margin-top: 16px;
+  }
+
+  &__price--top-gap {
+    margin-top: 24px;
   }
 }
