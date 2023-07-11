@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+.button {
+  background-color: $lightblue;
+  display: flex;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 16px;
+  justify-content: center;
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover,
+    .button:hover &__link {
+      color: $lightblue;
+    }
+  }
+
+  &:hover {
+    background-color: $whitesmoke;
+    border: 1px solid $lightblue;
+    .button__link {
+      color: $lightblue;
+    }
+  }
+}
