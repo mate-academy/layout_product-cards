@@ -1,0 +1,131 @@
+$blueColor: #00acdc;
+$whiteColor: white;
+$darkColor: #060b35;
+
+@mixin centerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: #616070;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  max-width: 200px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    height: 134px;
+    width: 160px;
+    margin: 0 auto 40px 3px;
+  }
+
+  &__description {
+    margin: 0 0 4px;
+    color: $darkColor;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__code {
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__review-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    color: $darkColor;
+    font-size: 10px;
+  }
+
+  &__buy-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price-value {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    @include centerText;
+
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__value {
+    @include centerText;
+
+    color: $darkColor;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid $blueColor;
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $blueColor;
+  }
+
+  &__buy:hover {
+    color: $blueColor;
+    background-color: #fff;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+
+  &__star {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+    background-image: url(../images/star.svg);
+  }
+}
