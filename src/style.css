@@ -35,7 +35,7 @@ body {
 
 .card__code {
   font-size: 10px;
-  color: #616070;
+  --card-color: #616070;
   margin: 4px 0 0;
 }
 
@@ -81,7 +81,7 @@ body {
 
 .price__text {
   font-size: 12px;
-  color: #616070;
+  color: var(--card-color);
 }
 
 .price__amount {
@@ -93,8 +93,8 @@ body {
   display: block;
   text-decoration: none;
   text-align: center;
-  background-color: #00acdc;
-  color: #fff;
+  --button-background-color: #00acdc;
+  --white-color: #fff;
   border-radius: 5px;
   width: 166px;
   height: 40px;
@@ -106,8 +106,8 @@ body {
 }
 
 .buy:hover {
-  color: #00acdc;
-  background-color: #fff;
+  color: var(--button-background-color);
+  background-color: var(--white-color);
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--button-background-color);
 }
