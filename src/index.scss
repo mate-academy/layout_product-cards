@@ -1,12 +1,9 @@
+@import "variables";
+
 * {
   margin: 0;
   padding: 0;
 }
-
-$grey-color: #616070;
-$blue-color: #00acdc;
-$white-color: #fff;
-$dark-color: #060b35;
 
 :root {
   font-family: "Roboto", sans-serif;
@@ -14,25 +11,26 @@ $dark-color: #060b35;
 
 .card {
   display: flex;
-  flex-direction: column;
-  width: 198px;
-  height: 406px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
   background-color: $white-color;
-  margin: 0;
+  border: 1px solid $darker-white;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  padding: 16px;
 
   &__img {
+    justify-content: center;
     width: 160px;
     height: 134px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    margin: 32px 19px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
   }
 
   &__title {
-    margin: 40px 16px 0;
+    margin-top: 40px;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
@@ -44,58 +42,64 @@ $dark-color: #060b35;
     font-size: 10px;
     line-height: 14px;
     color: $grey-color;
-    margin: 4px 84px 0 16px;
+    margin-top: 4px;
   }
 
   .stars {
-    margin: 16px 16px 0;
     display: flex;
-    justify-content: space-between;
+    margin-top: 16px;
 
-    &__list {
-      display: flex;
-    }
-
-    &__list-item {
-      background-image: url(./images/star.svg);
-      background-position: 50%;
-      background-repeat: no-repeat;
+    &__item {
       width: 16px;
       height: 16px;
-      list-style: none;
-      margin-right: 4px;
+      background-image: url(./images/star.svg);
+      background-repeat: no-repeat;
+      background-position: 50%;
     }
 
-    &__list :nth-child(-n+4) {
+    & > :last-child {
+      margin-right: 0;
+    }
+
+    &--1 > :nth-child(-n+1),
+    &--2 > :nth-child(-n+2),
+    &--3 > :nth-child(-n+3),
+    &--4 > :nth-child(-n+4),
+    &--5 > :nth-child(-n+5) {
       background-image: url(./images/star-active.svg);
     }
 
+    &__item:not(:last-child) {
+      margin-right: 4px;
+    }
+
     &__reviews {
+      display: flex;
       font-size: 10px;
       font-style: normal;
+      margin-left: auto;
       font-weight: 400;
-      align-self: center;
       color: $dark-color;
     }
   }
 
-  &__price {
-    margin: 24px 0 0 16px;
-    justify-self: left;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    color: $grey-color;
-  }
-
   &__price-container {
     display: flex;
+    margin-top: 24px;
     justify-content: space-between;
   }
 
+  &__price {
+    display: flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    color: $grey-color;
+    line-height: 18px;
+  }
+
   &__price-amount {
-    margin: 24px 16px 0 0;
+    display: flex;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
@@ -103,8 +107,8 @@ $dark-color: #060b35;
 
   &__button {
     display: flex;
-    width: 164px;
-    height: 39px;
+    width: 166px;
+    height: 40px;
     border-radius: 5px;
     font-weight: 700;
     font-size: 14px;
@@ -112,7 +116,7 @@ $dark-color: #060b35;
     color: $white-color;
     background-color: $blue-color;
     border: none;
-    margin: 16px 16px 0;
+    margin-top: 16px;
     justify-content: center;
     align-items: center;
 
