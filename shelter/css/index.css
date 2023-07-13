@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  line-height: 18px;
+  color: #060b35;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(194, 194, 194);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 18px 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+}
+
+.card__img {
+  width: 161px;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.card__title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card__subtitle {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.card__grade-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__review {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__price-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-cost {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/star.svg");
+}
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-1n+2),
+.stars--3 .stars__star:nth-child(-1n+3),
+.stars--4 .stars__star:not(:last-child),
+.stars--5 .stars__star:nth-child(n) {
+  background-image: url("../images/star-active.svg");
+}
+
+.card-button {
+  display: block;
+  border-radius: 5px;
+  background-color: #00acdc;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
+}
+
+.card-button:hover {
+  background-color: transparent;
+  color: #00acdc;
+  border-color: #00acdc;
+}
