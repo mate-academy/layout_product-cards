@@ -4,6 +4,7 @@ html {
 }
 
 :root {
+  --outer-alignment: #f3f3f3;
   --main-accent: #060b35;
   --secondary: #616070;
   --white: #fff;
@@ -21,8 +22,8 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   width: 200px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
+  background: var(--white);
+  border: 1px solid var(--outer-alignment);
   border-radius: 5px;
 
   &__image {
@@ -49,8 +50,7 @@ body {
   &__code {
     width: 98px;
     height: 14px;
-    margin-top: 0;
-    margin-bottom: 16px;
+    margin: 0 0 16px;
     color: var(--secondary);
     font-size: 10px;
 
@@ -64,8 +64,7 @@ body {
     flex-direction: row;
     height: 16px;
     justify-content: space-between;
-    margin-left: 0;
-    margin-bottom: 24px;
+    margin: 0 0 24px;
   }
 
   &__review-text {
@@ -77,7 +76,7 @@ body {
     text-align: center;
     font-weight: 400;
     font-size: 10px;
-    color: #060b35;
+    color: var(--main-accent);
 
   }
 
@@ -97,7 +96,7 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: #616070;
+    color: var(--secondary);
   }
 
   &__price {
@@ -125,11 +124,11 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-}
 
-.link:hover {
-  background: var(--white);
-  border-radius: 5px;
-  border: 1px solid var(--Blue-accent);
-  color: var(--Blue-accent);
+  &:hover {
+    background: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--Blue-accent);
+    color: var(--Blue-accent);
+  }
 }
