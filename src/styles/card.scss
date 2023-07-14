@@ -1,6 +1,7 @@
 @import "utils/variables";
 
 .card {
+  padding: 32px $md-pad $md-pad;
   width: 200px;
   border-radius: 5px;
   border: 1px solid $grey;
@@ -21,7 +22,6 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-
     margin-bottom: 4px;
   }
 
@@ -31,8 +31,18 @@
     margin-bottom: 16px;
   }
 
+  &__rating {
+    margin-bottom: 24px;
+    @include createFlexСentering;
+  }
+
+  &__reviews {
+    font-size: 10px;
+  }
+
   &__price {
     margin-bottom: 16px;
+    @include createFlexСentering;
   }
 
   &__text {
@@ -49,7 +59,8 @@
 
   &__button {
     display: block;
-    padding: 11px 69px 11px 68px;
+    padding: 11px;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid transparent;
     background-color: $blue-primary;
@@ -66,17 +77,4 @@
       background-color: $white;
     }
   }
-}
-
-.reviews {
-  margin-bottom: 24px;
-
-  &__text {
-    font-size: 10px;
-  }
-}
-
-.card__price,
-.reviews {
-  @include createFlexСentering;
 }
