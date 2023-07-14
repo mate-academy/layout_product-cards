@@ -1,3 +1,132 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+.stars-line {
+  display: flex;
+}
+
+.stars-line__star {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+
+  &--inactive {
+    background-image: url("../images/star.svg");
+  }
+
+  &--active {
+    background-image: url("../images/star-active.svg");
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+    color: #060b35;
+  }
+
+  &__code {
+    color: #616070;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 16px;
+    width: 166px;
+
+    .count {
+      text-align: right;
+      font-size: 10px;
+      font-style: normal;
+      color: #060b35;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    margin-top: 24px;
+    width: 166px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 16px;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    background: #00acdc;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    text-align: center;
+  }
+
+  &__button:hover {
+    border-radius: 5px;
+    border-color: #00acdc;
+    background: #fff;
+    color: #00acdc;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__text {
+    color: #616070;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    color: #060b35;
+  }
 }
