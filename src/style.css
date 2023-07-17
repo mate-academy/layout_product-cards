@@ -26,6 +26,10 @@ body {
   margin-left: 19px;
 }
 
+h2 {
+  all: unset;
+}
+
 .card__product {
   color: #060b35;
   width: 166px;
@@ -63,6 +67,7 @@ body {
 .stars {
   display: flex;
   width: 96px;
+  margin-left: 4px;
 }
 
 .stars__star {
@@ -74,7 +79,11 @@ body {
   margin-right: 4px;
 }
 
-.stars--4 .stars__star:nth-child(-n +4) {
+.stars--1 .stars__star:nth-child(-n +1),
+.stars--2 .stars__star:nth-child(-n +2),
+.stars--3 .stars__star:nth-child(-n +3),
+.stars--4 .stars__star:nth-child(-n +4),
+.stars--5 .stars__star:nth-child(-n +5) {
   background-image: url(images/star-active.svg);
 }
 
