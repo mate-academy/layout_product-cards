@@ -1,3 +1,126 @@
+$primary-color: #060b35;
+$secondary-color: #616070;
+$button-color: #00acdc;
+$number-of-stars: 4;
+$card-elements-width: 166px;
+
 body {
   margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  color: $primary-color;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  padding: 32px 16px 16px;
+  width: 200px;
+  height: 406px;
+  border-radius: 5px;
+
+  &__photo {
+    background-image: url(../images/imac.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    width: $card-elements-width;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__code {
+    color: $secondary-color;
+    line-height: 14px;
+    margin: 0 0 16px;
+    width: $card-elements-width;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $card-elements-width;
+    margin-bottom: 24px;
+  }
+
+  &__number-of-reviews {
+    line-height: 14px;
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $card-elements-width;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    color: $secondary-color;
+    margin: 0;
+  }
+
+  &__price-number {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  &__buy {
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: $button-color;
+    width: $card-elements-width;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $button-color;
+      color: $button-color;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(../images/star-active.svg);
 }
