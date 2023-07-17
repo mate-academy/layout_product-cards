@@ -1,0 +1,98 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+
+    margin: 16px 3px 36px;
+  }
+
+  &__title {
+    color: $color-main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+
+    @include marginTop;
+    margin-bottom: 4px;
+  }
+
+  &__sub-title {
+    color: $color-secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+
+    @include marginTop;
+    margin-bottom: 16px;
+  }
+
+  &__marks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    color: $color-main-accent;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+
+    @include marginTop;
+    margin-bottom: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+  }
+
+  &__lable {
+    color: $color-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+  }
+
+  &__amount {
+    color: $color-main-accent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px; /* 112.5% */
+  }
+
+  &__button {
+    display: block;
+    background-color: $color-button-accent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 70px;
+    border-radius: 5px;
+  }
+
+  &__button:hover {
+    background-color: #fff;
+    color: $color-button-accent;
+    border: 1px solid $color-button-accent;
+  }
+}
