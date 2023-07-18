@@ -1,3 +1,121 @@
-body {
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+$grey: #616070;
+$blue-accent: #00acdc;
+$main-accent: #060b35;
+$white: #fff;
+
+* {
+  font-family: "Roboto", sans-serif;
   margin: 0;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.card {
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $white;
+  display: flex;
+  box-sizing: border-box;
+  width: 200px;
+  flex-direction: column;
+
+  &__imac-icon {
+    height: 134px;
+    width: 160px;
+    padding: 32px 19px 40px;
+  }
+
+  &__info {
+    padding: 0 16px 16px;
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    color: $grey;
+    line-height: 14px; /* 140% */
+  }
+
+  &__review {
+    @include flex-space;
+    margin-top: 16px;
+  }
+
+  &__count {
+    color: $main-accent;
+    line-height: 14px; /* 140% */
+  }
+
+  &__block-price {
+    @include flex-space;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    color: $grey;
+    font-size: 12px;
+    line-height: 18px; /* 150% */
+  }
+
+  &__ammount {
+    color: $grey;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__buy {
+    height: 40px;
+    border-radius: 5px;
+    background: $blue-accent;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    display: block;
+
+    &:hover {
+      border: 1px solid $blue-accent;
+      background: $white;
+      color: $blue-accent;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} > div:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
