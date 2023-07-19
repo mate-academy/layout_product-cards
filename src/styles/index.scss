@@ -1,3 +1,143 @@
+:root {
+  --main-accent: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__img {
+    margin: 32px 19px 40px;
+    width: 160px;
+    height: 134px;
+    flex-shrink: 0;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px 16px;
+  }
+
+  &__title {
+    color: var(--main-accent);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+    padding: 0;
+  }
+
+  &__code {
+    color: var(--secondary);
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__rate {
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    margin-left: 17px;
+    margin-right: 17px;
+    padding: 0;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 2px;
+}
+
+.stars-star {
+  margin-top: 2px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  width: 12px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: url(../images/star-active.svg);
+}
+
+.stars-star:last-child {
+  margin-right: 0;
+  background-image: url(../images/star.svg);
+}
+
+.description {
+  color: var(--main-accent);
+  text-align: right;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.title {
+  color: var(--secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.value {
+  color: var(--main-accent);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.buy:link {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: var(--blue-accent);
+  padding: 12px 70px 12px 69px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.buy:visited {
+  color: #fff;
+}
+
+.buy:hover {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  box-sizing: border-box;
+  border: 1px solid var(--blue-accent);
+  background: #fff;
+  color: var(--blue-accent);
 }
