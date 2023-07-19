@@ -1,3 +1,149 @@
+@import "reset.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap");
+
+$dark-color: #060b35;
+$grey-color: #616070;
+$white-color: #fff;
+$blue-color: #00acdc;
+
 body {
-  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: $dark-color;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.card {
+  display: grid;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background-color: $white-color;
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  &__image-wrapper {
+    padding-left: 3px;
+    padding-right: 3px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__image {
+    display: block;
+    position: relative;
+    width: 160px;
+    padding-bottom: 83.75%; /* 134/160 */
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__code {
+    color: $grey-color;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__rewievs {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__prices {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $blue-color;
+    color: $white-color;
+    transition: all 0.4s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $blue-color;
+        background-color: $white-color;
+        border: 1px solid $blue-color;
+      }
+    }
+  }
+}
+
+.rewievs-card {
+  &__stars {
+    display: flex;
+    @for $i from 1 through 5 {
+      &--#{$i} > :nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+
+  &__star {
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) center/contain no-repeat;
+  }
+
+  &__rewiev {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+.prices-card {
+  &__text {
+    color: $grey-color;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px; /* 18/16 */
+  }
 }
