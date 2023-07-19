@@ -1,3 +1,117 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+$blackColor: #060b35;
+$greyColor: #616070;
+$blueColor: #00acdc;
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px ;
+  }
+
+  &__name {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $blackColor;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $greyColor;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    color: $blackColor;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    line-height: 18px;
+
+    &-text {
+      color: $greyColor;
+      font-size: 12px;
+      font-weight: 400;
+
+    }
+
+    &-amount {
+      color: $blackColor;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 16px;
+    background-color: $blueColor;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid $blueColor;
+
+    &:hover {
+      color: $blueColor;
+      background-color: #fff;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__item {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} > :nth-child(-n+#{$i}) {
+      background-image: url("../images/star-active.svg");
+    }
+  }
+
 }
