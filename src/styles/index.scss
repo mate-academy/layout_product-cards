@@ -1,3 +1,135 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --header-fs: 12px;
+  --subheader-fs: 10px;
+  --link-color: #00acdc;
+  --link-height: 40px;
+  --link-fs: 14px;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+
+  &__img {
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  &__product {
+    padding: 0 16px;
+  }
+
+  &__header {
+    margin-top: 40px;
+    color: var(--main-color);
+    font-size: var(--header-fs);
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__subheader {
+    margin-top: 4px;
+    font-size: var(--subheader-fs);
+    font-weight: 400;
+    line-height: 14px;
+    color: var(--secondary-color);
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__review {
+    color: var(--main-color);
+    font-size: var(--subheader-fs);
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      color: var(--secondary-color);
+      font-size: var(--header-fs);
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-cost {
+      color: var(--main-color);
+      font-style: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    width: 100%;
+    border-radius: 5px;
+    height: var(--link-height);
+    border: none;
+    background-color: var(--link-color);
+    color: #fff;
+    font-size: var(--link-fs);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+  }
+
+  &__link:hover {
+    border: 1px solid var(--link-color);
+    background-color: #fff;
+    color: var(--link-color);
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: start;
+
+  &__star {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__star--noMargin {
+    margin-left: 0;
+  }
+
+  &-noActive {
+    background-image: url(../images/star.svg);
+  }
+
+  &-active {
+    background-image: url(../images/star-active.svg);
+  }
 }
