@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://yuliiaant.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://yuliiaant.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
 ___
@@ -33,7 +33,8 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
-- If you use SCSS, check `background-image: url()` to be relative to the `main.scss`. So should start with `../images`.
+- If you use SCSS, check `background-image: url()` to be relative
+to the `main.scss`. So should start with `../images`.
 - Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
 and keep it operational. If you change `stars--4` modifier to `stars--2` or
 other - number of selected stars should change correctly.
