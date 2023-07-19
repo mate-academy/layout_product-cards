@@ -12,8 +12,11 @@
   &:first-child {
     margin-left: 0;
   }
-
-  &--active {
+  .stars--5 &,
+  .stars--1 &:first-of-type,
+  .stars--2 &:nth-of-type(-n + 2),
+  .stars--3 &:nth-of-type(-n + 3),
+  .stars--4 &:nth-of-type(-n + 4) {
     background-image: url(../images/star-active.svg);
   }
 }
