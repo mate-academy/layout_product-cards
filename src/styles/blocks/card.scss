@@ -1,3 +1,108 @@
 $cardWidth: 200px;
-$cardFontColor: #060b35;
-$cardButtonColor: #00acdc;
+$buttonHeight: 40px;
+$cardLargeTextColor: #060b35;
+$cardSmallTextColor: #616070;
+$cardBorderColor: #f3f3f3;
+$buttonColor: #00acdc;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--product {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid $cardBorderColor;
+    border-radius: 5px;
+  }
+
+  &__image {
+    align-self: center;
+    width: 160px;
+    height: 134px;
+    margin: 16px 0 40px;
+    background-size: cover;
+  }
+
+  &__description {
+    height: 36px;
+    width: 100%;
+    margin: 0 0 4px;
+    text-align: left;
+    color: $cardLargeTextColor;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    object-fit: contain;
+  }
+
+  &__product-code {
+    align-self: flex-start;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    color: $cardSmallTextColor;
+    margin: 0 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: $cardLargeTextColor;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $cardSmallTextColor;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      color: $cardLargeTextColor;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    height: $buttonHeight;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: $buttonHeight;
+    background-color: $buttonColor;
+    border-radius: 5px;
+
+    &:hover {
+      color: $buttonColor;
+      background-color: #fff;
+      border: 1px solid $buttonColor;
+    }
+  }
+}

@@ -1,19 +1,23 @@
+$starsWidth: 96px;
 $notActiveStar: url(../images/star.svg);
 $activeStar: url(../images/star-active.svg);
 
-.stars {
+.stars--content {
+  width: $starsWidth;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  &__star {
-    margin: 0;
-    padding: 0;
-    height: 16px;
-    width: 16px;
-    background-image: $notActiveStar;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 4px;
-  }
+.stars__star {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  background-image: $notActiveStar;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .stars--1 > :first-child,
