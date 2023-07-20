@@ -1,0 +1,81 @@
+.card {
+  box-sizing: border-box;
+
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__img {
+    max-width: 100%;
+    width: 160px;
+    height: 134px;
+    padding-top: 32px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+    color: $main-color;
+  }
+
+  &__description {
+    line-height: 14px;
+    color: $dark-color;
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    @include flexProperty;
+
+    color: $main-color;
+    margin-bottom: 23px;
+  }
+
+  &__price {
+    @include flexProperty;
+
+    font-size: 12px;
+    font-weight: 400;
+    color: $dark-color;
+    margin-bottom: 16px;
+  }
+
+  &__sum {
+    font-size: 16px;
+    font-weight: 700;
+    color: $main-color;
+  }
+
+  &__buy {
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: $light-color;
+    background-color: $main-input-color;
+    border: 1px solid $main-input-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    transition: background-color 0.5s;
+
+    &:hover {
+      color: $main-input-color;
+      background-color: $light-color;
+    }
+  }
+
+  &__stars {
+    display: flex;
+  }
+}
