@@ -1,17 +1,17 @@
 .card {
-  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+
+  border: 1px solid $border-color;
   border-radius: 5px;
   width: 200px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 16px;
 
   &__img {
     max-width: 100%;
     width: 160px;
-    max-height: 100%;
-    height: 166px;
+    height: 134px;
     padding-top: 32px;
     margin: 0 auto;
     margin-bottom: 40px;
@@ -22,46 +22,44 @@
     font-weight: 500;
     line-height: 18px;
     margin-bottom: 4px;
-    color: var(--main-color);
+    color: $main-color;
   }
 
   &__description {
-    font-size: 10px;
     line-height: 14px;
-    color: var(--dark-color);
+    color: $dark-color;
     margin-bottom: 16px;
   }
 
   &__reviews {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexProperty;
+
+    color: $main-color;
     margin-bottom: 23px;
   }
 
   &__price {
+    @include flexProperty;
+
     font-size: 12px;
     font-weight: 400;
-    color: var(--main-color);
-    display: flex;
-    justify-content: space-between;
+    color: $dark-color;
     margin-bottom: 16px;
-    align-items: center;
   }
 
   &__sum {
     font-size: 16px;
     font-weight: 700;
-    color: var(--main-dark-color);
+    color: $main-color;
   }
 
   &__buy {
     display: block;
     margin-bottom: 16px;
     text-decoration: none;
-    color: var(--light-color);
-    background-color: var(--main-input-color);
-    border: 1px solid var(--main-input-color);
+    color: $light-color;
+    background-color: $main-input-color;
+    border: 1px solid $main-input-color;
     border-radius: 5px;
     text-transform: uppercase;
     padding: 11px;
@@ -72,17 +70,12 @@
     transition: background-color 0.5s;
 
     &:hover {
-      color: var(--main-input-color);
-      background-color: var(--light-color);
+      color: $main-input-color;
+      background-color: $light-color;
     }
   }
 
   &__stars {
     display: flex;
   }
-}
-
-.card__reviews span {
-  font-size: 10px;
-  color: var(--main-dark-color);
 }
