@@ -1,3 +1,127 @@
-body {
+$mainColor: #060b35;
+$secondaryColor: #616070;
+$buttonColor: #00acdc;
+$borderColor: #f3f3f3;
+$fontFamily: "Roboto", sans-serif;
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  font-family: $fontFamily;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid $borderColor;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $mainColor;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondaryColor;
+    margin-bottom: 16px;
+  }
+
+  &__review-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $mainColor;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $secondaryColor;
+  }
+
+  &__price-cost {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $mainColor;
+  }
+
+  &__button {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $buttonColor;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    border-radius: 5px;
+    height: 40px;
+    width: 166px;
+    border: 1px solid $buttonColor;
+
+    &:hover {
+      color: $buttonColor;
+      background-color: #fff;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} > :nth-child(-n+#{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
