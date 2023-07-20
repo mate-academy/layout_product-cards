@@ -123,7 +123,13 @@ body {
       margin-right: 0;
     }
 
-    &--active {
+    &__star:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} > :nth-child(-n + #{$i}) {
       background-image: url(../images/star-active.svg);
     }
   }
