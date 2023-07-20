@@ -1,3 +1,138 @@
+$titleTextColor: #060b35;
+$underTitleTextColor: #616070;
+$buttonTextColor: #00acdc;
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+
+  &__top {
+    &-image {
+      margin-left: 3px;
+      margin-top: 32px;
+      width: 160px;
+      height: 134px;
+    }
+
+    &-title {
+      margin-top: 36px;
+      width: 166px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $titleTextColor;
+    }
+
+    &-product-code {
+      margin-top: 4px;
+      display: flex;
+      justify-self: flex-start;
+      width: 98px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $underTitleTextColor;
+    }
+  }
+
+  &__review {
+    margin-top: 16px;
+    width: 166px;
+    display: flex;
+    justify-content: space-between;
+
+    &-count {
+      width: 53px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+      color: $titleTextColor;
+    }
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $underTitleTextColor;
+
+    }
+
+    &-count {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $titleTextColor;
+    }
+
+  }
+
+  &__button {
+
+    &-buy {
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+
+      color: #fff;
+      text-decoration: none;
+      box-sizing: border-box;
+      width: 166px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $buttonTextColor;
+      border-radius: 5px;
+
+      &:hover {
+        background: #fff;
+        color: $buttonTextColor;
+        border: 1px solid $buttonTextColor;
+      }
+    }
+  }
+
+  .stars {
+    display: flex;
+    margin-left: 4px;
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      background: url(../images/star.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+    }
+  }
 }
