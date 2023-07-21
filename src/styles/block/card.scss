@@ -1,6 +1,5 @@
 
 .card {
-  box-sizing: border-box;
   max-width: 200px;
   display: flex;
   flex-direction: column;
@@ -35,7 +34,6 @@
   &__link {
     padding: 12px 0;
     text-align: center;
-    border: none;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -43,13 +41,13 @@
     color: #fff;
     background-color: $tertiary-color;
     border-radius: 5px;
+    border: 1px solid transparent;
     @include text-bold;
 
     &:hover {
-      box-sizing: border-box;
       background-color: $quaternary-color;
       color: $tertiary-color;
-      border: 1px solid $tertiary-color;
+      border-color: $tertiary-color;
     }
   }
 }
