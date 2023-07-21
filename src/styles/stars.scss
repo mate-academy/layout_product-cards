@@ -9,11 +9,11 @@
     background: url(../images/star.svg);
     background-repeat: no-repeat;
   }
-}
 
-@for $i from 1 through 5 {
-  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background: url(../images/star-active.svg);
-    background-repeat: no-repeat;
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
+      background: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+    }
   }
 }
