@@ -1,23 +1,23 @@
+$hoverBlueColor: #00acdc;
+$hoverWhiteColor: #fff;
+
 body {
   margin: 0;
-  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .card {
-  padding: 31px 0 15px;
-  $blue-accent: #00acdc;
-  $white-accent: #fff;
+  padding: 32px 0 16px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
   width: 198px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  background: $white-accent;
+  background: #fff;
   color: #060b35;
 
   &__image {
@@ -30,11 +30,6 @@ body {
     margin-bottom: 40px;
   }
 
-  &__describe {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__title {
     margin: 0 0 4px;
     width: 166px;
@@ -44,9 +39,9 @@ body {
   }
 
   &__subtitle {
+    margin: 0 0 16px;
     color: #616070;
     width: 166px;
-    margin-bottom: 16px;
   }
 
   &__stars {
@@ -67,7 +62,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   &__info-price {
@@ -86,29 +81,30 @@ body {
     height: 40px;
     width: 166px;
     text-align: center;
-    background-color: $blue-accent;
-    border-radius: 6px;
-    border: 1px solid $white-accent;
+    background-color: $hoverBlueColor;
+    border-radius: 5px;
+    border: 1px solid $hoverBlueColor;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: $white-accent;
+    color: $hoverWhiteColor;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 37px;
     font-weight: 700;
     box-sizing: border-box;
 
     &:hover {
-      background-color: $white-accent;
-      color: $blue-accent;
+      background-color: $hoverWhiteColor;
+      color: $hoverBlueColor;
     }
   }
 }
 
 .stars {
   display: flex;
+  margin: 0;
+  padding: 0;
 
   &__star {
     margin-right: 4px;
@@ -117,6 +113,7 @@ body {
     background: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
+    list-style: none;
   }
 
   & :last-child {
