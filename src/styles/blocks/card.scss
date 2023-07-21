@@ -1,0 +1,101 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--product {
+    box-sizing: border-box;
+    width: $card-width;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid $card-border-color;
+    border-radius: 5px;
+  }
+
+  &__image {
+    align-self: center;
+    width: 160px;
+    height: 134px;
+    margin: 16px 0 40px;
+    background-size: cover;
+  }
+
+  &__description {
+    height: 36px;
+    width: 100%;
+    margin: 0 0 4px;
+    text-align: left;
+    color: $card-large-text-color;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    object-fit: contain;
+  }
+
+  &__product-code {
+    align-self: flex-start;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    color: $card-small-text-color;
+    margin: 0 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: $card-large-text-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $card-small-text-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      color: $card-large-text-color;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    height: $button-height;
+    color: $button-hover-color;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: $button-height;
+    background-color: $button-color;
+    border-radius: 5px;
+
+    &:hover {
+      color: $button-color;
+      background-color: $button-hover-color;
+      border: 1px solid $button-color;
+    }
+  }
+}

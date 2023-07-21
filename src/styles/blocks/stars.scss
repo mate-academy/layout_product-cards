@@ -1,0 +1,25 @@
+.stars {
+  width: $stars-width;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__star {
+    display: flex;
+    height: 16px;
+    width: 16px;
+    background-image: $not-active-star-image;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars--1 > :first-child,
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
+  background-image: $active-star-image;
+}
