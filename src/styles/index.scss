@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./stars.scss";
 
 div,
 a,
@@ -105,23 +106,4 @@ body {
       background-color: #fff;
     }
   }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    background-image: url("../images/star.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
-
-  @for $i from 1 through 5 {
-    &--#{$i} &__star:nth-child(-n+#{$i}) {
-      background: url(../images/star-active.svg) no-repeat center;
-    }
-  }
-
 }
