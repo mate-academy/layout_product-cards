@@ -1,16 +1,27 @@
-.star {
+.stars {
   display: flex;
-  width: 96px;
-  height: 16px;
+  justify-content: left;
+  align-items: center;
+  margin-left: 16px;
 
-  height: 16px;
-  padding: 16px 16px 24px;
-  // background-size: cover;
-  // background-position: center;
-  // justify-content: space-between;
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
 
-  &___review {
-    display: inline-block;
+    background-image: url(../images/star.svg);
+  }
+
+  &--1 :nth-child(-n+4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.review {
+    display: flex;
+    margin-right: 16px;
 
     font-size: 10px;
     font-style: normal;
@@ -18,5 +29,8 @@
     line-height: 14px;
     color: #060B35;
   }
-}
 
+.line_up {
+  display: flex;
+  justify-content: space-between;
+}
