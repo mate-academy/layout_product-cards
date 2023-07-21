@@ -1,10 +1,3 @@
-$cardWidth: 200px;
-$buttonHeight: 40px;
-$cardLargeTextColor: #060b35;
-$cardSmallTextColor: #616070;
-$cardBorderColor: #f3f3f3;
-$buttonColor: #00acdc;
-
 .card {
   display: flex;
   flex-direction: column;
@@ -12,10 +5,10 @@ $buttonColor: #00acdc;
 
   &--product {
     box-sizing: border-box;
-    width: 200px;
+    width: $card-width;
     padding: 16px;
     text-align: center;
-    border: 1px solid $cardBorderColor;
+    border: 1px solid $card-border-color;
     border-radius: 5px;
   }
 
@@ -32,7 +25,7 @@ $buttonColor: #00acdc;
     width: 100%;
     margin: 0 0 4px;
     text-align: left;
-    color: $cardLargeTextColor;
+    color: $card-large-text-color;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -46,7 +39,7 @@ $buttonColor: #00acdc;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
-    color: $cardSmallTextColor;
+    color: $card-small-text-color;
     margin: 0 0 16px;
   }
 
@@ -61,7 +54,7 @@ $buttonColor: #00acdc;
   &__reviews {
     font-size: 10px;
     line-height: 14px;
-    color: $cardLargeTextColor;
+    color: $card-large-text-color;
   }
 
   &__price {
@@ -72,7 +65,7 @@ $buttonColor: #00acdc;
     &-text {
       font-size: 12px;
       line-height: 18px;
-      color: $cardSmallTextColor;
+      color: $card-small-text-color;
     }
 
     &-value {
@@ -80,7 +73,7 @@ $buttonColor: #00acdc;
       font-style: normal;
       font-weight: 700;
       line-height: 18px;
-      color: $cardLargeTextColor;
+      color: $card-large-text-color;
     }
   }
 
@@ -90,19 +83,19 @@ $buttonColor: #00acdc;
     padding: 0;
     display: inline-block;
     box-sizing: border-box;
-    height: $buttonHeight;
-    color: #fff;
+    height: $button-height;
+    color: $button-hover-color;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-    line-height: $buttonHeight;
-    background-color: $buttonColor;
+    line-height: $button-height;
+    background-color: $button-color;
     border-radius: 5px;
 
     &:hover {
-      color: $buttonColor;
-      background-color: #fff;
-      border: 1px solid $buttonColor;
+      color: $button-color;
+      background-color: $button-hover-color;
+      border: 1px solid $button-color;
     }
   }
 }

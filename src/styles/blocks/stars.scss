@@ -1,23 +1,19 @@
-$starsWidth: 96px;
-$notActiveStar: url(../images/star.svg);
-$activeStar: url(../images/star-active.svg);
-
-.stars--content {
-  width: $starsWidth;
+.stars {
+  width: $stars-width;
   display: flex;
   justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
-}
 
-.stars__star {
-  display: flex;
-  height: 16px;
-  width: 16px;
-  background-image: $notActiveStar;
-  background-repeat: no-repeat;
-  background-position: center;
+  &__star {
+    display: flex;
+    height: 16px;
+    width: 16px;
+    background-image: $not-active-star-image;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .stars--1 > :first-child,
@@ -25,5 +21,5 @@ $activeStar: url(../images/star-active.svg);
 .stars--3 > :nth-child(-n + 3),
 .stars--4 > :nth-child(-n + 4),
 .stars--5 > :nth-child(-n + 5) {
-  background-image: $activeStar;
+  background-image: $active-star-image;
 }
