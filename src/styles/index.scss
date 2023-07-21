@@ -1,18 +1,7 @@
-$mainColor: #060b35;
-$secondColor: #616070;
-$buttonColor: #00acdc;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: $mainColor;
-}
+@import "./utils/variables";
+@import "./utils/normalize";
+@import "./utils/reset";
+@import "./star.scss";
 
 .product-card {
   width: 200px;
@@ -98,28 +87,4 @@ html {
 
     }
   }
-}
-
-.stars {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  &__item {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-  }
-
-  @for $i from 1 through 5 {
-    &--#{$i} > :nth-child(-n + #{$i}) {
-      background-image: url(../images/star-active.svg);
-    }
-  }
-
 }
