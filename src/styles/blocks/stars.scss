@@ -9,12 +9,12 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
-  &__star:last-child {
-    margin-right: 0;
-  }
-  
   @for $i from 1 through 5 {
     &--#{$i} :nth-of-type(-n + #{$i}) {
       background-image: url("../images/star-active.svg");
