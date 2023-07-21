@@ -1,0 +1,52 @@
+.card {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  border: 1px solid $quaternary-color;
+  border-radius: 5px;
+
+  &__img {
+    text-align: center;
+    width: 160px;
+    height: 134px;
+    margin-left: 3px;
+  }
+
+  &__name {
+    margin-top: 40px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    @include text-secondary;
+    color: $secondary-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    background-color: $tertiary-color;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    @include text-bold;
+
+    &:hover {
+      background-color: $quaternary-color;
+      color: $tertiary-color;
+      border-color: $tertiary-color;
+    }
+  }
+}
