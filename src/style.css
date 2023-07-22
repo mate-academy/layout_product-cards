@@ -52,11 +52,13 @@ p {
   background-image: url("images/star.svg");
   background-repeat: no-repeat;
   background-position: center;
-  backface-visibility: visible;
-  margin-right: 4px;
   margin-top: 0;
   min-width: 16px;
   min-height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
 }
 
 .stars--1 .stars__star:nth-child(-n+1),
@@ -65,8 +67,6 @@ p {
 .stars--4 .stars__star:nth-child(-n+4),
 .stars--5 .stars__star:nth-child(-n+5) {
   background-image: url("images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card__name {
