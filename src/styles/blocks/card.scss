@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  padding: 16px;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $white;
+
+  &__image {
+    margin-top: 16px;
+    align-self: center;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__header {
+    margin-top: 40px;
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code-info {
+    margin-top: 4px;
+    color: $secondary;
+    @include defaultTextPreset;
+  }
+
+  &__reviews-container {
+    @include flexBetween;
+    margin-top: 16px;
+  }
+
+  &__review-number {
+    margin: 0;
+    color: $main-accent;
+    @include defaultTextPreset;
+  }
+
+  &__price-container {
+    @include flexBetween;
+    margin-top: 24px;
+  }
+
+  &__price {
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-amount {
+    color: $main-accent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    margin-top: 16px;
+    width: 166;
+    height: 40px;
+    background-color: $blue-accent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $blue-accent;
+      color: $blue-accent;
+    }
+  }
+}
