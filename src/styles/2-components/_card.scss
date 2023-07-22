@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  background-color: $backgroundCardColor;
+  border-radius: 5px;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+
+  &__img {
+    align-self: center;
+    margin-bottom: 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 18px;
+    box-sizing: border-box;
+  }
+
+  &__subtitle {
+    font-size: 10px;
+    line-height: 14px;
+    color: $subTitleColor;
+    margin-bottom: 16px;
+    max-width: 166px;
+  }
+
+  &__grade-inner {
+    @include flex-alignment;
+    margin-bottom: 24px;
+    max-width: 166px;
+  }
+
+  &__review {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price-inner {
+    @include flex-alignment;
+    margin-bottom: 16px;
+    max-width: 166px;
+  }
+
+  &__price-cost {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
