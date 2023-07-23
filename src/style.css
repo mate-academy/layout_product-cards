@@ -1,19 +1,17 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --blue-accent: #00acdc;
   --main-accent: #060b35;
   --secondary-color: #616070;
+  --white: #fff;
 }
 
 html {
   font-family: "Roboto", "Manrope", sans-serif;
-}
-
-body {
-  margin: 0;
 }
 
 .card {
@@ -23,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 32px 16px 0  ;
+  padding: 32px 16px 0;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -32,16 +30,6 @@ body {
   width: 160px;
   height: 134px;
   margin: 0 auto 40px;
-}
-
-a,
-body,
-div,
-h2,
-span,
-p {
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .stars {
@@ -101,15 +89,13 @@ p {
   align-self: center;
 }
 
-.price-word {
-  font-size: 12px;
-  font-style: normal;
+.card__price-word {
   font-weight: 400;
   line-height: 18px;
   color: var(--secondary-color);
 }
 
-.price-amount {
+.card__price-amount {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -127,18 +113,20 @@ p {
   height: 40px;
   border-radius: 5px;
   background-color: var(--blue-accent);
-  color: #fff;
+  color: var(--white);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
   border: 1px solid var(--blue-accent);
-  text-align: center;
   margin-bottom: 16px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 12px;
 }
 
 .card__button:hover {
-  background-color: #fff;
+  background-color: var(--white);
   color: var(--blue-accent);
 }
