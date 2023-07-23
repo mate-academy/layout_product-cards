@@ -1,3 +1,128 @@
-body {
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-accent: #00acdc;
+  --main-accent: #060b35;
+  --secondary-color: #616070;
+  --white: #fff;
+}
+
+html {
+  font-family: "Roboto", "Manrope", sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 16px 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("images/star-active.svg");
+}
+
+.card__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-accent);
+  margin-bottom: 4px;
+}
+
+.card__reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__code {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+.stars_reviews {
+  font-size: 10px;
+  color: var(--main-accent);
+  display: flex;
+  align-self: center;
+}
+
+.card__price-word {
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--secondary-color);
+}
+
+.card__price-amount {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__button {
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--blue-accent);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: 1px solid var(--blue-accent);
+  margin-bottom: 16px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.card__button:hover {
+  background-color: var(--white);
+  color: var(--blue-accent);
 }
