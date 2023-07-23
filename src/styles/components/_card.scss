@@ -1,44 +1,39 @@
 .card {
-  padding: 32px 0 16px;
+  padding: 32px 16px 16px;
   display: flex;
   width: 200px;
-  border-radius: 5px;
-  border: 1px solid #f3f3f3;
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  font-size: 10px;
-  line-height: 14px;
-  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
   background: #fff;
-  color: #060b35;
+  color: $primeColor;
+  line-height: 14px;
+
+  @include fontParams(10px, 400);
 
   &__image {
-    background: url(../images/imac.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 160px;
+    margin: 0 0 40px;
     height: 134px;
-    margin-bottom: 40px;
+    width: 160px;
   }
 
   &__title {
     margin: 0 0 4px;
-    width: 166px;
-    font-size: 12px;
     line-height: 18px;
-    font-weight: 500;
+
+    @include fontParams(12px, 500);
   }
 
   &__subtitle {
-    width: 166px;
     margin: 0 0 16px;
-    color: #616070;
+    align-self: start;
+    color: $secondaryColor;
   }
 
   &__stars {
-    width: 166px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -51,45 +46,43 @@
   }
 
   &__price-block {
+    width: 100%;
     margin-bottom: 16px;
-    width: 166px;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    line-height: 18px;
   }
 
   &__info-price {
-    color: #616070;
+    color: $secondaryColor;
     font-size: 12px;
-    line-height: 18px;
   }
 
   &__info-amount {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
+    @include fontParams(16px, 700);
   }
 
   &__link {
     height: 40px;
     width: 166px;
     border-radius: 5px;
-    border: 1px solid $hoverBlueColor;
+    border: 1px solid $linkColor1;
     display: flex;
     box-sizing: border-box;
-    background-color: $hoverBlueColor;
+    background-color: $linkColor1;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: $hoverWhiteColor;
-    font-size: 14px;
-    line-height: 37px;
-    font-weight: 700;
+    color: $linkColor2;
+
+    @include fontParams(14px, 700);
 
     &:hover {
-      background-color: $hoverWhiteColor;
-      color: $hoverBlueColor;
+      background-color: $linkColor2;
+      color: $linkColor1;
     }
   }
 }
