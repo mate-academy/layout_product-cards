@@ -4,14 +4,15 @@
 
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .card {
+  width: 198px;
+  height: 406px;
   padding: 32px 19px 19px;
   display: flex;
   flex-direction: column;
-  width: 198px;
-  height: 406px;
   align-items: center;
   flex-shrink: 0;
   border-radius: 5px;
@@ -22,7 +23,6 @@ body {
 .card__img {
   width: 160px;
   height: 134px;
-  /* margin-bottom: 40px; */
   flex-shrink: 0;
 }
 
@@ -37,26 +37,24 @@ body {
   font-weight: 500;
   line-height: 18px;
   color: #060b35;
-  font-family: "Roboto", sans-serif;
 }
 
 .card_code {
-  color: #616070;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14px;
   margin-top: 4px;
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
   text-align: left;
-  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #616070;
 }
 
 .card__raiting {
-  display: flex;
+  margin-top: 16px;
   width: 166px;
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 16px;
 }
 
 .stars {
@@ -75,30 +73,29 @@ body {
   margin-right: 5px;
 }
 
-.stars--1 :nth-child(1),
+.stars--1 :nth-child(-n+1),
 .stars--2 :nth-child(-n+2),
 .stars--3 :nth-child(-n+3),
 .stars--4 :nth-child(-n+4),
-.stars--5 :nth-child(1n) {
+.stars--5 :nth-child(-n+5) {
   background-image: url(./images/star-active.svg);
 }
 
 .card__raiting-review {
-  display: flex;
-  text-align: right;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
+  display: flex;
+  text-align: right;
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 .card__price {
   width: 166px;
   display: flex;
-  justify-content: space-between;
   font-size: 12px;
   line-height: 16px;
+  justify-content: space-between;
   color: #616070;
   align-items: flex-end;
 }
@@ -114,7 +111,6 @@ body {
   text-align: right;
   font-size: 16px;
   color: #060b35;
-  font-family: "Roboto", sans-serif;
 }
 
 .card__price-text {
@@ -124,16 +120,13 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  font-family: "Roboto", sans-serif;
 }
 
 .card__button {
-  background-color: #00acdc;
-  color: #fff;
-  border-radius: 5px;
   width: 166px;
   height: 40px;
   font-size: 14px;
+  border-radius: 5px;
   font-style: normal;
   line-height: 40px;
   text-transform: uppercase;
@@ -141,14 +134,18 @@ body {
   text-align: center;
   text-decoration: none;
   flex-shrink: 0;
-  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background-color: #00acdc;
   font-weight: 700;
 }
 
 .card__button:hover {
-  background-color: #00acdc;
-  border-radius: 5px;
   width: 166px;
   height: 40px;
-  margin-top: 16px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--blue-accent, #00acdc);
+  position: relative;
+  background-color: #fff;
+  color: #00acdc;
 }
