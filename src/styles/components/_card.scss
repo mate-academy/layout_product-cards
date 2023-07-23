@@ -1,0 +1,88 @@
+.card {
+  padding: 32px 16px 16px;
+  display: flex;
+  width: 200px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  color: $primeColor;
+  line-height: 14px;
+
+  @include fontParams(10px, 400);
+
+  &__image {
+    margin-bottom: 40px;
+    height: 134px;
+    width: 160px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    line-height: 18px;
+
+    @include fontParams(12px, 500);
+  }
+
+  &__subtitle {
+    margin: 0 0 16px;
+    align-self: start;
+    color: $secondaryColor;
+  }
+
+  &__stars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: flex-end;
+  }
+
+  &__info-review {
+    text-align: right;
+  }
+
+  &__price-block {
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 18px;
+  }
+
+  &__info-price {
+    color: $secondaryColor;
+    font-size: 12px;
+  }
+
+  &__info-amount {
+    @include fontParams(16px, 700);
+  }
+
+  &__link {
+    width: 166px;
+    border-radius: 5px;
+    border: 1px solid $linkColor1;
+    display: flex;
+    box-sizing: border-box;
+    background-color: $linkColor1;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $linkColor2;
+    line-height: 38px;
+
+    @include fontParams(14px, 700);
+
+    &:hover {
+      background-color: $linkColor2;
+      color: $linkColor1;
+    }
+  }
+}
