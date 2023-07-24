@@ -1,3 +1,8 @@
+$--main-color: #fff;
+$--code-color: #616070;
+$--button-color: #00acdc;
+$--text-color: #060b35;
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -12,7 +17,7 @@ body {
   width: 198px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  background: #fff;
+  background: $--main-color;
 
   &__img {
     width: 160px;
@@ -21,19 +26,19 @@ body {
   }
 
   &__title {
+    margin: 40px 16px 0;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    margin: 40px 16px 0;
-    color: #060b35;
+    color: $--text-color;
   }
 
   &__code {
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 400;
     margin: 4px 84px 0 16px;
-    color: #616070;
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $--code-color;
   }
 
   &__price {
@@ -44,40 +49,40 @@ body {
 
     &-text {
       margin: 0;
-      font-size: 12px;
       line-height: 18px;
-      color: #616070;
+      font-size: 12px;
+      color: $--code-color;
     }
 
     &-amount {
       margin: 0;
+      line-height: 18px;
       font-weight: 700;
       font-size: 16px;
-      line-height: 18px;
-      color: #060b35;
+      color: $--text-color;
     }
   }
 
   &__button {
     box-sizing: border-box;
-    text-decoration: none;
-    width: 166px;
-    height: 40px;
     display: flex;
     justify-content: center;
+    width: 166px;
+    height: 40px;
+    margin: 16px;
     align-items: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     border-radius: 5px;
-    background-color: #00acdc;
-    color: #fff;
-    margin: 16px;
+    text-decoration: none;
+    background-color: $--button-color;
+    color: $--main-color;
 
     &:hover {
-      background-color: #fff;
-      color: #00acdc;
-      border: 1px solid #00acdc;
+      background-color: $--main-color;
+      border: 1px solid $--button-color;
+      color: $--button-color;
     }
   }
 
