@@ -1,0 +1,96 @@
+.product-card {
+  display: flex;
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  background: #fff;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    display: flex;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__description {
+    padding-bottom: 4px;
+    @include sideMargin;
+    display: flex;
+    @include mainColor;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    display: flex;
+    margin: 0 84px 16px 16px;
+    font-size: 10px;
+    @include secoundaryColor;
+    @include smallFont;
+    line-height: 14px;
+  }
+
+  &__review {
+    display: flex;
+    @include sideMargin;
+    margin-bottom: 24px;
+    height: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__review-count {
+    text-align: right;
+    font-size: 10px;
+    @include smallFont;
+    line-height: 14px;
+    @include mainColor;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include sideMargin;
+  }
+
+  &__tag {
+    font-size: 12px;
+    @include smallFont;
+    line-height: 18px;
+    @include secoundaryColor;
+  }
+
+  &__number {
+    text-align: right;
+    @include mainColor;
+    font-size: 16px;
+    @include bigFont;
+    line-height: 18px;
+  }
+
+  &__button {
+    text-align: center;
+    margin: 16px;
+    background-color: rgba(0, 172, 220, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 172, 220, 1);
+    text-transform: uppercase;
+    @include bigFont;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(0, 172, 220, 1);
+      border: 1px solid;
+    }
+  }
+}
