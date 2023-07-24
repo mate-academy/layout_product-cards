@@ -1,23 +1,25 @@
 .card {
   width: 200px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: #fff;
+  padding: 32px 16px 16px;
 
   &__img {
     width: 160px;
+    height: 134px;
     margin: 0 auto;
-    margin-top: 33px;
   }
 
   &__content {
-    padding: 0 16px;
+    margin-top: 40px;
   }
 
   &__title {
-    margin-top: 40px;
+    margin: 0;
     color: $mainColor;
     font-size: 12px;
     font-weight: 500;
@@ -25,6 +27,7 @@
   }
 
   &__code {
+    margin: 0;
     margin-top: 4px;
     font-size: 10px;
     font-weight: 400;
@@ -33,7 +36,7 @@
   }
 
   &__rate {
-    margin-top: 17px;
+    margin-top: 16px;
     display: flex;
     justify-content: space-between;
   }
@@ -46,7 +49,7 @@
   }
 
   &__price {
-    margin-top: 23px;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,6 +70,7 @@
   }
 
   &__link {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,18 +79,16 @@
     border-radius: 5px;
     height: $linkHeight;
     background-color: $linkColor;
-    border: 1px solid transparent;
+    border: 1px solid $linkColor;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 16px;
   }
 
   &__link:hover {
-    border: 1px solid $linkColor;
     background-color: #fff;
     color: $linkColor;
   }
