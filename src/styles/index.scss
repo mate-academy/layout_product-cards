@@ -1,6 +1,10 @@
 @import "./variables";
 @import "./stars.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Open Sans", sans-serif;
@@ -17,7 +21,6 @@ body {
     padding: 32px 16px 16px;
     border: 1px solid #f3f3f3;
     border-radius: 5px;
-    box-sizing: border-box;
 
     &__image {
       display: block;
@@ -34,7 +37,7 @@ body {
 
     &__product-code {
       margin-top: 4px;
-      color: #616070;
+      color: $grey-accent;
       font-size: 10px;
       font-weight: 400;
       line-height: 14px;
@@ -48,7 +51,7 @@ body {
     }
 
     &__description {
-      color: #616070;
+      color: $grey-accent;
       font-size: 12px;
       font-weight: 400;
       line-height: 18px;
@@ -66,7 +69,7 @@ body {
       display: flex;
       width: 160px;
       height: 40px;
-      background-color: $blue;
+      background-color: $blue-accent;
       cursor: pointer;
       border: 1px solid transparent;
       border-radius: 5px;
@@ -80,9 +83,9 @@ body {
       align-items: center;
 
       &:hover {
-        color: $blue;
+        color: $blue-accent;
         background-color: #fff;
-        border-color: $blue;
+        border-color: $blue-accent;
       }
     }
   }
