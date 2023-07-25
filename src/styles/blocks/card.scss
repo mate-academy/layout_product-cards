@@ -4,13 +4,14 @@
   padding-inline: ($card-width - $card-img-width) / 2 - 4px;
   border: 1px solid #F3F3F3;
   border-radius: 5px;
-  padding-top: 1.5em;
+  padding-top: 2em;
   padding-bottom: 1em;
 
   &__img {
     display: flex;
     width: $card-img-width;
     margin: auto;
+    height: 134px;
   }
 
   &__name {
@@ -19,24 +20,27 @@
     line-height: 18px;
     color: $main-text-color;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   &__code {
     font-size: 10px;
     font-weight: 400;
     color: $secondary-text-color;
+    margin-top: 5px;
+    margin-bottom: 9px;
   }
 
   &__rate {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 17px;
+  }
 
-    &__reviews {
-      font-size: 10px;
-      font-weight: 400;
-    }
+  &__reviews {
+    font-size: 10px;
+    margin: 0;
   }
 
   &__price {
@@ -44,11 +48,15 @@
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
+    margin-top: 23px;
+    margin-bottom: 16px;
+    color: $secondary-text-color;
+  }
 
-    &__amount {
-      font-size: 16px;
-      font-weight: 700;
-    }
+  &__amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: $main-text-color;
   }
 
   &__button {
@@ -63,9 +71,10 @@
     height: 40px;
     border-radius: 5px;
     background-color: $button-accent-color;
+    box-sizing: border-box;
 
     &:hover {
-      color: var(--button-accent-color);
+      color: $button-accent-color;
       background-color: #ffffff;
       border: 1px solid $button-accent-color;
     }
