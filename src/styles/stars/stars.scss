@@ -1,0 +1,43 @@
+.stars-layout {
+  margin: 16px 16px 0;
+  width: $card-width;
+  height: $star-height;
+  display: flex;
+  justify-content: space-between;
+
+  &__stars {
+    height: $star-height;
+    width: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__star {
+    height: $star-height;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    list-style: none;
+  }
+
+  &__star:nth-child(-n + 4) {
+    margin-right: 4px;
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__text {
+    display: flex;
+    width: 53px;
+    height: $star-height;
+    flex-direction: column;
+    justify-content: flex-end;
+    list-style: none;
+    color: $primary-color;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
