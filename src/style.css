@@ -10,6 +10,8 @@ html {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 200px;
   border-radius: 5px;
@@ -18,19 +20,8 @@ html {
   padding: 32px 16px 16px ;
 }
 
-.card__container {
-  display: flex;
-  box-sizing: border-box;
-
-  flex-direction: column;
-  width: 166px;
-}
-
 .card__image {
-  display: block;
-  box-sizing: border-box;
   height: 134px;
-  width: 160px;
   margin: 0 3px 40px;
 }
 
@@ -39,6 +30,8 @@ html {
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 4px;
+
+  color: #060b35;
 }
 
 .card__code {
@@ -54,6 +47,7 @@ html {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 24px;
   width: 166px;
   height: 16px;
@@ -84,11 +78,7 @@ html {
 .card__review {
   font-weight: 400;
   font-size: 10px;
-  line-height: 16px;
-  width: 53px;
-  height: 16px;
-  text-align: right;
-
+  color: #060b35;
   margin: 0;
 }
 
@@ -115,19 +105,17 @@ html {
 }
 
 .card__button {
-  box-sizing: border-box;
-
-  text-align: center;
-  color: #fff;
-  background-color: #00acdc;
-  line-height: 40px;
-  height: 40px;
+  /* box-sizing: border-box; */
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #00acdc;
   border: 1px solid #00acdc;
+  border-radius: 5px;
+  padding: 10px 0 11px;
 }
 
 .card__button:hover {
