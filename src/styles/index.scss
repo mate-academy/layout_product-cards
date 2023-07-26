@@ -1,3 +1,126 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
 body {
   margin: 0;
 }
+
+p {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    color: #060b35;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-inline: 0;
+    margin-block: 0;
+  }
+
+  &__code {
+    color: #616070;
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 4px 0 16px;
+    width: 100%;
+    text-align: start;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 16px;
+
+    .card__text {
+      font-family: inherit;
+      font-weight: 400;
+      color: #616070;
+    }
+
+    .card__count {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #060b35;
+    }
+  }
+
+  &__buy {
+    padding: 12px 70px;
+    background-color: #00acdc;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__buy:hover {
+    background-color: #fff;
+    border: solid #00acdc 1px;
+    color: #00acdc;
+  }
+}
+
+/* #region stars */
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 24px;
+
+  &__icon {
+    display: flex;
+
+    .stars__review {
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: 50%;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    .stars__review:not(:last-child) {
+      margin-right: 4px;
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &___count {
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #060b35;
+  }
+
+}
+
+/* #endregion */
