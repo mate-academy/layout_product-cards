@@ -1,14 +1,11 @@
-$--main-color: #fff;
-$--code-color: #616070;
-$--button-color: #00acdc;
-$--text-color: #060b35;
+@import "./variable";
 
-html {
-  font-family: Roboto, sans-serif;
+* {
+  margin: 0;
 }
 
-body {
-  margin: 0;
+html {
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .card {
@@ -76,6 +73,7 @@ body {
     line-height: 16px;
     border-radius: 5px;
     text-decoration: none;
+    text-transform: uppercase;
     background-color: $--button-color;
     color: $--main-color;
 
@@ -102,11 +100,11 @@ body {
 
 .stars {
   display: flex;
-  list-style: none;
   padding: 0;
   margin: 16px 0 0 16px;
 
-  &__item {
+  &__star {
+    padding-right: 4px;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     width: 16px;
@@ -114,7 +112,6 @@ body {
   }
 }
 
-.active {
+.stars--4 > :nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
-  margin-right: 4px;
 }
