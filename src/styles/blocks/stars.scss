@@ -16,9 +16,11 @@
     }
   }
 
-  &--2 .stars__star:nth-child(-n + 4) {
-    background: url(../images/star-active.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+  @for $i from 1 through 5 {
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background: url(../images/star-active.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
