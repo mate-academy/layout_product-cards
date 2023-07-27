@@ -1,0 +1,63 @@
+@import "./utilits/colors.scss";
+@import "./utilits/mixins.scss";
+
+.card {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  border: 1px solid $main-color;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $text-color;
+
+
+  &__img {
+    text-align: center;
+    width: 160px;
+    height: 134px;
+    margin-left: 3px;
+  }
+
+  &__name {
+    margin-top: 40px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-style: normal;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    @include text-secondary;
+    color: $secondary-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    background-color: $button-color;
+    border-radius: 5px;
+    border: 1px solid $button-color;
+    @include text-bold;
+
+    &:hover {
+      background-color: $main-color;
+      color: $button-color;
+
+    }
+  }
+}
