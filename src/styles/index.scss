@@ -1,117 +1,12 @@
 @import "./variable";
+@import "./card";
+@import "./stars";
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-family: Roboto, Arial, sans-serif;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 198px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  background: $--main-color;
-
-  &__img {
-    width: 160px;
-    height: 134px;
-    margin: 32px 19px 0;
-  }
-
-  &__title {
-    margin: 40px 16px 0;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    color: $--text-color;
-  }
-
-  &__code {
-    margin: 4px 84px 0 16px;
-    line-height: 14px;
-    font-size: 10px;
-    font-weight: 400;
-    color: $--code-color;
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 24px 16px 0;
-
-    &-text {
-      margin: 0;
-      line-height: 18px;
-      font-size: 12px;
-      color: $--code-color;
-    }
-
-    &-amount {
-      margin: 0;
-      line-height: 18px;
-      font-weight: 700;
-      font-size: 16px;
-      color: $--text-color;
-    }
-  }
-
-  &__button {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    width: 166px;
-    height: 40px;
-    margin: 16px;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: $--button-color;
-    color: $--main-color;
-
-    &:hover {
-      background-color: $--main-color;
-      border: 1px solid $--button-color;
-      color: $--button-color;
-    }
-  }
-
-  &__review {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-
-    &-count {
-      margin: 16px 16px 0 0;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-  padding: 0;
-  margin: 16px 0 0 16px;
-
-  &__star {
-    padding-right: 4px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.stars--4 > :nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
 }
