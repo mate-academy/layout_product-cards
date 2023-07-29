@@ -5,19 +5,18 @@ $blue_accent: #00acdc;
 @import "blocks/card";
 @import "blocks/stars";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 html {
   background-color: darkgray;
   font-family: "Roboto", Helvetica, sans-serif;
 }
 
-body {
-  margin: 0;
-}
-
 .block__reviews {
   display: flex;
-  width: 53px;
-  height: 16px;
   flex-direction: column;
   justify-content: flex-end;
   font-size: 10px;
@@ -31,7 +30,6 @@ body {
   width: 166px;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 auto;
   margin-bottom: 16px;
 
   &__text {
@@ -49,7 +47,6 @@ body {
 }
 
 .buy {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +54,6 @@ body {
   height: 40px;
   border-radius: 5px;
   background-color: $blue_accent;
-  margin: 0 auto;
   border: none;
 
   &__button {
@@ -76,5 +72,11 @@ body {
 
   .buy__button {
     color: $blue_accent;
+  }
+
+  &:active {
+    background-color: $blue_accent;
+    color: #fff;
+    outline: none;
   }
 }
