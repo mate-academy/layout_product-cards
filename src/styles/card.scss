@@ -21,14 +21,14 @@
   }
 
   &__title {
-    color: var(--main-accent,$title_color);
+    color: $title-color-value;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     margin: 0;
   }
   &__desc {
-    color: var(--secondary, #616070);
+    color: $desc-color;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -42,20 +42,15 @@
     justify-content: space-between;
     margin-bottom: 24px;
 
-    .cart__rating {
-      color: var(--main-accent, $title_color);
+    &-value {
+      color: $title-color-value;
       align-items: flex-end;
       display: flex;
       font-size: 10px;
       font-style: normal;
       font-weight: 400;
       line-height: 14px;
-
     }
-  }
-
-  &__review:hover {
-    margin-bottom: 10px;
   }
 
   &__price {
@@ -65,12 +60,12 @@
     align-items: center ;
 
     &-title {
-      color: var(--secondary, #616070);
+      color: $desc-color;
       font-size: 12px;
     }
 
     &-value {
-      color: var(--main-accent, $title_color);
+      color: $title-color-value;
       font-weight: 700;
     }
   }
@@ -78,9 +73,9 @@
   &__button-link {
     display: block;
     box-sizing: border-box;
-    border: 1px solid var(--blue-accent, $button-color);
+    border: $btn-border;
     border-radius: $border;
-    background-color: var(--blue-accent, $button-color);
+    background-color: $btn-background;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
