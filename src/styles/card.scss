@@ -1,24 +1,23 @@
-$border:5px;
-$title_color:#060b35;
-$button-color: #00acdc;
-$white:#fff;
+@import "./variables.scss";
 
 .cart {
   display: flex;
   justify-content: space-between;
   border: 1px solid #f3f3f3;
   flex-direction: column;
+  box-sizing: border-box;
   border-radius: $border;
-  width: 198px;
+  width: 200px;
   height: 406px;
   background: $white;
   box-shadow: 1px 1px 2px rgba(74, 102, 118, 0.3);
   font-family: Roboto, sans-serif;
+  padding: 32px 16px 16px;
 
   &__img {
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px;
+    margin: 0 auto 40px;
   }
 
   &__title {
@@ -26,7 +25,7 @@ $white:#fff;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    margin: 0 16px 4px;
+    margin: 0;
   }
   &__desc {
     color: var(--secondary, #616070);
@@ -34,15 +33,14 @@ $white:#fff;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
-    margin-left: 16px;
+    margin-top: 4px;
+    margin-bottom: 16px;
   }
 
   &__review {
     display: flex;
     justify-content: space-between;
-    margin-top: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-bottom: 24px;
 
     .cart__rating {
       color: var(--main-accent, $title_color);
@@ -55,77 +53,47 @@ $white:#fff;
 
     }
   }
-  &__prices {
+
+  &__review:hover {
+    margin-bottom: 10px;
+  }
+
+  &__price {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: center ;
 
-    .cart__price {
-      margin-top: 24px;
+    &-title {
       color: var(--secondary, #616070);
       font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 18px;
-      margin-left: 16px;
-      margin-right: 16px;
     }
 
-    .price {
-      margin-top: 20px;
+    &-value {
       color: var(--main-accent, $title_color);
-      font-size: 16px;
       font-weight: 700;
-      line-height: 18px;
-      margin-right: 16px;
-      align-items: flex-end;
-      display: flex;
-
     }
   }
 
-  &__button {
-    width: 166px;
-    height: 40px;
+  &__button-link {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--blue-accent, $button-color);
     border-radius: $border;
     background-color: var(--blue-accent, $button-color);
     text-align: center;
-    margin: 16px;
-    text-decoration: none;
     cursor: pointer;
-
-    .buy {
-      outline: none;
-      border: none;
-      background-color: inherit;
-      padding: 12px;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      text-transform: uppercase;
-
-      &__link {
-        text-decoration: none;
-        color: $white;
-      }
-    }
-
-  }
-  &__button:hover {
-    width: 166px;
-    height: 40px;
-    border-radius: $border;
-    border: 1px solid var(--blue-accent, $button-color);
-    background: $white;
-    color: $button-color;
+    text-transform: uppercase;
+    line-height: 37px;
+    font-size: 14px;
+    color: $white;
+    font-weight: 700;
     text-decoration: none;
+  }
 
-    .buy:hover {
-      color: $button-color;
-    }
-    .buy__link:hover {
-      text-decoration: none;
-      color: $button-color;
-    }
+  &__button-link:hover {
+    background-color: $white;
+    color: $button-color;
   }
 
 }
