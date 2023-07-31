@@ -1,3 +1,126 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  &__img-wrapper {
+    width: 160px;
+    height: 134px;
+    margin: 33px 20px 36px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    margin: 0 16px;
+
+  }
+
+  &__title {
+    color: #060b35;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: justify;
+    margin: 4px 0;
+  }
+
+  &__code {
+    color: #616070;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-bottom: 7px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 8px;
+  }
+
+  .stars {
+    display: flex;
+    width: 96px;
+    justify-content: space-between;
+
+  }
+
+  .stars__star {
+    background-image: url("../images/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+
+  .stars--4 .stars__star:nth-child(1),
+  .stars--4 .stars__star:nth-child(2),
+  .stars--4 .stars__star:nth-child(3),
+  .stars--4 .stars__star:nth-child(4) {
+    background-image: url("../images/star-active.svg");
+  }
+
+  &__reviews-number {
+    color: #060b35;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    width: 53px;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-left-part {
+    color: #616070;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__price-rigth-part {
+    color: #060b35;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__btn {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background: #00acdc;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+
+  &__btn:hover {
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    background: #fff;
+  }
 }
