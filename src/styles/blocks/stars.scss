@@ -10,18 +10,18 @@
     height: 16px;
     margin-right: 4px;
   }
-  :last-child {
+
+  &:last-child {
     margin-right: 0;
   }
 
-  :hover {
-    background-image: url(../images/star-active.svg);
-  }
 
 }
-
 @each $star in $star-number {
-  .star-#{$star} {
+  .star--#{$star} .stars__star:nth-child(-n + #{$star}) {
     background-image: url(../images/star-active.svg);
   }
 }
+
+
+
