@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+}
+
+.card {
+  padding: 32px 16px 16px;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__screen {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 160px;
+    height: 134px;
+
+    &--content {
+      margin: 0 3px 40px;
+    }
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+
+    &--content {
+      margin-block: 0 4px;
+    }
+  }
+
+  &__code {
+    color: $secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    &--content {
+      margin-block: 0 16px;
+    }
+  }
+
+  &__rating {
+    @include flexDisplay;
+
+    &--content {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__review {
+    height: 16px;
+    line-height: 16px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  &__cost {
+    @include flexDisplay;
+
+    &--content {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__price {
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-number {
+    color: $main-accent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    height: 40px;
+    width: 166px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: $blue-accentvar;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-accentvar;
+      border-color: $blue-accentvar;
+    }
+  }
+}
