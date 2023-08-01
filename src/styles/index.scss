@@ -1,3 +1,72 @@
-body {
+$main-accent: #060b35;
+$secondary: #616070;
+$blue_accent: #00acdc;
+$white: #fff;
+
+@import "blocks/card";
+@import "blocks/stars";
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  background-color: darkgray;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.block__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: $main-accent;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  &__text {
+    color: $secondary;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+.buy {
+  height: 40px;
+  border-radius: 5px;
+  background-color: $blue_accent;
+  border: none;
+
+  &__button {
+    color: $white;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.buy:hover {
+  border: 1px solid $blue_accent;
+  background-color: $white;
+
+  .buy__button {
+    color: $blue_accent;
+  }
+
+  &:active {
+    background-color: $blue_accent;
+    color: $white;
+    outline: none;
+  }
 }
