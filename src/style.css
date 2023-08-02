@@ -1,3 +1,140 @@
 body {
   margin: 0;
+  --gold-star: url("./images/star-active.svg");
+  --empty-star: url("./images/star.svg");
+  --font-family: "Roboto", sans-serif;
+  --color-button: #00acdc;
+  --dark-blue: #060b35;
 }
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* #region stars */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: var(--empty-star);
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--5 .stars__star,
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:not(:last-child) {
+  background-image: var(--gold-star);
+}
+/* #endregion */
+
+/* #region card */
+.card {
+  width: 200px;
+  min-height: 406px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  display: inline-block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.card__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dark-blue);
+  margin-bottom: 4px;
+}
+
+.card__subtitle {
+  font-family: var(--font-family);
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__count-reviews {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-size: 10px;
+  color: var(--dark-blue);
+}
+
+.card__price-title {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #616070;
+  font-weight: 400;
+}
+
+.card__price-value {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-blue);
+}
+
+.card__button {
+  display: block;
+  height: 40px;
+
+  background: var(--color-button);
+  border-radius: 5px;
+
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.card__button:hover {
+  border: 1px solid var(--color-button);
+  background: #fff;
+  color: var(--color-button);
+}
+/* #endregion */
