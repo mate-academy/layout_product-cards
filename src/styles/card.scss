@@ -8,39 +8,34 @@
   border: 1px solid $border-color;
   background: $fone-color;
 
-  &__items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   &__icon {
-    display: flex;
+    display: block;
     margin: 0 auto 40px;
     width: 160px;
     height: 134px;
   }
 
   &__title {
+    margin: 0;
     display: flex;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: $text-main-color;
 
-    margin: auto;
     margin-bottom: 4px;
   }
 
   &__product {
-    margin: 0 0 16px;
+    margin: 0;
+    margin-bottom: 16px;
     line-height: 14px;
 
     color: $product-price-color;
     font-size: 10px;
   }
 
-  &__star {
+  &__rating {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,13 +83,13 @@
     justify-content: center;
     font-weight: 700;
     font-size: 14px;
+    cursor: pointer;
 
     border-radius: 5px;
     background: $button-color;
 
     &:hover {
-      border-radius: 5px;
-      border: 1px solid $button-color;
+      border-color: $button-color;
       background-color: $fone-color;
       color: $button-color;
     }
