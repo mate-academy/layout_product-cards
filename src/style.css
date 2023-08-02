@@ -6,17 +6,19 @@
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 .card {
   width: 200px;
-  height: 408px;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
 .card__icon {
@@ -27,7 +29,7 @@
 }
 
 .card__title {
-  margin-bottom: 4px;
+  margin: 0 0 4px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -35,14 +37,13 @@
 }
 
 .card__subtitle {
-  margin-bottom: 16px;
+  margin: 0 0 16px;
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
   color: var(--secondary);
 }
 
-.container-stars {
+.card__rating {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -71,40 +72,42 @@
   background-image: url(images/star-active.svg);
 }
 
-.rewiews {
+.card__rewiews {
   font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 14px;
   color: var(--main-accent);
 }
 
-.price {
+.card__rewiews-text {
+  margin: 0;
+}
+
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.price-text {
+.card__price-text {
+  margin: 0;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 18px;
   color: var(--secondary);
 }
 
-.price-coast {
+.card__price-coast {
+  margin: 0;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
 }
 
-.button-link {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  padding: 11px 0;
   line-height: 16px;
   background-color: var(--blue-accent);
   border: 1px solid var(--blue-accent);
@@ -113,12 +116,11 @@
   text-transform: uppercase;
   color: var(--white);
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
 }
 
-.button-link:hover {
+.card__button:hover {
   background-color: var(--white);
-  border: 1px solid var(--blue-accent);
+  border-color: var(--blue-accent);
   color: var(--blue-accent);
 }
