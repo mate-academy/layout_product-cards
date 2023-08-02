@@ -2,6 +2,9 @@ body {
   margin: 0;
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 400;
+  --button-color: rgba(0, 172, 220, 1);
+  --main-text-color: rgba(6, 11, 53, 1);
+  --secondary-text-color: rgba(97, 96, 112, 1);
 }
 
 .card {
@@ -15,7 +18,7 @@ body {
   border-radius: 5px;
   padding-top: 32px;
   align-items: center;
-  color: rgba(6, 11, 53, 1);
+  color: var(--main-text-color);
 }
 
 .card__picture {
@@ -38,7 +41,7 @@ body {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
-  color: rgba(97, 96, 112, 1);
+  color: var(--secondary-text-color);
   margin-left: 16px;
   align-self: flex-start;
 }
@@ -77,7 +80,7 @@ body {
   margin-right: 0;
 }
 
-.card__reviewsText {
+.card__reviews-text {
   font-size: 10px;
   font-weight: 400;
   line-height: 16px;
@@ -91,15 +94,15 @@ body {
   justify-content: space-between;
 }
 
-.card__priceText {
+.card__price-text {
   margin: 0;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: rgba(97, 96, 112, 1);
+  color: var(--secondary-text-color);
 }
 
-.card__priceNumb {
+.card__price-numb {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
@@ -119,14 +122,14 @@ body {
   line-height: 40px;
   text-decoration: none;
   text-align: center;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--button-color);
   border-radius: 5px;
   text-transform: uppercase;
   transition: all 500ms;
 }
 
 .card__buy:hover {
-  color: rgba(0, 172, 220, 1);
-  border: 1px solid rgba(0, 172, 220, 1);
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
   background-color: transparent;
 }
