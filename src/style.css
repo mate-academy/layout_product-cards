@@ -2,14 +2,26 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --button-color: #00acdc;
+  --border-color: #f3f3f3;
+}
+
 body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
   margin: 0;
 }
 
 .card {
   width: 200px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--border-color);
   padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
@@ -23,23 +35,21 @@ body {
 }
 
 .card__title {
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: #060b35;
+  color: var(--main-color);
   margin-top: 40px;
   margin-bottom: 0;
 }
 
 .card_productcode {
   margin-top: 4px;
-  font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0;
-  color: #616070;
+  color: var(--secondary-color);
 }
 
 .card__grade {
@@ -62,12 +72,11 @@ body {
   margin-right: 4px;
 }
 
-.stars__star:last-child {
+.stars__star--5 {
   background-image: url(./images/star.svg);
 }
 
 .rewiews {
-  font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -83,16 +92,14 @@ body {
 }
 
 .card__price-title {
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0;
-  color: #616070;
+  color: var(--secondary-color);
 }
 
 .card__price-cost {
-  font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -102,21 +109,20 @@ body {
 .card__button {
   margin-top: 16px;
   padding: 11px 70px 11px 69px;
-  background-color: #00acdc;
+  background-color: var(--button-color);
   border-radius: 5px;
   color: #fff;
-  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0;
   text-transform: uppercase;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--button-color);
   text-decoration: none;
 }
 
 .card__button:hover {
-  background-color: #f3f3f3;
-  color: #00acdc;
+  background-color: var(--border-color);
+  color: var(--button-color);
   transition-duration: 0.3s;
 }
