@@ -1,10 +1,13 @@
-.card {
+* {
   font-family: "Roboto", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   box-sizing: border-box;
+}
+
+.card {
   max-width: 200px;
-  padding: 32px 16px 16px;
+  padding: 32px 16px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: #fff;
@@ -61,7 +64,7 @@
 
   &__button {
     box-sizing: border-box;
-    background-color: #00acdc;
+    background-color: $blue-color;
     text-align: center;
     text-decoration: none;
     padding: 12px 0;
@@ -74,13 +77,12 @@
     width: 100%;
     display: inline-block;
     border: 1px solid transparent;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 
     &:hover {
       background-color: #fff;
-      color: #00acdc;
-      border: 1px solid #00acdc;
-      transition: all 0.3s ease 0s;
+      color: $blue-color;
+      border-color: $blue-color;
     }
   }
 }
