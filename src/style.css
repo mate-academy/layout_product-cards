@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 408px;
+
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
@@ -24,21 +24,16 @@ body {
 }
 
 .card__item-name {
-  width: 166px;
-  height: 36px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   text-align: left;
-  margin-top: 40px;
-  margin-bottom: 0;
+  margin: 40px 16px 0;
 }
 
 .card__code {
   margin: 0;
   margin-top: 4px;
-  width: 98px;
-  height: 14px;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -49,14 +44,15 @@ body {
 }
 
 .card__reviews {
-  margin-top: 16px;
+  margin: 16px 16px 0;
   display: flex;
-  width: 166px;
+  width: calc(100% - 32px);
   justify-content: space-between;
 }
 
 .card__starbar {
   display: flex;
+  justify-self: left;
 }
 
 .card__starbar--0 :nth-child(-n+0),
@@ -89,7 +85,7 @@ body {
 }
 
 .card__price {
-  width: 166px;
+  width: calc(100% - 32px);
   display: flex;
   margin-top: 24px;
   justify-content: space-between;
@@ -113,7 +109,8 @@ body {
 .card__buy {
   box-sizing: border-box;
   margin-top: 16px;
-  width: 166px;
+  margin-bottom: 16px;
+  width: calc(100% - 32px);
   height: 40px;
   padding: 0;
   color: white;
@@ -124,6 +121,8 @@ body {
   text-align: center;
   background-color: rgba(0, 172, 220, 1);
   border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 500ms;
 }
 
 .card__buy:hover {
