@@ -6,14 +6,16 @@
     width: 16px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
 
     &:not(:last-child) {
       margin-right: 4px;
     }
   }
 
-  & :last-child {
-    background-image: url(../images/star.svg);
+  @for $number from 1 through 5 {
+    &--#{$number} :nth-child(-n+#{$number}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
