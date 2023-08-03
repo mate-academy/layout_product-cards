@@ -1,4 +1,4 @@
-html {
+.page {
   font-family: "Roboto", sans-serif;
 }
 
@@ -6,29 +6,6 @@ html {
   margin: 0;
 }
 
-/* #region star*/
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
-/* #endregion star*/
-/* #region card*/
 .card {
   display: flex;
   flex-direction: column;
@@ -85,11 +62,6 @@ html {
   color: #060b35;
 }
 
-.card__price-display {
-  display: flex;
-  justify-content: space-between;
-}
-
 .card__price {
   font-weight: 400;
   font-size: 12px;
@@ -128,3 +100,25 @@ html {
   color: #00acdc;
   border: 1px solid #00acdc;
 }
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  height: 16px;
+  width: 16px;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.stars__star :not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars :nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
+}
+
+/*# sourceMappingURL=style.css.map */
