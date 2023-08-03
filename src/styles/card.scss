@@ -1,0 +1,88 @@
+
+.card {
+  display: flexbox;
+  box-sizing: border-box;
+  width: 200px;
+  padding-inline: 16px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+
+  &__picture {
+    background-image: url(../images/imac.jpeg);
+    height: 134px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: $mainElementsSize;
+    font-weight: 500;
+    line-height: $mainLineHeight;
+    margin-block: 0 4px;
+  }
+
+  &__product-code {
+    font-size: $secondaryElementsSize;
+    line-height: $secondaryLineHeight;
+    color: $secondaryColour;
+    margin-block: 0 16px;
+  }
+
+  &__rating {
+    @include space-between-content;
+
+    margin-bottom: 24px;
+
+    &-text {
+      text-align: right;
+      font-size: $secondaryElementsSize;
+      line-height: $secondaryLineHeight;
+    }
+  }
+
+  &__pricing {
+    @include space-between-content;
+
+    margin-bottom: 16px;
+    line-height: $mainLineHeight;
+
+    &-text {
+      font-size: $mainElementsSize;
+      line-height: $mainLineHeight;
+      color: $secondaryColour;
+    }
+
+    &-price {
+      text-align: right;
+      font-size: 16px;
+      font-weight: $boldFontWeight;
+      line-height: $mainLineHeight;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: $buttonColour;
+    border-radius: 5px;
+    display: flex;
+    font-size: 14px;
+    font-weight: $boldFontWeight;
+    text-transform: uppercase;
+    line-height: 16px;
+    padding-block: 12px;
+    padding-inline: 69px;
+
+    &:hover {
+      color: $buttonColour;
+      background-color: #fff;
+      border: 1px solid $buttonColour;
+    }
+  }
+}
