@@ -11,15 +11,13 @@
   background: #fff;
 
   &__picture {
-    background-image: url(../images/imac.jpeg);
     height: 134px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-bottom: 40px;
+    object-fit: cover;
+    object-position: center;
+    margin-block: 0 40px;
   }
 
-  &__title {
+  &__product-title {
     font-size: $mainElementsSize;
     font-weight: 500;
     line-height: $mainLineHeight;
@@ -36,7 +34,7 @@
   &__rating {
     @include space-between-content;
 
-    margin-bottom: 24px;
+    margin-block: 0 24px;
 
     &-text {
       text-align: right;
@@ -48,7 +46,7 @@
   &__pricing {
     @include space-between-content;
 
-    margin-bottom: 16px;
+    margin-block: 0 16px;
     line-height: $mainLineHeight;
 
     &-text {
@@ -78,11 +76,11 @@
     line-height: 16px;
     padding-block: 12px;
     padding-inline: 69px;
+    border: 1px solid $buttonColour;
 
     &:hover {
       color: $buttonColour;
       background-color: #fff;
-      border: 1px solid $buttonColour;
     }
   }
 }
