@@ -1,20 +1,17 @@
 
 .card {
-  display: flexbox;
+  display: flex;
   box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 200px;
-  padding-inline: 16px;
-  padding-top: 32px;
-  padding-bottom: 16px;
+  padding: 32px 16px 16px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  background: #fff;
 
   &__picture {
-    display: block;
     width: 160px;
     margin: 0 auto 40px;
-    object-position: center;
   }
 
   &__product-title {
@@ -28,13 +25,11 @@
     font-size: $secondaryElementsSize;
     line-height: $secondaryLineHeight;
     color: $secondaryColour;
-    margin-block: 0 16px;
+    margin-block: 0 4px;
   }
 
   &__rating {
     @include space-between-content;
-
-    margin-block: 0 24px;
 
     &-text {
       text-align: right;
@@ -46,7 +41,6 @@
   &__pricing {
     @include space-between-content;
 
-    margin-block: 0 16px;
     line-height: $mainLineHeight;
 
     &-text {
