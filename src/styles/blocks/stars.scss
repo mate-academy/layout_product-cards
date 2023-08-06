@@ -1,17 +1,18 @@
-.stars--4 {
+.stars {
   display: flex;
-  width: 96px;
-  height: 16px;
-}
 
-.stars__star {
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  &__star {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:first-child) {
+    margin-left: 4px;
+  }
 }
 
 .stars--1 :first-child,

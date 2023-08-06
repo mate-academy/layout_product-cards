@@ -1,3 +1,6 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
 .card {
   box-sizing: border-box;
   display: flex;
@@ -5,9 +8,9 @@
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 406px;
+  height: 408px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $white;
 }
 
 img {
@@ -17,7 +20,7 @@ img {
 }
 
 .card__description {
-  @include common-margin;
+  @include common-margins;
 
   width: 166px;
   display: flex;
@@ -32,7 +35,7 @@ img {
     line-height: 18px;
     text-align: left;
     margin: 0 0 4px;
-    color: #060b35;
+    color: $black;
   }
 
   &-p2 {
@@ -40,7 +43,7 @@ img {
     font-weight: 400;
     line-height: 14px;
     text-align: left;
-    color: #616070;
+    color: $gray;
     margin: 0;
     width: 98px;
   }
@@ -58,7 +61,8 @@ img {
     line-height: 16px;
     text-align: right;
     margin: 0;
-    color: #060b35;
+    color: $black;
+    width: 53px;
   }
 }
 
@@ -73,8 +77,9 @@ img {
     font-weight: 400;
     line-height: 18px;
     text-align: left;
-    color: #616070;
+    color: $gray;
     margin: 0;
+    width: 31px;
   }
 
   &-p2 {
@@ -82,8 +87,9 @@ img {
     font-weight: 700;
     line-height: 18px;
     text-align: right;
-    color: #060b35;
+    color: $black;
     margin: 0;
+    width: 50px;
   }
 }
 
@@ -91,7 +97,7 @@ img {
   line-height: 40px;
 
   button {
-    @include common-margin;
+    @include common-margins;
 
     font-size: 14px;
     font-weight: 700;
@@ -100,8 +106,8 @@ img {
     width: 166px;
     height: 40px;
     border-radius: 5px;
-    background: #00acdc;
-    color: #fff;
+    background: $light-blue;
+    color: $white;
     text-transform: uppercase;
     text-decoration: none;
     box-shadow: 0 0 0 1px transparent;
@@ -110,9 +116,9 @@ img {
   }
 
   button:hover {
-    color: #00acdc;
-    border: 1px solid #00acdc;
-    background: #f3f3f3;
-    box-shadow: 0 0 0 1px #00acdc;
+    color: $light-blue;
+    border: 1px solid $light-blue;
+    background: $white;
+    box-shadow: 0 0 0 1px $light-blue;
   }
 }
