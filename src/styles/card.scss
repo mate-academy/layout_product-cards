@@ -1,15 +1,16 @@
 
 .card {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  flex-wrap: wrap;
   width: 200px;
   padding: 32px 16px 16px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   &__picture {
+    height: 134px;
     width: 160px;
     margin: 0 auto 40px;
   }
@@ -19,7 +20,7 @@
     font-weight: 500;
     line-height: $mainLineHeight;
 
-    @include block-distance;
+    margin-bottom: 4px;
   }
 
   &__product-code {
@@ -27,11 +28,13 @@
     line-height: $secondaryLineHeight;
     color: $secondaryColour;
 
-    @include block-distance;
+    margin-bottom: 16px;
   }
 
   &__rating {
     @include space-between-content;
+
+    margin-bottom: 24px;
 
     &-text {
       text-align: right;
@@ -44,6 +47,7 @@
     @include space-between-content;
 
     line-height: $mainLineHeight;
+    margin-bottom: 16px;
 
     &-text {
       font-size: $mainElementsSize;
@@ -65,13 +69,13 @@
     color: #fff;
     background-color: $buttonColour;
     border-radius: 5px;
-    display: flex;
+    height: 40px;
+    box-sizing: border-box;
     font-size: 14px;
     font-weight: $boldFontWeight;
     text-transform: uppercase;
     line-height: 16px;
-    padding-block: 12px;
-    padding-inline: 69px;
+    padding: 12px 0;
     border: 1px solid $buttonColour;
 
     &:hover {
