@@ -1,3 +1,162 @@
+$blue-accent: #00acdc;
+$gray-elements: #f3f3f3;
+$main-accent: #060b35;
+$secondary: #616070;
+$white: #fff;
+$yellow-stars: #ffde6a;
+
+$card-width: 198px;
+$card-height: 406px;
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.card {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+
+  width: $card-width;
+  height: $card-height;
+  flex-shrink: 0;
+
+  border-radius: 5px;
+  border: 1px solid $gray-elements;
+  background: $white;
+
+  &__content {
+    width: 166.4px;
+    padding: 32px 20px 16px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.image {
+  display: block;
+  box-sizing: border-box;
+  background-size: cover;
+  background-image: url(../images/imac.jpeg);
+  background-repeat: no-repeat;
+  width: 160.9px;
+  height: 134px;
+
+  margin-bottom: 40px;
+}
+
+.info {
+  &__header {
+    margin: 0;
+
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__prod-code {
+    margin-top: 4px;
+
+    color: $secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-top: 16px;
+  }
+
+  &__price {
+    margin-top: 24px;
+  }
+}
+
+.reviews {
+  color: $main-accent;
+  text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__numbers {
+    color: $main-accent;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+.rate {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-position: center;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+.star__1 .rate__star:nth-child(-n+1),
+.star__2 .rate__star:nth-child(-n+2),
+.star__3 .rate__star:nth-child(-n+3),
+.star__4 .rate__star:nth-child(-n+4),
+.star__5 .rate__star:nth-child(-n+5) {
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.button {
+  box-sizing: border-box;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 166px;
+  height: 40px;
+  border: 1px solid $blue-accent;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  font-weight: 700;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $blue-accent;
+
+  &:hover {
+    background-color: $white;
+    border: 1px solid $blue-accent;
+    color: $blue-accent;
+  }
 }
