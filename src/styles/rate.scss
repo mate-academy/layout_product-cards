@@ -1,0 +1,23 @@
+
+.rate {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-position: center;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+.star__1 .rate__star:nth-child(-n+1),
+.star__2 .rate__star:nth-child(-n+2),
+.star__3 .rate__star:nth-child(-n+3),
+.star__4 .rate__star:nth-child(-n+4),
+.star__5 .rate__star:nth-child(-n+5) {
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+}
