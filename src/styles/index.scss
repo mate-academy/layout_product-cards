@@ -1,3 +1,158 @@
 body {
   margin: 0;
 }
+
+.card {
+  width: 198px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  position: relative;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+
+  position: absolute;
+  top: 32px;
+  left: 19px;
+}
+
+.card__name {
+  width: 166px;
+  font-size: 12px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+  color: #060b35;
+
+  position: absolute;
+  top: 206px;
+  left: 16px;
+}
+
+.card__code {
+  font-size: 10px;
+  line-height: 14px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #616070;
+
+  position: absolute;
+  top: 246px;
+  left: 16px;
+}
+
+.card__rate {
+  position: absolute;
+  top: 276px;
+  left: 16px;
+
+  display: flex;
+}
+
+.stars {
+  display: flex;
+  margin-right: 20px;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+.review {
+  font-size: 10px;
+  line-height: 14px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #060b35;
+
+  position: relative;
+  top: 2px;
+  left: 2.7px;
+}
+
+.card__price {
+  display: flex;
+
+  position: absolute;
+  top: 317px;
+  left: 17px;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: 85px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #616070;
+
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
+.price {
+  width: 50px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #060b35;
+
+  position: relative;
+  top: -1px;
+}
+
+.card__buy {
+  width: 164px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  text-align: center;
+  line-height: 42px;
+  background-color: #00acdc;
+
+  position: absolute;
+  top: 350px;
+  left: 16px;
+}
+
+.buy {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 69.5px;
+  text-transform: uppercase;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+
+  position: relative;
+  top: -3px;
+  left: -1px;
+}
+
+.card__buy:hover {
+  background-color: #fff;
+}
+
+.buy:hover {
+  color: #00acdc;
+}
