@@ -1,7 +1,10 @@
 @import "./variables.scss";
 @import "./rate.scss";
 @import "./button.scss";
-  
+@import "./card.scss";
+@import "./info.scss";
+@import "./price.scss";
+
 body {
   margin: 0;
   padding: 0;
@@ -10,69 +13,14 @@ body {
   font-style: normal;
 }
 
-.card {
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-
-  width: $card-width;
-  height: $card-height;
-  flex-shrink: 0;
-
-  border-radius: 5px;
-  border: 1px solid $gray-elements;
-  background: $white;
-
-  &__content {
-    width: 166.4px;
-    padding: 32px 20px 16px;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
 
 .image {
   display: block;
-  box-sizing: border-box;
   background-repeat: no-repeat;
   width: 160.9px;
   height: 134px;
 
   margin-bottom: 40px;
-}
-
-.info {
-  &__header {
-    margin: 0;
-
-    color: $main-accent;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-  }
-
-  &__prod-code {
-    margin-top: 4px;
-
-    color: $secondary;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-  }
-
-  &__rate {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-
-    margin-top: 16px;
-  }
-
-  &__price {
-    margin-top: 24px;
-  }
 }
 
 .reviews {
@@ -81,24 +29,4 @@ body {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-}
-
-.price {
-  display: flex;
-  justify-content: space-between;
-
-  &__text {
-    color: $secondary;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-  }
-
-  &__costs {
-    color: $main-accent;
-    text-align: right;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-  }
 }
