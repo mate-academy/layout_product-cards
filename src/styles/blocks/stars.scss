@@ -1,0 +1,26 @@
+.stars {
+  width: $starwidth;
+
+  &__star {
+    background-image: url("../../src/images/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-image: url("../../src/images/star-active.svg");
+    }
+  }
+
+}
+
+@each $star in $starnum {
+  .star-#{$star} {
+    background-image: url("../../src/images/star-active.svg");
+  }
+}
