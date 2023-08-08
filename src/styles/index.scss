@@ -1,3 +1,218 @@
-body {
+html {
+  --font-family: "Roboto", "Helvetica", sans-serif;
+  --color: main-accent, #060b35;
+  --color: secondary, #616070;
+  --color: blue-accent, #00acdc;
+  --color: white, #fff;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 32px 16px 18px;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+}
+
+.card__image {
+  padding: 67px;
+  background: url(../images/imac.jpeg) center no-repeat;
+  background-size: 160px 134px;
+}
+
+.card__name {
+  margin-top: 40px;
+}
+
+.card__text {
+  color: var(--main-accent, #060b35);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.card__code {
+  padding-top: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--secondary, #616070);
+}
+
+.card__review {
+  padding-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 16px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url("../images/star.svg") center no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background: url("../images/star-active.svg") center no-repeat;
+}
+
+.card__result {
+  color: var(--main-accent, #060b35);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.card__price-text {
+  color: var(--secondary, #616070);
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+.card__price-sum {
+  color: var(--main-accent, #060b35);
+  font-size: 16px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.card__button {
+  margin-top: 16px;
+
+}
+
+.card__link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--white, #fff);
+  padding: 12px 0;
+  border-radius: 5px;
+  background: var(--blue-accent, #00acdc);
+}
+
+.card__link:hover {
+  border-radius: 5px;
+  border: 1px solid var(--blue-accent, #00acdc);
+  background: #fff;
+  color: var(--blue-accent, #00acdc);
 }
