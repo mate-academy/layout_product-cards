@@ -1,0 +1,132 @@
+$bodyFont: "Roboto", sans-serif;
+$productCardMarginBottom: 16px;
+$mainColor: #060b35;
+$secondaryColor: #616070;
+
+body {
+  font-family: $bodyFont;
+  margin: 0;
+}
+
+.product-card {
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 406px;
+  margin: auto;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.product-card__photo {
+  margin: 32px 19px 40px;
+  height: 134px;
+  width: 160px;
+  align-items: center;
+  justify-content: center;
+
+  .product-card__img {
+    width: 160px;
+    height: 134px;
+  }
+}
+
+.product-card__article {
+  margin: 0 $productCardMarginBottom 4px $productCardMarginBottom;
+  line-height: 18px;
+
+  .product-card__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $mainColor;
+    text-decoration: none;
+  }
+}
+
+.product-card__code {
+  display: flex;
+  align-items: baseline;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0 0 $productCardMarginBottom $productCardMarginBottom;
+  color: $secondaryColor;
+}
+
+.stars {
+  display: flex;
+  margin: 0 $productCardMarginBottom 24px $productCardMarginBottom;
+  align-items: center;
+
+  .stars__star {
+    height: 16px;
+    width: 16px;
+    background: url("../src/images/star.svg") no-repeat 0 0 / contain;
+  }
+
+  .stars__star:nth-child(-n + 4) {
+    background-image: url("../src/images/star-active.svg");
+  }
+
+  .stars__star:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.stars__review {
+  text-decoration: none;
+  margin-left: 17px;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $mainColor;
+}
+
+.product-card__price-title {
+  display: flex;
+  margin: 0 $productCardMarginBottom;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $secondaryColor;
+
+  .product-card__price {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 85px;
+    font-weight: 700;
+    color: $mainColor;
+  }
+}
+
+.product-card__buy {
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #00acdc;
+  margin: $productCardMarginBottom;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  .product-card__buy-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.product-card__buy:hover {
+  border: 1px solid #00acdc;
+  background-color: transparent;
+  
+  .product-card__buy-link {
+    color: #00acdc;
+  }
+}
