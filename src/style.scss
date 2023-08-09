@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+$Font: roboto, arial, helvetica, sans-serif;
+$mainColor: #060b35;
+$secondaryColor: #616070;
+$buttonCollor: #00acdc;
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px 16px 16px;
+  }
+
+  &__img {
+    margin-left: 3px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-family: $Font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%;
+    font-style: normal;
+    color: $mainColor;
+    margin-top: 40px;
+  }
+
+  &__subtitle {
+    font-family: $Font;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    color: $secondaryColor;
+    margin-top: 4px;
+  }
+
+  &__button {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 166px ;
+    height: 40px;
+    background-color: $buttonCollor;
+    border: 1px solid $buttonCollor;
+    border-radius: 5px;
+    margin-top: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-family: $Font;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__button:hover {
+    color: $buttonCollor;
+    background-color: #fff;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__star {
+    background: url(images/star.svg) no-repeat center;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(images/star-active.svg);
+  }
+
+  &__reviews {
+    font-family: $Font;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: $mainColor;
+  }
+}
+
+.price {
+  margin-top: 24px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__description {
+    font-family: $Font;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: $secondaryColor;
+  }
+
+  &__number {
+    font-family: $Font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    color: $mainColor;
+  }
+}
