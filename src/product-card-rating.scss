@@ -1,0 +1,19 @@
+.product-card__rating {
+  display: flex;
+  margin: 0 $productCardMargin 24px $productCardMargin;
+  align-items: center;
+
+  .product-card__star {
+    height: 16px;
+    width: 16px;
+    background: url("../src/images/Star.svg") no-repeat 0 0 / contain;
+  }
+
+  .product-card__star:nth-child(-n + 4) {
+    background-image: url("../src/images/star-active.svg");
+  }
+
+  .product-card__star:not(:last-child) {
+    margin-right: 4px;
+  }
+}
