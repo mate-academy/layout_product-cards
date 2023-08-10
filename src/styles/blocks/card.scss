@@ -2,19 +2,26 @@
   display: flex;
   flex-direction: column;
   width: $default-card-width;
-  padding: 32px 19px 16px 19px;
+  padding: 32px 16px 16px 16px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
 
   &--centered {
     margin: auto;
   }
 
-  &__image {
-    background-image: url(../images/imac.jpeg);
-    background-position: center;
-    background-size: cover;
+  &__image-container {
+    margin: auto;
     width: $default-picture-width;
     height: $default-picture-height;
     margin-bottom: 40px;
+
+    & {
+      background-image: url(../images/imac.jpeg);
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
   }
 
   &__title {
@@ -34,8 +41,9 @@
   }
 
   &__reviews {
-    @include onFlex;
+    display: flex;
     justify-content: space-between;
+    align-items:flex-end;
     margin-bottom: 24px;
 
     &-count {
@@ -77,6 +85,7 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
+    text-transform: uppercase;
 
     &:hover {
       background-color: #fff;
