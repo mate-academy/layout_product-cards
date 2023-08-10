@@ -1,12 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 body {
   margin: 0;
   font-family: "Roboto", Helvetica, sans-serif;
   background-color: #f3f3f3;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
 }
 
 .card {
+  box-sizing: border-box;
   width: 200px;
   height: 408px;
   border: 1px solid #f3f3f3;
@@ -15,14 +24,16 @@ body {
 }
 
 .card__container {
-  margin: 0 17px;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 32px 16px 16px;
 }
 
 .card__image {
+  margin-left: 3px;
   width: 160px;
   height: 134px;
-  margin: 33px auto;
 }
 
 .card__item {
@@ -30,25 +41,94 @@ body {
   font-weight: 500;
   line-height: 18px;
   color: #060b35;
+  margin-top: 40px;
 }
 
 .card__code {
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
   color: #616070;
+  margin-top: 4px;
 }
 
-.card__rewiew {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
+.card__button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 16px;
 }
 
-.card .stars__star {
+.card__button:hover {
+  background-color: white;
+  color: #00acdc;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.stars__container {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__stars {
   width: 16px;
   height: 16px;
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars__rewiew {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-item {
+  font-size: 12px;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #060b35;
 }/*# sourceMappingURL=index.css.map */
