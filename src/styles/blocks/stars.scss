@@ -2,23 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
-  margin-bottom: 24px;
-
-  &__container {
-    display: flex;
-  }
 
   &__star {
     width: 16px;
     height: 16px;
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
     background-position: center;
+    background-repeat: no-repeat;
   }
 
-  &__star:not(:last-child) {
-    margin-right: 4px;
+  &__star:not(:first-child) {
+    margin-left: 4px;
+  }
+
+  &__star:nth-child(-n+1),
+  &__star:nth-child(-n+2),
+  &__star:nth-child(-n+3),
+  &__star:nth-child(-n+4),
+  &stars--4 &__star:nth-child(-n+5) {
+    background-image: url(../images/star-active.svg);
   }
 
   &__rewiew {
@@ -26,8 +28,4 @@
     line-height: 14px;
     color: $main-color;
   }
-}
-
-.star-silver {
-  background-image: url(../images/star.svg);
 }
