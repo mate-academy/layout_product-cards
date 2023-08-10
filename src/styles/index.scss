@@ -9,10 +9,6 @@ html {
 html,
 body,
 div,
-span,
-applet,
-object,
-iframe,
 h1,
 h2,
 h3,
@@ -20,83 +16,14 @@ h4,
 h5,
 h6,
 p,
-blockquote,
-pre,
 a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
 img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+var {
   margin: 0;
 }
 
 body {
   font-family: var(--font-family);
-}
-
-.container {
-  display: flex;
-  justify-content: center;
 }
 
 .card {
@@ -105,20 +32,17 @@ body {
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  background: #fff;
 }
 
 .card__image {
-  padding: 67px;
-  background: url(../images/imac.jpeg) center no-repeat;
-  background-size: 160px 134px;
-}
-
-.card__name {
-  margin-top: 40px;
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  height: 134px;
 }
 
 .card__text {
+  margin-top: 40px;
   color: var(--main-accent, #060b35);
   font-size: 12px;
   font-style: normal;
@@ -127,18 +51,17 @@ body {
 }
 
 .card__code {
-  padding-top: 4px;
+  margin-top: 4px;
   font-size: 10px;
   font-weight: 400;
   color: var(--secondary, #616070);
 }
 
 .card__review {
-  padding-top: 17px;
+  margin-top: 17px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 16px;
 }
 
 .stars {
@@ -187,20 +110,15 @@ body {
   color: var(--main-accent, #060b35);
   font-size: 16px;
   line-height: 18px;
-  font-style: normal;
   font-weight: 700;
 }
 
-.card__button {
-  margin-top: 16px;
-
-}
-
 .card__link {
-  display: block;
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
+  margin-top: 16px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
