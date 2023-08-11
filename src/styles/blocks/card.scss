@@ -1,0 +1,79 @@
+.card {
+  width: 200px;
+  border: 1px solid $background-color;
+  border-radius: 5px;
+  background-color: white;
+
+  &__container {
+    @include common-margins;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+
+  &__image {
+    margin-left: 3px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__item {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $main-color;
+    margin-top: 40px;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+    margin-top: 4px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__price-item {
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary-color;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $main-color;
+  }
+
+  &__button {
+    @include upper-margins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in;
+  }
+
+  &__button:hover {
+    background-color: white;
+    color: $button-color;
+  }
+}
