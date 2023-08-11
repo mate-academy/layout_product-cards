@@ -10,18 +10,12 @@
     margin: auto;
   }
 
-  &__image-container {
+  &__image {
+    display: block;
     margin: auto;
-    width: $default-picture-width;
-    height: $default-picture-height;
+    width: 160px;
+    height: 134px;
     margin-bottom: 40px;
-
-    & {
-      background-image: url(../images/imac.jpeg);
-      background-size:contain;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
   }
 
   &__title {
@@ -33,6 +27,7 @@
   }
 
   &__code {
+    @include onBlockDisplay;
     font-weight: $default-font-weight;
     font-size: 10px;
     line-height: 14px;
@@ -47,6 +42,7 @@
     margin-bottom: 24px;
 
     &-count {
+      @include onBlockDisplay;
       font-weight: $default-font-weight;
       font-size: 10px;
       line-height: 14px;
@@ -60,6 +56,7 @@
     margin-bottom: 16px;
 
     &-label {
+      @include onBlockDisplay;
       font-weight: $default-font-weight;
       font-size: 12px;
       line-height: 18px;
@@ -67,6 +64,7 @@
     }
 
     &-num {
+      @include onBlockDisplay;
       font-weight: 700;
       font-size: 16px;
       line-height: 18px;
