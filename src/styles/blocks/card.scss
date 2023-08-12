@@ -1,0 +1,84 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: $color-bg-primary;
+  border: 1px solid #f3f3f3;
+
+  &__media {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__content {
+    padding: 16px;
+    margin: 0;
+  }
+
+  &__title {
+    @include basicTextStyle(500, 12px, 18px);
+    color: $color-text-primary;
+  }
+
+  &__artcode {
+    @include basicTextStyle(400,10px,14px);
+    margin-top: 4px;
+    color: $color-text-secondary;
+  }
+
+  &__rating {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-reviews {
+      @include basicTextStyle(400,10px,14px);
+      color: $color-text-primary;
+    }
+  }
+
+  &__price {
+    @include basicTextStyle(400,12px,18px);
+    margin-top: 24px;
+    color: $color-text-secondary;
+    display: flex;
+    justify-content: space-between;
+
+    &-cost {
+      @include basicTextStyle(700,16px,18px);
+      color: $color-text-primary;
+    }
+  }
+
+  &__buy {
+    @include basicTextStyle(700,14px,16px);
+    background-color: $color-button;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 16px;
+    color: $color-bg-primary;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $color-bg-primary;
+      color: $color-button;
+      border: 1px solid $color-button;
+    }
+  }
+}
