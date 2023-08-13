@@ -1,0 +1,100 @@
+.card {
+  margin-left: 824px; /* without this margin test dosen't work */
+
+  &__content {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 32px 16px 16px;
+
+    border-radius: 5px;
+    border: 1px solid $gray-elements;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__header {
+    margin: 0;
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__prod-code {
+    margin: 4px 0 0;
+
+    color: $secondary;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &-review {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include contentMarginTop;
+
+    &__count {
+      font-size: 10px;
+      line-height: 14px;
+      margin: 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    &-label {
+      color: $secondary;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+      margin: 0;
+    }
+
+    &-value {
+      color: $main-accent;
+      text-align: right;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+
+      margin: 0;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    @include contentMarginTop;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+    height: 40px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: $white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $blue-accent;
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $blue-accent;
+      color: $blue-accent;
+    }
+  }
+}
