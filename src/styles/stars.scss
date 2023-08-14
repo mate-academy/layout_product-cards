@@ -1,0 +1,21 @@
+@for $i from 1 through 5 {
+  .stars--#{$i} :nth-child(-n + #{$i}) {
+    background-image: url("../images/star-active.svg");
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url("../images/star.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+}
