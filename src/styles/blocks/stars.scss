@@ -1,26 +1,25 @@
 .stars {
-  width: $starwidth;
+  display: flex;
+  column-gap: 2.66px;
 
-  &__star {
-    background-image: url("../../src/images/star.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
+  @for $star from 1 through $starcount {
+    &__star:nth-child(#{$star}) {
+      background-image: url("../../src/images/star.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
 
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      background-image: url("../../src/images/star-active.svg");
+      &:hover {
+        background-image: url("../../src/images/star-active.svg");
+      }
     }
   }
 
 }
 
-@each $star in $starnum {
-  .star-#{$star} {
+@for $star from 1 through $starnum {
+  .star:nth-child(#{$star}) {
     background-image: url("../../src/images/star-active.svg");
   }
 }
