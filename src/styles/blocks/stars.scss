@@ -1,0 +1,25 @@
+.stars {
+  display: flex;
+  column-gap: 2.66px;
+
+  @for $star from 1 through $starcount {
+    &__star:nth-child(#{$star}) {
+      background-image: url("../../src/images/star.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+
+      &:hover {
+        background-image: url("../../src/images/star-active.svg");
+      }
+    }
+  }
+
+}
+
+@for $star from 1 through $starnum {
+  .star:nth-child(#{$star}) {
+    background-image: url("../../src/images/star-active.svg");
+  }
+}
