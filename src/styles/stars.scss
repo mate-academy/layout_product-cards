@@ -1,0 +1,23 @@
+.product-card__stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .product-card__star {
+    height: 16px;
+    width: 16px;
+    background: url(../images/star.svg) no-repeat 0 0 / contain;
+  }
+
+  &:not(.product-card__stars--0) {
+    .product-card__star:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &.product-card__stars--#{$i} .product-card__star:nth-child(-n + #{$i}) {
+      background: url(../images/star-active.svg) no-repeat 0 0 / contain;
+    }
+  }
+}
