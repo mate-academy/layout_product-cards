@@ -4,6 +4,9 @@ html {
 
 :root {
   --main-bg-color: #060b35;
+  --white-bg-color: #f3f3f3;
+  --blue-bg-color: #00acdc;
+  --silver-bg-color: #616070;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
   flex-direction: column;
   width: 198px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid var(--white-bg-color);
 }
 
 .card__image {
@@ -42,8 +45,7 @@ body {
 }
 
 .card__description {
-  color: #616070;
-  font-weight: 400;
+  color: var(--silver-bg-color);
   font-size: 10px;
   line-height: 14px;
   padding-left: 16px;
@@ -74,7 +76,11 @@ body {
   margin-right: 4px;
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(images/star-active.svg);
 }
 
@@ -84,7 +90,6 @@ body {
   margin-left: auto;
   margin-top: -17px;
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
   padding-right: 16px;
 }
@@ -95,16 +100,15 @@ body {
   width: 166px;
 }
 
-.priceTEXT {
+.card__text {
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
-  color: #616070;
+  color: var(--silver-bg-color);
   padding-left: 16px;
   margin-top: 24px;
 }
 
-.price {
+.card__sum {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -120,10 +124,10 @@ body {
   width: 166px;
   height: 40px;
   border-radius: 5px;
-  background-color: #00acdc;
+  background-color: var(--blue-bg-color);
   border: none;
   padding-bottom: 16px;
-  color: #f3f3f3;
+  color: var(--white-bg-color);
   font-size: 14px;
   font-weight: 700;
   line-height: 40px;
@@ -133,6 +137,6 @@ body {
 
 .card__button:hover {
   background-color: white;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  border: 1px solid var(--blue-bg-color);
+  color: var(--blue-bg-color);
 }
