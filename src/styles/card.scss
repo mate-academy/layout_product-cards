@@ -1,77 +1,86 @@
 .card {
   box-sizing: border-box;
-  width: 200px;
-  background-color: #fff;
+  width: $card-width;
   border-radius: 5px;
-  border: 1px solid rgba(243, 243, 243, 1);
+  border: 1px solid $border-color;
+  padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 16px 16px;
 
   &__img {
     width: 160px;
     height: 134px;
   }
+
   &__info {
-    margin-top: 40px;
+    margin: 40px 0 16px;
   }
 
   &__info-title {
-    font-weight: 500;
     font-size: 12px;
+    font-weight: 500;
     line-height: 18px;
+    color: $main-color;
   }
 
   &__info-code {
     font-size: 10px;
     line-height: 14px;
-    color: #616070;
+    color: $secondary-color;
     margin: 4px 0 16px;
+  }
+
+  &__info-stars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__info-reviews {
     font-size: 10px;
     line-height: 14px;
+    color: $main-color;
   }
 
   &__price {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 23px 0 16px;
+    align-items: center;
+    margin-top: 24px;
   }
 
   &__price-text {
     font-size: 12px;
-    color: rgba(97, 96, 112, 1);
     line-height: 18px;
-
+    color: $secondary-color;
   }
 
   &__price-num {
     font-size: 16px;
     font-weight: 700;
-
+    line-height: 18px;
+    color: $main-color;
   }
 
   &__buy {
-    text-decoration: none;
-    color: #fff;
     font-size: 14px;
-    line-height: 16px;
     font-weight: 700;
+    line-height: 16px;
+    color: #fff;
     text-transform: uppercase;
-    background-color: #00acdc;
-    padding: 12px 70px;
+    text-decoration: none;
+
+    background-color: $button-color;
     border-radius: 5px;
+    padding: 12px 70px;
+    transition: background-color 0.5s ease;
   }
 
   &__buy:hover {
+    border: 1px solid $button-color;
     background-color: #fff;
-    color: #00acdc;
-    border: 1px solid #00acdc;
+    color: $button-color;
     padding: 11px 69px;
-    transition: 0.4s ease-out;
   }
 }
