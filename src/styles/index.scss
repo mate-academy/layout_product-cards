@@ -41,7 +41,7 @@ body {
     color: var(--main-accent);
     font-family: "Roboto", sans-serif;
     font-size: 12px;
-    font-style: normal;
+
     font-weight: 500;
     line-height: 18px;
     margin: 40px 0 4px;
@@ -51,24 +51,23 @@ body {
     color: var(--secondary);
     font-family: "Roboto", sans-serif;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
     margin: 0;
   }
 
   &-rate-quantity {
-    color: var(--main-accent, #060b35);
-    font-family: "Roboto", sans-serif;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
     display: flex;
     height: 16px;
     flex-direction: column;
-    justify-content: flex-end;
-    flex-shrink: 0;
+    justify-content: center;
+  }
+
+  &-rate-quantity-text {
+    color: var(--main-accent);
+    text-align: right;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    line-height: 14px;
   }
 
   &-price {
@@ -82,8 +81,6 @@ body {
     color: var(--secondary, #616070);
     font-family: "Roboto", sans-serif;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 18px;
   }
 
@@ -92,7 +89,6 @@ body {
     text-align: right;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 18px;
   }
@@ -108,35 +104,33 @@ body {
     border-radius: 5px;
     border: 1px solid var(--blue-accent, #00acdc);
     cursor: pointer;
-  }
 
-  &-buy-link {
-    color: var(--white, #00acdc);
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
+    &-link {
+      color: var(--white, #00acdc);
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
 
-  &-buy-link:hover {
-    color: var(--blue-accent, #fff);
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
+      &:hover {
+        color: var(--blue-accent, #fff);
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+      }
+    }
 
-  &-buy:hover {
-    border-radius: 5px;
-    background: var(--white, #00acdc);
-    border: 1px solid var(--blue-accent);
+    &:hover {
+      border-radius: 5px;
+      background: var(--white, #00acdc);
+      border: 1px solid var(--blue-accent);
+    }
   }
 }
 
@@ -163,13 +157,9 @@ body {
   }
 
   &--5 &__star,
-
   &--4 &__star:nth-child(-n+4),
-
   &--3 &__star:nth-child(-n+3),
-
   &--2 &__star:nth-child(-n+2),
-
   &--1 &__star:nth-child(-n+1) {
     background-image: url(../images/star-active.svg);
   }
