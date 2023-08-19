@@ -76,20 +76,34 @@ body {
     height: 40px;
     border-radius: $border-radius;
     background-color: $color-blue;
-    border: none;
     font-size: 14px;
     font-weight: 700;
     line-height: 40px;
     color: $color-white;
     align-items: center;
     justify-content: center;
+    border: 1px solid $color-blue;
+    box-sizing: border-box;
+
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
   }
 
-  &__button:hover {
-    box-sizing: border-box;
-    border-radius: $border-radius;
-    border: 1px solid $color-blue;
-    color: $color-blue;
-    background-color: $color-white;
+  &__block-stars {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 24px;
+  }
+
+  &__reviews {
+    margin: 0;
+    color: #060b35;
+    display: flex;
+    font-size: 10px;
+    line-height: $line-height-14;
   }
 }
