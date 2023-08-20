@@ -23,7 +23,6 @@ body {
     align-self: center;
     width: 160px;
     height: 134px;
-    // margin: 0;//
   }
 
   &__container {
@@ -55,7 +54,7 @@ body {
 
   }
 
-  &__numberOfStars {
+  &__number-stars {
     color: $main-color;
     text-align: right;
     font-size: 10px;
@@ -72,7 +71,7 @@ body {
     margin-top: 24px;
     margin-bottom: 16px;
 
-    &Product {
+    &-product {
       color: $secondary-color;
       font-size: 12px;
       font-weight: 400;
@@ -80,7 +79,7 @@ body {
       margin: 0;
     }
 
-    &The-price {
+    &-price {
       color: $main-color;
       text-align: right;
       font-size: 16px;
@@ -91,10 +90,7 @@ body {
   }
 
   &__button {
-    display: flex;
     height: 40px;
-    align-items: center;
-    justify-content: center;
 
     border-radius: 5px;
     background: #00acdc;
@@ -106,12 +102,18 @@ body {
     }
 
     &-link {
+      display: flex;
       color: #fff;
       font-size: 14px;
+      height: 100%;
+      width: 100%;
+
+      align-items: center;
+      justify-content: center;
 
       text-decoration: none;
       font-weight: 700;
-      line-height: 16px; /* 114.286% */
+      line-height: 16px;
       text-transform: uppercase;
 
       &:hover {
@@ -139,7 +141,13 @@ body {
     margin-right: 0;
   }
 
-  &--4 > .stars__star:nth-child(-n + 4) {
+  .stars--1 > .stars__star:nth-child(0),
+  .stars--1 > .stars__star:first-child,
+  .stars--2 > .stars__star:nth-child(-n + 2),
+  .stars--3 > .stars__star:nth-child(-n + 3),
+  .stars--4 > .stars__star:nth-child(-n + 4),
+  .stars--5 > .stars__star:nth-child(-n + 5) {
     background-image: url(images/star-active.svg);
   }
+
 }
