@@ -1,0 +1,87 @@
+.card {
+  width: 200px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 0;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 0 3px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-color-font;
+    margin-top: 40px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $second-color-font;
+  }
+
+  &__rate {
+    @include space;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__rewiews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $main-color-font;
+    margin-left: 13px;
+  }
+
+  &__price {
+    @include space;
+    margin-bottom: 16px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $second-color-font;
+    }
+
+    &-amount {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-color-font;
+    }
+  }
+
+  &__button {
+    display: flex;
+    background-color: $button-color;
+    border: none;
+    color: $background-color;
+    width: 100%;
+    text-transform: uppercase;
+    height: 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    justify-content: center;
+
+    &:hover {
+      color: $button-color;
+      border: 1px solid $button-color;
+      background-color: $background-color;
+    }
+  }
+}
