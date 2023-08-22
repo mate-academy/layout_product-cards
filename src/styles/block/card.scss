@@ -4,6 +4,7 @@
   background: #fff;
   padding: 32px 16px 16px;
   width: 200px;
+
   &__image {
     display: block;
     margin: 0 auto 40px;
@@ -12,7 +13,7 @@
   }
 
   &__title {
-    margin: 0 0 4px;
+    margin-bottom: 4px;
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
@@ -24,20 +25,20 @@
   }
 
   &__box-rating {
-    @include flex;
-    align-items: flex-end;
+    @include flex($align: flex-end, $justify: space-between);
     margin-bottom: 24px;
   }
 
   &__price {
-    @include flex;
+    @include flex($align: center, $justify: space-between);
     margin-bottom: 16px;
-    align-items: center;
+
     &-value {
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
     }
+
     &-txt {
       font-size: 12px;
       line-height: 18px;
@@ -46,10 +47,8 @@
   }
 
   &_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
+    @include flex($align: center, $justify: center);
+    padding: 12px 0;
     border: 1px solid $main-button;
     border-radius: 5px;
     font-size: 14px;
@@ -59,6 +58,7 @@
     text-decoration: none;
     text-transform: uppercase;
     background-color: $main-button;
+
     &:hover {
       border: 1px solid $main-button;
       color: $main-button;
