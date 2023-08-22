@@ -1,0 +1,25 @@
+@use "./utils/variables";
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: $url-star;
+    margin-right: 4px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--#{$stars-count} :nth-child(-n + #{$stars-count}) {
+    background-image: $url-star-active;
+  }
+
+  &-reviews {
+    color: $text-color-first;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}

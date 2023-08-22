@@ -1,31 +1,6 @@
-$url-star: url(./images/star.svg);
-$url-star-active: url(./images/star-active.svg);
-$text-color-first: #060b35;
-$text-color-second: #616070;
-$blue-color: #00acdc;
-$white-color: #fff;
-$light-grey: #f3f3f3;
-$stars-count: 4;
-
-html {
-  --url-star: #{$url-star};
-  --url-star-active: #{$url-star-active};
-  --text-color-first: #{$text-color-first};
-  --text-color-second: #{$text-color-second};
-  --blue-color: #{$blue-color};
-  --white-color: #{$white-color};
-  --light-grey: #{$light-grey};
-  --stars-count: #{$stars-count};
-}
-
-body {
-  margin: 0;
-  background-color: $white-color;
-  font-family: Roboto, Arial, sans-serif;
-}
+@use "./utils/variables";
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   background-color: $white-color;
   border-radius: 5px;
@@ -99,37 +74,11 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: bold;
   }
 
   &__button:hover {
     background: $white-color;
     color: $blue-color;
     border: 1px solid $blue-color;
-    box-sizing: border-box;
-  }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    background: $url-star;
-    margin-right: 4px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  &--#{$stars-count} :nth-child(-n + #{$stars-count}) {
-    background-image: $url-star-active;
-  }
-
-  &-reviews {
-    color: $text-color-first;
-    text-align: right;
-    font-size: 10px;
-    font-weight: 400;
   }
 }
