@@ -1,0 +1,67 @@
+.card {
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  padding: 32px 16px 16px;
+  width: 200px;
+
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__code {
+    color: $secondary;
+    margin: 0 0 16px;
+  }
+
+  &__box-rating {
+    @include flex($align: flex-end, $justify: space-between);
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    @include flex($align: center, $justify: space-between);
+    margin-bottom: 16px;
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    &-txt {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+    }
+  }
+
+  &_button {
+    @include flex($align: center, $justify: center);
+    padding: 12px 0;
+    border: 1px solid $main-button;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $main-button;
+
+    &:hover {
+      color: $main-button;
+      background-color: transparent;
+    }
+  }
+}
