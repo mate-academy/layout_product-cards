@@ -1,19 +1,17 @@
-@use "./utils/variables";
-
 .stars {
   display: flex;
 
   &__star {
     width: 16px;
     height: 16px;
-    background: $url-star;
+    background: url(../images/star.svg);
     margin-right: 4px;
     background-size: cover;
     background-position: center;
   }
 
   &--#{$stars-count} :nth-child(-n + #{$stars-count}) {
-    background-image: $url-star-active;
+    background-image: url(../images/star-active.svg);
   }
 
   &-reviews {
