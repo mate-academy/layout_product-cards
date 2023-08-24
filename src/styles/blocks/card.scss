@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+  box-sizing: border-box;
+  width: $card-width;
+  padding: $card-padding;
+  line-height: 18px;
+  color: $card-text-color;
+
+  &__product-img {
+    align-self: center;
+    display: block;
+    @include resetMargin(margin-bottom, 40px);
+    height: $card-img-height;
+    width: $card-img-width;
+  }
+
+  &__title {
+    @include resetMargin(margin, 0 0 4px);
+    font-size: $card-font-size-title;
+    font-weight: 500;
+  }
+
+  &__product-code {
+    @include resetMargin(margin, 0 0 16px);
+    font-size: $card-font-size-product-description;
+    line-height: $card-line-height;
+    color: $card-sub-text-color;
+  }
+
+  &__stars {
+    @include flex-space-between;
+    @include resetMargin(margin-bottom, 24px);
+  }
+
+  &__price {
+    @include flex-space-between;
+    @include resetMargin(margin-bottom, 16px);
+  }
+
+  &__reviews {
+    @include resetMargin(margin, 0);
+    font-size: $card-font-size-product-description;
+    line-height: $card-line-height;
+  }
+
+  &-price-text {
+    @include resetMargin(margin, 0);
+    font-size: $card-font-size-title;
+    color: $card-sub-text-color;
+  }
+
+  &-price-amount {
+    @include resetMargin(margin, 0);
+    font-size: $card-font-size-amount;
+    font-weight: $font-weight-bold;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $card-font-size-link;
+    line-height: 16px;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $card-link-text-color;
+    background-color: $card-link-background-color;
+    border: 1px solid $card-link-background-color;
+    border-radius: $card-border-radius;
+    height: 40px;
+
+    &:hover {
+      background-color: $card-link-text-color;
+      color: $card-link-background-color;
+    }
+  }
+}
