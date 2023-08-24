@@ -1,0 +1,118 @@
+$card-width: 200px;
+$card-img-width: 160px;
+$card-img-height: 134px;
+$card-main-color: #060b35;
+$card-second-color: #616070;
+$card-btn-color: #00acdc;
+$card-border-color: #f3f3f3;
+$stars-count: 5;
+
+.card {
+  font-family: inherit;
+  background-color: #fff;
+  width: $card-width;
+  padding: 32px 16px 16px;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    width: $card-img-width;
+    height: $card-img-height;
+  }
+
+  &__title {
+    color: $card-main-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $card-second-color;
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    .stars {
+      display: flex;
+
+      &__star {
+        width: 16px;
+        height: 16px;
+        background-image: url(./../images/star.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &__star:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+
+    @for $i from 1 through $stars-count {
+      .stars--#{$i} :nth-child(-n+#{$i}) {
+        background-image: url(./../images/star-active.svg);
+      }
+    }
+
+    .reviews {
+      color: $card-main-color;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-title {
+      color: $card-second-color;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-amount {
+      color: $card-main-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__buy-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: $card-btn-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__buy-btn:hover {
+    color: $card-btn-color;
+    background-color: #fff;
+    border: 1px solid $card-btn-color;
+  }
+}
