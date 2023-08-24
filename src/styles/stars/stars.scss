@@ -1,6 +1,5 @@
 .stars {
   display: flex;
-  font-family: Roboto, sans-serif;
 
   &__star {
     height: $star-size;
@@ -11,8 +10,9 @@
     list-style: none;
   }
 
-  &__star:nth-child(-n + 4) {
-    margin-right: 4px;
-    background-image: url(../images/star-active.svg);
+  @for $active-stars from 1 through 5 {
+    &--#{$active-stars}>:nth-child(-n + #{$active-stars}) {
+      background-image: url(../../images/star-active.svg);
+    }
   }
 }
