@@ -1,0 +1,114 @@
+* {
+  --main-accent: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+}
+
+.card {
+  font-family: "Roboto", "Arial", sans-serif;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    display: flex;
+    padding: 32px 19px 0;
+
+    &-image {
+      max-width: 100%;
+      max-height: 134px;
+      height: 100%;
+    }
+  }
+}
+
+.info {
+  padding: 40px 16px 16px;
+
+  &__title {
+    margin: 0;
+    color: var(--main-accent);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__code {
+    margin-top: 4px;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &__reviews {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+      color: var(--main-accent);
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-value {
+      color: var(--main-accent);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    &-label {
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  &__buy {
+    text-align: center;
+    line-height: 38px;
+    box-sizing: border-box;
+    border: 1px solid var(--blue-accent);
+    border-radius: 5px;
+    margin-top: 16px;
+    height: 40px;
+    background: var(--blue-accent);
+
+    &-link {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    &-link:link {
+      color: #fff;
+    }
+
+    &-link:visited {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      & .info__buy-link {
+        color: var(--blue-accent);
+      }
+    }
+  }
+}
