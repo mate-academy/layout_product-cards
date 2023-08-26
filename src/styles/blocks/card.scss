@@ -1,0 +1,85 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+
+  @include border($background-color-secondary);
+  background: $background-color-primary;
+
+  &__img {
+    height: 134px;
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  &__content {
+    margin: 0 16px;
+  }
+
+  &__title {
+    color: $text__color-primary;
+    @include basicTextStyles(500, 12px, 18px);
+    margin-top: 40px;
+  }
+
+  &__artcode {
+    color: $text__color-secondary;
+    @include basicTextStyles(400, 10px, 14px);
+    margin-top: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    &-reviews {
+      color: $text__color-primary;
+      @include basicTextStyles(400, 10px,14px);
+    }
+  }
+
+  &__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__price {
+    color: $text__color-secondary;
+    @include basicTextStyles(400, 12px, 18px);
+
+    &-cost {
+      color: $text__color-primary;
+      @include basicTextStyles(700, 16px, 18px);
+    }
+  }
+
+  &__buy {
+    @include basicTextStyles(700, 14px, 16px);
+    color: $button__color-secondary;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: $button__color-primary;
+    height: 40px;
+    width: 166px;
+    margin-top: 16px;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $background-color-primary;
+      color: $button__color-primary;
+      @include border($button__color-primary);
+    }
+  }
+}
