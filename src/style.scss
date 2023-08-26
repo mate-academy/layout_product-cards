@@ -7,15 +7,15 @@ body {
 .container {
   width: 200px;
   height: 408px;
+  border-radius: 5px;
   border: 1px solid #f3f3f3;
   background-color: #f3f3f3;
-  border-radius: 5px;
   position: relative;
   text-align: center;
   overflow: hidden;
 
-  .container__card {
-    position: relative;
+  [data-qa="card"] {
+    padding: 16px;
 
     .card__image {
       width: 160px;
@@ -31,8 +31,7 @@ body {
     }
 
     .card__title {
-      margin-top: 40px;
-      padding: 0 16px;
+      margin: 16px 0;
       font-family: Roboto, sans-serif;
       font-size: 12px;
       font-weight: 500;
@@ -42,26 +41,19 @@ body {
     }
 
     .product-code {
-      width: 98px;
-      height: 14px;
-      position: absolute;
-      margin-top: 0;
-      left: 17px;
-      font-family: Roboto, sans-serif;
       font-size: 10px;
       font-weight: 400;
       line-height: 14px;
       text-align: left;
       color: #616070;
+      margin-bottom: 16px;
     }
 
     .reviews {
-
-      position: absolute;
-      margin-top: 34px;
-      left: 16px;
       display: flex;
       align-items: center;
+      justify-content: center;
+      margin-top: 12px;
 
       .reviews__stars {
         display: flex;
@@ -76,27 +68,21 @@ body {
       }
 
       .reviews__text {
-        margin-left: 8px;
-        font-family: Roboto, sans-serif;
         font-size: 10px;
         font-weight: 400;
         line-height: 14px;
         text-align: center;
+        margin-left: 8px;
       }
     }
 
     .price {
-      width: 166px;
-      height: 18px;
-      position: absolute;
-      margin-top: 74px;
-      left: 16px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
 
       .price_label {
-        font-family: Roboto, sans-serif;
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
@@ -105,7 +91,6 @@ body {
       }
 
       .price_value {
-        font-family: Roboto, sans-serif;
         font-size: 16px;
         font-weight: 700;
         line-height: 18px;
@@ -115,20 +100,19 @@ body {
     }
 
     .button {
-      width: 166px;
-      height: 40px;
-      position: absolute;
-      margin-top: 108px;
-      left: 17px;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      width: 166px;
+      height: 40px;
       border-radius: 5px;
       background-color: #00acdc;
       border: 1px solid #00acdc;
 
       .buy-button {
-        font-family: Roboto, sans-serif;
         font-size: 14px;
         font-weight: 700;
         line-height: 16px;
@@ -144,14 +128,25 @@ body {
       }
     }
 
-    &:hover .button {
+    .button:hover {
       background-color: white;
       border-color: #00acdc;
 
       .buy-button {
         color: #00acdc;
         background-color: white;
-        border: 1px solid  #00acdc;
+        border: 1px solid #00acdc;
+      }
+    }
+
+    [data-qa="hover"]:hover {
+      background-color: white;
+      border-color: #00acdc;
+
+      .buy-button {
+        color: #00acdc;
+        background-color: white;
+        border: 1px solid #00acdc;
       }
     }
   }
