@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+  }
+
+  &__textContainer {
+    margin: 40px 16px 16px;
+  }
+
+  &__deviceName {
+    @include textProperties (12px, 500, $textColorMainAccent);
+    line-height: 18px;
+  }
+
+  &__productCode {
+    @include textProperties (10px, 400, $textColorSecondary);
+    margin-top: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: center;
+
+    &-reviews {
+      @include textProperties (10px, 400, $textColorMainAccent);
+    }
+  }
+
+  &__priceBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    &-text {
+      @include textProperties (12px, 400, $textColorSecondary);
+    }
+
+    &-number {
+      @include textProperties (16px, 700, $textColorMainAccent);
+    }
+  }
+
+  &__button {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include textProperties (14px, 700, #fff);
+    background-color: $buttonColor;
+    border-radius: 5px;
+    margin-top: 16px;
+
+    &:hover {
+      color: $buttonColor;
+      background-color: #fff;
+      border: 1px solid $buttonColor;
+    }
+  }
+}
