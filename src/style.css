@@ -21,8 +21,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  flex-shrink: 0;
   padding: 32px 16px 16px;
   border-radius: 5px;
   border: 1px solid var(--lightgrey);
@@ -33,7 +31,7 @@ html {
   width: 160px;
   height: 134px;
   flex-shrink: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .card__description {
@@ -41,7 +39,8 @@ html {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  margin: 40px 0 0;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 .card__code {
@@ -49,34 +48,33 @@ html {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  margin: 4px 0 0;
+  margin-top: 4px;
+  margin-bottom: 0;
   align-self: start;
 }
 
 .card__price {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin: 24px 0 0;
+  margin-top: 24px;
   align-self: stretch;
 }
 
 .card__price-text {
   display: inline-block;
-
   color: var(--grey);
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
+  margin: 0;
 }
 
 .card__price-value {
   display: inline-block;
   color: var(--darkgrey);
-  text-align: right;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+  margin: 0;
 }
 
 .card__buy {
@@ -85,7 +83,6 @@ html {
   align-items: center;
   background-color: var(--blue);
   border-radius: 5px;
-  margin: 16px 0 0;
   border: 1px solid var(--blue);
 
   text-decoration: none;
@@ -94,22 +91,23 @@ html {
   line-height: 16px;
   text-transform: uppercase;
   color: var(--white);
-  padding: 11px 70px;
+  padding: 11px;
+  text-align: center;
+  margin-top: 16px;
+
+  width: 100%;
 }
 
 .card__rate {
   display: flex;
-  top: 276px;
-  left: 16px;
-  width: 166px;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 16px 0 0;
+  margin-top: 16px;
 }
 
 .stars {
   display: flex;
-  flex-direction: row;
 }
 
 .stars__star {
@@ -135,13 +133,8 @@ html {
 }
 
 .card__reviews {
-  display: inline-block;
   color: var(--darkgrey);
-  justify-content: flex-end;
-  flex-shrink: 0;
-  text-align: right;
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
   margin: 0;
 }
