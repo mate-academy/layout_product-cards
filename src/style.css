@@ -1,41 +1,45 @@
 body {
   margin: 0;
   font-family: "Roboto", "Helvetica", sans-serif;
+  --color-blue: rgba(0, 172, 220, 1);
+  --color-black: rgba(6, 11, 53, 1);
+  --color-grey: rgba(97, 96, 112, 1);
+
 }
 
-.products {
+.card {
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
   width: 200px;
   margin: auto;
+  padding: 33px 17px 17px;
+  box-sizing: border-box;
 }
 
-.products__title {
+.card__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  width: 166px;
-  margin: 34px auto 0;
-  color: rgba(6, 11, 53, 1);
+  margin: 35px auto 0;
+  color: var(--color-black);
 }
 
-.products__code {
+.card__code {
   font-size: 10px;
   line-height: 14px;
-  color: rgba(97, 96, 112, 1);
-  margin: 5px 17px 0;
+  color: var(--color-grey);
 }
 
-.products__img {
+.card__img {
   width: 160px;
   height: 134px;
-  margin: 33px 0 0 20px;
+  display: block;
+  margin: auto;
 }
 
-.products__stars {
+.card__stars {
   display: flex;
   justify-content: space-between;
-  margin: 10px 17px 0;
 }
 
 .stars {
@@ -52,47 +56,46 @@ body {
   margin-right: 4px;
 }
 
-.products__number {
+.card__number {
   font-size: 10px;
   line-height: 14px;
-  text-align: center;
-  margin-left: 18px;
 }
 
-.stars--4 > .stars__star:nth-child(-n + 4) {
+.stars--1 > .stars__star:nth-child(-n + 1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4),
+.stars--5 > .stars__star:nth-child(-n + 5) {
   background: url(../src/images/star-active.svg) no-repeat;
   background-position: center;
 }
 
-.products__size {
+.card__size {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 17px;
 }
 
-.products__price {
-  color: rgba(97, 96, 112, 1);
+.card__price {
+  color: var(--color-grey);
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
 }
 
-.products__text {
+.card__text {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  color: rgba(6, 11, 53, 1);
+  color: var(--color-black);
 }
 
-.products__link {
-  width: 166px;
+.card__link {
+  width: 100%;
   height: 40px;
-  margin: 0 auto;
-  margin-bottom: 17px;
   border-radius: 5px;
   display: block;
-  background: rgba(0, 172, 220, 1);
+  background: var(--color-blue);
   text-decoration: none;
   color: white;
   font-size: 14px;
@@ -102,8 +105,8 @@ body {
   font-weight: 700;
 }
 
-.products__link:hover {
-  border: 1px solid rgba(0, 172, 220, 1);
+.card__link:hover {
+  border: 1px solid var(--color-blue);
   background-color: white;
-  color: rgba(0, 172, 220, 1);
+  color: var(--color-blue);
 }
