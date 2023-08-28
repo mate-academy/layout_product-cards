@@ -18,14 +18,9 @@ html {
 
 .card {
   width: 200px;
-}
-
-.card__rectangle {
   display: flex;
   flex-direction: column;
   position: relative;
-
-  width: 198px;
   flex-shrink: 0;
 
   border-radius: 5px;
@@ -57,14 +52,14 @@ html {
   margin: 4px 82px 0 16px;
 }
 
-.card__price-bloc {
+.card__price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 24px 14px 0 16px; /*верхній був 56*/
+  margin: 24px 14px 0 16px;
 }
 
-.card__price-word {
+.card__price-text {
   display: inline-block;
 
   color: var(--grey);
@@ -87,9 +82,6 @@ html {
   justify-content: center;
   align-items: center;
   background-color: var(--blue);
-  width: 166px;
-  height: 40px;
-  flex-shrink: 0;
   border-radius: 5px;
   margin: 16px;
   border: 1px solid var(--blue);
@@ -105,15 +97,14 @@ html {
   padding: 11px 70px;
 }
 
-.rate {
+.card__rate {
   display: flex;
-  /* position: absolute; */
   top: 276px;
   left: 16px;
   width: 166px;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 16px 14px 0;
+  margin: 16px 12px 0 16px;
 }
 
 .stars {
@@ -131,7 +122,7 @@ html {
   margin-right: 4px;
 }
 
-.stars--4 :nth-child(-n + 4) {
+.stars :nth-child(-n + 4) {
   background-image: url("images/star-active.svg");
 }
 
@@ -139,21 +130,15 @@ html {
   margin-right: 0;
 }
 
-.rate__reviews {
+.card__reviews {
   display: inline-block;
-
   color: var(--darkgrey);
-  width: 53px;
-  height: 16px;
-
   justify-content: flex-end;
   flex-shrink: 0;
-
   text-align: right;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-
   margin: 0;
 }
 
