@@ -11,44 +11,53 @@
   &__image {
     height: 134px;
     width: 160px;
-    margin-bottom: 40px;
     align-self: center;
+    margin-bottom: 30px;
   }
 
   &__text {
-    margin-top: 0;
-    margin-bottom: 4px;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     color: $textColorBlack;
-  }
-
-  &__code {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 400;
-    color: $textColorGray;
-  }
-
-  &__reviews-block {
-    @include flex-content;
     margin-bottom: 4px;
   }
 
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $textColorGray;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    @include flex-content;
+    margin-bottom: 20px;
+  }
+
   &__reviews {
-    margin: 0;
     padding-bottom: 2px;
     line-height: 14px;
     font-size: 10px;
-    font-weight: 400;
     color: $textColorBlack;
+  }
 
-    &-block {
-      @include flex-content;
-      margin-bottom: 4px;
+  &__price {
+    @include flex-content;
+    margin-bottom: 16px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $textColorGray;
+    }
+
+    &-amount {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $textColorBlack;
+      text-align: right;
     }
   }
 
@@ -60,7 +69,7 @@
     border: 1px solid $buttonColor;
     color: white;
     width: 100%;
-    height: 40px;
+    padding: 10px;
     font-weight: 700;
     line-height: 16px;
     font-size: 14px;
