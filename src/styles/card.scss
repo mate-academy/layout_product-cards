@@ -1,0 +1,89 @@
+.card {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid $cardBorderColor;
+  background: $cardColor;
+
+  &__product {
+    &-image {
+      width: 160px;
+      height: 134px;
+      margin: 32px 19px 40px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: $cardTextPrimaryColor;
+      width: 166px;
+      margin: 0 16px 4px;
+    }
+
+    &-code {
+      color: $cardTextSecondaryColor;
+      font-size: 10px;
+      line-height: 14px;
+      margin: 0 16px 16px;
+    }
+
+    &-review,
+    &-price {
+      display: flex;
+      width: 166px;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 18px;
+    }
+
+    &-review {
+      margin: 0 16px 24px;
+    }
+
+    &-number-of-reviews {
+      height: 16px;
+      color: $cardTextPrimaryColor;
+      font-size: 10px;
+      width: 53px;
+      text-align: right;
+    }
+
+    &-price {
+      margin: 0 16px;
+
+      &-text {
+        color: $cardTextSecondaryColor;
+        font-size: 12px;
+      }
+
+      &-digits {
+        color: $cardTextPrimaryColor;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__buy-button {
+    display: flex;
+    align-items: center;
+    background-color: $cardButtonColor;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    margin: 16px;
+    color: $cardButtonTextColor;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid $cardButtonColor;
+      background-color: #fff;
+      color: $cardButtonColor;
+    }
+  }
+}

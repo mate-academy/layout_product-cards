@@ -7,140 +7,14 @@ $cardButtonTextColor: #fff;
 $cardTextFont: roboto, arial, sans-serif;
 
 body {
-  margin: 0;
   font-family: $cardTextFont;
   font-weight: 400;
 }
 
-p {
+* {
+  box-sizing: border-box;
   margin: 0;
 }
 
-.card {
-  width: 200px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid $cardBorderColor;
-  background: $cardColor;
-
-  &__product-image {
-    width: 160px;
-    height: 134px;
-  }
-
-  &__product-image--margins {
-    margin: 32px 19px 40px;
-  }
-
-  &__product-name {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    color: $cardTextPrimaryColor;
-    width: 166px;
-    padding: 0;
-  }
-
-  &__product-name--margins {
-    margin: 0 16px 4px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
-  &__product-code {
-    color: $cardTextSecondaryColor;
-    font-size: 10px;
-    line-height: 14px;
-  }
-
-  &__product-code--margins {
-    margin: 0 16px 16px;
-  }
-
-  &__product-review,
-  &__product-price {
-    display: flex;
-    width: 166px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__product-review--margins {
-    margin: 0 16px 24px;
-  }
-
-  &__number-of-reviews {
-    height: 16px;
-    color: $cardTextPrimaryColor;
-    font-size: 10px;
-    line-height: 14px;
-    width: 53px;
-    text-align: right;
-  }
-
-  &__product-price-text {
-    color: $cardTextSecondaryColor;
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  &__product-price-digits {
-    color: $cardTextPrimaryColor;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-  }
-
-  &__product-price {
-    &--margins {
-      margin: 0 16px;
-    }
-  }
-
-  &__buy-button {
-    display: block;
-    background-color: $cardButtonColor;
-    width: 166px;
-    height: 40px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 12px 70px;
-    margin: 16px;
-
-    color: $cardButtonTextColor;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    &:hover {
-      border: 1px solid $cardButtonColor;
-      background-color: #fff;
-      color: $cardButtonColor;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-  }
-
-  @for $i from 1 through 5 {
-    &--#{$i} &__star:nth-child(-n + #{$i}) {
-      background-image: url(../images/star-active.svg);
-    }
-  }
-}
+@import "/styles/stars";
+@import "/styles/card";
