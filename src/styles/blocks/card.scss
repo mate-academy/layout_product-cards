@@ -38,24 +38,24 @@
   &__price {
     @include flex-space-between;
     @include resetMargin(margin-bottom, 16px);
+
+    &-text {
+      @include resetMargin(margin, 0);
+      font-size: $card-font-size-title;
+      color: $card-sub-text-color;
+    }
+
+    &-amount {
+      @include resetMargin(margin, 0);
+      font-size: $card-font-size-amount;
+      font-weight: $font-weight-bold;
+    }
   }
 
   &__reviews {
     @include resetMargin(margin, 0);
     font-size: $card-font-size-product-description;
     line-height: $card-line-height;
-  }
-
-  &-price-text {
-    @include resetMargin(margin, 0);
-    font-size: $card-font-size-title;
-    color: $card-sub-text-color;
-  }
-
-  &-price-amount {
-    @include resetMargin(margin, 0);
-    font-size: $card-font-size-amount;
-    font-weight: $font-weight-bold;
   }
 
   &__link {
