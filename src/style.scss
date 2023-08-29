@@ -1,4 +1,8 @@
 
+$button-color: #00acdc;
+$bg-color: white;
+$smalltext-color: #616070;
+
 * {
   box-sizing: border-box;
 }
@@ -12,8 +16,8 @@ body {
 .container {
   width: 200px;
   border-radius: 5px;
-  border: 1px solid white;
-  background-color: white;
+  border: 1px solid #d3d3d3;
+  background-color: $bg-color;
   text-align: center;
   overflow: hidden;
 
@@ -35,9 +39,8 @@ body {
     }
 
     .card__title {
-      margin: 16px 0 0 ;
+      margin: 16px 0 0;
       margin-top: 40px;
-      font-family: Roboto, sans-serif;
       font-size: 12px;
       font-weight: 500;
       line-height: 18px;
@@ -50,25 +53,31 @@ body {
       font-weight: 400;
       line-height: 14px;
       text-align: left;
-      color: #616070;
+      color: $smalltext-color;
       margin-top: 4px;
     }
 
     .reviews {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       margin-top: 10px;
+
+      .reviews__star {
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+        background-image: url(./images/star.svg);
+        margin-left: 4px;
+      }
 
       .reviews__stars {
         display: flex;
+        justify-content: center;
         align-items: left;
 
-        img {
-          width: 14px;
-          height: 14px;
-          object-fit: contain;
-          margin-right: 4px;
+        .reviews__star:nth-child(-n+4) {
+          background-image: url(./images/star-active.svg);
         }
       }
 
@@ -92,7 +101,7 @@ body {
         font-weight: 400;
         line-height: 18px;
         text-align: left;
-        color: #616070;
+        color: $smalltext-color;
       }
 
       .price_value {
@@ -105,6 +114,7 @@ body {
     }
 
     .button {
+      color: $bg-color;
       margin-bottom: 0;
       display: flex;
       justify-content: center;
@@ -112,32 +122,13 @@ body {
       width: 166px;
       height: 40px;
       border-radius: 5px;
-      background-color: #00acdc;
-      border: 1px solid #00acdc;
+      background-color: $button-color;
+      border: 1px solid $button-color;
 
-      .buy-button {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16px;
-        text-align: center;
-        color: white;
-        border: none;
-        cursor: pointer;
-        background-color: #00acdc;
-        outline: none;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    [data-qa="hover"]:hover {
-      background-color: white;
-      border-color: #00acdc;
-
-      .buy-button {
-        color: #00acdc;
-        background-color: white;
-        border: 1px solid #00acdc;
+      &[data-qa="hover"]:hover {
+        color: $button-color;
+        background-color: $bg-color;
+        border-color: $button-color;
       }
     }
   }
