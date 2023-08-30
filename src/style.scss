@@ -15,32 +15,35 @@ body {
 
 .container {
   width: 200px;
+  height: 408px;
   border-radius: 5px;
   border: 1px solid #d3d3d3;
   background-color: $bg-color;
   text-align: center;
   overflow: hidden;
 
-  [data-qa="card"] {
+  .card {
     padding: 16px;
 
-    .card__image {
+    &__image {
       width: 160px;
       height: 134px;
-      margin-top: 32px;
+      margin-top: 16px;
       margin-bottom: 0;
       overflow: hidden;
 
-      img {
+      .card__img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+        display: block;
+        background-image: url("./images/imac.jpeg");
+        background-size: cover;
       }
     }
 
     .card__title {
-      margin: 16px 0 0;
-      margin-top: 40px;
+      margin-top: 24px;
       font-size: 12px;
       font-weight: 500;
       line-height: 18px;
@@ -49,52 +52,57 @@ body {
     }
 
     .product-code {
+      margin-top: 4px;
       font-size: 10px;
       font-weight: 400;
       line-height: 14px;
       text-align: left;
       color: $smalltext-color;
-      margin-top: 4px;
     }
 
     .reviews {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 16px;
+      margin-bottom: 24px;
 
-      .reviews__star {
-        width: 14px;
-        height: 14px;
-        background-size: cover;
-        background-image: url(./images/star.svg);
-        margin-left: 4px;
-      }
-
-      .reviews__stars {
+      .stars {
         display: flex;
         justify-content: center;
-        align-items: left;
+        align-items: center;
 
-        .reviews__star:nth-child(-n+4) {
-          background-image: url(./images/star-active.svg);
+        &__star {
+          width: 16px;
+          height: 16px;
+          background-size: cover;
+          background-image: url(images/star.svg);
+          margin-left: 4px;
+        }
+        &--4 {
+          .stars__star:nth-child(-n+4) {
+            background-image: url(images/star-active.svg);
+          }
         }
       }
 
       .reviews__text {
+        width: 53px;
+        height: 16px;
         font-size: 10px;
         font-weight: 400;
         line-height: 14px;
         text-align: right;
-        margin-left: 27px;
+        margin-left: 13px;
       }
     }
 
     .price {
+      width: 166px;
+      height: 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 5px;
 
       .price_label {
         font-size: 12px;
@@ -114,8 +122,9 @@ body {
     }
 
     .button {
+      margin-bottom: 16px;
+      margin-top: 16px;
       color: $bg-color;
-      margin-bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -125,7 +134,7 @@ body {
       background-color: $button-color;
       border: 1px solid $button-color;
 
-      &[data-qa="hover"]:hover {
+      &:hover {
         color: $button-color;
         background-color: $bg-color;
         border-color: $button-color;
