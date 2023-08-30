@@ -12,8 +12,6 @@ body {
 }
 
 .product {
-  display: flex;
-  justify-content: center;
 
   &-image-container {
     display: flex;
@@ -22,6 +20,7 @@ body {
 
   &-card {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     width: 200px;
     background-color: var(--white);
@@ -128,28 +127,4 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
-}
-
-.stars {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(../images/star.svg);
-    margin-right: 4px;
-  }
-
-  &--5 &__star,
-  &--4 &__star:nth-child(-n+4),
-  &--3 &__star:nth-child(-n+3),
-  &--2 &__star:nth-child(-n+2),
-  &--1 &__star:nth-child(-n+1) {
-    background-image: url(../images/star-active.svg);
-  }
 }
