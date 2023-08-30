@@ -8,6 +8,9 @@ $maintext-color: #060b35;
   box-sizing: border-box;
 }
 
+h1,
+h2,
+p,
 body {
   margin: 0;
   padding: 0;
@@ -22,12 +25,11 @@ body {
   text-align: center;
 
   .card {
-    padding: 16px;
+    padding: 32px 16px 16px;
 
-    &__image {
-      width: 160px;
-      height: 134px;
-      margin-top: 16px;
+    &__image-wrapper {
+      width: 100%;
+      height: 100%;
       margin-bottom: 0;
       overflow: hidden;
 
@@ -36,13 +38,12 @@ body {
         height: 100%;
         object-fit: contain;
         display: block;
-        background-image: url("./images/imac.jpeg");
-        background-size: cover;
+        background-image: url("./images/imac.jpeg") cover;
       }
     }
 
     .card__title {
-      margin-top: 24px;
+      margin-top: 40px;
       font-size: 12px;
       font-weight: 500;
       line-height: 18px;
@@ -62,7 +63,7 @@ body {
     .reviews {
       display: flex;
       align-items: center;
-      margin-bottom: 8px;
+      margin-top: 16px;
 
       .stars {
         display: flex;
@@ -105,6 +106,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 24px;
 
       .price_label {
         font-size: 12px;
@@ -124,15 +126,18 @@ body {
     }
 
     .button {
+      margin-top: 16px;
       color: $bg-color;
-      display: flex;
+      display: block;
+      text-align: center;
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 40px;
       border-radius: 5px;
       background-color: $button-color;
       border: 1px solid $button-color;
+      cursor: pointer;
+      height: 40px;
 
       &:hover {
         color: $button-color;
@@ -141,4 +146,5 @@ body {
       }
     }
   }
+
 }
