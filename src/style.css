@@ -1,3 +1,132 @@
-body {
+body,
+h2,
+p {
   margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  display: flex;
+}
+
+:root {
+  --dark-gray: #060635;
+  --ligcht-gray: #616070;
+  --ligcht-blue: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.card__photo {
+  width: 160px;
+  height: 134px;
+  margin-top: 16px;
+  margin-left: 3px;
+}
+
+.card__title {
+  margin-top: 40px;
+  line-height: 18px;
+  color: var(--dark-gray);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card__code {
+  color: var(--ligcht-gray);
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 4px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.stars__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.stars__rating--1 .stars__star:nth-child(-n+1),
+.stars__rating--2 .stars__star:nth-child(-n+2),
+.stars__rating--3 .stars__star:nth-child(-n+3),
+.stars__rating--4 .stars__star:nth-child(-n+4),
+.stars__rating--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--dark-gray);
+  padding-top: 2px;
+}
+
+.card_price {
+  color: var(--ligcht-gray);
+  margin-top: 22px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_price-text {
+  display: flex;
+  font-size: 12px;
+  line-height: 18px;
+  justify-content: space-between;
+}
+
+.card_price-value {
+  color: var(--dark-gray);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__button {
+  display: flex;
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--ligcht-blue);
+  border-radius: 5px;
+  border: 1px solid var(--ligcht-blue);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  margin: 16px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button:hover {
+  color: var(--ligcht-blue);
+  background-color: #fff;
 }
