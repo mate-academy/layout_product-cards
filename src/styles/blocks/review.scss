@@ -1,0 +1,38 @@
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 16px;
+
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $main-text-color-1;
+  }
+
+  &__stars {
+    display: flex;
+
+    &--1 :nth-child(1),
+    &--2 :nth-child(-n+2),
+    &--3 :nth-child(-n+3),
+    &--4 :nth-child(-n+4),
+    &--5 :nth-child(1n) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
