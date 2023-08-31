@@ -1,0 +1,105 @@
+.card {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    @include common-margin;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    @include common-margin;
+    margin-bottom: 16px;
+  }
+
+  &__stars {
+    display: flex;
+    height: 16px;
+    margin: 0 16px 24px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__review-text {
+    color: $main-accent;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include common-margin;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    color: $secondary;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__price-amaunt {
+    color: $main-accent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $blue-accent;
+    border: 1px solid transparent;
+
+    @include common-margin;
+    margin-bottom: 16px;
+
+    &:hover {
+      background-color: $white;
+      border-color: $blue-accent;
+    }
+  }
+
+  &__link {
+    padding: 12px 70px 12px 69px;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $blue-accent;
+    }
+  }
+}
