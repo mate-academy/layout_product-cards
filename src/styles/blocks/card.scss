@@ -1,9 +1,11 @@
-.card {
+* {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+.card {
   width: 200px;
-  height: 408px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: $white;
@@ -12,90 +14,79 @@
     width: 160px;
     height: 134px;
     margin: 32px 19px 40px;
-    padding: 0;
   }
 
   &__productName {
     color: $main-accent;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
     line-height: 18px;
-    width: 166px;
-    margin: 0 16px 4px;
-    padding: 0;
+
+    @include common-margin;
+    margin-bottom: 4px;
   }
 
   &__productCode {
     color: $secondary;
     font-size: 10px;
-    font-style: normal;
     font-weight: 400;
     line-height: 14px;
 
-    width: 98px;
-    margin: 0 0 16px 16px;
-    padding: 0;
+    @include common-margin;
+    margin-bottom: 16px;
   }
 
   &__stars {
+    height: 16px;
     margin: 0 16px 24px;
-    padding: 0;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
   }
 
   &__textReview {
     color: $main-accent;
-    text-align: right;
     font-size: 10px;
-    font-style: normal;
     font-weight: 400;
     line-height: 14px;
     margin: 0;
-    padding: 0;
   }
 
   &__price {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0 16px 16px;
-    padding: 0;
+
+    @include common-margin;
+    margin-bottom: 16px;
   }
 
   &__textPrice {
     color: $secondary;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 18px;
     margin: 0;
-    padding: 0;
   }
 
   &__priceEmaunt {
     color: $main-accent;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 18px;
     margin: 0;
-    padding: 0;
   }
 
   &__button {
-    display: flex;
     align-items: center;
-    margin: 0 16px 16px;
-    box-sizing: border-box;
     border-radius: 5px;
     background-color: $blue-accent;
+    border: 1px solid transparent;
+
+    @include common-margin;
+    margin-bottom: 16px;
 
     &:hover {
       background-color: $white;
-      border: 1px solid $blue-accent;
+      border-color: $blue-accent;
     }
   }
 

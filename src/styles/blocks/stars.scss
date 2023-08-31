@@ -1,20 +1,14 @@
 .stars {
-  display: flex;
-  margin: 0;
-  padding: 0;
+  display: inline-block;
 
   &__star {
     display: inline-block;
-    padding: 0;
-    margin: 0 4px 0 0;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: $stars-size;
     height: $stars-size;
 
-    &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
+    @include star-background(4);
   }
 }
