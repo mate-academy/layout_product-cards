@@ -1,7 +1,12 @@
-@use "./utils/variables" as *;
+@import "../utils/variables";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 .card {
-  box-sizing: border-box;
   width: 200px;
   border: 1px solid $grey-elements;
   border-radius: 5px;
@@ -11,7 +16,6 @@
   &__img {
     display: block;
     margin: auto;
-
     width: 160px;
     height: 134px;
   }
@@ -20,7 +24,7 @@
     margin: 40px 0 0;
     font-size: 12px;
     line-height: 18px;
-    font-weight: $font-medium;
+    font-weight: 500;
     color: $main-accent;
   }
 
@@ -61,23 +65,20 @@
   &__price {
     margin: 24px 0 0;
     font-size: 16px;
-    font-weight: $font-bold;
+    font-weight: 700;
   }
 
   &__button {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    box-sizing: border-box;
     height: 40px;
     background-color: $blue-accent;
     border: 1px solid $blue-accent;
     border-radius: 5px;
     margin: 16px 0 0;
-
     font-size: 14px;
-    font-weight: $font-bold;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     color: $white;
@@ -85,7 +86,6 @@
 
   &__button:hover {
     background-color: $white;
-
     color: $blue-accent;
   }
 }
