@@ -3,12 +3,16 @@
   border-radius: 5px;
   border: 1px solid $cardBorderColor;
   background: $cardColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
 
   &__product {
     &-image {
       width: 160px;
       height: 134px;
-      margin: 32px 19px 40px;
+      margin: 0 3px 40px;
     }
 
     &-name {
@@ -17,14 +21,15 @@
       line-height: 18px;
       color: $cardTextPrimaryColor;
       width: 166px;
-      margin: 0 16px 4px;
+      margin-bottom: 4px;
     }
 
     &-code {
       color: $cardTextSecondaryColor;
       font-size: 10px;
       line-height: 14px;
-      margin: 0 16px 16px;
+      margin-bottom: 16px;
+      align-self: flex-start;
     }
 
     &-review,
@@ -37,7 +42,7 @@
     }
 
     &-review {
-      margin: 0 16px 24px;
+      margin-bottom: 24px;
     }
 
     &-number-of-reviews {
@@ -49,7 +54,7 @@
     }
 
     &-price {
-      margin: 0 16px;
+      margin-bottom: 16px;
 
       &-text {
         color: $cardTextSecondaryColor;
@@ -72,7 +77,6 @@
     height: 40px;
     border-radius: 5px;
     justify-content: center;
-    margin: 16px;
     color: $cardButtonTextColor;
     font-size: 14px;
     font-weight: 700;
