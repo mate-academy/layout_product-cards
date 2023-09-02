@@ -92,31 +92,32 @@
   }
 }
 
-.card__button-link {
-  line-height: 40px;
+.card__button {
+  @include common-margins;
 
-  button {
-    @include common-margins;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background: $light-blue;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 1px transparent;
+  border: 1px solid transparent;
 
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    text-align: center;
-    width: 166px;
-    height: 40px;
-    border-radius: 5px;
-    background: $light-blue;
-    color: $white;
-    text-transform: uppercase;
-    text-decoration: none;
-    box-shadow: 0 0 0 1px transparent;
-    border: 1px solid transparent;
-  }
 
-  button:hover {
+  &:hover {
     color: $light-blue;
     border: 1px solid $light-blue;
     background: $white;
     box-shadow: 0 0 0 1px $light-blue;
+  }
+
+  .card__button-link {
+    line-height: 40px;
+    text-decoration: none;
+    color: $white;
   }
 }
