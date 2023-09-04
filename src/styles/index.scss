@@ -1,9 +1,7 @@
-:root {
-  --Main-accent: #060b35;
-  --Secondary: #616070;
-  --White: #fff;
-  --Blue-accent: #00acdc;
-}
+$Main-accent: #060b35;
+$Secondary: #616070;
+$White: #fff;
+$Blue-accent: #00acdc;
 
 * {
   margin: 0;
@@ -34,7 +32,7 @@ body {
   }
 
   &__title {
-    color: var(--Main-accent);
+    color: $Main-accent;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px; /* 150% */
@@ -42,7 +40,7 @@ body {
   }
 
   &__product-code {
-    color: var(--Secondary);
+    color: $Secondary;
     font-size: 10px;
     line-height: 14px; /* 140% */
     margin-bottom: 16px;
@@ -65,7 +63,7 @@ body {
   }
 
   &__price-text {
-    color: var(--Secondary);
+    color: $Secondary;
     font-size: 12px;
     line-height: 18px;
   }
@@ -77,9 +75,9 @@ body {
     width: 166px;
     height: 40px;
     border-radius: 5px;
-    background: var(--Blue-accent);
+    background: $Blue-accent;
     border: none;
-    color: var(--White);
+    color: $White;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
@@ -89,9 +87,9 @@ body {
 
     &:hover {
       border-radius: 5px;
-      border: 1px solid var(--Blue-accent);
+      border: 1px solid $Blue-accent;
       background: #fff;
-      color: var(--Blue-accent);
+      color: $Blue-accent;
     }
   }
 }
@@ -109,25 +107,23 @@ body {
     }
   }
 
-  &--1 &__star:nth-child(-n + 1),
-  &--2 &__star:nth-child(-n + 2),
-  &--3 &__star:nth-child(-n + 3),
-  &--4 &__star:nth-child(-n + 4),
-  &--5 &__star:nth-child(-n + 5) {
-    background-image: url(../images/star-active.svg);
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
 
 .reviews-count {
   display: block;
-  color: var(--Main-accent);
+  color: $Main-accent;
   text-align: right;
   font-size: 10px;
   line-height: 14px;
 }
 
 .bold {
-  color: var(--Main-accent);
+  color: $Main-accent;
   text-align: right;
   font-size: 16px;
   font-weight: 700;
