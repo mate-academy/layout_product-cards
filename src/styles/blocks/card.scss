@@ -1,0 +1,120 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  border: 1px solid $white;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 32px 19px 36px;
+}
+
+.card__description {
+  @include common-margins;
+  width: 166px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: $gray;
+    margin: 0;
+    width: 98px;
+  }
+}
+
+.card__title {
+  width: 166px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  margin: 0 0 4px;
+  color: $black;
+}
+
+.card__reviews {
+  width: 166px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 24px;
+
+  &-text {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: right;
+    margin: 0;
+    color: $black;
+    width: 53px;
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  margin-bottom: 16px;
+
+  &-item {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: $gray;
+    margin: 0;
+    width: 31px;
+  }
+
+  &-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+    color: $black;
+    margin: 0;
+    width: 50px;
+  }
+}
+
+.card__button {
+  @include common-margins;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background: $light-blue;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 1px transparent;
+  border: 1px solid transparent;
+  color: $white;
+
+  &-link {
+    line-height: 40px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    color: $light-blue;
+    border: 1px solid $light-blue;
+    background: $white;
+  }
+}
