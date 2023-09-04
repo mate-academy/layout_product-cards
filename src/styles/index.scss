@@ -1,9 +1,14 @@
+$main-accent: #060b35;
+$secondary-color: #616070;
+$white-color: #fff;
+$blue-accent: #00acdc;
+
 html {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
-  color: #060b35;
+  color: $main-accent;
 }
 
 body {
@@ -12,13 +17,17 @@ body {
 
 .card {
   width: 200px;
-  display: flex;
+
   flex-direction: column;
   text-align: center;
-
-  box-sizing: border-box;
-  border-radius: 5px;
+  justify-content: center;
   border: 1px solid #f3f3f3;
+
+  * {
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
 
   &__image {
     width: 160px;
@@ -41,7 +50,7 @@ body {
   }
 
   &__code {
-    color: #616070;
+    color: $secondary-color;
     text-align: left;
     margin: 0;
     padding-bottom: 16px;
@@ -54,14 +63,13 @@ body {
 
   &__price {
     display: flex;
-    // flex-direction: row;
     justify-content: space-between;
     margin: 24px 0 16px;
     line-height: 18px;
   }
 
   &__price-label {
-    color: #616070;
+    color: $secondary-color;
     margin: 0;
     font-size: 12px;
   }
@@ -73,15 +81,12 @@ body {
   }
 
   &__button {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: #00acdc;
+    background: $blue-accent;
     padding: 12px;
+    text-align: center;
+    justify-content: center;
 
-    color: #fff;
+    color: $white-color;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
@@ -114,8 +119,8 @@ body {
 }
 
 .card__button:hover {
-  border: 1px solid #00acdc;
-  background-color: #fff;
+  border: 1px solid $blue-accent;
+  background-color: $white-color;
 
-  color: #00acdc;
+  color: $blue-accent;
 }
