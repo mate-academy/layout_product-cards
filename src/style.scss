@@ -15,22 +15,16 @@ body {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border-radius: 5px;
   padding: 0 16px;
   width: 200px;
-  height: 406px;
   border: 1px solid rgba(243, 243, 243, 1);
 
-  &__icon {
-    display: flex;
-    justify-content: center;
+  .card__img {
+    margin: 0 auto;
     margin-top: 32px;
     margin-bottom: 40px;
-    background-size: contain;
-  }
-  
-  .card__img {
-    display: block;
     max-width: 160px;
     height: 134px;
   }
@@ -45,7 +39,7 @@ body {
     font-weight: 500;
     font-size: 12px;
     line-height: 150%; /* 18/12 */
-    padding-bottom: 4px;
+    margin: 0 0 4px;
   }
 
   &__code {
@@ -54,24 +48,24 @@ body {
     font-weight: 400;
     line-height: 140%; /* 14/10 */
     color: var(--color-gray);
-    padding-bottom: 16px;
+    margin: 0 0 16px;
   }
 
   &__link {
     display: flex;
     border-radius: 5px;
-
     height: 40px;
     background: var(--color-blue);
     font-weight: 700;
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    line-height: 114.29%; /* 16/14 */
+    line-height: 114%; /* 16/14 */
     justify-content: center;
     text-transform: uppercase;
     align-items: center;
     margin-top: 16px;
+    margin-bottom: 16px;
     transition: background-color 0.3s ease 0s;
     &:hover {
       background-color: var(--сolor-white);
@@ -79,6 +73,18 @@ body {
       color: var(--color-blue);
       box-sizing: border-box;
     }
+  }
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
+  &__reviews {
+    display: flex;
+    align-items: center;
+    line-height: 140%; /* 14/10 */
+    font-weight: 400;
+    font-size: 10px;
   }
 }
 
@@ -91,31 +97,6 @@ body {
     &:not(:last-child) {
       margin-right: 4px;
     }
-  }
-}
-
-.stars-card {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 24px;
-  // .stars-card__star-row
-
-  &__star-row {
-    display: flex;
-    min-width: 166px;
-    justify-content: space-between;
-  }
-
-  &__star-col {
-    display: flex;
-  }
-
-  &__reviews {
-    display: flex;
-    align-items: center;
-    line-height: 140%; /* 14/10 */
-    font-weight: 400;
-    font-size: 10px;
   }
 }
 
