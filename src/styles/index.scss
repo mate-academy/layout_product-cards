@@ -17,17 +17,12 @@ body {
 
 .card {
   width: 200px;
-
+  display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   border: 1px solid #f3f3f3;
-
-  * {
-    display: flex;
-    box-sizing: border-box;
-    border-radius: 5px;
-  }
+  border-radius: 5px;
 
   &__image {
     width: 160px;
@@ -81,10 +76,12 @@ body {
   }
 
   &__button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
     background: $blue-accent;
     padding: 12px;
-    text-align: center;
-    justify-content: center;
 
     color: $white-color;
     font-size: 14px;
@@ -93,6 +90,10 @@ body {
     text-transform: uppercase;
     text-decoration: none;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .stars {
@@ -121,6 +122,5 @@ body {
 .card__button:hover {
   border: 1px solid $blue-accent;
   background-color: $white-color;
-
   color: $blue-accent;
 }
