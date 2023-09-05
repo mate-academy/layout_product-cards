@@ -1,3 +1,138 @@
-body {
+$Main-accent: hsl(234, 80%, 12%);
+$Secondary: hsl(244, 8%, 41%);
+$Blue-accent: hsl(193, 100%, 43%);
+
+body,
+h3,
+span,
+button,
+image {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  color: #{$Main-accent};
+  line-height: 12px;
+  background-color: hsl(0, 0%, 96%);
+}
+
+.stars {
+  display: flex;
+
+  & :nth-child(-n+4) {
+    margin-right: 4px;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) no-repeat center;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} :nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 17px 17px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  outline: 1px solid hsl(0, 0%, 95%);
+  box-sizing: border-box;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding-bottom: 40px;
+    align-self: center;
+  }
+
+  &__logo {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-style: normal;
+    padding-bottom: 4px;
+  }
+
+  &__code {
+    color: #{$Secondary};
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4em;
+    padding-bottom: 16px;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    &-text {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+
+    &-text {
+      color: #{$Secondary};
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-number {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__buy {
+    padding: 12px;
+    background-color: #{$Blue-accent};
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__buy {
+    background: transparent;
+    border-radius: 5px;
+    outline: 1px solid #{$Blue-accent};
+    color: #{$Blue-accent};
+  }
 }
