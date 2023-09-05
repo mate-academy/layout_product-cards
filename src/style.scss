@@ -5,21 +5,26 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .card {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  padding: 0 16px;
   width: 200px;
-  height: 408px;
-  box-sizing: border-box;
+  height: 406px;
   border: 1px solid rgba(243, 243, 243, 1);
 
   &__icon {
     display: flex;
-    padding: 32px 19px 40px;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 40px;
     img {
-      min-width: 160px;
+      width: 160px;
       height: 134px;
     }
   }
@@ -50,14 +55,10 @@ body {
     padding-bottom: 16px;
   }
 
-  &__button {
-    margin: 16px;
-  }
-
   &__link {
     display: flex;
     border-radius: 5px;
-    min-width: 166px;
+
     height: 40px;
     background: rgba(0, 172, 220, 1);
     font-weight: 700;
@@ -68,8 +69,8 @@ body {
     justify-content: center;
     text-transform: uppercase;
     align-items: center;
+    margin-top: 16px;
     transition: background-color 0.3s ease 0s;
-    margin: 16px;
     &:hover {
       background-color: #fff;
       border: 1px solid rgba(0, 172, 220, 1);
@@ -93,7 +94,7 @@ body {
 
 .stars-card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 24px;
   // .stars-card__star-row
 
@@ -126,12 +127,11 @@ body {
 
 .price-card {
   display: flex;
-  justify-content: center;
+  //justify-content: center;
+  justify-content: space-between;
 
   &__container {
-    min-width: 166px;
-    display: flex;
-    justify-content: space-between;
+    //display: flex;
   }
 
   &__text {
