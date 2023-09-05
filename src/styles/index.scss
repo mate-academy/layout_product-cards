@@ -1,3 +1,120 @@
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #060b35;
+}
+
 body {
   margin: 0;
+}
+
+.Product {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px auto 40px;
+  }
+
+  &__content {
+    display: block;
+    padding: 0 16px 16px;
+  }
+
+  &__title {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+    padding-bottom: 4px;
+  }
+
+  &__code {
+    color: #616070;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+    line-height: 18px;
+  }
+
+  &__price-label {
+    color: #616070;
+    margin: 0;
+    font-size: 12px;
+  }
+
+  &__price-value {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #00acdc;
+    padding: 12px;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+.Product__button:hover {
+  border: 1px solid #00acdc;
+  background-color: #fff;
+
+  color: #00acdc;
 }
