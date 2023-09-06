@@ -1,129 +1,13 @@
-$font-color-bl:#060b35;
-$font-color-gr:#616070;
-$color-blue: #00acdc;
-$color-white: #fff;
+@import "card";
+@import "stars";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Roboto, Inter, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: blanchedalmond;
-}
-
-.card {
-  box-sizing: border-box;
-  margin: auto;
-  width: 200px;
-  height: 408px;
-  padding: 16px;
-  border-radius: 5px;
-  border: 1px solid #f3f3f3;
-  background: #fff;
-  font-size: 0;
-
-  &__image {
-    width: 160px;
-    height: 134px;
-    margin: 16px 3px 0;
-  }
-
-  &__tite {
-    color: $font-color-bl;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    margin: 40px 0 0;
-  }
-
-  &__code {
-    color: $font-color-gr;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    margin: 4px 0 0;
-  }
-
-  &__button {
-    display: block;
-    padding: 0;
-    width: 166px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 5px;
-    background: $color-blue;
-    text-transform: uppercase;
-    color: $color-white;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    margin: 16px 0 0;
-    text-decoration: none;
-    border: 1px solid transparent;
-
-    &:hover {
-      background: $color-white;
-      color: $color-blue;
-      border-color: $color-blue;
-    }
-  }
-}
-
-.reviews {
-  display: flex;
-  justify-content: space-between;
-  margin: 16px 0 0;
-
-  &__counter {
-    display: flex;
-    align-items: center;
-    color: $font-color-bl;
-    text-align: right;
-    font-size: 10px;
-    font-weight: 400;
-  }
-}
-
-.stars {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.stars__star {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-}
-
-@for $st from 1 through 5 {
-  .stars--#{$st} :nth-child(-n + #{$st}) {
-    background-image: url(../images/star-active.svg);
-  }
-}
-
-.price {
-  display: flex;
-  justify-content: space-between;
-  margin: 24px 0 0;
-
-  &__title {
-    color: $font-color-gr;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-  }
-
-  &__value {
-    color: $font-color-bl;
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-  }
 }
