@@ -1,3 +1,118 @@
+$main_accent: rgba(6, 11, 53, 1);
+$secondary: rgba(97, 96, 112, 1);
+$color_white: rgba(255, 255, 255, 1);
+$blue_accent: rgba(0, 172, 220, 1);
+$hover_color: rgba(243, 243, 243, 1);
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background-color: $color_white;
+  border-radius: 5px;
+  border: 1px solid $hover_color;
+
+  &__photo {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    color: $main_accent;
+    line-height: 18px;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    color: $secondary;
+    line-height: 14px;
+    margin: 0 0 16px;
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__stars-star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    margin-left: 4px;
+  }
+
+  &__stars :last-child {
+    background-image: url(../images/star.svg);
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    color: $main_accent;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 16px;
+    line-height: 18px;
+  }
+
+  &__price-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $secondary;
+  }
+
+  &__price-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: $main_accent;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    width: 166px;
+    height: 40px;
+    background-color: $blue_accent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: block;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color_white;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__button:hover {
+    background-color: $color_white;
+    border-color: $blue_accent;
+    border-radius: 5px;
+    color: $blue_accent;
+  }
 }
