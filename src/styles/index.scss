@@ -23,118 +23,118 @@ a {
     border: 1px solid #f3f3f3;
     background: #fff;
 
-    .card__image {
+    &__image {
       display: block;
       width: 160px;
       height: 134px;
       margin: 0 auto;
     }
 
-    .card__information {
+    &__information {
       margin-top: 40px;
+    }
 
-      .card__title {
-        color: $primary-color;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 18px;
-        margin-bottom: 4px;
+    &__title {
+      color: $primary-color;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      margin-bottom: 4px;
+    }
+
+    &__code {
+      color: $secondary-color;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      margin-bottom: 16px;
+    }
+
+    &__review {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+
+      &-stars {
+        display: flex;
+        flex-flow: row wrap;
       }
 
-      .card__code {
-        color: $secondary-color;
+      &-total {
+        color: $primary-color;
+        text-align: right;
         font-size: 10px;
         font-weight: 400;
         line-height: 14px;
-        margin-bottom: 16px;
+      }
+    }
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      background-image: url("../images/star.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__star--active {
+      background-image: url("../images/star-active.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+
+    &__cost {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .card__price {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $secondary-color;
       }
 
-      .card__review {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-
-        .card__review-stars {
-          display: flex;
-          flex-flow: row wrap;
-
-          .card__star {
-            width: 16px;
-            height: 16px;
-            margin-right: 4px;
-            background-image: url("../images/star.svg");
-            background-repeat: no-repeat;
-            background-position: 50%;
-          }
-
-          .card__star:last-child {
-            margin-right: 0;
-          }
-
-          .card__star--active {
-            background-image: url("../images/star-active.svg");
-            background-repeat: no-repeat;
-            background-position: 50%;
-          }
-        }
-
-        .card__review-total {
-          color: $primary-color;
-          text-align: right;
-          font-size: 10px;
-          font-weight: 400;
-          line-height: 14px;
-        }
-      }
-
-      .card__cost {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-
-        .card__price {
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 18px;
-          color: $secondary-color;
-        }
-
-        .card__amount {
-          text-align: right;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 18px;
-          color: $primary-color;
-        }
-      }
-
-      .card__action {
-        display: flex;
-        width: 100%;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 16px;
-        text-align: center;
-        font-size: 14px;
+      .card__amount {
+        text-align: right;
+        font-size: 16px;
         font-weight: 700;
-        line-height: 16px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #fff;
-        border-radius: 5px;
-        background-color: $link-color;
-        border: 1px solid transparent;
-        cursor: pointer;
+        line-height: 18px;
+        color: $primary-color;
+      }
+    }
 
-        &:hover {
-          color: $link-color;
-          background-color: #fff;
-          border-color: $link-color;
-        }
+    &__action {
+      display: flex;
+      width: 100%;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 5px;
+      background-color: $link-color;
+      border: 1px solid transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: $link-color;
+        background-color: #fff;
+        border-color: $link-color;
       }
     }
   }
