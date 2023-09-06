@@ -1,3 +1,148 @@
+$Secondary: #616070;
+$Main-accent: #060b35;
+$Blue-accent: #00acdc;
+$White: white;
+
 body {
   margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.product {
+  display: flex;
+  width: 200px;
+  height: 408px;
+  flex-direction: column;
+  background-color: $White;
+  margin : 17px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    flex-shrink: 0;
+    background-image: url("../images/imac.jpeg");
+    background-size: 100%;
+    border: none;
+    margin-top: 32px;
+    margin-left: 16px;
+  }
+
+  &__title {
+    color: $Main-accent;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+  }
+
+  &__subtitle {
+    color: $Secondary;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .stars {
+      display: flex;
+    }
+
+    .stars__star {
+      height: 16px;
+      width: 16px;
+      background-image: url("../images/star.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .stars > :not(:first-child) {
+      margin-left: 4px;
+    }
+
+    .stars--5 .stars__star,
+    .stars--1 .stars__star:nth-child(-n + 1),
+    .stars--2 .stars__star:nth-child(-n + 2),
+    .stars--3 .stars__star:nth-child(-n + 3),
+    .stars--4 .stars__star:nth-child(-n + 4) {
+      background-image: url("../images/star-active.svg");
+    }
+
+    .product__reviews {
+      color: $Main-accent;
+      text-align: right;
+      font-family: Roboto, sans-serif;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  .prise {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    &__title {
+      color: $Main-accent;
+      text-align: right;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    &__subtitle {
+      color: $Secondary;
+      font-family: Roboto, sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  &__button_buy {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: $Blue-accent;
+    margin-top: 16px;
+    margin-left: 16px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: $White;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+  }
+
+  &__button_buy:hover {
+    color: $Blue-accent;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid $Blue-accent;
+  }
 }
