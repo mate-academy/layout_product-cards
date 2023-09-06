@@ -29,6 +29,12 @@ body {
   padding: 32px $hug $hug;
 
   &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pic {
     width: 160px;
     height: 134px;
   }
@@ -38,12 +44,11 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    margin-top: 40px;
+    margin: 40px auto 4px;
   }
 
   &__code {
     color: $font-color-collateral;
-    margin-top: 4px;
   }
 
   &__stars {
@@ -52,7 +57,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: $hug;
-    text-transform: capitalize;
   }
 
   &__price {
@@ -78,16 +82,15 @@ body {
     box-sizing: border-box;
     color: $background-color;
     background-color: $button-color;
-    border: 1px solid $background-color;
+    border: 1px solid transparent;
     border-radius: 5px;
     display: block;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     margin-top: $hug;
-    padding: 12px 16px;
+    padding: 11px 16px;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
   }
 
@@ -95,26 +98,5 @@ body {
     color: $button-color;
     background-color: $background-color;
     border: 1px solid $button-color;
-  }
-}
-
-.stars {
-  display: flex;
-  flex-direction: row;
-  width: inherit;
-
-  &__star {
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  @for $i from 1 to 5 {
-    &--#{$i} :nth-child(-n + #{$i}) {
-      background-image: url(../images/star-active.svg);
-    }
   }
 }
