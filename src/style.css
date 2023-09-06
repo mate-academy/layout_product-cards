@@ -1,3 +1,122 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--additional-col);
+  --main-col: #00acdc;
+  --text-col: #060b35;
+  --bc-col: #fff;
+  --additional-col: #616070;
+}
+
 body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid var(--bc-col);
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: var(--bc-col);
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--text-col);
+}
+
+.card__code {
+  margin-bottom: 16px;
+}
+
+.card__buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  top: 351px;
+  left: 17px;
+  border-radius: 5px;
+  border: 1px solid var(--main-col);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--bc-col);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: var(--main-col);
+}
+
+.card__buy:hover {
+  color: var(--additional-col);
+  background-color: var(--bc-col);
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  background-image: url(./images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.card__review {
+  color: var(--text-col);
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price-value {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--text-col);
 }
