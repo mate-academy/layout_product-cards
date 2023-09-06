@@ -18,36 +18,17 @@
   margin-right: 4px;
 }
 
-.stars--5 .stars__star {
-  background-image: url(images/star-active.svg);
-}
-
-.stars--1 .stars__star:first-child {
-  background-image: url(images/star-active.svg);
-}
-
-.stars--2 .stars__star:nth-child(1),
-.stars--2 .stars__star:nth-child(2) {
-  background-image: url(images/star-active.svg);
-}
-
-.stars--3 .stars__star:nth-child(1),
-.stars--3 .stars__star:nth-child(2),
-.stars--3 .stars__star:nth-child(3) {
-  background-image: url(images/star-active.svg);
-}
-
-.stars--4 .stars__star:not(:last-child) {
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
   background-image: url(images/star-active.svg);
 }
 
 body {
   margin: 0;
   font-family: "Roboto", Helvetica, sans-serif;
-  --main-accent: #060b35;
-  --secondary-accent: #616070;
-  --blue-accent: #00acdc;
-  --white-color: #fff;
 }
 
 .card {
@@ -57,7 +38,7 @@ body {
   width: 166px;
   padding: 16px;
   border: 1px solid #f3f3f3;
-  background: var(--white-color);
+  background: #fff;
 }
 
 .card__image {
@@ -76,7 +57,7 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: var(--main-accent);
+  color: #060b35;
 }
 
 .card__product-code {
@@ -84,7 +65,7 @@ body {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  color: var(--secondary-accent);
+  color: #616070;
 }
 
 .card__reviewblock {
@@ -99,7 +80,7 @@ body {
   margin: 0;
   font-size: 10px;
   line-height: 14px;
-  color: var(--main-accent);
+  color: #060b35;
 }
 
 .card__priceblock {
@@ -113,14 +94,14 @@ body {
   margin: 0;
   font-size: 12px;
   line-height: 18px;
-  color: var(--secondary-accent);
+  color: #616070;
 }
 
 .card__sum {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  color: var(--main-accent);
+  color: #060b35;
 }
 
 .card__buybutton {
@@ -129,17 +110,17 @@ body {
   border: 1px solid rgba(0, 0, 255, 0);
   border-radius: 5px;
   padding: 11px 70px;
-  background-color: var(--blue-accent);
+  background-color: #00acdc;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--white-color);
+  color: #fff;
 }
 
 .card__buybutton:hover {
-  border-color: var(--blue-accent);
-  color: var(--blue-accent);
-  background-color: var(--white-color);
+  border-color: #00acdc;
+  color: #00acdc;
+  background-color: #fff;
 }
