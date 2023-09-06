@@ -5,6 +5,7 @@ $White: white;
 
 body {
   margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 html {
@@ -13,47 +14,46 @@ html {
 
 .product {
   display: flex;
-  width: 200px;
-  height: 408px;
   flex-direction: column;
-  background-color: $White;
-  margin : 17px;
+  flex-shrink: 0;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background: #fff;
 
   &__img {
+    align-self: center;
     width: 160px;
     height: 134px;
-    flex-shrink: 0;
-    background-image: url("../images/imac.jpeg");
-    background-size: 100%;
-    border: none;
-    margin-top: 32px;
-    margin-left: 16px;
+    padding-bottom: 40px;
   }
 
   &__title {
     color: $Main-accent;
-    font-family: Roboto, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
-    margin-top: 40px;
+    padding-bottom: 4px;
   }
 
-  &__subtitle {
+  &__code {
     color: $Secondary;
-    font-family: Roboto, sans-serif;
+    padding-bottom: 16px;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
-    margin-top: 4px;
+    font-weight: 400;
   }
 
   &__rating {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin-top: 16px;
+    align-items: center;
+    padding-bottom: 24px;
 
     .stars {
       display: flex;
@@ -82,7 +82,6 @@ html {
     .product__reviews {
       color: $Main-accent;
       text-align: right;
-      font-family: Roboto, sans-serif;
       font-size: 10px;
       font-style: normal;
       font-weight: 400;
@@ -93,56 +92,39 @@ html {
   .prise {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    padding-bottom: 16px;
 
     &__title {
       color: $Main-accent;
-      text-align: right;
-      font-family: Roboto, sans-serif;
       font-size: 16px;
-      font-style: normal;
       font-weight: 700;
       line-height: 18px;
     }
 
     &__subtitle {
       color: $Secondary;
-      font-family: Roboto, sans-serif;
       font-size: 12px;
-      font-style: normal;
       font-weight: 400;
       line-height: 18px;
     }
   }
 
-  &__button_buy {
-    display: flex;
+  &__button {
     width: 166px;
     height: 40px;
-    flex-shrink: 0;
     border-radius: 5px;
+    border: 1px transparent;
     background: $Blue-accent;
-    margin-top: 16px;
-    margin-left: 16px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    color: $White;
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px; /* 114.286% */
     text-transform: uppercase;
-    text-decoration: none;
-    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $White;
   }
 
-  &__button_buy:hover {
-    color: $Blue-accent;
-    border-radius: 5px;
-    background: #fff;
+  &:hover > .product__button {
     border: 1px solid $Blue-accent;
+    background: $White;
+    color: $Blue-accent;
   }
 }
