@@ -1,3 +1,8 @@
+html {
+  font-family: "Roboto", sans-serif;
+  color: #060b35;
+}
+
 body {
   margin: 0;
   background-color: aqua;
@@ -5,9 +10,10 @@ body {
 
 .card {
   width: 200px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   background-color: white;
 }
@@ -19,7 +25,99 @@ body {
   height: 100%;
 }
 
-.card__product {
+.product {
+  width: 166px;
+}
+
+.product__name {
+  color: inherit;
+  height: 36px;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.product__article {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  margin-top: 4px;
+}
+
+.reviews {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.reviews__article {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.reviews__stars {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stars_star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.reviews__stars--0 :nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reviews__stars--0 :nth-last-child(1) {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.price__article {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #616070;
+}
+
+.price__sum {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.button {
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #00acdc;
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__link {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-decoration: none;
 }
