@@ -1,3 +1,120 @@
+$font-color-primary: #060b35;
+$font-color-collateral: #616070;
+$background-color:#fff;
+$border-color: #f3f3f3;
+$button-color:#00acdc;
+$hug: 16px;
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
 body {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 32px $hug $hug;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    color: $font-color-primary;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+  }
+
+  &__code {
+    color: $font-color-collateral;
+    margin-top: 4px;
+  }
+
+  &__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $hug;
+    text-transform: capitalize;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__price_tag {
+    font-size: 12px;
+    line-height: 18px;
+    color: $font-color-collateral;
+  }
+
+  &__value_tag {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    color: $background-color;
+    background-color: $button-color;
+    border: 1px solid $background-color;
+    border-radius: 5px;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-top: $hug;
+    padding: 12px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__button:hover {
+    color: $button-color;
+    background-color: $background-color;
+    border: 1px solid $button-color;
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  @for $i from 1 to 5 {
+    &--#{$i} :nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
