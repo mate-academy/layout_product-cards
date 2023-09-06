@@ -1,3 +1,156 @@
-body {
+// Змінні
+$font-family: roboto, helvetica, sans-serif;
+$primary-color: #060b35;
+$secondary-color: #616070;
+$link-color: #00acdc;
+
+// Стилі для базових HTML елементів
+body,
+div,
+p,
+a {
   margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+// Стилі для контейнера
+.container {
+  display: flex;
+  width: 200px;
+  height: 406px;
+
+  // Стилі для картки
+  .card {
+    padding: 32px 16px 16px;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+    background: #fff;
+
+    // Стилі для зображення в картці
+    .card__image {
+      display: block;
+      width: 160px;
+      height: 134px;
+      margin: 0 auto;
+    }
+
+    // Стилі для інформації в картці
+    .card__information {
+      margin-top: 40px;
+
+      // Стилі для заголовка
+      .card__title {
+        color: $primary-color;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 4px;
+      }
+
+      // Стилі для коду товару
+      .card__code {
+        color: $secondary-color;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        margin-bottom: 16px;
+      }
+
+      // Стилі для відгуків
+      .card__review {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        // Стилі для зірок в відгуках
+        .card__review-stars {
+          display: flex;
+          flex-flow: row wrap;
+
+          .card__star {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            background-image: url("../images/star.svg");
+            background-repeat: no-repeat;
+            background-position: 50%;
+          }
+
+          .card__star:last-child {
+            margin-right: 0;
+          }
+
+          .card__star--active {
+            background-image: url("../images/star-active.svg");
+            background-repeat: no-repeat;
+            background-position: 50%;
+          }
+        }
+
+        // Стилі для кількості відгуків
+        .card__review-total {
+          color: $primary-color;
+          text-align: right;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 14px;
+        }
+      }
+
+      // Стилі для ціни та кількості
+      .card__cost {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        // Стилі для ціни
+        .card__price {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          color: $secondary-color;
+        }
+
+        // Стилі для кількості
+        .card__amount {
+          text-align: right;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 18px;
+          color: $primary-color;
+        }
+      }
+
+      // Стилі для дії
+      .card__action {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        background-color: $link-color;
+        border: 1px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+          color: $link-color;
+          background-color: #fff;
+          border-color: $link-color;
+        }
+      }
+    }
+  }
 }
