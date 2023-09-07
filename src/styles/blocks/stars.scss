@@ -1,13 +1,5 @@
 .stars {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 24px;
-
-  &__block {
-    display: flex;
-  }
 
   &__star {
     height: 16px;
@@ -16,14 +8,9 @@
     background: url(../images/star.svg) no-repeat center;
   }
 
-  &__block > .stars__star:nth-child(-n + #{$stars-number}) {
-    background: url(../images/star-active.svg) no-repeat center;
-  }
-
-  &__review {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    color: $main-accent;
+  @for $i from 1 through 5 {
+    &--#{$i} > &__star:nth-child(-n + #{$i}) {
+      background: url(../images/star-active.svg) no-repeat center;
+    }
   }
 }
