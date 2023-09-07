@@ -1,29 +1,39 @@
+* {
+  margin: 0;
+}
+
 .card {
+  font-family: "Roboto", serif;
+  box-sizing: border-box;
+  width: 200px;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(243, 243, 243);
   border-radius: 5px;
   background-color: white;
   padding-inline: 16px;
+  padding-top: 32px;
 
   &__image {
     display: block;
     height: 134px;
     width: 160px;
-    margin: 32px 3px 0;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-inline: 3px;
   }
 
   &__title {
-    margin-top: 40px;
+    margin: 0;
+    margin-bottom: 4px;
     color: $Main-accent;
-
     font-size: 12px;
     font-weight: 500;
     line-height: 18px; /* 150% */
   }
 
   &__product-code {
-    margin-top: 4px;
+    margin-bottom: 16px;
     color: $Secondary;
     font-size: 10px;
     line-height: 14px; /* 140% */
@@ -33,10 +43,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 16px;
+    margin-bottom: 24px;
   }
 
   &__reviews {
+    align-self: center;
     color: $Main-accent;
     font-size: 10px;
     line-height: 14px; /* 140% */
@@ -46,7 +57,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 24px;
+    margin-bottom: 16px;
   }
 
   &__text-price {
@@ -70,16 +81,17 @@
     display: block;
     color: $button-bg;
     text-align: center;
-
     font-size: 14px;
     font-weight: 700;
+    line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    line-height: 38px;
     background-color: $Blue-accent;
     border-radius: 5px;
-    margin-block: 16px;
+    margin-bottom: 16px;
     border: 1px solid $Blue-accent;
+
+    padding: 12px 70px 12px 69px;
   }
 
   &__button-buy:hover {
