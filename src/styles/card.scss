@@ -1,10 +1,5 @@
-$Main-accent: hsl(234, 80%, 12%);
-$Secondary: hsl(244, 8%, 41%);
-$Blue-accent: hsl(193, 100%, 43%);
-$White-accent: hsl(0, 0%, 96%);
-
 .card {
-  width: 200px;
+  width: $Card-width;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,16 +81,13 @@ $White-accent: hsl(0, 0%, 96%);
     line-height: 16px;
     text-transform: uppercase;
     color: white;
-  }
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:hover &__buy {
-    background: transparent;
-    border-radius: 5px;
-    border-color: $Blue-accent;
-    color: $Blue-accent;
+    &:hover {
+      cursor: pointer;
+      background: transparent;
+      border-radius: 5px;
+      border-color: $Blue-accent;
+      color: $Blue-accent;
+    }
   }
 }
