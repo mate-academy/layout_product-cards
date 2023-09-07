@@ -1,3 +1,119 @@
 body {
   margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card {
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    margin: 0 0 4px;
+    color: #060b35;
+    line-height: 18px;
+  }
+
+}
+// після того як додаю card__code у .code усе ламається
+.card__code {
+  color: #616070;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.card__rating {
+  color: #060b35;
+  font-size: 10px;
+  font-weight: 400;
+  width: 100%;
+  margin: 0 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background: url(../images/star.svg) center no-repeat;
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:nth-child(-n + 4) {
+  background: url(../images/star-active.svg) center no-repeat;
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+.card__price {
+  width: 100%;
+  align-items: center;
+  margin: 0 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__lable {
+  color: #616070;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card__sum {
+  color: #060b35;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+}
+
+.button__link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #00acdc;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.button__link:hover {
+  box-sizing: border-box;
+  color: #00acdc;
+  border-radius: 5px;
+  border: 1px solid #00acdc;
+  background: #fff;
 }
