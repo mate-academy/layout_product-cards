@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  background-color: white;
+}
+
+p {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container {
+  background-color: white;
+  height: 406px;
+  width: 198px;
+  border-radius: 5px;
+  border: 1px;
+  border-color: #f3f3f3;
+}
+
+.product {
+  &-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 134px;
+    width: 160px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 33px;
+  }
+
+  &-name {
+    padding-top: 40px;
+    font-size: 12px;
+    color: #060b35;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &-code {
+    font-size: 10px;
+    font-weight: 400;
+    color: #616070;
+    line-height: 14px;
+    padding-top: 4px;
+  }
+
+  &-ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-right: 16px;
+    height: 16px;
+  }
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #616070;
+    padding-top: 24px;
+  }
+}
+
+.reviews {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 400;
+  right: 16px;
+
+  &-word {
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.price-name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  line-height: 18px;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
+
+.buy-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.buy-button {
+  cursor: pointer;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 6px;
+  width: 166px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #00acdc;
+
+  &:hover {
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #00acdc;
+    .buy-text {
+      color: #00acdc;
+    }
+  }
+}
