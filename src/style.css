@@ -2,17 +2,17 @@
   box-sizing: border-box;
 }
 
-html {
+.html {
   --main-text-color: #060b35;
-
   --secondary-text-color: #616070;
-
   --button-color: #00acdc;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, Helvetica, sans-serif;
 }
 
 p {
@@ -23,31 +23,27 @@ p {
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px ;
 }
 
 .card__picture {
-  margin: 32px 19px 0;
-}
-
-.card-picture__picture {
   display: block;
   width: 160px;
   height: 134px;
+  margin: 0 auto;
 }
 
 .card__content {
   width: 166px;
-  margin: 40px 16px 16px;
+  padding-top: 40px;
 }
 
 .content__info {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .info-name {
-  font-size: 12px;
   font-weight: 500;
-  line-height: 18px;
   color: var(--main-text-color);
   padding-bottom: 4px;
 }
@@ -63,7 +59,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 .stars {
@@ -100,14 +96,12 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 
 }
 
 .content-price {
-  font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
   color: var(--secondary-text-color);
 }
 
@@ -118,21 +112,25 @@ p {
   color: var(--main-text-color);
 }
 
-.card-link__button {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
+.card-content__button {
+  display: block;
   height: 40px;
-  width: 166px;
+  width: 100%;
+  text-decoration: none;
   background-color: var(--button-color);
   color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
   border: 1px solid transparent;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  padding-top: 13px;
 }
 
-.card-link__button:hover {
+.card-content__button:hover {
   cursor: pointer;
   color: var(--button-color) ;
   background-color: #fff;
