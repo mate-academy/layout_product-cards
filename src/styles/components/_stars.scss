@@ -10,7 +10,9 @@
     background-position: center;
   }
 
-  &--4 .stars__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
+  @for $count from 1 through 5 {
+    &--#{$count} .stars__star:nth-child(-n + #{$count}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
