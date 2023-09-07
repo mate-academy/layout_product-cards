@@ -1,5 +1,5 @@
 .card {
-  width: 200px;
+  width: $card-width;
   padding: 0 16px 16px;
   display: flex;
   flex-direction: column;
@@ -41,6 +41,22 @@
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
+
+    &-name {
+      color: $secondary-color;
+    }
+
+    &-amount {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__reviews {
+    text-align: end;
+    font-size: 10px;
+    line-height: 14px;
+    align-self: flex-end;
   }
 
   &__button {
@@ -64,11 +80,3 @@
   }
 }
 
-.price-name {
-  color: $secondary-color;
-}
-
-.price-amount {
-  font-size: 16px;
-  font-weight: 700;
-}
