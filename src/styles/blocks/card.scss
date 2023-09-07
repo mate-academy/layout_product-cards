@@ -1,69 +1,51 @@
 .card {
   box-sizing: border-box;
-  width: 200px;
+  width: $card-width;
   padding: 16px;
-
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
 
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  background: #fff;
+  background: $white;
 
   &__image {
+    display: block;
     width: 160px;
     height: 134px;
     align-self: center;
-
-    &--position {
-      margin-top: 16px;
-    }
+    margin: 16px auto 0;
   }
 
   &__name {
     font-weight: 500;
-
-    &--position {
-      margin-top: 40px;
-    }
+    margin-top: 40px;
   }
 
   &__code {
-    font-size: 10px;
-    line-height: 14px;
-    color: var(--secondary);
-
-    &--position {
-      margin-top: 4px;
-    }
+    font-size: $secondary-font-size;
+    line-height: $secondary-line-height;
+    color: $secondary;
+    margin-top: 4px;
   }
 
   &__rating {
     display: flex;
     justify-content: space-between;
-
-    &--position {
-      margin-top: 16px;
-    }
+    margin-top: 16px;
   }
 
   &__revievs {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: $secondary-font-size;
+    line-height: $secondary-line-height;
   }
 
   &__cost {
     display: flex;
     justify-content: space-between;
-
-    &--position {
-      margin-top: 24px;
-    }
+    margin-top: 24px;
   }
 
   &__price {
-    color: var(--secondary);
+    color: $secondary;
   }
 
   &__money {
@@ -75,32 +57,26 @@
     box-sizing: border-box;
     display: block;
     width: 166px;
-    height: 40px;
-    flex-shrink: 0;
     padding: 12px 70px;
 
-    color: var(--white);
+    color: $white;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
+    margin-top: 16px;
 
     border-radius: 5px;
-    background: var(--Blue-accent);
-    border: 1px none var(--Blue-accent);
+    background: $Blue-accent;
+    border: 1px none $Blue-accent;
 
     &:hover {
       background: none;
       border-style: solid;
 
-      color: var(--Blue-accent);
+      color: $Blue-accent;
     }
-
-    &--position {
-      margin-top: 16px;
-    }
-
   }
 }
