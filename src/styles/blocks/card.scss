@@ -1,0 +1,76 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  color: #060b35;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    align-self: center;
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    @include styleFont(12px, 500, 18px);
+    color: #060b35;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    @include styleFont(10px, 400, 14px);
+    color: $card-text-color;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-count {
+    @include styleFont(10px, 400, 14px);
+    color: #060b35;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      color: $card-text-color;
+      @include styleFont(12px, 400, 18px);
+    }
+
+    &-sum {
+      @include styleFont(16px, 700, 18px);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 166px;
+    @include styleFont(14px, 700, 16px);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #00acdc;
+    color: #fff;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      color: #060b35;
+    }
+  }
+}
