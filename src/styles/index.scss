@@ -1,133 +1,15 @@
+@import "blocks/card.scss";
+@import "blocks/stars.scss";
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", Helvetica, sans-serif;
-  color: hsl(234, 80%, 12%);
+  color: $main_accent;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card {
-  padding: 32px 0 16px;
-  border: 1px solid hsl(0, 0%, 95%);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-
-  &--width {
-    width: 200px;
-  }
-
-  &__img-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__img {
-    width: 160px;
-    height: 134px;
-    margin-bottom: 40px;
-  }
-
-  &__content {
-    margin: 0 16px ;
-  }
-  &__description {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    margin-bottom: 4px;
-  }
-  &__product-code {
-    color: #616070;
-    font-size: 10px;
-    font-weight: 400;
-    margin-bottom: 16px;
-  }
-
-  &__review {
-    height: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-
-  &__count {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
-  &__price-label {
-    display: flex;
-    color: #616070;
-    font-size: 12px;
-    font-weight: 400;
-  }
-
-  &__price-sum {
-    font-weight: 700;
-    font-size: 16px;
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    text-transform: uppercase;
-    line-height: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid hsl(193, 100%, 43%);
-    color: #fff;
-    background-color: hsl(193, 100%, 43%);
-    font-size: 14px;
-    font-weight: 700;
-    box-sizing: border-box;
-  }
-
-  &__link:hover {
-    color: hsl(193, 100%, 43%);
-    background-color: white;
-  }
-}
-
-.stars {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__star {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    background: url(../images/star.svg) left no-repeat;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 4px;
-  }
-}
-
-.stars--0 :nth-child(0),
-.stars--1 :nth-child(1),
-.stars--2 :nth-child(-n+2),
-.stars--3 :nth-child(-n+3),
-.stars--4 :nth-child(-n+4),
-.stars--5 :nth-child(-n+5) {
-  background: url(../images/star-active.svg) left no-repeat;
 }
