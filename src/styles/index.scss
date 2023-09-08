@@ -2,98 +2,10 @@
 @import "./utils/mixins";
 @import "./utils/reset";
 @import "./blocks/stars";
+@import "./blocks/card";
 
 html {
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 18px;
-}
-
-.card {
-  width: 200px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  padding: 32px 16px 16px ;
-
-  &-picture {
-    display: block;
-    width: 160px;
-    height: 134px;
-    margin: 0 auto;
-  }
-
-  &-content {
-    width: 166px;
-    padding-top: 40px;
-
-    &__info {
-      padding-bottom: 16px;
-
-      .info-name {
-        font-weight: 500;
-        color: $main-text-color;
-        padding-bottom: 4px;
-      }
-
-      .info-code {
-        font-size: 10px;
-        font-weight: 400;
-        line-height: 14px;
-        color: $secondary-text-color;
-      }
-    }
-
-    &__stars {
-      @include centeringBlocks;
-      padding-bottom: 24px;
-    }
-
-    &__reviews {
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-    }
-
-    &__price {
-      @include centeringBlocks;
-      padding-bottom: 16px;
-
-      .content-price {
-        font-weight: 400;
-        color: $secondary-text-color;
-      }
-
-      .content-pricevalue {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18px;
-        color: $main-text-color;
-      }
-    }
-
-    &__button {
-      display: block;
-      height: 40px;
-      width: 100%;
-      text-decoration: none;
-      background-color: $button-color;
-      color: #fff;
-      border-radius: 5px;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 16px;
-      text-align: center;
-      padding-top: 13px;
-    }
-
-    &__button:hover {
-      cursor: pointer;
-      color: $button-color;
-      background-color: #fff;
-      border: 1px solid $button-color;
-    }
-  }
 }
