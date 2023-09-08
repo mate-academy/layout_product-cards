@@ -1,32 +1,25 @@
-.card__stars {
-  margin: 16px 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .stars {
   display: flex;
   align-items: center;
   height: 16px;
-}
 
-.stars__star {
-  background-image: url(../images/star.svg);
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  &__star {
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
 
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
+    &:not(:last-child) {
+    margin-right: 4px;
+    }
+  }
 
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url(../images/star-active.svg);
+  &--1 > :nth-child(-n+1),
+  &--2 > :nth-child(-n+2),
+  &--3 > :nth-child(-n+3),
+  &--4 > :nth-child(-n+4),
+  &--5 > :nth-child(-n+5) {
+      background-image: url(../images/star-active.svg);
+    }
 }
