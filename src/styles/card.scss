@@ -1,9 +1,8 @@
-$second-text-color: #616070;
-$button-color: #00acdc;
+@import "variables.scss";
 
 .card {
   margin: 0;
-  box-sizing: border-box;
+  padding: 32px 16px 0;
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -12,7 +11,7 @@ $button-color: #00acdc;
   border-radius: 5px;
 
   &__photo {
-    margin: 32px 19px 40px;
+    margin: 0 3px 40px;
     width: 160px;
     height: 134px;
   }
@@ -23,10 +22,6 @@ $button-color: #00acdc;
     font-weight: 500;
   }
 
-  &__name--position {
-    margin: 0 16px;
-  }
-
   &__code {
     font-size: 10px;
     line-height: 14px;
@@ -34,7 +29,7 @@ $button-color: #00acdc;
   }
 
   &__code--position {
-    margin: 4px 16px 0 ;
+    margin-top: 4px;
   }
 
   &__rate {
@@ -44,7 +39,7 @@ $button-color: #00acdc;
   }
 
   &__rate--position {
-    margin: 16px 16px 0;
+    margin-top: 16px;
   }
 
   &__review {
@@ -58,7 +53,7 @@ $button-color: #00acdc;
   }
 
   &__price--position {
-    margin: 24px 16px 0;
+    margin-top: 24px;
   }
 
   &__buy {
@@ -73,7 +68,7 @@ $button-color: #00acdc;
     line-height: 16px;
     text-decoration: none;
     text-transform: uppercase;
-    
+
     background-color: $button-color;
     border: none;
     border-radius: 5px;
@@ -86,6 +81,18 @@ $button-color: #00acdc;
   }
 
   &__buy--position {
-    margin: 16px;
+    margin: 16px 0;
   }
+}
+
+.price {
+  color: $second-text-color;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sum {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
 }
