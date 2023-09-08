@@ -1,22 +1,20 @@
 .card {
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
   height: 406px;
   width: 200px;
   padding: 32px 16px 16px;
   box-sizing: border-box;
 
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
   &__image {
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: 160px 134px;
-    margin: 0 auto;
-    margin-bottom: 40px;
     height: 134px;
     width: 160px;
+    margin: 0 auto 40px;
+    display: block;
   }
 
-  &__main-text {
+  &__description {
     line-height: 18px;
     color: $main-color;
     font-weight: 500;
@@ -24,23 +22,24 @@
     font-size: $main-font-size;
   }
 
-  &__text {
+  &__product-information {
+    margin-top: 4px;
+
     font-family: $font-family;
     font-size: $secondary-font-size;
     font-weight: 400;
     line-height: 14px;
     color: $secondary-color;
-    margin-top: 4px;
   }
 
-  &__container {
+  &__stars-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 16px;
   }
 
-  &__stars-text {
+  &__stars-title {
     text-align: right;
     font-family: $font-family;
     font-size: $secondary-font-size;
@@ -51,17 +50,17 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
-  &__price-text {
+  &__price--title {
     line-height: 18px;
     font-family: $font-family;
     font-size: $main-font-size;
     color: $secondary-color;
   }
 
-  &__price-sum {
+  &__price--sum {
     text-align: right;
     font-family: $font-family;
     font-size: 16px;
@@ -75,8 +74,11 @@
   }
 
   &__button {
-    width: 166px;
     height: 40px;
+    width: 166px;
+    box-sizing: border-box;
+    margin: 16px auto;
+
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: $button-color;
@@ -87,7 +89,6 @@
     font-weight: 700;
     line-height: 40px;
     color: $bg-color;
-    margin: 16px auto;
   }
 
   &__button:hover {
