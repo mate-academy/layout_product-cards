@@ -1,3 +1,131 @@
 body {
-  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px rgb(243, 243, 243);
+  border-radius: 5px;
+  width: 200px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.card__image {
+  margin-top: 16px;
+}
+
+.card__image img {
+  width: 160px;
+  height: 134px;
+  max-width: 100%;
+  display: block;
+}
+
+.card__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(6, 11, 53);
+  margin-top: 40px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgb(97, 96, 112);
+  margin-top: 4px;
+  align-self: flex-start;
+}
+
+.card__mark {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-image: url(/images/star.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.stars.stars--1 :nth-child(-n+1),
+.stars.stars--2 :nth-child(-n+2),
+.stars.stars--3 :nth-child(-n+3),
+.stars.stars--4 :nth-child(-n+4),
+.stars.stars--5 :nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
+}
+
+.card__review {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: rgb(6, 11, 53);
+}
+
+.card__price {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 18px;
+}
+
+.card__price-text {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(97, 96, 112);
+}
+
+.card__price-amount {
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(6, 11, 53);
+}
+
+.card__button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  width: 100%;
+  height: 40px;
+  text-decoration: none;
+  background-color: rgb(0, 172, 220);
+  border: solid 1px rgb(0, 172, 220);
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  color: rgb(0, 172, 220);
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
