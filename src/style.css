@@ -66,26 +66,25 @@ body {
   margin-bottom: 24px;
 }
 
-.card__stars-4 {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
+.stars {
   padding: 0;
   margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
 }
 
-.card__star {
-  background-image: url("images/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.stars__star {
+  margin-right: 4px;
   width: 16px;
   height: 16px;
-  margin-right: 4px;
+  background: url("images/star.svg") no-repeat center;
 }
 
-.card__stars-4 .card__star:nth-child(-n+4) {
-  background-image: url("images/star-active.svg");
-  background-repeat: no-repeat;
+.stars--4 :nth-child(-n+4) {
+  background: url("images/star-active.svg") no-repeat center;
 }
 
 .card__reviews {
