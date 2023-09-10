@@ -3,17 +3,14 @@
   margin-right: 16px;
 }
 
-@mixin font-settings {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-}
-
 $mainColor: #060b35;
 $secondaryColor: #616070;
 $blueColor: #00acdc;
 
 body {
   margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-style: normal;
 }
 
 .card {
@@ -27,7 +24,7 @@ body {
   box-sizing: border-box;
 }
 
-.imageImac {
+.card__image {
   background-image: url(../images/imac.jpeg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -36,9 +33,8 @@ body {
   margin: 32px 19px 40px;
 }
 
-.nameImac {
+.card__name {
   @include margins-content;
-  @include font-settings();
   width: 166px;
   color: $mainColor;
   font-size: 12px;
@@ -47,9 +43,8 @@ body {
   margin-bottom: 4px;
 }
 
-.codeImac {
+.card__code {
   @include margins-content;
-  @include font-settings();
   color: $secondaryColor;
   font-size: 10px;
   font-weight: 400;
@@ -57,7 +52,7 @@ body {
   margin-bottom: 16px;
 }
 
-.starsAndReviews {
+.card__stars-and-reviews {
   @include margins-content;
   display: flex;
   flex-direction: row;
@@ -65,14 +60,14 @@ body {
   margin-bottom: 24px;
 }
 
-.stars {
+.card__stars {
   display: flex;
 
   & > :first-child {
     margin-left: 0;
   }
 
-  &__star {
+  &--star {
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -93,8 +88,7 @@ body {
 
 }
 
-.reviews {
-  @include font-settings();
+.card__reviews {
   justify-content: end;
   color: $mainColor;
   display: flex;
@@ -104,7 +98,7 @@ body {
   line-height: 14px;
 }
 
-.priceAndCost {
+.card__price-and-cost {
   @include margins-content;
   display: flex;
   flex-direction: row;
@@ -112,25 +106,22 @@ body {
   margin-bottom: 16px;
 }
 
-.price {
-  @include font-settings();
+.card__price {
   color: $secondaryColor;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
 
-.cost {
-  @include font-settings();
+.card__cost {
   color: $mainColor;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
 }
 
-.buttonBuy {
+.card__button-buy {
   @include margins-content;
-  @include font-settings();
   border-radius: 5px;
   height: 40px;
   text-align: center;
