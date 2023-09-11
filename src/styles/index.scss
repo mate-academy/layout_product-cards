@@ -1,120 +1,13 @@
-@mixin margins-content {
-  margin-left: 16px;
-  margin-right: 16px;
-}
+@import "./src/styles/variables.scss";
+@import "./src/styles/mixins.scss";
 
-$mainColor: #060b35;
-$secondaryColor: #616070;
-$blueColor: #00acdc;
+@import "./src/styles/card.scss";
+@import "./src/styles/stars.scss";
 
 body {
   margin: 0;
   font-family: "Roboto", Helvetica, sans-serif;
   font-style: normal;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid #f3f3f3;
-  background: #fff;
-  box-sizing: border-box;
-
-  &__image {
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 160px;
-    height: 134px;
-    margin: 32px 19px 40px;
-  }
-
-  &__name {
-    @include margins-content;
-    width: 166px;
-    color: $mainColor;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 150%;
-    margin-bottom: 4px;
-  }
-
-  &__code {
-    @include margins-content;
-    color: $secondaryColor;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    margin-bottom: 16px;
-  }
-
-  &__stars-and-reviews {
-    @include margins-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-
-  &__reviews {
-    justify-content: end;
-    color: $mainColor;
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-  }
-
-  &__price-and-cost {
-    @include margins-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
-  &__price {
-    color: $secondaryColor;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-  }
-
-  &__cost {
-    color: $mainColor;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-  }
-
-  &__button-buy {
-    @include margins-content;
-    border-radius: 5px;
-    height: 40px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $blueColor;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-
-    &:hover {
-      border-radius: 5px;
-      border: 1px solid $blueColor;
-      background: #fff;
-      color: $blueColor;
-    }
-  }
 }
 
 p {
