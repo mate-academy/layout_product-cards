@@ -68,9 +68,27 @@ body {
   }
 
   &__button {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 16px;
     width: calc(100% - 32px);
-    height: 40px;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--white);
     margin: 16px;
+
+    &:hover {
+      border-radius: 5px;
+      padding: 11px;
+      border: 1px solid var(--background-color);
+      background: var(--white);
+      color: var(--background-color);
+    }
   }
 }
 
@@ -101,32 +119,5 @@ body {
     font-weight: 700;
     line-height: 18px;
     margin: 0;
-  }
-}
-
-.button {
-  border-radius: 5px;
-  background-color: var(--background-color);
-  border: none;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 16px;
-
-  &__link {
-    text-decoration: none;
-    color: var(--white);
-  }
-
-  &__link:hover {
-    color: var(--background-color);
-  }
-
-  &:hover {
-    border-radius: 5px;
-    border: 1px solid var(--background-color);
-    background: var(--white);
-    color: var(--background-color);
   }
 }
