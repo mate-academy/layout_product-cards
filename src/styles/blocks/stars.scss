@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:first-child) {
+    margin-left: 4px;
+  }
+
+  @for $n from 1 through 5 {
+    &--#{$n} > :nth-child(-n + #{$n}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
+
+.price-row {
+  &__cost {
+    font-weight: 700;
+    font-size: 16px;
+    color: $text-bold-color;
+  }
+}
