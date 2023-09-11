@@ -1,20 +1,25 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   margin: 0;
   background-color: white;
-
 }
 
 p {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
 }
 
 .container {
+  box-sizing: border-box;
   background-color: white;
   height: 406px;
-  width: 198px;
+  width: 200px;
   border-radius: 5px;
   border: 1px solid;
   border-color: #f3f3f3;
@@ -22,9 +27,7 @@ p {
 
 .product {
   &-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     height: 134px;
     width: 160px;
     padding-left: 19px;
@@ -79,9 +82,7 @@ p {
 
   &-word {
     line-height: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     color: #060b35;
   }
 }
@@ -106,9 +107,7 @@ p {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../images/star.svg) no-repeat center;
 
     &:first-child {
       margin-left: 0;
@@ -129,26 +128,20 @@ p {
 }
 
 .buy-button {
-  cursor: pointer;
-  margin: auto;
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
   border-radius: 6px;
   width: 166px;
   height: 40px;
-  flex-shrink: 0;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 15px;
+  @include center;
+  border: 1px solid white;
   background-color: #00acdc;
 
   &:hover {
     background-color: white;
-    border-radius: 6px;
     border: 1px solid #00acdc;
     margin-top: 16px;
-    width: 164px;
-    height: 38px;
     .buy-text {
       color: #00acdc;
     }
