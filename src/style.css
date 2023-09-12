@@ -1,3 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(./images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(./images/star-active.svg);
+}
+
+.card {
+  font-family: "Roboto", sans-serif;
+  margin: 30px;
+  width: 200px;
+  height: 408px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #fff, #fff);
+}
+
+.card__picture {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #060b35;
+  margin: 0 0 4px;
+}
+
+.card__code {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #616070;
+}
+
+.card__review-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px auto 24px;
+}
+
+.card__reviews {
+  align-items: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: right;
+  color: #060b35;
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card__pricelabel {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: #616070;
+}
+
+.card__price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0;
+  color: #060b35;
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 0;
+  background-color: #00acdc;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.card__link:hover {
+  color: #00acdc;
+  background: #fff;
+  border: 1px solid #00acdc;
 }
