@@ -39,7 +39,6 @@
   &__reviews {
     margin: 0;
     color: #060b35;
-    text-align: right;
     font-size: 10px;
     font-weight: $contentFontWeight;
   }
@@ -67,27 +66,26 @@
     line-height: $contentLineHeight;
   }
 
-  &__buttom {
-    border: 1px solid transparent;
-    padding: 12px 70px;
-    border-radius: 5px;
-    background: $contentColor;
-    margin-top: 16px;
-  }
-
-  &__buttom:hover {
-    border-color: $contentColor;
-    background-color: #fff;
-    color: $contentColor;
-  }
-
   &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: $contentColor;
+    margin-top: 16px;
     color: #fff;
-    text-align: center;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 16px;
+
+    &:hover {
+      border-color: $contentColor;
+      background-color: #fff;
+      color: $contentColor;
+    }
   }
 }
