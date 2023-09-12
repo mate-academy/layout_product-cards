@@ -1,10 +1,13 @@
-html {
-  --titleColor: #060b35;
-  --productColor: #616070;
-  --background-button-color: #00acdc;
-  --button-color: #fff;
+$titleColor: #060b35;
+$productColor: #616070;
+$background-button-color: #00acdc;
+$button-color: #fff;
 
+html {
   font-family: "Roboto", sans-serif;
+  color: $productColor;
+  font-size: 10px;
+  font-weight: 400;
 }
 
 body {
@@ -12,123 +15,123 @@ body {
 }
 
 .card {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   flex-direction: column;
 
   width: 200px;
 
-  border-radius: 4px;
-  border: 1px solid #f3f3f3;
-  padding: 32px 19px;
-}
-
-.card__image {
-  width: 160px;
-  height: 134px;
-}
-
-.card__title {
-  font-weight: 500px;
-  font-size: 12px;
-  line-height: 18px;
-
-  margin-top: 40px;
-  color: var(--titleColor);
-  word-wrap: break-word;
-}
-
-.product_code {
-  color: var(--productColor);
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  word-wrap: break-word;
-  margin: 4px 0 0;
-}
-
-.card__reviews {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-
-  background-image: url(\images\star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:nth-child(-n+1),
-.stars__star:nth-child(-n+2),
-.stars__star:nth-child(-n+3),
-.stars__star:nth-child(-n+4) {
-  background-image: url(\images\star-active.svg);
-}
-
-.card__text {
-  color: var(--titleColor);
-  font-size: 10px;
-  font-weight: 400px;
-  line-height: 14px;
-  word-wrap: break-word;
-}
-
-.card__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card__label {
-  color: var(--productColor);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  word-wrap: break-word;
-}
-
-.price {
-  color: var(--titleColor);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  word-wrap: break-word;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 166px;
-  height: 40px;
-
-  background-color: var(--background-button-color);
-  color: var(--button-color);
-
-  text-decoration: none;
   border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
 
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
 
-.button:hover {
-  border: 1px solid #00acdc;
-  background-color: var(--button-color);
-  color: var(--background-button-color);
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
 
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
+    margin: 0 0 5px;
+    color: $titleColor;
+  }
+
+  &__code {
+    margin-bottom: 8px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stars {
+    display: flex;
+  }
+
+  .stars__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    background-image: url(\images\star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .stars__star:nth-child(-n+1),
+  .stars__star:nth-child(-n+2),
+  .stars__star:nth-child(-n+3),
+  .stars__star:nth-child(-n+4) {
+    background-image: url(\images\star-active.svg);
+  }
+
+  &__text {
+    color: $titleColor;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    word-wrap: break-word;
+
+    padding-top: 1px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  &__label {
+    color: $productColor;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    word-wrap: break-word;
+  }
+
+  .price {
+    color: $titleColor;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    word-wrap: break-word;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    height: 40px;
+
+    background-color: $background-button-color;
+    color: $button-color;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
+    border: 1px solid #00acdc;
+    background-color: $button-color;
+    color: $background-button-color;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }
