@@ -1,100 +1,25 @@
-/* #region variables */
-$standart-text-color: #060b35;
-$border-color: #f3f3f3;
-$standart-background-color: #fff;
-$standart-blue-color: #00acdc;
-$standart-gray-color: #616070;
-/* #endregion */
+@import "./utils/variables.scss";
 
-/* #region card */
-.card {
+@import "./blocks/card.scss";
+@import "./blocks/stars.scss";
+
+/* #region page-settings */
+html {
   width: 200px;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   color: $standart-text-color;
   font-style: normal;
   font-size: 12px;
   line-height: 18px;
-
-  &__body {
-    margin: 0;
-    padding: 0;
-  }
-
-  &__content {
-    padding: 32px 16px 16px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    border: 1px solid $border-color;
-    background: $standart-background-color;
-    align-items: center;
-  }
-
-  &-image {
-    width: 160px;
-    height: 134px;
-  }
-
-  &-information {
-    padding-top: 40px;
-  }
-
-  &-buy-button {
-    display: flex;
-    margin-top: 16px;
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    background: #00acdc;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 16px;
-    font-size: 14px;
-    font-weight: 700;
-    color: $standart-background-color;
-
-    &:hover {
-      background: $standart-background-color;
-      border-radius: 5px;
-      border: 1px solid $standart-blue-color;
-      color: $standart-blue-color;
-    }
-  }
-}
-/* #endregion */
-
-/* #region stars-block */
-.stars {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__star {
-
-    width: 16px;
-    height: 16px;
-    background-image: url(/images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-right: 4px;
-  }
-
-  &--1 &__star:nth-child(-n+1),
-  &--2 &__star:nth-child(-n+2),
-  &--3 &__star:nth-child(-n+3),
-  &--4 &__star:nth-child(-n+4),
-  &--5 &__star:nth-child(-n+5) {
-    background-image: url(/images/star-active.svg);
-  }
 }
 
-/* #endregion */
+.body {
+  margin: 0;
+  padding: 0;
+}
+/* #endregion*/
 
-/* #region information */
+/* #region card-elements */
 .description {
   font-weight: 500;
 }
