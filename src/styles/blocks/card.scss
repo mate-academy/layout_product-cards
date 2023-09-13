@@ -1,17 +1,19 @@
-$secondary-color: #616070;
-$accent-color : #00ACDC;
+$mainAccent: #060B35;
+$blueAccent: #00ACDC;
+$secondary: #616070;
+
+
+* {
+  box-sizing: border-box;
+}
 
 .card {
   width: 200px;
-  height: 406px;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
   background: #FFF;
 
-  padding: 16px;
-  padding-top: 32px;
-
-
+  padding: 32px 16px 16px;
 
   &__photo {
     display: block;
@@ -32,49 +34,70 @@ $accent-color : #00ACDC;
 
   &__code {
     margin: 0 0 16px;
-    color: $secondary-color;
+    color: $secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 140%;
   }
 
   &__rating {
+    height: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 24px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height: 18px;
+
+    margin: 0 0 16px;
   }
 
   &__label {
-    color: $secondary-color;
+    color: $secondary;
     font-size: 12px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
+    line-height: 18px;
+    font-weight: 400;
   }
 
   &__value {
     font-size: 16px;
     font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    line-height: 18px;
+    text-align: right;
   }
 
   &__buy-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40px;
 
-    padding: 12px 70px;
-
+    padding: 0 70px;
 
     background: #FFF;
-    background-color: #00ACDC;
+    background-color: $blueAccent;
     border-radius: 5px;
+    border: 1px solid none;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -84,10 +107,10 @@ $accent-color : #00ACDC;
     line-height: 16px;
 
     &:hover {
-      border: 1px solid $accent-color;
+      border: 1px solid $blueAccent;
       border-radius: 5px;
 
-      color: $accent-color;
+      color: $blueAccent;
       background-color: #fff;
     }
   }
