@@ -14,6 +14,12 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .card {
   box-sizing: border-box;
   display: flex;
@@ -30,47 +36,24 @@ body {
     display: block;
     width: 160px;
     height: 134px;
-    margin: 0 auto 40px;
+    margin: 0 3px 40px;
   }
 
   &__title {
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 150%;
 
-    margin: 0 0 5px;
+    margin: 0 0 4px;
     color: $titleColor;
   }
 
-  &__code {
-    margin-bottom: 8px;
-  }
-
   &__reviews {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .stars {
-    display: flex;
-  }
-
-  .stars__star {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-
-    background-image: url(\images\star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .stars__star:nth-child(-n+1),
-  .stars__star:nth-child(-n+2),
-  .stars__star:nth-child(-n+3),
-  .stars__star:nth-child(-n+4) {
-    background-image: url(\images\star-active.svg);
+    margin-top: 17px;
   }
 
   &__text {
@@ -78,16 +61,13 @@ body {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    word-wrap: break-word;
-
-    padding-top: 1px;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3px;
+    margin-top: 24px;
   }
 
   &__label {
@@ -95,7 +75,6 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    word-wrap: break-word;
   }
 
   .price {
@@ -103,14 +82,13 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    word-wrap: break-word;
   }
 
   &__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    margin-top: 16px;
 
     height: 40px;
 
@@ -134,4 +112,25 @@ body {
     text-transform: uppercase;
     font-weight: 700;
   }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  background-image: url(\images\star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:nth-child(-n+1),
+.stars__star:nth-child(-n+2),
+.stars__star:nth-child(-n+3),
+.stars__star:nth-child(-n+4) {
+  background-image: url(\images\star-active.svg);
 }
