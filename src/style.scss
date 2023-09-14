@@ -82,6 +82,10 @@ img {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 .card__buy {
   display: flex;
   justify-content: center;
@@ -126,8 +130,10 @@ img {
   }
 }
 
-@for $i from 1 through 5
-  &stars--#{$i}
-  @for $j from 1 through $i
-  .stars__star:nth-child(-n+#{$j})
-  background-image: url(images/star-active.svg)
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(images/star-active.svg);
+}
