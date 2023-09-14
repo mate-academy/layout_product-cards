@@ -1,5 +1,5 @@
-
 .card {
+  width: 200px;
   padding: 32px 16px 16px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
@@ -31,14 +31,12 @@
 
   &__review {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
 
     &-stars {
       display: flex;
-      flex-flow: row wrap;
     }
 
     &-total {
@@ -60,7 +58,7 @@
     }
   }
 
-  &__star--active {
+  &__review-stars :nth-child(-n+4) {
     background-image: url("../images/star-active.svg");
     background-repeat: no-repeat;
     background-position: 50%;
@@ -68,7 +66,6 @@
 
   &__cost {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -80,14 +77,13 @@
   }
 
   &__amount {
-    text-align: right;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
     color: $primary-color;
   }
 
-  &__action {
+  &__button {
     display: flex;
     width: 100%;
     height: 40px;
