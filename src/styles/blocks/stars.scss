@@ -10,20 +10,16 @@
 
     background-image: url("../images/star.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
   }
 
   &__star :last-child {
     margin-right: 0;
   }
 
-  &--1 :nth-child(-n+1),
-  &--2 :nth-child(-n+2),
-  &--3 :nth-child(-n+3),
-  &--4 :nth-child(-n+4),
-  &--5 :nth-child(-n+5) {
-    background-image: url("../images/star-active.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+  @for $starCount from 1 through 5 {
+    &--#{$starCount} .stars__star:nth-child(-n + #{$starCount}) {
+      background-image: url("../images/star-active.svg");
+    }
   }
 }
