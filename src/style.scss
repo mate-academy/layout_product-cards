@@ -2,6 +2,7 @@ html {
   --buy--color: #00acdc;
   --text--color--one: #060b35;
   --text--color--two: #616070;
+
   font-family: Roboto, sans-serif;
   font-size: 10px;
   line-height: 14px;
@@ -12,7 +13,7 @@ body {
   margin: 0;
 }
 
-.card {
+&card {
   width: 200px;
   height: 406px;
   flex-shrink: 0;
@@ -29,7 +30,7 @@ img {
   display: block;
 }
 
-.card__info {
+&card__info {
   color: var(--text--color--one);
   font-size: 12px;
   font-style: normal;
@@ -38,7 +39,7 @@ img {
   margin: 40px 16px 4px;
 }
 
-.card__code {
+&card__code {
   color: #616070;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +47,7 @@ img {
   margin: 0 16px;
 }
 
-.card__reviws {
+&card__reviws {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -56,8 +57,9 @@ img {
   margin-left: 16px;
 }
 
-.card__reviws-count {
+&card__reviws-count {
   font-size: 12px;
+
 }
 
 .card__price-label {
@@ -65,14 +67,14 @@ img {
   line-height: 18px;
 }
 
-.card__price {
+&card__price {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   color: var(--text--color--one);
 }
 
-.card__price-conteiner {
+&card__price-conteiner {
   display: flex;
   width: 166px;
   justify-content: space-between;
@@ -80,14 +82,16 @@ img {
   margin: 16px;
 }
 
-.card__buy {
+&card__buy {
   display: flex;
   justify-content: center;
   align-items: center;
+
   box-sizing: border-box;
   height: 40px;
   border: 1px solid var(--buy--color);
   border-radius: 5px;
+
   line-height: 16px;
   font-size: 14px;
   color: #fff;
@@ -99,34 +103,31 @@ img {
   margin: 16px;
 }
 
-.card__buy:hover {
+&card__buy:hover {
   color: var(--buy--color);
   background-color: #fff;
 }
 
-.stars {
+&stars {
   display: flex;
 }
 
-.stars__star {
+&stars__star {
   height: 16px;
   width: 16px;
   margin-right: 4px;
+
   background-image: url(images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.stars__star:last-child {
+&stars__star:last-child {
   margin-right: 0;
 }
 
-.stars--1 .stars__star:nth-child(-n+1),
-.stars--2 .stars__star:nth-child(-n+2),
-.stars--3 .stars__star:nth-child(-n+3),
-.stars--4 .stars__star:nth-child(-n+4),
-.stars--5 .stars__star:nth-child(-n+5) {
-  background-image: url(images/star-active.svg);
-}
-
-/*# sourceMappingURL=style.css.map */
+@for $i from 1 through 5
+  &stars--#{$i}
+  @for $j from 1 through $i
+  .stars__star:nth-child(-n+#{$j})
+  background-image: url(images/star-active.svg)
