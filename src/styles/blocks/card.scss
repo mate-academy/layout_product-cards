@@ -1,0 +1,102 @@
+.card {
+  padding: $paddings;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  border: $border-width solid #f3f3f3;
+
+  @include marginCenter;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: $width;
+
+  &__img {
+    @include marginCenter;
+  }
+
+  &__item {
+    display: flex;
+    @include marginCenter;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    @include marginZero;
+    margin-top: 40px;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__code {
+    @include marginZero;
+    margin-top: 4px;
+    color: $text-color;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  &__rating {
+    @include marginZero;
+    margin-top: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    @include marginZero;
+  }
+
+  &__price {
+    @include marginZero;
+    margin-top: 24px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__lable {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__sum {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__button {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+  }
+
+  &__button-text {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: $button-color;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #fff;
+
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    border: 1px solid $button-color;
+
+    &:hover {
+      color: $button-color;
+      background: #fff;
+    }
+  }
+}
