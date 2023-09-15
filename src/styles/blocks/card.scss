@@ -3,49 +3,60 @@
   box-sizing: border-box;
   border-radius: $border-radius;
   border: $border-width solid #f3f3f3;
-  margin: 0 auto;
+
+  @include marginCenter;
+
   display: flex;
   flex-wrap: wrap;
   width: $width;
 
   &__img {
-    margin: 0 auto;
+    @include marginCenter;
   }
 
   &__item {
     display: flex;
-    margin-top: 16px;
-    margin-bottom: 40px;
+    @include marginCenter;
     width: 160px;
     height: 134px;
   }
 
   &__name {
-    margin: 0 0 4px;
+    @include marginZero;
+    margin-top: 40px;
     line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
   }
 
   &__code {
+    @include marginZero;
+    margin-top: 4px;
     color: $text-color;
     font-size: 10px;
     font-weight: 400;
-    margin: 0 0 16px;
   }
 
   &__rating {
+    @include marginZero;
+    margin-top: 16px;
     font-size: 10px;
     font-weight: 400;
     width: 100%;
-    margin: 0 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  &__reviews {
+    @include marginZero;
+  }
+
   &__price {
+    @include marginZero;
+    margin-top: 24px;
     width: 100%;
     align-items: center;
-    margin: 0 0 16px;
     display: flex;
     justify-content: space-between;
   }
@@ -62,29 +73,30 @@
   }
 
   &__button {
+    margin-top: 16px;
     width: 100%;
     display: flex;
+  }
 
-    &-text {
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 700;
-      background-color: $button-color;
-      text-align: center;
-      width: 100%;
-      height: 40px;
-      line-height: 40px;
-      text-decoration: none;
-      color: #fff;
-      border-radius: 5px;
+  &__button-text {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: $button-color;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #fff;
 
-      &:hover {
-        box-sizing: border-box;
-        color: $button-color;
-        border-radius: $border-radius;
-        border: $border-width solid $button-color;
-        background: #fff;
-      }
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    border: 1px solid $button-color;
+
+    &:hover {
+      color: $button-color;
+      background: #fff;
     }
   }
 }

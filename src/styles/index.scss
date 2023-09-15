@@ -1,4 +1,5 @@
-@import "variables/var.scss";
+@import "utils/var.scss";
+@import "utils/mixins.scss";
 @import "blocks/card.scss";
 @import "blocks/star.scss";
 
@@ -7,4 +8,35 @@ html {
   font-size: $font-size;
   font-weight: $font-weight-default;
   color: $text-color-default;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  padding: 30px 35px 155px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns-number), 200px);
+  --columns-number: 2;
+
+  column-gap: 48px;
+  row-gap: 46px;
+  // align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 750px) {
+    --columns-number: 2;
+  }
+
+  @media (min-width: 1000px) {
+    --columns-number: 4;
+  }
+
+  @media (min-width: 1500px) {
+    --columns-number: 4;
+  }
+
 }

@@ -2,16 +2,19 @@
   display: flex;
 
   &__star {
-    background: url(../images/star.svg) center no-repeat;
+    background: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     margin-right: 4px;
     height: 16px;
     width: 16px;
   }
 
-  &__star:nth-child(-n + 4) {
-    background: url(../images/star-active.svg) center no-repeat;
-    margin-right: 4px;
-    height: 16px;
-    width: 16px;
+  @for $star from 0 through 5 {
+    &--#{$star} :nth-child(-n + #{$star}) {
+      background: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
