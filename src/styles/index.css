@@ -1,14 +1,13 @@
-$width: 200px;
-
-html {
+body {
+  background-color: rgb(202, 201, 201);
   font-family: "Roboto", sans-serif;
 }
 
 .main {
-  width: #{$width};
   padding: 32px 16px 16px;
   background-color: #fff;
   box-sizing: border-box;
+  width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
@@ -17,18 +16,15 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
-}
-
-.price {
-  margin-bottom: 16px;
 }
 
 .main__img {
-  display: block;
+  background: url(../images/imac.jpeg) no-repeat;
   margin: 0 auto 40px;
-  height: 134px;
+  background-position: center;
   width: 160px;
+  height: 134px;
+  background-size: contain;
 }
 
 .main__h1 {
@@ -49,16 +45,17 @@ html {
 
 .r {
   color: var(--Main-accent, #060b35);
+  text-align: right;
   font-size: 10px;
   font-weight: 400;
-  margin: 0;
+  line-height: 140%;
 }
 
 .p {
   color: var(--Secondary, #616070);
   font-size: 12px;
   font-weight: 400;
-  margin: 0;
+  line-height: 150%;
 }
 
 .p2 {
@@ -67,7 +64,6 @@ html {
   font-size: 16px;
   font-weight: 700;
   line-height: 112.5%;
-  margin: 0;
 }
 
 .stars {
@@ -75,16 +71,15 @@ html {
 }
 
 .main__button {
-  display: flex;
-  text-decoration: none;
-  text-transform: uppercase;
   box-sizing: border-box;
   color: var(--White, #fff);
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
+  line-height: 114.29%;
+  text-transform: uppercase;
   height: 40px;
+  width: 100%;
   border: 1px solid var(--Blue-accent, #00acdc);
   border-radius: 5px;
   background: var(--Blue-accent, #00acdc);
@@ -99,11 +94,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars .star:nth-child(-n + 4) {
+.stars .star:nth-child(-n+4) {
   background-image: url(../images/star-active.svg);
 }
 
@@ -111,3 +102,5 @@ html {
   background-color: #fff;
   color: var(--Blue-accent, #00acdc);
 }
+
+/*# sourceMappingURL=index.css.map */
