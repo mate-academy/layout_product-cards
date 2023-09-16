@@ -1,10 +1,13 @@
+$base-margin: 0;
+$base-font: roboto, helvetica, sans-serif;
+
 .card {
-  max-width: 200px;
+  flex-direction: column;
+  display: flex;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   padding: 0 16px;
-  display: flex;
-  flex-direction: column;
+  max-width: 200px;
 
   &__image {
     padding-top: 32px;
@@ -14,68 +17,66 @@
   }
 
   &__title {
+    margin: $base-margin;
     padding-top: 40px;
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: $base-font;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: #060b35;
-    top: 207px;
-    margin: 0;
   }
 
   &__product-code {
+    margin: $base-margin;
     padding-top: 5px;
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: $base-font;
     font-size: 10px;
     font-weight: 400;
     color: #616070;
-    margin: 0;
   }
 
   &__price-amount {
-    font-family: Roboto, Helvetica, sans-serif;
+    margin: $base-margin;
+    font-family: $base-font;
     font-size: 16px;
     font-weight: 700;
-    margin: 0;
   }
 
   &__price-title {
-    font-family: Roboto, Helvetica, sans-serif;
+    margin: $base-margin;
+    font-family: $base-font;
     font-size: 12px;
     font-weight: 400;
     color: #616070;
-    margin: 0;
   }
 
   &__price {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
+    margin: $base-margin;
     padding-top: 24px;
   }
 
   &__buy-link {
+    display: inline-block;
+    height: 40px;
+    width: 166px;
+    line-height: 40px;
+    margin: 16px 0 15px;
+    border-radius: 5px;
+    background-color: #00acdc;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: $base-font;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    background-color: #00acdc;
-    border-radius: 5px;
-    height: 40px;
-    width: 166px;
-    display: inline-block;
     text-align: center;
-    line-height: 40px;
-    margin-bottom: 15px;
-    margin-top: 16px;
   }
 
   &__buy-link:hover {
+    border: 1px solid #00acdc;
     background-color: #fff;
     color: #00acdc;
-    border: 1px solid #00acdc;
   }
 }
