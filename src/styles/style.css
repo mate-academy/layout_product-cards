@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 @font-face {
@@ -9,17 +8,15 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 }
 
-body {
+html {
   font-family: "Roboto", Helvetica, sans-serif;
 }
 
 .card {
   width: 200px;
   border: 1px solid #f3f3f3;
-
   border-radius: 5px;
   padding: 32px 16px 16px;
-  background: #fff;
 }
 
 .card__image {
@@ -29,18 +26,16 @@ body {
 }
 
 .card__title {
-  
+  margin: 0 0 4px;
   color: var(--Main-accent, #060b35);
   font-size: 12px;
   font-weight: 500;
   line-height: 150%;
 }
 
-.card__code {
+.card__product-code {
   margin-top: 4px;
-  margin-bottom: 16px;
   color: var(--Secondary, #616070);
-  
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -48,24 +43,30 @@ body {
 }
 
 .card__review-container {
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 24px;
 }
 
-.card__review-count {
+.card__reviews-count {
+  color: var(--Main-accent, #060b35);
   width: 53px;
   height: 16px;
-  color: var(--Main-accent, #060b35);
-  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  text-align: right;
   font-size: 10px;
-  
+  font-style: normal;
   font-weight: 400;
   line-height: 140%;
 }
 
 .card__price-container {
+  margin-top: 24px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -78,12 +79,10 @@ body {
 }
 
 .card__price {
-  color: var(--Main-accent, #616070);
-  
   font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 112.5%;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--text-accent-color);
 }
 
 .card__buy {
