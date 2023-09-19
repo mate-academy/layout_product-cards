@@ -1,0 +1,110 @@
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid $cardBorderColor;
+  background: $cardBgColor;
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    margin: 0 0 4px;
+    color: $CardFontColorDark;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    margin: 0 0 16px;
+    color: $CardFontColorLight;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__rate {
+    margin: 0 0 24px;
+    display: flex;
+    height: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-text {
+      margin: 0;
+      color: $CardFontColorDark;
+      text-align: right;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    margin: 0 0 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+
+    &-left {
+      margin: 0;
+      color: $CardFontColorLight;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-right {
+      margin: 0;
+      color: $CardFontColorDark;
+      text-align: right;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    background-color: $buttonBgColor;
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+
+    color: $buttonTextColor;
+    text-align: center;
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      border: 1px solid $buttonBorderColor--hover;
+      background-color: $buttonBgColor--hover;
+
+      color: $buttonTextColor--hover;
+    }
+  }
+}
+
