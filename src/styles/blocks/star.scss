@@ -1,98 +1,35 @@
-.star {
+.stars {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 12px;
 
-  &__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 12px;
-
-    &-reviews {
-      display: flex;
-      align-items: center;
-
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-      margin: 0;
-    }
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(/images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  &__price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 0 4px;
-
-    &-text {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
-      color: $secondary-color;
-    }
-
-    &-cost {
-      display: flex;
-      align-items: center;
-
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18px;
-      margin: 0;
-    }
+  &__star:not(:last-child) {
+    margin-right: 4px;
   }
 
-  .stars {
+  &__reviews {
     display: flex;
-
-    &__star {
-      width: 16px;
-      height: 16px;
-      background-image: url(/images/star.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &__star:not(:last-child) {
-      margin-right: 4px;
-    }
-  }
-
-  .stars--1 > .stars__star:nth-child(-n+1),
-  .stars--2 > .stars__star:nth-child(-n+2),
-  .stars--3 > .stars__star:nth-child(-n+3),
-  .stars--4 > .stars__star:nth-child(-n+4),
-  .stars--5 > .stars__star:nth-child(-n+5) {
-    background-image: url(/images/star-active.svg);
-  }
-
-  &__button {
-    display: flex;
-    justify-content: center;
     align-items: center;
 
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-
-    width: 166px;
-    height: 38px;
-    margin: 0;
-    padding: 0;
-    border-radius: 5px;
-    border: 1px solid $blue-accent;
-    background-color: $blue-accent;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-
-    transition: 0.6s ease-in;
-
-    &:hover {
-      background-color: transparent;
-      transition: 0.4s ease;
-      color: $blue-accent;
-    }
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0 0 0 18px;
   }
+}
+
+.stars--1 > .stars__star:nth-child(-n+1),
+.stars--2 > .stars__star:nth-child(-n+2),
+.stars--3 > .stars__star:nth-child(-n+3),
+.stars--4 > .stars__star:nth-child(-n+4),
+.stars--5 > .stars__star:nth-child(-n+5) {
+  background-image: url(/images/star-active.svg);
 }
