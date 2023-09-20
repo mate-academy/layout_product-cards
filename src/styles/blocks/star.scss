@@ -1,5 +1,7 @@
 .stars {
-  :first-child {
+  display: flex;
+
+  & :first-child {
     margin-left: 0;
   }
 
@@ -8,9 +10,13 @@
     height: 16px;
     width: 16px;
     margin: 0 2px;
+  }
 
-    &:nth-child(-n + 4) {
-      background: url(../images/star-active.svg) no-repeat  center;
-    }
+  &--1 :first-child,
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background: url(../images/star-active.svg) no-repeat  center;
   }
 }
