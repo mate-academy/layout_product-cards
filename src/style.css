@@ -1,6 +1,10 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  letter-spacing: 0;
+
+  --btn-bg-color: #00acdc;
+  --minor-text-color: #616070;
 }
 
 ul,
@@ -20,18 +24,16 @@ p {
 }
 
 .card {
-  padding: 32px 16px 16px;
   box-sizing: border-box;
   width: 200px;
   height: 406px;
+  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 
 .card__img {
   display: block;
-  max-width: 160px;
-  max-height: 134px;
   width: 160px;
   height: 134px;
   margin: 0 auto;
@@ -41,21 +43,19 @@ p {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: 0;
   color: #060b35;
 }
 
 .card__text--y {
-  margin-top: 40px;
-  margin-bottom: 4px;
+  margin: 40px 0 4px;
 }
 
 .card__code {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: 0;
-  color: #616070;
+
+  color: var( --minor-text-color);
 }
 
 .stars--y {
@@ -74,12 +74,10 @@ p {
 
 .stars__star {
   display: block;
-  background-image: url(./images/star.svg);
   width: 16px;
   height: 16px;
+  background: url(./images/star.svg) no-repeat center center;
   margin-right: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .stars__star:last-child {
@@ -94,7 +92,6 @@ p {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: 0;
 }
 
 .card__price {
@@ -110,37 +107,33 @@ p {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: 0;
-  color: #616070;
+  color: var( --minor-text-color);
 }
 
 .card__price-text {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  letter-spacing: 0;
 }
 
 .btn {
   display: block;
   width: 166px;
   height: 40px;
-  text-align: center;
-  background-color: #00acdc;
+  border-radius: 5px;
+  background-color: var(--btn-bg-color);
   color: #fff;
+  text-align: center;
   text-transform: uppercase;
   line-height: 40px;
-  border-radius: 5px;
 
-  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0;
   transition: 0.5s ease;
 }
 
 .btn:hover {
   background-color: #fff;
   box-sizing: border-box;
-  border: 1px solid #00acdc;
-  color: #00acdc;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
 }
