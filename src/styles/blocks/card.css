@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-accent: #060b35;
   --secondary: #616070;
@@ -5,8 +9,13 @@
   --white: #fff;
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 .card {
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   width: 200px;
   height: 408px;
   padding: 32px 16px 16px;
@@ -15,36 +24,28 @@
   background: #fff;
 }
 
-.card__image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 40px;
-}
-
 .card__image {
   width: 160px;
   height: 134px;
+  margin-bottom: 40px;
 }
 
-.card__product-title {
+.card__product {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
 }
 
-.card__name {
+.card__product-name {
   color: var(--main-accent);
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   margin-bottom: 4px;
 }
 
-.card__code {
+.card__product-code {
   color: var(--secondary);
-  font-family: "Roboto", sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -58,8 +59,6 @@
 
 .card__review-text {
   color: var(--main-accent);
-  /* text-align: right; */
-  font-family: "Roboto", sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -74,22 +73,19 @@
 .card__price-text {
   color: var(--secondary);
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 18px;
 }
 
-.card__price-ammount {
+.card__price-amount {
   color: var(--Main-accent);
   text-align: right;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
 }
 
 .card__buy-button {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -97,7 +93,6 @@
   width: 166px;
   height: 40px;
   color: var(--white);
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -114,5 +109,4 @@
   color: var(--blue-accent);
   background-color: #fff;
   border: 1px solid var(--blue-accent);
-
 }
