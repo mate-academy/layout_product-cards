@@ -1,3 +1,143 @@
-body {
+:root {
+  --Main-accent: #060b35;
+  --Secondary: #616070;
+  --Blue-accent: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
   margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+}
+
+.img {
+  width: 160px;
+  height: 134px;
+  padding: 32px 19px 0;
+}
+
+.product-name {
+  color: var(--Main-accent);
+  width: 166px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 0;
+  padding: 40px 16px 0;
+}
+
+.product-code {
+  color: var(--Secondary, #616070);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  padding: 4px 16px 0;
+
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px 0;
+  align-items: flex-end;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(./images/star.svg) no-repeat center;
+}
+
+.star:last-child {
+  margin-right: 0;
+}
+
+.stars .star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.text-reviews {
+  color: var(--Main-accent);
+  text-align: right;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 16px 0;
+
+}
+
+.text-price {
+  color: var(--Secondary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.price {
+  color: var(--Main-accent);
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+/* button */
+.btn-buy {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 16px;
+  width: 166px;
+  height: 40px;
+  line-height: 16px;
+  border: 1px solid var(--Blue-accent);
+  border-radius: 5px;
+  background: var(--Blue-accent);
+}
+
+.btn-buy:hover {
+  background-color: #fff;
+  color: var(--Blue-accent);
 }
