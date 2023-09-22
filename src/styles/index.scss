@@ -1,4 +1,6 @@
 $width: 200px;
+$color: #00acdc;
+$color1: #060b35;
 
 html {
   font-family: "Roboto", sans-serif;
@@ -26,7 +28,7 @@ html {
   }
 
   &__h1 {
-    color: #060b35;
+    color: #{$color1};
     font-size: 12px;
     font-weight: 500;
     line-height: 150%;
@@ -52,14 +54,14 @@ html {
     font-size: 14px;
     font-weight: 700;
     height: 40px;
-    border: 1px solid #00acdc;
+    border: 1px solid #{$color};
     border-radius: 5px;
-    background: #00acdc;
+    background: #{$color};
   }
 
   &__button:hover {
     background-color: #fff;
-    color: #00acdc;
+    color: #{$color};
   }
 }
 
@@ -68,7 +70,7 @@ html {
 }
 
 .r {
-  color: #060b35;
+  color: #{$color1};
   font-size: 10px;
   font-weight: 400;
   margin: 0;
@@ -82,7 +84,7 @@ html {
 }
 
 .p2 {
-  color: #060b35;
+  color: #{$color1};
   text-align: right;
   font-size: 16px;
   font-weight: 700;
@@ -106,6 +108,10 @@ html {
   }
 }
 
-.stars--0 .stars__star:nth-child(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(../images/star-active.svg);
 }
