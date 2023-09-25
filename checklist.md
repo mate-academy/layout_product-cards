@@ -5,3 +5,4 @@
 - [ ] Each BEM block has it's own scss file
 - [ ] Nesting has been used while writing classes
 - [ ] Variables have their own file
+- [ ] All BEM typical mistakes are checked (from BEM lesson)
