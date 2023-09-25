@@ -1,78 +1,58 @@
 .card {
   width: 200px;
+  padding: 16px;
   box-sizing: border-box;
   border: 1px solid $product-card-border-color;
   border-radius: 5px;
 
-  // .card__product-image-cnt
-  &__product-image-cnt {
-    display: flex;
-    padding: 32px 19px 24px;
-  }
-
-  // .card__product-image
-  &__product-image {
+  &__image {
+    display: block;
+    margin: 16px auto 40px;
     width: 160px;
     height: 134px;
     object-fit: contain;
   }
 
-  // .card__content
-  &__content {
-    padding: 16px;
-  }
-
-  // .card__product-title
-  &__product-title {
+  &__title {
     font-size: 12px;
     font-weight: 500;
     margin: 0 0 4px;
   }
 
-  // .card__product-code
-  &__product-code {
+  &__code {
     color: $secondary-text-color;
     font-size: 10px;
     line-height: 14px;
     margin: 0 0 16px;
   }
 
-  // .card__product-reviews
-  &__product-reviews {
+  &__reviews {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
     margin-bottom: 24px;
+
+    &-count {
+      font-size: 10px;
+      line-height: 14px;
+      margin: 0;
+    }
   }
 
-  // .card__product-rating
-  &__product-rating {
-    margin-right: 5px;
-  }
-
-  // .card__product-reviews-count
-  &__product-reviews-count {
-    font-size: 10px;
-    line-height: 14px;
-    margin: 0;
-  }
-
-  // .card__price
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 16px;
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 
-  // .card__price-value
-  &__price-value {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  // .card__buy-button
-  &__buy-button {
+  &__button {
     display: flex;
     justify-content: center;
     align-items: center;
