@@ -1,0 +1,27 @@
+@mixin cardButton() {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  background-color: $btnColor;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 16px;
+  border-radius: 5px;
+  border: 1px solid $btnColor;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: rgb(255, 255, 255);
+    color: $btnColor;
+  }
+}
+
+@mixin cardElementsPosition($display, $justContent) {
+  display: $display;
+  justify-content: $justContent;
+}

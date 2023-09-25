@@ -1,143 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap");
 
+@import "./units/variables";
+@import "./units/mixins";
+
+@import "./blocks/card.scss";
+@import "./blocks/rating";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-// default settings
-$fontFamily: "Roboto", sans-serif;
-$fontSize: 12px;
-$mainColor: rgb(6, 11, 53);
-
-// card button
-$btnColor: rgb(0, 172, 220);
-$minorColor: 	rgb(97, 96, 112);
-$bgColor: rgb(255, 255, 255);
-
-@mixin cardButton() {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 100%;
-  font-size: 14px;
-  background-color: $btnColor;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  line-height: 16px;
-  border-radius: 5px;
-  border: 1px solid $btnColor;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  &:hover {
-    background-color: rgb(255, 255, 255);
-    color: $btnColor;
-  }
-}
-
-@mixin cardElementsPosition($display, $justContent) {
-  display: $display;
-  justify-content: $justContent;
-}
-
 body {
   font-family: $fontFamily;
   font-size: $fontSize;
   color: $mainColor;
-}
-
-.card {
-  @include cardElementsPosition(flex, center);
-
-  &__item {
-    display: flex;
-    background-color: $bgColor;
-    flex-direction: column;
-    width: 200px;
-    height: 408px;
-    padding: 32px 16px 16px;
-    border-radius: 5px;
-    border: 1px solid rgb(243, 243, 243);
-  }
-
-  &__top {
-    flex: 1 1 auto;
-  }
-
-  &__image {
-    min-width: 160px;
-    height: 134px;
-    padding: 0 3px;
-    img {
-      max-width: 100%;
-      min-height: 100%;
-    }
-  }
-
-  &__title {
-    margin-top: 40px;
-    font-weight: 500;
-    line-height: 150%;
-  }
-
-  &__subtitle {
-    color: $minorColor;
-    margin-top: 4px;
-    font-size: 10px;
-  }
-
-  &__statistics {
-    margin-top: 18px;
-    @include cardElementsPosition(flex, space-between);
-    align-items: center;
-  }
-
-  &__reviews {
-    font-size: 10px;
-    line-height: 150%;
-  }
-
-  &__price {
-    margin-top: 24px;
-    @include cardElementsPosition(flex, space-between);
-  }
-
-  &__price-title {
-    color: $minorColor;
-    line-height: 18px;
-  }
-
-  &__cost {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-  }
-
-  &__button {
-    @include cardButton;
-  }
-}
-
-.stars {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__star {
-    width: 12px;
-    height: 12px;
-    margin: 0 4px 1px;
-    background: url("../images/star.svg") 50%/cover no-repeat;
-    &:first-child {
-      margin-left: 3px;
-    }
-
-    .stars--4 &:nth-child(-n+4):nth-child(-n + 4) {
-      background: url("../images/star-active.svg") 50%/cover no-repeat;
-    }
-  }
 }

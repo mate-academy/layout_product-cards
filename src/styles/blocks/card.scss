@@ -1,0 +1,71 @@
+.card {
+  @include cardElementsPosition(flex, center);
+
+  &__item {
+    display: flex;
+    background-color: $bgColor;
+    flex-direction: column;
+    width: 200px;
+    height: 408px;
+    padding: 32px 16px 16px;
+    border-radius: 5px;
+    border: 1px solid rgb(243, 243, 243);
+  }
+
+  &__top {
+    flex: 1 1 auto;
+  }
+
+  &__image {
+    min-width: 160px;
+    height: 134px;
+    padding: 0 3px;
+    &-p {
+      max-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__subtitle {
+    color: $minorColor;
+    margin-top: 4px;
+    font-size: 10px;
+  }
+
+  &__statistics {
+    margin-top: 18px;
+    @include cardElementsPosition(flex, space-between);
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 150%;
+  }
+
+  &__price {
+    margin-top: 24px;
+    @include cardElementsPosition(flex, space-between);
+  }
+
+  &__price-title {
+    color: $minorColor;
+    line-height: 18px;
+  }
+
+  &__cost {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    @include cardButton;
+  }
+}
