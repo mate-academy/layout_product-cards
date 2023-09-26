@@ -1,0 +1,91 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  margin: 0;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  border: 1px solid $gray-elements;
+  border-radius: 5px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+    &-name {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      margin: 0 0 4px;
+    }
+
+    &-description {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $secondary-color;
+      margin: 0 0 16px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 4px;
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+
+    &-cost {
+      display: flex;
+      align-items: center;
+
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+
+    width: 166px;
+    height: 38px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid $blue-accent;
+
+    background-color: $blue-accent;
+    color: #fff;
+    transition: 0.6s ease-in;
+
+    &:hover {
+      background-color: transparent;
+      transition: 0.4s ease;
+      color: $blue-accent;
+    }
+  }
+}
