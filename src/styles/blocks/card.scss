@@ -3,8 +3,6 @@ $color_black: #060b35;
 $color_blue: #00acdc;
 $color_grey: #616070;
 $radius: 5px;
-$button_width: 166px;
-$button_height: 40px;
 
 * {
   box-sizing: border-box;
@@ -18,8 +16,6 @@ body {
 
 .card {
   width: 200px;
-  height: 406px;
-  flex-shrink: 0;
   border-radius: $radius;
   border: 1px solid #f3f3f3;
   background: $color_white;
@@ -31,42 +27,44 @@ body {
     margin: 0 auto 40px;
     width: 160px;
     height: 134px;
-    background-size: cover;
-    background-position: center;
   }
 
   &__text {
+    margin: 0;
+    margin-bottom: 4px;
     color: $color_black;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    margin: 0 0 4px;
   }
 
   &__code {
     color: $color_grey;
     font-size: 10px;
     line-height: 14px;
-    margin: 0 0 16px;
+    margin: 0;
+    margin-bottom: 16px;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     margin: 24px 0 16px;
-    color: $color_black;
-    text-align: right;
-    font-size: 16px;
-    font-weight: 700;
     height: 18px;
     align-items: center;
   }
 
-  &__price1 {
+  &__price-text {
     color: $color_grey;
     font-size: 12px;
     line-height: 18px;
-    font-weight: 400;
+  }
+
+  &__price-value {
+    color: $color_black;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
   }
 
   &__reviews {
@@ -98,8 +96,8 @@ body {
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
-    width: $button_width;
-    height: $button_height;
+    width: 100%;
+    padding: 12px 0;
     border-radius: $radius;
     background: $color_blue;
   }
@@ -110,7 +108,4 @@ body {
   border: 1px solid $color_blue;
   color: $color_blue;
   background-color: $color_white;
-  width: $button_width;
-  height: $button_height;
-  border-radius: $radius;
 }
