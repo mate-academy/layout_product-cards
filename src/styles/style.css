@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Roboto", Helvetica, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.card__image {
+  margin: 0 3px 36px;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  margin: 0 0 4px;
+  color: var(--Main-accent, #060b35);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.card__product-code {
+  margin-top: 4px;
+  color: var(--Secondary, #616070);
+  font-size: 10px;
+  font-style: normal;
+  line-height: 140%;
+}
+
+.card__review-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__reviews-count {
+  color: var(--Main-accent, #060b35);
+  width: 53px;
+  height: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.card__price-container {
+  margin-top: 24px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__price-label {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--text-accent-color);
+}
+
+.card__buy {
+  margin-top: 16px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border-radius: 5px;
+  background: var(--Blue-accent, #00acdc);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--White, #fff);
+  
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 114.29%;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.card__buy:hover {
+  color: var(--Blue-accent, #00acdc);
+  background: transparent;
+  border-color: #00acdc;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(../images/star-active.svg);
+}
