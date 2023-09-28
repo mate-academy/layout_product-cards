@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $white;
+  width: 200px;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__name {
+    width: 166px;
+    color: $Main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 0 16px 4px;
+  }
+
+  &__product-code {
+    color: $Secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 17px 24px;
+    align-items: center;
+  }
+
+  &__reviews-name {
+    color: $Main-accent;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__price {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    &-name {
+      color: $Secondary;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    &-number {
+      color: $Main-accent;
+      text-align: right;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    width: 166px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: $Blue-accent;
+    text-align: center;
+    line-height: 40px;
+    margin: 16px;
+  }
+
+  &__item {
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+  }
+
+  &__link:hover {
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $Blue-accent;
+  }
+
+  &__item:hover {
+    color: $Blue-accent;
+  }
+}
