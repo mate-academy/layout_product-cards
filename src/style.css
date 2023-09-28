@@ -1,3 +1,139 @@
-body {
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+
+  --btn-bg-color: #00acdc;
+  --minor-text-color: #616070;
+}
+
+ul,
+li {
+  padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__img {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.card__text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__text--y {
+  margin: 40px 0 4px;
+}
+
+.card__code {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+
+  color: var( --minor-text-color);
+}
+
+.stars--y {
+  margin: 16px 0 24px;
+}
+
+.stars__wrap {
+  display: flex;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars__star {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(./images/star.svg) no-repeat center center;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars__star:nth-child(-n+4) {
+  background-image: url(./images/star-active.svg);
+}
+
+.stars__number {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price--y {
+  margin-bottom: 16px;
+}
+
+.card__price-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var( --minor-text-color);
+}
+
+.card__price-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.btn {
+  display: block;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--btn-bg-color);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
 }
