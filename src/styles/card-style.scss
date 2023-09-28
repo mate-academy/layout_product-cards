@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -7,7 +7,7 @@ body {
   align-items: center;
   flex-direction: column;
   display: flex;
-  width: 199px;
+  width: 198px;
   height: 407px;
 
   border-radius: 5px;
@@ -17,9 +17,11 @@ body {
   &__img {
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px 19px;
+    margin: 32px 19px 40px;
     background-image: url(../images/imac.jpeg);
     background-size: cover;
+    // background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__name {
@@ -29,13 +31,13 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
-    color: var(--Main-accent)
+    color: var(--Main-accent);
   }
 
   &__id {
     margin: var(--margin);
     margin-top: 4px;
-    
+
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -45,31 +47,31 @@ body {
 
   &__statistic {
     justify-content: space-between;
+    align-items: flex-end;
     display: flex;
-    align-items: center;
 
     height: 16px;
     width: 166px;
-    margin: 16px 0 0 0;
+    margin: 16px 0 0;
   }
 
   &__review {
     text-align: right;
-    font-family: Roboto;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
+    color: var(--Main-accent);
   }
 
   &__price {
     justify-content: space-between;
+    align-items: flex-end;
     display: flex;
-    align-items: center;
 
     height: 16px;
     width: 166px;
-    margin: 24px 0 0 0;
+    margin: 26px 0 0;
   }
 
   &__priceCount {
@@ -78,6 +80,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
+    color: var(--Main-accent);
   }
 
   &__pricetext {
@@ -109,9 +112,10 @@ body {
   }
 
   &__button-buy:hover {
-    border: 1px solid var(--Blue-accent, #00ACDC);
+    width: 165px;
+    height: 39px;
+    border: 1px solid var(--Blue-accent);
     background-color: var(--White);
-    color: var(--Blue-accent, #00ACDC);
+    color: var(--Blue-accent);
   }
 }
-
