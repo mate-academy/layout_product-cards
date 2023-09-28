@@ -1,0 +1,87 @@
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__img {
+    display: block;
+    height: 134px;
+    margin: 32px auto 40px;
+  }
+
+  &__container {
+    padding: $container-padding;
+  }
+
+  &__title {
+    @include resetMatginAndPadding;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__product-code {
+    @include resetMatginAndPadding;
+    margin-top: 4px;
+    font-size: $default-font-size;
+    line-height: 14px;
+    color: $secondary-color;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__reviews {
+    @include resetMatginAndPadding;
+    font-size: $default-font-size;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__text {
+    @include resetMatginAndPadding;
+    color: $secondary-color;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__value {
+    @include resetMatginAndPadding;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-button;
+    border: 1px solid $color-button;
+    border-radius: 5px;
+    margin-top: 16px;
+    height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+    }
+  }
+}
