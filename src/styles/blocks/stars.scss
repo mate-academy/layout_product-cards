@@ -2,12 +2,15 @@
   display: flex;
 
   &__star {
-    margin-right: 4px;
     height: 16px;
     width: 16px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../images/star.svg");
+  }
+
+  &__star:not(:last-child) {
+    margin-left: 4px;
   }
 
   @for $star from 1 through 4 {
