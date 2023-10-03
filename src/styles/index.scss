@@ -1,7 +1,5 @@
-$dark-grey-color: #060b35;
-$light-blue-color: #00acdc;
-$white-color: #fff;
-$light-grey-color: #616070;
+@import "./variables.scss";
+@import "./stars.scss";
 
 .card {
   font-family: Roboto, sans-serif;
@@ -29,7 +27,6 @@ $light-grey-color: #616070;
   }
 
   &__code {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $light-grey-color;
@@ -43,7 +40,6 @@ $light-grey-color: #616070;
     align-items: center;
 
     &-value {
-      font-weight: 400;
       font-size: 10px;
       line-height: 14px;
       color: $dark-grey-color;
@@ -77,34 +73,18 @@ $light-grey-color: #616070;
     margin-bottom: 16px;
 
     &-name {
-      font-weight: 400;
+      margin: 0;
       font-size: 12px;
       line-height: 18px;
       color: $light-grey-color;
     }
 
     &-value {
+      margin: 0;
       font-weight: 700;
       font-size: 16px;
       line-height: 18px;
       color: $dark-grey-color;
     }
-  }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    margin-right: 4px;
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 16px;
-    width: 16px;
-  }
-
-  &--4 > :last-child {
-    background-image: url(../images/star.svg);
   }
 }
