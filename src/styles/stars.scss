@@ -1,0 +1,25 @@
+$main-color: #00acdc;
+$white-color: #fff;
+$text-accent-color: #060b35;
+$text-secondary-color: #616070;
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    margin-right: 4px;
+    height: 16px;
+    background: url(../images/star.svg) center no-repeat;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n+#{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
