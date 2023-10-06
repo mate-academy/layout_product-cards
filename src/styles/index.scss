@@ -1,3 +1,109 @@
+@import "./star.scss";
+@import "./value.scss";
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+  background-color: silver;
+}
+
+.card {
+  background-color: $color-white;
+  margin: 10px;
+  display: flex;
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  flex-direction: column;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    color: #060b35;
+    margin: 0 0 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: $line-height-18;
+  }
+
+  &__description {
+    color: $color-silver;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: $line-height-14;
+    margin: 0 0 16px;
+  }
+
+  &__price {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-silver;
+    font-size: 12px;
+    line-height: $line-height-18;
+  }
+
+  &__sum {
+    margin: 0;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: $line-height-18;
+  }
+
+  &__button {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    border-radius: $border-radius;
+    background-color: $color-blue;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    color: $color-white;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-blue;
+    box-sizing: border-box;
+
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+  }
+
+  &__block-stars {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 24px;
+  }
+
+  &__reviews {
+    margin: 0;
+    color: #060b35;
+    display: flex;
+    font-size: 10px;
+    line-height: $line-height-14;
+  }
 }
