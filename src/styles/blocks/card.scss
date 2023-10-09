@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.card {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  height: 408px;
+  width: 200px;
+  background-color: linear-gradient(0deg, #f3f3f3, #f3f3f3),
+    linear-gradient(0deg, #fff, #fff);
+
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  &__img {
+    height: 134px;
+    width: 160px;
+    padding: 32px 19px 36px;
+  }
+
+  &__title {
+    color: var(--color-card-title);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0 16px;
+    padding-bottom: 4px;
+    margin: 0;
+  }
+
+  &__product-code {
+    margin: 0;
+    font-family: inherit;
+    padding: 0 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    padding-bottom: 16px;
+    color: var(--color-card-id);
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16px;
+    padding: 0 16px;
+    margin-bottom: 24px;
+
+    &-reviews {
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 16px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+
+    &-price {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+    }
+  }
+
+  &__btn-buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    background-color: var(--color-card-btn);
+    margin: 0 16px 40px;
+
+    border-radius: 5px;
+    border: 1px solid rgba(0, 172, 220, 1);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+
+    &:hover {
+      background-color: #fff;
+      color: var(--color-card-btn);
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stars__star {
+  background-image: url("../images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 > :first-child,
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
+  background-image: url("../images/star-active.svg");
+}
