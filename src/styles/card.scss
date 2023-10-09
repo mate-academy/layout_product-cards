@@ -1,93 +1,95 @@
 @import "../utils/variables";
 
 .card {
-  padding: 32px 16px 16px;
-  width: 200px;
   border-radius: 5px;
-  border: 1px solid $gray_elements;
-  background: $white_element;
+  border: 1px solid $gray-element;
+  background: $white;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
 
-  &_img {
+  &__img {
+    display: flex;
     width: 160px;
     height: 134px;
-    margin: 0 auto 40px;
-    display: block;
+    margin: 0 auto;
   }
 
-  &_description {
-    color: $main_accent;
+  &__description {
+    color: $main-accent-color;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    padding-bottom: 4px;
+    margin-bottom: 0;
+    margin-top: 40px;
   }
 
-  &_code {
-    color: $secondary;
+  &__code {
+    margin-bottom: 0;
+    margin-top: 4px;
+    color: $secondary-accent-color;
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
-    padding-bottom: 16px;
+    font-weight: 400;
   }
 
-  &_review {
+  &__review {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    width: 166px;
-    padding-bottom: 24px;
+    align-items: center;
+    margin-top: 16px;
 
     &_count {
-      display: flex;
-      align-items: center;
-      color: $main_accent;
+      margin: 0;
+      color: $main-accent-color;
       font-size: 10px;
-      font-weight: 400;
       line-height: 14px;
     }
   }
 
-  &_price {
+  &__price {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 16px;
+    align-items: center;
+    line-height: 18px;
+    height: 18px;
+    margin-top: 24px;
 
     &_text {
-      color: $secondary;
+      color: $secondary-accent-color;
       font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
     }
 
     &_amount {
-      color: $main_accent;
+      color: $main-accent-color;
       text-align: right;
       font-size: 16px;
       font-weight: 700;
-      line-height: 18px;
     }
   }
 
-  &_button-buy {
+  &__button-buy {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
     width: 100%;
-    background-color: $blue_accent;
+    background-color: $blue-accent-color;
     border-radius: 5px;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    color: $white_element;
+    color: $white;
     text-decoration: none;
-    border: 1px solid $blue_accent;
+    border: 1px solid $blue-accent-color;
+    margin-top: 16px;
+    box-sizing: border-box;
 
     &:hover {
-      color: $blue_accent;
-      background-color: $white_element;
+      color: $blue-accent-color;
+      background-color: $white;
     }
   }
 }
