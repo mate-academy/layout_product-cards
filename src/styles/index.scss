@@ -1,66 +1,53 @@
-$color-title: #060b35;
-$color-code: #616070;
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+$primary-color: #060b35;
+$secondary-color: #616070;
+$button-primary-color: #00acdc;
+$button-secondary-color: #fff;
+$title-font-size: 12px;
+$side-font-size: 10px;
+$title-line-height: 14px;
+$side-line-height: 14px;
 
 body {
   margin: 0;
   padding: 0;
-  background-color: red;
+  font-family: "Roboto", sans-serif;
 }
 
 .card {
   display: flex;
-  min-height: 100vh;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: blue;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  padding-top: 33px;
 
-  &__block {
-    width: 200px;
-    height: 408px;
-    background-color: white;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 33px;
-
-    &--margin {
-      margin: 28px;
-    }
+  .photo {
+    width: 160px;
+    height: 134px;
   }
 }
 
-.photo {
-  width: 160px;
-  height: 134px;
-}
-
 .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 40px 17px 17px;
+  padding: 40px 17px 17px;
 
   &__title {
-    color: $color-title;
-    font-family: "Roboto", sans-serif;
-    font-size: 12px;
+    color: $primary-color;
+    font-size: $title-font-size;
     font-weight: 500;
     line-height: 18px;
     margin: 0;
   }
 
   &__code {
-    color: $color-code;
-    font-family: "Roboto", sans-serif;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    margin-top: 4px;
-    margin-bottom: 0;
+    color: $secondary-color;
+    font-size: $side-font-size;
+    line-height: $title-line-height;
+    margin: 4px 0 0;
   }
 
   &__stars {
@@ -69,29 +56,94 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 16px;
+
+    &-place {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      width: 96px;
+      height: 16px;
+
+      .star {
+        width: 13px;
+        height: 13px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/star-active.svg");
+
+        &:last-child {
+          background-image: url("../images/star.svg");
+        }
+      }
+    }
+
+    &-review {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 53px;
+      height: 16px;
+
+      .review {
+        color: $primary-color;
+        text-align: right;
+        font-size: $side-font-size;
+        line-height: $title-line-height;
+        margin-top: 8px;
+      }
+    }
   }
-}
 
-.star {
-  width: 12px;
-  height: 12px;
-  margin-right: 4px;
-}
+  &__price {
+    display: flex;
+    width: 100%;
+    height: 18px;
+    justify-content: space-between;
+    margin-top: 24px;
 
-.reviews {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 53px;
-  height: 16px;
-}
+    &-text {
+      color: $secondary-color;
+      font-size: $title-font-size;
+      line-height: $side-line-height;
+    }
 
-.rev_text {
-  color: $color-title;
-  text-align: right;
-  font-family: "Roboto", sans-serif;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14px; /* 140% */
+    &-cost {
+      color: $primary-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: $side-line-height;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 40px;
+
+    &--margin {
+      margin-top: 16px;
+    }
+
+    .link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $button-secondary-color;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      background-color: $button-primary-color;
+
+      &:hover {
+        color: $button-primary-color;
+        border: 1px solid $button-primary-color;
+        background-color: $button-secondary-color;
+      }
+    }
+  }
 }
