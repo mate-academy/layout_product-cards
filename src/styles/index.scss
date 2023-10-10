@@ -3,6 +3,10 @@ $secondary: #616070;
 $white: #fff;
 $blue-accent: #00acdc;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -11,14 +15,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   width: 200px;
-  height: 406px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: $white;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
 
   &__img {
     width: 160px;
@@ -47,40 +48,17 @@ body {
   }
 
   &__rating {
-    margin-top: 6px;
+    margin-top: 8px;
     display: flex;
     width: 166px;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $main-accent;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
 
-    &-stars {
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
-      width: 96px;
-      height: 16px;
-    }
-
-    &-stars-star {
-      width: 16px;
-      height: 16px;
-      background-image: url(../images/star.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    &-stars :nth-last-child(n + 2) {
-      background-image: url(../images/star-active.svg);
-    }
-
-    &-reviews {
-      margin: 0;
-      color: $main-accent;
-      text-align: right;
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-    }
   }
 
   &__price {
@@ -113,10 +91,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin-top: 16px;
+    margin: 16px;
     width: 166px;
     height: 40px;
     border-radius: 5px;
+    border: 1px solid $blue-accent;
     background: $blue-accent;
 
     color: $white;
@@ -125,12 +104,37 @@ body {
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
-  }
 
-  &__buy:hover {
-    border: 1px solid $blue-accent;
-    background: $white;
-    color: $blue-accent;
+    &:hover {
+      background: $white;
+      color: $blue-accent;
+    }
   }
+}
 
+.stars {
+  position: absolute;
+  top: 277px;
+  left: 17px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 96px;
+  height: 16px;
+
+  &-star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-last-child(n + 4),
+.stars--3 :nth-last-child(n + 3),
+.stars--4 :nth-last-child(n + 2),
+.stars--5 :nth-last-child(n + 1) {
+  background-image: url(../images/star-active.svg);
 }
