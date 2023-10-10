@@ -3,6 +3,7 @@
 .card {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  font-weight: 400;
   height: 408px;
   width: 200px;
   background-color: linear-gradient(0deg, #f3f3f3, #f3f3f3),
@@ -33,7 +34,6 @@
     font-family: inherit;
     padding: 0 16px;
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
     text-align: left;
     padding-bottom: 16px;
@@ -51,7 +51,6 @@
     &-reviews {
       font-family: inherit;
       font-size: 10px;
-      font-weight: 400;
       line-height: 14px;
       text-align: right;
     }
@@ -66,9 +65,7 @@
 
     font-family: inherit;
     font-size: 12px;
-    font-weight: 400;
     line-height: 18px;
-    text-align: left;
 
     &-price {
       font-family: inherit;
@@ -110,18 +107,16 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
 
-.stars__star {
-  background-image: url("../images/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 16px;
-  height: 16px;
-}
+  &__star {
+    background: url("../images/star.svg") no-repeat center;
+    width: 16px;
+    height: 16px;
+  }
 
-.stars__star:not(:last-child) {
-  margin-right: 4px;
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
 }
 
 .stars--1 > :first-child,
@@ -129,5 +124,5 @@
 .stars--3 > :nth-child(-n + 3),
 .stars--4 > :nth-child(-n + 4),
 .stars--5 > :nth-child(-n + 5) {
-  background-image: url("../images/star-active.svg");
+  background: url("../images/star-active.svg") no-repeat center;
 }
