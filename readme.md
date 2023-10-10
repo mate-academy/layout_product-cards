@@ -1,7 +1,7 @@
 # Product cards
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://mrogozhinskaya.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://mrogozhinskaya.github.io/layout_product-cards/report/html_report/)
 
 > Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
 ___
@@ -12,6 +12,12 @@ ___
 ## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
 ## The task
+
+> ❗️❗️❗️ In order to use SCSS delete the `style.css` file and change the `<link>` in the `index.html` to:
+```html
+<link rel="stylesheet" href="./styles/index.scss">
+```
+
 Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
 
 ### Requirements:
@@ -27,6 +33,7 @@ Create a pages with product card using `flexbox` basing on [the mockup](https://
 
 ### Tips & Hints
 - Add **ALL** `data-qa` attributes required in the task
+- If you use SCSS, check `background-image: url()` to be relative to the `main.scss`. So should start with `../images`.
 - Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
 and keep it operational. If you change `stars--4` modifier to `stars--2` or
 other - number of selected stars should change correctly.
