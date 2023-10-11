@@ -1,3 +1,10 @@
+:root {
+  --white-color: #fff;
+  --Main-accent: #060b35;
+  --Secondary: #616070;
+  --Blue-accent: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -15,7 +22,7 @@ a {
   margin: auto;
   margin-top: 25px;
   width: 198px;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 }
@@ -34,13 +41,15 @@ img {
 }
 
 .card__text {
-  width: 166px;
-  height: auto;
-
   margin-top: 40px;
   margin-left: 16px;
-  
-  color: var(--Main-accent, #060b35);
+  margin-right: 16px;
+}
+
+h2 {
+  margin: 0;
+
+  color: var(--Main-accent);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -48,13 +57,10 @@ img {
 }
 
 .card__productCode {
-  width: 100px;
-  height: auto;
-
   margin-top: 4px;
   margin-left: 16px;
 
-  color: var(--Secondary, #616070);
+  color: var(--Secondary);
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -110,7 +116,7 @@ img {
   width: 53px;
   height: 16px;
 
-  color: var(--Main-accent, #060b35);
+  color: var(--Main-accent);
   font-size: 10px;
   font-style: normal;
   text-align: right;
@@ -131,7 +137,7 @@ img {
 }
 
 .card__priceText {
-  color: var(--Secondary, #616070);
+  color: var(--Secondary);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -142,7 +148,7 @@ img {
 .card__priceNumber {
   width: 50px;
   
-  color: var(--Main-accent, #060b35);
+  color: var(--Main-accent);
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -161,7 +167,7 @@ img {
   padding: 0;
 
   border-radius: 5px;
-  background: var(--Blue-accent, #00acdc);
+  background: var(--Blue-accent);
 
   border: none;
   cursor: pointer;
@@ -169,13 +175,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.card__buttonText {
-  height: 16px;
-  width: 27px;
-
-  color: var(--White, #fff);
+  color: var(--white-color);
   text-align: center;
   font-size: 13px;
   font-style: normal;
@@ -184,14 +185,28 @@ img {
   text-transform: uppercase;
 }
 
-.card__buttonText:hover {
-  color: var(--Blue-accent, #00acdc);
-  margin: 0;
-  padding: 0;
+/* .card__buttonText {
+  height: 16px;
+  width: 27px;
+
+  color: var(--white-color);
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 
+.card__buttonText:hover {
+  color: var(--Blue-accent);
+  margin: 0;
+  padding: 0;
+} */
+
 .card__button:hover {
-  background-color: #fff; /* Змініть колір фону при наведенні курсору */
+  background-color: var(--white-color);
   border-radius: 5px;
-  border: 1px solid var(--Blue-accent, #00acdc);
+  border: 1px solid var(--Blue-accent);
+  color: var(--Blue-accent);
 }
