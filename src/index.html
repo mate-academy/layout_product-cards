@@ -5,9 +5,36 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product cards</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.scss">
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div class="card" data-qa="card">
+      <img src="images/imac.jpeg" alt="DaMac"
+      class="card__monitor">
+      <div class="card__boldtext">
+        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+      </div>
+      <div class="card__smalltext">Product code: 195434</div>
+
+      <div class="stars card__stars">
+        <div class="stars__realstars">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+        <div class="stars__revievs">Reviews: 5</div>
+      </div>
+      <div class="card__price">
+        <div class="card__text">Price:</div>
+        <div class="card__money">$2,199</div>
+      </div>
+      <button class="card__button" onclick="location.href='#totalyotherplace'"
+      data-qa="hover">Buy</button>
+    </div>
   </body>
 </html>
