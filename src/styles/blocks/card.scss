@@ -1,6 +1,4 @@
-@use '../utils/variables' as *;
-
-.product-card {
+.card {
   background-color: #{$White};
   border: 1px solid #F3F3F3;
   border-radius: #{$Border-radius};
@@ -12,15 +10,16 @@
   flex-direction: column;
   justify-content: center;
 
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 
-  .product-card__img {
-    width: 100%;
-  
+  .card__img {
+    // width: 100%;
+    height: 8.375rem;
+    object-fit: contain;
     margin-bottom: 2.5rem;
   }
   
-  .product-card__name {
+  .card__name {
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 500;
@@ -31,7 +30,7 @@
     color: #{$Main-accent};
   }
   
-  .product-card__code {
+  .card__code {
     margin-bottom: 1rem;
   
     font-size: 0.625rem;
@@ -42,14 +41,14 @@
     color: #{$Secondary};
   }
   
-  .product-card__ratings {
+  .card__ratings {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
   
     margin-bottom: 1.5rem;
   
-    .product-card__reviews {
+    .card__reviews {
       font-size: 0.625rem;
       font-style: normal;
       font-weight: 400;
@@ -59,7 +58,7 @@
     }
   }
   
-  .product-card__price {
+  .card__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +85,7 @@
   
   }
   
-  .product-card__link {
+  .card__link {
     width: 100%;
     padding: 0.75rem 0;
 
