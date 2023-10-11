@@ -1,0 +1,86 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $main-color;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding: 32px 19px 40px;
+  }
+
+  &__info {
+    padding: 0 16px 16px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: $big-lineHeight;
+    font-weight: 500;
+    color: $bold-txtcolor;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $second-txtcolor;
+    margin-bottom: 16px;
+  }
+
+  &__rate {
+    @include spaceBt;
+    margin-bottom: 24px;
+  }
+
+  &__rate-rev {
+    color: $bold-txtcolor;
+  }
+
+  &__price {
+    @include spaceBt;
+    margin-bottom: 16px;
+  }
+
+  &__price-title {
+    font-size: 12px;
+    line-height: $big-lineHeight;
+    color: $second-txtcolor;
+  }
+
+  &__price-amount {
+    color: $bold-txtcolor;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: $big-lineHeight;
+  }
+
+  &__buy-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: $link-themecolor;
+
+    color: $main-color;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-themecolor;
+      background: $main-color;
+      border-color: $link-themecolor;
+    }
+  }
+
+}
