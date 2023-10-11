@@ -1,3 +1,136 @@
+$fiol: #060b35;
+$gray: #616070;
+$white: #fff;
+$blue: #00acdc;
+
 body {
   margin: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $white;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+  }
+
+  &__name {
+    width: 166px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    color: $fiol;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    align-self: flex-start;
+    margin-left: 16px;
+    margin-top: 4px;
+    color: $gray;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__rating {
+    margin-top: 6px;
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-stars {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      width: 96px;
+      height: 16px;
+    }
+
+    &-stars-star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-stars :nth-last-child(n + 2) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &-reviews {
+      margin: 0;
+      color: $fiol;
+      text-align: right;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    width: 166px;
+    margin-top: 24px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-name {
+      margin: 0;
+      color: $gray;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-sum {
+      margin: 0;
+      color: $fiol;
+      text-align: right;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 16px;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background: $blue;
+
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
+    border: 1px solid $blue;
+    background: $white;
+    color: $blue;
+  }
+
 }
