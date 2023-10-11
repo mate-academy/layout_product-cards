@@ -1,3 +1,79 @@
+@import "./utils/reset";
+@import "./utils/variables";
+@import "./stars";
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: $border-radius;
+  width: $card-width;
+  height: $card-hight;
+  padding: 32px $basic-offset $basic-offset;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: $font-medium;
+    line-height: $line-height-large;
+    color: $primary-text-color;
+    margin-bottom: 4px;
+  }
+  &__code {
+    @include small-text;
+    color: $secondary-text-color;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    @include line-two-el;
+    margin-bottom: 24px;
+
+    .card__reviews {
+      @include small-text;
+      line-height: 16px;
+    }
+  }
+  &__price {
+    @include line-two-el;
+    margin-bottom: 16px;
+    .card__note {
+      font-size: 12px;
+      font-weight: $font-normal;
+      line-height: $line-height-large;
+      color: $secondary-text-color;
+    }
+    .card__count {
+      font-size: $font-large;
+      line-height: $line-height-large;
+      font-weight: $font-bold;
+      color: $primary-text-color;
+    }
+  }
+  &__button {
+    @include button-link;
+    height: 40px;
+    font-size: 14px;
+    font-weight: $font-bold;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    background-color: $secondary-btn-color;
+    color: $primary-btn-color;
+
+    &:hover {
+      border: 1px solid $secondary-btn-color;
+      background-color: $primary-bg-color;
+      color: $secondary-btn-color;
+    }
+  }
 }
