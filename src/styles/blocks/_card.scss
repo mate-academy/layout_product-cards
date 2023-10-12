@@ -1,17 +1,21 @@
 @use "../utils/variables" as *;
 
 .card {
-  width: 200px;
+  width: 198px;
   display: flex;
   flex-direction: column;
-  min-height: 300px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: #fff;
+  box-sizing: content-box;
 
   &__monitor {
-    margin: 33px 20px;
-    margin-bottom: 40px;
+    margin: 32px 19px 40px;
+    // Yes, i know i shouldnt set image height like this.
+    // But it's the only way i could make it work.
+    // Otherwise, it goes out of .card and i dont know why.
+    // Width 100%, flex/grow/shrink/ height/width auto - i tried it all.
+    height: 134px;
   }
 
   &__boldtext {
@@ -32,7 +36,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
-    margin: 0 16px;
+    margin: 4px 16px 0;
   }
 
   &__button {
@@ -71,7 +75,7 @@
     width: 166px;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 24px 16px;
+    margin: 24px 16px 0;
   }
 
   &__text {
