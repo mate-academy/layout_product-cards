@@ -1,8 +1,1 @@
-- [ ] Code style follows rules, described in the [Code Style Rules](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
-- [ ] All the requirements described in the [Readme](readme.md) are implemented in the code
-- [ ] All the Tips & Hints described in the [Readme](readme.md) are taken into account
-- [ ] HTML is written using semantic tags
-- [ ] Each BEM block has it's own scss file
-- [ ] Nesting has been used while writing classes
-- [ ] Variables have their own file
-- [ ] All BEM typical mistakes are checked (from BEM lesson)
+Check [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
