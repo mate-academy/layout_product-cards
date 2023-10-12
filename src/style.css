@@ -1,3 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+.html {
+  --main-text-color: #060b35;
+  --secondary-text-color: #616070;
+  --button-color: #00acdc;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
 body {
   margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px ;
+}
+
+.card__picture {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto;
+}
+
+.card__content {
+  width: 166px;
+  padding-top: 40px;
+}
+
+.content__info {
+  padding-bottom: 16px;
+}
+
+.info-name {
+  font-weight: 500;
+  color: var(--main-text-color);
+  padding-bottom: 4px;
+}
+
+.info-code {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--secondary-text-color);
+}
+
+.card-content__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(images/star-active.svg);
+}
+
+.card-content__reviews {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card-content__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+
+}
+
+.content-price {
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+
+.content-pricevalue {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--main-text-color);
+}
+
+.card-content__button {
+  display: block;
+  height: 40px;
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--button-color);
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.card-content__button:hover {
+  cursor: pointer;
+  color: var(--button-color) ;
+  background-color: #fff;
+  border: 1px solid var(--button-color);
 }
