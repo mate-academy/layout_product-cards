@@ -2,37 +2,18 @@ body {
   margin: 0;
 }
 
-.stars {
-  display: flex;
-
-  &__star {
-    background: url(../images/star.svg) no-repeat center;
-    width: 16px;
-    height: 16px;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 4px;
-  }
-
-  &--1 &__star:first-child,
-  &--2 &__star:nth-child(-n + 2),
-  &--3 &__star:nth-child(-n + 3),
-  &--4 &__star:nth-child(-n + 4),
-  &--5 &__star:nth-child(-n + 5) {
-    background-image: url(../images/star-active.svg);
-  }
+p {
+  margin: 0;
 }
 
 .card {
   width: 200px;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   padding: 32px 16px 16px;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   line-height: 14px;
   color: #060b35;
-  font-weight: 400;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
@@ -87,14 +68,14 @@ body {
   }
 
   &__button {
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 16px;
     height: 40px;
     width: 166px;
-    background: #00acdc;
+    background: var(--main-color-card);
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
@@ -102,11 +83,11 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
-    border: 1px solid #00acdc;
+    border: 1px solid var(--main-color-card);
 
     &:hover {
       background: #fff;
-      color: #00acdc;
+      color: var(--main-color-card);
     }
   }
 }
