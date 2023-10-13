@@ -9,7 +9,7 @@
   background: #fff;
   box-sizing: content-box;
 
-  &__monitor {
+  &__image {
     margin: 32px 19px 40px;
     // Yes, i know i shouldnt set image height like this.
     // But it's the only way i could make it work.
@@ -18,7 +18,7 @@
     height: 134px;
   }
 
-  &__boldtext {
+  &__title {
     width: 166px;
     color: $Main-accent;
     font-family: "Roboto", sans-serif;
@@ -29,7 +29,7 @@
     margin: 0 16px;
   }
 
-  &__smalltext {
+  &__code {
     color: $Secondary;
     font-family: "Roboto", sans-serif;
     font-size: 10px;
@@ -39,22 +39,24 @@
     margin: 4px 16px 0;
   }
 
-  &__button {
+  &__link {
+    display: inline-block;
     width: 166px;
     height: 40px;
     flex-shrink: 0;
     border-radius: 5px;
+    text-decoration: none;
     background: $Blue-accent;
     border: none;
-    margin: 16px;
+    margin: $Size-casual;
     color: $White;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 16px;
     text-transform: uppercase;
+    line-height: 40px;
 
     &:hover {
       color: $Blue-accent;
@@ -63,14 +65,44 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 700;
-      line-height: 16px;
       text-transform: uppercase;
       background: #fff;
       border: 1px solid $Blue-accent;
     }
   }
 
-  &__price {
+  &__rating {
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__stars {
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 16px 16px 0;
+  }
+
+  &__reviews {
+    display: flex;
+    width: 53px;
+    height: $Size-casual;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    color: $Main-accent;
+    text-align: right;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__price-container {
     display: flex;
     width: 166px;
     justify-content: space-between;
@@ -78,7 +110,7 @@
     margin: 24px 16px 0;
   }
 
-  &__text {
+  &__scary-word {
     color: $Secondary;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -87,14 +119,13 @@
     line-height: 18px;
   }
 
-  &__money {
+  &__pricetag {
     color: $Main-accent;
     text-align: right;
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: $Size-casual;
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
   }
-
 }
