@@ -7,16 +7,14 @@
   box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 
-  &__logo {
-    @extend %center;
-
-    .logo {
-      width: 160px;
-      height: 134px;
-      background-image: url("../images/imac.jpeg");
-      background-size: cover;
-    }
+  .logo {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    background-image: url("../images/imac.jpeg");
   }
 
   &__title {
@@ -24,9 +22,10 @@
     font-size: $title-font-size;
     font-weight: 500;
     line-height: 18px;
+    font-family: "Roboto", sans-serif;
     margin: 0;
 
-    &--margin {
+    &--style {
       margin-top: 40px;
     }
   }
@@ -35,7 +34,7 @@
     font-size: $side-font-size;
     line-height: $title-line-height;
 
-    &--margin {
+    &--style {
       margin: 4px 0 0;
     }
   }
@@ -45,8 +44,8 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    &--margin {
-      margin-top: $basic-margin-top;
+    &--style {
+      margin-top: $basic-margin;
     }
 
     .review {
@@ -61,10 +60,9 @@
 
   &__price {
     display: flex;
-    width: 100%;
     justify-content: space-between;
 
-    &--margin {
+    &--style {
       margin-top: 24px;
     }
 
@@ -85,8 +83,8 @@
     width: 100%;
     height: 40px;
 
-    &--margin {
-      margin-top: $basic-margin-top;
+    &--style {
+      margin-top: $basic-margin;
     }
 
     .link {
