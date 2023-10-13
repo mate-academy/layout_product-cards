@@ -1,3 +1,109 @@
+@import "stars.scss";
+@import "card-button.scss";
+@import "main.scss";
+@import "content.scss";
+@import "product-card.scss";
+
+$color_1: #616070;
+$color_2: rgba(6, 11, 53, 1);
+$color_3: white;
+$color_4: rgba(0, 172, 220, 1);
+$color_5: rgba(97, 96, 112, 1);
+$font-family_1: "Roboto", sans-serif;
+$background-color_1: rgba(0, 172, 220, 1);
+$background-color_2: white;
+
+* {
+  font-family: $font-family_1;
+}
+
 body {
   margin: 0;
+}
+
+img {
+  width: 160px;
+  height: 134px;
+  margin: 32px auto 0;
+}
+
+.card__apple {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 40px auto 0;
+  width: 166px;
+  height: 36px;
+}
+
+.card__code {
+  font-weight: 400px;
+  font-size: 10px;
+  line-height: 14px;
+  margin: 4px 16px 16px;
+  color: $color_1;
+}
+
+.stars {
+  display: flex;
+  align-self: space-between;
+  width: 96px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.content__reviews-text {
+  width: 53px;
+  height: 16px;
+  line-height: 14px;
+  color: $color_2;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  margin: 0 auto 24px;
+}
+
+.card__price {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  margin: 0 auto 16px;
+}
+
+.card__price-value {
+  color: $color_5;
+  font-size: 12px;
+  height: 16px;
+  margin: 0;
+}
+
+.card__price-amount {
+  display: flex;
+  margin-left: auto;
+  width: 50px;
+  height: 18px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.stars--4 {
+  .stars_star {
+    &:nth-child(-n+4) {
+      background-image: url(/images/star-active.svg);
+      font-size: 12px;
+    }
+  }
 }
