@@ -1,0 +1,53 @@
+.opinion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 166px;
+  margin: 16px auto 0;
+
+  &__stars {
+    display: flex;
+    align-self: space-between;
+    width: 96px;
+    text-align: left;
+  }
+
+  &__stars-star {
+    display: flex;
+    background: url(../images/star.svg) no-repeat;
+    background-position: center;
+    vertical-align: bottom;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__stars--1 &__stars-star:nth-child(-n+1),
+  &__stars--2 &__stars-star:nth-child(-n+2),
+  &__stars--3 &__stars-star:nth-child(-n+3),
+  &__stars--4 &__stars-star:nth-child(-n+4),
+  &__stars--5 &__stars-star:nth-child(-n+5) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__stars &__stars-star:last-child {
+    margin: 0;
+  }
+
+  &__stars-star--0 &__stars-star:last-child {
+    margin-right: 0;
+  }
+
+  &__reviews {
+    width: 53px;
+    height: 16px;
+    line-height: 14px;
+    color: rgba(6, 11, 53, 1);
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    vertical-align: middle;
+  }
+}
