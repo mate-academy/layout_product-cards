@@ -1,0 +1,97 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  background-color: $white-color;
+  @include flex-center;
+  flex-direction: column;
+
+  &__image {
+    @include flex-center;
+    padding: 33px 20px 0;
+    height: 134px;
+  }
+
+  &__title {
+    @include text-style(12px, 500, 18px);
+    @include flex-center;
+    height: 36px;
+
+    &--margin {
+      padding: 40px $card-padding 0;
+    }
+  }
+
+  &__productcode {
+    @include text-style(10px, 400, 14px, $secondary-text-color);
+    text-align: left;
+
+    &--margin {
+      margin-left: $card-padding;
+      align-self: flex-start;
+      padding-top: 4px;
+    }
+  }
+
+  &__reviews {
+    @include text-style(10px);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 17px 16px;
+    box-sizing: border-box;
+    width: 100%;
+    color: $main-text-color;
+  }
+
+  &__pricetxt {
+    @include text-style(12px, 400, 18px);
+    text-align: left;
+    color: $secondary-text-color;
+  }
+
+  &__value {
+    @include text-style(16px, 700, 18px);
+  }
+
+  &__rate {
+    padding: 16px 17px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__buybutton {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    width: calc(100% - 2 * $card-padding);
+    margin: 0 $card-padding $card-padding;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $primary-bg-color;
+    color: $white-color;
+    border: none;
+    @include flex-center;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: $white-color;
+      color: $primary-bg-color;
+      border: 1px solid $primary-bg-color;
+    }
+  }
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
