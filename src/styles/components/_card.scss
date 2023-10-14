@@ -1,0 +1,118 @@
+@import "../abstracts/_variables.scss";
+@import "../base/base";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &__picture {
+
+    width: 160px;
+    height: 134px;
+    background-image: url("../../src/images/imac.jpeg");
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    //background-position: center;
+    background-size: cover;
+    //background-repeat: no-repeat;
+  }
+
+  &__description {
+    width: 166px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $main-accent;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    padding: 4px 68px 16px 0;
+    color: $secondary;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-stars {
+    display: flex;
+  }
+
+  &__reviews-star {
+    background-image: url("../../src/images/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: $star-dimensions;
+    width: $star-dimensions;
+  }
+
+  &__reviews-star:not(:last-child) {
+    margin-right: $stars-margin;
+  }
+
+  &__reviews-star:nth-child(-n+4) {
+    background-image: url("../../src/images/star-active.svg");
+  }
+
+  &__reviews-text {
+    color: $main-accent;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-amount {
+    color: $main-accent;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-bottom: 16px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $button-width;
+    height: $button-height;
+    border-radius: 5px;
+    border-color: transparent;
+    background: $blue-accent;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__button--active:hover {
+    border: 1px solid $blue-accent;
+    box-sizing: border-box;
+    background: $white;
+    color: $blue-accent;
+    cursor: pointer;
+  }
+}
