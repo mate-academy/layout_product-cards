@@ -8,7 +8,6 @@ $blue-accent: #00acdc;
 
 body {
   margin: 0;
-  background-color: lightgray;
   font-family: "Roboto", sans-serif;
 }
 
@@ -20,6 +19,8 @@ body {
   height: 406px;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
 
   &__monoblock-img {
     background-image: $bg-image;
@@ -40,8 +41,8 @@ body {
   }
 
   &__product-code {
+    color: $secondary;
     font-size: 10px;
-    font-style: normal;
     font-weight: 400;
     line-height: 14px;
     margin: 0 84px 16px 16px;
@@ -77,10 +78,6 @@ body {
     &:hover {
       background: $white;
       border: 1px solid $blue-accent;
-
-      &-link {
-        color: $blue-accent;
-      }
     }
 
     &-link {
@@ -95,16 +92,19 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover {
+        color: $blue-accent;
+      }
     }
   }
-
 }
 
 .stars {
   display: flex;
-  align-items: center;
   width: 166px;
   white-space: nowrap;
+  align-items: center;
 
   &__star {
     background-image: $star;
