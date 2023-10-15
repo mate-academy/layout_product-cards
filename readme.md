@@ -21,11 +21,11 @@ ___
 Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
 
 ### Requirements:
-- reset browser's default margins
-- card width is `200px` including border
-- use images from [src/images](src/images)
-- change link styles on `:hover`
-- follow styles from the mock
+XXX reset browser's default margins
+XXX card width is `200px` including border
+XXX use images from [src/images](src/images)
+XXX change link styles on `:hover`
+XXX follow styles from the mock
 XXX add `data-qa="card"` attribute to the card block
 XXX add `data-qa="hover"` attribute to the link
 
