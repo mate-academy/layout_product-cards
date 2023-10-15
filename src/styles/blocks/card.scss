@@ -1,0 +1,118 @@
+@import "partials/variables.scss";
+@import "blocks/stars.scss";
+
+.card {
+  max-width: 198px;
+  min-height: 406px;
+  &__content {
+    width: $card__content-width;
+    border: 1px solid $card-border-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-block: auto;
+    &-image {
+      width: $card_image-size-width;
+      height: $card_image-size-height;
+      margin-top: 32px;
+      margin-left: 18px;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    width: $card-element-width;
+    height: 36px;
+    margin-top: 36px;
+    margin-left: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    display: flex;
+    padding-right: 20px;
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin-top: 4px;
+    margin-left: 15px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: $card-font-secondary;
+  }
+
+  &__review {
+    display: flex;
+    width: $card-element-width;
+    height: 16px;
+    margin-top: 16px;
+    margin-left: 15px;
+
+    &-text {
+      width: 53px;
+      height: 16px;
+      margin-top: 2px;
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+      color: $card-font-primary;
+    }
+  }
+
+  &__price {
+
+    // Price
+    width: $card-element-width;
+    height: hug (18px);
+    margin-top: 24px;
+    margin-left: 15px;
+    // display: $inline;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+      color: $card-font-secondary ;
+    }
+
+    //Cost
+    &-cost {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      text-align: right;
+      color: $card-font-primary;
+    }
+  }
+
+  &__buy {
+
+    //buylink
+    margin: 16px 15px 15px;
+    width: $card-element-width;
+    height: 40px;
+    border: 1px solid $card__buy-color;
+    border-radius: 5px;
+    background-color: $card__buy-color;
+
+    //font
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    color: $card-white;
+
+    //on hover color change
+    &:hover {
+      color: $card__buy-color;
+      background-color: $card-white;
+    }
+  }
+}
