@@ -1,0 +1,93 @@
+.product-card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__img-wrapp {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__header {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    color: $main-color;
+    font-family: $roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0 0 4px;
+  }
+
+  &__subtitle {
+    color: $secondary-color;
+    font-family: $roboto;
+    @include small-txt;
+    margin: 0;
+  }
+
+  &__review-wrapp {
+    margin-bottom: 24px;
+    @include flex-between-end;
+  }
+
+  &__review-content {
+    color: $main-color;
+    font-family: $roboto;
+    @include small-txt;
+    margin: 0;
+  }
+
+  &__price-wrapp {
+    margin-bottom: 16px;
+    @include flex-between-center;
+  }
+
+  &__price-txt {
+    color: $secondary-color;
+    font-family: $roboto;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__price {
+    color: $main-color;
+    font-family: $roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__cta {
+    @include flex-center;
+    box-sizing: border-box;
+    background-color: $accent-color;
+    border-radius: 5px;
+    border: 1px solid $accent-color;
+    height: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      color: $accent-color;
+    }
+  }
+}
