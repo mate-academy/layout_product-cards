@@ -7,7 +7,9 @@
     width: $star-size;
   }
 
-  &__star:nth-child(-n+4) {
-    background: url("../images/star-active.svg") no-repeat center;
+  @for $index from 1 through 5 {
+    &--#{$index} &__star:nth-child(-n+#{$index}) {
+      background: url("../images/star-active.svg") no-repeat center;
+    }
   }
 }
