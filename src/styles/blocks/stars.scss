@@ -5,17 +5,18 @@
   @extend %center;
   height: 16px;
   width: 96px;
+  gap: 7px;
+
+  &--4 .stars__star:nth-child(-n+4) {
+    background-image: url("../images/star-active.svg");
+  }
 
   &__star {
     width: $star-size;
     height: $star-size;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../images/star-active.svg");
-
-    &:last-child {
-      background-image: url("../images/star.svg");
-    }
+    background-image: url("../images/star.svg");
 
     @each $star, $margin in $star-margin {
       &--#{$star} {
