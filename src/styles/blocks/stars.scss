@@ -1,10 +1,10 @@
 .stars {
   display: flex;
   align-self: space-between;
-  width: 96px;
+  width: calc($stars-width / 96);
   text-align: left;
 
-  &-star {
+  &__star {
     display: flex;
     background: url(../images/star.svg) no-repeat;
     background-position: center;
@@ -14,19 +14,19 @@
     margin-right: 4px;
   }
 
-  &--1 &-star:nth-child(-n+1),
-  &--2 &-star:nth-child(-n+2),
-  &--3 &-star:nth-child(-n+3),
-  &--4 &-star:nth-child(-n+4),
-  &--5 &-star:nth-child(-n+5) {
+  &--1 &__star:nth-child(-n+1),
+  &--2 &__star:nth-child(-n+2),
+  &--3 &__star:nth-child(-n+3),
+  &--4 &__star:nth-child(-n+4),
+  &--5 &__star:nth-child(-n+5) {
     background-image: url(../images/star-active.svg);
   }
 
-  & &-star:last-child {
+  & &__star:last-child {
     margin: 0;
   }
 
-  &-star--0 &-star:last-child {
+  &__star--0 &-star:last-child {
     margin-right: 0;
   }
 }
