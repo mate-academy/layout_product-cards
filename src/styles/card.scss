@@ -1,0 +1,96 @@
+@import "./utils/variables";
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $gray-elements;
+  border-radius: 5px;
+  background: $color-item;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  &__description {
+    color: $main-accent;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+    text-align: start;
+  }
+
+  &__product-code {
+    color: $secondary-accent;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    &-volumen {
+      color: $secondary-accent;
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-cost {
+      color: $main-accent;
+      text-align: right;
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    margin: 16px 0;
+
+    &-size {
+      width: 166px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      background: $blue-accent;
+      cursor: pointer;
+
+      &--text {
+        color: $color-item;
+        text-align: center;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+      }
+
+      &--text:hover {
+        border: 1px solid $blue-accent;
+        background: none;
+        color: $blue-accent;
+      }
+    }
+  }
+}
