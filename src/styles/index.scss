@@ -1,8 +1,5 @@
 @import "stars.scss";
-@import "card-button.scss";
-@import "main.scss";
-@import "content.scss";
-@import "product-card.scss";
+@import "variables.scss";
 
 * {
   font-family: $font-family_1;
@@ -16,22 +13,6 @@ img {
   width: 160px;
   height: 134px;
   margin: 32px auto 0;
-}
-
-.card__code {
-  font-weight: 400px;
-  font-size: 10px;
-  line-height: 14px;
-  margin: 4px 16px 16px;
-  color: $color_1;
-}
-
-.stars {
-  display: flex;
-  align-self: space-between;
-  width: 96px;
-  text-align: left;
-  margin-bottom: 24px;
 }
 
 .content__reviews-text {
@@ -55,31 +36,97 @@ img {
   margin: 0 auto 24px;
 }
 
-.card__price {
+.card {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 166px;
-  height: 18px;
-  margin: 0 auto 16px;
-}
+  flex-direction: column;
+  width: 200px;
+  height: 406px;
+  border: 1px solid rgba(243,243,243,1);
+  border-radius: 5px;
+  box-sizing: border-box;
 
-.card__price-value {
-  color: $color_5;
-  font-size: 12px;
-  height: 16px;
-  margin: 0;
-}
+  &__price-amount {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color_2;
+    margin-left: auto;
+    width: 50px;
+    height: 18px;
+    text-align: right;
+    line-height: 18px;
+  }
 
-.stars--4 {
-  .stars_star {
-    &:nth-child(-n+4) {
-      background-image: url(/images/star-active.svg);
-      font-size: 12px;
-    }
+  &__price-value {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 166px;
+    height: 16px;
+    line-height: 18px;
+    margin: 0 auto 16px;
+    font-size: 12px;
+  }
+
+  &__apple {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 40px auto 0;
+    width: 166px;
+    height: 36px;
+    font-weight: 500;
+    color: $color_2;
+  }
+
+  &__code {
+    font-weight: 400px;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 4px 16px 16px;
+    color: #616070;
+  }
+
+  &__reviews-text {
+    width: 53px;
+    height: 16px;
+    line-height: 14px;
+    color: rgba(6, 11, 53, 1);
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2px;
+    vertical-align: middle;
+  }
+  &__price {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+    margin: 0 auto 16px;
   }
 }
 
-.stars .stars_star:last-child {
-  margin: 0;
+.card__button {
+  width: 166px;
+  display: flex;
+  height: 40px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  background-color: $light-blue;
+  color: $color_3;
+  font-family: $font-family_1;
+  font-weight: 700;
+  font-size: 14px;
+
+  &:hover {
+    border: 1px solid $light-blue;
+    background-color: $background-color_2;
+    color: $light-blue;
+    height: 38px;
+  }
 }
