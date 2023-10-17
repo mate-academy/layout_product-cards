@@ -3,17 +3,16 @@
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 406px;
   border-radius: 5px;
   border: solid 1px #f3f3f3;
-  box-sizing: border-box;
   padding: 32px 16px 16px;
+  justify-content: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 
   &__image {
-    display: block;
-    width: 160px;
     height: 134px;
-    margin: 0 auto 40px;
+    object-fit: contain;
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -25,59 +24,75 @@
   }
 
   &__code {
-    color: $secondary-text-color;
     margin-bottom: 16px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-text-color;
   }
 
-  &__reviews {
+  &__ratings {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 24px;
   }
 
+  &__reviews {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    color: #{$main-text-color};
+  }
+
   &__cost {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 16px;
-    font-weight: 700;
-  }
 
-  &__price {
-    color: $secondary-text-color;
-    font-size: 12px;
-    line-height: 18px;
-  }
+    span:first-child {
+      color: $secondary-text-color;
+      font-size: 12px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 18px;
+    }
 
-  &__value {
-    color: $main-text-color;
-    text-align: right;
-    font-size: 16px;
-    line-height: 18px;
+    span:last-child {
+      color: $main-text-color;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      font-style: normal;
+    }
+
   }
 
   &__button {
+    width: 100%;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 12px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    width: 166px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: $button-main-color;
-    color: #fff;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
+    color: #fff;
+    border: 1px solid transparent;
+    background-color: $button-main-color;
+    border-radius: 5px;
+
   }
 
   &__button:hover {
     background-color: #fff;
     color: $button-main-color;
-    border: 1px solid $button-main-color;
+    border-color: $button-main-color;
   }
 
 }
