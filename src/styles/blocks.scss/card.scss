@@ -37,6 +37,22 @@ $blue-color: #00acdc;
     color: $text-color;
   }
 
+  &__reviews {
+    display: flex;
+    margin: 0;
+    padding-top: 18px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews-text {
+    margin: $base-margin;
+    font-family: $base-font;
+    font-size: 10px;
+    font-weight: 400;
+    color: #060b35;
+  }
+
   &__price-amount {
     margin: $base-margin;
     font-family: $base-font;
@@ -56,16 +72,18 @@ $blue-color: #00acdc;
     align-items: center;
     justify-content: space-between;
     margin: $base-margin;
-    padding-top: 24px;
+    padding-top: 23px;
   }
 
   &__buy-link {
     display: inline-block;
+    box-sizing: border-box;
     height: 40px;
     width: 166px;
     line-height: 40px;
     margin: 16px 0 15px;
     border-radius: 5px;
+    border: 1px solid transparent;
     background-color: $blue-color;
     color: white;
     font-family: $base-font;
@@ -78,6 +96,6 @@ $blue-color: #00acdc;
   &__buy-link:hover {
     border: 1px solid $blue-color;
     background-color: #fff;
-    color: #00acdc;
+    color: $blue-color;
   }
 }
