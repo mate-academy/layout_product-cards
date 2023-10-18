@@ -1,16 +1,4 @@
-$colors: (
-  "main-accent": #060b35,
-  "secondary": #616070,
-  "white": #fff,
-  "blue-accent": #00acdc,
-  "gray-element": #f3f3f3,
-  "yellow-stars": #ffde6a
-);
-
-$sizes: (
-  "star-size": 16px,
-  "container-size": 96px,
-);
+@import "_variables";
 
 /* #region card */
 
@@ -21,11 +9,11 @@ body {
 .card {
   height: 406px;
   width: min-content;
-  border: 1px solid map-get($colors, "gray-element");
+  border: 1px solid $gray-element;
   border-radius: 5px;
-  background-color: map-get($colors, "white");
+  background-color: $white;
   font-family: "Roboto", sans-serif;
-  &__rectangle {
+  &__image {
     width: 10rem;
     padding: 2rem 19px 0;
     margin-bottom: 36px;
@@ -35,7 +23,7 @@ body {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: map-get($colors, "main-accent");
+    color: $main-accent;
     padding: 0 1rem;
     margin-bottom: 0.25rem;
   }
@@ -43,34 +31,22 @@ body {
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: map-get($colors, "secondary");
+    color: $secondary;
     padding: 0 1rem;
     margin-bottom: 1rem;
   }
   &__review {
     padding: 0 1rem;
     margin-bottom: 1.5rem;
-  }
-  &__button {
-    padding: 0 1rem 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
   }
-  &__price {
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-  }
-}
-
-.review {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   &__stars {
     width: 96px;
   }
-  &__text {
-    color: map-get($colors, "main-accent");
+  &__review-text {
+    color: $main-accent;
     text-align: right;
     font-size: 10px;
     font-weight: 400;
@@ -79,42 +55,43 @@ body {
   &__price {
     padding: 0 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
   }
-}
-
-.price {
-  display: flex;
-  justify-content: space-between;
-  &__text {
+  &__price-text {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    color: map-get($map: $colors, $key: secondary);
+    color: $secondary;
   }
   &__value {
     font-weight: 700;
     line-height: 18px;
-    color: map-get($colors, "main-accent");
+    color: $main-accent;
   }
-}
-
-.button {
-  text-decoration: none;
-  display: inline-block;
-  background-color: map-get($colors, "blue-accent");
-  color: map-get($colors, "white");
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: 1px solid map-get($colors, "blue-accent");
-  border-radius: 5px;
-  width: 166px;
-  height: 2.5rem;
-  &:hover {
-    background-color: map-get($colors, "white");
-    color: map-get($colors, "blue-accent");
-    border: 1px solid map-get($colors, "blue-accent");
+  &__button-container {
+    padding: 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: $blue-accent;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $blue-accent;
     border-radius: 5px;
+    width: 166px;
+    height: 2.5rem;
+    &:hover {
+      background-color: $white;
+      color: $blue-accent;
+      border: 1px solid blue-accent;
+      border-radius: 5px;
+    }
   }
 }
 
@@ -127,19 +104,16 @@ body {
   justify-content: space-between;
   &__star {
     background-image: url(..\images\star.svg);
-    height: map-get($map: $sizes, $key:star-size);
-    width: map-get($map: $sizes, $key:star-size);
+    height: $star-size;
+    width: $star-size;
     background-position: center;
     object-fit: cover;
     box-sizing: border-box;
     background-repeat: no-repeat;
   }
-  &--5 .stars__star {
-    background-image: url(\images\star-active.svg);
-  }
 }
 
-@for $index from 1 through 4 {
+@for $index from 1 through 5 {
   .stars--#{$index} .stars__star:nth-child(-n + #{$index}) {
     background-image: url(..\images\star-active.svg);
   }
