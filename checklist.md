@@ -1,6 +1,6 @@
 1. [STYLES] - Get used to style all elements using classes. And don't increase
 selectors specificity unless completely necessary.
-2. [STYLES] - Remember to use fallback fonts - alternative font-family in case 
+2. [STYLES] - Remember to use fallback fonts - alternative font-family in case
 the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
 3. [CODE STYLE] - Add empty lines between multiline sibling blocks of HTML.
 But don't add empty lines between parent and child elements
@@ -119,7 +119,7 @@ on the same level as opening one.
             ![html-attributes-bad-example-2](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-2.png)
             ![html-attributes-bad-example-3](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-3.png)
             ![html-attributes-bad-example-4](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-4.png)
-        </details>
+        </details>Garri_Potter_i_uznik_azkabana_2004_BDRip_[2.18]_by_Dalemake_DVO_Tycoon.ac3
         <details>
           <summary>GOOD example</summary>
             ![html-attributes-good-example-1](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-good-1.png)
