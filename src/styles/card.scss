@@ -5,9 +5,9 @@
   width: 200px;
   height: 406px;
   flex-shrink: 0;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $gray;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: $white;
 
   &__image {
     display: block;
@@ -27,11 +27,9 @@
 
   &__code {
     margin: 4px 0;
-    color: #616070;
-    font-family: Roboto;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
+    color: $secondary;
+    font-family: Roboto, sans-serif;
+    @include smallText;
     line-height: 14px;
   }
 
@@ -43,11 +41,10 @@
   }
 
   &__review-text {
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    color: #060b35;
+    @include smallText;
+    color: $main;
   }
+
   &__price {
     display: flex;
     justify-content: space-between;
@@ -70,15 +67,13 @@
   }
 
   &__buy {
-    display: block;
-    width: 166px;
-    height: 40px;
-    background-color: #00acdc;
+    @include buySize;
+    background-color: $accent;
     border-radius: 5px;
     flex-shrink: 0;
     text-align: center;
-    color: #fff;
-    font-family: Roboto;
+    color: $white;
+    font-family: Roboto, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -88,5 +83,13 @@
     align-items: center;
     justify-content: center;
     margin: 16px 0;
+  }
+
+  &__buy:hover {
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $accent;
+    box-sizing: border-box;
+    color: $accent;
   }
 }
