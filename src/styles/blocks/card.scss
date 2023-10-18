@@ -1,17 +1,13 @@
 .card {
   display: flex;
-  width: 200px;
-
-  &__tile {
-    display: flex;
-    flex-direction: column;
-    height: $card-height;
-    width: $card-width;
-    border-radius: 5px;
-    border: 1px solid #f3f3f3;
-    background-color: #fff;
-    padding: 0 $card-inner-indent;
-  }
+  box-sizing: border-box;
+  flex-direction: column;
+  height: $card-height;
+  width: $card-width;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background-color: $bg-color;
+  padding: 0 $card-inner-indent;
 
   &__image {
     display: flex;
@@ -20,17 +16,12 @@
     height: 134px;
     margin-top: 32px;
     flex-shrink: 0;
-
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   &__title {
     margin-top: 40px;
 
     color: $Main-accent;
-    font-family: "Roboto", sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -40,7 +31,6 @@
     margin-top: 4px;
 
     color: $Secondary-accent;
-    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 400;
   }
@@ -65,7 +55,6 @@
 
     color: $Main-accent;
     text-align: right;
-    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 400;
   }
@@ -78,7 +67,6 @@
 
     &-label {
       color: $Secondary-accent;
-      font-family: "Roboto", sans-serif;
       font-size: 12px;
       font-weight: 400;
     }
@@ -86,23 +74,23 @@
     &-amount {
       color: $Main-accent;
       text-align: right;
-      font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 700;
     }
   }
 
   &__buy {
+    box-sizing: border-box;
     height: 40px;
     width: 100%;
     background-color: $Blue-accent;
+    border: 1px solid transparent;
     border-radius: 5px;
     margin: $card-inner-indent 0;
 
-    color: white;
+    color: $bg-color;
     text-align: center;
     text-decoration: none;
-    font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -110,12 +98,9 @@
     text-transform: uppercase;
 
     &:hover {
-      box-sizing: border-box;
-      border-radius: 5px;
-      border: 1px solid $Blue-accent;
-      background-color: #fff;
+      border-color: $Blue-accent;
+      background-color: $bg-color;
       color: $Blue-accent;
-      line-height: 38px;
     }
   }
 }
