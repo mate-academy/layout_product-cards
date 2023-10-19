@@ -1,0 +1,83 @@
+.product-card {
+  width: 200px;
+  height: 408px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px #f3f3f3 solid;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    display: block;
+    margin: auto;
+  }
+
+  &__name {
+    margin-top: 40px;
+    font-size: inherit;
+    font-weight: 500;
+  }
+
+  &__code {
+    color: $secondary-text-color;
+    margin-top: 4px;
+
+    @include secondaryFontSize;
+  }
+
+  &__reviews {
+    margin-top: 16px;
+
+    @include flexSpace;
+
+    &-grades {
+      display: flex;
+      align-items: flex-end;
+
+      @include secondaryFontSize;
+    }
+  }
+
+  &__price {
+    margin-top: 24px;
+
+    @include flexSpace;
+
+    &-name {
+      color: $secondary-text-color;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &-current {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 16px;
+    height: 38px;
+    border: 1px solid $buy-color;
+    background-color: $buy-color;
+    border-radius: 5px;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: $std-transition;
+
+    &:hover {
+      background-color: #fff;
+      color: $buy-color;
+      transition: $std-transition;
+    }
+  }
+}
