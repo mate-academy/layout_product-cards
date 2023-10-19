@@ -1,8 +1,4 @@
 .card {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 200px;
   padding: 32px 16px 16px 16px;
   border-radius: 5px;
@@ -10,43 +6,37 @@
   background: #FFF;
 
   &__image {
+    display: block;
     width: 160px;
     height: 134px;
-    margin-bottom: 40px;
-  }
-
-  &__information {
-    width: 166px;
-    margin-bottom: 16px;
+    margin: 0 auto 40px;
   }
 
   &__header {
-    color: $main-accent-color;
+    color: $c-accent-color;
     font-size: $standart-font-size;
-    font-style: normal;
     font-weight: 500;
-    line-height: 150%;
-    // text-align: justify;
+    line-height: 18px;
     margin-bottom: 4px;
   }
 
   &__code {
-    color: $secondary-color;
+    color: $c-secondary-color;
     font-size: $small-font-size;
-    font-weight: 400;
-    line-height: 140%;
+    line-height: 14px;
+    margin-bottom: 16px;
   }
 
-  &__review {
+  &__review-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: 24px;
   }
+
   &__mark {
-    align-self: flex-end;
-    color: $main-accent-color;
+    color: $c-accent-color;
     font-size: $small-font-size;
     font-weight: 400;
     line-height: 140%;
@@ -55,54 +45,40 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     margin-bottom: 16px;
   }
+
   &__item {
-    color: $secondary-color;
+    color: $c-secondary-color;
     font-size: $standart-font-size;
-    font-weight: 400;
-    line-height: 150%;
+    line-height: 18px;
   }
 
   &__number {
-    color: $main-accent-color;
+    color: $c-accent-color;
     font-size: 16px;
     font-weight: 700;
-    line-height: 112.5%;
+    line-height: 18px;
   }
 
   &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: $white;
-    background-color: $blue-accent;
-    width: 166px;
-    height: 40px;
+    color: $c-white;
+    background-color: $c-blue-accent;
     font-size: 14px;
     font-weight: 700;
-    line-height: 40px;
-    text-align: center;
+    line-height: 16px;
+    height: 40px;
     border-radius: 5px;
-  }
 
-  &__link:hover {
-    color: $blue-accent;
-    background-color: $white;
-    border: 1px solid $blue-accent;
+    &:hover {
+      color: $c-blue-accent;
+      background-color: $c-white;
+      border: 1px solid $c-blue-accent;
+    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

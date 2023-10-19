@@ -1,18 +1,20 @@
-.card__stars {
+$counts: 1, 2, 3, 4, 5;
+
+.stars {
   display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @each $count in $counts {
+    &--#{$count} &__star:nth-child(-n + #{$count}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
-
-.card__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.card__stars--acive .card__star:not(:last-child) {
-  background-image: url(../images/star-active.svg);
-}
-
-
