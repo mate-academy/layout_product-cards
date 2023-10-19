@@ -1,3 +1,141 @@
-body {
+$mainColor: #060b35;
+$secondColor: #616070;
+$buttonColor: #00acdc;
+$hoverTextColor: #00acdc;
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body * {
   margin: 0;
+}
+
+.card {
+  width: 198px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+
+  &__img {
+    padding: 32px 19px 0;
+    display: flex;
+    width: 160px;
+    height: 134px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    &--main {
+      color: $mainColor;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+      padding: 40px 16px 4px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    &--code {
+      padding: 0 0 16px 16px;
+      color: $secondColor;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+
+  &--star {
+    height: 12px;
+    width: 12px;
+    background-image: url(../images/star.svg);
+    background-size: cover;
+    margin: 2px;
+  }
+
+  &--text {
+    margin: 0 16px 0 0;
+    color: $mainColor;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  &--star:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &--star:first-child {
+    margin-left: 16px;
+  }
+
+  &--star:last-child {
+    margin-right: 0;
+  }
+}
+
+.card__rating--star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  flex-direction: row;
+
+  &--text {
+    padding: 24px 0 16px 16px;
+    color: $secondColor;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: right;
+  }
+
+  &--number {
+    padding: 24px 16px 16px 0;
+    color: $mainColor;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+.card__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  background-color: $buttonColor;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 166px;
+  margin: 0 16px 16px;
+}
+
+.card__button:hover {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: $hoverTextColor;
+  background-color: #fff;
+  border: 1px solid $buttonColor;
 }
