@@ -1,7 +1,5 @@
-$mainColor: #060b35;
-$secondColor: #616070;
-$buttonColor: #00acdc;
-$hoverTextColor: #00acdc;
+@import "../utils/variables.scss";
+@import "./rating.scss";
 
 html {
   font-family: "Roboto", sans-serif;
@@ -80,46 +78,6 @@ body * {
       background-color: #fff;
       border: 1px solid $buttonColor;
     }
-  }
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &__stars {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  &__star {
-    height: 12px;
-    width: 12px;
-    background-image: url(../images/star.svg);
-    background-size: cover;
-    margin: 2px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:not(:last-child) {
-      margin-right: 6px;
-    }
-
-    &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__text {
-    color: $mainColor;
-    text-align: right;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 14px;
   }
 }
 
