@@ -1,0 +1,91 @@
+.card {
+  width: 200px;
+  height: 408px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: $white;
+  box-sizing: border-box;
+  padding: 0 16px;
+  border: 1px solid #f3f3f3;
+  line-height: 14px;
+  font-weight: 400;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-image: url("../images/imac.jpeg");
+    background-size: 160px 134px;
+    margin-top: 32px;
+  }
+
+  &__text-name {
+    color: $main-accent;
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__text-product-code {
+    margin-top: 4px;
+    color: #616070;
+    font-size: 10px;
+  }
+
+  &__reviews {
+    @include content-display;
+    
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 16px;
+  }
+
+  &__reviews-amount {
+    color: $main-accent;
+    font-size: 10px;
+  }
+
+  &__price {
+    @include content-display;
+
+    width: 100%;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__price-name {
+    color: #616070;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price-number {
+    color: $main-accent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $blue-accent;
+    color: $white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 16px;
+    border: 1px solid $blue-accent;
+  }
+
+  &__button:hover {
+    background-color: $white;
+    color: $blue-accent;
+  }
+}
