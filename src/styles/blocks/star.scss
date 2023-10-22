@@ -1,9 +1,23 @@
 
-.stars {
+.card {
   display: flex;
   align-items: center;
   padding-top: 16px;
   justify-content: space-between;
+
+  &__review {
+    color: var(--Main-accent);
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
 
   &__star {
     background-image: url("../../../../../../projects/layout_product-cards/src/images/star.svg");
@@ -22,22 +36,7 @@
     margin-right: 4px;
   }
 
-  &__block {
-    display: flex;
-    align-items: center;
-  }
-
   &__star:nth-child(-n+4) {
     background-image: url("../../../../../../projects/layout_product-cards/src/images/star-active.svg");
   }
-
-  &__review {
-    color: var(--Main-accent);
-    text-align: right;
-    font-size: 10px;
-    font-weight: 400;
-    padding: 0;
-    margin: 0;
-  }
-
 }
