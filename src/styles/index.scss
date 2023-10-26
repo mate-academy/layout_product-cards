@@ -9,6 +9,7 @@ body {
 }
 
 .card {
+  display: block;
   width: 200px;
   box-sizing: border-box;
   border: 1px solid $whiteShade;
@@ -17,6 +18,7 @@ body {
   padding: 32px 16px 16px;
 
   &__img {
+    display: block;
     margin: 0 3px 40px;
     width: 160px;
     height: 134px;
@@ -24,6 +26,7 @@ body {
 
   &__content {
     &-title {
+      margin: 0;
       color: $blackColor;
       font-size: 12px;
       font-weight: 500;
@@ -31,11 +34,11 @@ body {
     }
 
     &-prcode {
+      margin: 0;
       color: $grayColor;
       font-size: 10px;
       font-weight: 400;
       line-height: 14px;
-
       margin-top: 4px;
     }
   }
@@ -48,27 +51,8 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    .stars {
-      display: flex;
-
-      &__star {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-
-      :nth-child(-n + 4) {
-        background-image: url(../images/star-active.svg);
-      }
-    }
-
-    .review {
+    &-review {
+      margin: 0;
       color: $blackColor;
       font-weight: 400;
       font-size: 10px;
@@ -82,6 +66,7 @@ body {
     justify-content: space-between;
 
     &-title {
+      margin: 0;
       color: $grayColor;
 
       font-size: 12px;
@@ -90,6 +75,7 @@ body {
     }
 
     &-number {
+      margin: 0;
       color: $blackColor;
 
       font-size: 16px;
@@ -101,7 +87,7 @@ body {
 
   &__submit {
 
-    .submit-button {
+    &-button {
       display: block;
       background-color: #00acdc;
       width: 100%;
@@ -126,13 +112,4 @@ body {
       }
     }
   }
-}
-
-.d-block {
-  display: block;
-}
-
-p {
-  padding: 0;
-  margin: 0;
 }
