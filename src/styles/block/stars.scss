@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &--active div:nth-child(-n+4) {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__reviews {
+    color: $main-accent;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
