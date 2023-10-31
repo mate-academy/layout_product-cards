@@ -1,45 +1,21 @@
+@import "card.scss";
+@import "stars.scss";
+@import "value.scss";
+
 body {
   margin: 0;
 }
 
-.card {
-  height: 408px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  padding-top: 32px;
-  box-sizing: border-box;
-
-  border-radius: 5px;
-  border: 1px solid #f3f3f3;
-  background-color: #fff;
-}
-
-.image {
-  background-image: url(../images/imac.jpeg);
-  width: 160px;
-  height: 134px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 19px;
-}
-
-.block {
-  margin: 40px 16px 16px;
-  box-sizing: border-box;
-}
-
-.textMain {
-  color: #060b35;
+.text-Main {
+  color: $Main-accent;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
 }
 
-.textSecondary {
-  color: #616070;
+.text-Secondary {
+  color: $Secondary;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -55,13 +31,13 @@ body {
   font-family: "Roboto", sans-serif;
 
   &__text {
-    color: #616070;
+    color: $Secondary;
     font-size: 12px;
     font-weight: 400;
   }
 
   &__value {
-    color: #060b35;
+    color: $Main-accent;
     text-align: right;
     font-size: 16px;
     font-weight: 700;
@@ -76,34 +52,13 @@ body {
   justify-content: space-between;
 
   &__text {
-    color: #060b35;
+    color: $Main-accent;
     text-align: right;
     font-family: "Roboto", sans-serif ;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
     align-self: flex-end;
-  }
-}
-
-.stars {
-  display: flex;
-  flex-direction: row;
-
-  &__star {
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 16px;
-    width: 16px;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-
-    &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
   }
 }
 
@@ -119,20 +74,20 @@ body {
   &__href {
     padding: 12px 69.5px;
     border-radius: 5px;
-    background-color: #00acdc;
+    background-color: $Blue-accent;
     display: block;
     text-align: center;
 
-    color: #fff;
+    color: $White;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
 
     &:hover {
-      border: 1px solid #00acdc;
-      background-color: white;
-      color: #00acdc;
+      border: 1px solid $Blue-accent;
+      background-color: $White;
+      color: $Blue-accent;
       padding: 11px 68.5px;
     }
   }
