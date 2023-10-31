@@ -1,3 +1,95 @@
+@import "./values.scss";
+@import "./card.scss";
+@import "./stars.scss";
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.text-main {
+  color: $Main-accent;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 40px 0 0;
+}
+
+.text-secondary {
+  color: $Secondary;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  margin: 4px 0 0;
+}
+
+.rating {
+  display: flex;
+  margin-top: 16px;
+  height: 16px;
+  width: 100%;
+  justify-content: space-between;
+
+  &__text {
+    align-self: flex-end;
+    color: $Main-accent;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+.price {
+  display: flex;
+  margin-top: 24px;
+  justify-content: space-between;
+  line-height: 18px;
+
+  &__text {
+    color: $Secondary;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__value {
+    color: $Main-accent;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.button {
+  width: 166px;
+  height: 40px;
+  margin: 16px auto 0;
+  border-radius: 5px;
+
+  &__href {
+    display: block;
+    padding: 12px 69.5px;
+    line-height: 16px;
+    color: $White;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    background-color: $Blue-accent;
+    border-radius: 5px;
+
+    &:hover {
+      border: 1px solid $Blue-accent;
+      background-color: $White;
+      color: $Blue-accent;
+      padding: 11px 68.5px;
+    }
+  }
 }
