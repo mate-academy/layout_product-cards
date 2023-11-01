@@ -1,24 +1,82 @@
 .card {
   display: block;
-  width: 198px;
+  box-sizing: border-box;
+  width: 200px;
   background-color: var(--white-color);
   border: 1px solid var(--darck_white-color);
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  padding: 32px 16px 16px;
 
-  & .image {
-    padding: 32px 19px 36px;
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
   }
 
-  & .description {
-    justify-content: center;
-    margin: 0 16px;
+  &__description {
+    margin: 0 0 4px;
     color: var(--text-color);
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    color: var(--gray-color);
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__rewiev {
+    color: var(--text-color);
+  }
+
+  &__mark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    color: var(--gray-color);
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__sum {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__buy {
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--link-color);
+    border-radius: 5px;
+    border: 1px solid var(--link-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background-color: var(--darck_white-color);
+      color: var(--link-color);
+    }
   }
 }
