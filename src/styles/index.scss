@@ -1,5 +1,7 @@
 html {
   font-family: "Roboto", sans-serif;
+  --link-color: #00acdc;
+  --text-color: #060b35;
 }
 
 body {
@@ -17,24 +19,24 @@ body {
   align-items: center;
 }
 
-.monitor {
+.image {
   width: 160px;
   height: 134px;
-  padding: 32px 19px 36px;
+  margin: 32px 19px 36px;
 }
 
 .description {
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
-  color: #060b35;
+  margin: 0 16px;
+  color: var(--text-color);
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
 }
 
 .code {
-  padding: 4px 84px 0 16px;
+  margin: 4px 84px 0 16px;
   color: #616070;
   font-size: 10px;
   font-weight: 400;
@@ -46,32 +48,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 16px 16px 0;
+  margin: 16px 16px 0;
 }
 
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  display: flex;
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars__star:nth-child(-n+4) {
-  background-image: url(../images/star-active.svg);
-}
+@import "stars.scss";
 
 .rewiev {
-  color: #060b35;
+  color: var(--text-color);
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -79,7 +62,7 @@ body {
 }
 
 .mark {
-  padding: 24px 16px 0;
+  margin: 24px 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,14 +78,14 @@ body {
 }
 
 .sum {
-  color: #060b35;
+  color: var(--text-color);
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   word-wrap: break-word;
 }
 
-.button {
+a {
   margin: 16px;
 }
 
@@ -111,18 +94,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00acdc;
+  background-color: var(--link-color);
   border-radius: 5px;
-  border: 1px solid #00acdc;
+  border: 1px solid var(--link-color);
   color: white;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 16px;
   word-wrap: break-word;
-}
 
-.buy:hover {
-  background-color: #f3f3f3;
-  color: #00acdc;
+  &:hover {
+    background-color: #f3f3f3;
+    color: var(--link-color);
+  }
 }
