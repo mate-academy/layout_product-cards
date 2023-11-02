@@ -1,36 +1,30 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  background-color: lightgrey;
   font-family: "Roboto", sans-serif;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
-
 .card {
+  box-sizing: border-box;
   width: 200px;
   border-radius: 5px;
-  border: 1px solid #F3F3F3;
-  background: #FFF;
+  border: 1px solid #f3f3f3;
+  background: #fff;
   padding: 32px 16px 16px;
 }
+
 .card__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
 .card__img {
-  display: block;
+  display: flex;
+  align-self: center;
   width: 160px;
   height: 134px;
   margin-bottom: 40px;
 }
+
 .card__description {
   color: #060b35;
   font-size: 12px;
@@ -39,6 +33,7 @@ p {
   line-height: 18px;
   margin-bottom: 4px;
 }
+
 .card__product-code {
   color: #616070;
   font-size: 10px;
@@ -48,7 +43,90 @@ p {
   margin-bottom: 16px;
   align-self: flex-start;
 }
+
 .card__review {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=index.css.map */
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card__review-count {
+  color: #060b35;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  color: #616070;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.card__price-number {
+  color: #060b35;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn--buy {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 12px 0;
+  background-color: #00acdc;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn--buy:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  margin-right: 2px;
+  display: block;
+}
+
+.stars--4 .stars__star {
+  background-image: url(./../images/star-active.svg);
+}
+
+.stars--4 .stars__star:nth-child(n+5) {
+  background-image: url(../images/star.svg);
+}
+/*# sourceMappingURL=index.css.map */
