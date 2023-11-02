@@ -28,7 +28,6 @@ body {
 .card__description {
   color: #060b35;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 18px;
   margin-bottom: 4px;
@@ -37,8 +36,6 @@ body {
 .card__product-code {
   color: #616070;
   font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 14px;
   margin-bottom: 16px;
   align-self: flex-start;
@@ -54,8 +51,6 @@ body {
 .card__review-count {
   color: #060b35;
   font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 14px;
 }
 
@@ -69,7 +64,6 @@ body {
 .card__price-text {
   color: #616070;
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
 }
 
@@ -112,21 +106,26 @@ body {
 }
 
 .stars__star {
-  background-image: url(../images/star.svg);
   width: 16px;
   height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(../images/star.svg) no-repeat center;
   background-size: auto;
   margin-right: 4px;
   display: block;
 }
 
-.stars--4 .stars__star {
+.stars--1 .stars__star,
+.stars--2 .stars__star,
+.stars--3 .stars__star,
+.stars--4 .stars__star,
+.stars--5 .stars__star {
   background-image: url(./../images/star-active.svg);
 }
 
+.stars--1 .stars__star:nth-child(n+2),
+.stars--2 .stars__star:nth-child(n+3),
+.stars--3 .stars__star:nth-child(n+4),
 .stars--4 .stars__star:nth-child(n+5) {
-  background-image: url(../images/star.svg);
+  background-image: url(./../images/star.svg);
 }
 /*# sourceMappingURL=index.css.map */
