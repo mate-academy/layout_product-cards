@@ -1,12 +1,13 @@
-$main-text-color: #060b35;
-$secondary-text-color: #616070;
+@import "./utils/variables";
+@import "./blocks/card";
+@import "./blocks/stars";
+@import "./blocks/price";
 
 body {
   margin: 0 auto;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 10px;
   font-weight: 400;
-  background-color: #e5e5e5;
   line-height: 140%;
 }
 
@@ -15,111 +16,4 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.product-card {
-  box-sizing: border-box;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid #f3f3f3;
-  background: #fff;
-  padding: 32px 17px 16px;
-
-  &__img {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
-  &__title {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 150%;
-    color: $main-text-color;
-    text-decoration: none;
-  }
-
-  &__code {
-    margin: 0 0 16px;
-    color: $secondary-text-color;
-  }
-
-  &__rating {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-
-  &__stars {
-    display: flex;
-  }
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-    background-image: url("../images/star.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &__stars--stars-1 > &__star:nth-child(-n + 1),
-  &__stars--stars-2 > &__star:nth-child(-n + 2),
-  &__stars--stars-3 > &__star:nth-child(-n + 3),
-  &__stars--stars-4 > &__star:nth-child(-n + 4),
-  &__stars--stars-5 > &__star:nth-child(n) {
-    background-image: url("../images/star-active.svg");
-  }
-
-  &__reviews {
-    align-self: center;
-    text-align: right;
-    color: $main-text-color;
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
-  &__buy-btn {
-    width: 100%;
-    height: 40px;
-    padding: 12px 0;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    background: #00acdc;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    cursor: pointer;
-    transition: all linear 0.3s;
-
-    &:hover {
-      box-sizing: border-box;
-      color: #00acdc;
-      border-radius: 5px;
-      border: 1px solid #00acdc;
-      background: #fff;
-    }
-  }
-}
-
-.price {
-  &__title {
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary-text-color;
-  }
-
-  &__value {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $main-text-color;
-  }
 }
