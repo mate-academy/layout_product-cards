@@ -1,0 +1,97 @@
+.card {
+  display: flex;
+  width: 200px;
+  height: 408px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $whiteAccent;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    width: 100%;
+    color: $mainAccent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 40px 0 0;
+  }
+
+  &__text {
+    width: 100%;
+    color: $secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 4px 0 0;
+  }
+
+  &__rating {
+    @include centerd-content;
+    margin-top: 16px;
+  }
+
+  &__rating-text {
+    color: $mainAccent;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &__price {
+    @include centerd-content;
+    margin-top: 24px;
+  }
+
+  &__price-text {
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &__price-value {
+    color: $mainAccent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: $blueAccent;
+    padding: 0;
+    margin-top: 16px;
+    color: $whiteAccent;
+    font-family: inherit;
+
+    &:hover {
+      border: 1px solid $blueAccent;
+      background-color: $whiteAccent;
+      color: $blueAccent;
+    }
+  }
+
+  &__button-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 11px 0;
+  }
+}
