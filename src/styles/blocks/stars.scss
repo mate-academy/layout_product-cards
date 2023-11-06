@@ -1,0 +1,22 @@
+.stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__star {
+    @extend %star;
+    @extend %star-inactive;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $index from 0 through 5 {
+    &--#{$index} :nth-child(-n + #{$index})::after {
+      @extend %star;
+      @extend %star-active;
+    }
+  }
+}
