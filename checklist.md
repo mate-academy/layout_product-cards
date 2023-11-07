@@ -119,7 +119,7 @@ on the same level as opening one.
             ![html-attributes-bad-example-2](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-2.png)
             ![html-attributes-bad-example-3](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-3.png)
             ![html-attributes-bad-example-4](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-bad-4.png)
-        </details>Garri_Potter_i_uznik_azkabana_2004_BDRip_[2.18]_by_Dalemake_DVO_Tycoon.ac3
+        </details>
         <details>
           <summary>GOOD example</summary>
             ![html-attributes-good-example-1](https://mate-academy.github.io/fe-program/css/checklists/html-attributes/example-good-1.png)
