@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 0 16px 16px;
+
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  background: url("../images/imac.jpeg") no-repeat;
+  background-size: 160px 134px;
+  background-position: top 32px left 19px;
+
+  &__h2 {
+    @include fontFamily(500, 12px, 18px);
+
+    &--margins {
+      @include blockMargins(206px, 4px);
+    }
+  }
+
+  &__product-code,
+  &__reviews {
+    @include fontFamily(400, 10px, 14px);
+  }
+
+  &__prise-txt {
+    @include fontFamily(400, 12px, 18px);
+  }
+
+  &__prise-dollars {
+    @include fontFamily(700, 16px, 18px);
+  }
+
+  &__h2,
+  &__prise-dollars,
+  &__reviews {
+    @include textColor();
+  }
+
+  &__product-code,
+  &__prise-txt {
+    @include textColor(#616070);
+  }
+
+  &__reviews-container,
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews-container {
+    &--margins {
+      @include blockMargins(16px, 24px);
+    }
+  }
+
+  &__price-container {
+    &--margins {
+      @include blockMargins(0, 16px);
+    }
+  }
+
+  &__button {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: $buttonColor;
+
+    text-transform: uppercase;
+    @include textColor(#fff);
+    @include fontFamily(700, 14px, 16px);
+
+    &:hover {
+      border: 1px solid $buttonColor;
+      background-color: #fff;
+      @include textColor($buttonColor);
+    }
+  }
+}
