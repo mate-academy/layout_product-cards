@@ -1,3 +1,4 @@
+@import "./stars.scss";
 $--blue-color: #00acdc;
 $--main-color-text: #060b35;
 $--secondary-color-text: #616070;
@@ -21,21 +22,16 @@ body {
   padding: 16px;
 
   &__product-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 16px 3px 40px;
-
-    &-file {
-      width: 160px;
-      height: 134px;
-    }
+    width: 160px;
+    height: 134px;
   }
 
   &__product-title {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
+    margin-top: 0;
     margin-bottom: 4px;
   }
 
@@ -46,33 +42,6 @@ body {
   }
 
   &__rating {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 16px;
-    margin-bottom: 24px;
-
-    &-stars {
-      display: flex;
-
-      &-star {
-        height: 16px;
-        width: 16px;
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-
-      }
-
-      &-star:not(:last-child) {
-        margin-right: 4px;
-      }
-
-      &-star:nth-child(-n + 4) {
-        background-image: url(../images/star-active.svg);
-      }
-    }
-
     &-reviews {
       line-height: 14px;
     }
@@ -98,7 +67,11 @@ body {
   }
 
   &__button {
-    width: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 167px;
+    height: 40px;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
@@ -106,6 +79,7 @@ body {
     padding: 12px 70px;
     border-radius: 5px;
     background-color: $--blue-color;
+    border: 1px solid $--blue-color;
     color: #fff;
 
     &:hover {
