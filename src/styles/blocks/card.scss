@@ -7,17 +7,13 @@
   background: $color---white;
 
   &__image {
-    width: calc(100% - 6px);
+    display: block;
+    width: 160px;
     height: 134px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   &__title {
-    text-align: start;
-    margin-top: 36px;
-    margin-bottom: 0;
+    margin-top: 40px;
     color: $color--main-accent;
     font-size: 12px;
     font-weight: 500;
@@ -30,21 +26,19 @@
     font-size: 10px;
     line-height: 14px;
     margin-top: 4px;
-    margin-bottom: 0;
   }
 
   &__rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px 0 24px;
+    margin-top: 16px;
+  }
 
-    .rating__reviews {
-      color: $color--main-accent;
-      font-size: 10px;
-      line-height: 14px;
-      margin: 0;
-    }
+  &__reviews {
+    color: $color--main-accent;
+    font-size: 10px;
+    line-height: 14px;
   }
 
   &__price {
@@ -53,13 +47,13 @@
     align-items: center;
     margin-top: 24px;
 
-    .price__name {
+    &-name {
       color: $color--secondary;
       font-size: 12px;
       line-height: 18px;
     }
 
-    .price__number {
+    &-number {
       color: $color--main-accent;
       font-size: 16px;
       font-weight: 700;
@@ -69,10 +63,11 @@
 
   &__button {
     width: 100%;
-    height: 40px;
     border-radius: 5px;
     border: 1px solid $color--blue-accent;
     background: $color--blue-accent;
+    padding-block: 12px;
+    margin-top: 16px;
 
     text-align: center;
     font-size: 14px;
