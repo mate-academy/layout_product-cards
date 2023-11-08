@@ -1,12 +1,8 @@
 .stars {
   display: flex;
 
-  & :last-child {
-    background-image: url(../images/star.svg);
-  }
-
   &__star {
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 16px;
@@ -16,5 +12,13 @@
     &:not(:last-child) {
       margin-right: 4px;
     }
+  }
+
+  &--1 :first-child,
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
   }
 }
