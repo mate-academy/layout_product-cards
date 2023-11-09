@@ -1,8 +1,8 @@
 .card__rating {
+  height: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 16px;
   margin-bottom: 24px;
 
   &-stars {
@@ -21,8 +21,18 @@
       margin-right: 4px;
     }
 
-    &-star:nth-child(-n + 4) {
+    &-star:nth-child(0),
+    &-star:nth-child(-n + 1),
+    &-star:nth-child(-n + 2),
+    &-star:nth-child(-n + 3),
+    &-star:nth-child(-n + 4),
+    &-star:nth-child(-n + 5) {
       background-image: url(../images/star-active.svg);
     }
+  }
+
+  &-reviews {
+    margin: 0;
+    line-height: 14px;
   }
 }
