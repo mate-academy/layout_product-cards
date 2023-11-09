@@ -1,0 +1,27 @@
+.stars-layout {
+  @include displayFlex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stars {
+  @include displayFlex;
+  justify-content: space-between;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    border-radius: 0.5px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@for $i from 1 through 5 {
+  .stars--#{$i} > div:nth-child(-n + #{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
