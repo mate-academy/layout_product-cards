@@ -1,3 +1,8 @@
+$primary-color: #00acdc;
+$secondary-color: #060b35;
+$tertiary-color: #616070;
+$accent-color: #fff;
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -14,19 +19,9 @@ body {
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-}
 
-.header {
-  display: flex;
-  flex-direction: column;
-
-  &__card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__cart-image {
+  &__image {
+    display: block;
     margin: 0 auto 40px;
     width: 160px;
     height: 134px;
@@ -38,7 +33,7 @@ body {
     font-weight: 500;
     line-height: 18px;
     text-align: left;
-    color: #060b35;
+    color: $secondary-color;
   }
 
   &__description {
@@ -46,51 +41,25 @@ body {
     font-weight: 400;
     line-height: 14px;
     text-align: left;
-    color: #616070;
+    color: $tertiary-color;
     margin: 0;
     padding: 0 0 16px;
   }
-}
 
-.main {
-  display: flex;
-  justify-content: center;
-
-  &__stars {
+  &__reviews {
     display: flex;
     justify-content: center;
-    padding-right: 17px;
-    padding-bottom: 24px;
 
-    &-star {
-      background-image: url(/images/star-active.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 16px;
-      height: 16px;
-    }
-
-    &-star:not(:last-child) {
-      margin-right: 4px;
+    &-description {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+      margin: 0;
+      color: $secondary-color;
+      width: 53px;
     }
   }
-
-  &__description {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    text-align: right;
-    margin: 0;
-    color: #060b35;
-    width: 53px;
-  }
-}
-
-.main .main__stars-star:last-child {
-  background-image: url(/images/star.svg);
-}
-
-.footer {
 
   &__price {
     display: flex;
@@ -123,7 +92,7 @@ body {
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    color: #fff;
+    color: $accent-color;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
@@ -131,13 +100,40 @@ body {
     margin-bottom: 16px;
     width: 100%;
     border-radius: 5px;
-    background: #00acdc;
+    background: $primary-color;
     height: 40px;
 
     &:hover {
-      border: 1px solid #00acdc;
-      background: #fff;
-      color: #00acdc;
+      border: 1px solid $primary-color;
+      background: $accent-color;
+      color: $primary-color;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  padding-right: 17px;
+  padding-bottom: 24px;
+
+  &__star {
+    background-image: url(/images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+
+    &:last-child {
+      background-image: url(/images/star.svg);
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &:nth-child(-n + 5):hover {
+      background-image: url(/images/star-active.svg);
     }
   }
 }
