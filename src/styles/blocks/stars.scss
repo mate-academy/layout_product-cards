@@ -1,11 +1,5 @@
 .stars {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 24px;
-
-  &__rating-box {
-    display: flex;
-  }
 
   &__star {
     height: 16px;
@@ -19,18 +13,9 @@
     margin-right: 4px;
   }
 
-  &__reviews {
-    margin: 0;
-    font-size: 10px;
-    line-height: 14px;
-    color: $mainTextColor;
-    font-style: $fontStyle;
-    display: flex;
-    align-items: flex-end;
-    text-align: right;
-  }
-
-  &__star:nth-child(-n + 4) {
-    background-image: url("../images/star-active.svg");
+  @for $i from 1 through 5 {
+    &--active-#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
