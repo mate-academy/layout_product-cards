@@ -1,0 +1,39 @@
+.stars {
+  display: flex;
+  width: 166px;
+  height: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include contentMarginInline;
+  margin-block: 16px 0;
+
+  &--4 {
+    width: 96px;
+    height: 16px;
+    margin: 0;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 16px;
+  }
+
+  &--4 :nth-child(-n +4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &--reviews {
+    width: 53px;
+    height: 16px;
+    text-align: right;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    font-family: Roboto, sans-serif;
+    color: $main-text-color;
+    margin: 0;
+  }
+}
