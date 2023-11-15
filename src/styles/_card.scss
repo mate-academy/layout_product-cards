@@ -1,13 +1,17 @@
-.card {
+* {
   box-sizing: border-box;
-  width: 200px;
-  height: 408px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  margin: 20px;
-  padding: 32px 16px 17px;
+}
+
+html {
   color: $main-color;
   font-family: $font-family;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
 }
 
 .img {
@@ -55,25 +59,25 @@
   margin: 0;
 }
 
-.price,
-.cost {
+.product-price-text,
+.product-price-value {
   line-height: $regular-line-height;
   margin: 0;
 }
 
-.price {
+.product-price-text {
   color: $secondary-color;
   font-size: $regular-font-size;
   font-weight: $small-font-weight;
 }
 
-.cost {
+.product-price-value {
   font-size: 16px;
   font-weight: $bold-font-weight;
 }
 
-.card-button {
-  width: 166px;
+.product-button {
+  width: 100%;
   padding: 12px 0;
   margin: 17px 0 0;
   background-color: $button-color;
@@ -86,11 +90,11 @@
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  transition: 0.2s;
 }
 
-.card-button:hover {
+.product-button:hover {
   background-color: transparent;
   color: $button-color;
   border: 1px solid $button-color;
-  transition: 0.2s;
 }
