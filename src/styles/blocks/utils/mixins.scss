@@ -1,0 +1,47 @@
+@mixin onTablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin goodsCard {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: $card-bg-color;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+@mixin inlineBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@mixin cardButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  border: 1px solid #00acdc;
+  color: $button-text-color;
+  background-color: $button-bg-color;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
