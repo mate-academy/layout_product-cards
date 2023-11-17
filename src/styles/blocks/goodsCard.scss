@@ -2,7 +2,6 @@
   @include goodsCard;
   padding: 0 16px 16px;
   width: 200px;
-  height: 408px;
 
   &__image {
     margin: 32px 3px 0;
@@ -11,9 +10,8 @@
   }
 
   &__name {
-    height: 36px;
     width: 166px;
-    font-family: "Roboto", sans-serif;
+    font-family: inherit;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -33,8 +31,6 @@
     width: 166px;
     height: 16px;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
     margin: 16px 0 0;
   }
@@ -42,31 +38,33 @@
   &__price {
     @include inlineBlock;
     width: 166px;
-    height: 18px;
+    line-height: 18px;
     margin: 24px 0 0;
   }
 
   &__note {
     margin: 0;
     font-size: 12px;
-    font-style: normal;
     line-height: 18px;
-    font-weight: 400;
   }
 
   &__value {
     margin: 0;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 18px;
   }
 
   &__button {
     @include cardButton;
+    width: 166px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
     margin: 16px 0 0;
 
-    &[data-qa="hover"]:hover {
+    &:hover {
       background-color: $button-hover-bg-color ;
       color: $button-hover-text-color;
     }
