@@ -12,7 +12,7 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 - change link styles on `:hover`
 - add `data-qa="card"` attribute to the card block
 - add `data-qa="hover"` attribute to the link `BUY`
-- `background-image: url()` should be relative to the `main.scss`. So should start with `../images`.
+- `background-image: url()` should be relative to the `index.scss`. So should start with `../images`.
 - Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
 - Find the required font on [google fonts](https://fonts.google.com/) and use.
 
