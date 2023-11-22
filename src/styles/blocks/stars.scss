@@ -1,0 +1,42 @@
+@import "../utils/variables";
+
+.stars {
+  display: flex;
+  margin-top: 16px;
+  margin-left: 16px;
+
+  &__number {
+    display: flex;
+    width: 65px;
+    height: 16px;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: $color-main;
+    text-align: right;
+    margin-right: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:nth-child(-n+1),
+    &:nth-child(-n+2),
+    &:nth-child(-n+3),
+    &:nth-child(-n+4),
+    &:nth-child(-n+5) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
