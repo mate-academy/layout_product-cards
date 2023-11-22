@@ -4,17 +4,13 @@
   display: flex;
   flex-direction: column;
   width: 198px;
-  height: 410px;
 
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   background: #fff;
 
-    &__image-container {
-      margin: 32px 19px 0;
-    }
-
     &__image {
+      margin: 32px 19px 0;
       width: 160px;
       height: 134px;
       flex-shrink: 0;
@@ -30,42 +26,54 @@
 
     &__code {
       color: $color-secondary;
-      margin-left: 16px;
+      margin: 0 16px;
       font-size: 10px;
       font-weight: 400;
       line-height: 14px;
     }
 
+    &__rating {
+      display: flex;
+      align-items: center;
+      height: 16px;
+      margin-top: 16px;
+    }
+
+    &__reviews {
+      width: 100%;
+      flex-direction: column;
+
+      color: $color-main;
+      text-align: right;
+      margin-right: 16px;
+      font-size: 10px;
+      font-weight: 400;
+    }
+
     &__price {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      height: 18px;
+      margin: 24px 16px 16px;
     }
 
     &__price-word {
       color: $color-secondary;
-      margin-top: 24px;
-      margin-left: 16px;
       font-size: 12px;
       font-weight: 400;
-      line-height: 18px;
     }
 
     &__price-number {
       color: $color-main;
-      text-align: right;
-      margin-top: 24px;
-      margin-right: 16px;
-      font-size: 16px;
       font-weight: 700;
-      line-height: 18px;
     }
 
     &__buy {
+      font-family: Roboto, sans-serif;
       padding: 0;
-      margin: 16px;
-      width: 166px;
+      margin: 0 16px 16px;
       height: 40px;
-      flex-shrink: 0;
 
       border-style: none;
       border-radius: 5px;
@@ -82,13 +90,7 @@
         border-radius: 5px;
         border: 1px solid $color-blue;
         background: #fff;
-
         color: $color-blue;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16px;
-        text-transform: uppercase;
       }
     }
 }
