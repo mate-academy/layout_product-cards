@@ -15,7 +15,7 @@ body {
 .card__image {
   width: 160px;
   height: 134px;
-  margin: 32px 19px 36px;
+  margin: 33px 20px 40px;
 }
 
 .card__title {
@@ -88,36 +88,43 @@ body {
   border-radius: 5px;
   background: #00ACDC;
   width: 166px;
-  height: 30px;
-  display: block;
+  height: 40px;
   margin: 16px;
   border: #00ACDC;
+}
+
+.button:hover {
+  border-radius: 5px;
+  transition: 300ms;
+  border: 1px solid #00ACDC;
+  background: #FFF;
+}
+
+.button__title {
   color: #FFF;
   text-align: center;
   border-color: white;
   font-size: 14px;
+  margin: 0;
   font-style: normal;
   font-weight: 700;
-  padding-top: 10px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.button:hover {
+.button__title:hover {
   color: #00ACDC;
   transition: 300ms;
-  border-radius: 5px;
-  border: 1px solid #00ACDC;
-  background: #FFF;
 }
 
 .stars {
   display: flex;
-  background-image: url(../images/Stars.svg);
+  background-image: url(images/Stars.svg);
 }
 
 .stars__star {
+  background-image: url(images/star.svg);
   width: 16px;
   height: 16px;
   background-position: center;
@@ -127,4 +134,6 @@ body {
 
 .stars__star:last-child {
   margin-right: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.cs.map */
