@@ -1,15 +1,22 @@
+@import '../styles/stars.css';
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  
+  --white: #FFF;
+  --dark-blue: #060B35;
+  --gray: #616070;
+  --blue: #00ACDC;
 }
 
 .card {
   width: 198px;
   border-radius: 5px;
-  border: 1px solid #F3F3F3;
-  background: #FFF;
+  border: 1px solid var(--white);
+  background: var(--white);
 }
 
 .card__image {
@@ -19,7 +26,7 @@ body {
 }
 
 .card__title {
-  color: #060B35;
+  color: var(--dark-blue);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -28,7 +35,7 @@ body {
 }
 
 .title {
-  color: #616070;
+  color: var(--gray);
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -45,7 +52,7 @@ body {
 }
 
 .reviews {
-  color: #060B35;
+  color: var(--dark-blue);
   text-align: right;
   font-size: 10px;
   font-style: normal;
@@ -56,8 +63,6 @@ body {
 
 .price {
   display: flex;
-  height: 18px;
-  width: 166px;
   justify-content: space-between;
   align-items: flex-end;
   margin: 0;
@@ -66,7 +71,7 @@ body {
 }
 
 .price__title {
-  color: #616070;
+  color: var(--gray);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -75,7 +80,7 @@ body {
 }
 
 .cost {
-  color: #060B35;
+  color: var(--dark-blue);
   text-align: right;
   font-size: 16px;
   font-style: normal;
@@ -87,14 +92,13 @@ body {
 .button {
   border-radius: 5px;
   background: #00ACDC;
-  width: 166px;
   height: 30px;
   display: block;
   margin: 16px;
-  border: #00ACDC;
-  color: #FFF;
+  border: var(--blue);
+  color: var(--white);
   text-align: center;
-  border-color: white;
+  border-color: var(--white);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -108,23 +112,6 @@ body {
   color: #00ACDC;
   transition: 300ms;
   border-radius: 5px;
-  border: 1px solid #00ACDC;
-  background: #FFF;
-}
-
-.stars {
-  display: flex;
-  background-image: url(../images/Stars.svg);
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-right: 4px;
-}
-
-.stars__star:last-child {
-  margin-right: 0;
+  border: 1px solid var(--blue);
+  background: var(--white);
 }/*# sourceMappingURL=style.css.map */
