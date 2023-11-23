@@ -1,20 +1,124 @@
 @import 'colors';
 
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: Roboto, sans-serif;
 }
 
-.card {
-  width: 200;
-  height: 408;
+body {
+  margin: 0;
+}
 
-  &__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32 16 16;
-    border-radius: 5;
-    border: 1 solid $color-border-card;
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid $color-border-card;
+}
+
+.card__image-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  .card__img {
+    width: 160px;
+    height: 134px;
   }
+}
+
+.card__product-name {
+  color: $color-text-black;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: $font-weight;
+  line-height: 18px;
+
+  margin-bottom: 4px;
+}
+
+.card__product-info {
+  align-self: start;
+  color: $color-text-grey;
+  font-size: $font-size - 2px;
+  font-style: normal;
+  font-weight: $font-weight - 100;
+  line-height: 14px;
+
+  margin-bottom: 16px;
+}
+
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  margin-bottom: 24px;
+
+  .stars-text {
+    display: flex;
+    align-items: center;
+
+    color: $color-text-black;
+    font-size: $font-size - 2px;
+    font-style: normal;
+    font-weight: $font-weight - 100;
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  margin-bottom: 16px;
+
+  .price-text {
+    color: $color-text-grey;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: $font-weight - 100;
+    line-height: 18px;
+  }
+
+  .price-dollar{
+    text-align: right;
+    color: $color-text-black;
+    font-size: $font-size + 4px;
+    font-style: normal;
+    font-weight: $font-weight + 200;
+    line-height: 18px;
+  }
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 70px 12px 69px;
+
+  color: $color-default;
+  background: $color-button;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-style: normal;
+  border-radius: 5px;
+
+  font-size: $font-size + 2px;
+  font-weight: $font-weight + 200;
+  line-height: 16px;
+}
+
+.card__button:hover {
+  padding: 11px 69px 11px 68px;
+
+  background-color: $color-default;
+  color: $color-button;
+  border: 1px solid $color-button;
 }
