@@ -1,9 +1,14 @@
 @import '../styles/stars.css';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  
   --white: #FFF;
   --dark-blue: #060B35;
   --gray: #616070;
@@ -11,8 +16,9 @@ body {
 }
 
 .card {
-  width: 198px;
+  width: 200px;
   border-radius: 5px;
+  padding: 32px 16px;
   border: 1px solid var(--white);
   background: var(--white);
 }
@@ -20,96 +26,85 @@ body {
 .card__image {
   width: 160px;
   height: 134px;
-  margin: 32px 19px 36px;
+  margin: 0 3px 36px;
 }
 
 .card__title {
   color: var(--dark-blue);
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
+  margin: 0 0 4px;
   line-height: 18px;
-  margin: 0 16px 4px;
 }
 
 .title {
   color: var(--gray);
   font-size: 10px;
-  font-style: normal;
   font-weight: 400;
   line-height: 14px;
-  margin: 0 16px;
+  margin: 0;
 }
 
-.review {
+.card__rating {
   display: flex;
-  width: 166px;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 16px 16px 24px;
+  margin: 16px 0 24px;
 }
 
-.reviews {
+.card__reviews {
   color: var(--dark-blue);
-  text-align: right;
   font-size: 10px;
-  font-style: normal;
   font-weight: 400;
   line-height: 14px;
   margin: 0;
 }
 
-.price {
+.card__price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 0;
-  margin-right: 16px;
-  margin-left: 16px;
 }
 
-.price__title {
+.card__price-title {
   color: var(--gray);
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   margin: 0;
   line-height: 18px;
 }
 
-.cost {
+.card__price-cost {
   color: var(--dark-blue);
-  text-align: right;
   font-size: 16px;
-  font-style: normal;
   margin: 0;
   font-weight: 700;
   line-height: 18px;
 }
 
-.button {
+.card__button {
   border-radius: 5px;
-  background: #00ACDC;
-  height: 30px;
+  background: var(--blue);
   display: block;
-  margin: 16px;
+  margin: 16px 0 0;
   border: var(--blue);
   color: var(--white);
   text-align: center;
   border-color: var(--white);
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 16px;
   text-transform: uppercase;
+  transition: 300ms;
   text-decoration: none;
 }
 
-.button:hover {
-  color: #00ACDC;
-  transition: 300ms;
+.card__button:hover {
+  color: var(--blue);
   border-radius: 5px;
   border: 1px solid var(--blue);
   background: var(--white);
-}/*# sourceMappingURL=style.css.map */
+}
