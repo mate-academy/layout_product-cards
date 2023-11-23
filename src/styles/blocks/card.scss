@@ -1,23 +1,24 @@
 .card {
   font-family: Robotos, sans-serif;
-  font-style: normal;
-  width: 198px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
 
   &__picture {
     display: flex;
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px;
+    margin-bottom: 40px;
+    margin-inline: auto;
   }
 
   &__name {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    width: 166px;
-    height: 36px;
     color: $main-text-color;
-    @include contentMarginInline;
+    margin: 0;
   }
 
   &__code {
@@ -25,31 +26,24 @@
     font-weight: 400;
     line-height: 14px;
     color: $secondary-text-color;
-    width: 98px;
-    height: 14px;
-    padding: 4px 84px 0 16px;
+    padding-block: 4px 16px;
+    margin: 0;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    width: 166px;
-    height: 18px;
-    @include contentMarginInline;
     margin-block: 24px 0;
-    font-style: normal;
     line-height: 18px;
     color: $secondary-text-color;
 
     &_price {
-      width: 31px;
       font-size: 12px;
       font-weight: 400;
       color: $secondary-text-color;
     }
 
     &_numbers {
-      width: 50px;
       text-align: right;
       font-size: 16px;
       font-weight: 700;
@@ -60,14 +54,14 @@
 
 .button_buy {
   background-color: $button-buy-color;
-  width: 166px;
+  width: 100%;
   height: 40px;
   border: 1px solid $button-buy-color;
   border-radius: 5px;
   border-color: $button-buy-color;
   text-align: center;
-  @include contentMarginInline;
-  margin-block: 16px;
+  margin-top: 16px;
+  padding: 0;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
