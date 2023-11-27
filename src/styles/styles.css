@@ -1,0 +1,131 @@
+:root {
+  --main-accent: #060b35;
+  --secondary-accent: #616070;
+  --blue-accent: #00acdc;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+}
+
+.card__product-img {
+  margin: 32px auto 0;
+  width: 160px;
+  height: 134px;
+  background: url(../images/imac.jpeg) center/100% 100% no-repeat;
+}
+
+.card__product-name {
+  margin: 40px 16px 4px;
+  width: 166px;
+  height: 36px;
+  color: var(--main-accent, #060b35);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.card__product-code {
+  margin: 0 16px 16px;
+  min-height: 14px;
+  color: var(--secondary-accent, #616070);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.card__product-price {
+  margin: 24px 16px 16px;
+  width: 166px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__product-priceText {
+  color: var(--Secondary, #616070);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card__product-priceValue {
+  color: var(--Main-accent, #060b35);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__purchase-button {
+  margin: 0 16px;
+  width: 166px;
+  height: 40px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 5px;
+  background: var(--blue-accent, #00acdc);
+  color: var(--white, #fff);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card__purchase-button:hover {
+  box-sizing: border-box;
+  background-color: var(--white, #fff);
+  color: #00acdc;
+  cursor: pointer;
+  border: 1px solid var(--Blue-accent, #00acdc);
+  border-radius: 5px;
+}
+
+.card__purchase-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stars {
+  margin: 0 16px;
+  width: 166px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background: url("../images/star.svg") no-repeat center;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars__reviews {
+  margin-left: auto;
+  color: var(--Main-accent, #060b35);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("../images/star-active.svg");
+}
+
+/*# sourceMappingURL=styles.css.map */
