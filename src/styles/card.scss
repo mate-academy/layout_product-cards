@@ -1,7 +1,4 @@
 .card {
-  display: block;
-  margin: 30px;
-  box-sizing: border-box;
   width: 200px;
   padding: 16px;
   border: 1px solid #f3f3f3;
@@ -14,10 +11,6 @@
    margin-top: 16px;
    height: 134px;
    width: 160px;
-   background-image: url(../images/imac.jpeg);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
   }
 
   &__name {
@@ -46,22 +39,10 @@
     margin-top: 3px;
   }
 
-  &__section {
-    &--reviews,
-    &--price {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &--button {
-      height: 40px;
-      width: 100%;
-
-    }
-
-    &--button:hover {
-     background-color: #fff;
-    }
+  &__reviews-wrap,
+  &__price-wrap {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__price {
@@ -70,6 +51,7 @@
     line-height: 150%;
     margin-top: 24px;
     margin-bottom: 16px;
+    display: inline-block;
 
     &_sum {
       color: $text-color;
@@ -79,14 +61,13 @@
       text-align: right;
       margin-top: 24px;
       margin-bottom: 16px;
+      display: inline-block;
     }
   }
 
   &__buy {
-    height: 40px;
-    width: 100%;
+    padding: 11px;
     background-color: $blue-color;
-    box-sizing: border-box;
     border: 1px solid $blue-color;
     border-radius: 5px;
     display: block;
@@ -95,13 +76,13 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    line-height: 40px;
+    line-height: 16px;
     font-weight: 700;
     font-size: 14px;
   }
 
   &__buy:hover {
-   background-color: #fff;
-   color: $blue-color;
+    background-color: #fff;
+    color: $blue-color;
   }
 }
