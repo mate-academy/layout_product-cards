@@ -1,3 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  $blue-accent: #00acdc;
+  $main-accent: #060b35;
+  $secondary: #616070;
+  $white: #fff;
+  $gray: #f3f3f3;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid $gray;
+  background-color: $white;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-right: 19px;
+    margin-left: 19px;
+  }
+
+  &__info {
+    margin: 40px 16px 0;
+
+    &-text {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      margin: 0;
+      color: $main-accent;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0;
+    margin-top: 4px;
+    color: $secondary;
+  }
+
+  @import "stars";
+
+  &__price {
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 24px;
+
+    &-word {
+      color: $secondary;
+
+      &-text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 0;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      margin: 0;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    text-transform: uppercase;
+
+    background-color: $blue-accent;
+    color: $white;
+    border-radius: 5px;
+    border: none;
+
+    &-text {
+      font-weight: 700;
+      line-height: 16px;
+    }
+
+    &:hover {
+      border-radius: 5px;
+      border: 1px solid $blue-accent;
+      background-color: $white;
+      color: $blue-accent;
+    }
+  }
 }
