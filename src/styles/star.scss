@@ -1,6 +1,5 @@
 .stars {
   display: flex;
-  flex-direction: row;
 
   &-item {
     background-image: url(../images/star.svg);
@@ -8,7 +7,10 @@
     background-position: center;
     height: 16px;
     width: 16px;
-    margin-right: 4px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
   }
 
   @each $star in $stars {
