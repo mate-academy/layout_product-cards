@@ -1,3 +1,138 @@
+  $main-accent: #060B35;
+  $secondary: #616070;
+  $blue-accent: #00ACDC;
+  $white: #FFF;
+  $pad-text: 16px;
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+
+}
+
 body {
   margin: 0;
+
+  .card {
+    width: 200px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #F3F3F3;
+
+    padding-top: 32px;
+
+    &__photo {
+    width: 160px;
+    height: 134px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    &__name {
+      padding: 40px $pad-text 4px;
+      color: $main-accent;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px; /* 150% */
+    }
+
+    &__code {
+      padding: 0 $pad-text;
+      color: $secondary;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px; /* 140% */
+    }
+
+    &__rating {
+      padding: $pad-text;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__stars {
+      display: flex;
+      justify-content: space-between;
+
+
+      .star {
+        width: 16px;
+        height: 16px;
+        padding-left: 4px;
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+
+      &--4 .star:nth-child(-n + 4) {
+          background-image: url(../images/star-active.svg);
+      }
+    }
+
+    &__reviews {
+      color: $main-accent;
+      text-align: right;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px; /* 140% */
+    }
+
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px $pad-text;
+      padding-bottom: 0;
+
+      .title {
+        color: $secondary;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+      }
+
+      .num {
+        color: $main-accent;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px; /* 112.5% */
+      }
+
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 166px;
+      height: 40px;
+
+      border-radius: 5px;
+      background-color: $blue-accent;
+
+      color: $white;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px; /* 114.286% */
+      text-transform: uppercase;
+
+      margin: $pad-text;
+    }
+
+    &__button:hover {
+      width: 164px;
+      height: 38px;
+
+      background-color: #fff;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+    }
+  }
+
 }
