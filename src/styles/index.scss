@@ -1,15 +1,16 @@
 $grey-color: #616070;
-$button-color: #00acdc;
+$blue-color: #00acdc;
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   margin: 0;
 }
 
-.page {
+html {
   font-family: Roboto, Manrope, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -86,7 +87,7 @@ body {
     text-transform: uppercase;
 
     &:hover {
-      background: #fff;
+      background-color: #fff;
       color: $blue-color;
       border: 1px solid $blue-color;
     }
@@ -109,9 +110,8 @@ body {
 
 .stars {
   display: flex;
-  width: 100%;
 
-  &__star  {
+  &__star {
     background-image: url(../images/star.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -121,15 +121,17 @@ body {
     margin-right: 4px;
   }
 
-  &--4 :nth-child(-n+4) {
-    background-image: url(../images/star-active.svg);
-  }
-
-  &--4 :last-child {
+  &__star :last-child {
     margin-right: 0;
   }
 
-  &--4 :first-child {
+  &__star :first-child {
     margin-left: 0;
   }
+
+@for $value from 1 through 5 {
+  &--#{$value} &__star:nth-child(-n + #{$value}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
 }
