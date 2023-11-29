@@ -1,3 +1,143 @@
-body {
+@import "variable";
+
+html {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  width: 200px;
+  border: 1px #F3F3F3 solid;
+  border-radius: 5px;
+
+  &__img {
+    box-sizing: border-box;
+    height: 134px;
+    width: 160px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    line-height: 18px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    color: $main;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    line-height: 14px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    color: $secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 14px;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    color: $main;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: center;
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-text {
+    color: $main;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    padding: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $blue-accent;
+    border-radius: 5px;
+    border: 1px solid transparent;
+  }
+
+  &__button:hover {
+    color: $blue-accent;
+    background-color: $white;
+    border-color: $blue-accent;
+  }
+
+  &__review-text {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+  }
+}
+
+.stars {
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+  justify-content: center;
+
+  &__star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: $backimg;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:last-child {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: $activestar;
+      }
+    }
+  }
 }
