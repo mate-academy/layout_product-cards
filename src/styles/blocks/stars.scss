@@ -1,23 +1,23 @@
 .stars {
   display: flex;
+
+  &__star {
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+  }
+
+  &__star:not(:first-child) {
+    margin-left: 4px;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} :nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
 
-.stars__star {
-  background-repeat: no-repeat;
-  height: 16px;
-  width: 16px;
-  background-image: url(../images/star.svg);
-  background-position: center;
-}
 
-.stars__star:not(:first-child) {
-  margin-left: 4px;
-}
-
-.stars--1 :nth-child(-n + 1),
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(-n + 5) {
-  background-image: url(../images/star-active.svg);
-}
