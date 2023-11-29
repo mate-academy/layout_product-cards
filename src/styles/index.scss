@@ -1,3 +1,122 @@
+@import './variables';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: #FFF;
+  color: $main-color;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 32px 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__image {
+    margin-bottom: 30px;
+    img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: 166px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 4px 0;
+  }
+
+  &__subtitle {
+    color: $second-color;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+  }
+
+  &__info-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 23px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    color: $second-color;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  &__star {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+
+    background-size: cover;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+  }
+  &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+}
+
+button[data-qa="hover"] {
+  border: none;
+  border-radius: 5px;
+  background: $blue-color;
+  color: #fff;
+  padding: 12px 70px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 166px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+button[data-qa="hover"]:hover {
+  border: 1px solid $blue-color;
+  background-color: transparent;
+  color: $blue-color;
+}
+
+
