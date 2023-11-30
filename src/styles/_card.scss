@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Roboto;
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+}
+
+.card {
+  font-family: Roboto, serif;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding-inline: 16px;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .image{
+    width: 160px;
+    height: 134px;
+  }
+
+  &__description-product {
+    width: 166px;
+    padding-top: 33px;
+    .product-title {
+
+
+      .product-code {
+        color: $text;
+        padding-top: 4px;
+        font-size: 10px;
+        font-weight: 400px;
+        line-height: 14px;
+      }
+    }
+  }
+
+  .title {
+      color: $title;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+
+
+    }
+
+  .product-grade {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 16px;
+    .stars {
+      display: flex;
+      gap: 4px;
+    }
+
+    .stars_star {
+      height: 16px;
+      width: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .stars .stars_star:not(:nth-child(-n+4)) {
+      background-image: url(../images/star.svg);
+    }
+
+    .stars .stars_star:nth-child(-n+4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+
+    .price-title {
+      font-weight: 400;
+      color: $text;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .money {
+      color: $title;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  .button-buy {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    background-color: $button;
+    border: none;
+  }
+
+  .button-buy:hover {
+    color: $button;
+    background-color: #fff;
+    border: 1px solid $button;
+  }
+
+}
+
+.link-buy {
+  width: 166px;
+  padding-block: 16px;
+}
+
+.reviews {
+  display: flex;
+  width: 53px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  color: $title;
+  text-align: right;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
