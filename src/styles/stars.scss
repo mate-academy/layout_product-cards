@@ -1,14 +1,17 @@
 .stars {
   display: flex;
+  padding-left: 0;
 
   &__star {
+    list-style-type: none;
     height: 16px;
     width: 16px;
     background: url(../images/star.svg) no-repeat center;
-
   }
 
-  &--4 &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
+  @for $star from 1 through 4 {
+    &--#{$star} &__star:nth-child(-n + #{$star}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
