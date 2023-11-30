@@ -1,3 +1,113 @@
+
+  @import 'stars';
+  @import 'variables';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+.cards {
+  display: block;
+  width: 198px;
+  height: 406px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  flex-direction: column;
+  background: #FFF;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    padding: 32px 19px 40px;
+  }
+
+  &__discription {
+    margin-left: 16px;
+    margin-bottom: 4px;
+    color: $main-accent;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+  }
+
+  &__product-code {
+    margin-left: 16px;
+    color: $secondary;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+  }
+
+  &__rating {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-reviews {
+      margin-right: 16px;
+      height: 16px;
+      color: $main-accent;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    margin-left: 16px;
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__price-price {
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__price-num {
+    color: $main-accent;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__buy {
+    margin: 16px;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: $blue-accent;
+    color:var(--white, #fff);
+    text-align: center;
+    font-family: Robto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    text-transform: uppercase;
+    border-width: 0;
+   }
+
+  &__buy:hover {
+    border: 1px solid #00acdc;
+    background: #fff;
+    color: #00acdc;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform:uppercase;
+   }
+  }
