@@ -27,15 +27,23 @@ select {
   font: inherit;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+}
+
 .card {
+  font-family: Roboto, serif;
   box-sizing: border-box;
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  padding: 32px 19px 16px;
+  padding-inline: 16px;
+  padding-top: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .card__image-product {
@@ -43,36 +51,39 @@ select {
   height: 134px;
   background-size: cover;
   background-image: url(../images/imac.jpeg);
-  margin-bottom: 40px;
 }
 
-.card__description-product .product-title {
-  margin-bottom: 16px;
+.card__description-product {
+  width: 166px;
+  padding-top: 40px;
 }
 
 .card__description-product .product-title .product-code {
   color: #616070;
+  padding-top: 4px;
   font-size: 10px;
   font-weight: 400px;
   line-height: 14px;
 }
 
-.card .title, .card .price-title {
+.card .title {
   color: #060b35;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  margin-bottom: 4px;
 }
 
 .card .product-grade {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  align-items: flex-end;
+  padding-top: 16px;
 }
 
 .card .product-grade .stars {
   display: flex;
+  gap: 4px;
 }
 
 .card .product-grade .stars_star {
@@ -90,16 +101,17 @@ select {
   background-image: url(../images/star-active.svg);
 }
 
-.card .product-grade .reviews {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-}
-
 .card .price {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  padding-top: 24px;
+}
+
+.card .price .price-title {
+  font-weight: 400;
+  color: #616070;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .card .price .money {
@@ -110,7 +122,7 @@ select {
 }
 
 .card .button-buy {
-  width: 100%;
+  width: 166px;
   height: 40px;
   border-radius: 5px;
   color: #fff;
@@ -126,4 +138,16 @@ select {
   color: #00acdc;
   background-color: #fff;
   border: 1px solid #00acdc;
+}
+
+.link-buy {
+  width: 166px;
+  padding-block: 16px;
+}
+
+.reviews {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: right;
 }/*# sourceMappingURL=index.css.map */

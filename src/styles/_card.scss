@@ -1,29 +1,36 @@
+@font-face {
+  font-family: Roboto;
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+}
+
 .card {
+  font-family: Roboto, serif;
   box-sizing: border-box;
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  padding: 32px 19px 16px;
+  padding-inline: 16px;
+  padding-top: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   &__image-product {
     width: 160px;
     height: 134px;
     background-size: cover;
     background-image: url(../images/imac.jpeg);
-    margin-bottom: 40px;
-
   }
 
   &__description-product {
-
+    width: 166px;
+    padding-top: 40px;
     .product-title {
-      margin-bottom: 16px;
 
 
       .product-code {
         color: $text;
+        padding-top: 4px;
         font-size: 10px;
         font-weight: 400px;
         line-height: 14px;
@@ -31,21 +38,24 @@
     }
   }
 
-  .title, .price-title {
+  .title {
       color: $title;
       font-size: 12px;
       font-weight: 500;
       line-height: 18px;
-      margin-bottom: 4px;
+
+
     }
 
   .product-grade {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
-
+    align-items: flex-end;
+    padding-top: 16px;
     .stars {
-    display: flex;
+      display: flex;
+      gap: 4px;
     }
 
     .stars_star {
@@ -63,18 +73,19 @@
       background-image: url(../images/star-active.svg);
     }
 
-    .reviews {
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-    }
   }
 
   .price {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
+    padding-top: 24px;
 
+    .price-title {
+      font-weight: 400;
+      color: $text;
+      font-size: 12px;
+      line-height: 18px;
+    }
     .money {
       color: $title;
       font-size: 16px;
@@ -84,7 +95,7 @@
   }
 
   .button-buy {
-    width: 100%;
+    width: 166px;
     height: 40px;
     border-radius: 5px;
     color: #fff;
@@ -102,4 +113,16 @@
     border: 1px solid $button;
   }
 
+}
+
+.link-buy {
+  width: 166px;
+  padding-block: 16px;
+}
+
+.reviews {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: right;
 }
