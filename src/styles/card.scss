@@ -8,18 +8,19 @@
   border-radius: 5px;
 
   &__img {
-    box-sizing: border-box;
-    height: 134px;
+    flex-shrink: 0;
+    height: auto;
     width: 160px;
     margin: 0 auto;
     margin-bottom: 40px;
+    aspect-ratio: 160 / 134;
   }
 
   &__name {
+    margin: 0;
     margin-bottom: 4px;
     line-height: 18px;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
     color: $main;
   }
@@ -28,7 +29,6 @@
     margin-bottom: 16px;
     line-height: 14px;
     font-size: 10px;
-    font-style: normal;
     font-weight: 400;
     color: $secondary;
   }
@@ -76,16 +76,17 @@
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
+    text-decoration: none;
     color: $white;
     background-color: $blue-accent;
     border-radius: 5px;
     border: 1px solid transparent;
-  }
 
-  &__button:hover {
-    color: $blue-accent;
-    background-color: $white;
-    border-color: $blue-accent;
+    &:hover {
+      color: $blue-accent;
+      background-color: $white;
+      border-color: $blue-accent;
+    }
   }
 
   &__review-text {
