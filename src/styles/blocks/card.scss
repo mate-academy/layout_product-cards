@@ -1,0 +1,108 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  width: 200px;
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid $theme-border;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    &-pic {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-m;
+    line-height: $line-height-m-xl;
+    color: $theme-content-main;
+    margin-bottom: 4px;
+  }
+
+  &__id {
+    margin: 0;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: $theme-content-secondary;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__stars {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__feedbacks {
+    display: flex;
+    align-items: flex-end;
+    &-text {
+      font-weight: $font-weight-regular;
+      font-size: $font-size-s;
+      line-height: $line-height-s;
+      color: $theme-content-main;
+    }
+  }
+
+  &__price {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-text {
+      margin: 0;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-m;
+      line-height: $line-height-m-xl;
+      color: $theme-content-secondary;
+    }
+
+    &-cost {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xl;
+      line-height: $line-height-m-xl;
+      color: $theme-content-main;
+    }
+  }
+
+  &__buy {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-l;
+    line-height: $line-height-l;
+    background-color: $theme-accent;
+    border-radius: 5px;
+    width: 166px;
+    height: 40px;
+    color: $theme-bgd;
+  }
+
+  &__buy:hover {
+    box-sizing: border-box;
+    background-color: $theme-bgd;
+    border: 1px solid $theme-accent;
+    color: $theme-accent;
+  }
+}
