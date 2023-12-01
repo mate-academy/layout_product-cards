@@ -11,26 +11,9 @@
     background-position: center;
   }
 
-  &--1 .star:nth-child(-n + 1) {
-    background-image: url(../images/star-active.svg);
-  }
-
-
-  &--2 .star:nth-child(-n + 2) {
-    background-image: url(../images/star-active.svg);
-  }
-
-
-  &--3 .star:nth-child(-n + 3) {
-    background-image: url(../images/star-active.svg);
-  }
-
-
-  &--4 .star:nth-child(-n + 4) {
+  @for $i from 1 through 5 {
+    &--#{$i} .star:nth-child(-n + #{$i}) {
       background-image: url(../images/star-active.svg);
-  }
-
-  &--5 .star:nth-child(-n + 5) {
-    background-image: url(../images/star-active.svg);
+    }
   }
 }
