@@ -1,0 +1,20 @@
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+@for $mark from 0 through 5 {
+  .stars--#{$mark} .stars__star:nth-child(-n + #{$mark}) {
+    background-image: url('../images/star-active.svg');
+  }
+}
