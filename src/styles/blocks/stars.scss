@@ -13,31 +13,10 @@
     }
   }
 
-  &--card {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    opacity: 0;
-    pointer-events: none;
-
-    &:target {
-      opacity: 1;
-      pointer-events: none;
+  @for $counter from 0 through 5 {
+    &--#{$counter} :nth-child(n + #{$counter + 1}) {
+      background-image: url(../images/star.svg);
     }
-  }
-
-  &--active {
-    opacity: 1;
-  }
-
-  &--0 :nth-child(n),
-  &--1 :nth-child(n + 2),
-  &--2 :nth-child(n + 3),
-  &--3 :nth-child(n + 4),
-  &--4 :nth-child(n + 5),
-  &--5 :nth-child(n + 6) {
-    background-image: url(../images/star.svg);
   }
 }
 
