@@ -3,12 +3,7 @@
   justify-content: space-between;
   align-items: center;
 
-  &__flex {
-    display: flex;
-  }
-
   &__star {
-    box-sizing: border-box;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: 50%;
@@ -19,8 +14,15 @@
     &:first-child {
       margin-left: 0;
     }
+  }
 
-    &:nth-child(-n+4) {
+  &__flex {
+    display: flex;
+    &--1 .stars__star:nth-child(-n+1),
+    &--2 .stars__star:nth-child(-n+2),
+    &--3 .stars__star:nth-child(-n+3),
+    &--4 .stars__star:nth-child(-n+4),
+    &--5 .stars__star:nth-child(-n+5) {
       background-image: url(../images/star-active.svg);
     }
   }
