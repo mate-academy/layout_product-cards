@@ -6,13 +6,16 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
-  border-radius: 5px;
+  border-radius: $border-radius;
   border: 1px solid #f3f3f3;
 
   &__img {
@@ -79,13 +82,13 @@ body {
     display: flex;
     justify-content: center;
     border: none;
-    border-radius: 5px;
+    border-radius: $border-radius;
     background-color: $button-color;
     height: 40px;
     width: 100%;
     cursor: pointer;
     margin-top: 16px;
-    color: #fff;
+    color: $button-text-color;
     font-size: 14px;
     font-weight: 700;
     line-height: 40px;
@@ -93,7 +96,7 @@ body {
 
     &:hover {
       border: 1px solid $button-color;
-      background-color: #fff;
+      background-color: $button-text-color;
       color: $button-color;
     }
   }
