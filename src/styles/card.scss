@@ -2,11 +2,18 @@
 .card {
   box-sizing: border-box;
   width: $card-width;
+  height: $card-height;
   padding: 32px 16px 16px;
   font-family: Roboto, sans-serif;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
+  &__picture {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 40px;
+  }
+  
   &__image {
     display: block;
     width: 160px;
@@ -27,6 +34,7 @@
     font-size: 10px;
     line-height: 14px;
     margin-top: 4px;
+    margin-bottom: 0;
   }
 
   &__rating {
@@ -41,6 +49,7 @@
     color: $main-text-color;
     font-size: 10px;
     line-height: 14px;
+    margin: 0;
   }
 
   &__cost {
@@ -53,26 +62,31 @@
     color: $secondary-text-color;
     font-size: 12px;
     line-height: 18px;
-  }
+    margin: 0;
 
-  &__price-amount {
-    color: $main-text-color;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
+    &-amount {
+      color: $main-text-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      margin: 0;
+    }
   }
 
   &__button {
     display: block;
     margin-top: 16px;
-    padding: 12px 70px;
+    width: 166px;
     background-color: $blue-accent-color;
     border-radius: 5px;
     color: $white-accent-color;
     font-size: 14px;
     font-weight: 700;
-    line-height: 16px;
+    line-height: 40px;
     text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   &__button:hover {
