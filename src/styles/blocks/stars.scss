@@ -3,16 +3,18 @@
 
   &__star {
     background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
     height: 16px;
     width: 16px;
-    margin-right: 4px;
 
-    .stars--4 &:nth-child(-n+4) {
-      background-image: url(../images/star-active.svg);
-      height: 16px;
-      width: 16px;
+    @for $i from 1 through $stars-rating {
+      .stars--rating &:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+        height: 16px;
+        width: 16px;
+      }
     }
   }
 }
