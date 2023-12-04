@@ -1,0 +1,50 @@
+@use '../utils/variables' as *;
+
+.card__reviews-container {
+  display: flex;
+  width: $max-width;
+  max-height: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+
+  .stars {
+    display: flex;
+    width: 96px;
+    max-height: 16px;
+
+    &__star {
+      background-image: url("../images/star.svg");
+      color: rgba(255, 222, 106, 1);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 4px;
+      height: 16px;
+      width: 16px;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        background-image: url("../images/star-active.svg");
+      }
+
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .card__reviews-number {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    color: $main-accent;
+    text-align: right;
+    font-family: $font-family;
+    font-size: $font-size-small;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-light;
+    line-height: 14px;
+  }
+}
