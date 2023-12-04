@@ -6,6 +6,11 @@ body {
   background-color: bisque;
   width: 100vw;
   height: 100vw;
+
+  --button-color: #00ACDC;
+  --background-color-main: #fff;
+  --price-color: #616070;
+  --cost-color: #060B35;
 }
 
 .card {
@@ -14,7 +19,7 @@ body {
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
-  background-color: #FFF;
+  background-color: var(--background-color-main);
   border-radius: 5px;
   border: 1px solid #F3F3F3;
 }
@@ -28,7 +33,7 @@ body {
 }
 
 .title {
-  color: #060B35;
+  color: var(--cost-color);
   height: 36px;
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -36,11 +41,10 @@ body {
   line-height: 18px;
 
   margin: 40 16 0;
-
 }
 
 .product-code {
-  color:  #616070;
+  color:  var(--price-color);
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -57,7 +61,6 @@ body {
   margin-right: 4px;
   background-repeat: no-repeat;
   background-position: 50%;
-
   background-image: url(../images/star.svg);
 }
 
@@ -83,7 +86,7 @@ body {
 
 .rang__reviews {
   width: max-content;
-  color: #060B35;
+  color: var(--cost-color);
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -99,7 +102,7 @@ body {
 }
 
 .expense__price {
-  color: #616070;
+  color: var(--price-color);
   font-family: Roboto, sans-serif;
 
   font-size: 12px;
@@ -108,7 +111,7 @@ body {
 }
 
 .expense__cost {
-  color:  #060B35;
+  color:  var(--cost-color);
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -116,7 +119,7 @@ body {
 }
 
 .button__buy {
-  color: #fff;
+  color: var(--background-color-main);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -126,9 +129,8 @@ body {
   width: 166px;
   height: 40px;
   border-radius: 5px;
-  background-color: #00acdc;
+  background-color: var(--button-color);
   border: none;
-
 }
 
 .button {
@@ -136,8 +138,8 @@ body {
 }
 
 .button__buy:hover {
-  color: #00ACDC;
-  background-color: #FFF;
+  color: var(--button-color);
+  background-color: var(--background-color-main);
   border-radius: 5px;
-  border: 1px solid #00ACDC;
+  border: 1px solid var(--button-color);
 }
