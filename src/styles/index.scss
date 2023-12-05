@@ -1,3 +1,133 @@
+$card-width: 200px;
+$img-width: 160px;
+$img-height: 134px;
+$color-main-accent: #060B35;
+$color-secondary: #616070;
+$color-white: #FFF;
+$color-blue-accent: #00ACDC;
+
 body {
   margin: 0;
+  font-family: Manrope, sans-serif;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: $color-secondary;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  font-family: inherit;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: $color-white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    display: block;
+    width: $img-width;
+    height: $img-height;
+    margin: 16px 0 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+    color: $color-main-accent;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__block-price {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+  }
+
+  &__price {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-number {
+    color: $color-main-accent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button-buy {
+    color: $color-white;
+    background-color: $color-blue-accent;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      border: 1px solid $color-blue-accent;
+      color: $color-blue-accent;
+      background-color: $color-white;
+    }
+  }
+}
+
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__stars {
+    display: flex;
+  }
+
+  &__stars-star {
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) no-repeat center;
+    margin-right: 4px;
+  }
+
+  &__stars-star:not(:last-child) {
+    margin-right: 4px;
+
+  }
+
+  &__stars--4 :nth-child(-n+4){
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__number {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-main-accent;
+  }
+
 }
