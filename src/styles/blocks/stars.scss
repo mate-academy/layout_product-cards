@@ -4,7 +4,8 @@
   &__star {
     width: 16px;
     height: 16px;
-    background-image: url(../images/star-active.svg);
+
+    background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -14,8 +15,8 @@
   }
 
   @for $counter from 0 through 5 {
-    &--#{$counter} :nth-child(n + #{$counter + 1}) {
-      background-image: url(../images/star.svg);
+    &--#{$counter} :nth-child(-n + #{$counter}) {
+      background-image: url(../images/star-active.svg);
     }
   }
 }
