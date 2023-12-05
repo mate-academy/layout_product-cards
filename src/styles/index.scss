@@ -1,3 +1,10 @@
+:root {
+  --button-color: #00ACDC;
+  --background-color-main: #fff;
+  --price-color: #616070;
+  --cost-color: #060B35;
+}
+
 .html {
   font-family: Roboto, sans-serif;
 }
@@ -6,11 +13,6 @@ body {
   background-color: bisque;
   width: 100vw;
   height: 100vw;
-
-  --button-color: #00ACDC;
-  --background-color-main: #fff;
-  --price-color: #616070;
-  --cost-color: #060B35;
 }
 
 .card {
@@ -22,6 +24,7 @@ body {
   background-color: var(--background-color-main);
   border-radius: 5px;
   border: 1px solid #F3F3F3;
+  padding-bottom: 16;
 }
 
 .img {
@@ -47,8 +50,8 @@ body {
   color:  var(--price-color);
   font-family: Roboto, sans-serif;
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
+  display: block;
 
   margin: 0;
   padding-left: 16px;
@@ -80,16 +83,19 @@ body {
 .rang {
   display: flex;
   width: 166px;
+  height: min-content;
   justify-content: space-between;
   padding: 16 16 0;
 }
 
 .rang__reviews {
+  align-items: center;
+  display: flex;
+  margin: 0;
   width: max-content;
   color: var(--cost-color);
   font-family: Roboto, sans-serif;
   font-size: 10px;
-  font-weight: 400;
   line-height: 14px;
 }
 
@@ -98,19 +104,19 @@ body {
   width: 166px;
   height: 18px;
   justify-content: space-between;
-  padding: 24 16 0;
+  padding: 24 16 16;
 }
 
 .expense__price {
   color: var(--price-color);
   font-family: Roboto, sans-serif;
-
+  margin: 0;
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
 }
 
 .expense__cost {
+  margin: 0;
   color:  var(--cost-color);
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -118,7 +124,7 @@ body {
   line-height: 18px;
 }
 
-.button__buy {
+.button {
   color: var(--background-color-main);
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -126,6 +132,8 @@ body {
   line-height: 16px;
   text-transform: uppercase;
 
+  margin: 0 auto;
+  display: block;
   width: 166px;
   height: 40px;
   border-radius: 5px;
@@ -133,11 +141,7 @@ body {
   border: none;
 }
 
-.button {
-  padding: 16;
-}
-
-.button__buy:hover {
+.button:hover {
   color: var(--button-color);
   background-color: var(--background-color-main);
   border-radius: 5px;
