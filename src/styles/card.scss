@@ -1,0 +1,95 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background: $white-color;
+
+  &__img {
+    align-self: center;
+    width: 160px;
+    min-height: 134px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-bottom: 4px;
+    color: $main-color;
+  }
+
+  &__code {
+    padding-bottom: 16px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+
+    .product__reviews {
+      text-align: right;
+      font-size: 10px;
+      line-height: 14px;
+      color: $main-color;
+    }
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+
+    &__title,
+    &__subtitle {
+      display: block;
+      margin: 0;
+      line-height: 18px;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $main-color;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+      color: $secondary-color;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 5px;
+    background: $blue-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    color: $white-color;
+  }
+
+  &:hover > .product__button {
+    border: 1px solid $blue-color;
+    background: $white-color;
+    color: $blue-color;
+  }
+}
