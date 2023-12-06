@@ -1,3 +1,117 @@
-body {
+  $main-color: #fff;
+  $main-text-color: #060b35;
+  $secondary-text-color: #616070;
+  $accent-color: #00acdc;
+  $border-card-color: #f3f3f3;
+
+.card-product {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 200px;
+  color: $main-text-color;
+  border: 1px solid $border-card-color;
+  border-radius: 5px;
+
+  &__img {
+    align-self: center;
+    margin-top: 16px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    margin-top: 4px;
+    line-height: 14px;
+    font-size: 10px;
+    color: $secondary-text-color;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 16px;
+    font-size: 10px;
+
+    &-text {
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    line-height: 18px;
+
+    &-text {
+      font-size: 12px;
+      color: $secondary-text-color;
+    }
+
+    &-value {
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 16px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: $main-color;
+    background-color: $accent-color;
+    border-radius: 5px;
+
+    &:hover {
+      color: $accent-color;
+      border: 1px solid $accent-color;
+      background-color: $main-color;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/star.svg");
+  }
+
+  @for $star from 1 through 5 {
+    &--#{$star} :nth-child(-n + #{$star}) {
+      background-image: url("../images/star-active.svg");
+    }
+  }
 }
