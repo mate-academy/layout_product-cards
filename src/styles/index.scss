@@ -27,7 +27,7 @@ body {
   padding-bottom: 16;
 }
 
-.img {
+.card__img {
   object-fit: contain;
   display: block;
   width: 160px;
@@ -35,7 +35,7 @@ body {
   padding: 32 19 0;
 }
 
-.title {
+.card__title {
   color: var(--cost-color);
   height: 36px;
   font-size: 12px;
@@ -45,7 +45,7 @@ body {
   margin: 40 16 0;
 }
 
-.product-code {
+.card__product-code {
   color:  var(--price-color);
   font-size: 10px;
   line-height: 14px;
@@ -74,11 +74,16 @@ body {
   width: min-content;
 }
 
-.stars--4 .stars__element:nth-child(-n+4) {
+.stars--1 .stars__element:nth-child(1),
+.stars--2 .stars__element:nth-child(-n+2),
+.stars--3 .stars__element:nth-child(-n+3),
+.stars--4 .stars__element:nth-child(-n+4),
+.stars--5 .stars__element:nth-child(n) {
   background-image: url(../images/star-active.svg);
 }
 
-.rang {
+
+.card__rang {
   display: flex;
   width: 166px;
   height: min-content;
@@ -86,7 +91,7 @@ body {
   padding: 16 16 0;
 }
 
-.rang__reviews {
+.card__reviews {
   align-items: center;
   display: flex;
   margin: 0;
@@ -96,7 +101,7 @@ body {
   line-height: 14px;
 }
 
-.expense {
+.card__expense {
   display: flex;
   width: 166px;
   height: 18px;
@@ -104,14 +109,14 @@ body {
   padding: 24 16 16;
 }
 
-.expense__price {
+.card__expense-price {
   color: var(--price-color);
   margin: 0;
   font-size: 12px;
   line-height: 18px;
 }
 
-.expense__cost {
+.card__expense-cost {
   margin: 0;
   color:  var(--cost-color);
   font-size: 16px;
