@@ -8,7 +8,7 @@ $blue-color: #00ACDC;
   line-height: $line-height;
 }
 
-body {
+* {
   margin: 0;
   font-family: Roboto, sans-serif;
   color: $strong-color;
@@ -16,17 +16,17 @@ body {
 
 .card {
   width: 200px;
-  height: 406px;
   padding: 32px 16px 16px;
   box-sizing: border-box;
   border: 1px solid #F3F3F3;
-
   background: #FFF;
 
-  &__img{
+  &__img-cover{
     width: 160px;
     height: 134px;
-    img {
+    margin: 0 auto;
+
+    .card__img {
       width: 160px;
       height: 134px;
     }
@@ -53,14 +53,21 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
-    height: 16px;
+
+    .review-descr {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .stars-block {
-      width: 96px;
+      display: flex;
 
       .star {
         width: 16px;
         height: 16px;
+        margin-left: 4px;
         background: center no-repeat url("../images/star-active.svg");
         display: inline-block;
       }
