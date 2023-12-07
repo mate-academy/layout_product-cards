@@ -1,6 +1,7 @@
 $strong-color: #060B35;
 $light-color: #616070;
 $blue-color: #00ACDC;
+$white-color: #fff;
 
 @mixin text-styling($size, $weight, $line-height) {
   font-size: $size;
@@ -19,7 +20,7 @@ $blue-color: #00ACDC;
   padding: 32px 16px 16px;
   box-sizing: border-box;
   border: 1px solid #F3F3F3;
-  background: #FFF;
+  background: $white-color;
 
   &__img-cover{
     width: 160px;
@@ -61,23 +62,23 @@ $blue-color: #00ACDC;
       align-items: center;
     }
 
-    .stars-block {
+    .stars__block {
       display: flex;
 
-      .star {
+      .stars__star {
         width: 16px;
         height: 16px;
         margin-left: 4px;
         background: center no-repeat url("../images/star-active.svg");
         display: inline-block;
-      }
 
-      & :first-child {
-        margin-left: 0;
-      }
+        &:first-child {
+          margin-left: 0;
+        }
 
-      & :last-child {
-        background-image: url("../images/star.svg");
+        &:last-child {
+          background-image: url("../images/star.svg");
+        }
       }
     }
   }
@@ -102,11 +103,12 @@ $blue-color: #00ACDC;
     @include text-styling(14px, 700, 16px);
 
     width: 166px;
-    height: 40px;
-    background: #00ACDC;
+    padding-block: 12px;
+    background: $blue-color;
     border-radius: 5px;
+    border: 1px solid $blue-color;
     margin-top: 16px;
-    color: #FFF;
+    color: $white-color;
 
     display: flex;
     justify-content: center;
@@ -114,12 +116,7 @@ $blue-color: #00ACDC;
   }
 
   &:hover .card__button {
-    background-color: #fff;
-    border: 1px solid $blue-color;
+    background-color: $white-color;
     color: $blue-color;
   }
 }
-
-
-
-
