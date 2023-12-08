@@ -1,0 +1,22 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 0 16px;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__star {
+    background: $star;
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+
+    &:nth-child(-n+4) {
+      background: $active-star;
+    }
+  }
+}
