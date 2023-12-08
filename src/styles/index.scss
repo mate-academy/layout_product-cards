@@ -1,13 +1,4 @@
-$strong-color: #060B35;
-$light-color: #616070;
-$blue-color: #00ACDC;
-$white-color: #fff;
-
-@mixin text-styling($size, $weight, $line-height) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-}
+@import './variables-and-mixins';
 
 * {
   margin: 0;
@@ -76,7 +67,7 @@ $white-color: #fff;
           margin-left: 0;
         }
       }
-      
+
       & :nth-child(-n + 4) {
         background-image: url("../images/star-active.svg");
       }
@@ -113,10 +104,10 @@ $white-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  &:hover .card__button {
-    background-color: $white-color;
-    color: $blue-color;
+    &:hover {
+      background-color: $white-color;
+      color: $blue-color;
+    }
   }
 }
