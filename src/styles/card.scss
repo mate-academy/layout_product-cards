@@ -2,7 +2,6 @@
   margin: 0;
   display: flex;
   width: 200px;
-  height: 408px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -14,15 +13,12 @@
   &__img {
     width: 160px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
-    margin-top: 33px;
+    margin-top: 32px;
     margin-inline: 19px;
   }
 
   &__title {
-    margin-top: 40px;
-    margin-inline: $margin-card;
+    margin: 40px $margin-card 0;
     color: $main-text-color;
     font-size: 12px;
     font-weight: 500;
@@ -33,7 +29,6 @@
     margin: 4px 84px 0 $margin-card;
     color: $additional-text-color;
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
   }
 
@@ -45,13 +40,14 @@
     margin-top: 24px;
 
     &-title {
+      margin: 0;
       color: $additional-text-color;
       font-size: 12px;
-      font-weight: 400;
       line-height: 18px;
     }
 
     &-numder {
+      margin: 0;
       color: $main-text-color;
       text-align: right;
       font-size: 16px;
@@ -62,6 +58,8 @@
 
   &__button {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-block: 16px;
     width: 166px;
     height: 40px;
@@ -69,26 +67,16 @@
     box-sizing: border-box;
     border: 1px solid $blue-accent;
     border-radius: 5px;
-
-    &-link {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      margin: auto;
-      color: #FFF;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 16px;
-      text-transform: uppercase;
-      text-decoration: none;
-      box-sizing: border-box;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
 
       &:hover {
         background: #FFF;
         color: $blue-accent;
       }
-    }
   }
 }
