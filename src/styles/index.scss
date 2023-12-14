@@ -1,3 +1,91 @@
+@import "./stars.scss";
+$--blue-color: #00acdc;
+$--main-color-text: #060b35;
+$--secondary-color-text: #616070;
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: $--main-color-text;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+
+  &__product-image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__product-title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    line-height: 14px;
+    margin-block: 0 16px;
+    color: $--secondary-color-text;
+  }
+
+  &__price {
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      margin: 0;
+      font-size: 12px;
+      line-height: 18px;
+      color: $--secondary-color-text;
+    }
+
+    &-number {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 12px 70px;
+    border-radius: 5px;
+    background-color: $--blue-color;
+    border: 1px solid $--blue-color;
+    color: #fff;
+
+    &:hover {
+      border: 1px solid $--blue-color;
+      background-color: #fff;
+      color: $--blue-color;
+    }
+  }
 }
