@@ -1,0 +1,93 @@
+@import '../utils/variables';
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+    background-image: url(/src/images/imac.jpeg);
+    background-size: $image-width $image-height;
+    margin: 0 auto 40px;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: $main-color;
+    font-weight: $font-medium;
+    line-height: 18px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    font-size: 10px;
+    color: $second-color;
+  }
+
+  &__rating {
+    height: 16px;
+    display: flex;
+    flex-flow: column, wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+  }
+
+  .card__review {
+    text-align: right;
+    color: $main-color;
+    font-weight: $font-normal;
+    font-size: 10px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+
+    &-mark {
+      font-size: 12px;
+      line-height: 18px;
+      color: $second-color;
+      font-weight: $font-normal;
+    }
+
+    &-amount {
+      font-size: 16px;
+      color: $main-color;
+      font-weight: $font-big;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    height: 40px;
+    background-color: #00ACDC;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: $font-big;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: default;
+    color: #Fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #00ACDC;
+      border: 1px solid #00ACDC;
+    }
+  }
+
+}
+
+
+
