@@ -1,0 +1,62 @@
+@use '../utils/variables';
+
+.card {
+  width: 200px;
+  font-family: variables.$main-font;
+  display: flex;
+  flex-direction: column;
+  padding: 33px 16px 17px;
+  border: 1px solid variables.$card-border-color;
+
+  &__picture {
+    align-self: center;
+    width: 160px;
+  }
+
+  &__title {
+    color: variables.$main-font-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+  }
+
+  &__code {
+    color: variables.$secondary-font-color;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__score {
+    margin-top: 16px;
+  }
+
+  &__price {
+    margin-top: 24px;
+  }
+
+  &__buy {
+    display: flex;
+    background-color: variables.$button-bg-color;
+    color: variables.$button-font-color;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    border: 1px solid variables.$button-bg-color;
+    border-radius: 5px;
+    margin-top: 16px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__buy:hover {
+    background-color: variables.$button-font-color;
+    color: variables.$button-bg-color
+  }
+}
+
