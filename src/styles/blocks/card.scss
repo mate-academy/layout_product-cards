@@ -1,0 +1,98 @@
+.card-block {
+  width: 200px;
+  height: 408px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: #FFF;
+}
+
+.product {
+  display: block;
+
+  &__img {
+    padding: 33px 20px 40px 20px;
+    width: 160px;
+    height: 134px;
+    flex-shrink: 0;
+  }
+}
+
+.name {
+  padding: 0 16px;
+  color: var(--Main-accent, #060B35);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.code {
+  color: var(--Secondary, #616070);
+  padding: 0 16px;
+  margin-top: 4px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 140% */
+}
+
+.price {
+  margin-top: 24px;
+  padding: 0 16px;
+  display: flex;
+  width: 166px;
+  height: 18px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__text {
+    color: var(--Secondary, #616070);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+  }
+
+  &__cost {
+    color: var(--Main-accent, #060B35);
+    text-align: right;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 112.5% */
+  }
+}
+
+.button {
+  margin: 16px;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background: var(--Blue-accent, #00ACDC);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__buy {
+    text-decoration: none;
+    color: var(--White, #FFF);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background: #FFF;
+    border: 1px solid var(--Blue-accent, #00ACDC);
+  }
+
+  &:hover &__buy {
+    color: var(--Blue-accent, #00ACDC);
+  }
+}
