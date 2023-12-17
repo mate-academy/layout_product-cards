@@ -1,12 +1,10 @@
 .card {
   font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 12px;
 
+  margin: 0;
   display: flex;
   width: 198px;
-  height: 406px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,54 +13,60 @@
   border-radius: 5px;
   border: 1px solid #f3f3f3;
 
-
   &__img {
-    margin: 16px 0 36px;
+    margin: 32px 0 0;
     width: 160px;
-    height: fit-content;
+    height: 134px;
   }
 
   &__title {
-    margin: 4px 0;
+    margin: 40px 0 0;
     color: $color-main-accent;
+    font-size: 12px;
     font-weight: 500;
-    padding-inline: 16px;
     line-height: 18px;
+
+    @include content-padding-inline;
   }
 
   &__code {
-    margin: 0 0 17px;
+    margin: 4px 0 0;
+    align-self: flex-start;
     color: $color-secondary;
     font-size: 10px;
-    padding-inline: 16px;
+
+    @include content-padding-inline;
   }
 
   &__reviews {
-    margin: 0 0 7px;
+    margin: 16px 0 0;
     display: flex;
-    width: 166px;
-    height: 16px;
     justify-content: space-between;
     align-items: flex-end;
+    width: 166px;
+    height: 16px;
 
     &-count {
+      margin: 0;
       color: $color-main-accent;
       font-size: 10px;
-      padding: 0 0 1px;
     }
   }
 
   &__price {
+    margin: 24px 0 0;
     display: flex;
     width: 166px;
     justify-content: space-between;
     align-items: center;
 
     &-text {
+      margin: 0;
       color: $color-secondary;
     }
 
     &-amount {
+      margin: 0;
       color: $color-main-accent;
       text-align: right;
       font-size: 16px;
@@ -71,6 +75,7 @@
   }
 
   &__button {
+    margin: 16px;
     box-sizing: border-box;
     text-decoration: none;
     text-transform: uppercase;
@@ -89,13 +94,11 @@
     transition: color 0.5s,
     background-color 0.5s,
     border-color 0.5s;
-  }
 
-  &:hover {
-    .card__button {
-      color: $color-blue-accent;
-      background-color: $color-white;
-      border-color: $color-blue-accent;
+    &:hover {
+        color: $color-blue-accent;
+        background-color: $color-white;
+        border-color: $color-blue-accent;
     }
   }
 }
