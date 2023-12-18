@@ -1,18 +1,17 @@
 .card {
-  width: 198px;
-  height: 406px;
   display: flex;
   flex-direction: column;
   position: relative;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
-  background: #FFF;
+  background: $White;
 
   &__product {
     display: block;
+    height: 206px;
 
     &-img {
-      padding: 33px 20px 40px;
+      padding: 32px 19px 40px;
       width: 160px;
       height: 134px;
       flex-shrink: 0;
@@ -22,7 +21,7 @@
   &__name {
     margin: 0;
     padding: 0 16px;
-    color:#060B35;
+    color: $Main-accent;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -30,7 +29,7 @@
   }
 
   &__code {
-    color: #616070;
+    color: $Secondary;
     padding: 0 16px;
     margin-top: 4px;
     font-size: 10px;
@@ -54,7 +53,7 @@
       flex-direction: column;
       justify-content: flex-end;
       flex-shrink: 0;
-      color: #060B35;
+      color: $Main-accent;
       text-align: right;
       font-size: 10px;
       font-style: normal;
@@ -73,7 +72,7 @@
     align-items: flex-end;
 
     &-text {
-      color: #616070;
+      color: $Secondary;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -81,7 +80,7 @@
     }
 
     &-cost {
-      color: #060B35;
+      color: $Main-accent;
       text-align: right;
       font-size: 16px;
       font-style: normal;
@@ -95,14 +94,16 @@
     width: 166px;
     height: 40px;
     border-radius: 5px;
-    background: #00ACDC;
+    background: $Blue-accent;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid $Blue-accent;
+    box-sizing: border-box;
 
     &-buy {
       text-decoration: none;
-      color: #FFF;
+      color: $White;
       font-size: 14px;
       font-weight: 700;
       line-height: 16px; /* 114.286% */
@@ -110,12 +111,13 @@
     }
 
     &:hover {
-      background: #FFF;
-      border: 1px solid #00ACDC;
+      background: $White;
+      border: 1px solid $Blue-accent;
     }
 
     &:hover &-buy {
-      color: #00ACDC;
+      color: $Blue-accent;
     }
   }
 }
+
