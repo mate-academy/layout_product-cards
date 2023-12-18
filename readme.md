@@ -27,6 +27,6 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 
 - [ x] there 2 BEM blocks `card` and `stars` each in it own file
 - [x ] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
-- [ ] SCSS Variables are used for main values and placed in a **separate file**
+- [ x] SCSS Variables are used for main values and placed in a **separate file**
 - [ x] all `stars--N` modifiers work as expected (Highlight first `N` stars)
 - [ x] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
