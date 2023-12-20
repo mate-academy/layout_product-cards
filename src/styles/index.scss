@@ -1,3 +1,125 @@
-body {
+$main-accent-color: #060b35;
+$secondary-color: #616070;
+$blue-accent-color: #00ACDC;
+$gray-elements-color: #f3f3f3;
+$stars-count: 4;
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 406px;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  border: 1px solid $gray-elements-color;
+
+  &__image {
+    padding: 0 3px;
+
+    img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $main-accent-color;
+    margin-top: 36px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+    color: $secondary-color;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    &-count {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $main-accent-color;
+      display: flex;
+      height: 16px;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+
+    .stars {
+      display: flex;
+
+      &__star {
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+      }
+
+      &--count :nth-child(-n + #{$stars-count}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    line-height: 18px;
+
+    &-name {
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: $main-accent-color;
+    }
+  }
+
+  &__button {
+    background-color: $blue-accent-color;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 12px;
+
+    &:hover {
+      background-color: $gray-elements-color;
+      border: 1px solid $blue-accent-color;
+      color: $blue-accent-color;
+    }
+  }
 }
