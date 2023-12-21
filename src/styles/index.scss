@@ -2,7 +2,6 @@ $main-accent-color: #060b35;
 $secondary-color: #616070;
 $blue-accent-color: #00ACDC;
 $gray-elements-color: #f3f3f3;
-$stars-count: 4;
 
 html {
   font-family: Roboto, sans-serif;
@@ -17,7 +16,6 @@ html {
   width: 200px;
   display: flex;
   flex-direction: column;
-  height: 406px;
   border-radius: 5px;
   padding: 32px 16px 16px;
   border: 1px solid $gray-elements-color;
@@ -64,23 +62,6 @@ html {
       justify-content: flex-end;
       flex-shrink: 0;
     }
-
-    .stars {
-      display: flex;
-
-      &__star {
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 16px;
-        height: 16px;
-        margin-right: 4px;
-      }
-
-      &--count :nth-child(-n + #{$stars-count}) {
-        background-image: url(../images/star-active.svg);
-      }
-    }
   }
 
   &__price {
@@ -114,7 +95,7 @@ html {
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    padding-top: 12px;
+    border: none;
 
     &:hover {
       background-color: $gray-elements-color;
