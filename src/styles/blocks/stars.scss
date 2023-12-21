@@ -1,6 +1,7 @@
 .stars {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 
   &__star {
     background-image: url(../images/star.svg);
@@ -9,14 +10,15 @@
     width: 16px;
     height: 16px;
     margin: 0;
+    cursor: pointer;
   }
 
-  &__star:not(:last-child) {
+  &__star:not(:first-child) {
     margin-right: 4px;
   }
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
+.stars__star:hover ~ div,
+  .stars__star:hover {
+    background-image: url(../images/star-active.svg);
+  }
