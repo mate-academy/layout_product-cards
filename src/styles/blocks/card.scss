@@ -1,22 +1,18 @@
 .card {
-  width: 200px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   background-color: $white-color;
   border: 1px solid $gray-elements-color;
   border-radius: 5px;
+  padding: 32px 0 16px;
+  padding-inline: 16px;
 
-  @include content-inline-padding;
-
-  &__image {
+  &__image,
+  &__img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 32px 0 40px;
-  }
-
-  &__img {
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
     background-position: center;
@@ -26,7 +22,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
   }
 
   &__title {
@@ -37,13 +33,8 @@
     line-height: 18px;
   }
 
-  &__title:hover {
-    color: $blue-color;
-  }
-
   &__code {
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
     color: $secondary-color;
   }
@@ -53,27 +44,27 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
+    width: 100%;
   }
 
   &__reviews-count {
-    font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
+    font-size: 10px;
     color: $main-color;
     display: block;
   }
 
   &__price {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 16px;
+    width: 100%;
   }
 
   &__price-text {
-    font-size: 12px;
     line-height: 18px;
-    font-weight: 400;
+    font-size: 12px;
     color: $secondary-color;
   }
 
@@ -82,39 +73,28 @@
     font-weight: 700;
     line-height: 18px;
     color: $main-color;
-  }
+    }
 
-  &__buy {
-    box-sizing: border-box;
+  &__button {
     width: 100%;
-    height: 40px;
-    margin-bottom: 16px;
+    padding-block: 12px;
+    display: block;
     border-radius: 5px;
     background: $blue-color;
-  }
-
-  &__buy:hover {
-    background: $white-color;
     border: 1px solid $blue-color;
-  }
-
-  &__buy-link {
+    color: $white-color;
     text-decoration: none;
-    font-size: 14px;
+    flex-shrink: 0;
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
-    color: $white-color;
+    font-family: Roboto, sans-serif;
+  }
 
-    &:hover {
-      color: $blue-color;
-    }
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   &__button:hover {
+    background: $white-color;
+    border-radius: 5px;
+    border: 1px solid $blue-color;
+    color: $blue-color;
   }
 }
