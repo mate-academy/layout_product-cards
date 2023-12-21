@@ -1,3 +1,114 @@
-body {
+@import './variables';
+@import './mixin';
+
+// style
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $body-font;
+}
+
+.product {
+  width: $card-width;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  background: $first-color;
+
+    &-photo {
+      width: $photo-width;
+      height: $photo-height;
+      align-self: center;
+    }
+
+    &-title {
+      margin-top: 40px;
+      font-size: 12px;
+      color: $first-text-color;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    &-code {
+      margin-top: 4px;
+      font-size: 10px;
+      color: $second-text-color;
+      line-height: 14px;
+    }
+
+    &-container-rating {
+      margin-top: 16px;
+
+      @include position-content;
+
+      &-list-stars {
+        display: flex;
+        gap: 4px;
+        list-style: none;
+        padding: 0;
+
+        &__star {
+          width: 16px;
+          height: 16px;
+          background-image: url('../images/star.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+
+          @for $child from 0 through $max-stars {
+            &:nth-child(#{$child}) {
+              background-image: url('../images/star-active.svg');
+            }
+          }
+        }
+      }
+
+      &__reviews {
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    &-container-price {
+      margin-top: 24px;
+
+      @include position-content;
+
+      &__text {
+        font-size: 12px;
+        line-height: 18px;
+        color: $second-text-color;
+      }
+
+      &__number {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+      }
+    }
+
+    &-button {
+      margin-top: 16px;
+      width: 166px;
+      height: 40px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 5px;
+      background: $second-color;
+      color: $first-color;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      &:hover {
+        border: 1px solid $second-color;
+        background: $first-color;
+        color: $second-color;
+      }
+    }
 }
