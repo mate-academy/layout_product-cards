@@ -1,0 +1,82 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  padding-inline: $padding-inline;
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  &__picture {
+    display: flex;
+    height: 134px;
+    padding-inline: 3px;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    @include typography(12px, 18px, 500, $color-main-accent);
+
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    @include typography(10px, 14px, 400, $color-secondary);
+
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    @include typography(10px, 14px, 400, $color-main-accent);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    & :first-child {
+      @include typography(12px, 18px, 400, $color-secondary);
+    }
+  }
+
+  &__cost {
+    @include typography(16px, 18px, 700, $color-main-accent);
+  }
+
+  &__button {
+    @include typography(14px, 16px, 700, $color-white);
+
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding-block: 11px;
+    background-color: $color-blue-accent;
+    border-radius: 5px;
+    border: 1px solid $color-blue-accent;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-blue-accent;
+      background-color: $color-white;
+    }
+  }
+}
