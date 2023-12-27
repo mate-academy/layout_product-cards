@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 408px;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
+  padding: 16px;
 
   &__image {
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px;
+    margin: 16px auto 0;
   }
 
   &__title {
@@ -18,42 +18,48 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    margin: 0 16px 4px;
+    margin: 40px 0 0;
   }
 
   &__code {
     color: $secondary;
     font-size: 10px;
     line-height: 14px;
-    margin-left: 16px;
+    margin: 4px 0 0;
   }
 
   &__details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px 16px 24px;
+    margin-top: 16px;
   }
 
   &__reviews {
+    @include margins-default;
+    
     font-size: 10px;
     line-height: 14px;
     color: $main-accent;
   }
 
-  &__price {
+  &__price-wrapper {
     display: flex;
-    margin: 0 16px;
+    margin: 24px 0 16px;
     justify-content: space-between;
     color: $secondary;
   }
 
-  &__price-string {
+  &__price-text {
+    @include margins-default;
+
     font-size: 12px;
     line-height: 18px;
   }
 
-  &__sum {
+  &__price-value {
+    @include margins-default;
+
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -66,15 +72,13 @@
     justify-content: center;
     color: #FFF;
     font-weight: 700;
-    line-height: 16px;
-    width: 166px;
-    height: 40px;
-    padding: 16px;
-    margin: 16px;
+    font-size: 14px;
+    padding: 12px 11.5px;
     border-radius: 5px;
     border: 0;
     background-color: $link-color;
     text-decoration: none;
+    text-transform: uppercase;
 
     &:hover  {
       color: $link-color;
