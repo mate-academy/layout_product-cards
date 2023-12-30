@@ -1,7 +1,6 @@
-:root {
-  --main-accent:#060B35 ;
-  --secondary:#616070;
-}
+
+  $main-accent: #060B35 ;
+  $secondary: #616070;
 
 body {
   margin: 0;
@@ -30,7 +29,7 @@ body {
     text-align: left;
     margin: 8px 0 0 16px;
     font-family: Roboto , sans-serif;
-    color: var(--main-accent);
+    color: $main-accent;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -39,7 +38,7 @@ body {
     &-description {
       width: 98px;
       margin: 4px 0 0 16px;
-      color: var(--secondary);
+      color: $secondary;
       font-family: Roboto , sans-serif;
       font-size: 10px;
       font-style: normal;
@@ -64,7 +63,7 @@ body {
       margin:0;
       width: 53px;
       height: 16px;
-      color: var(--main-accent);
+      color: $main-accent;
       font-family: Roboto , sans-serif;
       font-size: 10px;
       justify-content: flex-end;
@@ -86,7 +85,7 @@ body {
   &--cost {
     &-text {
       margin: 0;
-      color: var(--secondary);
+      color: $secondary;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -95,7 +94,7 @@ body {
 
     &-number {
       margin: 0;
-      color: var(--main-accent);
+      color: $main-accent;
       justify-content: flex-end;
       font-size: 16px;
       font-style: normal;
@@ -133,24 +132,4 @@ body {
   }
 }
 
-.stars {
-  display: flex;
-
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-
-  &--4 :nth-child(-n + 4){
-    background-image: url(../images/star-active.svg);
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 4px;
-  }
-}
+@import './stars.css'
