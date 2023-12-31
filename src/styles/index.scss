@@ -1,19 +1,22 @@
-
-  $main-accent: #060B35 ;
-  $secondary: #616070;
+@import './stars';
+@import './variables';
 
 body {
   margin: 0;
 }
 
+html {
+  font-family: Roboto , sans-serif;
+}
+
 .card {
+  box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
-  background: #FFF;
-  width: 198px;
-  height: 406px;
+  background: $white-color;
+  width: 200px;
+  height: $card-height;
   flex-shrink: 0;
-  text-align: center;
   justify-content: center;
   justify-items: center;
 
@@ -25,32 +28,25 @@ body {
   }
 
   &__text {
-    width: 166px;
-    text-align: left;
-    margin: 8px 0 0 16px;
-    font-family: Roboto , sans-serif;
+    max-width: 100%;
+    margin: 8px 16px 0;
     color: $main-accent;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 18px; /* 180% */
+    line-height: 18px;
 
-    &-description {
-      width: 98px;
+    &-code {
       margin: 4px 0 0 16px;
       color: $secondary;
-      font-family: Roboto , sans-serif;
       font-size: 10px;
-      font-style: normal;
       font-weight: 400;
-      line-height: 14px; /* 140% */
+      line-height: 14px;
     }
   }
 
   &__review {
-    margin: 16px 0 0 16px;
+    margin: 16px;
     text-align: center;
-    width: 166px;
     justify-items: center;
     justify-content: space-between;
     display: flex;
@@ -61,24 +57,19 @@ body {
 
     &--score {
       margin:0;
-      width: 53px;
       height: 16px;
       color: $main-accent;
-      font-family: Roboto , sans-serif;
       font-size: 10px;
       justify-content: flex-end;
       justify-content: baseline;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22px; /* 140% */
+      line-height: 22px;
     }
   }
 
   &__price {
-    font-family: Roboto , sans-serif;
-    margin: 24px 0 0 16px;
+    margin: 24px 16px 0;
     display: flex;
-    width: 166px;
+    max-width: 100%;
     justify-content: space-between;
     align-items: flex-end;
 
@@ -87,9 +78,7 @@ body {
       margin: 0;
       color: $secondary;
       font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 18px; /* 150% */
+      line-height: 18px;
     }
 
     &-number {
@@ -97,39 +86,36 @@ body {
       color: $main-accent;
       justify-content: flex-end;
       font-size: 16px;
-      font-style: normal;
       font-weight: 700;
-      line-height: 18px; /* 112.5% */
+      line-height: 18px;
     }
   }
   }
 
   &__button {
+    box-sizing: border-box;
     display: inline-block;
     justify-content: center;
-    color: #FFF;
+    color: $white-color;
     text-align: center;
-    font-family: Roboto , sans-serif;
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 40px; /* 114.286% */
+    line-height: 40px;
     text-transform: uppercase;
-    text-decoration:none ;
-    margin-top: 16px;
-    width: 166px;
+    text-decoration: none ;
+    margin: 16px 16px 12px;
+    width: 100%;
+    max-width: 166px;
     height: 40px;
     flex-shrink: 0;
     border-radius: 5px;
-    background: #00ACDC;
+    background: $button-color;
   }
+
   &__button:hover {
-    box-sizing: border-box;
-    background-color: white;
+    background-color: $white-color;
     border-radius: 5px;
-    border: 1px solid #00ACDC;
-    color: #00ACDC;
+    border: 1px solid $button-color;
+    color: $button-color;
   }
 }
-
-@import './stars.css'
