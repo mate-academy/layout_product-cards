@@ -1,3 +1,132 @@
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.card {
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: rgba(0, 128, 0, 0.41);
+  background: #FFF;
+
+  &__image {
+    margin: 32px auto;
+    background-image: url(../images/imac.jpeg);
+    background-size: 160px 134px;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 40px auto;
+    width: 166px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    color: #060B35;
+  }
+
+  &__code {
+    margin-top: -36px;
+    margin-left: 16px;
+    color: #616070;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__stars-reviews {
+    margin: 16px auto;
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(-n+4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__reviews {
+    display: flex;
+    width: 53px;
+    height: 16px;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #060B35;
+    text-align: right;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__price {
+    margin-top: 24px;
+    margin-left: 16px;
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-title {
+      color: #616070;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-value {
+      color: #060B35;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__buy-button {
+    margin-top: 16px;
+    margin-left: 16px;
+    width: 166px;
+    height: 40px;
+    border: 1px solid #00ACDC;
+    border-radius: 5px;
+    background: #00ACDC;
+
+    color: #FFF;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #FFF;
+      border-radius: 5px;
+      border: 1px solid #00ACDC;
+      color: #00ACDC;
+    }
+  }
 }
