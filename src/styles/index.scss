@@ -1,12 +1,9 @@
 @import './stars';
 @import './variables';
+@import './font';
 
-body {
+body , div , p {
   margin: 0;
-}
-
-html {
-  font-family: Roboto , sans-serif;
 }
 
 .card {
@@ -16,9 +13,6 @@ html {
   background: $white-color;
   width: 200px;
   height: $card-height;
-  flex-shrink: 0;
-  justify-content: center;
-  justify-items: center;
 
   &__image {
     margin: 32px 19px 28px;
@@ -45,15 +39,11 @@ html {
   }
 
   &__review {
-    margin: 16px;
+    margin: 16px ;
     text-align: center;
     justify-items: center;
     justify-content: space-between;
     display: flex;
-
-    &--stars :nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
 
     &--score {
       margin:0;
@@ -61,7 +51,6 @@ html {
       color: $main-accent;
       font-size: 10px;
       justify-content: flex-end;
-      justify-content: baseline;
       line-height: 22px;
     }
   }
@@ -73,29 +62,24 @@ html {
     justify-content: space-between;
     align-items: flex-end;
 
-  &--cost {
-    &-text {
-      margin: 0;
-      color: $secondary;
-      font-size: 12px;
-      line-height: 18px;
-    }
+  &-text {
+    color: $secondary;
+    font-size: 12px;
+    line-height: 18px;
+  }
 
-    &-number {
-      margin: 0;
-      color: $main-accent;
-      justify-content: flex-end;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18px;
-    }
+  &-number {
+    color: $main-accent;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
   }
   }
 
   &__button {
     box-sizing: border-box;
     display: inline-block;
-    justify-content: center;
     color: $white-color;
     text-align: center;
     font-size: 14px;
@@ -104,10 +88,7 @@ html {
     text-transform: uppercase;
     text-decoration: none ;
     margin: 16px 16px 12px;
-    width: 100%;
-    max-width: 166px;
-    height: 40px;
-    flex-shrink: 0;
+    width: 166px;
     border-radius: 5px;
     background: $button-color;
   }
