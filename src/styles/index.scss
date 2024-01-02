@@ -1,12 +1,4 @@
-$line-height: 18px;
-$padding-left: 17px;
-$background: #FFF;
-$color-border: #00ACDC;
-$color-text: #060B35;
-$color-text-next: #616070;
-$star-size: 16px;
-$star-active: url('../images/star-active.svg');
-$star-inactive: url(../images/star.svg);
+@import 'variables';
 
 html {
   font-family: Roboto, sans-serif;
@@ -16,9 +8,7 @@ body {
   margin: 0;
 }
 
-/* #region header */
-
-.header {
+.card {
   display: flex;
   flex-direction: column;
   width: 198px;
@@ -37,7 +27,7 @@ body {
   &__stars {
     display: flex;
     align-items: center;
-    height: $star-size;
+    height: 16px;
     padding-left: $padding-left;
   }
 
@@ -48,20 +38,16 @@ body {
   }
 
   &__star {
-    width: $star-size;
-    height: $star-size;
-    background-image: $star-active;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star-active.svg');
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &__stars .header__star:nth-child(5) {
-    background-image: $star-inactive;
+  &__stars .card__star:nth-child(5) {
+    background-image: url(../images/star.svg);
   }
-
-/* #endregion */
-
-/* #region text */
 
   &__text {
     padding-left: $padding-left;
@@ -107,10 +93,6 @@ body {
     padding-left: $padding-left;
   }
 
-  /* #endregion */
-
-  /* #region button */
-
   .button {
     display: block;
     margin: auto;
@@ -139,6 +121,4 @@ body {
     background: $background;
     color: $color-border;
   }
-
-  /* #endregion */
 }
