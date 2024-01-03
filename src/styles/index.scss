@@ -87,33 +87,36 @@ p {
     font-weight: 700;
     line-height: 16px; /* 114.286% */
     text-transform: uppercase;
+
+    &:hover {
+      color: var(--color-for-button);
+      background-color: #fff;
+      border: 1px solid;
+    }
   }
 }
 
 .stars {
   display: flex;
   box-sizing: border-box;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
 }
 
-.stars__star {
-  height: 16px;
-  width: 16px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
-
-.stars.stars--4 > .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
-.product-card__button:hover {
-  color: var(--color-for-button);
-  background-color: #fff;
-  border: 1px solid;
-}
-
+.stars.stars--1 > .stars__star:nth-child(-n +1),
+.stars.stars--2 > .stars__star:nth-child(-n + 2),
+.stars.stars--3 > .stars__star:nth-child(-n + 3),
+.stars.stars--4 > .stars__star:nth-child(-n + 4),
+.stars.stars--5 > .stars__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
