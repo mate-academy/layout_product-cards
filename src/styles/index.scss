@@ -1,3 +1,18 @@
 @import './utilit/variables';
+@import './utilit/mixins';
 @import './block/card';
 @import './block/stars';
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  @include reset-margin
+}
+
+p,
+h2 {
+  @include reset-margin;
+}
