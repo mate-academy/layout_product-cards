@@ -8,17 +8,20 @@ body {
   margin: 0;
 }
 
-.product {
+* {
   box-sizing: border-box;
+}
+
+.product {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background: $white-accent;
+  padding: 32px 16px 16px;
   width: 200px;
-  height: 408px;
 
   &_img {
-    display: flex;
-    padding: 32px 19px 40px;
+    display: block;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
   }
@@ -27,7 +30,6 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    padding: 0 16px;
     width: $width-content;
     color: $main-text-color;
   }
@@ -36,9 +38,8 @@ body {
     font-size: 10px;
     line-height: 14px;
     color:$secondary-text-color;
-
-    padding: 0 16px;
-    padding-top: 4px;
+    margin-top: 4px;
+    margin-bottom: 16px;
   }
 }
 
@@ -47,8 +48,6 @@ body {
   justify-content: space-between;
   width: $width-content;
   height: 16px;
-  padding: 0 16px;
-  padding-top: 16px;
 
   &_amount {
     display: flex;
@@ -82,8 +81,8 @@ body {
 
 .price {
   display: flex;
-  padding: 0 16px;
-  padding-top: 24px;
+  margin-bottom: 16px;
+  margin-top: 24px;
   width: $width-content;
   height: 18px;
   justify-content: space-between;
@@ -103,13 +102,12 @@ body {
 }
 
 .button {
-  margin: 16px auto;
+  margin: 0 auto;
   display: block;
   width: $width-content;
   height: 40px;
   border-radius: 5px;
   background-color: $blue-accent;
-  box-sizing: border-box;
   border: 1px solid transparent;
 
   color: $white-accent;
@@ -123,7 +121,6 @@ body {
   &:hover {
     border: 1px solid $blue-accent;
     background-color: $white-accent;
-    box-sizing: border-box;
 
     color:$blue-accent;
   }
