@@ -1,0 +1,103 @@
+@import '/src/styles/blocks/variables';
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background-color: #FFF;
+  padding: 32px 16px 16px;
+
+  &__photo {
+    display:block;
+    width: $photo-width;
+    height: $photo-height;
+    margin: 0 auto 40px;
+  }
+
+  &__name {
+    color: $main-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: $secondary-color;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__buy-link {
+    display: block;
+    width: $elements-width;
+    text-decoration: none;
+  }
+}
+
+.card-element {
+  width: $elements-width;
+}
+
+.rate-review {
+  width: 53px;
+  height: 16px;
+  justify-content: flex-end;
+  text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $main-color;
+}
+
+.price-title {
+  color: $secondary-color;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.price-amount {
+  color: $main-color;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.buy-button {
+  font-size: 14px;
+  width: $elements-width;
+  box-sizing: border-box;
+  height: $buy-height;
+  border-radius: 5px;
+  background-color: $buy-color;
+  text-align: center;
+  color: $buy-text-color;
+  font-weight: 700;
+  line-height: $buy-height;
+  text-transform: uppercase;
+}
+
+.buy-button:hover {
+  background-color: inherit;
+  border: 1px solid $buy-color;
+  color: $buy-color;
+  line-height: $buy-height - 2px;
+}
