@@ -1,46 +1,44 @@
 @import './utils/variables';
 
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
 }
-
-img {
-  display: flex;
-  padding: 32px 19px 40px;
-  width: 160px;
-  height: 134px;
-  }
 
 .product {
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  background: #FFF;
+  background: $white-accent;
   width: 200px;
   height: 408px;
 
+  &_img {
+    display: flex;
+    padding: 32px 19px 40px;
+    width: 160px;
+    height: 134px;
+  }
+
   &_name {
-    font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    font-style: normal;
     padding: 0 16px;
     width: $width-content;
     color: $main-text-color;
   }
 
   &_code {
-    font-family: Roboto, sans-serif;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
     color:$secondary-text-color;
 
     padding: 0 16px;
     padding-top: 4px;
-
   }
 }
 
@@ -58,12 +56,8 @@ img {
     justify-content: flex-end;
     color: $main-text-color;
 
-
     text-align: right;
-    font-family: Roboto, sans-serif;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
   }
 }
@@ -96,18 +90,13 @@ img {
 
   &_text {
     color:$secondary-text-color;
-    font-family: Roboto, sans-serif;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 18px;
   }
 
   &_amount {
     color: $main-text-color;
-    font-family: Roboto, sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 18px;
   }
@@ -119,26 +108,23 @@ img {
   width: $width-content;
   height: 40px;
   border-radius: 5px;
-  background-color: #00ACDC;
+  background-color: $blue-accent;
   box-sizing: border-box;
   border: 1px solid transparent;
 
-  color: #FFF;
+  color: $white-accent;
   text-align: center;
-  font-family: Roboto, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
-  
+
   &:hover {
-    // border-radius: 5px;
-    border: 1px solid #00ACDC;
-    background-color: #FFF;
+    border: 1px solid $blue-accent;
+    background-color: $white-accent;
     box-sizing: border-box;
 
-    color:#00ACDC;
+    color:$blue-accent;
   }
 }
