@@ -12,7 +12,12 @@
   &__rewiew {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 24px;
+  }
+
+  &__review--stars {
+    display: flex;
   }
 
   &__photo-imac {
@@ -71,11 +76,17 @@
     background:  #00ACDC;
     width: 166px;
     height: 40px;
+
+    &:hover {
+      border-radius: 5px;
+      border: 1px solid #F3F3F3;
+      background: #FFF;
+      transition: 0.3s;
+    }
   }
 
   .card__button--link {
     display: flex;
-    text-align: center;
     justify-content: center;
     color: #FFF;
     font-family: Roboto;
@@ -84,10 +95,32 @@
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 12px;
+
+    &:hover {
+    color:#00ACDC;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    }
   }
 
-  &__stars {
+  &__review--title {
     display: flex;
-    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: #060B35;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
   }
 }
