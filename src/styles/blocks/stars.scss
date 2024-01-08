@@ -1,0 +1,25 @@
+.stars {
+  display: flex;
+  align-items: center;
+ }
+
+ @for $stars from 1 through 4 {
+  .star--#{$stars} {
+    background-image: url(../images/star-active.svg);
+  }
+ }
+
+.star {
+  height: 16px;
+  width: 16px;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+
+  &:last-of-type {
+    background-image: url(../images/star.svg);
+     }
+  }
+
+
