@@ -2,8 +2,8 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 408px;
   width: 200px;
+  height: 408px;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
   background: #FFF;
@@ -23,7 +23,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 32px auto 0;
+  margin-top: 32px;
+  margin-bottom: 40px;
 }
 
 .card__descr {
@@ -31,8 +32,8 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  margin-top: 40px;
   margin-bottom: 4px;
+  margin-top: 0;
 }
 
 .card__code {
@@ -44,10 +45,13 @@
   display: flex;
   justify-content: space-between;
   margin: 16px 0 24px;
+  height: 16px;
 }
 
 .card__rate-descr {
   color: #060B35;
+  margin: 0;
+  align-self: flex-end;
 }
 
 .card__price {
@@ -75,19 +79,19 @@
   background-color: #00ACDC;
   text-decoration: none;
   text-align: center;
-  border: none;
+  border: 1px solid #00ACDC;
   border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
-  line-height: 40px;
-  height: 40px;
+  line-height: 38px;
+  height: 38px;
+  margin-bottom: 16px;
 }
 
 .card__button:hover {
   background-color: #fff;
-  border: 1px solid #00ACDC;
   color: #00ACDC;
 }
 
@@ -96,23 +100,8 @@
   align-items: center;
 }
 
-.star--1 {
-  background-image: url(../images/star-active.svg);
-}
-
-.star--2 {
-  background-image: url(../images/star-active.svg);
-}
-
-.star--3 {
-  background-image: url(../images/star-active.svg);
-}
-
-.star--4 {
-  background-image: url(../images/star-active.svg);
-}
-
-.star {
+.stars__star {
+  background-image: url(../images/star.svg);
   height: 16px;
   width: 16px;
   object-fit: cover;
@@ -121,8 +110,12 @@
   margin-right: 4px;
 }
 
-.star:last-of-type {
-  background-image: url(../images/star.svg);
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url(../images/star-active.svg);
 }
 
 body {
