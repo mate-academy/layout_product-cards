@@ -1,28 +1,21 @@
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-}
-
 .product-card {
   width: 200px;
-  box-sizing: border-box;
   border: 1px solid #f3f3f3;
+  margin-top: 32px;
+  padding: 0 16px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  &__image {
+  &__image-container {
     display: flex;
+    margin-top: 32px;
 
-    img {
+    &-photo {
       width: 160px;
       height: 134px;
-    }
-
-    &--position {
-      margin-top: 32px;
     }
   }
 
@@ -30,15 +23,12 @@ body {
     display: flex;
     flex-direction: column;
 
-    &--position {
-      margin: 40px 0 16px;
-
-    }
+    margin: 40px 0 16px;
   }
 
   &__title {
+    display: flex;
     color: $main-accent;
-    width: 166px;
 
     font-size: 12px;
     line-height: 18px;
@@ -52,24 +42,20 @@ body {
     line-height: 14px;
     font-weight: 400;
 
-    &--position {
-      margin-top: 4px;
-    }
+    margin-top: 4px;
   }
 
   &__rating {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
 
-    width: 166px;
-
-    &--position {
-      margin-bottom: 24px;
-    }
+    width: 100%;
+    margin-bottom: 24px;
   }
 
   &__rewievs {
+    display: flex;
     color: $main-accent;
 
     font-size: 10px;
@@ -79,9 +65,10 @@ body {
 
   &__price {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 166px;
+    align-items: center;
+
+    width: 100%;
 
     &-label {
       color: $secondary-color;
@@ -101,37 +88,28 @@ body {
   }
 
   &__buy-button {
-    width: 166px;
-    height: 40px;
+    margin: 16px;
+    padding: 12px 68px;
     background-color: $blue-accent;
     border-radius: 5px;
-    box-sizing: border-box;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &--position {
-      margin: 16px;
-    }
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
 
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: $white;
-
-      font-size: 14px;
-      line-height: 16px;
-      font-weight: 700;
-    }
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
 
     &:hover {
+      padding: 11px 67px;
       background-color: $white;
       border: 1px solid $blue-accent;
-
-      a {
-        color: $blue-accent;
-      }
+      color: $blue-accent;
     }
   }
 }
