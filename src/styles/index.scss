@@ -2,28 +2,27 @@ $main-accent: #060B35;
 $secondary: #616070;
 $blue-accent: #00ACDC;
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-
   width: 200px;
   height: 408px;
-
 }
 
 .product {
   padding: 32px 16px 16px;
 
-
   &__photo {
-    background-image: url(../images/imac.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 160px;
+    position: center;
+    width: 100%;
     height: 134px;
-    margin-left: 3px;
     margin-bottom: 40px;
   }
 
@@ -33,7 +32,6 @@ body {
   line-height: 18px;
   color: $main-accent;
   margin-bottom: 4px;
-
   }
 
   &__code {
@@ -41,8 +39,7 @@ body {
     font-weight: 400;
     line-height: 14px;
     color: $secondary;
-
-    }
+  }
 
   &__rank {
     display: flex;
@@ -50,24 +47,23 @@ body {
     align-items: center;
     gap: auto;
 
-
     &-stars {
       display: flex;
 
-      &-item {
+      &-star {
         width: 16px;
         height: 16px;
-        background-image: url(../images/star-active.svg);
+        background-image: url(../images/star.svg);
         background-repeat: no-repeat;
         background-position: center;
-
       }
-
-      & :last-child {
-        background-image: url(../images/star.svg);
+    
+      & :nth-child(-n+4) {
+        background-image: url(../images/star-active.svg);
       }
 
     }
+
     &-reviews {
       color: $main-accent;
       font-size: 10px;
@@ -86,9 +82,6 @@ body {
     gap: auto;
     align-items: center;
 
-
-
-
       &-value {
         color: $main-accent;
         text-align: right;
@@ -102,8 +95,7 @@ body {
 .btn {
   display: inline-block;
   text-align: center;
-
-  width: 166px;
+  width: 100%;
   height: 40px;
   flex-shrink: 0;
   border-radius: 5px;
