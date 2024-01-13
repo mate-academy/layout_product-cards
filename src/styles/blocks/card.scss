@@ -1,0 +1,153 @@
+@use "../utils/variables" as *;
+
+.card {
+  display: block;
+
+  position: relative;
+  width: 200px;
+  height: 408px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: $border-radius;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 160px;
+    height: 134px;
+    background-image: url("../images/imac.jpeg");
+    background-size: cover;
+    top: 33px;
+    left: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+
+    width: $blocks-width;
+    height: 36px;
+    top: 207px;
+    left: 17px;
+
+    &-name {
+      font-family: Roboto, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: $large-line-height;
+      text-align: left;
+
+      color: rgba(6, 11, 53, 1);
+    }
+
+    &-code {
+      position: fixed;
+
+      width: 98px;
+      height: 14px;
+      top: 247px;
+      left: $blocks-left;
+
+      font-family: $font-family;
+      font-size: 10px;
+      font-weight: $small-font;
+      line-height: $small-line-height;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+
+  &__review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 19px;
+
+    position: absolute;
+
+    width: $blocks-width;
+    height: $block-height;
+    top: 277px;
+    left: $blocks-left;
+
+    &-value {
+      align-items: center;
+      justify-content: center;
+      width: 53px;
+      height: $block-height;
+
+      font-family: $font-family;
+      font-size: 10px;
+      font-weight: $small-font;
+      line-height: $small-line-height;
+      letter-spacing: 0;
+      text-align: right;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    width: $blocks-width;
+    height: 18px;
+    top: 317px;
+    left: $blocks-left;
+
+    &-text {
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: $small-font;
+      line-height: $large-line-height;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    &-value {
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: $large-font;
+      line-height: $large-line-height;
+      letter-spacing: 0;
+      text-align: right;
+    }
+  }
+
+  &__buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    width: $blocks-width;
+    height: 40px;
+    top: 351px;
+    left: $blocks-left;
+    border-radius: $border-radius;
+    background: $button-color;
+
+    color: $color-white;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: $large-font;
+    line-height: $medium-line-height;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      color: $button-color;
+      background: $color-white;
+      border: 1px solid $button-color;
+    }
+  }
+}
