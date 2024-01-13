@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/Card_with_data-qa_card.png",
-        "test": "../bitmaps_test/20240113-165214/Card_with_data-qa_card.png",
+        "test": "../bitmaps_test/20240113-172123/Card_with_data-qa_card.png",
         "selector": "[data-qa=\"card\"]",
         "fileName": "Card_with_data-qa_card.png",
         "label": "Card with data-qa_card",
@@ -17,21 +17,21 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": 2,
-            "height": 4
+            "width": 0,
+            "height": -4
           },
-          "rawMisMatchPercentage": 39.356617647058826,
-          "misMatchPercentage": "39.36",
-          "analysisTime": 19
+          "rawMisMatchPercentage": 18.850490196078432,
+          "misMatchPercentage": "18.85",
+          "analysisTime": 17
         },
-        "diffImage": "../bitmaps_test/20240113-165214/failed_diff_Card_with_data-qa_card.png"
+        "diffImage": "../bitmaps_test/20240113-172123/failed_diff_Card_with_data-qa_card.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/Link_with_data-qa_hover.png",
-        "test": "../bitmaps_test/20240113-165214/Link_with_data-qa_hover.png",
+        "test": "../bitmaps_test/20240113-172123/Link_with_data-qa_hover.png",
         "selector": "[data-qa=\"card\"]",
         "fileName": "Link_with_data-qa_hover.png",
         "label": "Link with data-qa_hover",
@@ -44,14 +44,14 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": 2,
-            "height": 4
+            "width": 0,
+            "height": -4
           },
-          "rawMisMatchPercentage": 34.97549019607843,
-          "misMatchPercentage": "34.98",
-          "analysisTime": 19
+          "rawMisMatchPercentage": 18.55392156862745,
+          "misMatchPercentage": "18.55",
+          "analysisTime": 18
         },
-        "diffImage": "../bitmaps_test/20240113-165214/failed_diff_Link_with_data-qa_hover.png"
+        "diffImage": "../bitmaps_test/20240113-172123/failed_diff_Link_with_data-qa_hover.png"
       },
       "status": "fail"
     }
