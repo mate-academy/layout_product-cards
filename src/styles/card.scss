@@ -1,27 +1,10 @@
-$bg-color: #FFF;
-$button-color: #00ACDC;
-$main-text-color: #060B35;
-$secondary-text-color: #616070;
-$font-family: 'Roboto', sans-serif;
-
-body {
-  margin: 0;
-}
-
-.container {
-  &--flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 168px;
-  }
-}
-
 .card {
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
   padding-inline: 16px;
   padding-top: 32px;
   padding-bottom: 16px;
-  width: 168px;
+  width: 166px;
   font-family: $font-family;
   background-color: $bg-color;
 
@@ -50,51 +33,14 @@ body {
     line-height: 14px;
   }
 
-  &__reviews {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &--stars {
-      display: flex;
-      justify-content: flex-start;
-      margin: 0;
-
-      &--star {
-        width: 16px;
-        height: 16px;
-        background-image: url(../images/star-active.svg);
-        margin-right: 4px;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        &--empty {
-          background-image: url(../images/star.svg);
-        }
-      }
-    }
-
-    &--written {
-      margin: 0;
-      width: 53px;
-      height: 16px;
-      color: $main-text-color;
-      text-align: right;
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-    }
-  }
-
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 166px;
-    height: 16px;
+    height: 18px;
     margin-top: 24px;
     margin-bottom: 16px;
-    font-family: $font-family;
 
     &--word {
     margin: 0;
@@ -116,12 +62,13 @@ body {
   &__button {
     width: 166px;
     height: 40px;
+    padding: 12px 69px 12px 70px;
     flex-shrink: 0;
     background-color: $button-color;
     color: $bg-color;
     font-size: 14px;
     font-weight: 700;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px;
     text-transform: uppercase;
     text-align: center;
     display: block;
