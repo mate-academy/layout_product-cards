@@ -1,10 +1,8 @@
 .card {
   border-radius: 5px;
   border: 1px solid #F3F3F3;
-  padding-inline: 16px;
-  padding-top: 32px;
-  padding-bottom: 16px;
-  width: 166px;
+  padding: 32px 16px 16px;
+  width: 200px;
   font-family: $font-family;
   background-color: $bg-color;
 
@@ -17,7 +15,7 @@
   }
 
   &__name {
-    margin: 0;
+    margin-bottom: 4px;
     color: $main-text-color;
     font-size: 12px;
     font-weight: 500;
@@ -25,9 +23,27 @@
   }
 
   &__product-code {
-    margin-top: 4px;
+    margin-top: 0;
     margin-bottom: 16px;
     color: $secondary-text-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    display: flex;
+    margin: 0;
+    margin-bottom: 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $main-text-color;
+    text-align: right;
     font-size: 10px;
     line-height: 14px;
   }
@@ -38,14 +54,14 @@
     align-items: center;
     width: 166px;
     height: 18px;
-    margin-top: 24px;
+    margin-top: 0;
     margin-bottom: 16px;
 
     &-word {
-    margin: 0;
-    color: $secondary-text-color;
-    font-size: 12px;
-    line-height: 18px;
+      margin: 0;
+      color: $secondary-text-color;
+      font-size: 12px;
+      line-height: 18px;
     }
 
     &-number {
@@ -54,6 +70,29 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
+    }
+  }
+
+  &__button {
+    padding: 12px 70px 12px 69px;
+    flex-shrink: 0;
+    background-color: $button-color;
+    color: $bg-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    border-style: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      border: 1px solid $button-color;
+      background-color: $bg-color;
+      color: $button-color;
     }
   }
 }
