@@ -1,3 +1,107 @@
+@import "/src/styles/variables";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--gray-accent);
+  border-radius: 5px;
+
+  &__photo {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--main-accent);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__number {
+    margin-top: 4px;
+    margin-bottom: 0;
+    align-self: start;
+    color: var(--secondary);
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    color: var(--main-accent);
+    text-align: right;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price-text {
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price-number {
+    color: var(--main-accent);
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 12px 69px;
+    flex-shrink: 0;
+
+    font-family: Roboto, sans-serif;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 16px;
+    text-align: center;
+
+    border: none;
+    border-radius: 5px;
+    background: var(--blue-accent);
+
+    &:hover {
+      background: #fff;
+      border: 1px solid var(--blue-accent);
+      color: var(--blue-accent);
+    }
+  }
+
+  &__rating {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+  }
 }
