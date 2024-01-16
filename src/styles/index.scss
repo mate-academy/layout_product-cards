@@ -1,3 +1,126 @@
+$main-accent: #060B35;
+$secondary: #616070;
+$blue-accent: #00acdc;
+$white: #fff;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 200px;
+  padding: 0 17px;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 33px 3px 40px;
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__id {
+    color: $secondary;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__revard{
+    margin-top: 8px;
+    display: flex;
+    height: 12px;
+    justify-content: space-between;
+  }
+
+  &__stars {
+    display: flex;
+    margin-left: 2px;
+  }
+
+  &__star {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    background-size: cover;
+    box-sizing: border-box;
+    background-image: url("/src/images/star-active.svg");
+  }
+
+  &__star:last-child {
+    background-image: url("/src/images/star.svg");
+  }
+
+
+  &__review {
+    color: $main-accent;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  &__price {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+
+    &-label {
+      color: $secondary;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-number {
+      color: $main-accent;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+}
+
+.card__buy {
+  width: 100%;
+  height: 40px;
+  background-color: $blue-accent;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.card__buy:hover {
+background-color: $white;
+border: 1px solid $blue-accent;
+color: $blue-accent;
 }
