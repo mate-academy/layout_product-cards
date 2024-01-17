@@ -1,19 +1,22 @@
-$dark: #060B35;
-$light: #616070;
-$blue: #00ACDC;
-$white: #FFF;
-$border-color: #F3F3F3;
+@import './variables';
+@import './stars';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
 }
 
 .card {
   width: 200px;
   border: 1px solid $border-color;
   border-radius: 5px;
-  box-sizing: border-box;
   padding: 32px 16px 16px;
 
   &__top {
@@ -27,7 +30,7 @@ body {
     height: 134px;
   }
 
-  &__bottom {
+  &__description {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -55,32 +58,8 @@ body {
     align-items: center;
   }
 
-  .stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__star {
-      width: 16px;
-      height: 16px;
-      margin-right: 4px;
-      background-image: url('../images/star.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:nth-child(-n + 4) {
-        background-image: url('../images/star-active.svg');
-      }
-    }
-  }
-
   &__reviews {
     color: $dark;
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
   }
@@ -94,7 +73,6 @@ body {
 
   &__price {
     color: $light;
-    font-weight: 400;
     font-size: 12px;
     line-height: 18px;
   }
@@ -123,7 +101,6 @@ body {
     line-height: 16px;
 
     &:hover {
-      box-sizing: border-box;
       background-color: $white;
       color: $blue;
       border: 1px solid $blue;
