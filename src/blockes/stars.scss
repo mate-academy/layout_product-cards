@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-image: url(/src/images/star.svg);
+    margin-right: 4px;
+    background-position: center;
+  }
+
+  &--0 &__star:nth-child(-n + 0),
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+  background-image: url(/src/images/star-active.svg);
+  }
+
+  .stars__star--last-star {
+    margin-right: 0;
+  }
+}
+
+
+
+
