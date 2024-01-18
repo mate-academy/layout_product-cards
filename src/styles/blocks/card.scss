@@ -6,7 +6,7 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 200px;
-  padding: 32px 16px 16px;
+  padding: 32px 16px 15px;
   border: 1px solid #F3F3F3;
   border-radius: 5px;
   background-color: $background-color;
@@ -30,9 +30,8 @@
 
   &__title-link {
     margin-bottom: 4px;
-    line-height: 18px;
 
-    @include font(500, 12px, $main-accent);
+    @include font(500, 12px, 18px, $main-accent);
 
     &:hover {
       cursor: pointer;
@@ -41,33 +40,35 @@
   }
 
   &__product-code {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 
-    @include font(400, 10px, $secondary-accent);
+    @include font(400, 10px, 14px, $secondary-accent);
   }
 
   &__reviews {
-    @include align;
-
-    margin-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 24px;
   }
 
   &__amount-of-reviews {
-    @include font(400, 10px, $main-accent);
+    @include font(400, 10px, 14px, $main-accent);
   }
 
   &__price {
-    @include align;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
   }
 
   &__price-label {
-    @include font(400, 12px, $secondary-accent);
+    @include font(400, 12px, 18px, $secondary-accent);
   }
 
   &__price-value {
-    @include font(700, 16px, $main-accent);
+    @include font(700, 16px, 18px, $main-accent);
   }
 
   &__buy-link {
@@ -79,9 +80,8 @@
     border-radius: 5px;
     background-color: $blue-accent;
     text-align: center;
-    line-height: $button-height;
 
-    @include font(700, 14px, $background-color);
+    @include font(700, 14px, $button-height, $background-color);
 
     &:hover {
       cursor: pointer;
