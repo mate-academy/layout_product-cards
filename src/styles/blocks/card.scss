@@ -1,0 +1,92 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  background-color: $background-color;
+
+  &__image-link {
+    align-self: center;
+    width: fit-content;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+
+    &:hover {
+      cursor: pointer;
+      outline: 3px solid $blue-accent;
+    }
+  }
+
+  &__title-link {
+    margin-bottom: 4px;
+    line-height: 18px;
+
+    @include font(500, 12px, $main-accent);
+
+    &:hover {
+      cursor: pointer;
+      color: $blue-accent;
+    }
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+
+    @include font(400, 10px, $secondary-accent);
+  }
+
+  &__reviews {
+    @include align;
+
+    margin-bottom: 24px;
+  }
+
+  &__amount-of-reviews {
+    @include font(400, 10px, $main-accent);
+  }
+
+  &__price {
+    @include align;
+
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    @include font(400, 12px, $secondary-accent);
+  }
+
+  &__price-value {
+    @include font(700, 16px, $main-accent);
+  }
+
+  &__buy-link {
+    align-self: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: $button-height;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+    background-color: $blue-accent;
+    text-align: center;
+    line-height: $button-height;
+
+    @include font(700, 14px, $background-color);
+
+    &:hover {
+      cursor: pointer;
+      background-color: $background-color;
+      color: $blue-accent;
+    }
+  }
+}
