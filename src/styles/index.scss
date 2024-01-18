@@ -15,14 +15,15 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+}
+
+.product {
   width: 200px;
   height: 408px;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
   background: #FFF;
-}
-
-.product {
   padding: 32px 16px 16px;
 
 
@@ -30,6 +31,7 @@ body {
     width: 100%;
     height: 134px;
     margin-bottom: 40px;
+    padding: 0 3px;
   }
 
   &__title {
@@ -37,7 +39,7 @@ body {
   font-weight: 500;
   line-height: 18px;
   color: $main-accent;
-  margin-bottom: 4px;
+  margin-bottom: 36px;
 
   }
 
@@ -56,22 +58,6 @@ body {
     margin-bottom: 24px;
     height: 16px;
 
-    &-stars {
-      display: flex;
-
-      &-star {
-        width: 16px;
-        height: 16px;
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-
-      & :nth-child(-n+4) {
-        background-image: url(../images/star-active.svg);
-      }
-
-    }
 
     &-reviews {
       color: $main-accent;
@@ -79,6 +65,25 @@ body {
       line-height: 14px;
     }
   }
+
+  .stars {
+    display: flex;
+    gap: 4px;
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    & :nth-child(-n+4) {
+      background-image: url(../images/star-active.svg);
+  }
+
+  }
+
 
   &__price {
     font-size: 12px;
