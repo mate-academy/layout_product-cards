@@ -1,3 +1,133 @@
+$main-accent: #060B35;
+$secondary: #616070;
+$blue-accent: #00ACDC;
+$white: #FFF;
+
+@mixin main-font{
+  font-family: Roboto, sans-serif;
+}
+
 body {
+  @include main-font;
+
   margin: 0;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.main {
+  width: 200px;
+  height: 406px;
+}
+
+.button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background: $blue-accent;
+  border: none;
+
+  color: $white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  text-transform: uppercase;
+}
+
+.card {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: $white;
+  padding: 16px;
+
+  &__photo {
+    width: 160px;
+    height: 134px;
+    padding: 16px 3px;
+  }
+
+  &__name {
+    padding: 24px 0 4px;
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+  }
+
+  &__code {
+    color: $secondary;
+    font-size: 10px;
+    line-height: 14px; /* 140% */
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 8px;
+
+    .rewies {
+      color: $main-accent;
+      font-size: 10px;
+      line-height: 14px; /* 140% */
+    }
+  }
+
+  &__price {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      color: $secondary;
+      font-size: 12px;
+      line-height: 18px; /* 150% */
+    }
+
+    &-price {
+      text-align: right;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px; /* 112.5% */
+    }
+  }
+
+  &__buy:hover {
+    .button {
+      border: 1px solid $blue-accent;
+      color: $blue-accent;
+      background-color: $white;
+    }
+  }
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stars {
+  width: 96px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__star {
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    background-image: url(/src/images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .stars--4 .stars__star:nth-child(-n + 4) {
+    background-image: url(/src/images/star-active.svg);
+  }
 }
