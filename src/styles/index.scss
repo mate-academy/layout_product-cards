@@ -1,11 +1,10 @@
-$main-accent: #060B35;
-$secondary: #616070;
-$blue-accent: #00ACDC;
-$white: #FFF;
+@import './variables';
 
 @mixin main-font{
   font-family: Roboto, sans-serif;
 }
+
+@import './stars';
 
 body {
   @include main-font;
@@ -17,7 +16,6 @@ body {
 
 .main {
   width: 200px;
-  height: 406px;
 }
 
 .button {
@@ -31,7 +29,7 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  line-height: 16px; /* 114.286% */
+  line-height: 16px;
   text-transform: uppercase;
 }
 
@@ -50,17 +48,19 @@ body {
   }
 
   &__name {
+    margin: 0;
     padding: 24px 0 4px;
     color: $main-accent;
     font-size: 12px;
     font-weight: 500;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
   }
 
-  &__code {
+  &__code-text {
+    margin: 0;
     color: $secondary;
     font-size: 10px;
-    line-height: 14px; /* 140% */
+    line-height: 14px;
   }
 
   &__stars {
@@ -70,9 +70,10 @@ body {
     padding: 16px 0 8px;
 
     .rewies {
+      margin: 0;
       color: $main-accent;
       font-size: 10px;
-      line-height: 14px; /* 140% */
+      line-height: 14px;
     }
   }
 
@@ -83,16 +84,18 @@ body {
     align-items: center;
 
     &-title {
+      margin: 0;
       color: $secondary;
       font-size: 12px;
-      line-height: 18px; /* 150% */
+      line-height: 18px;
     }
 
     &-price {
+      margin: 0;
       text-align: right;
       font-size: 16px;
       font-weight: 700;
-      line-height: 18px; /* 112.5% */
+      line-height: 18px;
     }
   }
 
@@ -109,25 +112,4 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.stars {
-  width: 96px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &__star {
-    margin: 0;
-    height: 16px;
-    width: 16px;
-    background-image: url(/src/images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .stars--4 .stars__star:nth-child(-n + 4) {
-    background-image: url(/src/images/star-active.svg);
-  }
 }
