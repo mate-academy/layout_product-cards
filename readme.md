@@ -25,6 +25,8 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
+
+
 - [ ] there 2 BEM blocks `card` and `stars` each in it own file
 - [ ] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
 - [ ] SCSS Variables are used for main values and placed in a **separate file**
