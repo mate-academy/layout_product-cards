@@ -1,0 +1,24 @@
+$colors-stars: 1 url("./../images/star-active.svg"),
+2 url("./../images/star-active.svg"),
+3 url("./../images/star-active.svg"),
+4 url("./../images/star-active.svg"),
+5 url("./../images/star.svg");
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 16px;
+  width: 96px;
+  align-items: center;
+
+  @each $row, $color in $colors-stars {
+    &__#{$row} {
+      background-image: $color;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
