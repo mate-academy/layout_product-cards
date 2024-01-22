@@ -1,6 +1,6 @@
-@import "stars";
+@import 'stars';
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -12,131 +12,100 @@ html {
 
 body,
 h1,
-p{
+p {
   margin: 0;
-
 }
 
-.header{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: #FFFF;
-
-
+:root {
+  --button-color: #00acdc;
+  --text-color: #060b35;
+  --text-gray: #616070;
 }
 
-.container{
- width: 200px;
- padding: 32px 16px 16px;
- border-radius: 5px;
- border: 1px solid #f3f3f3;
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
 }
 
-.container__image{
+.card__image-container {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-
 }
 
-.image{
+.card__image {
   width: 160px;
   height: 134px;
 }
 
-.container__name{
-  color:  #060B35;
-  font-family: Roboto, sans-serif;
+.card__name {
+  color: var(--text-color);
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 18px;
   margin-bottom: 4px;
-
-
 }
 
-.container__product-code{
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 16px;
-  font-family: Roboto, sans-serif;
+.card__code {
+  color: var(--text-gray);
   font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 14px;
-  color: #616070;
+  margin-bottom: 16px;
 }
 
-.container__stars{
+.card__review {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-
-.container__review-text {
-  display: flex;
-  width: 53px;
-  height: 16px;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-shrink: 0;
-  color: #060B35;
-  text-align: right;
-  font-family:  Roboto, sans-serif;
+.card__review-text {
+  color: var(--text-color);
   font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 14px;
 }
 
-.container__price{
+.card__price {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
-  color: #616070;
-  font-family: Roboto, sans-serif;
+}
+
+.card__price-text {
+  color: var(--text-gray);
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 18px;
 }
 
-.strong{
-  color: #060B35;
-  text-align: right;
-  font-family: Roboto, sans-serif;
+.card__price-value {
+  color: var(--text-color);
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
   line-height: 18px;
 }
 
-
-.container__button{
+.card__button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 12px;
-  color: #F3F3F3;
+  color: #fff;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-  background-color: #00ACDC;
+  background-color: var(--button-color);
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.container__button:hover{
-  color: #00ACDC;
-  background-color: #ffff;
-  border: solid 1px #00ACDC;
-
+.card__button:hover {
+  border: 1px solid var(--button-color);
+  background-color: #fff;
+  color: var(--button-color);
 }
