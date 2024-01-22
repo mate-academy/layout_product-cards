@@ -3,9 +3,12 @@
 @import "./stars";
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -24,7 +27,7 @@
   }
 
   &_product-name {
-    margin-bottom: 4px;
+    margin-block: 0 4px;
     color: $main-text-color;
     font-weight: 500;
     font-family: $main-font-family;
@@ -33,7 +36,7 @@
   }
 
   &_product-code {
-    margin-bottom: 16px;
+    margin-block: 0 16px;
     align-self: baseline;
     color: $secondary-text-color;
     font-family: $main-font-family;
@@ -41,29 +44,31 @@
     line-height: 14px;
   }
 
-  &_rewievs {
+  &_reviews {
+    margin-bottom: 24px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &-count {
+      margin: 0;
       color: $main-text-color;
       text-align: right;
       font-family: $main-font-family;
       font-size: 10px;
     }
-
   }
 
   &_price {
-    margin: 24px 0 16px;
+    margin-bottom: 16px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &-text {
+      margin: 0;
       color: $secondary-text-color;
       font-family: $main-font-family;
       font-size: 12px;
@@ -71,6 +76,7 @@
     }
 
     &-cost {
+      margin: 0;
       text-align: right;
       font-family: $main-font-family;
       font-size: 16px;
@@ -78,7 +84,6 @@
       line-height: 18px;
       color: $main-text-color;
     }
-
   }
 
   &_buy-button {
@@ -98,12 +103,11 @@
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-  }
 
-  &:hover &_buy-button {
-    background-color: #fff;
-    color: $button-color;
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+    }
   }
-
 }
 
