@@ -1,3 +1,137 @@
+@import "./utils/variables";
+@import "./utils/mixin";
+
 body {
   margin: 0;
+  font-family: $general-font-family;
+  font-style: normal;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $card-bg;
+  padding: 32px 16px 16px;
+
+
+
+  &__picture {
+    width: 160px;
+    height: 134px;
+    padding-left: 3px;
+    padding-bottom: 36px;
+  }
+
+  &__title {
+    margin: 0;
+    color: $card-title-text;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    width: 166px;
+  }
+
+  &__description {
+    margin: 0;
+    color: $card-description-text;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__reviews {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+    color: $card-reviews-text;
+  }
+
+  &__prices {
+    @include flex-space-between;
+
+    margin-top: 24px;
+  }
+
+  &__text {
+    margin: 0;
+    color: $card-primary-text;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $card-price-text;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    margin: 0;
+
+    @include flex-center;
+
+    border: none;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background: $card-button-bg;
+    color: $card-button-text;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background: #FFF;
+      color: #00ACDC;
+      border: 1px solid #00ACDC;
+    }
+  }
+
+
+  &__inner {
+    @include flex-space-between;
+
+    margin-top: 16px;
+  }
+
+}
+
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 4px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  /* Stars :active */
+  &--4 {
+    .stars__star {
+      &:nth-child(-n + 4) {
+        background-image: url("../images/star-active.svg");
+      }
+    }
+  }
+
 }
