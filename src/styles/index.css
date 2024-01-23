@@ -1,0 +1,43 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card {
+  width: 200px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  min-width: 160px;
+  width: 100%;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("images/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--4 li:nth-child(-1n+4)::after {
+  content: "";
+  background-image: url("images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}/*# sourceMappingURL=index.css.map */
