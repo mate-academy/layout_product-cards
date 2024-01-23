@@ -1,0 +1,101 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    height: 134px;
+    width: 160px;
+  }
+
+  &__title {
+    color: $color-main-accent;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+  }
+
+  &__reviews-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-count {
+    color: $color-main-accent;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $color-main-accent;
+  }
+
+  &__buy-link {
+    height: 40px;
+    background-color: $color-blue-accent;
+    border: 1px solid $color-blue-accent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      color: $color-main-accent;
+      transition: 555ms;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(../images/star-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars .stars__star:last-child {
+  background-image: url(../images/star.svg);
+  margin-right: 0;
+}
