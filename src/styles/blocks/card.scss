@@ -1,6 +1,5 @@
 .card {
   width: 200px;
-  box-sizing: border-box;
   background: #fff;
   border: 1px solid #F3F3F3;
   border-radius: 5px;
@@ -63,14 +62,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
 
     text-decoration: none;
     color: #FFF;
     text-align: center;
     font-size: 14px;
     line-height: 16px;
-    font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -84,18 +81,20 @@
 
 .stars {
   display: flex;
-}
 
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(../images/star-active.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 
-.stars .stars__star:last-child {
-  background-image: url(../images/star.svg);
-  margin-right: 0;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &:nth-child(-n+4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
