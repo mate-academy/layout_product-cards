@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  color: $main-accent;
+}
+
+body {
+  margin: 0;
+}
+
+p, h2 {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 33px 17px 17px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+  }
+
+  &__review {
+    @include flex-space-between;
+    
+    margin-top: 16px;
+
+    &-count {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    @include flex-space-between;
+
+    margin-top: 24px;
+
+    &-name {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+
+    &-sum {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__buyButton {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $white-color;
+    background-color: $blue-accent;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid $blue-accent;
+      background: $white-color;
+      color: $blue-accent;
+    }
+  }
+}
