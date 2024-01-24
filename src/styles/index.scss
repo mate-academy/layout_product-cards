@@ -1,3 +1,125 @@
-body {
+$main-accent: #060B35;
+$secondary: #616070;
+$blue-accent: #00ACDC;
+$white: #FFF;
+$border-color: #F3F3F3;
+
+$star-size: 16px;
+
+.page__body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: $white;
+
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+
+  &__link {
+    display: flex;
+    width: 160px;
+    height: 134px;
+    padding-bottom: 40px;
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $main-accent;
+    padding-bottom: 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary;
+    padding-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-accent;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+
+    &__price {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $secondary;
+    }
+
+    &__value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $main-accent;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    color: $white;
+    background-color: $blue-accent;
+
+    &:hover {
+      border: 1px solid $blue-accent;
+      box-sizing: border-box;
+      background-color: $white;
+      color: $blue-accent;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+
+  &__star {
+    height: $star-size;
+    width: $star-size;
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:last-child {
+      background-image: url(../images/star.svg);
+    }
+  }
 }
