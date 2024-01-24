@@ -1,0 +1,103 @@
+@use '../utils/variables' as *;
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  background: white;
+  border-radius: 5px;
+  border: 1px #f3f3f3 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 19px;
+    height: 134px;
+    align-self: center;
+    margin: 32px 0 40px;
+  }
+
+  &__title {
+    width: 100%;
+    padding: 0 16px;
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: justify;
+  }
+
+  &__text {
+    margin: 0;
+
+    &--one {
+      color: $secondary-color;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &--two {
+      color: $primary-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__product {
+    margin: 4px 0 16px;
+    padding-left: 16px;
+    color: $secondary-color;
+    font-size: 10px;
+    line-height: 14px;
+
+    // width: $card-product-witdth;
+    width: 100%;
+    align-self: flex-start;
+    text-align: justify;
+    box-sizing: border-box;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    // width: $card-price-width;
+    width: 100%;
+    padding: 0 16px;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 24px 0 16px;
+  }
+
+  &__button {
+    width: 166px;
+    box-sizing: border-box;
+    height: 40px;
+    background: #00acdc;
+    border-radius: 5px;
+    border: none;
+    color: $third-color;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 16px;
+    margin-bottom: 16px;
+    padding: 0;
+
+    &:hover {
+      background-color: $third-color;
+      color: $fourth-color;
+      border: $fourth-color 1px solid;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+
+
