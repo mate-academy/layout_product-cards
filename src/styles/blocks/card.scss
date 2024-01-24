@@ -3,27 +3,30 @@ body {
   font-family: $font-famiy;
 }
 
+p {
+  margin: 0;
+}
+
 .card {
   box-sizing: border-box;
+  padding: 32px 16px 16px;
   width: 200px;
   border-radius: 5px;
   border: 1px solid $border-color;
 
   &__img {
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    display: block;
     width: 160px;
     height: 134px;
-    margin: 32px auto 40px;
+    margin: 0 auto 40px;
   }
 
-  &__label {
+  &__description {
     color: $main-accent;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px; /* 150% */
-    margin: 0 16px 4px;
+    margin: 0 0 4px;
   }
 
   &__code {
@@ -31,7 +34,7 @@ body {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px; /* 140% */
-    margin: 0 16px 16px;
+    margin-bottom: 16px;
   }
 
   &__wrapper {
@@ -39,41 +42,24 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    &--stars {
-      margin: 0 16px 24px;
+    &--reviews {
+      margin-bottom: 24px;
     }
 
     &--price {
-      margin: 0 16px 16px;
+      margin-bottom: 16px;
     }
   }
 
-  &__stars {
-    display: flex;
-
-  }
-
-  &__star {
-    background-image: url(/src/images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-
-    &--gold {
-      background-image: url(/src/images/star-active.svg);
-    }
-  }
-
-  &__reviews {
+  &__review {
     color: $main-accent;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
+    margin: 0;
   }
 
-  &__price-text {
+  &__price-key {
     color: $secondary-color;
     font-size: 12px;
     font-weight: 400;
@@ -91,7 +77,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 16px;
     height: 40px;
     font-size: 14px;
     font-weight: 700;
