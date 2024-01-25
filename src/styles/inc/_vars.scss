@@ -6,7 +6,7 @@ $main: #060b35;
 $second: #616070;
 $blue: #00acdc;
 $bodyfont: "Roboto", sans-serif;
-$padding-middle: 24px;
+$mainfont: 16;
 
 // <Mixins-media-queries>=========================================================================================================
 
@@ -17,7 +17,7 @@ $padding-middle: 24px;
 }
 
 @function rem($value) {
-  $remvalue: div($value, 16) + rem;
+  $remvalue: div($value, $mainfont) + rem;
 
   @return $remvalue;
 }
