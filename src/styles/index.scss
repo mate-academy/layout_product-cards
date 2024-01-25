@@ -1,6 +1,7 @@
 @use "inc" as *;
 
 body {
+  padding: 0;
   margin: 0;
   background-color: #f3f3f3;
   font-family: $bodyfont;
@@ -12,7 +13,7 @@ body {
   border-radius: rem(5);
   border: rem(1) solid #f3f3f3;
   background: $white;
-  padding: rem(32) rem(16) rem(16) rem(16);
+  padding: rem(32) rem(16) rem(16);
   display: flex;
   flex-direction: column;
 
@@ -20,13 +21,7 @@ body {
     width: 100%;
     max-width: rem(160);
     height: rem(134);
-    overflow: hidden;
     margin: 0 auto rem(40) auto;
-
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
   }
 
   &__title {
@@ -41,60 +36,8 @@ body {
   &__caption {
     color: $second;
     font-size: rem(10);
-    font-weight: 400;
     line-height: lineheight(14, 10);
     margin-bottom: rem(16);
-  }
-
-  &__reviews {
-    margin-bottom: rem(24);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-
-    &-stars {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      padding-left: 0;
-    }
-
-    $stars: 1, 2, 3, 4, 5;
-
-    @each $star in $stars {
-      &-stars--#{$star} {
-        .card__reviews-star:nth-child(-n + #{$star})::after {
-          background-image: url("../images/star-active.svg");
-        }
-      }
-    }
-
-    &-star {
-      position: relative;
-      width: rem(16);
-      height: rem(16);
-
-      &:not(:last-child) {
-        margin-right: rem(4);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url("../images/star.svg");
-      }
-    }
-
-    &-count {
-      font-size: rem(10);
-      color: $main;
-      font-weight: 400;
-      line-height: lineheight(14, 10);
-    }
   }
 
   &__price {
@@ -107,7 +50,6 @@ body {
       font-size: rem(12);
       color: $second;
       line-height: lineheight(18, 12);
-      font-weight: 400;
     }
 
     &-qnt {
@@ -121,7 +63,7 @@ body {
   &__buy {
     color: $white;
     width: 100%;
-    height: rem(40);
+    padding: rem(12) 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,3 +83,5 @@ body {
     }
   }
 }
+
+@import "star";
