@@ -1,0 +1,71 @@
+@use "sass:math" as *;
+@use "sass:list" as *;
+
+$white: #fff;
+$main: #060b35;
+$second: #616070;
+$blue: #00acdc;
+$bodyfont: "Roboto", sans-serif;
+$padding-middle: 24px;
+
+// <Mixins-media-queries>=========================================================================================================
+
+@mixin desktop-md {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin tablet-md {
+  @media (max-width: 1120px) {
+    @content;
+  }
+}
+
+@mixin tablet-smm {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile-md {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@function vw($value) {
+  $vwvalue: calc(#{$value} / #{$maxwidth} * 100vw);
+
+  @return $vwvalue;
+}
+
+@function vw-m($value) {
+  $vwvalue: calc(#{$value} / #{$mobwidth} * 100vw);
+
+  @return $vwvalue;
+}
+
+@function rem($value) {
+  $remvalue: div($value, 16) + rem;
+
+  @return $remvalue;
+}
+
+@function lineheight($pixels, $fontsize) {
+  $lineheight: $pixels / $fontsize;
+
+  @return $lineheight;
+}
