@@ -1,0 +1,29 @@
+@use "sass:math" as *;
+@use "sass:list" as *;
+
+$white: #fff;
+$main: #060b35;
+$second: #616070;
+$blue: #00acdc;
+$bodyfont: "Roboto", sans-serif;
+$mainfont: 16;
+
+// <Mixins-media-queries>=========================================================================================================
+
+@function vw($value) {
+  $vwvalue: calc(#{$value} / #{$maxwidth} * 100vw);
+
+  @return $vwvalue;
+}
+
+@function rem($value) {
+  $remvalue: div($value, $mainfont) + rem;
+
+  @return $remvalue;
+}
+
+@function lineheight($pixels, $fontsize) {
+  $lineheight: $pixels / $fontsize;
+
+  @return $lineheight;
+}
