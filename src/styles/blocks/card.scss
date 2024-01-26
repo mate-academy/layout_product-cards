@@ -1,13 +1,12 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 198px;
-  height: 406px;
+  width: 200px;
 
   border-radius: 5px;
+  box-sizing: border-box;
   border: 1px solid #F3F3F3;
   background: #FFF;
-
 
   &__image{
     width: 160px;
@@ -22,19 +21,19 @@
     width: 100%;
   }
 
-  &__title {
-    width: 166px;
-    height: 36px;
-    margin-top: 40px;
-    margin-left: 16px;
-    margin-right: 16px;
+  &__title-block {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
+  &__title {
     color: $main-accent;
-    font-family: Roboto, sans-serif;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
     line-height: 18px;
+    margin: 0;
   }
 
   &__name {
@@ -43,17 +42,14 @@
 
   &__product-code {
     color: $secondary;
-    font-family: Roboto, sans-serif;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 14px;
+    margin: 0;
   }
 
 
   &__price{
     display: flex;
-    width: 166px;
     justify-content: space-between;
     align-items: flex-end;
 
@@ -64,10 +60,7 @@
 
   &__priceText {
     color: $secondary;
-    font-family: Roboto, sans-serif;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 18px;
     margin: 0;
   }
@@ -75,9 +68,7 @@
   &__priceAmount {
     color: $main-accent;
     text-align: right;
-    font-family: Roboto, sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 18px;
     margin: 0;
@@ -94,9 +85,7 @@
     justify-content: center;
     background-color: $blue-accent;
     text-align: center;
-    font-family: Roboto, sans-serif;
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
@@ -114,6 +103,22 @@
     color: $blue-accent;
     border: 1px solid $blue-accent;
     background-color: $white;
+  }
+
+  &__ranking {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  &__review {
+    color: $main-accent;
+    text-align: right;
+    font-size: 10px;
+    line-height: 14px;
   }
 
 }
