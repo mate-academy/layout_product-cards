@@ -1,3 +1,149 @@
+$primary-font: 'Roboto', sans-serif;
+$card-bcg-color: #FFF;
+$card-border-color: #F3F3F3;
+$primary-text-color: #060B35;
+$secondary-text-color: #616070;
+$btn-color: #00ACDC;
+$btn-text-bcg-hover-color: #FFF;
+$card-padding: 32px 16px 16px;
+$card-img-width: 160px;
+$card-img-height: 134px;
+$star-size: 16px;
+$btn-padding: 11px 0;
+$card-width: 200px;
+
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: $primary-font;
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  border-radius: 5px;
+  border: 1px solid $card-border-color;
+  background: $card-bcg-color;
+  padding: $card-padding;
+
+    &__img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    &__pic {
+      width: $card-img-width;
+      height: $card-img-height;
+    }
+
+    &__name {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $primary-text-color;
+      margin-bottom: 4px;
+    }
+
+    &__code {
+      font-size: 10px;
+      line-height: 14px;
+      color: $secondary-text-color;
+      margin-bottom: 16px;
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+      color: $secondary-text-color;
+
+      &-desc {
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      &-cost {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: $primary-text-color;
+      }
+    }
+
+    &__btn {
+      text-decoration: none;
+      display: inline-block;
+      background-color: $btn-color;
+      border: 1px solid $btn-color;
+      color: $btn-text-bcg-hover-color;
+      text-align: center;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 5px;
+      width: 100%;
+      padding: $btn-padding;
+      margin-top: 16px;
+      cursor: pointer;
+    }
+
+    &__btn:hover {
+      color: $btn-color;
+      background-color: $btn-text-bcg-hover-color;
+    }
+}
+
+.card__stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    background-repeat: no-repeat ;
+    background-position: center center;
+    background-image: url(../images/star.svg);
+    width: $star-size;
+    height: $star-size;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+}
+
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: $primary-text-color;
 }
