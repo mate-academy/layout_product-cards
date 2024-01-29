@@ -7,13 +7,16 @@
     background-position: center;
     width: 16px;
     height: 16px;
-  }
-
-  &__star:not(:last-child) {
     margin-right: 4px;
   }
 
-  .stars--4 > &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
+  @for $active from 0 through $active-stars {
+    &--#{$active}>:nth-child(-n+#{$active}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
+
+  // .stars > &__star:nth-child(-n + 4) {
+  //   background-image: url(../images/star-active.svg);
+  // }
 }
