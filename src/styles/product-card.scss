@@ -8,19 +8,19 @@ $star-size: 16px;
 * {
   margin: 0;
   font-family: Roboto, sans-serif;
+  box-sizing: border-box;
 }
 
 .product-card {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  padding: 32px 16px 16px;
   width: 200px;
   background: $white;
 
   border: 1px solid $border-color;
   border-radius: 5px;
-  box-sizing: border-box;
-
-  padding: 33px 17px 17px;
 
   &__link {
     display: flex;
@@ -28,7 +28,7 @@ $star-size: 16px;
     height: 134px;
 
     background-image: url(../images/imac.jpeg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -41,6 +41,7 @@ $star-size: 16px;
   }
 
   &__code {
+    width: 100%;
     padding-top: 4px;
     font-size: 10px;
     font-weight: 400;
@@ -49,6 +50,7 @@ $star-size: 16px;
   }
 
   &__rating {
+    width: 100%;
     padding-top: 16px;
     display: flex;
     justify-content: space-between;
@@ -57,11 +59,12 @@ $star-size: 16px;
   &__reviews {
     font-size: 10px;
     font-weight: 400;
-    line-height: 14px;
+    line-height: 18px;
     color: $main-accent;
   }
 
   &__bottom {
+    width: 100%;
     display: flex;
 
     text-decoration: none;
@@ -70,55 +73,17 @@ $star-size: 16px;
     font-weight: 700;
 
     height: 40px;
-    line-height: 40px;
+    line-height: 38px;
     border-radius: 5px;
     justify-content: center;
     color: $white;
     background-color: $blue-accent;
+    border: 1px solid $blue-accent;
 
     &:hover {
       border: 1px solid $blue-accent;
-      box-sizing: border-box;
       background-color: $white;
       color: $blue-accent;
-    }
-  }
-}
-
-.count {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 0 16px;
-
-  &__price {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    color: $secondary;
-  }
-
-  &__value {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $main-accent;
-  }
-}
-
-.stars {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-
-  &__star {
-    height: $star-size;
-    width: $star-size;
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &:last-child {
-    background-image: url(../images/star.svg);
     }
   }
 }
