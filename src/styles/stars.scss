@@ -1,0 +1,40 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  &__block {
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__block-star {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url(../images/star.svg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  &__block-star:last-child {
+    margin-right: 0;
+  }
+  &__block--4  :nth-child(-n + 4) {
+    background: url(../images/star-active.svg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  &__reviews {
+    p {
+      margin: 0;
+      color: $main-accent;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 16px; /* 140% */
+    }
+  }
+}
