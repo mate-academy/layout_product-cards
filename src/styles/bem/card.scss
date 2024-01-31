@@ -1,0 +1,121 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: #FFF;
+  height: 406px;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    flex-shrink: 0;
+    background-size: 160px 134px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__content {
+    margin: 40px;
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    // margin: 16px;
+  }
+
+  &__code {
+    color: $secondary-color;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+    margin-top: 4px;
+  }
+
+  &__review {
+    color: $main-accent;
+    text-align: right;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+    margin-top: 16px;
+
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__buy-button {
+    width: 166px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: $blue-accent;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    color: $white-color;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 16px;
+
+    &:hover {
+      border-radius: 5px;
+      border: 1px solid $blue-accent;
+      background: #FFF;
+
+      color: $blue-accent;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 16px; /* 114.286% */
+      text-transform: uppercase;
+    }
+  }
+
+  &__price {
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 24px;
+
+    &-title {
+      color: $secondary-color;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+    }
+
+    &-sum {
+      color: $main-accent;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px; /* 112.5% */
+    }
+  }
+}
