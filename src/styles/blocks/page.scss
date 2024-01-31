@@ -1,0 +1,101 @@
+body {
+  @include main-font-set;
+
+  margin: 0;
+}
+
+.page-cont {
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @include main-inline-padding;
+
+  width: 200px;
+  height: 406px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    background: url(../images/imac.jpeg) no-repeat center/contain;
+
+    width: 160px;
+    min-height: 134px;
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    margin: 0 0 4px;
+  }
+
+  &__prod-code {
+    color: $secondary-accent;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px; /* 140% */
+    margin: 0 0 16px;
+  }
+
+  &__review-cont {
+    height: $review-height;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__review-count {
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: $review-height; /* 140% */
+  }
+
+  &__prod-price {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+  &__price-title {
+    color: $secondary-accent;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__price-cur {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px; /* 112.5% */
+  }
+
+  &__button-buy {
+    display: block;
+    text-decoration: none;
+    color: $white-accent;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+
+    background: $blue-accent;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+
+    &:hover {
+      color: $blue-accent;
+      background: $white-accent;
+      border: 1px solid $blue-accent;
+      border-radius: 5px;
+    }
+  }
+}
