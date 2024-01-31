@@ -1,7 +1,3 @@
-%star-active {
-  background-image: url(/src/images/star-active.svg);
-}
-
 .stars {
   display: flex;
 
@@ -14,9 +10,13 @@
     background-image: url(../images/star.svg);
   }
 
+  &__star:last-of-type {
+    margin-right: 0;
+  }
+
   @for $i from 1 through 5 {
     &--#{$i} &__star:nth-child(-n + #{$i}) {
-      @extend %star-active;
+      background-image: url(/src/images/star-active.svg);
     }
   }
 }

@@ -1,17 +1,25 @@
 .card {
   width: 200px;
-  box-sizing: border-box;
   padding: 32px 16px 17px;
   border-radius: $border-radius-default;
-  border: 1px solid #F3F3F3;
+  border: 1px solid $color-white-smoke;
+
+  &__image {
+        width: 160px;
+        height: 134px;
+      }
 
   &__link {
     margin-bottom: 40px;
-  }
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    }
 
   &__name {
     display: block;
-    color: $primery-text-color;
+    color: $color-midnight-express;
     font-size: 12px;
     font-weight: 500;
     text-decoration: none;
@@ -20,23 +28,51 @@
   }
 
   &__code {
-    color: $secondary-text-color;
+    color: $color-comet;
     font-size: 10px;
     font-weight: 400;
+    margin-top: 0;
     margin-bottom: 16px;
     line-height: 14px;
   }
 
+  &__reviews {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+    }
+
   &__rating {
     margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__price {
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    color: $color-comet;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__numbers {
+    color: $color-midnight-express;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
   }
 
   &__button-buy {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +81,7 @@
     height: 40px;
     background-color: $color-cyan;
     border-radius: $border-radius-default;
-    border: 0;
+    border: none;
     color: $color-white;
     font-size: 14px;
     font-weight: 700;
