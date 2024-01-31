@@ -1,26 +1,3 @@
-
-
-* {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  font-family: $primary-font;
-  font-weight: 400;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.container {
-  display: flex;
-  gap: 50px;
-}
-
 .card {
   box-sizing: border-box;
   width: $card-width;
@@ -28,16 +5,14 @@ ul {
   border: 1px solid $card-border-color;
   background: $card-bcg-color;
   padding: $card-padding;
-
-    &__img {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
+  display: flex;
+  flex-direction: column;
 
     &__pic {
       width: $card-img-width;
       height: $card-img-height;
+      margin-bottom: 40px;
+      align-self: center;
     }
 
     &__name {
@@ -45,14 +20,14 @@ ul {
       font-weight: 500;
       line-height: 18px;
       color: $primary-text-color;
-      margin-bottom: 4px;
+      margin: 0 0 4px;
     }
 
     &__code {
       font-size: 10px;
       line-height: 14px;
       color: $secondary-text-color;
-      margin-bottom: 16px;
+      margin: 0 0 16px;
     }
 
     &__price {
@@ -60,12 +35,13 @@ ul {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-top: 24px;
       color: $secondary-text-color;
+      margin-bottom: 16px;
 
       &-desc {
         font-size: 12px;
         line-height: 18px;
+        margin: 0;
       }
 
       &-cost {
@@ -73,6 +49,7 @@ ul {
         font-weight: 700;
         line-height: 18px;
         color: $primary-text-color;
+        margin: 0;
       }
     }
 
@@ -90,7 +67,6 @@ ul {
       border-radius: 5px;
       width: 100%;
       padding: $btn-padding;
-      margin-top: 16px;
       cursor: pointer;
     }
 
@@ -105,33 +81,12 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
+  margin-bottom: 24px;
 }
-
-.stars {
-  display: flex;
-  flex-direction: row;
-
-  &__star {
-    background-repeat: no-repeat ;
-    background-position: center center;
-    background-image: url(../images/star.svg);
-    width: $star-size;
-    height: $star-size;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 4px;
-  }
-
-  &--4 .stars__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
-
-}
-
 
 .card__reviews {
   font-size: 10px;
   line-height: 14px;
   color: $primary-text-color;
+  margin: 0;
 }
