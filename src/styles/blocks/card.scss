@@ -1,0 +1,120 @@
+$white: #fff;
+$main-accent: #060B35;
+$secondary-accent: #616070;
+$blue-accent: #00ACDC;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 198px;
+  height: 406px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  background: #FFF;
+
+  &__image {
+    margin-top: 32px;
+  }
+
+  &__label {
+    margin-top:40px;
+    width: 166px;
+  }
+
+  &__product-code {
+    margin-top:4px;
+    margin-left: 16px;
+    align-self: flex-start;
+  }
+
+  &__review-row {
+    margin-top:16px;
+    width:166px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-row {
+    margin-top:24px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+  }
+
+
+
+  &__button {
+    margin-top:16px;
+  }
+
+  &__text {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+
+    &--secondary {
+      color:$secondary-accent;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+    &--big-secondary {
+      color:$secondary-accent;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    &--primary {
+      color: $main-accent;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+    &--big-primary {
+      color: $main-accent;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+}
+
+.image {
+  background-image: url(../images/imac.jpeg);
+  background-size:100% 100%;
+  width: 160px;
+  height: 134px;
+  flex-shrink: 0;
+}
+
+.button {
+  width: 164px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 5px;
+  border: 1px solid $blue-accent;
+  background: $blue-accent;
+
+  text-decoration: none;
+  color: $white;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $white;
+    color: $blue-accent;
+  }
+}
