@@ -1,0 +1,65 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: $global-white;
+  padding-block: 32px 16px;
+  padding-inline: 16px;
+
+  &__image {
+    margin-bottom: 40px;
+    text-align: center;
+
+    img {
+      width: 160px;
+      height: 134px;
+      vertical-align: top;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    &-name {
+      color: $accent-text-color;
+      font-weight: 500;
+      line-height: 18px;
+      margin-bottom: 4px;
+    }
+
+    &-product-code {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__review {
+    @include with-two-blocks-content;
+
+    margin-bottom: 24px;
+
+    &-text {
+      color: $accent-text-color;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    @include with-two-blocks-content;
+
+    margin-bottom: 16px;
+
+    &-name {
+      line-height: 18px;
+    }
+
+    &-amount {
+      color: $accent-text-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+}
