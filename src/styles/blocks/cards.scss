@@ -1,0 +1,119 @@
+body {
+  font-family: $font-family;
+
+  margin: 0;
+}
+
+.product {
+  max-width: 200px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 32px 16px 16px;
+    border: 1px solid $fours-color;
+    border-radius: 5px;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img-img {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    margin: 0 0 4px;
+    font-weight: 500;
+    color: $main-color;
+  }
+
+  &__name,
+  &__price-title {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  &__description {
+    margin: 0 0 16px;
+    color: $second-color;
+  }
+
+  &__info {
+    margin-bottom: 24px;
+    align-items: end;
+  }
+
+  &__description,
+  &__info-review {
+    font-size: 10px;
+    line-height: 140%;
+  }
+
+  &__info-review {
+    color: $main-color;
+  }
+
+  &__info,
+  &__price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-rate {
+    display: flex;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+
+    &-title {
+      color: $second-color;
+    }
+
+    &-count {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 112.5%;
+
+      color: $main-color;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: 0.25s;
+    display: block;
+    width: 100%;
+    padding: 12px 70px;
+
+    background-color: $third-color;
+    border: 1px solid $third-color;
+    border-radius: 5px;
+    color: $fours-color;
+  }
+
+  &__link:hover {
+    color: $third-color;
+    background-color: $fours-color;
+  }
+}
