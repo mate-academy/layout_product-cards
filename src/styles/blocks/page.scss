@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+h2 {
+  @include main-font-set;
+
+  margin: 0;
+}
+
+.page-cont {
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+
+  @include main-inline-padding;
+
+  width: 200px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    min-height: 134px;
+  }
+
+  &__title {
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    margin-bottom: 4px;
+  }
+
+  &__prod-code {
+    color: $secondary-accent;
+    font-size: 10px;
+    line-height: 14px; /* 140% */
+    margin-bottom: 16px;
+  }
+
+  &__review-cont {
+    height: $review-height;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__review-count {
+    text-align: right;
+    font-size: 10px;
+    line-height: $review-height; /* 140% */
+  }
+
+  &__prod-price {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+  &__price-title {
+    color: $secondary-accent;
+    font-size: 12px;
+  }
+
+  &__price-cur {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px; /* 112.5% */
+  }
+
+  &__button-buy {
+    display: block;
+    text-decoration: none;
+    color: $white-accent;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-block: 12px;
+
+    background: $blue-accent;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+
+    &:hover {
+      color: $blue-accent;
+      background: $white-accent;
+    }
+  }
+}
