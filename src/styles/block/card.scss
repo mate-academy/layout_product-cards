@@ -1,7 +1,8 @@
 .card {
-  width: 200px;
+  width: $card-width;
   box-sizing: border-box;
-  border: 1px solid #F3F3F3;
+  background-color: $card-bg-color;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
 
   &__img {
@@ -11,8 +12,8 @@
     margin-top: 32px;
 
     background-image: url(../images/imac.jpeg);
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: 160px 134px;
   }
 
   &__content {
@@ -20,19 +21,20 @@
   }
 
   &__name {
-    color: #060B35;
+    color: $text-color-main;
+    margin-bottom: 0;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
   }
 
   &__code {
-    color: #616070;
+    display: block;
+    color: $text-color-secondary;
     margin-top: 4px;
   }
 
-  &__reviews {
-    color: #060B35;
+  &__score {
     margin-top: 16px;
 
     display: flex;
@@ -40,44 +42,57 @@
     align-items: center;
   }
 
-  &__price {
-    color: #616070;
-    margin-top: 24px;
+  &__review {
+    color: $text-color-main;
+  }
 
-    font-size: 12px;
-    line-height: 18px;
+  &__price {
+    margin-top: 24px;
 
     display: flex;
     justify-content: space-between;
-  }
+    align-items: center;
 
-  &__value {
-    color: #060B35;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
+    &-cost {
+      color: $text-color-secondary;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-value {
+      color: $text-color-main;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
   }
 
   &__buy {
-    margin-block: 28px;
+    margin-top: 16px;
   }
 
   &__button {
-    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+
+    color: $button-color-hover;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
 
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #00ACDC;
+    background-color: $button-color-main;
     border-radius: 5px;
-    padding: 11px 70px 12px 69px;
+    box-sizing: border-box;
 
     &:hover {
-      color: #00ACDC;
-      outline: 1px solid #00ACDC;
-      background-color: #FFF;
+      color: $button-color-main;
+      border: 1px solid $button-color-main;
+      background-color: $button-color-hover;
     }
   }
 }
