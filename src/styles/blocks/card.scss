@@ -1,50 +1,48 @@
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-}
-
 .card {
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
   width: 200px;
+
+  box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #F3F3F3;
   background-color: #FFF;
-  padding: 32px 16px 16px;
 
 
   &__image {
-    margin-bottom: 40px;
-    justify-content: center;
-  }
-
-  &__image-img {
-    display: block;
-    width: 160px;
     height: 134px;
+    margin: 0 3px 40px;
   }
 
   &__name {
+    margin-bottom: 4px;
+    margin-top: 0;
+
     color: $main-text-color;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    margin-bottom: 4px;
     text-align: center;
+
   }
 
   &__code {
+    margin-bottom: 16px;
+    margin-top: 0;
+
     color: $second-text-color;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    margin-bottom: 16px;
   }
 
   &__reviews {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
     align-items: end;
+    margin-bottom: 24px;
+
   }
 
   &__reviews-info {
@@ -59,6 +57,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+    align-items: center;
   }
 
   &__price-text {
@@ -77,17 +76,20 @@ body {
   }
 
   &__buy {
-    width: 166px;
+    display: block;
+    padding: 0;
     height: 40px;
-    background-color: $button-color;
+
     color: white;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     text-align: center;
+    text-transform: uppercase;
+
     border-radius: 5px;
     border: none;
-    text-transform: uppercase;
+    background-color: $button-color;
 
     &:hover {
       background-color: #FFF;
