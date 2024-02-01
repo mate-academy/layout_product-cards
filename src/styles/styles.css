@@ -1,5 +1,3 @@
-@use "../utils/variables" as *;
-
 .card {
   width: 200px;
   padding: 33px 17px 17px;
@@ -45,7 +43,6 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-
   text-align: left;
 }
 
@@ -59,7 +56,7 @@
 
 .card__button {
   height: 40px;
-  background-color: $blue-color;
+  background-color: #00acdc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,12 +67,53 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  color: $white-color;
+  color: #fff;
 }
 
 .card__button:hover {
-  background-color: $white-color;
+  background-color: #fff;
   border-radius: 5px;
-  color: $blue-color;
-  border: 1px solid $blue-color;
+  color: #00acdc;
+  border: 1px solid #00acdc;
 }
+
+.stars {
+  display: flex;
+  list-style: none;
+  padding-top: 5px;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 2px;
+  padding: 0 2px;
+  margin: 0 4px 4px 0;
+}
+
+.stars--4 span:nth-child(-n+4)::before {
+  content: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.stars__reviews {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=styles.css.map */
