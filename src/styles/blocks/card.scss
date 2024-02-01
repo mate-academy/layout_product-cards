@@ -1,0 +1,95 @@
+@use "../utils/variables" as *;
+
+.card {
+  width: 200px;
+  padding: 33px 17px 17px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
+  .card__nameProduct {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 40px;
+    line-height: 18px;
+  }
+}
+
+.card__codeProduct {
+  margin: 5px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+}
+
+.stars {
+  display: flex;
+  list-style: none;
+  padding-top: 10px;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 2px;
+  padding: 0 2px;
+  margin: 0 0 4px 4px;
+}
+
+.stars--4 span:nth-child(-n + 4)::before {
+  content: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.stars__reviews {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+  padding-left: 15px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 15px;
+}
+
+.card__button {
+  height: 40px;
+  background-color: $blue-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 700;
+  color: $white-color;
+}
+
+.card__button:hover {
+  background-color: $white-color;
+  border-radius: 5px;
+  color: &blue-color;
+  border: 1px solid $blue-color;
+}
