@@ -8,15 +8,15 @@
     width: 16px;
     height: 16px;
     margin-right: 4px;
-  }
 
-  &__star:last-child {
-    margin-right: 0;
-  }
-}
+    @for $star from 1 through 4 {
+      &:nth-child(-n + #{$star}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
 
-@for $star from 1 through 4 {
-  .stars__star:nth-child(-n + #{$star}) {
-    background-image: url(../images/star-active.svg);
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
