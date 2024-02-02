@@ -1,0 +1,110 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+
+  width: $card-width;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    height: 134px;
+    width: 160px;
+  }
+
+  &__title {
+    color: $card-main-color;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  &__code {
+    color: $card-secondary-color;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+    margin-bottom:0;
+  }
+
+  &__rating {
+    margin-top: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .reviews {
+      margin: 0;
+      color: $card-main-color;
+      text-align: right;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      justify-content: flex-end;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__button {
+    margin-top: 16px;
+    height: 40px;
+    border: 1px solid $card-button-color;
+    border-radius: 5px;
+    background: $card-button-color;
+
+    color: $card-button-hover-color;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background: $card-button-hover-color;
+      color: $card-button-color;
+    }
+  }
+}
+
+.price {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  line-height: 18px;
+
+  &--text {
+    color: $card-secondary-color;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &--number {
+    color: $card-main-color;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
