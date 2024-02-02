@@ -1,0 +1,87 @@
+@use "../utils/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid $grayElement;
+  border-radius: 5px;
+  background-image: url("../images/imac.jpeg");
+  background-position: center 32px;
+  background-size: 160px 134px;
+  background-repeat: no-repeat;
+  padding: 16px;
+  width: 200px;
+  height: 406;
+  min-height: 100px;
+  color: $mainAccent;
+  font-weight: 400;
+  font-size: 10px;
+
+  &__name {
+    margin-top: 190px;
+    width: 166px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    align-self: start;
+    margin-top: 4px;
+    color: $secondary;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 17px;
+    width: 100%;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+    line-height: 18px;
+
+    &-label {
+      color: $secondary;
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    &-cash {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    border-radius: 5px;
+    background-color: $blueAccent;
+    width: 100%;
+    height: 40px;
+    color: $grayElement;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  &:hover {
+    .card__buy-button {
+      box-sizing: border-box;
+      border: 1px solid $blueAccent;
+      background-color: $grayElement;
+      color: $blueAccent;
+    }
+  }
+}
