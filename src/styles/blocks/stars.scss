@@ -8,11 +8,13 @@
     width: 16px;
     height: 16px;
     background-image: url(../images/star.svg);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
-  &__star:last-of-type {
-    margin-right: 0;
-  }
+
 
   @for $i from 1 through 5 {
     &--#{$i} &__star:nth-child(-n + #{$i}) {
