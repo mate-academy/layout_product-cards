@@ -1,0 +1,54 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.card {
+  @include flex-center;
+
+  flex-direction: column;
+
+  width: $card-width;
+  padding: 32px $card-padding 17px;
+
+  background-color: $card-bg-color;
+  border: $card-border-width solid $card-border-color;
+  border-radius: 5px;
+
+  &__photo {
+    width: $photo-width;
+    height: 134px;
+  }
+
+  &__name {
+    margin-top: 40px;
+
+    @include roboto-500;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: #060B35;
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    @include roboto-400;
+
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    align-self: flex-start;
+  }
+
+  &__reviews {
+    margin-top: 15px;
+    line-height: 14px;
+  }
+
+  &__price {
+    margin-top: 23px;
+  }
+
+  &__buy {
+    margin-top: 16px;
+  }
+}
