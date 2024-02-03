@@ -1,3 +1,114 @@
-body {
+@use './variables' as *;
+
+:root {
+  line-height: calc($font-size * 1.8);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  color: #060B35;
+}
+
+.body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: calc($padding-card * 2) $padding-card $padding-card;
+  width: $width-card;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F3F3F3;
+  border-radius: calc($font-size * 0.5);
+}
+
+.card__image {
+  width: calc($font-size * 16);
+  height: calc($font-size * 13.4);
+  margin-bottom: calc($font-size * 4);
+  align-self: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: calc($font-size * 1.2);
+}
+
+.card__code {
+  font-size: $font-size;
+  line-height: calc($font-size * 1.4);
+  font-weight: $font-normal;
+  color: #616070;
+  margin-top: calc($font-size * 0.4);
+  margin-bottom: calc($font-size * 1.6);
+}
+
+.card__review {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars{
+  display: flex;
+
+  &__star {
+    background-image: url("../images/star-active.svg");
+    width: calc($font-size * 1.6);
+    height: calc($font-size * 1.6);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: calc($font-size * 0.4);
+  }
+
+  &__star:nth-child(n+5) {
+    background-image: url("../images/star.svg");
+  }
+}
+
+.reviews {
+  font-size: $font-size;
+  line-height: calc($font-size * 1.4);
+  font-weight: $font-normal;
+  margin-left: auto;
+}
+
+.wrapper-value {
+  display: flex;
+  justify-content: space-between;
+  height: calc($font-size * 1.8);
+  margin-top: calc($font-size * 2.4);
+  margin-bottom: calc($font-size * 1.6);
+  font-weight: $font-normal;
+  font-size: calc($font-size * 1.2);
+
+  &_cost {
+    font-size: calc($font-size * 1.6);
+    font-weight: $font-bold;
+  }
+}
+
+.buy {
+  box-sizing: border-box;
+  height: calc($font-size * 4);
+  font-size: calc($font-size * 1.4);
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $buy-color;
+  color: $buy-text;
+  text-decoration: none;
+  border: 1px solid $buy-color;
+  border-radius: calc($font-size * 0.5);
+}
+
+.buy:hover {
+  background-color: $buy-text;
+  color: $buy-color;
 }
