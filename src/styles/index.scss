@@ -1,12 +1,14 @@
 @import "./variables";
+@import "../styles/stars-block/stars";
+
+html {
+  font-family: Roboto, sans-serif;
+}
 
 body {
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   line-height: 18px;
-  font-style: normal;
-  font-weight: 400;
-  color: #060b35;
+  color: $main-color-text;
 }
 
 .card {
@@ -30,12 +32,14 @@ body {
     font-weight: 500;
     margin-bottom: 4px;
     text-decoration: underline transparent;
-    transition: color 0.3s, text-decoration-color 0.3s;
+    transition:
+      color 0.3s,
+      text-decoration-color 0.3s;
   }
 
   &__desc-link:hover {
     color: $button-color;
-     text-decoration-color: $button-color;
+    text-decoration-color: $button-color;
   }
 
   &__desc-text {
@@ -60,68 +64,31 @@ body {
     font-size: 16px;
     font-weight: 700;
   }
-
-  &__btn {
-    width: 100%;
-    background-color: $button-color;
-    color: $white-color;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    padding: 10px 0;
-    transition:
-      background-color 0.4s,
-      color 0.3s,
-      border 0.3s;
-  }
-
-  &__btn:hover {
-    background-color: $white-color;
-    color: $button-color;
-    border-color: $button-color;
-  }
-
-  &__btn-link {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
 }
 
-.stars {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
+.button {
+  width: 100%;
+  background-color: $button-color;
+  color: $white-color;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 10px 0;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border 0.3s;
+}
 
-  &__list {
-    display: flex;
-  }
+.button:hover {
+  background-color: $white-color;
+  color: $button-color;
+  border-color: $button-color;
+}
 
-  &__item {
-    background-image: url("../images/star.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-  }
-
-  &__list--4 li:nth-child(-1n + 4)::after {
-    content: "";
-    background-image: url("../images/star-active.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 4px;
-  }
-
-  &__review {
-    display: flex;
-    font-size: 10px;
-  }
+.button-link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
 }

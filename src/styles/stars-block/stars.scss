@@ -1,0 +1,41 @@
+.star {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.stars {
+  display: flex;
+
+  &__item {
+    background-image: url("../images/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.stars--4 li:nth-child(-1n + 4)::after {
+  content: "";
+  background-image: url("../images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.stars--4 li:hover:nth-child(-1n + 4)::after {
+  transform: scale(1.2);
+}
+
+.review {
+  display: flex;
+  font-size: 10px;
+}
