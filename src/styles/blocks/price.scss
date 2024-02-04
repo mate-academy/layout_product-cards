@@ -1,22 +1,23 @@
-@use '../utils/mixins' as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .price {
   @include flex-space-between;
 
-  width: 166px;
+  width: 100%;
   line-height: 18px;
 
   &__text {
     @include roboto-400;
 
     font-size: 12px;
-    color: #616070;
+    color: $seceondary;
   }
 
   &__value {
     @include roboto-700;
 
     font-size: 16px;
-    color: #060B35;
+    color: $main-accent;
   }
 }

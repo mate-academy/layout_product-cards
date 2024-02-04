@@ -1,7 +1,9 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .card {
+  box-sizing: border-box;
+  
   @include flex-center;
 
   flex-direction: column;
@@ -9,12 +11,12 @@
   width: $card-width;
   padding: 32px $card-padding 17px;
 
-  background-color: $card-bg-color;
-  border: $card-border-width solid $card-border-color;
+  background-color: $white;
+  border: $card-border-width solid $dark-white;
   border-radius: 5px;
 
   &__photo {
-    width: $photo-width;
+    width: 160px;
     height: 134px;
   }
 
@@ -25,7 +27,7 @@
 
     font-size: 12px;
     line-height: 18px;
-    color: #060B35;
+    color: $main-accent;
   }
 
   &__code {
@@ -35,17 +37,17 @@
 
     font-size: 10px;
     line-height: 14px;
-    color: #616070;
+    color: $seceondary;
     align-self: flex-start;
   }
 
   &__reviews {
-    margin-top: 15px;
+    margin-top: 16px;
     line-height: 14px;
   }
 
   &__price {
-    margin-top: 23px;
+    margin-top: 24px;
   }
 
   &__buy {
