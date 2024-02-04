@@ -1,10 +1,11 @@
 @use './variables' as *;
+@use './stars.scss';
 
 :root {
   line-height: calc($font-size * 1.8);
   font-family: Roboto, sans-serif;
-  font-weight: 500;
   color: #060B35;
+  font-weight: 500;
 }
 
 .body {
@@ -34,6 +35,7 @@
   align-items: center;
   box-sizing: border-box;
   font-size: calc($font-size * 1.2);
+  margin: 0;
 }
 
 .card__code {
@@ -48,26 +50,6 @@
 .card__review {
   display: flex;
   justify-content: space-between;
-}
-
-.stars{
-  display: flex;
-
-  &__star {
-    background-image: url("../images/star-active.svg");
-    width: calc($font-size * 1.6);
-    height: calc($font-size * 1.6);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: calc($font-size * 0.4);
-  }
-
-  &__star:nth-child(n+5) {
-    background-image: url("../images/star.svg");
-  }
 }
 
 .reviews {
@@ -87,6 +69,7 @@
   font-size: calc($font-size * 1.2);
 
   &_cost {
+    display: block;
     font-size: calc($font-size * 1.6);
     font-weight: $font-bold;
   }
@@ -106,9 +89,9 @@
   text-decoration: none;
   border: 1px solid $buy-color;
   border-radius: calc($font-size * 0.5);
-}
 
-.buy:hover {
-  background-color: $buy-text;
-  color: $buy-color;
+  &:hover {
+    background-color: $buy-text;
+    color: $buy-color;
+  }
 }
