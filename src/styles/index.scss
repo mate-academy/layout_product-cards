@@ -1,3 +1,112 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #060B35;
 }
+
+.card {
+  width: 200px;
+  padding: 32px 0 16px;
+  border: 1px solid #F3F3F3;
+
+  &__container {
+    padding: 0 16px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 40px 0 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    margin: 4px 0 0;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+  }
+
+  &__stars {
+    margin: 16px 0 24px;
+  }
+
+  &__button {
+    display: block;
+    margin: 16px 0 0;
+    padding: 12px 70px;
+    background-color:#00ACDC;
+
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+    &:hover {
+      background-color:#FFF;
+      color: #00ACDC;
+      border: 1px solid #00ACDC;
+      cursor: pointer;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  @for $star-child from 1 through 5 {
+    &--#{$star-child} :nth-child(-n + #{$star-child}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__rewievs {
+    font-size: 10px;
+  }
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__price {
+    font-size: 12px;
+    color: #616070;
+  }
+  &__amount {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
