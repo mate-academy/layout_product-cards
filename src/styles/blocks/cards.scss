@@ -8,15 +8,12 @@
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
 
-  &__items {
-    margin: 0 16px;
-
-    &--img {
+    &__img {
       height: 134px;
       margin: 32px 19px 0;
     }
 
-    &--description {
+    &__description {
       color: $card-main-color;
       font-family: Roboto, sans-serif;
       font-size: 12px;
@@ -24,23 +21,28 @@
       font-weight: 500;
       line-height: 18px;
       margin-top: 40px;
+      margin-inline: 16px;
+      margin-bottom: 0;
     }
 
-    &--code {
+    &__code {
       color: $card-secondary-color;
       font-size: 10px;
       font-style: normal;
       font-weight: 400;
       line-height: 14px;
       margin-top: 4px;
+      margin-bottom: 16px;
+      margin-inline: 16px;
     }
 
-    &--stars-rating {
-      margin-top: 16px;
+    &__stars-rating {
       height: 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-inline: 16px;
+      margin-bottom: 24px;
 
       .reviews {
         color: $card-main-color;
@@ -53,13 +55,13 @@
       }
     }
 
-    &--price {
+    &__price {
       display: flex;
       justify-content: space-between;
-      margin-top: 24px;
+      margin-inline: 16px;
     }
 
-    &--buy {
+    &__buy {
       margin: 16px;
       height: 40px;
       border: 1px solid $card-blue-color;
@@ -76,13 +78,10 @@
 
       &:hover {
         background: #fff;
-        border-radius: 5px;
-        border: 1px solid $card-blue-color;
-        color: #00acdc;
+        color: $card-blue-color;
       }
     }
   }
-}
 
 .price {
   margin-top: 0;
