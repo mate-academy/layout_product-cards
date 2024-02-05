@@ -2,21 +2,25 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 23px;
-}
+  align-items: center;
 
-.stars {
-  display: flex;
-
-  &__star {
-    background-image: url("../images/star.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
+  &__rating {
+    line-height: 16px;
+    display: flex;
+    flex-direction: row-reverse;
   }
 
-  &__star:not(:last-child) {
-    margin-right: 4px;
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+    color: #f3f3f3;
+  }
+
+  &__label:not(:last-child) {
+    margin-left: 5px;
   }
 }
 
