@@ -1,0 +1,92 @@
+.product {
+  padding-inline: 16px;
+
+  &__name {
+    padding-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: #616070;
+    font-size: 10px;
+    padding-top: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+
+    &--stars {
+      display: flex;
+    }
+
+    &--element {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 4px;
+    }
+
+    &--element:last-child {
+      margin-right: 0;
+    }
+
+    &--stars :nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &--reviews {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__sell {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+  }
+
+  .sell--price {
+    color: #616070;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .sell--cost {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  .button-buy {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFF;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  &__button-buy {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $main-color-moyo;
+    border-radius: 5px;
+    padding-block: 12px;
+    background-color: $main-color-moyo;
+    &:hover {
+      background-color: #FFFF;
+      cursor: pointer;
+    }
+    &:hover .button-buy {
+      color: $main-color-moyo;
+    }
+  }
+}
