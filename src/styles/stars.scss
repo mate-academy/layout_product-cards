@@ -9,14 +9,15 @@
     height: 16px;
     background: url(../images/star.svg) center no-repeat;
 
-    @for $star from 1 through 4 {
-      &:nth-child(-n + #{$star}) {
-        background-image: url(../images/star-active.svg);
-      }
-    }
-
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  @for $star from 1 through 5 {
+    &--#{$star}
+    &__star:nth-child(-n + #{$star}) {
+      background-image: url(../images/star-active.svg);
     }
   }
 }
