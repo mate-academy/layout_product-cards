@@ -21,34 +21,37 @@
   font-weight: 500;
   margin-top: 40px;
   line-height: 18px;
+  color: #060B35;
 }
 
 .card__codeProduct {
-  margin: 5px 0;
+  margin: 4px 0;
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
+  color: #616070;
 }
 
 .card__stars {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
 }
 
 .card__reviews {
   font-family: Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
-  display: flex;
-  align-items: center;
-  padding-top: 7px;
+  text-align: center;
+  color: #060B35;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 16px;
+  margin: 24px 0 16px;
 }
 
 .price-name {
@@ -56,6 +59,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+  color: #616070;
   text-align: left;
 }
 
@@ -65,6 +69,7 @@
   font-weight: 700;
   line-height: 18px;
   text-align: right;
+  color: #060B35;
 }
 
 .card__button {
@@ -92,22 +97,23 @@
 
 .stars {
   display: flex;
-  list-style: none;
-  padding-top: 5px;
 }
 
 .stars__star {
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: center;
   height: 16px;
   width: 16px;
-  margin: 0 4px 4px 0;
+  margin-right: 4px;
 }
 
-.stars--4 span:nth-child(-n+4)::before {
-  content: url(../images/star-active.svg);
-  background-repeat: no-repeat;
+.stars:last-child {
+  margin-right: 0;
+}
+
+.stars--4 > .stars__star:nth-child(-n+4) {
+  background-image: url(../images/star-active.svg);
 }
 
 * {
