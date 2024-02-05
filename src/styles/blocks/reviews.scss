@@ -1,0 +1,35 @@
+.card {
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 16px;
+    height: 16px;
+  }
+
+  &__star:nth-child(-n+4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__reviews-number {
+    display: flex;
+    justify-self: flex-end;
+    font-size: 10px;
+    line-height: 14px;
+    align-items: flex-end;
+
+    margin: 0;
+  }
+}
