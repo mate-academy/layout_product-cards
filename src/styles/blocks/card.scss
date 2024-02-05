@@ -6,9 +6,8 @@
 
   border-radius: 5px;
   border: 1px solid $card-border;
-  background: $white-color;
+  background: $base-color;
 
-  box-sizing: border-box;
   padding: 32px 16px 16px;
 
   &__image {
@@ -31,6 +30,7 @@
     font-size: 10px;
     line-height: 14px;
     margin-bottom: 16px;
+    margin-top: 0;
   }
 
   &__reviews {
@@ -48,10 +48,15 @@
     }
   }
 
-  &__price {
+
+  &__price-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0;
+  }
+
+  &__price {
     margin-top: 0;
 
     &--text {
@@ -59,7 +64,7 @@
       font-size: 12px;
       line-height: 18px;
     }
-
+  
     &--value {
       color: $main-accent;
       font-size: 16px;
@@ -73,9 +78,9 @@
   
     height: 40px;
     border-radius: 5px;
-    background: $blue-accent;
+    background: $main-page-accent;
   
-    color: $white-color;
+    color: $base-color;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
@@ -83,10 +88,9 @@
     text-transform: uppercase;
 
     &:hover {
-      box-sizing: border-box;
-      border: 1px solid $blue-accent;
-      background: $white-color;
-      color: $blue-accent;
+      border: 1px solid $main-page-accent;
+      background: $base-color;
+      color: $main-page-accent;
     }
   }
 }
