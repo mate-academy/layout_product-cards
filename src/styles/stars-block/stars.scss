@@ -7,7 +7,7 @@
 .stars {
   display: flex;
 
-  &__item {
+  &__star {
     background-image: url("../images/star.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -15,9 +15,39 @@
     height: 16px;
   }
 
-  &__item:not(:last-child) {
+  &__star:not(:last-child) {
     margin-right: 4px;
   }
+}
+
+.stars--1 li:nth-child(-1n + 1)::after {
+  content: "";
+  background-image: url("../images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+.stars--2 li:nth-child(-1n + 2)::after {
+  content: "";
+  background-image: url("../images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+.stars--3 li:nth-child(-1n + 3)::after {
+  content: "";
+  background-image: url("../images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
 }
 
 .stars--4 li:nth-child(-1n + 4)::after {
@@ -28,11 +58,16 @@
   width: 16px;
   height: 16px;
   position: absolute;
-  transition: transform 0.3s;
 }
 
-.stars--4 li:hover:nth-child(-1n + 4)::after {
-  transform: scale(1.2);
+.stars--5 li:nth-child(-1n + 5)::after {
+  content: "";
+  background-image: url("../images/star-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
 }
 
 .review {
