@@ -1,3 +1,128 @@
 body {
   margin: 0;
 }
+
+.card {
+  width: 198px;
+  padding: 32px 0 16px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #060B35;
+  font-size: 14px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__imac {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__img {
+    display: flex;
+    max-width: 100%;
+  }
+}
+
+.product {
+  padding-inline: 16px;
+
+  &__name {
+    padding-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: #616070;
+    font-size: 10px;
+    padding-top: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+  }
+
+  &__rating--stars {
+    display: flex;
+
+  }
+
+  &__rating--element {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__rating--element:last-child {
+    margin-right: 0;
+  }
+
+  &__rating--stars :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__rating--reviews {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__sell {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+  }
+
+  .sell--price {
+    color: #616070;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .sell--cost {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__button-buy {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #00ACDC;
+    border-radius: 5px;
+    padding-block: 12px;
+    background-color: #00ACDC;
+
+  }
+
+  .button-buy {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFF;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  &__button-buy:hover {
+    background-color: #FFFF;
+    cursor: pointer;
+  }
+
+  &__button-buy:hover .button-buy {
+      color: #00ACDC;
+  }
+}
