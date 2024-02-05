@@ -1,0 +1,125 @@
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #060B35;
+  font-size: 14px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__imac {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__name {
+    padding-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: #616070;
+    font-size: 10px;
+    padding-top: 4px;
+    line-height: 14px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+
+    &--stars {
+      display: flex;
+    }
+
+    &--element {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 4px;
+    }
+
+    &--element:last-child {
+      margin-right: 0;
+    }
+
+    &--stars :nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &--reviews {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__sell {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+  }
+
+  .sell--price {
+    color: #616070;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .sell--cost {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  .button-buy {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 700;
+    line-height: 16px;
+    height: 40px;
+    width: 166px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button-buy {
+    border: 1px solid $main-color-moyo;
+    border-radius: 5px;
+    margin-top: 16px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 166px;
+    background-color: $main-color-moyo;
+
+    &:hover {
+      background-color: #FFF;
+      cursor: pointer;
+    }
+
+    &:hover .button-buy {
+      color: $main-color-moyo;
+    }
+  }
+}
