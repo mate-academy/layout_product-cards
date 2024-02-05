@@ -1,0 +1,101 @@
+html {
+  font-family: Roboto, sans-serif;
+  color: $main-text-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  background-color: $card-bg-color;
+
+  &__img {
+    object-fit: contain;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+    color: $main-color;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    color: $secondary-color;
+  }
+
+&__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: $main-color;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 24px;
+  }
+}
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+      color: $main-color;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    width: 166px;
+    background-color: $accent-color;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      border-color: $accent-color;
+      color: $accent-color;
+      background-color: $card-bg-color;
+    }
+  }
+}
