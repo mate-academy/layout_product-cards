@@ -1,12 +1,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  font-family: Roboto, sans-serif;
-
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
 
     &__img {
       height: 134px;
@@ -15,9 +12,7 @@
 
     &__description {
       color: $card-main-color;
-      font-family: Roboto, sans-serif;
       font-size: 12px;
-      font-style: normal;
       font-weight: 500;
       line-height: 18px;
       margin-top: 40px;
@@ -28,7 +23,6 @@
     &__code {
       color: $card-secondary-color;
       font-size: 10px;
-      font-style: normal;
       font-weight: 400;
       line-height: 14px;
       margin-top: 4px;
@@ -44,22 +38,16 @@
       margin-inline: 16px;
       margin-bottom: 24px;
 
-      .reviews {
-        color: $card-main-color;
-        text-align: right;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 14px;
-        justify-content: flex-end;
-      }
     }
 
-    &__price {
-      display: flex;
-      justify-content: space-between;
-      margin-inline: 16px;
-    }
+    &__reviews {
+      color: $card-main-color;
+      text-align: right;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      justify-content: flex-end;
+   }
 
     &__buy {
       margin: 16px;
@@ -71,7 +59,6 @@
       color: #FFF;
       text-align: center;
       font-size: 14px;
-      font-style: normal;
       font-weight: 700;
       line-height: 16px;
       text-transform: uppercase;
@@ -81,24 +68,30 @@
         color: $card-blue-color;
       }
     }
-  }
 
-.price {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-style: normal;
-  line-height: 18px;
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      margin-inline: 16px;
 
-  &--text {
-    color: $card-secondary-color;
-    font-size: 12px;
-    font-weight: 400;
-  }
+      &-text {
+        color: $card-secondary-color;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 18px;
+      }
 
-  &--number {
-    color: $card-main-color;
-    text-align: right;
-    font-size: 16px;
-    font-weight: 700;
-  }
+      &-number {
+        color: $card-main-color;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 18px;
+      }
+    }
+
 }
