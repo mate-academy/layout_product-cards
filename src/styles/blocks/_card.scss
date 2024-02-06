@@ -1,0 +1,80 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 200px;
+  flex: 1;
+  padding: 32px 16px 16px;
+  &__review {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    height: 134px;
+    width: 160px;
+    margin-bottom: 40px;
+    background-size: contain;
+  }
+
+  &__item {
+    font-size: 12px;
+    text-align: left;
+    &-name {
+      color: $main-color;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-product-code{
+      font-size: 10px;
+      align-self: flex-start;
+      color: $secondary-color;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 80px;
+    margin-bottom: 16px;
+    &-text {
+      font-size: 12px;
+      color: $secondary-color
+    }
+    &-amount {
+      color: $main-color;
+      font-size: 17px;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 100%;
+    background-color: $blue;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    &:hover {
+      background-color: white;
+      color: $blue;
+      border: 1px solid $blue;
+      cursor: pointer;
+    }
+  }
+}
