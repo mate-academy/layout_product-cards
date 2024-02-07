@@ -1,0 +1,117 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #060B35;
+  font-size: 10px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  padding-inline: 16px;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__imac {
+    width: 160px;
+    height: 134px;
+    padding: 32px 16px 40px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    line-height: 14px;
+    color: $color-code-price;
+    padding-top: 4px;
+  }
+
+  &__popular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+
+    &--stars {
+      display: flex;
+    }
+
+    &--element {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 4px;
+    }
+
+    &--element:last-child {
+      margin-right: 0;
+    }
+
+    &--stars :nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &--reviews {
+      line-height: 14px;
+    }
+  }
+
+  &__selling {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+  }
+
+  .selling--price {
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-code-price;
+  }
+
+  .selling--cost {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  .button-buy {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFF;
+  }
+
+  &__button-buy {
+    display: flex;
+    justify-content: center;
+    border: 1px solid $button-color-blue;
+    border-radius: 5px;
+    height: 40px;
+    width: 166px;
+    padding-block: 12px;
+    background-color: $button-color-blue;
+    margin-top: 16px;
+
+    &:hover {
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    &:hover .button-buy {
+      color: $button-color-blue;
+    }
+  }
+}
