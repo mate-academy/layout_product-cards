@@ -1,0 +1,24 @@
+.stars {
+  display: flex;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    
+    margin-right: 4px;
+
+    background: no-repeat 50%;
+    background-image: url(../images/star.svg);
+  }
+
+  &__reviews {
+    color: #060B35;
+  }
+}
+
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n+#{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
