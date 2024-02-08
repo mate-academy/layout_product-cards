@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 28,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1707206015057,
@@ -120,6 +120,18 @@
                 {
                     "date": 1707236352870,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   box-sizing: border-box;\n   width: 198px;\n   padding: 32px 16px 16px;\n \n-  &__image {asdasd\n+  &__image {\n     height: 134px;\n     width: 160px;\n     margin-bottom: 40px;\n     background-size: contain;\n"
+                },
+                {
+                    "date": 1707326629911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n .card {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  box-sizing: border-box;\n   width: 198px;\n   padding: 32px 16px 16px;\n \n   &__image {\n"
+                },
+                {
+                    "date": 1707326635821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n * {  display: flex;\n   flex-direction: column;\n   align-items: center;\n-  box-sizing: border-box;}\n+  box-sizing: border-box;\n+}\n \n .card {\n   width: 198px;\n   padding: 32px 16px 16px;\n"
+                },
+                {
+                    "date": 1707375476924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,80 @@\n+* {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  box-sizing: border-box;\n+}\n+\n+.card {\n+  width: 198px;\n+  padding: 32px 16px 16px;\n+\n+  &__image {\n+    height: 134px;\n+    width: 160px;\n+    margin-bottom: 40px;\n+    background-size: contain;\n+  }\n+\n+  &__item {\n+    font-size: 12px;\n+    text-align: left;\n+    &-name {\n+      color: $main-color;\n+      font-weight: 500;\n+      font-size: 12px;\n+      line-height: 18px;\n+    }\n+    &-product-code{\n+      font-size: 10px;\n+      align-self: flex-start;\n+      color: $secondary-color;\n+      line-height: 14px;\n+      margin-top: 4px;\n+    }\n+  }\n+\n+  &__price {\n+    display: flex;\n+    align-items: center;\n+    justify-content: space-between;\n+    width: 100%;\n+    gap: 80px;\n+    margin-bottom: 16px;\n+    &-text {\n+      font-size: 12px;\n+      color: $secondary-color;\n+      line-height: 18px;\n+    }\n+    &-amount {\n+      color: $main-color;\n+      font-size: 16px;\n+      font-weight: 700;\n+      line-height: 18px;\n+    }\n+  }\n+\n+  &__button {\n+    box-sizing: border-box;\n+    height: 40px;\n+    text-transform: uppercase;\n+    border-radius: 5px;\n+    width: 166px;\n+    background-color: $blue;\n+    color: white;\n+    font-weight: 700;\n+    font-size: 14px;\n+    line-height: 16px;\n+    border: 1px solid $blue;\n+    display: flex;\n+    align-items: center;\n+    justify-content: center;\n+    text-decoration: none;\n+    &:hover {\n+      background-color: white;\n+      color: $blue;\n+      border: 1px solid $blue;\n+      cursor: pointer;\n+    }\n+  }\n+}\n"
                 }
             ],
             "date": 1707206015057,
