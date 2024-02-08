@@ -1,0 +1,35 @@
+.card__reviews {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+
+&-label {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+  color: $color_text_main;
+  line-height: 18px;
+}
+}
+
+.card__stars {
+  display: flex;
+
+  &-star{
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+
+  &:not(:last-child) {
+    background-image: url('../images/star-active.svg')
+  }
+
+  &:last-child {
+    background-image: url('../images/star.svg')
+  }
+  }
+}
