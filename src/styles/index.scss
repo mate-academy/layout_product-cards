@@ -1,3 +1,121 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
 }
+
+.card {
+  width: 200px;
+  height: 406px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+
+  &__image {
+    margin-top: 33px;
+    padding-bottom: 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+    &__info {
+     margin: 0 16px;
+    }
+
+    &__title {
+      margin: 0;
+      color: #060B35;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__code {
+      color: #616070;
+      margin: 4px 0;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    &__score {
+      margin: 0 16px;
+      padding-bottom: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 21px;
+    }
+
+
+    &__reviews,
+    &__amount {
+      color: #060B35;
+      font-family: inherit;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    gap: 85px;
+    padding-bottom: 16px;
+ }
+
+    &__price {
+      font-family: inherit;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &__cost {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+
+  &__buy {
+    width: 166px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #00ACDC;
+
+    &:hover {
+      border: 1px solid #00ACDC;
+      color: #00ACDC;
+      background-color: #fff;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--4 :nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+}
+
+
+
