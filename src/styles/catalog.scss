@@ -1,3 +1,5 @@
+$myColor: #00ACDCed;
+
 .catalog {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
@@ -36,6 +38,11 @@
     justify-content: space-between;
     margin-top: 16px;
     margin-bottom: 24px;
+    & p{
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 18px;
+    }
   }
 
   /* .catalog__stars */
@@ -61,6 +68,17 @@
   &__price {
     display: flex;
     justify-content: space-between;
+    & p:first-child{
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+    }
+    & p:last-child{
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
   }
 
   &__button{
@@ -71,7 +89,7 @@
     width: 100%;
     height: 40px;
     border-radius: 3px;
-    background: #00ACDC;
+    background: $myColor;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -81,18 +99,18 @@
     box-shadow: none;
 
     &:hover{
-      border: 1px solid #00ACDC;
-      color: #00ACDC;
+      border: 1px solid $myColor;
+      color: $myColor;
       background-color: #fff;
     }
   }
 
 }
 
-.stars-1 :nth-child(-n+1),
-.stars-2 :nth-child(-n+2),
-.stars-3 :nth-child(-n+3),
-.stars-4 :nth-child(-n+4),
-.stars-5 :nth-child(-n+5){
+.stars--1 :nth-child(-n+1),
+.stars--2 :nth-child(-n+2),
+.stars--3 :nth-child(-n+3),
+.stars--4 :nth-child(-n+4),
+.stars--5 :nth-child(-n+5){
     background-image: url('../images/star-active.svg');
 }
