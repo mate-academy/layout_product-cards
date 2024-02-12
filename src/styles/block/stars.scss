@@ -1,13 +1,18 @@
 .stars {
   display: flex;
+
   &__item {
     width: 16px;
     height: 16px;
-    margin-right: 4px;
     background-image: url(../images/star-active.svg);
-    background-position: 50%;
+    background-position: center center;
     background-repeat: no-repeat;
+
+    &:not(:first-of-type) {
+      margin-left: 4px;
+    }
   }
+
   &--4 .stars__item:nth-child(1n + 5) {
     background-image: url(../images/star.svg);
   }
