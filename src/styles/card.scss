@@ -66,8 +66,22 @@ body {
 }
 
 .buy {
+  display: flex;
+  width: 166px;
+  height: 40px;
   margin-bottom: 16px;
-  padding-left: $padding-left;
+  margin-left: 16px;
+  background-color: $blue-color;
+  border: none;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    box-sizing: border-box;
+    background-color: $white-color;
+    border: 1px solid $blue-color;
+  }
 
   &__link {
     font-family: $main-font-style;
@@ -76,24 +90,11 @@ body {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 16px;
-    text-align: center;
     font-weight: 700;
-
-    &:hover {
-      color: $blue-color;
-    }
-  }
-
-  &__button {
-    width: 166px;
-    height: 40px;
-    background-color: $blue-color;
-    border: none;
-    border-radius: 5px;
-
-    &:hover {
-      background-color: $white-color;
-      border: 1px solid $blue-color;
-    }
   }
 }
+
+  .buy:hover .buy__link {
+    color: $blue-color;
+}
+
