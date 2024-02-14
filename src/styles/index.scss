@@ -1,3 +1,138 @@
+html {
+  --blue-color: #00acdc;
+  --text-main-color: #060b35;
+  --text-secondary-color: #616070;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.product_card[data-qa="card"] {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  display: block;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.product_photo {
+  display: block;
+  margin: 0 auto 40px;
+  width: 160px;
+  height: 134px;
+}
+
+.product_name {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  font-style: normal;
+  color: var(--text-main-color);
+}
+
+.product_code {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--text-secondary-color);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url('../images/star.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars .stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url('../images/star-active.svg');
+}
+
+.reviews {
+  display: block;
+  font-size: 10px;
+  text-align: right;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--text-main-color);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price_name {
+  display: block;
+  color: var(--text-secondary-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.price_number {
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--text-main-color);
+}
+
+.button_buy {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--blue-color);
+  height: 40px;
+  line-height: 16px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  display: flex;
+}
+
+.button_buy:hover {
+  background-color: white;
+  color: var(--blue-color);
 }
