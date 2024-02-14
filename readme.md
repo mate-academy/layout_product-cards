@@ -11,36 +11,33 @@ ___
 
 ## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
-## The task
+Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev).
 
-> ❗️❗️❗️ In order to use SCSS delete the `style.css` file and change the `<link>` in the `index.html` to:
-```html
-<link rel="stylesheet" href="./styles/index.scss">
-```
-
-Create a pages with product card using `flexbox` basing on [the mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287).
+> Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
 ### Requirements:
+
 - reset browser's default margins
 - card width is `200px` including border
 - use images from [src/images](src/images)
 - change link styles on `:hover`
-- follow styles from the mock
 - add `data-qa="card"` attribute to the card block
-- add `data-qa="hover"` attribute to the link
+- add `data-qa="hover"` attribute to the link `BUY`
+- `background-image: url()` should be relative to the `index.scss`. So should start with `../images`.
+- Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
+- Find the required font on [google fonts](https://fonts.google.com/) and use.
 
---> [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md)
+## Checklist
 
-### Tips & Hints
-- Add **ALL** `data-qa` attributes required in the task
-- If you use SCSS, check `background-image: url()` to be relative to the `main.scss`. So should start with `../images`.
-- Reuse `stars` block from [Stars task](https://github.com/mate-academy/layout_stars)
-and keep it operational. If you change `stars--4` modifier to `stars--2` or
-other - number of selected stars should change correctly.
-- There should be only 2 BEM blocks in your code `card` and `stars` all the others are just card elements
-- Item with the text `Buy` should be a link.
-- Check font styles on the mockup. Use [google fonts](https://fonts.google.com/)
+❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
----
-![screenshot](./references/card-example.png)
+- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
 
+❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
+
+- [ ] there 2 BEM blocks `card` and `stars` each in it own file
+- [ ] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
+- [ ] SCSS Variables are used for main values and placed in a **separate file**
+- [ ] all `stars--N` modifiers work as expected (Highlight first `N` stars)
+- [ ] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
