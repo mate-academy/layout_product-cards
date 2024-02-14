@@ -1,4 +1,15 @@
 # Product cards
+Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+- [DEMO LINK](https://viktoriyaRi.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://viktoriyaRi.github.io/layout_product-cards/report/html_report/)
+
+> Follow [this instruction](https://mate-academy.github.io/layout_task-guideline)
+___
+
+> Disable `Multiplayer Cursors` in figma to hide other cursors ([Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors))
+___
+
+## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_product-cards/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
 Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev).
 
