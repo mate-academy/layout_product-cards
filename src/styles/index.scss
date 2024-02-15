@@ -1,3 +1,151 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+.product {
+  display: block;
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px;
+  border: 1px solid white;
+}
+
+.product-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 32px 16px 16px;
+}
+
+/* #region imgage */
+
+img {
+  display: block;
+  width: 160px;
+  height: 134px;
+}
+
+/* #endregion */
+
+/* #region text content */
+
+.product-cart-content {
+  margin-top: 40px;
+}
+
+.product-cart-content-name {
+  margin-bottom: 4px;
+  color: rgb(6, 11, 53);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.product-cart-code {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgb(97, 96, 112);
+  line-height: 14px;
+}
+
+/* #endregion */
+
+/* #region rating */
+
+.product-cart-rating {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(5) {
+    margin-right: 0;
+  }
+
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.product-cart-rating-reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: right;
+  color: #060B35;
+}
+
+/* #endregion */
+
+/* #region price */
+
+.product-cart-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-cart-price-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(97, 96, 112);
+}
+
+.product-cart-price-current {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #060B35;
+}
+
+/* #endregion */
+
+/* #region botton */
+
+button {
+  width: 166px;
+  height: 40px;
+  border: 1px solid rgb(0, 172, 220);
+  border-radius: 5px;
+  background-color: rgb(0, 172, 220);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 16px;
+  text-align: center;
+  padding: 0;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(0, 172, 220);
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid rgb(0, 172, 220);
+}
+
+/* #endregion */
