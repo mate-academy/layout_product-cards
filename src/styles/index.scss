@@ -1,3 +1,120 @@
+@import "./utils/variables\ ";
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 198px;
+  height: 406px;
+  background-color: $color-white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  margin: 20px 48px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding: 32px 19px;
+
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 4px 16px;
+    color: $color-dark;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    padding-left: 16px;
+    color: #616070;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__stars {
+    display: flex;
+    padding: 16px;
+  }
+
+  &__star {
+    background-image: url('../images/star.svg');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:last-of-type) {
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    padding-right: 16px;
+    padding-top: 1px;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  &__card {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-grey;
+  }
+
+  &__numbers {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $color-dark;
+  }
+}
+
+.button {
+  border: 0;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: $color-blue;
+  margin: 16px;
+  text-transform: uppercase;
+  color: $color-white;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+
+
+  &:hover {
+    color: $color-blue;
+    border: 1px solid $color-blue;
+    background-color: $color-white;
+  }
 }
