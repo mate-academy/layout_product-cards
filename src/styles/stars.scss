@@ -1,0 +1,40 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+  margin-top: 16px;
+
+  &-quality {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &-quality__star {
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &-quality--4 li:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &-quality__star:not(li:last-child) {
+    margin-right: 4px;
+  }
+
+  &__reviews {
+    padding-top: 2px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-text-color;
+  }
+}
