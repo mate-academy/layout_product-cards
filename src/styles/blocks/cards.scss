@@ -18,6 +18,7 @@
   &__content {
     @include content-padding-inline;
 
+    margin: 0;
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 12px;
@@ -31,11 +32,73 @@
     &-code {
       @include content-padding-inline;
 
+      margin: 0;
       margin-bottom: 16px;
       font-weight: 400;
       font-size: 10px;
       line-height: 14px;
       color: #616070;
+    }
+  }
+
+  &__reviews {
+    @include content-padding-inline;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &-value {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: #060b35;
+    }
+  }
+
+  &__stars {
+    display: flex;
+
+    &-star {
+      margin-right: 4px;
+      background-image: url("../images/star.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+    }
+
+    &-star:nth-child(-n + 4) {
+      background-image: url("../images/star-active.svg");
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    @include content-padding-inline;
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-value {
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060b35;
     }
   }
 
