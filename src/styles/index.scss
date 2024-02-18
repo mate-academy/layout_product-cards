@@ -40,20 +40,20 @@ body {
     padding-bottom: 17px;
   }
 
-  &__stars {
+  &__feedback {
     padding-bottom: 23px;
     display: flex;
     justify-content: space-between;
     align-items: end;
 
-    .card__starsList  {
+    .stars  {
       display: flex;
       list-style: none;
       margin: 0;
       margin-left: 16px;
       padding-left: 0;
 
-      .card__starsItem{
+      .stars__star{
         box-sizing: border-box;
         height: 16px;
         width: 16px;
@@ -65,12 +65,12 @@ body {
         &:last-child {
           margin-right: 0;
         }
-
-        &:nth-child(-n + 4) {
-          background-image: url(../images/star-active.svg);
-          background-repeat: no-repeat;
-        }
       }
+    }
+
+    .stars--4 li:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
     }
 
     .card__reviews {
