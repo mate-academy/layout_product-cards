@@ -1,36 +1,30 @@
 .card {
-  box-sizing: border-box;
   max-width: 200px;
   width: 100%;
   padding: 32px 16px 16px;
   border: 1px solid #F3F3F3;
 
   &__img {
+    display: block;
     max-width: 160px;
     height: 134px;
+    object-fit: cover;
+    object-position: center;
     margin: 0 auto 40px;
-
-    img {
-      display: block;
-      object-fit: cover;
-      object-position: center;
-      width: 100%;
-      height: 100%;
-    }
   }
 
   &__title {
-    font-size: inherit;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    margin-bottom: 4px;
+    margin: 0 0 4px;
   }
 
   &__product-code {
     font-size: 10px;
     line-height: 14px;
     color: $secondary;
-    margin-bottom: 16px;
+    margin: 0 0 16px;
   }
 
   &__rate {
@@ -38,6 +32,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
+  }
+
+  &__stars {
+    margin: 0;
+    padding: 0;
   }
 
   &__reviews {
@@ -63,7 +62,6 @@
   }
 
   &__link {
-    box-sizing: border-box;
     display: block;
 
     font-size: 14px;
@@ -79,7 +77,9 @@
     background: $blue-accent;
     border: 1px solid $blue-accent;
 
-    transition: all .3s ease;
+    transition:
+      background-color .3s ease,
+      color .3s ease;
 
     &:hover {
       color: $blue-accent;
