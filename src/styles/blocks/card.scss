@@ -1,0 +1,75 @@
+@use '../utils/variables' as *;
+
+.card {
+  width: $card-size;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFF;
+
+  &__image {
+    margin-top: 16px;
+    width: $product-image-width;
+    height: $product-image-height;
+    background-position: center center;
+    background-image: url('../images/imac.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__product-name {
+    width: 100%;
+    margin: 0;
+    margin-top: 40px;
+    line-height: 18px;
+    align-self: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: $midnight-blue-color;
+    font-style: normal;
+  }
+
+  &__code {
+    margin: 4px 0 0;
+    align-self: flex-start;
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $comet-color;
+  }
+
+  &__reviews {
+    margin: 16px 0 0;
+  }
+
+  &__price {
+    margin: 24px 0 0;
+  }
+
+  &__buy-link {
+    margin: 16px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background-color: $cyan-blue-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid $cyan-blue-color;
+
+    &:hover {
+      background-color: #FFF;
+      color: $cyan-blue-color;
+    }
+  }
+}

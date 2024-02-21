@@ -1,3 +1,49 @@
+@use './blocks/card.scss';
+@use './blocks/stars.scss';
+@use './utils/variables' as *;
+
+// I only used two BEM/SASS blocks as requested in the readme.md file
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.reviews {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__number {
+    margin: 0;
+    display: flex;
+    align-self: flex-end;
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $midnight-blue-color;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+    color: #616070;
+    margin: 0;
+  }
+
+  &__amount {
+    color: $midnight-blue-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+  }
 }
