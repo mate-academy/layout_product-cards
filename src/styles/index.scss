@@ -1,3 +1,131 @@
-body {
+$main-accent: rgba(6, 11, 53, 1);
+$secondary: rgba(97, 96, 112, 1);
+$blue-accent: rgba(0, 172, 220, 1);
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.product-card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  &__img {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    width: 160px; 
+    height: 134px; 
+    background-position: center;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 40px 0 4px;
+  }
+  
+  &__text {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 16px;
+    width: 166px;
+    height: 18px;
+  }
+
+  &__price-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 1);
+    background-color: $blue-accent;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 166px;
+    height: 40px;
+  }
+  
+  &__button--hover:hover {
+    background-color: white;
+    color: $blue-accent;
+    border: 1px solid $blue-accent;
+    cursor: pointer;
+  }
+  
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 16px;
+  margin-top: 16px;
+
+  &__stars {
+    display: flex;
+    align-items: center;
+  }
+
+  &__star-item {
+    background-repeat: no-repeat;
+    background-image: url(/src/images/star.svg);
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star-item:nth-child(-n + 4) {
+    background-image: url(/src/images/star-active.svg);
+  }
+
+  &__amount{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-accent;
+    height: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
