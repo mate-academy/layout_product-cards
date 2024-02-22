@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+
+  &-text {
+    font-size: 10px;
+    line-height: 14px;
+    color: $main-text-color;
+    display: flex;
+    align-items: center;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-position: center;
+    margin-right: 4px;
+
+
+    .stars--4 &:nth-child(-n + 1),
+    .stars--4 &:nth-child(-n + 2),
+    .stars--4 &:nth-child(-n + 3),
+    .stars--4 &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
