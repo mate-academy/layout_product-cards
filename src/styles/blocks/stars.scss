@@ -1,0 +1,25 @@
+.stars {
+  &__star {
+    @include star-image();
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__review {
+    @include font-style($title-color, 400, 10px, 14px);
+    margin-left: 17px;
+  }
+
+  @for $star from 1 through 4 {
+    .stars:nth-child(-n + #{$star}) {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--5 {
+    @include star-image();
+  }
+}
