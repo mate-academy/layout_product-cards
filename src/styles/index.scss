@@ -1,3 +1,69 @@
-body {
+@import './utils/variables';
+@import './utils/mixins';
+@import './blocks/card';
+@import './blocks/stars';
+
+html {
+  font-family: Roboto, serif;
+}
+
+* {
   margin: 0;
 }
+
+body {
+  box-sizing:border-box;
+  width: 200px;
+  height: 408px;
+}
+
+.page {
+  &__stars {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 16px 16px 0;
+  }
+
+  &__button {
+    padding: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px 0;
+  }
+}
+
+.price {
+  &__title {
+    @include font-style($product-code-color, 400, 12px, 18px);
+  }
+
+  &__number {
+    @include font-style($title-color, 700, 16px, 18px);
+  }
+}
+
+.button {
+  &__buy {
+    background-color: $button-color;
+    border-radius: 5px;
+    border: none;
+    width:166px;
+    height: 40px;
+    text-transform: uppercase;
+
+    @include font-style($text-color, 700, 14px, 16px);
+
+    &:hover {
+      background-color: $text-color;
+      color: $button-color;
+      border: 1px solid $button-color;
+      cursor: pointer;
+    }
+  }
+}
+
+
