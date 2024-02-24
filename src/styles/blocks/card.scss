@@ -1,6 +1,5 @@
 .card {
   width: 200px;
-  height: 408px;
   padding: 32px 16px 16px;
   box-sizing: border-box;
 
@@ -8,8 +7,81 @@
   border-radius: 5px;
 
   &__logo {
-    display: flex;
-    justify-content: center;
+    height: 134px;
+    width: 160px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 40px;
+  }
+
+  &__info {
+    &_title {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: rgba(6, 11, 53, 1);
+      margin-bottom: 4px;
+    }
+
+    &_product-code {
+      font-size: 10px;
+      line-height: 14px;
+      color: rgba(97, 96, 112, 1);
+      margin-bottom: 16px;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    &_text {
+      font-size: 10px;
+      line-height: 14px;
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+
+  &__cost {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &_title {
+      font-size: 12px;
+      line-height: 18px;
+      color: rgba(97, 96, 112, 1);
+    }
+
+    &_sum {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+
+  &__buy-now {
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-style: none;
+    background-color: rgba(0, 172, 220, 1);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(0, 172, 220, 1);
+      border: 1px solid rgba(0, 172, 220, 1);
+      border-radius: 5px;
+      text-align: center;
+    }
   }
 }
