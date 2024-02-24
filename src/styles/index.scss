@@ -1,6 +1,6 @@
-$main-accent: #060b35;
-$secondary: #616070;
-$blue-accent: #00acdc;
+@import 'utils/variables';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+@import 'stars';
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,6 @@ $blue-accent: #00acdc;
 
 html {
   font-family: Roboto, sans-serif;
-  font-weight: 400;
   font-size: 10px;
 }
 
@@ -69,6 +68,23 @@ html {
     color: $main-accent;
   }
 
+  &__grade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16px;
+    margin-top: 16px;
+  }
+
+  &__reviews {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-accent;
+    height: 13px;
+  }
+
   &__button {
     display: flex;
     font-family: Roboto, sans-serif;
@@ -91,44 +107,10 @@ html {
     height: 40px;
   }
 
-  &__button--hover:hover {
+  &__button:hover {
     background-color: #fff;
     color: $blue-accent;
     border: 1px solid $blue-accent;
     cursor: pointer;
-  }
-}
-
-.reviews {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 16px;
-  margin-top: 16px;
-
-  &__stars {
-    display: flex;
-    align-items: center;
-  }
-
-  &__star-item {
-    background-repeat: no-repeat;
-    background-image: url(../images/star.svg);
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-  }
-
-  &__star-item:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
-
-  &__amount {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    color: $main-accent;
-    height: 13px;
   }
 }
