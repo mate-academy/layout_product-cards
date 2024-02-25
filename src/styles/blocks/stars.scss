@@ -1,27 +1,30 @@
 .stars {
-  &__star {
-    @include star-image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-  }
+.stars__star  {
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-bottom: 24px;
+}
 
-  &__review {
-    @include font-style($title-color, 400, 10px, 14px);
+.stars__review {
+  @include font-style($title-color, 400, 10px, 14px);
 
-    margin-left: 17px;
-  }
+  margin-left: 17px;
+  margin-bottom: 24px;
+}
 
-  @for $star from 1 through 4 {
-    .stars:nth-child(-n + #{$star}) {
-      background-image: url(../images/star-active.svg);
-      background-repeat: no-repeat;
-    }
-  }
-
-  &--5 {
-    @include star-image;
-  }
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
 }
