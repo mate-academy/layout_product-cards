@@ -1,0 +1,110 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.product-card {
+  width: 198px;
+  height: 406px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  background: $main-background-color;
+  margin: 1px;
+}
+
+.photo {
+  display: flex;
+  width: 160px;
+  height: 134px;
+  background-image: url(../images/imac.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 32px 19px 0;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.description {
+  &__name {
+    width: 166px;
+    height: 36px;
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 12px;
+    color: $main-text-color;
+    margin-top: 40px;
+    margin-bottom: 4px;
+    text-align: left;
+
+    @include content-margin;
+}
+  &__product-code {
+    width: 98px;
+    height: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 10px;
+    color: $small-text-color;
+    margin-left: 16px;
+    margin-right: 84px;
+    margin-bottom: 16px;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 16px;
+
+  @include content-margin;
+
+  &__text {
+    width: 31px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $small-text-color;
+}
+
+  &__numbers {
+    width: 50px;
+    height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $main-text-color;
+    text-align: right;
+  }
+}
+
+.button {
+  display: flex;
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: $button-background-color;
+  background-color: $button-background-color;
+  margin-bottom: 16px;
+  color: $main-background-color;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include content-margin;
+
+    &:hover {
+    border-color: $button-background-color;
+    background-color: $main-background-color;
+    color: $button-background-color;
+  }
+}
+
