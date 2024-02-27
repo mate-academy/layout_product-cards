@@ -1,3 +1,136 @@
+html {
+  font-family: Roboto, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bgc: #fff;
+  --text-color: #616070;
+  --btn-color: #00ACDC;
+  --btn-color-hover: #fff;
+  --main-color: #060B35;
+}
+
+.card {
+  width: 200px;
+  background-color: var(--bgc);
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 5px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 16px 16px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+    color: var(--main-color);
+  }
+
+  &__product-code {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__reviews {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: var(--main-color);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    &-text {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-color);
+    }
+
+    &-number {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--main-color);
+    }
+  }
+
+.stars__star {
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+
+  &:nth-child(n+5) {
+    background-image: url(../images/star.svg);
+  }
+}
+
+.button {
+  padding: 0;
+  border: none;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--btn-color);
+  color: var(--bgc);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  font-family: Roboto, serif;
+  margin-top: 16px;
+
+  &:hover {
+    color: var(--btn-color);
+    background-color: var(--btn-color-hover);
+    border: 1px solid var(--btn-color);
+    }
+  }
 }
