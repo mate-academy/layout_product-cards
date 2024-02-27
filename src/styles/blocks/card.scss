@@ -3,8 +3,8 @@ html {
 }
 
 .product-card {
-  width: 198px;
-  height: 406px;
+  box-sizing: border-box;
+  width: 200px;
   border: 1px solid #F3F3F3;
   border-radius: 5px;
   background: $main-background-color;
@@ -15,31 +15,21 @@ html {
   display: flex;
   width: 160px;
   height: 134px;
-  background-image: url(../images/imac.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 32px 19px 0;
-  background-position: center;
-  flex-shrink: 0;
 }
 
-.description {
-  &__name {
+.name {
     width: 166px;
     height: 36px;
     font-weight: 500;
     line-height: 18px;
     font-size: 12px;
     color: $main-text-color;
-    margin-top: 40px;
-    margin-bottom: 4px;
+    margin: 40px 16px 4px;
     text-align: left;
-
-    @include content-margin;
 }
 
-  &__product-code {
-    width: 98px;
+.product-code {
     height: 14px;
     font-weight: 400;
     line-height: 14px;
@@ -47,13 +37,12 @@ html {
     color: $small-text-color;
     margin: 0 84px 16px 16px;
   }
-}
+
 
 .price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
-  width: 166px;
   height: 18px;
 
   @include content-margin;
@@ -82,7 +71,6 @@ html {
   display: flex;
   box-sizing: border-box;
   width: 166px;
-  height: 40px;
   border-radius: 5px;
   border: 1px solid;
   border-color: $button-background-color;
@@ -117,7 +105,6 @@ html {
 
   &__reviews {
     display: flex;
-    width: 53px;
     height: 16px;
     padding: 0;
     margin: 0;
