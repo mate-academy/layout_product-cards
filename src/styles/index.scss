@@ -1,3 +1,117 @@
+$color-primary: #060b35;
+$color-secondary: #616070;
+$btn-color: #00acdc;
+$width: 166px;
+
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: $width;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 15px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-top: 33px;
+    margin-left: 3px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+    color: $color-primary;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    color: $color-secondary;
+    margin-top: 4px;
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    width: $width;
+
+    .reviews {
+      font-size: 10px;
+      font-weight: 400;
+      color: $color-primary;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: space-between;
+      width: 96px;
+    }
+
+    .stars__star {
+      background-image: url('../images/star-active.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 16px;
+      width: 16px;
+    }
+
+    .stars__star:nth-child(5) {
+      background-image: url('../images/star.svg');
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    width: $width;
+
+    .price__p {
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-secondary;
+    }
+
+    .price__value {
+      font-size: 16px;
+      font-weight: 700;
+      color: $color-primary;
+    }
+  }
+
+  &__btn {
+    width: $width;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $btn-color;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__btn:hover {
+    border: 1px solid $btn-color;
+    background-color: #fff;
+    color: $btn-color;
+  }
 }
