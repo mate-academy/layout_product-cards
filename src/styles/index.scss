@@ -1,3 +1,146 @@
+$color-main-accent: #060B35;
+$color-secondary: #616070;
+$color-blue-accent: #00ACDC;
+$color-white: #FFF; 
+
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: $color-main-accent;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid $color-white;
+  background: $color-white;
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px; 
+  }
+  
+  &__title {
+    width: 166px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 16px 4px;
+    color: $color-main-accent; 
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0 68px 16px 16px;
+    color: $color-secondary; 
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    height: 16px;
+    margin: 0 16px 24px;
+  }
+
+  &__review-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96px;
+    height: 16px;
+  }
+
+  &__review-star {
+    width: 13px;
+    height: 12px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  &__review-left :nth-of-type(-n+4) {
+    background-image: url(../images/star-active.svg); 
+  }
+
+  &__review-right {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 53px;
+    height: 16px;
+    color: $color-main-accent;
+    text-align: right; 
+  }
+
+  &__price {
+    display: flex;
+    width: 166px;
+    height: 18px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px 16px;
+  }
+
+  &__price-title {
+    color: $color-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px; 
+  }
+
+  &__price-number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-main-accent;
+    text-align: right; 
+  }
+
+  &__button {
+    margin: 0 16px 16px;
+  }
+
+  &__button-buy {
+      display: flex;
+      width: 166px;
+      height: 40px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      border: 1px hidden $color-blue-accent;
+      background-color: $color-blue-accent;
+      color: $color-white;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      
+  }
+
+  &__button-buy:hover {
+    border: 1px solid $color-blue-accent;
+    background-color: $color-white; 
+    color: $color-blue-accent; 
+    border-radius: 5px;
+  }
 }
