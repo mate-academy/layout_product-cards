@@ -10,6 +10,7 @@ $black: #060B35;
 
 body {
   margin: 0;
+  font-family: $font;
 }
 
 * {
@@ -23,17 +24,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../images/imac.jpeg);
-  background-size: 160px 134px;
-  background-repeat: no-repeat;
-  background-position: center 32px;
+  background: url(../images/imac.jpeg) center 32px / 160px 134px no-repeat;
   border: 1px solid $arctic-white;
   border-radius: 5px;
 
   &__label {
     margin-top: 206px;
     width: 166px;
-    font-family: $font;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
@@ -42,8 +39,6 @@ body {
 
   &__code {
     width: 166px;
-    font-family: $font;
-    font-weight: 400;
     font-size: 10px;
     color: $gray;
     line-height: 14px;
@@ -58,30 +53,7 @@ body {
     justify-content: space-between;
     margin-top: 16px;
 
-    &-stars {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    &-star {
-      height: 16px;
-      width: 16px;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url(../images/star.svg);
-    }
-
-    &-star:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
-
     &-reviews {
-      font-family: $font;
       font-size: 10px;
       color: $black;
     }
@@ -97,14 +69,12 @@ body {
     margin-top: 24px;
 
     &-name {
-      font-family: $font;
       font-size: 12px;
       line-height: 18px;
       color: $gray;
     }
 
     &-number {
-      font-family: $font;
       font-size: 16px;
       font-weight: bold;
       line-height: 18px;
@@ -126,7 +96,6 @@ body {
     margin-top: 16px;
 
     &-link {
-      font-family: $font;
       font-size: 14px;
       line-height: 16px;
       font-weight: bold;
@@ -136,6 +105,29 @@ body {
     }
   }
 }
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/star.svg);
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
 
 .card:hover .card__button {
   background-color: $white;
