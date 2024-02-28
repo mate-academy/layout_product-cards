@@ -9,6 +9,7 @@
     height: 134px;
     margin-bottom: 36px;
     padding: 0 3px;
+    box-sizing: content-box;
   }
 
   &__title {
@@ -22,6 +23,31 @@
     color: $main-text-color;
     margin: 0;
     padding: 0;
+  }
+
+  &__button {
+    display: block;
+    outline: none;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $text-font;
+    font-size: 14px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $secondary-button-color;
+    padding: 0;
+
+    &:hover {
+      background-color: $secondary-button-color;
+      color: $button-color;
+    }
   }
 
   &__rating {
@@ -42,28 +68,6 @@
     color: $main-text-color;
     text-align: right;
     margin: 0;
-  }
-
-  &__button {
-    display: inline-block;
-    outline: none;
-    background-color: $button-color;
-    border: 1px solid $button-color;
-    border-radius: 5px;
-    width: 166px;
-    height: 40px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: $text-font;
-    padding: 0;
-    margin-bottom: 16px;
-    font-weight: 700;
-    color: #fff;
-
-    &:hover {
-      background-color: #fff;
-      color: $button-color;
-    }
   }
 
   &__product-text {
