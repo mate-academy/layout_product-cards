@@ -1,7 +1,6 @@
 .stars {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .stars__star  {
@@ -10,15 +9,16 @@
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  margin-right: 4px;
   margin-bottom: 24px;
+}
+
+.stars__star:nth-child(-n + 4) {
+  margin-right: 4px;
 }
 
 .stars__review {
   @include font-style($title-color, 400, 10px, 14px);
 
-  margin-left: 17px;
-  margin-bottom: 24px;
 }
 
 .stars--1 .stars__star:nth-child(-n + 1),
