@@ -1,52 +1,63 @@
 .stars {
   display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+  justify-content: space-between;
 
-  &-review {
-    margin-bottom: 24px;
+  &__review {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    &-star {
+      box-sizing: border-box;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    &--stars--5 .stars__review-star {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--stars--1 .stars__review-star:nth-child(-n+1) {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--stars--2 .stars__review-star:nth-child(-n+2) {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--stars--3 .stars__review-star:nth-child(-n+3) {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--stars--4 .stars__review-star:nth-child(-n+4) {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+
+
   }
 
-  &__star {
-    box-sizing: border-box;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+  &__text-review {
+    margin: 0;
+    color: $main-color;
+    font-size: 10px;
+    line-height: 14px;
   }
 
-  &--5 .stars__star {
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--1 .stars__star:nth-child(-n+1) {
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--2 .stars__star:nth-child(-n+2) {
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--3 .stars__star:nth-child(-n+3) {
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--4 .stars__star:nth-child(-n+4) {
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 }
 
 
