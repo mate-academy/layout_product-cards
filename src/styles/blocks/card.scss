@@ -1,5 +1,4 @@
 .card {
-  box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
   border: 1px solid #F3F3F3;
@@ -8,10 +7,9 @@
   &__image {
     width:160px;
     height: 134px;
-    display: flex;
-    justify-content: center;
+    padding: 0 3px;
     margin-bottom: 40px;
-
+    object-fit: cover;
   }
 
   &__title {
@@ -30,5 +28,36 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+  }
+
+  &__button {
+    display: block;
+    width: 166px;
+    background-color: $button-color;
+    border-radius: 5px;
+    padding: 12px 0;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @include font-style($text-color, 700, 14px, 16px);
+
+    &-link {
+      text-decoration: none;
+      color: $text-color;
+      display: block;
+
+      &:hover {
+        color: $button-color;
+      }
+    }
+
+    &:hover {
+      color: $button-color;
+      background-color: $text-color;
+      border: 1px solid $button-color;
+      cursor: pointer;
+      padding: 11px 0;
+    }
   }
 }
