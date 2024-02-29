@@ -3,16 +3,19 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 33px 0 16px;
+  padding: 33px 16px 16px;
 
   &__product-image {
     margin-bottom: 40px;
     width: 160px;
     height: 134px;
     margin-left: 0;
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
-    background-position: center;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__product-name {
@@ -26,9 +29,9 @@
 
   &__product-code {
     width: $contentWidth;
+    height: 14px;
     margin-bottom: 17px;
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
     letter-spacing: 0;
     color: $colorGray;
@@ -46,7 +49,6 @@
   &__num-of-reviews {
     width: 53px;
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
     letter-spacing: 0;
     text-align: right;
@@ -56,12 +58,12 @@
     display: flex;
     justify-content: space-between;
     width: $contentWidth;
+    height: 18px;
     margin-bottom: 16px;
   }
 
   &__price-title {
     font-size: 12px;
-    font-weight: 400;
     line-height: 18px;
     letter-spacing: 0;
     color: $colorGray;
