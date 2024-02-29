@@ -10,82 +10,35 @@ body {
   font-size: 12px;
 }
 
-ul {
-  margin: 0;
-  list-style-type: none;
-}
-
-.header {
+.div_stars{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-
-  --color-active-blue: #00acdc;
-}
-
-.logo-container {
-  display: flex;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-}
-
-.nav-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 60px;
-  font-size: 12px;
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-}
-
-.is-active,
-.nav-link:hover {
-  color: var(--color-active-blue);
-}
-
-.is-active::after {
-  content: "";
-  height: 4px;
   width: 100%;
-  border-radius: 8px;
-  background: var(--color-active-blue);
-  bottom: 0;
-  position: absolute;
-  left: 0;
-}
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 16px;
 
+  .stars {
+    display: flex;
 
-.stars {
-  display: flex;
-}
+    &:last-child{
+      margin-right: 0;
+    }
 
-.stars_star{
-  background-image: url(../images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-  width: 16px;
-  height: 16px;
-}
+    &.stars--4:nth-child(n + 5){
+      background-image: url(../images/star.svg);
+    }
 
-.stars :last-child{
-  margin-right: 0;
-}
-
-.stars--4 :nth-child(n + 5){
-  background-image: url(../images/star.svg);
+    .stars_star{
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 4px;
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .container{
@@ -123,14 +76,10 @@ ul {
   align-items: center;
 }
 
-.div_stars{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 400;
-  font-size: 10px;
-  margin-top: 16px;
+.btn_buy:hover{
+  background-color: white;
+  border: #00ACDC 1px solid;
+  color: #00ACDC;
 }
 
 .div_price{
@@ -139,10 +88,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
-}
-
-.div_stars p{
-  font-size: 10px;
 }
 
 .price{
@@ -173,34 +118,4 @@ ul {
   line-height: 14px;
   font-weight: 400;
 
-}
-
-.btn_buy:hover{
-  background-color: white;
-  border: #00ACDC 1px solid;
-  color: #00ACDC;
-}
-
-.blok1{
-  display: flex;
-}
-
-.blok2{
-  display: flex;
-}
-
-.mainConteiner{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  flex-direction: column;
-}
-
-.blok1 .container:first-child{
-  margin-left:0 !important;
-}
-
-.blok2 .container:first-child{
-  margin-left: 0 !important;
 }
