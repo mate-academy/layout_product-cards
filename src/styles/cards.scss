@@ -1,0 +1,72 @@
+.card {
+  &__img {
+    display: block;
+    margin: auto;
+    max-width: 160px;
+  }
+
+  &__title {
+    @include main-font-size;
+
+    font-weight: 500;
+    margin: 40px 0 4px;
+  }
+
+  &__subtitle {
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+    margin-bottom: 16px;
+  }
+
+  &__stars,
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    margin: 24px 0 16px;
+
+    &-sum {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    &-text {
+      color: $secondary-color;
+
+      @include main-font-size;
+    }
+  }
+
+  &__button {
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &--blue {
+      background-color: $blue-color;
+      border: 1px solid $blue-color;
+      padding: 16px 0;
+      transition:
+        background-color 0.3s,
+        color 0.3s;
+
+      &:hover {
+        color: $blue-color;
+        background-color: $white-color;
+      }
+    }
+  }
+}
