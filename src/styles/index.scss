@@ -1,37 +1,29 @@
-$color-main-accent: #060B35;
-$color-secondary: #616070;
-$color-blue-accent: #00ACDC;
-$color-white: #FFF; 
+@import './utils/variables';
 
+html {
+  font-family: Roboto, sans-serif;
+}
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   color: $color-main-accent;
 }
 
 .card {
   width: 200px;
-  height: 408px;
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid $color-white;
   background: $color-white;
   padding: 32px 16px 16px;
 
-  &__image-container {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 40px;
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 3px 40px;
   }
 
-  &__image {
-    width: 160px;
-    height: 134px; 
-  }
-  
   &__title {
     font-weight: 500;
     font-size: 12px;
@@ -41,7 +33,6 @@ body {
   }
 
   &__code {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $color-secondary; 
@@ -56,34 +47,14 @@ body {
     margin: 0 0 24px;
   }
 
-  &__review-left {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__review-star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center; 
-    margin-right: 4px;
-  }
-
-  &__review-left :nth-of-type(-n+4) {
-    background-image: url(../images/star-active.svg); 
-  }
+  @import './blocks/stars';
 
   &__review-right {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 53px;
-    height: 16px;
     color: $color-main-accent;
     text-align: right; 
   }
@@ -96,14 +67,13 @@ body {
     margin: 0 0 16px;
   }
 
-  &__price-title {
+  &-title {
     color: $color-secondary;
     font-size: 12px;
-    font-weight: 400;
     line-height: 18px; 
   }
 
-  &__price-number {
+  &-number {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
@@ -111,7 +81,7 @@ body {
     text-align: right; 
   }
 
-  &__button-buy {
+  &__button {
       display: flex;
       width: 100%;
       height: 40px;
@@ -128,12 +98,10 @@ body {
       align-items: center;  
   }
 
-  &__button-buy:hover {
+  &__button:hover {
     border: 1px solid $color-blue-accent;
     background-color: $color-white; 
     color: $color-blue-accent; 
     border-radius: 5px;
   }
 }
-
-
