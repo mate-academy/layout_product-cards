@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: $non-active-star;
+    width: $star-width;
+    height: $star-height;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin-left: $margin-between-stars;
+    display: block;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    .stars--1 &:nth-child(-n + 1),
+    .stars--2 &:nth-child(-n + 2),
+    .stars--3 &:nth-child(-n + 3),
+    .stars--4 &:nth-child(-n + 4),
+    .stars--5 &:nth-child(-n + 5) {
+      background-image: $active-star;
+    }
+  }
+}
