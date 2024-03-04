@@ -1,13 +1,10 @@
 $colorButtonBuy: #00acdc;
+$colorButtonBuyWhite: #fff;
+$colorText: #060b35;
+$colorTextGrey: #616070;
 
 body {
   margin: 0;
-}
-
-.content {
-  margin: 0 auto;
-  width: 700px;
-  padding-top: 30px;
 }
 
 .card {
@@ -27,16 +24,13 @@ body {
   }
 
   &__title {
-    p {
-      margin: 0;
-    }
-
+    margin: 0;
     width: 100%;
     font-weight: 500;
     font-style: normal;
     font-size: 12px;
     line-height: 18px;
-    color: #060b35;
+    color: $colorText;
     letter-spacing: 0;
     text-align: left;
 
@@ -50,7 +44,8 @@ body {
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 0;
-    color: #616070;
+    color: $colorTextGrey;
+    margin: 0;
 
     &--position {
       margin-top: 4px;
@@ -70,7 +65,7 @@ body {
       line-height: 14px;
       letter-spacing: 0;
       text-align: right;
-      color: #060b35;
+      color: $colorText;
     }
 
     &--position {
@@ -89,7 +84,7 @@ body {
       line-height: 18px;
       letter-spacing: 0;
       text-align: left;
-      color: #616070;
+      color: $colorTextGrey;
     }
 
     .amount {
@@ -98,7 +93,7 @@ body {
       line-height: 18px;
       letter-spacing: 0;
       text-align: right;
-      color: #060b35;
+      color: $colorText;
     }
   }
 
@@ -107,7 +102,7 @@ body {
     background-color: $colorButtonBuy;
     border-radius: 5px;
     text-transform: uppercase;
-    color: #fff;
+    color: $colorButtonBuyWhite;
     height: 40px;
     display: flex;
     align-items: center;
@@ -120,8 +115,8 @@ body {
     &:hover {
       box-sizing: border-box;
       border: 1px solid $colorButtonBuy;
-      background-color: #fff;
-      color: #00acdc;
+      background-color: $colorButtonBuyWhite;
+      color: $colorButtonBuy;
     }
 
     &--position {
@@ -147,6 +142,10 @@ body {
   }
 }
 
-.stars--4 :nth-child(-n + 4) {
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
   background-image: url('../images/star-active.svg');
 }
