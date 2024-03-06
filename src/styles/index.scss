@@ -1,3 +1,101 @@
+@import './style';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5;
+  padding-block: 32px 16px;
+
+  &__image {
+    align-self: center;
+    width: 160px;
+    height: 134px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/imac.jpeg);
+    margin-bottom: 40px;
+  }
+
+  &__product-name {
+    color: #060b35;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-inline: 16px;
+  }
+
+  &__product-code {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    font-size: 10px;
+    color: #616070;
+    margin-bottom: 16px;
+    margin-inline: 16px;
+  }
+
+  &__review {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 16px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    color: #060b35;
+  }
+
+  &__price {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px 16px;
+  }
+  &__price-title {
+    font-size: 12px;
+    color: #616070;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    color: #060b35;
+    font-weight: 500;
+  }
+
+  &__buy {
+    display: flex;
+    align-self: center;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 166px;
+    background-color: #00acdc;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid #00acdc;
+    border-radius: 5;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+    }
+  }
 }
