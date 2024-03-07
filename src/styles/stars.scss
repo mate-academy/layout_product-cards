@@ -8,13 +8,13 @@
     margin-right: 4px;
     background-repeat: no-repeat;
     background-position: center;
+    background-image: url(/src/images/star.svg);
 
-    &--active {
-      background-image: url(/src/images/star-active.svg);
-    }
+  }
+}
 
-    &--inactive {
-      background-image: url(/src/images/star.svg);
-    }
+@for $number from 0 through 5 {
+  .stars--#{$number} .stars__star:nth-child(-n + #{$number}) {
+    background-image: url(/src/images/star-active.svg);
   }
 }
