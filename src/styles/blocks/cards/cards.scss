@@ -1,28 +1,102 @@
 .card {
   box-sizing: border-box;
-  height: 400px;
   width: 200px;
+  border: 1px solid $grey-300;
+  border-radius: 5px;
 
   @include content-padding-inline;
 
   display: flex;
   flex-direction: column;
   align-content: center;
+
   &__section {
     display: flex;
     align-items: center;
-    &--1 {
+
+    &--img {
+      margin-left: 3px;
       width: 160px;
-      height: 130px;
+      height: 134px;
       background-image: url('../images/imac.jpeg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
 
-      @include large-bottom-margin;
+      margin-bottom: 40px;
     }
-    &--2 {
-      @include small-bottom-margin;
+
+    &--title {
+      margin-bottom: $base-margin;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &--product-code {
+      margin-bottom: 16px;
+      font-size: 10px;
+      color: $grey-500;
+    }
+
+    &--feedback {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      .stars {
+        transform: translateY(1px);
+      }
+
+      .reviews {
+        transform: translateY(2px);
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    &--price {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      .label {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      .value {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    &--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      box-sizing: border-box;
+      background-color: $blue-500;
+      border: 1px solid transparent;
+      border-radius: 5px;
+
+      .link {
+        color: $white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+      }
+
+      &:hover {
+        background-color: $white;
+        border: 1px solid $blue-500;
+      }
     }
   }
+}
+
+.card__section--button:hover > [data-qa='hover'] {
+  color: $blue-500;
+  text-decoration: none;
 }

@@ -1,5 +1,6 @@
 $padding-row: 16px;
-$padding-column: 16px;
+$padding-top: 32px;
+$padding-bottom: 16px;
 $base-margin: 4px;
 
 @mixin regular-font {
@@ -10,17 +11,5 @@ $base-margin: 4px;
 
 @mixin content-padding-inline {
   padding-inline: $padding-row;
-  padding-block: $padding-column * 2 $padding-column;
-}
-
-@mixin small-bottom-margin {
-  margin-bottom: $base-margin * 4;
-}
-
-@mixin medium-bottom-margin {
-  margin-bottom: $base-margin * 6;
-}
-
-@mixin large-bottom-margin {
-  margin-bottom: $base-margin * 10;
+  padding-block: $padding-top $padding-bottom;
 }
