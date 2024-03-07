@@ -1,0 +1,19 @@
+@for $i from 0 through 5 {
+  @if #{$i} == 0 {
+    .stars--#{$i} :nth-child(1n + 1) {
+      background-image: url('../images/star.svg');
+    }
+  } @else if #{$i} == 5 {
+    .stars--#{$i} :nth-child(1n + 1) {
+      background-image: url('../images/star-active.svg');
+    }
+  } @else {
+    .stars--#{$i} :nth-child(1n + #{$i + 1}) {
+      background-image: url('../images/star.svg');
+    }
+
+    .stars--#{$i} :nth-child(-n + #{$i}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
