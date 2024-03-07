@@ -2,7 +2,9 @@
   box-sizing: border-box;
   height: 400px;
   width: 200px;
-  @include contentPaddingInline;
+
+  @include content-padding-inline;
+
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -16,6 +18,11 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @include large-bottom-margin;
+    }
+    &--2 {
+      @include small-bottom-margin;
     }
   }
 }
