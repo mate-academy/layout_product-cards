@@ -1,3 +1,130 @@
+@import './mixins';
+
+$content-width: 166px;
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.cards {
+  border: 1px solid #f3f3f3;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+
+  &_product-image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+  }
+
+  &_title {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 40px;
+    width: $content-width;
+    line-height: 18px;
+    margin-bottom: 0;
+    color: #060b35;
+  }
+
+  &_product_code {
+    font-size: 10px;
+    font-weight: 400;
+    color: #616070;
+    text-align: left;
+    width: $content-width;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+}
+
+.cards_stars {
+  width: 100px;
+
+  @include flex-properties;
+
+  &-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: $content-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &-review-text {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+.cards_price {
+  width: $content-width;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+
+  @include flex-properties;
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: #616070;
+    margin: 0;
+  }
+
+  &-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #060b35;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+.cards_buy-button {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #00acdc;
+  border-radius: 5px;
+  width: $content-width;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+
+  &:hover {
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    background-color: #fff;
+  }
 }
