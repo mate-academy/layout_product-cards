@@ -1,3 +1,101 @@
+@import './style';
+@import './vars';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5;
+  padding: 32px 16px 16px;
+
+  &__image {
+    align-self: center;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__product-name {
+    line-height: 18px;
+    margin: 0;
+    color: $main-accent;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    margin: 0;
+    line-height: 14px;
+    font-size: 10px;
+    color: $secondary-accent;
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    height: 16px;
+    margin: 0;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    color: $main-accent;
+  }
+
+  &__price {
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-title {
+      font-size: 12px;
+      color: $secondary-accent;
+    }
+
+    &-value {
+      font-size: 16px;
+      color: $main-accent;
+      font-weight: 700;
+    }
+  }
+
+  &__buy {
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: $button-color;
+    color: #fff;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 5;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+      border: 1px solid $button-color;
+    }
+  }
 }
