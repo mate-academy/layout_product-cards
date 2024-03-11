@@ -1,0 +1,140 @@
+@import './variables';
+
+.container {
+  padding: 50px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 48px 48px;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  transition: all 0.3s ease-in-out;
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+  }
+
+  &__product {
+    &-name {
+      color: $main-accent;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: $big-line-height;
+      margin: 40px 16px 0;
+
+      &-title {
+        margin: 0 0 4px;
+      }
+
+      &:hover {
+        color: #34568b;
+      }
+    }
+
+    &-code {
+      color: $secondary-accent;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: $default-line-height;
+      margin: 0 16px;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 16px 16px 24px;
+
+    &-review {
+      display: flex;
+      color: $main-accent;
+      font-size: 10px;
+      font-weight: 400;
+
+      &-title {
+        margin: 0;
+      }
+    }
+  }
+
+  &-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px;
+
+    &--title {
+      color: $secondary-accent;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: $big-line-height;
+      margin: 0;
+
+      &-description {
+        margin: 0;
+      }
+    }
+
+    &--amount {
+      color: $main-accent;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      margin: 0;
+
+      &-description {
+        margin: 0;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 16px;
+    width: 164px;
+    height: 40px;
+
+    color: $white;
+    font-size: 14px;
+    line-height: $default-line-height;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $blue;
+    border-radius: 5px;
+
+    transition:
+      background-color 0.3s linear,
+      color 0.3s linear;
+    border: 1px solid $blue;
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}
+
+[data-qa='hover'] {
+  color: #f3f3f3;
+}
