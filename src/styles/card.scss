@@ -1,0 +1,109 @@
+.card {
+  display: $flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  border: 1px solid $card-border;
+  border-radius: $border-radius-5;
+
+  &__photo {
+    width: 160px;
+    height: 134px;
+    margin-left: 3px;
+    padding-bottom: 40px;
+  }
+
+  &__product {
+    margin: $margin-0;
+
+    line-height: $font-height-18;
+    font-size: $font-size-12;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  &__code {
+    margin: $margin-0;
+    padding-top: 4px;
+
+    line-height: $line-height-14;
+    font-size: $font-size-10;
+    color: $color2;
+  }
+
+  &__review {
+    display: $flex;
+    justify-content: $space-between;
+    align-items: $center;
+
+    margin-left: 2px;
+    height: 16px;
+    padding-top: 17px;
+
+    &-text {
+      margin: $margin-0;
+
+      line-height: $line-height-14;
+      font-size: $font-size-10;
+    }
+  }
+
+  &__price {
+    display: $flex;
+    justify-content: $space-between;
+
+    align-items: $center;
+    padding-top: 23px;
+    padding-bottom: 16px;
+
+    &-label {
+      margin: $margin-0;
+
+      line-height: $font-height-18;
+      font-size: $font-size-12;
+      color: $color2;
+    }
+
+    &-currency {
+      margin: $margin-0;
+
+      line-height: $font-height-18;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__buy {
+    display: $flex;
+    align-items: $center;
+    justify-content: center;
+
+    width: 166px;
+    height: 40px;
+    padding: 0;
+
+    border: none;
+    border-radius: $border-radius-5;
+    background-color: $button;
+
+    font-family: $text;
+    color: $button2;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 500ms ease;
+
+    &:hover {
+      border: 1px solid $button;
+
+      color: $button;
+      background-color: $button2;
+    }
+  }
+}
