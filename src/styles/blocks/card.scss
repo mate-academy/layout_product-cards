@@ -1,4 +1,4 @@
-.product-card {
+.card {
   @include border-set(1px solid $card-border-color, 5px);
 
   display: flex;
@@ -8,7 +8,7 @@
   width: 200px;
   padding: 32px 16px 16px;
 
-  &__img-wrapper {
+  &__img-link {
     @include width-height-set(160px, 134px);
 
     margin-bottom: 40px;
@@ -23,13 +23,11 @@
 
     color: $card-main-color;
     font-weight: 500;
-    margin: 0;
     margin-bottom: 4px;
   }
 
   &__descr {
     color: $card-secondary-color;
-    margin: 0;
     margin-bottom: 16px;
     align-self: flex-start;
   }
@@ -46,7 +44,7 @@
     color: $card-main-color;
   }
 
-  &__price-wrapper {
+  &__price-block {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -71,11 +69,9 @@
     @include border-set(1px solid $card-btn-border-color, 5px);
 
     width: 100%;
-    box-sizing: border-box;
     font-weight: 700;
     color: $card-btn-text-color;
     background-color: $card-btn-bg-color;
-    text-decoration: none;
     padding: 12px;
     text-align: center;
     text-transform: uppercase;
