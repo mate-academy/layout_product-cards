@@ -20,8 +20,7 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://
-lesia-grapeniuk.github.io/layout_product-cards/)
+- [DEMO LINK](https://lesia-grapeniuk.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://
 lesia-grapeniuk.github.io/layout_product-cards/report/html_report/)
 
