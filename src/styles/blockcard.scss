@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    box-sizing: border-box;
     width: 160px;
     height: 134px;
   }
@@ -41,45 +42,47 @@
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
-    align-items: center;
 
     &-stars {
       display: flex;
     }
-  }
 
-  &__review-text {
-    font-weight: 400;
-    font-size: 10px;
-    color: $main-accent;
-    margin: 0;
+    &-text {
+      font-weight: 400;
+      line-height: 14px;
+      align-self: center;
+      font-size: 10px;
+      color: $main-accent;
+      margin: 0;
+    }
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
-  }
 
-  &__price-text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary;
-    margin: 0;
-  }
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+      margin: 0;
+    }
 
-  &__price-number {
-    margin: 0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $main-accent;
+    &-number {
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-accent;
+    }
   }
 
   &__link {
     width: 166px;
     height: 40px;
+    box-sizing: border-box;
     border-radius: 5px;
     font-weight: 700;
     font-size: 14px;
@@ -94,13 +97,11 @@
     justify-content: center;
     margin: 0;
     margin-top: 16px;
-  }
-}
 
-.block:hover {
-  .block__link {
-    background-color: #fff;
-    color: #00acdc;
-    border: solid 1px #00acdc;
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: solid 1px #00acdc;
+    }
   }
 }
