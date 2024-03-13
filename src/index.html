@@ -1,3 +1,4 @@
+<!-- #region head -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,13 +7,74 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Product cards</title>
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
+  <!-- #endregion -->
   <body>
-    <h1>Product cards</h1>
+    <div class="container">
+      <section class="section">
+        <article
+          data-qa="card"
+          class="product-card"
+        >
+          <div class="product-card__img_flexed">
+            <img
+              class="product-card__img"
+              src="./images/imac.jpeg"
+              alt="Apple-Imac"
+            />
+          </div>
+
+          <div class="product-card__description">
+            <h2 class="product-card__title">
+              APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+            </h2>
+
+            <p class="product-card__code">Product code: 195434</p>
+
+            <div class="product-card__rate">
+              <div class="product-card__stars-flex">
+                <ul class="product-card__stars">
+                  <li class="product-card__star"></li>
+                  <li class="product-card__star"></li>
+                  <li class="product-card__star"></li>
+                  <li class="product-card__star"></li>
+                  <li class="product-card__star"></li>
+                </ul>
+                <div class="product-card__reviews">Reviews: 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card__price">
+            <p class="product-card__price-name">Price:</p>
+            <span class="product-card__price-coast">$2,199</span>
+          </div>
+
+          <a
+            data-qa="hover"
+            href="#"
+          >
+            <button class="product-card__button">Buy</button>
+          </a>
+        </article>
+      </section>
+    </div>
   </body>
 </html>
