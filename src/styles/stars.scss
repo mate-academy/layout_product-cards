@@ -1,0 +1,41 @@
+.stars {
+  width: 100px;
+
+  display: flex;
+
+  &-content {
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    margin: 16px auto 0;
+    display: flex;
+  }
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &-review-text {
+    font-size: 10px;
+    text-align: right;
+    margin: 0;
+  }
+
+  /* begin of cycle for background-images of stars */
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  /* end of cycle for background-images of stars */
+}
