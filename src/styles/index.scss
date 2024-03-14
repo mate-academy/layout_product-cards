@@ -1,77 +1,56 @@
-@import 'variables';
+@import './utils/normilize';
+@import './utils/colors';
+@import './blocks/container';
+@import './utils/reset';
 
-body,
-ul,
-h2,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  background-color: $containerbgc;
-}
+$starsCount: 5;
 
 .product-card {
   box-sizing: border-box;
-
-  width: $articlewidth;
+  width: 200px;
+  border: 1px solid $color__background_secondary;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid $borderarticelcolor;
 
   padding: 32px 16px 16px;
   border-radius: 5px;
-
-  background-color: $whitebgc;
-  color: $textcolor;
-
-  font-family: $font;
-  font-weight: $fontwbase;
-  font-size: $fontsizebase;
-  line-height: $linehightbase;
+  color: $color__font_primary;
+  background-color: $color__background_primay;
 
   &__img {
-    padding-bottom: $basehight;
-
-    &_flexed {
-      width: 160px;
-      height: 134px;
-
-      display: flex;
-    }
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
   }
 
   &__title {
-    padding-bottom: 4px;
+    margin-bottom: 4px;
 
     font-size: 12px;
     font-weight: 500;
   }
 
   &__code {
-    color: $descriptioncolor;
+    color: $color__font_secondary;
 
     font-size: 10px;
     line-height: 14px;
 
-    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__rate {
+    width: 100%;
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__stars {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 24px;
-
-    &_flex {
-      list-style: none;
-      display: flex;
-    }
   }
 
   &__star {
@@ -86,7 +65,7 @@ p {
       margin-right: 4px;
     }
 
-    @for $i from 1 through $startscount {
+    @for $i from 1 through $starsCount {
       @if $i <= 4 {
         &:nth-child(#{$i}) {
           background-image: url(/src/images/star-active.svg);
@@ -108,12 +87,12 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 16px;
-    width: $descriptionwidth;
+
+    margin-bottom: 16px;
 
     &_name {
       font-size: 12px;
-      color: $descriptioncolor;
+      color: $color__font_secondary;
     }
 
     &_cost {
@@ -123,24 +102,27 @@ p {
   }
 
   &__button {
-    border: 0;
+    box-sizing: border-box;
     border-radius: 5px;
+    border: 1px $color__buyButton_secondary solid;
     width: 166px;
-    height: $basehight;
+    height: 40px;
 
-    color: $whitebgc;
-    background-color: $blue;
-
+    color: $color__font_white;
+    background-color: $color__buyButton_secondary;
     cursor: pointer;
 
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 16px;
+    text-align: center;
+    line-height: 40px;
+
+    transition: 0.3s;
 
     &:hover {
-      color: $blue;
-      border: 1px $blue solid;
-      background-color: $whitebgc;
+      color: $color__buyButton_secondary;
+      border: 1px $color__buyButton_secondary solid;
+      background-color: $color__font_white;
     }
   }
 }
