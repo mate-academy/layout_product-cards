@@ -1,18 +1,20 @@
-
 /* import of the review stars block */
+
 @import './stars';
 
 /* import of the review stars block */
 
 /* start the variables of repeated colors */
+
 $button-blue: #00acdc;
 $color-dark-blue: #060b35;
 $color-dark-grey: #616070;
 $white-color: #fff;
 
-/*end the variables of repeated colors*/
+/* end the variables of repeated colors */
 
 /* #start of the main page styles */
+
 * {
   font-size: 14px;
   font-weight: 700;
@@ -31,9 +33,11 @@ p {
   margin: 0;
   font-weight: 400;
 }
+
 /* #end of the main page styles */
 
 /* #start of  top and middle the card styles */
+
 .cards {
   border: 1px solid #f3f3f3;
   padding: 32px 16px 16px;
@@ -41,13 +45,13 @@ p {
   width: 200px;
   display: flex;
 
-  &_product-image {
+  &__image {
     width: 160px;
     height: 134px;
     margin: 0 auto;
   }
 
-  &_title {
+  &__title {
     font-size: 12px;
     font-weight: 500;
     margin-top: 40px;
@@ -56,7 +60,7 @@ p {
     color: $color-dark-blue;
   }
 
-  &_product_code {
+  &__code {
     font-size: 10px;
     color: $color-dark-grey;
     width: 166px;
@@ -66,28 +70,47 @@ p {
 
 /* #end of  top and middle the card styles */
 
-/* #start of  bottom card styles */
+/* #start of reviews styles */
 
-.cards_price {
+.reviews {
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  margin: 16px auto 0;
+  display: flex;
+
+  &__text {
+    font-size: 10px;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+/* #end of reviews styles */
+
+.price {
   width: 166px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
 
   display: flex;
 
-  &-text {
+  &__text {
     font-size: 12px;
     color: $color-dark-grey;
     margin: 0;
   }
 
-  &-amount {
+  &__amount {
     font-size: 16px;
     font-weight: 700;
     color: $color-dark-blue;
     text-align: right;
     margin: 0;
+  }
+
+  &--margin {
+    margin-top: 24px;
   }
 }
 
@@ -95,14 +118,13 @@ p {
 
 /* #start of  button card styles */
 
-.cards_buy-button {
+.buy-button {
   text-transform: uppercase;
   text-align: center;
   color: $white-color;
   background: $button-blue;
   border-radius: 5px;
   width: 166px;
-  margin-top: 16px;
   height: 40px;
   line-height: 40px;
 
@@ -110,6 +132,10 @@ p {
     border: 1px solid $button-blue;
     color: $button-blue;
     background-color: $white-color;
+  }
+
+  &--margin {
+    margin-top: 16px;
   }
 }
 
