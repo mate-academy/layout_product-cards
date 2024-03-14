@@ -2,8 +2,7 @@
 @import './utils/colors';
 @import './blocks/container';
 @import './utils/reset';
-
-$starsCount: 5;
+@import './blocks/stars';
 
 .product-card {
   box-sizing: border-box;
@@ -46,32 +45,6 @@ $starsCount: 5;
     margin-bottom: 24px;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__stars {
-    list-style: none;
-    display: flex;
-  }
-
-  &__star {
-    width: 16px;
-    height: 16px;
-
-    background-image: url(/src/images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-
-    @for $i from 1 through $starsCount {
-      @if $i <= 4 {
-        &:nth-child(#{$i}) {
-          background-image: url(/src/images/star-active.svg);
-        }
-      }
-    }
   }
 
   &__reviews {
