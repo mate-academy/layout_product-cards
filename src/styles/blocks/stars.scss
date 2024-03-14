@@ -2,22 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.stars__star {
-  background-image: url(../images/star.svg);
-  height: 16px;
-  width: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-  list-style: none;
-}
+  &__star {
+    background-image: url(../images/star.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+    list-style: none;
+  }
 
-.stars--1 :nth-child(-n + 1),
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(-n + 5) {
-  background-image: url(../images/star-active.svg);
+  @for $index from 1 through 5 {
+    &--#{$index} &__star:nth-child(-n + #{$index}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
