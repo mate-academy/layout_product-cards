@@ -17,7 +17,7 @@
   }
 
   @for $i from 1 through $stars-count {
-    .stars--#{$i} &__star {
+    .stars--#{$i} :nth-child(-n + #{$i}) {
       background-image: url(../images/star-active.svg);
     }
   }
