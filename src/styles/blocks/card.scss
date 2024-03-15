@@ -1,4 +1,5 @@
 $element-width: 166px;
+$color-main: #00acdc;
 
 .card {
   padding: 32px 16px 16px;
@@ -6,15 +7,16 @@ $element-width: 166px;
   border: 1px solid #f3f3f3;
 
   &__image {
+    display: block;
     margin: 0 auto 40px;
     width: 160px;
     height: 134px;
-    display: block;
   }
 
-  &__product {
+  &__product-title {
     font-size: 12px;
     line-height: 18px;
+    font-weight: 500;
     color: #060b35;
   }
 
@@ -47,14 +49,14 @@ $element-width: 166px;
     margin-top: 24px;
   }
 
-  &__price_label {
+  &__price-label {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: #616070;
   }
 
-  &__price_value {
+  &__price-value {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
@@ -69,22 +71,21 @@ $element-width: 166px;
     height: 40px;
     width: 100%;
     margin-top: 16px;
-    padding: 0;
 
-    background-color: #00acdc;
+    background-color: $color-main;
     border-radius: 5px;
-    border: 1px solid #00acdc;
+    border: 1px solid $color-main;
 
     line-height: 16px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
 
     &:hover {
       background-color: #fff;
-      color: #00acdc;
-      border: 1px solid #00acdc;
+      color: $color-main;
+      border: 1px solid $color-main;
     }
   }
 }
