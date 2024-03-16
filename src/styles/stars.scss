@@ -1,0 +1,36 @@
+.range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+
+  &__reviews {
+    display: flex;
+    font-size: 10px;
+    line-height: 14px;
+    color: $titel-text-color;
+    align-items: flex-end;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+  }
+}
+
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
