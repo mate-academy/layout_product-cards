@@ -1,8 +1,145 @@
+/* import of the review stars block */
+
+@import './stars';
+
+/* import of the review stars block */
+
+/* start the variables of repeated colors */
+
+$button-blue: #00acdc;
+$color-dark-blue: #060b35;
+$color-dark-grey: #616070;
+$white-color: #fff;
+
+/* end the variables of repeated colors */
+
+/* #start of the main page styles */
+
+* {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+  font-weight: 400;
 }
 
-h1 {
-  color: red;
+h2,
+p {
+  margin: 0;
+  font-weight: 400;
 }
 
+/* #end of the main page styles */
+
+/* #start of  top and middle the card styles */
+
+.cards {
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
+  flex-direction: column;
+  width: 200px;
+  display: flex;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 40px;
+    width: 166px;
+    line-height: 18px;
+    color: $color-dark-blue;
+  }
+
+  &__code {
+    font-size: 10px;
+    color: $color-dark-grey;
+    width: 166px;
+    margin-top: 4px;
+  }
+}
+
+/* #end of  top and middle the card styles */
+
+/* #start of reviews styles */
+
+.reviews {
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  display: flex;
+
+  &__text {
+    font-size: 10px;
+    text-align: right;
+    margin: 0;
+  }
+
+  &--margin {
+    margin: 16px auto 0;
+  }
+}
+
+/* #end of reviews style */
+
+.price {
+  width: 166px;
+  justify-content: space-between;
+  align-items: center;
+
+  display: flex;
+
+  &__text {
+    font-size: 12px;
+    color: $color-dark-grey;
+    margin: 0;
+  }
+
+  &__amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-dark-blue;
+    text-align: right;
+    margin: 0;
+  }
+
+  &--margin {
+    margin-top: 24px;
+  }
+}
+
+/* #end of  bottom card styles */
+
+/* #start of  button card styles */
+
+.buy-button {
+  text-transform: uppercase;
+  text-align: center;
+  color: $white-color;
+  background: $button-blue;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  line-height: 40px;
+
+  &:hover {
+    border: 1px solid $button-blue;
+    color: $button-blue;
+    background-color: $white-color;
+  }
+
+  &--margin {
+    margin-top: 16px;
+  }
+}
+
+/* #end of  bottom card styles */
