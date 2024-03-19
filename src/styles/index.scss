@@ -1,3 +1,116 @@
+@import './utils/variables';
+
+:root {
+  font-family: Roboto, sans-serif;
+  color: $main-text-color;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $card-border-color;
+  padding: 16px;
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $secondary-text-color;
+    }
+
+    &-number {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__logo {
+    width: 160px;
+    height: 134px;
+    background: white url('../images/imac.jpeg') no-repeat center / 100% 100%;
+    margin: 16px 3px 40px;
+  }
+
+  &__name {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+  }
+
+  &__code {
+    font-size: 10px;
+    margin-top: 4px;
+    line-height: 14px;
+    color: $secondary-text-color;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    &-text {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    align-items: center;
+    margin-top: 16px;
+
+    &-buy {
+      background-color: $btn-color;
+      width: 166px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $btn-color;
+      color: $bg-color;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+
+      &:hover {
+        background-color: $bg-color;
+        color: $btn-color;
+      }
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
 }
