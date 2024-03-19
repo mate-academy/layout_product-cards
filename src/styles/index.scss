@@ -1,3 +1,145 @@
 body {
   margin: 0;
 }
+
+.product-card {
+  width: 200px;
+  height: auto;
+
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+
+  &__img-link {
+    display: block;
+    background: url(../images/imac.jpeg);
+    background-size: 100%;
+    margin: 0 auto;
+
+    width: 160px;
+    height: 134px;
+  }
+
+  &__text-link {
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #060b35;
+    text-decoration: none;
+
+    margin: 40px 0 4px;
+  }
+
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #616070;
+
+    margin: 0;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 24px;
+  }
+
+  &__reviews {
+    margin: 0;
+
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+    color: #060b35;
+  }
+
+  &__price-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item--price {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #616070;
+
+    margin: 0;
+  }
+
+  &__item--number {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+    color: #060b35;
+
+    margin: 0;
+  }
+}
+
+.btn {
+  margin-top: 16px;
+  padding: 12px 70px;
+  box-sizing: border-box;
+
+  background-color: #00acdc;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+
+  &__link {
+    font-family: Roboto, sans-serif;
+    line-height: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
+    display: block;
+    width: 27px;
+    height: 16px;
+  }
+
+  &:hover {
+    background: none;
+    border: 1px solid #00acdc;
+
+    .btn__link {
+      color: #00acdc;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
