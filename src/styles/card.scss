@@ -1,0 +1,89 @@
+.page {
+  width: 200;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-size: 100% 100%;
+    align-self: center;
+  }
+
+  &__conainer {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    margin-top: 40px;
+    margin-bottom: 4px;
+    font-size: $main-font-size;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__product-code {
+    color: rgba(97, 96, 112, 1);
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    height: 16px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    &_text {
+      margin: 0;
+      color: rgba(97, 96, 112, 1);
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &_price {
+      margin: 0;
+      color: $main-color;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    height: 40px;
+    background-color: rgba(0, 172, 220, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid rgba(0, 172, 220, 1);
+      color: rgba(0, 172, 220, 1);
+    }
+  }
+}
