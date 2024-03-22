@@ -13,7 +13,6 @@ body {
 
   .card {
     width: 200px;
-    height: 406px;
     border: 1px solid #f3f3f3;
     border-radius: 5px;
     padding: 32px 16px 16px;
@@ -41,7 +40,6 @@ body {
     }
 
     .card__product-code {
-      height: 14px;
       font-weight: 400;
       font-size: 10px;
       line-height: 14px;
@@ -52,9 +50,12 @@ body {
     .card__review {
       display: flex;
       justify-content: space-between;
-      width: 166px;
-      height: 16px;
 
+      .stars {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+      }
       .stars__star {
         width: 16px;
         height: 16px;
@@ -63,12 +64,8 @@ body {
         background-position: center;
       }
 
-      .stars__star-inactive {
-        width: 16px;
-        height: 16px;
+      .stars__star:last-child {
         background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       .card__review-reviews {
