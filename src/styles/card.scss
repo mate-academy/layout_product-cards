@@ -1,88 +1,101 @@
 .card {
-  box-sizing: border-box;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  padding: 32px 16px 16px;
+  height: 408px;
 
-  &__image {
-    width: 160px;
-    height: 134px;
-    background-size: 100% 100%;
-    align-self: center;
+  &__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 16px 16px;
   }
 
   &__conainer {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    margin-top: 40px;
+  }
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
   }
 
   &__description {
-    font-family: inherit;
-    margin-top: 40px;
+    margin: 0;
     margin-bottom: 4px;
-    font-size: $main-font-size;
-    font-size: 12px;
-    line-height: 18px;
     font-weight: 500;
+    line-height: 18px;
+    text-decoration: none;
   }
 
   &__product-code {
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 16px;
     color: rgba(97, 96, 112, 1);
     font-size: 10px;
     line-height: 14px;
-    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(6, 11, 53, 1);
+    margin: 0;
+    font-weight: 400;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    height: 16px;
-    margin-top: 24px;
+    align-items: center;
     margin-bottom: 16px;
 
     &_text {
+      margin: 0;
       color: rgba(97, 96, 112, 1);
-      font-size: 12px;
-      line-height: 18px;
-      font-weight: 400;
     }
 
     &_price {
-      font-family: inherit;
-      color: $main-color;
-      font-weight: 700;
+      text-transform: uppercase;
+      color: rgba(6, 11, 53, 1);
       font-size: 16px;
-      line-height: 18px;
+      font-weight: 700;
+      line-height: 16px;
+      margin: 0;
     }
   }
 
   &__button {
-    box-sizing: border-box;
+    width: 100%;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
     background-color: rgba(0, 172, 220, 1);
     color: rgba(255, 255, 255, 1);
-    border: none;
+    border: 1px solid rgba(0, 172, 220, 1);
     border-radius: 5px;
-    text-decoration: none;
-    margin-bottom: 50px;
 
-    &:hover {
-      background-color: #fff;
-      border: 1px solid rgba(0, 172, 220, 1);
-      color: rgba(0, 172, 220, 1);
+    &-text {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
     }
+  }
+
+  &__button:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgba(0, 172, 220, 1);
   }
 }
