@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: $font;
+}
+
+body {
+  margin: 0;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 100%;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+
+  &__img {
+    @include spaced-center;
+
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-text-first;
+    text-align: left;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-text-second;
+  }
+
+  &__review {
+    @include spaced-between-center;
+
+    margin-top: 16px;
+  }
+
+  &__number {
+    font-size: 10px;
+    color: $color-text-first;
+    text-align: right;
+  }
+
+  &__price {
+    @include spaced-between-center;
+
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-text-second;
+  }
+
+  &__value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $color-text-first;
+  }
+
+  &__buy {
+    @include spaced-center;
+
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    line-height: 16px;
+
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $color-button-first;
+    background-color: $color-button-second;
+    border-radius: 5px;
+    border: none;
+    transition-duration: 1s;
+
+    &:hover {
+      border: $color-button-second 1px solid;
+      background-color: $color-button-first;
+      cursor: pointer;
+      color: $color-button-second;
+    }
+  }
+}
