@@ -2,7 +2,8 @@ $bodyWidth: 200px;
 $bodyHeight: 406px;
 $fontSizeMin: 10px;
 $fontSizeReg: 12px;
-$fontWeightReg: 400;
+$colorMain: #060B35;
+$colorSecon: #616070;
 
 body {
   margin: 0;
@@ -30,15 +31,99 @@ body {
     font-weight: 500;
     font-size: $fontSizeReg;
     line-height: 18px;
+    color: $colorMain;
+    ;
   }
 
   &--code {
-    font-weight: $fontSizeReg;
+    font-weight: 400;
     font-size: $fontSizeMin;
     line-height: 14px;
-    margin: 4px 84px 0 16px;
+    margin: 4px 84px 0;
+    color: $colorSecon;
+  }
+}
 
+.review {
+  display: flex;
+  margin: 16px 16px 0;
+  justify-content: space-between;
+  align-items: center;
+
+  &__review {
+    font-weight: 400;
+    font-size: $fontSizeMin;
+    line-height: 14px;
+    color: $colorSecon;
+    margin: 0;
+  }
+}
+
+.stars {
+  display: flex;
+
+
+  &__stars {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars .stars__stars:last-child {
+  background-image: url(../images/star.svg);
+}
+
+.price {
+  margin: 24px 16px 0;
+  justify-content: space-between;
+  display: flex;
+
+  &__letter {
+    font-weight: 400;
+    font-size: $fontSizeReg;
+    line-height: 18px;
+    color: $colorSecon;
   }
 
-
+  &__number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: $colorMain;
+  }
 }
+
+.button {
+  display: flex;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #00ACDC;
+  margin: 16px;
+  align-items: center;
+  justify-content: center;
+
+  &__letter {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.button:hover {
+  border: 1px solid #00ACDC;
+  background-color: #fff;
+}
+
+.button__letter:hover {
+  color: #00ACDC;
+}
+
+
+
