@@ -10,16 +10,22 @@
     width: 160px;
     height: 134px;
     margin-top: 32px;
-    margin-bottom: 40px;
+
+    // margin-bottom: 40px;
   }
 
   &__name {
+    margin: 0;
+
     &-name {
       font-size: 12px;
       font-weight: 500;
       line-height: 18px;
       text-align: left;
       color: #060b35;
+
+      margin-top: 40px;
+      margin-bottom: 4px;
     }
 
     &-code {
@@ -28,6 +34,7 @@
       line-height: 14px;
       text-align: left;
       color: #616070;
+      margin: 0 0 16px;
     }
   }
 
@@ -49,6 +56,8 @@
     display: flex;
     justify-content: space-between;
 
+    margin: 24px 0 16px;
+
     &-let {
       font-size: 12px;
       font-weight: 400;
@@ -56,6 +65,7 @@
       text-align: left;
       color: #616070;
       padding-right: 85px;
+      margin: 0;
     }
 
     &-num {
@@ -64,6 +74,7 @@
       line-height: 18px;
       text-align: right;
       color: #060b35;
+      margin: 0;
     }
   }
 
@@ -76,6 +87,8 @@
     border: none;
     border-radius: 5px;
 
+    margin-bottom: 16px;
+
     &-text {
       color: #fff;
     }
@@ -84,10 +97,10 @@
       background-color: #fff;
       color: $button-color;
       border: 1px solid $button-color;
+    }
 
-      &-text {
-        color: $button-color;
-      }
+    &:hover &-text {
+      color: $button-color;
     }
   }
 }
