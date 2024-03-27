@@ -1,58 +1,66 @@
-$bodyWidth: 200px;
-$bodyHeight: 406px;
-$fontSizeMin: 10px;
-$fontSizeReg: 12px;
-$colorMain: #060B35;
+$colorMain: #060b35;
 $colorSecon: #616070;
+$colorButton: #00acdc;
+
+html {
+  font-family: Roboto, sans-serif;
+}
 
 body {
   margin: 0;
-  width: $bodyWidth;
-  height: $bodyHeight;
+  max-height: 406px;
   align-items: center;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
 }
 
 .img {
   width: 160px;
-  margin: 32px 19px 0 ;
+  margin: 0 3.2px 40px;
   height: 134px;
-  background-image: url("../images/imac.jpeg");
+  background-image: url('../images/imac.jpeg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .descrip {
-  font-family: Roboto, sans-serif;
   display: flex;
-  text-align: center;
+  text-align: left;
 
   &--mac {
-    margin: 40px 16px 0;
+    margin-bottom: 4px;
     font-weight: 500;
-    font-size: $fontSizeReg;
+    font-size: 12px;
     line-height: 18px;
     color: $colorMain;
-    ;
   }
 
   &--code {
+    display: block;
     font-weight: 400;
-    font-size: $fontSizeMin;
+    font-size: 10px;
     line-height: 14px;
-    margin: 4px 84px 0;
     color: $colorSecon;
+    margin-bottom: 16px;
   }
 }
 
 .review {
   display: flex;
-  margin: 16px 16px 0;
+  margin-bottom: 24px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
   &__review {
     font-weight: 400;
-    font-size: $fontSizeMin;
+    font-size: 10px;
     line-height: 14px;
     color: $colorSecon;
     margin: 0;
@@ -62,8 +70,8 @@ body {
 .stars {
   display: flex;
 
-
   &__stars {
+    margin-right: 4px;
     width: 16px;
     height: 16px;
     background-image: url(../images/star-active.svg);
@@ -74,24 +82,25 @@ body {
 
 .stars .stars__stars:last-child {
   background-image: url(../images/star.svg);
+  margin-right: 0;
 }
 
 .price {
-  margin: 24px 16px 0;
+  margin-bottom: 16px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
+  line-height: 18px;
 
   &__letter {
     font-weight: 400;
-    font-size: $fontSizeReg;
-    line-height: 18px;
+    font-size: 12px;
     color: $colorSecon;
   }
 
   &__number {
     font-weight: 700;
     font-size: 16px;
-    line-height: 18px;
     text-align: right;
     color: $colorMain;
   }
@@ -99,31 +108,22 @@ body {
 
 .button {
   display: flex;
-  width: 166px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #00ACDC;
-  margin: 16px;
-  align-items: center;
   justify-content: center;
-
-  &__letter {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    color: #fff;
-    text-decoration: none;
-  }
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid $colorButton;
+  border-radius: 5px;
+  background-color: $colorButton;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .button:hover {
-  border: 1px solid #00ACDC;
   background-color: #fff;
+  color: #00acdc;
 }
-
-.button__letter:hover {
-  color: #00ACDC;
-}
-
-
-
