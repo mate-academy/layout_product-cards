@@ -1,0 +1,33 @@
+.product {
+  &__info {
+    display: flex;
+    gap: 17px;
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+
+    &--star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__review {
+    @include font400;
+
+    color: $colorFont;
+    font-size: 10px;
+    line-height: 17px;
+  }
+}
