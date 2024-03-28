@@ -1,11 +1,4 @@
 .product {
-  &__info {
-    display: flex;
-    gap: 17px;
-    margin-top: 16px;
-    justify-content: space-between;
-  }
-
   &__stars {
     display: flex;
     gap: 4px;
@@ -18,16 +11,11 @@
       background-position: center;
     }
 
+    &--star:nth-child(-n + 1),
+    &--star:nth-child(-n + 2),
+    &--star:nth-child(-n + 3),
     &--star:nth-child(-n + 4) {
       background-image: url(../images/star-active.svg);
     }
-  }
-
-  &__review {
-    @include font400;
-
-    color: $colorFont;
-    font-size: 10px;
-    line-height: 17px;
   }
 }
