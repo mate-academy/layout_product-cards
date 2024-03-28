@@ -1,3 +1,89 @@
-body {
+$product-font-color: #060b35;
+
+@import 'stars';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.product-cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.product-card {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__img {
+    background-size: cover;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+    background-size: contain;
+
+  }
+  &__name {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: $product-font-color;
+    font-weight: 500;
+    margin: 36px 16px 0 16px;
+  }
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #616070;
+    align-items: center;
+    margin: 4px 16px 0 16px;
+  }
+
+  &__prices {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    margin: 24px 16px 0 16px;
+  }
+  &__price {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #616070;
+  }
+  &__value {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+    padding-left: 16px;
+  }
+  &__buy {
+    font-family: Roboto, sans-serif;
+    width: 166px;
+    height: 40px;
+    line-height: 16px;
+    border-radius: 5px;
+    border: 1px solid #00acdc;
+    background: #00acdc;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    align-items: center;
+    margin: 16px;
+
+    &:hover {
+      background: #fff;
+      color: #00acdc;
+    }
+  }
 }
