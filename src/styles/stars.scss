@@ -1,0 +1,19 @@
+$card-stars: '../images/star.svg';
+$card-stars-active: '../images/star-active.svg';
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url($card-stars);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url($card-stars-active);
+}
