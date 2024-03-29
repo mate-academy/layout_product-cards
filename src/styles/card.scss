@@ -1,6 +1,5 @@
 $main-text-color: #060b35;
 $regular-font-color: #616070;
-$card-image: '../images/imac.jpeg';
 $button-color: #00acdc;
 
 * {
@@ -14,14 +13,14 @@ $button-color: #00acdc;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  flex-direction: column;
+  display: flex;
 
   &__image {
     width: 166px;
     height: 134px;
-    background-image: url($card-image);
-    background-size: 160px 134px;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: contain;
+    border-radius: 5px;
   }
 
   &__title {
@@ -34,42 +33,33 @@ $button-color: #00acdc;
 
   &__product-code {
     margin-top: 4px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $regular-font-color;
   }
 
-  &__product-code,
   &__reviews-count {
     font-size: 10px;
     line-height: 14px;
-  }
-  &__reviews-count {
-    height: 16px;
-    padding: 2px 0;
-  }
-
-  &__product-code,
-  &__price-name {
     color: $regular-font-color;
   }
 
   &__reviews {
     margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__price {
     margin-top: 24px;
-  }
-
-  &__reviews,
-  &__price {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__price-name {
     font-size: 12px;
     line-height: 18px;
+    color: $regular-font-color;
   }
 
   &__price-number {
