@@ -1,0 +1,29 @@
+.review-keeper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  width: 168px;
+}
+
+.stars {
+  &__star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
+}
+
+.reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: right;
+  color: $dark-blue-color;
+}
