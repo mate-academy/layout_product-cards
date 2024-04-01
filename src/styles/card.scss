@@ -2,20 +2,21 @@
   width: 200px;
   border: 1px solid $border-color;
   border-radius: 5px;
-  box-sizing: border-box;
   padding: 32px 16px 16px;
 
   &__top {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   &__img {
+    display: block;
     width: 160px;
     height: 134px;
-    margin-bottom: 40px;
   }
 
   &__bottom {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
   }
@@ -29,9 +30,9 @@
   }
 
   &__code {
-    font-weight: 400;
     font-size: 10px;
     color: $light;
+    line-height: 14px;
   }
 
   &__quality {
@@ -44,8 +45,8 @@
 
   &__reviews {
     color: $dark;
-    font-weight: 400;
     font-size: 10px;
+    line-height: 14px;
   }
 
   &__price {
@@ -57,8 +58,8 @@
 
   &__text {
     color: $light;
-    font-weight: 400;
     font-size: 12px;
+    line-height: 18px;
   }
 
   &__value {
@@ -69,18 +70,19 @@
   }
 
   &__button {
-    display: block;
-    box-sizing: border-box;
+    display: flex;
     background-color: $blue;
     border-radius: 5px;
-    padding: 11.5px 70px;
+    padding: 11px 70px;
     text-align: center;
+    border: 1px solid $blue;
 
     color: $white;
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
+    line-height: 16px;
 
     &:hover {
       background-color: $white;
