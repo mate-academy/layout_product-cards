@@ -2,23 +2,23 @@
   display: flex;
   margin: 0;
   align-items: center;
-}
 
-.stars__star {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  &__star {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-.stars__star:not(:last-child) {
-  margin-right: 4px;
-}
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
 
-@for $i from 1 through 4 {
-  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background-image: url(../images/star-active.svg);
+  @for $i from 1 through 4 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
