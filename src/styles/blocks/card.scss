@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
 
-  &__item-img a {
+  &__item-img-link {
     display: block;
     margin-bottom: 40px;
   }
@@ -32,6 +32,7 @@
   &__item-review {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 24px;
   }
 
@@ -47,13 +48,13 @@
     margin-bottom: 16px;
   }
 
-  &__item-price p:first-child {
+  &__item-price-name {
     font-size: 12px;
     line-height: 18px;
     color: #616070;
   }
 
-  &__item-price p:last-child {
+  &__item-price-amount {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -62,18 +63,14 @@
   &__btn-buy {
     display: flex;
     justify-content: center;
-  }
-
-  &__btn-buy button {
+    align-items: center;
     width: 100%;
     height: 40px;
     border-radius: 5px;
     border: none;
     background-color: $blue-color;
     cursor: pointer;
-  }
-
-  &__btn-buy a {
+    font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     color: $white-color;
@@ -81,30 +78,9 @@
     text-transform: uppercase;
   }
 
-  &__btn-buy button:hover {
+  &__btn-buy:hover {
     border: 1px solid $blue-color;
     background-color: $white-color;
-
-    a {
-      color: $blue-color;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-  width: 96px;
-  justify-content: space-between;
-
-  &__star {
-    background-image: url(./../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-  }
-
-  .stars--4 &__star:nth-child(-n + 4) {
-    background-image: url(./../images/star-active.svg);
+    color: $blue-color;
   }
 }
