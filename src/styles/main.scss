@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product {
+  @include flex-column;
+
+  width: $product-full-width;
+  background-color: $background;
+  align-items: center;
+  text-align: center;
+  padding-block: 34px 0;
+  &-image {
+    width: $product-full-width * 0.8;
+  }
+
+  &-info {
+    @include flex-column;
+
+    width: $product-full-width * 0.83;
+    text-align: justify;
+  }
+
+  &-title {
+    font-size: $middle-size-font;
+    line-height: 18px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #060b35;
+    padding-block: 40px 4px;
+  }
+
+  &-code {
+    font-size: $small-size-font;
+    line-height: 14px;
+    color: #616070;
+    font-family: Roboto, sans-serif;
+  }
+
+  &-star {
+    padding-block: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $product-full-width * 0.8;
+  }
+
+  &-reviews {
+    font-family: Roboto, sans-serif;
+    font-size: $small-size-font;
+    line-height: 16px;
+    color: #060b35;
+    font-weight: 400;
+  }
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      font-family: Roboto, sans-serif;
+      font-size: $middle-size-font;
+      line-height: 18px;
+    }
+
+    &-number {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &-btn {
+    margin-block: 16px;
+    display: block;
+    width: $product-full-width * 0.83;
+    height: 40px;
+    line-height: 40px;
+    background: $color-template;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $background;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid $color-template;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    &:hover {
+      background: $background;
+      color: $color-template;
+    }
+  }
+}
