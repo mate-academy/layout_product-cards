@@ -1,0 +1,138 @@
+html {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  --color-text-main: #060b35;
+  --color-text-secondary: #616070;
+  --blue-accent: #00acdc;
+  --white-accent: #f3f3f3;
+  --white-accent-main: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.product-card {
+  box-sizing: border-box;
+  background-color: var(--white-accent-main);
+  width: 200px;
+}
+
+.product-card__main {
+  padding: 32px 16px 19px;
+  border-radius: 5px;
+  border: 1px solid var(--white-accent);
+}
+
+.product-card__image {
+  width: 160px;
+  height: 134px;
+}
+
+.product-card__name {
+  padding: 0;
+  margin: 40px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-text-main);
+}
+
+.product-card__text {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--color-text-secondary);
+}
+
+.reviews__star {
+  display: flex;
+  align-items: center;
+}
+
+.reviews__star-item {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../src/images/star.svg);
+}
+
+.reviews__star :last-child {
+  margin-right: 0;
+}
+
+.reviews__star :nth-child(-n + 4) {
+  background-image: url(../../src/images/star-active.svg);
+}
+
+.reviews__amount {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--color-text-main);
+}
+
+.reviews__star-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.product-card__price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 16px;
+}
+
+.product-card__price-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-text-secondary);
+}
+
+.product-card__price-tag {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--color-text-main);
+}
+
+.product-card__button {
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--white-accent-main);
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+
+  border: none;
+  outline: none;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+
+  background: var(--blue-accent);
+}
+
+.product-card__button:hover {
+  background-color: var(--white-accent-main);
+  color: var(--blue-accent);
+  border: 1px solid var(--blue-accent);
+  cursor: pointer;
+}
