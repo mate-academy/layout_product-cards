@@ -1,3 +1,7 @@
+body {
+  background-color: #616070;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -6,15 +10,17 @@
 }
 
 .product {
+  font-family: Roboto, sans-serif;
+
   @include flex-column;
 
   width: $product-full-width;
   background-color: $background;
   align-items: center;
   text-align: center;
-  padding-block: 34px 0;
+  padding-block: 32px 16px;
   &-image {
-    width: $product-full-width * 0.8;
+    width: 160px;
   }
 
   &-info {
@@ -27,7 +33,6 @@
   &-title {
     font-size: $middle-size-font;
     line-height: 18px;
-    font-family: Roboto, sans-serif;
     font-weight: 500;
     color: #060b35;
     padding-block: 40px 4px;
@@ -37,7 +42,6 @@
     font-size: $small-size-font;
     line-height: 14px;
     color: #616070;
-    font-family: Roboto, sans-serif;
   }
 
   &-star {
@@ -45,11 +49,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: $product-full-width * 0.8;
+    width: $content-width;
   }
 
   &-reviews {
-    font-family: Roboto, sans-serif;
     font-size: $small-size-font;
     line-height: 16px;
     color: #060b35;
@@ -59,15 +62,14 @@
   &-price {
     display: flex;
     justify-content: space-between;
+    padding-block-end: 16px;
 
     &-text {
-      font-family: Roboto, sans-serif;
       font-size: $middle-size-font;
       line-height: 18px;
     }
 
     &-number {
-      font-family: Roboto, sans-serif;
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
@@ -75,14 +77,12 @@
   }
 
   &-btn {
-    margin-block: 16px;
     display: block;
-    width: $product-full-width * 0.83;
+    width: $content-width;
     height: 40px;
     line-height: 40px;
     background: $color-template;
     text-align: center;
-    font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
