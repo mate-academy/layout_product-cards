@@ -1,59 +1,81 @@
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 12px;
 }
 
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
   width: 200px;
-  height: 408px;
-  box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  padding: 32px 16px 16px;
+  margin: 0 auto 40px;
 
   &__product-picture {
+    display: flex;
+    justify-content: center;
     width: 166px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-size: 160px 134px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 32px;
     margin-bottom: 40px;
-    margin-inline: $margin-inline;
+
+    &_photo {
+      width: 160px;
+      height: 134px;
+    }
   }
 
   &__product-name {
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    text-align: left;
     margin-bottom: 4px;
-    margin-inline: $margin-inline;
-    color: #060b35;
+    color: $price-review-color;
   }
 
   &__product-code {
     font-size: 10px;
     line-height: 14px;
-    height: 14px;
-    text-align: left;
-    color: #616070;
+    color: $text-code-color;
     margin-bottom: 16px;
-    margin-inline: $margin-inline;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    color: $price-review-color;
+    margin-top: 2px;
   }
 
   &__product-price {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-    margin-inline: $margin-inline;
   }
 
   &__product-price-text {
     line-height: 18px;
     text-align: left;
-    color: #616070;
+    color: $text-code-color;
   }
 
   &__product-price-price {
@@ -61,29 +83,24 @@ body {
     font-weight: 700;
     line-height: 18px;
     text-align: right;
-    color: #060b35;
+    color: $price-review-color;
   }
 
-  &_button {
+  &__button {
     height: 40px;
-    width: 166px;
-    box-sizing: border-box;
+    width: 100%;
     font-size: 14px;
     font-weight: 700;
+    font-family: Roboto, sans-serif;
     color: $main-color;
     background-color: $bottom-color;
-    border-color: $main-color;
-    margin-bottom: 15px;
-    margin-inline: $margin-inline;
-    padding: 0;
-    border: 1px;
+    border: 1px solid $main-color;
     border-radius: 5px;
   }
 
-  &_button:hover {
-    color: $bottom-color;
+  &__button:hover {
     background-color: $main-color;
+    color: $bottom-color;
     border-color: $bottom-color;
-    border-style: solid;
   }
 }

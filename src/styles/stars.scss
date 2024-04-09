@@ -1,15 +1,7 @@
-.card__stars {
+.stars {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  margin-inline: $margin-inline;
 
-  &_stars-block {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &_star {
+  &__star {
     margin-right: 4px;
     height: 16px;
     width: 16px;
@@ -18,15 +10,17 @@
     background-position: center;
   }
 
-  &_star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
+  &__star:last-child {
+    margin-right: 0;
   }
 
-  &_text {
-    width: 53px;
-    font-size: 10px;
-    line-height: 14px;
-    text-align: right;
-    color: #060b35;
+  &--1 :nth-child(-n + 1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
