@@ -1,5 +1,5 @@
 body {
-  background-color: #616070;
+  background-color: #fff;
 }
 
 .container {
@@ -13,27 +13,34 @@ body {
   font-family: Roboto, sans-serif;
 
   @include flex-column;
-
+  
+  box-sizing: border-box;
   width: $product-full-width;
   background-color: $background;
   align-items: center;
   text-align: center;
   padding-block: 32px 16px;
+  padding-inline: 16px;
+  border: 1px solid $background;
+  border-radius: 5px;
   &-image {
-    width: 160px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 3px;
   }
 
   &-info {
     @include flex-column;
 
-    width: $product-full-width * 0.83;
-    text-align: justify;
+    width: $content-width;
+    text-align: left;
   }
 
   &-title {
     font-size: $middle-size-font;
     line-height: 18px;
     font-weight: 500;
+    letter-spacing: -0.4px;
     color: #060b35;
     padding-block: 40px 4px;
   }
