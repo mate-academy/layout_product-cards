@@ -8,7 +8,7 @@
 
 .stars {
   display: flex;
-  flex-direction: row-reverse;
+
   &__star {
     height: 16px;
     width: 16px;
@@ -18,27 +18,12 @@
     gap: 4px;
   }
 
-  & > &__star--1:hover {
+  &--1 > &__star:nth-child(-n + 1),
+  &--2 > &__star:nth-child(-n + 2),
+  &--3 > &__star:nth-child(-n + 3),
+  &--4 > &__star:nth-child(-n + 4),
+  &--5 > &__star:nth-child(-n + 5) {
     background-image: url(../images/star-active.svg);
-  }
-
-  & > &__star--2:hover,
-  .stars__star:hover ~ .stars__star {
-    background-image: url(../images/star-active.svg);
-  }
-
-  & > &__star--3:hover,
-  .stars__star:hover ~ .stars__star {
-    background-image: url(../images/star-active.svg);
-  }
-
-  & > &__star--4:hover,
-  .stars__star:hover ~ .stars__star {
-    background-image: url(../images/star-active.svg);
-  }
-
-  & > &__star--5:hover,
-  .stars__star:hover ~ .stars__star {
-    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
   }
 }
