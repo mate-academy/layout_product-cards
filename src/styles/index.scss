@@ -22,6 +22,11 @@ $price-size: 12px;
   }
 }
 
+body,
+p {
+  margin: 0;
+}
+
 // Product Card
 .product-card {
   display: flex;
@@ -63,7 +68,8 @@ $price-size: 12px;
 
   &__rating {
     display: flex;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
+    justify-content: space-between;
     align-items: center;
 
     @for $i from 1 through 5 {
@@ -75,15 +81,17 @@ $price-size: 12px;
 
   &__reviews {
     font-size: 10px;
-    margin: 0 0 0 30px;
     line-height: 14px;
     color: $main-color;
   }
 
   &__price {
-    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     line-height: 18px;
     margin-bottom: 16px;
+    font-weight: 400;
     color: $price-code-color;
     font-size: $price-size;
   }
@@ -123,13 +131,13 @@ $price-size: 12px;
 
 .product_stars {
   display: flex;
-  gap: 6px;
+  gap: 4px;
 }
 
 .product_stars__star {
-  width: 12px;
-  height: 12px;
-  background: url('/src/images/star.svg') no-repeat center / cover;
+  width: 16px;
+  height: 16px;
+  background: url('/src/images/star.svg') no-repeat;
 }
 
 .product_stars__star--4,
