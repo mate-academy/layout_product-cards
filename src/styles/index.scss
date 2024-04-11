@@ -2,23 +2,24 @@
 @import './stars';
 @import 'https://fonts.googleapis.com/css?family=Roboto:regular,500,700';
 
-body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  background-color: grey;
+html {
   font-size: 12px;
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  color: #616070;
   line-height: 14px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: grey;
+  color: $greyColor;
 }
 
 .container {
   margin: 0 auto;
   padding: 50px 120px;
-  max-width: 200px;
+  width: 200px;
 }
 
 .card-block {
@@ -62,7 +63,7 @@ body {
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: #616070;
+    color: $greyColor;
   }
 
   &__rating {
@@ -100,9 +101,11 @@ body {
   display: block;
   border: 1px solid $blueColor;
   background-color: $blueColor;
-  padding: 12px 70px;
   border-radius: 5px;
   color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 12px 0;
 
   font-size: 14px;
   font-weight: 700;
@@ -110,7 +113,7 @@ body {
   &:hover {
     cursor: pointer;
     background-color: #fff;
-    color: #00acdc;
+    color: $blueColor;
     border: 1px solid;
   }
 }
