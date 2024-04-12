@@ -1,13 +1,7 @@
-// Variables
-$primary-color: #007bff;
-$star-active-color: #ffc107;
-$star-inactive-color: #e4e5e9;
-$text-color: #333;
-$main-color: #060b35;
-$font-family: Roboto, sans-serif;
-$button-color: #00acdc;
-$price-code-color: #616070;
-$price-size: 12px;
+@import 'variables.';
+@import 'stars';
+
+
 
 @mixin star($active: false) {
   width: 20px;
@@ -23,7 +17,8 @@ $price-size: 12px;
 }
 
 body,
-p {
+p,
+h2 {
   margin: 0;
 }
 
@@ -38,11 +33,9 @@ p {
   color: #333;
   border: 1px solid #e4e5e9;
   border-radius: 8px;
-  font-family: $font-family;
+  font-family: Roboto, sans-serif;
 
   &__image {
-    justify-content: center;
-    align-items: center;
     display: block;
     margin-bottom: 40px;
     width: 160px;
@@ -59,7 +52,6 @@ p {
   }
 
   &__code {
-    margin: 0;
     margin-bottom: 16px;
     line-height: 14px;
     font-size: 10px;
@@ -124,23 +116,5 @@ p {
   }
 }
 
-.product-info {
-  display: flex;
-  flex-direction: column;
-}
 
-.product_stars {
-  display: flex;
-  gap: 4px;
-}
 
-.product_stars__star {
-  width: 16px;
-  height: 16px;
-  background: url('/src/images/star.svg') no-repeat;
-}
-
-.product_stars__star--4,
-.product_stars__star--star {
-  background-image: url('/src/images/star-active.svg');
-}
