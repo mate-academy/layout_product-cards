@@ -1,12 +1,16 @@
-body {
-  margin: 0;
+* {
   box-sizing: border-box;
-  display: flex;
+}
+
+html {
   font-family: $font-family;
 }
 
+body {
+  margin: 0;
+}
+
 .card {
-  box-sizing: border-box;
   max-width: 200px;
   padding: 32px 16px 16px;
 
@@ -16,9 +20,7 @@ body {
   &__image {
     width: 160px;
     height: 134px;
-    margin: 0 3px 40px;
-
-    background: url(../images/imac.jpeg) center/160px 134px no-repeat;
+    margin: 0 3px 36px;
   }
 
   &__title {
@@ -28,7 +30,7 @@ body {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: $text-color;
+    color: $main-color;
   }
 
   &__code {
@@ -46,30 +48,28 @@ body {
   }
 
   &__review-text {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: $text-color;
+    color: $main-color;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-  }
 
-  &__price-text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary-color;
-  }
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+    }
 
-  &__price-cost {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $text-color;
+    &-cost {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-color;
+    }
   }
 
   &__button {
@@ -88,13 +88,12 @@ body {
     text-decoration: none;
 
     border-radius: 5px;
-    background-color: $button-main-backgroud;
+    background-color: $button-border-text-backgroud;
 
     &:hover {
-      box-sizing: border-box;
-      border: 1px solid $button-border-text-active;
+      border: 1px solid $button-border-text-backgroud;
       background-color: $button-text-backgroud;
-      color: $button-border-text-active;
+      color: $button-border-text-backgroud;
     }
   }
 }
