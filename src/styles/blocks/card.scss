@@ -2,13 +2,13 @@ body {
   margin: 0;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
   font-family: $font-family;
 }
 
 .card {
-  width: 198px;
-  height: 406px;
+  box-sizing: border-box;
+  max-width: 200px;
+  padding: 32px 16px 16px;
 
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -16,16 +16,14 @@ body {
   &__image {
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px;
+    margin: 0 3px 40px;
 
     background: url(../images/imac.jpeg) center/160px 134px no-repeat;
   }
 
   &__title {
     display: flex;
-    width: 166px;
-    height: 36px;
-    margin: 0 16px 4px;
+    margin-bottom: 4px;
 
     font-weight: 500;
     font-size: 12px;
@@ -35,9 +33,7 @@ body {
 
   &__code {
     display: flex;
-    width: 166px;
-    height: 14px;
-    margin: 0 16px 16px;
+    margin-bottom: 17px;
 
     font-size: 10px;
     color: $secondary-color;
@@ -46,7 +42,7 @@ body {
   &__review {
     display: flex;
     justify-content: space-between;
-    margin: 0 16px 24px;
+    margin-bottom: 24px;
   }
 
   &__review-text {
@@ -59,7 +55,7 @@ body {
   &__price {
     display: flex;
     justify-content: space-between;
-    margin: 0 16px 16px;
+    margin-bottom: 16px;
   }
 
   &__price-text {
@@ -80,27 +76,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 16px;
-    width: 166px;
     height: 40px;
+    width: 100%;
 
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    color: #fff;
+    color: $button-text-backgroud;
 
     text-transform: uppercase;
     text-decoration: none;
-    cursor: pointer;
 
     border-radius: 5px;
-    background-color: $button-color;
+    background-color: $button-main-backgroud;
 
     &:hover {
       box-sizing: border-box;
-      border: 1px solid $button-color;
-      background-color: #fff;
-      color: $button-color;
+      border: 1px solid $button-border-text-active;
+      background-color: $button-text-backgroud;
+      color: $button-border-text-active;
     }
   }
 }
