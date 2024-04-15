@@ -1,118 +1,13 @@
 @import 'variables';
 @import 'stars';
+@import 'card';
 
-@mixin star($active: false) {
-  width: 20px;
-  height: 20px;
-  background: url('/src/images/star.svg') no-repeat center;
-  background-size: cover;
-
-  @if $active {
-    color: $star-active-color;
-  } @else {
-    color: $star-inactive-color;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body,
 p,
 h2 {
   margin: 0;
-}
-
-// Product Card
-.product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px 16px 16px;
-  width: 200px;
-  box-sizing: border-box;
-  color: #333;
-  border: 1px solid #e4e5e9;
-  border-radius: 5px;
-  font-family: Roboto, sans-serif;
-
-  &__image {
-    display: block;
-    margin-bottom: 40px;
-    width: 160px;
-    height: 134px;
-  }
-
-  &__title {
-    font-size: 12px;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 4px;
-    line-height: 18px;
-    color: $main-color;
-  }
-
-  &__code {
-    margin-bottom: 16px;
-    line-height: 14px;
-    font-size: 10px;
-    font-weight: 400;
-    color: $price-code-color;
-  }
-
-  &__rating {
-    display: flex;
-    margin-bottom: 24px;
-    justify-content: space-between;
-    align-items: center;
-
-    @for $i from 1 through 5 {
-      .star-#{$i} {
-        @include star($i <= 3);
-      }
-    }
-  }
-
-  &__reviews {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    color: $main-color;
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 18px;
-    margin-bottom: 16px;
-    font-weight: 400;
-    color: $price-code-color;
-    font-size: $price-size;
-  }
-
-  &__numeric {
-    font-weight: 700;
-    color: $main-color;
-    font-size: 16px;
-    margin-left: 75px;
-  }
-
-  &__button {
-    width: 100%;
-    line-height: 16px;
-    font-size: 14px;
-    font-weight: 700;
-    height: 40px;
-    border: none;
-    background-color: $button-color;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: white;
-      border: solid 1px $button-color;
-      color: $button-color;
-    }
-  }
 }
