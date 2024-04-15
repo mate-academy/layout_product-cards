@@ -1,8 +1,8 @@
 .card {
   box-sizing: border-box;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px #f3f3f3 solid;
+  width: $width;
+  border-radius: $border-radius;
+  border: $border;
 
   &__container {
     margin-right: 16px;
@@ -14,22 +14,23 @@
     justify-content: center;
   }
 
-  &__buy-batton {
+  &__buy-button {
     height: 40px;
     width: 100%;
     padding: 0;
-
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     color: #fff;
     background: #00acdc;
-    border-radius: 5px;
+    border-radius: $border-radius;
     border-style: none;
     margin-bottom: 16px;
   }
 
-  &__buy-batton:hover {
+  &__buy-button:hover {
     background-color: #fff;
     color: #00acdc;
     border: 1px #00acdc solid;
@@ -81,17 +82,16 @@
 
   &__review {
     margin-bottom: 24px;
-  }
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.review {
-  display: flex;
-  justify-content: space-between;
-
-  &__reviews {
-    color: #060b35;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
+    & .reviews {
+      font-family: Roboto, sans-serif;
+      color: #060b35;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
   }
 }
