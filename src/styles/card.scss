@@ -1,0 +1,112 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 200px;
+  height: 408px;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-top: 16px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    color: $main-color;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__article {
+    margin-top: 4px;
+    width: 100%;
+    color: $secondary-color;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+  }
+
+  &__stars-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17px;
+    margin-top: 17px;
+
+    .stars {
+      &__item {
+        display: flex;
+      }
+
+      &__star {
+        height: 16px;
+        width: 16px;
+        background-image: url('../images/star.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 4px;
+
+        &:nth-child(-n + 4) {
+          background-image: url('../images/star-active.svg');
+        }
+      }
+
+      &__reviews-count {
+        min-width: 53px;
+        text-align: right;
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .price-block {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+
+    &__number {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $main-color;
+    }
+  }
+
+  &__buy-button {
+    width: 166px;
+    height: 40px;
+    margin-top: auto;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #00acdc;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:hover {
+      color: #00acdc;
+      background-color: #fff;
+      border: 1px solid #00acdc;
+    }
+  }
+}
