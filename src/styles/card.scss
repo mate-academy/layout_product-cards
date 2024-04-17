@@ -42,11 +42,17 @@ html {
     justify-content: space-between;
     align-items: center;
     gap: 17px;
-    margin-top: 17px;
+    margin-top: 16px;
 
     .stars {
       &__item {
         display: flex;
+
+        @each $count in $counts {
+          &--#{$count} .stars__star:nth-child(-n + #{$count}) {
+            background-image: url('../images/star-active.svg');
+          }
+        }
       }
 
       &__star {
@@ -54,10 +60,8 @@ html {
         width: 16px;
         background: url('../images/star.svg') no-repeat center;
 
-        margin-right: 4px;
-
-        &:nth-child(-n + 4) {
-          background-image: url('../images/star-active.svg');
+        &:not(:last-child) {
+          margin-right: 4px;
         }
       }
 
@@ -96,7 +100,7 @@ html {
     margin-top: auto;
     border-radius: 5px;
     color: $white-color;
-    background-color: #00acdc;
+    background-color: $blue-color;
     text-align: center;
     line-height: 40px;
     font-size: 14px;
