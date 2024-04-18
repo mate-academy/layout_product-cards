@@ -1,0 +1,104 @@
+$blue-color: #00acdc;
+$grey-color: #616070;
+$black-color: #060b35;
+
+.card {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  position: relative;
+  z-index: 1;
+
+  &__background_image {
+    display: flex;
+    margin-left: 19px;
+    margin-right: 19px;
+    width: 160px;
+    height: 134px;
+    box-sizing: border-box;
+    background-image: url(../images/imac.jpeg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 40px;
+    line-height: 18px;
+    margin-left: 16px;
+    color: $black-color;
+  }
+
+  &__product_code {
+    display: flex;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+    margin-left: 16px;
+    color: $grey-color;
+  }
+
+  &__price,
+  &__amount {
+    display: inline;
+  }
+
+  &__price_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 56px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  &__price {
+    margin-top: 0;
+    display: flex;
+    width: 31px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    color: $grey-color;
+  }
+
+  &__amount {
+    margin-top: 0;
+    width: 50px;
+    font-weight: 700;
+    color: $black-color;
+  }
+
+  &__buy_button {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    margin-left: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-color;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__press_buy {
+    position: absolute;
+    width: 27px;
+    height: 16px;
+  }
+
+  &__buy_button:hover {
+    background-color: white;
+    color: $blue-color;
+    border: 1px solid $blue-color;
+  }
+}
