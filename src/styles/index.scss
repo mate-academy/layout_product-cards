@@ -11,14 +11,94 @@ body {
   height: 406px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  position: relative;
 
-  &__imac-image {
-    background-image: url(../images/imac.jpeg);
-    height: 134px;
-    width: 160px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 32px 19px;
+  &__imac {
+    margin: 32px 0;
+
+    &-image {
+      height: 134px;
+      width: 160px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 12px;
+    position: absolute;
+    bottom: 160px;
+
+    &-text {
+      text-decoration: none;
+      color: #060b35;
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-bottom: 4px;
+      display: flex;
+      line-height: 18px;
+    }
+  }
+
+  &__code {
+    display: flex;
+    position: absolute;
+    bottom: 146px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #616070;
+    line-height: 14px;
+    width: 166px;
+  }
+
+  &__stars {
+    position: absolute;
+    bottom: 115px;
+    display: flex;
+    width: 166px;
+
+    &-star {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+      margin-left: 2px;
+      margin-right: 5px;
+    }
+
+    &-star:nth-last-child(-n + 2) {
+      background-image: url(../images/star.svg);
+      margin-right: 0;
+    }
+
+    &-text {
+      font-size: 10px;
+      font-weight: 400;
+      color: #060b35;
+      margin-left: auto;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    bottom: 73px;
+    height: 17px;
+    width: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-word {
+      color: #616070;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &-number {
+      color: #060b35;
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 
   &__button {
@@ -26,19 +106,18 @@ body {
     height: 40px;
     background-color: #00acdc;
     border-radius: 5px;
+    margin-top: 16px;
     margin-bottom: 16px;
-    margin-top: auto;
     line-height: 16px;
     display: flex;
-    margin-top: 0;
-    padding-top: 0;
-
     color: #fff;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
   }
 
   &__button:hover {
@@ -47,14 +126,5 @@ body {
     color: #00acdc;
     height: 38px;
     width: 164px;
-  }
-
-  &__price {
-    color: #616070;
-    font-size: 12px;
-    font-weight: 400;
-    height: 18px;
-    width: 166px;
-    margin-bottom: 72px;
   }
 }
