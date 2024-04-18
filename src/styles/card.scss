@@ -7,29 +7,11 @@
 .card-block {
   box-sizing: border-box;
   width: 200px;
-  padding: 32px 16px 16px;
-  background-color: #fff;
   border-radius: 5px;
   display: flex;
+  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   flex-direction: column;
-  align-items: center;
-
-  &__img {
-    width: 160px;
-    height: 134px;
-  }
-
-  &__img img {
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.content {
-  padding-top: 28px;
 
   &__title {
     color: $textColor;
@@ -37,6 +19,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
+    padding-top: 29px;
 
     margin-bottom: 4px;
   }
@@ -61,19 +44,31 @@
   &__text {
     font-size: 10px;
     color: $textColor;
-    margin: 0;
+    margin: 2px 0 0;
+    font-weight: 400;
+    line-height: 14px;
   }
 
   &__price-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
+}
+
+img {
+  box-sizing: border-box;
+  padding: 0 3px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .price-block__number {
   font-size: 16px;
+  line-height: 18px;
   font-weight: 700;
   color: $textColor;
   margin: 0;
@@ -81,10 +76,14 @@
 
 .price-block__text {
   margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .button {
   display: block;
+  box-sizing: border-box;
   border: 1px solid $blueColor;
   background-color: $blueColor;
   border-radius: 5px;
