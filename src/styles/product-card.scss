@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $color__border;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: $color__button__text;
   padding: 32px 16px 16px;
 
   img {
@@ -33,9 +33,9 @@
   }
 
   &__ratings {
-    align-items: center;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 24px;
   }
 
@@ -55,6 +55,7 @@
   &__price {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     font-weight: 400;
     color: $color__description_code;
     font-size: 12px;
@@ -62,9 +63,9 @@
     line-height: 18px;
   }
 
-  &__dollar-pricece {
+  &__dollar-price {
     color: $color__description;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
     font-size: 16px;
     line-height: 18px;
   }
@@ -73,7 +74,7 @@
 .button {
   border: 1px solid $color__button;
   background-color: $color__button;
-  width: 166px;
+  width: 100%;
   height: 40px;
   border-radius: 5px;
   color: $color__button__text;
@@ -86,7 +87,7 @@
   justify-content: space-between;
 
   &:hover {
-    background-color: $color__button-border;
+    background-color: $color__border;
     color: $color__button;
     border: 1px solid $color__button;
     line-height: 16px;
