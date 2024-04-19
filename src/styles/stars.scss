@@ -1,0 +1,58 @@
+.starsBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 16px;
+  z-index: 2;
+  margin-top: 16px;
+
+  &__container {
+    display: flex;
+    margin-right: 17px;
+  }
+}
+
+.reviews {
+  height: 16px;
+  margin: 0;
+  line-height: 14px;
+  font-weight: 400;
+  font-size: 10px;
+  padding-bottom: 0;
+  text-align: right;
+  padding-top: 2px;
+  color: $black-color;
+}
+
+.stars__star {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+$stars-in-row: 4;
+
+.stars {
+  display: flex;
+}
+
+@for $i from 1 through $stars-in-row {
+  .stars__star:nth-child(#{$i}) {
+    @if $stars-in-row != 0 {
+      background-image: url(../images/star-active.svg);
+    } @else {
+      background-image: url(../images/star.svg);
+    }
+  }
+}
+
+@for $i from 0 through 5 {
+  @if $i != $stars-in-row {
+    .stars--#{$i} {
+      display: none;
+    }
+  }
+}
