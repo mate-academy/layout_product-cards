@@ -1,15 +1,16 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .card-block {
   box-sizing: border-box;
   width: 200px;
   border-radius: 5px;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
 
   &__title {
     color: $textColor;
@@ -45,54 +46,47 @@
     line-height: 14px;
   }
 
-  &__price-block {
+  &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+
+    &_number {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $textColor;
+      margin: 0;
+    }
+
+    &_text {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
   }
-}
 
-img {
-  display: block;
-  margin: 0 auto 40px;
-  width: 160px;
-  height: 134px;
-}
+  &__button {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid $blueColor;
+    background-color: $blueColor;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
 
-.price-block__number {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 700;
-  color: $textColor;
-  margin: 0;
-}
+    font-size: 14px;
+    font-weight: 700;
 
-.price-block__text {
-  margin: 0;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-.button {
-  display: block;
-  box-sizing: border-box;
-  border: 1px solid $blueColor;
-  background-color: $blueColor;
-  border-radius: 5px;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  padding: 12px 0;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #fff;
-    color: $blueColor;
-    border: 1px solid;
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: $blueColor;
+      border: 1px solid;
+    }
   }
 }
