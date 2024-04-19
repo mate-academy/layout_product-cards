@@ -9,7 +9,7 @@ body {
   align-items: center;
   width: 198px;
   height: 406px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $gray-elements;
   border-radius: 5px;
   position: relative;
 
@@ -25,12 +25,11 @@ body {
   &__link {
     font-weight: 500;
     font-size: 12px;
-    position: absolute;
-    bottom: 160px;
+    margin-top: 4px;
 
     &-text {
       text-decoration: none;
-      color: #060b35;
+      color: $main-accent;
       margin-left: 16px;
       margin-right: 16px;
       margin-bottom: 4px;
@@ -41,47 +40,30 @@ body {
 
   &__code {
     display: flex;
-    position: absolute;
-    bottom: 146px;
     font-size: 10px;
     font-weight: 400;
-    color: #616070;
+    color: $secondary;
     line-height: 14px;
     width: 166px;
   }
 
-  &__stars {
-    position: absolute;
-    bottom: 115px;
+  &__ratings {
+    margin-top: 18px;
     display: flex;
     width: 166px;
+  }
 
-    &-star {
-      background-image: url(../images/star-active.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 13px;
-      height: 13px;
-      margin-left: 2px;
-      margin-right: 5px;
-    }
-
-    &-star:nth-last-child(-n + 2) {
-      background-image: url(../images/star.svg);
-      margin-right: 0;
-    }
-
-    &-text {
-      font-size: 10px;
-      font-weight: 400;
-      color: #060b35;
-      margin-left: auto;
-    }
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    color: $main-accent;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   &__price {
-    position: absolute;
-    bottom: 73px;
+    margin-top: 25px;
     height: 17px;
     width: 166px;
     display: flex;
@@ -104,27 +86,23 @@ body {
   &__button {
     width: 166px;
     height: 40px;
-    background-color: #00acdc;
+    background-color: $blue-accent;
     border-radius: 5px;
     margin-top: 16px;
     margin-bottom: 16px;
     line-height: 16px;
     display: flex;
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
   }
 
   &__button:hover {
     background-color: #fff;
     border: 1px solid #00acdc;
     color: #00acdc;
-    height: 38px;
-    width: 164px;
   }
 }
