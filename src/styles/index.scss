@@ -1,3 +1,128 @@
+$BodyFont: 'Roboto';
+$FontWeight: 400;
+
 body {
+  font-family: $BodyFont;
+  font-weight: $FontWeight;
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__picture {
+  padding: 32px 19px 40px;
+}
+
+.picture {
+  background-image: url(../images/imac.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 134px;
+  width: 160px;
+}
+
+.card__info {
+  padding: 0 16px 16px;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #060b35;
+  padding-bottom: 4px;
+}
+
+.code {
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 24px;
+  color: #060b35;
+}
+
+.stars {
+  display: flex;
+}
+
+.views {
+  align-self: center;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+@for $i from 1 through 5 {
+  .stars__#{$i} {
+    background-image: url(../images/star.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@for $i from 1 through 4 {
+  .stars__#{$i} {
+    background-image: url(../images/star-active.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 18px;
+  color: #616070;
+}
+
+.amount {
+  color: #060b35;
+  font-weight: 700;
+}
+
+.card__button {
+  padding: 0 16px 16px;
+}
+
+.button {
+  box-sizing: border-box;
+  display: flex;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #f3f3f3;
+  color: #00acdc;
+  border: 1px solid #00acdc;
 }
