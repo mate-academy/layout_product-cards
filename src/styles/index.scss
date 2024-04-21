@@ -1,85 +1,57 @@
-$BodyFont: 'Roboto';
-$FontWeight: 400;
+@import 'variables';
+@import 'stars';
+
+html {
+  font-family: $BodyFont;
+}
 
 body {
-  font-family: $BodyFont;
-  font-weight: $FontWeight;
   margin: 0;
 }
 
 .card {
   width: 200px;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   border-radius: 5px;
   padding: 32px 16px 16px;
 }
 
-.card__picture {
-  display: flex;
-  margin-bottom: 40px;
-}
-
 .picture {
+  display: flex;
   margin: 0 auto;
   height: 134px;
   width: 160px;
-}
-
-.card__info {
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 
 .text {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 500;
-  color: #060b35;
-  margin-bottom: 4px;
+  font-weight: $font-weight-semi-bold;
+  color: $description-color;
+  margin: 0 0 4px;
 }
 
 .code {
   font-size: 10px;
   line-height: 14px;
-  color: #616070;
+  color: $code-color;
+  margin: 0 0 16px;
 }
 
 .card__rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #060b35;
+  color: $description-color;
   margin-bottom: 24px;
-}
-
-.stars {
-  display: flex;
 }
 
 .views {
   align-self: center;
   font-size: 10px;
-}
-
-@for $i from 1 through 5 {
-  .stars__#{$i} {
-    background-image: url(../images/star.svg);
-    height: 16px;
-    width: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-@for $i from 1 through 4 {
-  .stars__#{$i} {
-    background-image: url(../images/star-active.svg);
-    height: 16px;
-    width: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 4px;
-  }
+  margin: 0;
 }
 
 .card__price {
@@ -92,12 +64,12 @@ body {
 .price {
   font-size: 12px;
   font-weight: 18px;
-  color: #616070;
+  color: $code-color;
 }
 
 .amount {
-  color: #060b35;
-  font-weight: 700;
+  color: $description-color;
+  font-weight: $font-weight-bold;
   line-height: 18px;
 }
 
@@ -106,20 +78,20 @@ body {
   display: flex;
   width: 166px;
   height: 40px;
-  background-color: #00acdc;
+  background-color: $button-color;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
-}
+  color: $color-button-text;
 
-.button:hover {
-  background-color: #f3f3f3;
-  color: #00acdc;
-  border: 1px solid #00acdc;
+  &:hover {
+    background-color: $border-color;
+    color: $button-color;
+    border: 1px solid $button-color;
+  }
 }
