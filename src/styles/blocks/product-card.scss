@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: $bodyFont, sans-serif;
+}
+
+.product-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  width: 200px;
+  height: 408px;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+
+  &__image {
+    margin: auto;
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+    background-size: 160px 134px;
+
+    width: 160px;
+    height: 134px;
+  }
+
+  &__text--big {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: $textColorMain;
+  }
+
+  &__text--small {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: $textColorSecondary;
+  }
+
+  &__review {
+    display: flex;
+    margin-top: 16px;
+    align-items: flex-end;
+    line-height: 14px;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    color: $textColorMain;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-tag {
+    font-family: $bodyFont;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: $textColorSecondary;
+  }
+
+  &__price-value {
+    font-family: $bodyFont;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+    color: $textColorMain;
+  }
+
+  &__buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    height: 38px;
+    margin-top: 16px;
+    background-color: $blueColor;
+    border-radius: 5px;
+    border: 1px solid $blueColor;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $whiteColor;
+
+    &:hover {
+      color: $blueColor;
+      background-color: $whiteColor;
+    }
+  }
+}
