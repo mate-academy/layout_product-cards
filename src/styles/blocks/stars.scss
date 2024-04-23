@@ -1,0 +1,28 @@
+@use '../utils/variables.scss';
+@use '../blocks/card.scss';
+
+.stars {
+  display: flex;
+  justify-content: left;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: variables.$size-star;
+    width: variables.$size-star;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin: 0;
+  }
+
+  &--1 :nth-child(1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}

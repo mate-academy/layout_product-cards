@@ -1,0 +1,84 @@
+@use '../utils/variables.scss';
+
+.card {
+  width: variables.$card-width;
+  border: 1px solid #f3f3f3;
+  background: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+
+  &__picture {
+    width: 160px;
+    height: 134px;
+    align-self: center;
+  }
+
+  &__title {
+    color: variables.$main-color;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  &__description {
+    color: variables.$secondary-color;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__reviews {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__product-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    align-items: center;
+    line-height: 18px;
+
+    &_title {
+      font-size: 12px;
+      color: variables.$secondary-color;
+    }
+
+    &_total {
+      font-weight: 700;
+      font-size: 16px;
+      color: variables.$main-color;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    margin: 16px 0;
+    background-color: variables.$blue-button;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    border: none;
+
+    &:hover {
+      background-color: white;
+      color: variables.$blue-button;
+      border: 1px solid variables.$blue-button;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+}
