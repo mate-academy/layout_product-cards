@@ -1,0 +1,134 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main_white: #fff;
+  --main_black: #060b35;
+  --main_blue_accent: #00acdc;
+  --secondary_grey: #616070;
+  --grey_elements: #f3f3f3;
+}
+
+.product-card {
+  background-color: var(--main_white);
+  width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid var(--grey_elements);
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    margin: 40px 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--main_black);
+  }
+
+  &__text-code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: var(--secondary_grey);
+  }
+
+  &__amount-rev {
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: var(--main_black);
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: end;
+  }
+
+  &__price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__price-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--secondary_grey);
+  }
+
+  &__price-tag {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--main_black);
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--main_white);
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: var(--main_blue_accent);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--main_blue_accent);
+      border: 1px solid var(--main_blue_accent);
+      cursor: pointer;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--1 :nth-child(-n + 1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
