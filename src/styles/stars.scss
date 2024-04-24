@@ -1,15 +1,28 @@
 @import 'variable';
 
-.star-wrapper {
-  height: $star-size;
-  width: $star-size;
+.stars {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 4px;
 
   &__star {
+    background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
+    height: $star-size;
+    width: $star-size;
+  }
+
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: $star-size;
+    width: $star-size;
   }
 }
