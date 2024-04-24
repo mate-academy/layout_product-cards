@@ -1,0 +1,66 @@
+.product {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  padding-top: 32px;
+  background-color: #fff;
+
+  @include const-padding-inline;
+
+  border-radius: 5px;
+
+  &__photo {
+    display: block;
+    background-image: url(../images/Rectangle\ 4.png);
+    margin: 0 auto 40px;
+
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $product-card-color;
+    margin-bottom: 4px;
+  }
+
+  &__text-code {
+    color: $grey-text-color;
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+    }
+
+    &-count {
+      color: $product-card-color;
+    }
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text-price {
+    color: $grey-text-color;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__text-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $product-card-color;
+  }
+}
