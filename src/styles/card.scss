@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .card {
   width: fit-content;
   border: solid 1px #f3f3f3;
@@ -11,12 +15,12 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 16px;
+  box-sizing: border-box;
 
   &__logo {
     height: 134px;
     width: 160px;
-    margin-top: 16px;
+    margin: 32px 16px 16px;
   }
 
   &__title {
@@ -25,7 +29,7 @@ body {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    margin-top: 40px;
+    margin: 40px 0 0;
   }
 
   &__subtitle {
@@ -33,7 +37,7 @@ body {
     font-size: 10px;
     line-height: 14px;
     color: $card-second-color;
-    margin-top: 4px;
+    margin: 4px 16px 0;
     margin-right: auto;
   }
 
