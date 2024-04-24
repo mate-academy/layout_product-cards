@@ -12,11 +12,18 @@ body {
   margin: 0;
 }
 
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .card {
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  height: 408px;
   width: 200px;
   padding: 32px 16px 16px;
 
@@ -32,6 +39,8 @@ body {
   }
 
   &__description {
+    font-size: inherit;
+    font-weight: inherit;
     margin-top: 40px;
   }
 
@@ -46,6 +55,15 @@ body {
 
   &__rating {
     margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    align-self: center;
   }
 
   &__price {
@@ -75,7 +93,6 @@ body {
 
 .stars {
   display: flex;
-  justify-content: space-between;
 
   &__rating {
     display: flex;
@@ -91,18 +108,15 @@ body {
     &:not(:first-child) {
       margin-left: 4px;
     }
-
-    &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
   }
+}
 
-  &__reviews {
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 400;
-    align-self: center;
-  }
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
 }
 
 .price {
