@@ -1,18 +1,18 @@
 * {
-  font-size: 14px;
-  text-decoration: none;
   box-sizing: border-box;
 }
-@import 'vars';
 
-html{
+@import 'vars';
+@import 'stars';
+
+html {
   font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 14px;
 }
 
 body {
   margin: 0;
+  text-decoration: none;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
   height: 406px;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
-  .card__img {
+  &__img {
     width: 100%;
     max-width: 160px;
     height: 134px;
@@ -33,7 +33,7 @@ p {
     margin: auto;
   }
 
-  .card__title {
+  &__title {
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
@@ -41,38 +41,20 @@ p {
     margin-top: 40px;
   }
 
-  .card__prod-code {
+  &__prod-code {
     margin-top: 4px;
     font-size: 10px;
     line-height: 14px;
-    font-weight: 400;
     color: $color-dark-grey;
   }
 
-  .card__block {
+  &__block {
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
-    .stars {
-      display: flex;
-
-      .stars__star {
-        width: 16px;
-        height: 16px;
-        background-position: center;
-        margin-right: 4px;
-
-        background-repeat: no-repeat;
-        background-image: url(../images/star-active.svg);
-      }
-
-      .stars__star:nth-child(5) {
-        background-image: url('../images/star.svg');
-      }
-    }
     .card-review {
       font-size: 10px;
       line-height: 14px;
@@ -80,18 +62,18 @@ p {
     }
   }
 
-  .card__price {
+  &__price {
     margin-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    .card__txt {
+    &-txt {
       font-size: 12px;
       line-height: 18px;
       color: $color-dark-grey;
     }
-    .card__money {
+    &-money {
       font-size: 16px;
       line-height: 18px;
       color: $color-dark-blue;
@@ -104,6 +86,7 @@ p {
     color: $white-color;
     border-radius: 5px;
     text-transform: uppercase;
+    text-decoration: none;
     text-align: center;
     line-height: 40px;
     font-weight: 700;
@@ -111,14 +94,11 @@ p {
     height: 40px;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 16px;
     &:hover {
       color: $button-blue;
       background-color: $white-color;
       border: 1px solid $button-blue;
     }
-  }
-
-  .btn-inner--Mt {
-    margin-top: 16px;
   }
 }
