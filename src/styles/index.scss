@@ -1,3 +1,116 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.block {
+  width: 200px;
+}
+
+.block__computer {
+  width: 160px;
+  height: 134px;
+  background-image: url(../images/imac.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 32px;
+}
+
+// Додавати до кожного елементу тільки марджин топ і боттом
+
+.block__apple {
+  white-space: nowrap;
+  width: 166px;
+  height: 36px;
+  font-size: 12px;
+  margin-top: 40px;
+  margin-bottom: 4px;
+}
+
+.block__product {
+  font-size: 10px;
+  color: #616070;
+  margin: 0;
+  padding: 0;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__stars {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  margin-top: 16px;
+  vertical-align: middle;
+}
+
+.stars__stars:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars__stars:last-child {
+  padding-right: 17px;
+}
+
+.stars--4 .stars__stars:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.block__reviews {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 10px;
+  color: #060b35;
+  white-space: nowrap;
+}
+
+.blocks_r {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block__price {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 166px;
+}
+
+.block__price-txt {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+}
+
+.block__costs {
+  font-size: 16px;
+  color: #060b35;
+}
+
+.block__button {
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
 }
