@@ -9,10 +9,60 @@
     <title>Product cards</title>
     <link
       rel="stylesheet"
+      href="../../reset/reset.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <div class="card__image"></div>
+
+      <div class="card__profuctName">
+        <p>APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)</p>
+      </div>
+
+      <div class="card__productCode">
+        <p>Product code: 195434</p>
+      </div>
+
+      <div class="card__stars">
+        <div class="card__checked">
+          <div class="card__star"></div>
+          <div class="card__star"></div>
+          <div class="card__star"></div>
+          <div class="card__star"></div>
+          <div class="card__star"></div>
+        </div>
+
+        <div class="card__reviews">
+          <p>Reviews: 5</p>
+        </div>
+      </div>
+
+      <div class="card__price">
+        <p class="card__label">Price:</p>
+        <p class="card__money">$2,199</p>
+      </div>
+
+      <form
+        action="#buy"
+        method="post"
+        data-qa="hover"
+      >
+        <input
+          type="submit"
+          value="BUY"
+          class="card__buy"
+          data-qa="hover"
+        />
+      </form>
+    </div>
   </body>
 </html>
