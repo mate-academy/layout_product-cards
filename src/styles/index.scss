@@ -1,4 +1,5 @@
 @import './variables';
+@import './stars';
 
 html {
   font-family: Roboto, sans-serif;
@@ -8,14 +9,8 @@ html {
   color: #060b35;
 }
 
-body {
-  margin: 0;
-}
-
-h3 {
-  margin: 0;
-}
-
+body,
+h3,
 p {
   margin: 0;
 }
@@ -89,34 +84,6 @@ p {
       border: 1px solid $color-of-buy-button;
     }
   }
-}
-
-.stars {
-  display: flex;
-
-  &__rating {
-    display: flex;
-  }
-
-  &__star {
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: $star-size;
-    width: $star-size;
-
-    &:not(:first-child) {
-      margin-left: 4px;
-    }
-  }
-}
-
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(../images/star-active.svg);
 }
 
 .price {
