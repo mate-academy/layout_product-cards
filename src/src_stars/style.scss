@@ -1,0 +1,36 @@
+$marg_pad: 0;
+$width_height: 16px;
+$poss: $width_height / 4;
+$iterate: 0;
+$numero_size: 0, 1, 2, 3, 4, 5;
+
+body {
+  margin: $marg_pad;
+  padding: $marg_pad;
+}
+
+.stars {
+  margin: $marg_pad;
+  padding: $marg_pad;
+  display: flex;
+
+  &__star {
+    padding: $marg_pad;
+    margin: $marg_pad;
+    width: $width_height;
+    height: $width_height;
+
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: $poss;
+    }
+  }
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+  background-position: center;
+}

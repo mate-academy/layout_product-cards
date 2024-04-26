@@ -26,18 +26,17 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  width: 200px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 198px;
+  width: 200px;
   background-color: $button_color_hover;
   border: 1px solid $border_color;
   border-radius: 5px;
+  box-sizing: border-box;
 
   &:hover {
     border: 1px solid $border_color;
@@ -80,37 +79,15 @@ body {
   }
 
   &__stars {
+    display: flex;
     width: 166px;
     margin-top: 16px;
+    justify-content: space-between;
+    line-height: 16px;
 
-    &__checked {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      float: left;
-    }
+    @import 'src/src_stars/style';
   }
 
-  &__star {
-    padding: 0;
-    margin: 0;
-    width: 16px;
-    height: 16px;
-    float: left;
-
-    background-repeat: no-repeat;
-    background-image: url(../images/star.svg);
-    background-position: center;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-
-    &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-      background-position: center;
-    }
-  }
   &__reviews {
     font-family: Roboto-Regular, sans-serif;
     font-size: 10px;
@@ -129,6 +106,8 @@ body {
   &__price {
     width: 166px;
     margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__label {
@@ -138,7 +117,6 @@ body {
     line-height: 18px;
     text-align: left;
     color: $second_color;
-    float: left;
   }
 
   &__money {
@@ -147,7 +125,6 @@ body {
     font-weight: 700;
     line-height: 18px;
     color: $main_text_color;
-    float: right;
   }
 
   &__buy {
@@ -164,6 +141,7 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 700;
+    text-decoration: none;
 
     &:hover {
       background-color: $button_color_hover;
