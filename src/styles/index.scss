@@ -18,6 +18,8 @@
   src: url(../fonts/Roboto-Light.ttf);
 }
 
+@import '../utils/mixins';
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -33,12 +35,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 198px;
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid #f3f3f3;
+  background-color: $button_color_hover;
+  border: 1px solid $border_color;
   border-radius: 5px;
 
   &:hover {
-    border: 1px solid #f3f3f3;
+    border: 1px solid $border_color;
   }
 
   &__image {
@@ -48,10 +50,8 @@ body {
     display: block;
     width: 160px;
     height: 134px;
-    background: url('../images/imac.jpeg');
+    background: no-repeat url('../images/imac.jpeg');
     background-size: 160px 134px;
-    background-repeat: no-repeat;
-
     border: none;
   }
 
@@ -66,18 +66,17 @@ body {
     font-weight: 500;
     line-height: 18px;
     font-size: 12px;
-    color: #060b35;
+    color: $main_text_color;
   }
 
   &__productCode {
-    margin: 0;
-    margin-top: 4px;
+    margin: 4px 0 0;
     width: 166px;
     font-family: Roboto-Regular, sans-serif;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #616070;
+    color: $second_color;
   }
 
   &__stars {
@@ -118,7 +117,7 @@ body {
     font-weight: 400;
     line-height: 18px;
     text-align: right;
-    color: #060b35;
+    color: $main_text_color;
     float: right;
 
     p {
@@ -138,7 +137,7 @@ body {
     font-weight: 400;
     line-height: 18px;
     text-align: left;
-    color: #616070;
+    color: $second_color;
     float: left;
   }
 
@@ -147,7 +146,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    color: #060b35;
+    color: $main_text_color;
     float: right;
   }
 
@@ -156,20 +155,20 @@ body {
     height: 40px;
     margin: 16px;
     margin-bottom: 15px;
-    background-color: #00acdc;
+    background-color: $button_color;
     border-radius: 5px;
     line-height: 40px;
     text-align: center;
-    border: 1px solid #00acdc;
-    color: #fff;
+    border: 1px solid $button_color;
+    color: $button_color_hover;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 700;
 
     &:hover {
-      background-color: #fff;
-      border: 1px solid #00acdc;
-      color: #00acdc;
+      background-color: $button_color_hover;
+      border: 1px solid $button_color;
+      color: $button_color;
     }
   }
 }
