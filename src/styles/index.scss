@@ -1,4 +1,5 @@
 @import './utils/variables';
+@import './stars/stars';
 
 html {
   font-family: Roboto, sans-serif;
@@ -13,22 +14,21 @@ body {
   width: $card-width;
   border: 1px solid $card-border;
   border-radius: 5px;
-  background-color: #fff;
   color: $main-accent;
   padding: $p-card;
 
   &__image {
+    display: block;
     width: 160px;
     height: 134px;
-    background-image: url('../images/imac.jpeg');
-    background-repeat: no-repeat;
-    background-size: 160px 134px;
     margin: 0 3px 40px;
   }
 
   &__title {
+    margin-top: 0;
     height: 36px;
     font-size: 12px;
+
     font-weight: $fw-regular;
     line-height: 18px;
     margin-bottom: 4px;
@@ -36,8 +36,8 @@ body {
 
   &__product-code {
     font-size: 10px;
-    font-weight: $fw-light;
     line-height: 14px;
+    margin-top: 0;
     margin-bottom: 16px;
     color: $secondary;
   }
@@ -51,7 +51,6 @@ body {
 
   &__review {
     font-size: 10px;
-    font-weight: $fw-light;
     line-height: 14px;
     height: 16px;
     display: flex;
@@ -65,7 +64,6 @@ body {
 
     :first-child {
       font-size: 12px;
-      font-weight: $fw-light;
       line-height: 18px;
       color: $secondary;
     }
@@ -89,35 +87,10 @@ body {
     display: block;
     text-align: center;
     height: 40px;
+
+    &:hover {
+      color: $blue-accent;
+      background-color: #fff;
+    }
   }
-
-  &__link:hover {
-    color: $blue-accent;
-    background-color: #fff;
-  }
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-image: url('../images/star.svg');
-  background-repeat: no-repeat;
-  background-position: 2px 2px;
-  background-size: 80%;
-}
-
-.stars__star:not(:first-child) {
-  margin-left: 4px;
-}
-
-.stars--1 :nth-child(-n + 1),
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(-n + 5) {
-  background-image: url('../images/star-active.svg');
 }
