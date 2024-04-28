@@ -1,3 +1,96 @@
+@import './utils/variables';
+@import './stars/stars';
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  border: 1px solid $card-border;
+  border-radius: 5px;
+  color: $main-accent;
+  padding: $p-card;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 3px 40px;
+  }
+
+  &__title {
+    margin-top: 0;
+    height: 36px;
+    font-size: 12px;
+
+    font-weight: $fw-regular;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    font-size: 10px;
+    line-height: 14px;
+    height: 16px;
+    display: flex;
+    align-items: end;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    :first-child {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+    }
+
+    :last-child {
+      font-size: 16px;
+      font-weight: $fw-bold;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: $fw-bold;
+    line-height: 40px;
+    background-color: $blue-accent;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    height: 40px;
+
+    &:hover {
+      color: $blue-accent;
+      background-color: #fff;
+    }
+  }
 }
