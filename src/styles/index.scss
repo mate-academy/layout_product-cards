@@ -1,5 +1,7 @@
 $button-color: #00acdc;
 $main-text-color: #060b35;
+$secondary-text-color: #616070;
+$border-color: #f3f3f3;
 
 body {
   margin: 0;
@@ -8,6 +10,12 @@ body {
 
 p {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
@@ -19,20 +27,15 @@ p {
   align-content: center;
   padding: 32px 16px 16px;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
 
-  &__img-cont {
-    width: 160px;
-    height: 134px;
+  &__img {
+    width: 160.5px;
+    height: 100%;
     margin: 0 auto;
   }
 
-  &__img {
-    width: 100%;
-    height: 100%;
-  }
-
-  &__product-title-cont {
+  &__product-main-info {
     margin-top: 40px;
   }
 
@@ -46,7 +49,7 @@ p {
 
   &__product-code {
     font-size: 10px;
-    color: #616070;
+    color: $secondary-text-color;
     margin-top: 4px;
   }
 
@@ -93,7 +96,7 @@ p {
   }
 
   &__product-price-title {
-    color: #616070;
+    color: $secondary-text-color;
     font-size: 12px;
   }
 
