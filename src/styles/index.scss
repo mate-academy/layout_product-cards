@@ -128,3 +128,25 @@ ul {
     }
   }
 }
+
+.stars {
+  display: flex;
+  width: 96px;
+  height: 12px;
+  margin-left: 2px;
+
+  &__star {
+    width: 13px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &:not(:first-child) {
+      margin-left: 7px;
+    }
+  }
+}
