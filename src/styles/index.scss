@@ -1,3 +1,86 @@
+@use 'inc' as *;
+@import 'stars';
+
 body {
+  padding: 0;
   margin: 0;
+  background-color: #f3f3f3;
+  font-family: $bodyfont;
+}
+
+.card {
+  width: 100%;
+  max-width: rem(200);
+  border-radius: rem(5);
+  border: rem(1) solid #f3f3f3;
+  background: $white;
+  padding: rem(32) rem(16) rem(16);
+  display: flex;
+  flex-direction: column;
+
+  &__featured {
+    width: 100%;
+    max-width: rem(160);
+    height: rem(134);
+    margin: 0 auto rem(40) auto;
+  }
+
+  &__title {
+    color: $main;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: lineheight(18, 12);
+    margin-bottom: rem(4);
+    text-decoration: none;
+  }
+
+  &__caption {
+    color: $second;
+    font-size: rem(10);
+    line-height: lineheight(14, 10);
+    margin-bottom: rem(16);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(16);
+
+    &-caption {
+      font-size: rem(12);
+      color: $second;
+      line-height: lineheight(18, 12);
+    }
+
+    &-qnt {
+      font-size: rem(16);
+      color: $main;
+      font-weight: 700;
+      line-height: lineheight(18, 16);
+    }
+  }
+
+  &__buy {
+    color: $white;
+    width: 100%;
+    padding: rem(12) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(14);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: lineheight(16, 14);
+    background-color: $blue;
+    border-radius: rem(5);
+    transition: 0.3s ease-in-out;
+    border: rem(1) solid $blue;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
 }
