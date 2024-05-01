@@ -1,3 +1,9 @@
+.card > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -5,6 +11,7 @@
 
   width: 200px;
   padding: 32px 16px 0;
+  margin: 0;
 
   background-color: #fff;
   border: 1px solid #f3f3f3;
@@ -44,6 +51,10 @@
     }
   }
 
+  &__price > * {
+    margin: 0;
+  }
+
   &__price {
     display: flex;
     justify-content: space-between;
@@ -75,12 +86,13 @@
     border: none;
     background-color: #00acdc;
     color: #fff;
+    transition: ease-in 0.5s;
 
     &:hover {
       background-color: #fff;
       color: #00acdc;
       border: 1px solid #00acdc;
-      transition: all 0.5s;
+      transition: ease-out 0.5s;
       cursor: pointer;
     }
   }

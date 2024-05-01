@@ -1,8 +1,16 @@
 @use '../blocks/card.scss';
 
+.stars,
+.stars > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .stars {
   display: flex;
   justify-content: left;
+  padding-left: 0;
 
   &__star {
     list-style: none;
@@ -12,6 +20,8 @@
     background-repeat: no-repeat;
     margin-right: 4px;
     background-position: center center;
+    box-sizing: border-box;
+    padding: 0;
   }
 
   &__star:last-child {
