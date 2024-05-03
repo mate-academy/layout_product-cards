@@ -19,8 +19,9 @@
     margin-left: auto;
   }
 
-  & :nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-    margin-right: 4px;
+  @for $current from 1 through 5 {
+    &--#{$current} &__item:nth-child(-n + #{$current}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
