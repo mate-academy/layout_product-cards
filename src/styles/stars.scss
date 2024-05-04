@@ -1,0 +1,26 @@
+$star-active-images: (
+  1: '../images/star-active.svg',
+  2: '../images/star-active.svg',
+  3: '../images/star-active.svg',
+  4: '../images/star-active.svg',
+  5: '../images/star-active.svg',
+);
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-position: center;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+  }
+
+  @each $num, $img in $star-active-images {
+    &--#{$num} .stars__star:nth-child(-n + #{$num}) {
+      background-image: url($img);
+    }
+  }
+}
