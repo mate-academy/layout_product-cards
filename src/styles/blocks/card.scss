@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+  width: $cardWidth;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: $imageWidth;
+    height: $imageHeight;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    font-family: $bodyFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 4px;
+    color: $titleColor;
+  }
+
+  &__description {
+    font-family: $bodyFont;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $descriptionColor;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    font-size: 10px;
+
+    &-numbers {
+      font-family: $bodyFont;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      color: $priceTitleColor;
+    }
+
+    &-value {
+      font-family: $bodyFont;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $priceNumberColor;
+    }
+  }
+
+  &__button {
+    font-family: $bodyFont;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    height: $buttonHeight;
+    width: 100%;
+    border: 1px solid $buttonBorderColor;
+    border-radius: $buttonBorderRadius;
+    background-color: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $buttonHoverBackgroundColor;
+      color: $buttonHoverTextColor;
+    }
+  }
+}
