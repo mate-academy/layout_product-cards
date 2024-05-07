@@ -1,11 +1,11 @@
-html {
-  box-sizing: border-box;
-}
+$almost-white: #f3f3f3;
+$bg-white: #fff;
+$light-blue: #00acdc;
 
 body {
   padding: 0;
   margin: 0;
-  background-color: #f3f3f3;
+  background-color: $almost-white;
   font-family: Roboto, sans-serif;
 }
 
@@ -40,7 +40,11 @@ ul {
   margin-right: 4px;
 }
 
-.card__reviews-stars--4 .card__reviews-star:nth-child(-n + 4) {
+.card__reviews-stars--1 .card__reviews-star:nth-child(-n + 1),
+.card__reviews-stars--2 .card__reviews-star:nth-child(-n + 2),
+.card__reviews-stars--3 .card__reviews-star:nth-child(-n + 3),
+.card__reviews-stars--4 .card__reviews-star:nth-child(-n + 4),
+.card__reviews-stars--5 .card__reviews-star:nth-child(-n + 5) {
   background-image: url(../images/star-active.svg);
 }
 
@@ -53,9 +57,10 @@ ul {
 .card {
   width: 100%;
   width: 200px;
+  box-sizing: border-box;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
-  background: #fff;
+  border: 1px solid $almost-white;
+  background: $bg-white;
   padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
@@ -104,7 +109,7 @@ ul {
 }
 
 .card__buy {
-  color: #fff;
+  color: $bg-white;
   width: 100%;
   padding: 12px 0;
   display: flex;
@@ -114,14 +119,14 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 16px;
-  background-color: #00acdc;
+  background-color: $light-blue;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
-  border: 1px solid #00acdc;
+  border: 1px solid $light-blue;
   text-decoration: none;
 }
 
 .card__buy:hover {
-  background-color: #fff;
-  color: #00acdc;
+  background-color: $bg-white;
+  color: $light-blue;
 }
