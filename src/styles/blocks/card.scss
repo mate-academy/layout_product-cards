@@ -1,0 +1,82 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $widthCard;
+  border: 1px solid #ffff;
+  font-family: $bodyFont;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+
+  &__image {
+    width: $imageWidth;
+    height: $imageHeight;
+    margin: 0 auto 40px;
+  }
+
+  &__product {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $productColor;
+    margin: 0 0 4px;
+  }
+
+  &__description {
+    line-height: 14px;
+    font-size: 10px;
+    color: $descriptionColor;
+    margin: 0 0 16px;
+  }
+
+  &__rewiews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 24px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    line-height: 18px;
+
+    &-title {
+      font-size: $priceTitleFontSize;
+      color: $priceTitleColor;
+    }
+
+    &-value {
+      color: $priceValueColor;
+      font-weight: $priceValueWeigth;
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    color: $buttonColor;
+    background-color: $buttonBackgroundColor;
+
+    border: 1px solid $buttonBorderColor;
+    border-radius: $buttonBorderRadius;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+    }
+  }
+}
