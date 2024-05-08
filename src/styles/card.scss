@@ -1,0 +1,72 @@
+.card {
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 200px;
+  background-color: $card-color;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__description {
+    font-size: 10px;
+    line-height: 14px;
+    color: $description-color;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $title-color;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid $card-color-accent;
+    border-radius: 5px;
+    background-color: $card-color-accent;
+    font-size: 14px;
+    font-weight: 700;
+    color: $card-color;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $card-color;
+      color: $card-color-accent;
+      border: 1px solid $card-color-accent;
+      cursor: pointer;
+    }
+  }
+
+  &__rewiews {
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: 24px;
+    width: 100%;
+
+    &-numbers {
+      color: $title-color;
+      font-size: 10px;
+      line-height: 14px;
+      align-items: flex-end;
+    }
+  }
+}
