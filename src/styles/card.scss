@@ -1,60 +1,46 @@
 .card {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 200px;
   border: 1px solid rgba(243, 243, 243, 1);
   font-family: Roboto, sans-serif;
 
   &__img {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__imac {
+    margin: 32px auto 0;
     width: 160px;
     height: 134px;
-    margin-top: 32px;
   }
 
-  &__section {
-    margin: 0 16px;
-    width: $section-width;
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+  &__info--model {
+    font-weight: $medium-font;
+    font-size: 12px;
+    height: 36px;
+    line-height: 18px;
+    margin: 40px 16px 0;
     color: $first-color;
+  }
 
-    &--model {
-      font-weight: $medium-font;
-      font-size: 12px;
-      height: 36px;
-      line-height: 18px;
-      margin-top: 0;
-    }
-
-    &--code {
-      font-weight: $regular-font;
-      font-size: 10px;
-      height: 14px;
-      line-height: 14px;
-      margin-top: 4px;
-      color: $second-color;
-    }
+  &__info--code {
+    font-weight: $regular-font;
+    font-size: 10px;
+    height: 14px;
+    line-height: 14px;
+    margin: 4px 16px 0;
+    color: $second-color;
   }
 
   &__stats {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
+    margin: 16px 16px 0;
 
     &--reviews {
       font-weight: $regular-font;
       font-size: 10px;
       color: $first-color;
-      margin-top: 0;
+      margin: 0;
     }
   }
 
@@ -64,51 +50,43 @@
     height: 18px;
     line-height: 18px;
     align-items: center;
-    margin-top: 24px;
+    margin: 24px 16px 0;
 
     &--price {
       font-weight: $regular-font;
       font-size: 12px;
       color: $second-color;
-      margin-top: 0;
+      margin: 0;
     }
 
     &--cost {
       font-weight: $bold-font;
       font-size: 16px;
       color: $first-color;
-      margin-top: 0;
+      margin: 0;
     }
   }
 
-  &__buy {
+  &__link {
     box-sizing: border-box;
     border: 1px solid $url-color;
     height: 40px;
     background-color: $url-color;
     border-radius: 5px;
-    margin: 16px 0;
-
-    &:hover {
-      background-color: inherit;
-    }
-  }
-
-  &__link {
+    margin: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
-    width: 100%;
-    height: 40px;
     line-height: 40px;
     font-size: 14px;
     font-weight: $bold-font;
     cursor: pointer;
-  }
 
-  &__link:hover {
-    color: $url-color;
+    &:hover {
+      background-color: inherit;
+      color: $url-color;
+    }
   }
 }
