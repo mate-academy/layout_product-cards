@@ -1,0 +1,80 @@
+.product {
+  display: block;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  &_img {
+    display: flex;
+    justify-content: center;
+    padding: 32px 19px 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &_name {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: $mainFont;
+    font-weight: 500;
+    color: rgba(6, 11, 53, 1);
+
+    @include content-padding-inline;
+
+    margin: 0 0 4px;
+  }
+
+  &_code {
+    @include additional-font-size;
+    @include content-padding-inline;
+
+    font-family: $mainFont;
+    font-weight: 400;
+    color: rgba(97, 96, 112, 1);
+    margin: 0;
+  }
+
+  &_rating {
+    @include content-padding-inline;
+
+    padding-block: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_rating_reviews {
+    @include additional-font-size;
+
+    font-family: $mainFont;
+    font-weight: 400;
+    color: rgba(6, 11, 53, 1);
+    margin: 2px 0 0 16px;
+  }
+
+  &_pricing {
+    @include content-padding-inline;
+
+    display: flex;
+    justify-content: space-between;
+
+    &_line {
+      font-size: 12px;
+      line-height: 18px;
+      font-family: $mainFont;
+      font-weight: 400;
+      color: rgba(97, 96, 112, 1);
+      margin: 0;
+    }
+
+    &_amount {
+      font-size: 16px;
+      line-height: 18px;
+      font-family: $mainFont;
+      font-weight: 700;
+      color: rgba(6, 11, 53, 1);
+      margin: 0;
+    }
+  }
+}
