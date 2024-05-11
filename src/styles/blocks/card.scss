@@ -1,0 +1,118 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.product {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    top: 33px;
+    left: 20px;
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    margin: 32px 19px 40px;
+  }
+
+  &__art {
+    width: $fixed-width;
+    height: 36px;
+    margin: 0 16px 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: $main-text-color;
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin: 0 84px 16px 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: $secondary-text-color;
+  }
+
+  &__price {
+    margin: 24px 16px 0;
+    width: $fixed-width;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      width: 31px;
+      height: 18px;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      color: $secondary-text-color;
+    }
+
+    &-number {
+      width: 50px;
+      height: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+      color: $main-text-color;
+    }
+  }
+
+  &__button {
+    margin: 16px;
+
+    &-link {
+      display: block;
+      width: $fixed-width;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #00acdc;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+
+      &:hover {
+        box-sizing: border-box;
+        color: #00acdc;
+        border: 1px solid #00acdc;
+        background-color: #fff;
+        text-align: center;
+      }
+    }
+  }
+
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $fixed-width;
+    height: 16px;
+    margin: 0 16px;
+
+    &-reviews {
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+      color: $main-text-color;
+    }
+  }
+}
