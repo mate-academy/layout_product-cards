@@ -1,3 +1,117 @@
 body {
   margin: 0;
+  font-family: "Roboto, sans-serif";
+}
+
+$color-blue-accent: #00acdc;
+$color-main-accent: #060b35;
+$color-gray: #616070;
+$card-width: 200px;
+
+.card {
+  width: $card-width;
+  padding: 32px 16px 16px;
+
+  &__photo {
+    display: block;
+
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $color-main-accent;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-gray;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-main-accent;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-gray;
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $color-main-accent;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #fff;
+
+    background-color: $color-blue-accent;
+    border-radius: 5px;
+    &:hover {
+      background-color: #fff;
+      color: $color-blue-accent;
+      border: 1px solid #00acdc;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.stars--4 .stars__star {
+  background-image: url('../images/star.svg');
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
 }
