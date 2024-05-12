@@ -6,8 +6,11 @@ body {
   margin: 0;
 }
 
-.product {
+* {
   box-sizing: border-box;
+}
+
+.product {
   width: 200px;
   padding: 32px 16px 16px;
   border-radius: 5px;
@@ -33,7 +36,6 @@ body {
   }
 
   &__code {
-    width: 98px;
     height: 14px;
     margin: 4px 0 16px;
     font-size: 10px;
@@ -50,7 +52,6 @@ body {
     justify-content: space-between;
 
     &-text {
-      width: 31px;
       height: 18px;
       font-size: 12px;
       line-height: 18px;
@@ -71,27 +72,23 @@ body {
 
   &__button {
     margin-top: 16px;
+    display: block;
+    width: $fixed-width;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #00acdc;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
 
-    &-link {
-      display: block;
-      width: $fixed-width;
-      height: 40px;
-      line-height: 40px;
+    &:hover {
+      color: #00acdc;
+      border: 1px solid #00acdc;
+      background-color: #fff;
       text-align: center;
-      border-radius: 5px;
-      background-color: #00acdc;
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      text-decoration: none;
-
-      &:hover {
-        box-sizing: border-box;
-        color: #00acdc;
-        border: 1px solid #00acdc;
-        background-color: #fff;
-        text-align: center;
-      }
     }
   }
 
@@ -99,7 +96,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: $fixed-width;
     height: 16px;
 
     &-reviews {
