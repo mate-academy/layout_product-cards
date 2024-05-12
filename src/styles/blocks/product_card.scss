@@ -1,4 +1,14 @@
+body {
+  background-color: #eee;
+}
+
+.product__card {
+  margin: 40px 16px 16px 16px;
+  background-color: #fff;
+}
+
 .product {
+  background-color: #fff;
   display: block;
   box-sizing: border-box;
   width: 200px;
@@ -9,7 +19,7 @@
   &_img {
     display: flex;
     justify-content: center;
-    padding: 32px 19px 40px;
+    padding: 32px 19px 0;
     width: 160px;
     height: 134px;
   }
@@ -21,14 +31,11 @@
     font-weight: 500;
     color: rgba(6, 11, 53, 1);
 
-    @include content-padding-inline;
-
     margin: 0 0 4px;
   }
 
   &_code {
     @include additional-font-size;
-    @include content-padding-inline;
 
     font-family: $mainFont;
     font-weight: 400;
@@ -37,8 +44,6 @@
   }
 
   &_rating {
-    @include content-padding-inline;
-
     padding-block: 16px 24px;
     display: flex;
     justify-content: space-between;
@@ -54,8 +59,6 @@
   }
 
   &_pricing {
-    @include content-padding-inline;
-
     display: flex;
     justify-content: space-between;
 
