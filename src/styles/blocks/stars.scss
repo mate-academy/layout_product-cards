@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 24px;
+
+  &__block {
+    display: flex;
+  }
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__amount {
+    font-size: $baseFontSize - 2px;
+    font-weight: $baseFontWeight;
+    line-height: 16px;
+    color: $darkBlue;
+  }
+}
