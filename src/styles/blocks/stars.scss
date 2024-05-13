@@ -1,11 +1,8 @@
 .stars {
   display: flex;
   justify-content: space-between;
-  padding: 0 16px 24px;
-
-  &__block {
-    display: flex;
-  }
+  align-items: center;
+  padding-bottom: 24px;
 
   &__star {
     height: 16px;
@@ -20,10 +17,19 @@
     }
   }
 
+  &__block {
+    display: flex;
+
+    ::after {
+      content: '';
+      margin-right: 0;
+    }
+  }
+
   &__amount {
     font-size: $baseFontSize - 2px;
     font-weight: $baseFontWeight;
-    line-height: 16px;
+    line-height: 14px;
     color: $darkBlue;
   }
 }
