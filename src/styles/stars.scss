@@ -1,0 +1,35 @@
+.product-card__reviews {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &-stars {
+    display: flex;
+
+    & :nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    & :last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+  }
+
+  &-qty {
+    display: flex;
+    align-items: end;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-text-color;
+  }
+}
