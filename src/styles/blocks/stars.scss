@@ -1,0 +1,35 @@
+@use '../utils/variables' as *;
+@use '../blocks/reset.scss';
+
+.card__stars {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  &-star {
+    content: '';
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+
+  .card__stars-star:nth-child(-n + 0),
+  .card__stars-star:nth-child(-n + 1),
+  .card__stars-star:nth-child(-n + 2),
+  .card__stars-star:nth-child(-n + 3),
+  .card__stars-star:nth-child(-n + 4),
+  .card__stars-star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+
+  &-reviews {
+    font-size: 10px;
+    font-weight: $font-normal;
+    margin-left: auto;
+    line-height: 14px;
+    text-align: right;
+    color: rgba(6, 11, 53, 1);
+  }
+}
