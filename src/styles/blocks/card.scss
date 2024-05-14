@@ -1,0 +1,108 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  padding-top: 32px;
+  padding-inline: 16px;
+  padding-bottom: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    width: 160px;
+    height: 134px;
+    padding-inline: 3px;
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      color: $main_color;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 4px;
+      height: 36px;
+    }
+
+    &--code {
+      color: $Secondary_color;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    &--rating {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+
+      &--reviews {
+        text-align: right;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: $main_color;
+      }
+    }
+
+    &--price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      &--title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $Secondary_color;
+      }
+
+      &--cost {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: $main_color;
+      }
+    }
+
+    &--button {
+      box-sizing: border-box;
+      background-color: $blue_color;
+      height: 40px;
+      width: 166px;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 40px;
+      color: #fff;
+      justify-content: center;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+
+      &:hover {
+        background-color: #fff;
+        color: $blue_color;
+        border: 1px solid $blue_color;
+      }
+    }
+  }
+}
