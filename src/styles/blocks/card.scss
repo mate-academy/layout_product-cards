@@ -1,0 +1,90 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 16px;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-size: $image-width $image-height;
+    background-repeat: no-repeat;
+    width: $image-width;
+    height: $image-height;
+    margin-block: 32px 40px;
+  }
+
+  &__button {
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    width: $content-width;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white-color;
+    font-weight: $font-weight-bold;
+    background-color: $button-color;
+    border-radius: $border-radius;
+    border: none;
+
+    &:hover {
+      border: 1px solid $button-color;
+      background-color: $white-color;
+      color: $button-color;
+    }
+  }
+}
+
+.content {
+  margin-bottom: 16px;
+
+  &__title {
+    color: $dark-color;
+    font-weight: 500;
+
+    @include average-font;
+
+    padding-bottom: 4px;
+  }
+
+  &__code {
+    color: $grey-color;
+
+    @include small-font;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $content-width;
+  }
+}
+
+.rate {
+  padding-bottom: 24px;
+
+  &__reviews {
+    color: $dark-color;
+
+    @include small-font;
+  }
+}
+
+.price {
+  &__text {
+    color: $grey-color;
+    
+    @include average-font;
+  }
+
+  &__price {
+    font-weight: $font-weight-bold;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
