@@ -8,11 +8,64 @@
   align-items: center;
   padding-inline: 16px;
 
+  & > * {
+    margin-bottom: 16px;
+  }
+
   &__image {
     object-position: center;
     width: $image-width;
     height: $image-height;
-    margin-block: 32px 40px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: $dark-color;
+    font-weight: 500;
+
+    @include average-font;
+
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $grey-color;
+    font-weight: 400;
+    width: $content-width;
+
+    @include small-font;
+    
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $content-width;
+
+    &-reviews {
+      color: $dark-color;
+
+      @include small-font;
+    }
+
+    &-text {
+      color: $grey-color;
+
+      @include average-font;
+    }
+
+    &-price {
+      font-weight: $font-weight-bold;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &:first-of-type {
+      margin-bottom: 24px;
+    }
   }
 
   &__button {
@@ -33,56 +86,5 @@
       background-color: $white-color;
       color: $button-color;
     }
-  }
-}
-
-.content {
-  margin-bottom: 16px;
-
-  &__title {
-    color: $dark-color;
-    font-weight: 500;
-
-    @include average-font;
-
-    padding-bottom: 4px;
-  }
-
-  &__code {
-    color: $grey-color;
-    font-weight: 400;
-
-    @include small-font;
-  }
-
-  &__text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: $content-width;
-  }
-}
-
-.rate {
-  padding-bottom: 24px;
-
-  &__reviews {
-    color: $dark-color;
-
-    @include small-font;
-  }
-}
-
-.price {
-  &__text {
-    color: $grey-color;
-
-    @include average-font;
-  }
-
-  &__price {
-    font-weight: $font-weight-bold;
-    font-size: 16px;
-    line-height: 18px;
   }
 }
