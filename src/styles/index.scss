@@ -1,3 +1,111 @@
-body {
-  margin: 0;
+@import './variables';
+@import './stars';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  body {
+    margin: 0;
+    .card {
+      width: 200px;
+      height: 408px;
+      border: 1px solid #f3f3f3;
+      border-radius: 5px;
+
+      &__image {
+        width: 160px;
+        height: 134px;
+        display: flex;
+        margin: 32px 19px 0;
+      }
+
+      &__content {
+        margin: 40px 16px 0;
+      }
+
+      &__model {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: $mainAccent;
+        margin: 0;
+      }
+
+      &__code {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: $secondaryColor;
+        margin-top: 4px;
+        margin-bottom: 0;
+      }
+
+      &__rate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+      }
+
+      &__review {
+        font-size: 10px;
+        line-height: 14px;
+        font-weight: 400;
+        color: $mainAccent;
+        margin: 0;
+      }
+
+      &__price-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+
+      &__price {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $secondaryColor;
+        margin: 0;
+      }
+
+      &__value {
+        margin: 0;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: $mainAccent;
+      }
+
+      &__button {
+        margin-top: 16px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        background-color: $BlueAccent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 0;
+        color: #fff;
+
+        &:hover {
+          border: 1px solid $BlueAccent;
+          background-color: #fff;
+          color: $BlueAccent;
+        }
+      }
+    }
+  }
 }
