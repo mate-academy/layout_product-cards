@@ -1,13 +1,26 @@
+* {
+  color: $mainTextColor;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .card {
+  box-sizing: border-box;
+  border: solid 1px #f3f3f3;
+  border-radius: 5px;
+
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 200px;
+
+  padding-top: 32px;
 
   &__image {
-    width: 160px;
     height: 134px;
-
-    margin-top: 32px;
+    width: 160px;
     margin-inline: 19px;
   }
 
@@ -38,7 +51,7 @@
   &__review {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     margin-top: 16px;
 
     &-text {
@@ -80,21 +93,23 @@
 
   &__button {
     box-sizing: border-box;
-    display: block;
+    display: inline-block;
     margin-block: 16px;
 
     height: 40px;
-    line-height: 40px;
+
+    line-height: 38px;
+
     width: 100%;
 
     background-color: #00acdc;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    text-align: center;
     text-transform: uppercase;
     font-family: $basicFont;
     font-size: 14px;
+    text-align: center;
     font-weight: 700;
 
     border: solid 1px #00acdc;
