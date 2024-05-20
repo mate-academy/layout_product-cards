@@ -11,8 +11,8 @@ body {
 
 .card {
   display: flex;
-  width: 200px;
-  padding: 0 16px;
+  max-width: 200px;
+  padding: 32px 16px 16px;
   border-radius: 5px;
   border: 1px solid rgba(243, 243, 243, 1);
   background: $soft-white;
@@ -21,21 +21,19 @@ body {
 
   &__imac {
     display: flex;
-    background-image: url('../images/imac.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    justify-content: center;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
-    margin: 32px auto 0;
   }
 
   &__info {
     color: $dark-blue;
-    margin: 40px 0 4px;
-    width: 100%;
+    margin-bottom: 4px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
+    text-align: left;
   }
 
   &__code {
@@ -51,43 +49,46 @@ body {
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-bottom: 16px;
+
     display: flex;
-    width: 100%;
     height: 40px;
+    width: 100%;
+    border: 1px solid $blue;
     border-radius: 5px;
+
     background-color: $blue;
     color: $soft-white;
+
     line-height: 16px;
     font-size: 14px;
-    font-weight: $font-bold;
+    font-weight: $font-700;
     text-decoration: none;
 
     &:hover {
-      box-sizing: border-box;
+      width: 100%;
       cursor: pointer;
       border: 1px solid $blue;
-      border-radius: 5px;
       color: $blue;
       background-color: $soft-white;
     }
   }
 
   &__price {
-    margin: 24px 0 16px;
-    width: 100%;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &-value {
       font-size: 16px;
-      font-weight: $font-bold;
+      font-weight: $font-700;
+      text-align: right;
+      color: $dark-blue;
       line-height: 18px;
     }
 
     &-text {
+      text-align: left;
       color: $grey;
       font-size: 12px;
       font-weight: $font-normal;
