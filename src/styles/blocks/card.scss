@@ -1,0 +1,89 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+
+  @include card-padding-inline;
+  @include card-padding-block;
+
+  color: $main-accent-text-color;
+  background-color: $light-accent-text-color;
+  border: 1px solid $card-border-color;
+
+  &__img {
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+  }
+
+  &__header {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-bottom: 4px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-text-color;
+    padding-bottom: 16px;
+  }
+
+  &__text--big {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__text--price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $main-accent-text-color;
+  }
+
+  &__text--reviews {
+    color: $main-accent-text-color;
+    padding-bottom: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    align-items: flex-end;
+  }
+
+  &__button-buy {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-accent-text-color;
+    background-color: $accent-color;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    padding-block: 12px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $light-accent-text-color;
+      border: 1px solid $accent-color;
+      color: $accent-color;
+    }
+  }
+}
