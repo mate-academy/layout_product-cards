@@ -1,3 +1,132 @@
 body {
   margin: 0;
 }
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+
+// *{
+//   outline: dashed 0.1px red;
+// }
+
+$text-color: rgba(6, 11, 53, 1);
+$button-color: rgba(0, 172, 220, 1);
+
+.card {
+  width: 166px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-top: 16px;
+  }
+
+  &__product-description {
+    color: $text-color;
+    font-size: 12px;
+    margin-top: 40px;
+
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    color: $text-color;
+    font-size: 10px;
+    margin-top: 4px;
+    margin-right: auto;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__stars {
+    width: 100%;
+    margin: 16px 0 24px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    color: $text-color;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+
+  &--1 .stars__star:nth-child(1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.card__price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &-text {
+    color: rgba(97, 96, 112, 1);
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  &-price {
+    color: &$text-color;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.btn {
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  background-color: $button-color;
+  outline: none;
+  border: 1px solid $button-color;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 16px;
+
+  &:hover {
+    border: 1px solid $button-color;
+    color: $button-color;
+    background-color: #fff;
+  }
+}
