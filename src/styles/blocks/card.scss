@@ -1,13 +1,16 @@
 .page {
   margin: 0;
   padding: 0;
-  background-color: grey;
+}
+h3,
+h4 {
+  margin: 0;
 }
 
 .card {
   padding: 32px 16px 16px;
   width: 200px;
-  height: 400px;
+  border: 1px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 5px;
   background-color: $card-background;
@@ -16,23 +19,25 @@
   flex-direction: column;
 
   &__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
     width: 160px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
   }
 
   &__description {
     margin-bottom: 4px;
     font-size: 12px;
-    color: #060B35;
+    color: #060b35;
     font-weight: 500;
     line-height: 18px;
   }
 
   &__code {
     font-size: 10px;
+    line-height: 14px;
     color: #616070;
     font-weight: 400;
     margin-bottom: 16px;
@@ -41,14 +46,14 @@
   &__stars {
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     margin-bottom: 24px;
   }
 
   &__reviews {
-    width: 53px;
-    height: 16px;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    align-items: end;
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
@@ -71,7 +76,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-
   }
 
   &__button {
@@ -81,6 +85,9 @@
     justify-content: center;
     align-items: center;
     background-color: $button-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
     text-transform: uppercase;
     border-radius: 5px;
     color: $card-background;
