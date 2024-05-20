@@ -1,22 +1,13 @@
 .card {
   width: 200px;
   box-sizing: border-box;
-  @include cardPaddingInline;
-  @include cardPaddingBlock;
+
+  @include card-padding-inline;
+  @include card-padding-block;
+
   color: $main-accent-text-color;
   background-color: $light-accent-text-color;
   border: 1px solid $card-border-color;
-  border-radius: $border-radius;
-  -webkit-border-radius: $border-radius;
-  -moz-border-radius: $border-radius;
-  -ms-border-radius: $border-radius;
-  -o-border-radius: $border-radius;
-
-  &:hover > a {
-    background-color: $light-accent-text-color;
-    color: $accent-color;
-    border: 1px solid $accent-color;
-  }
 
   &__img {
     height: 134px;
@@ -32,7 +23,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    padding-bottom: $card-content-min-padding;
+    padding-bottom: 4px;
   }
 
   &__text {
@@ -41,7 +32,7 @@
     font-weight: 400;
     line-height: 14px;
     color: $secondary-text-color;
-    padding-bottom: $card-content-min-padding * 4;
+    padding-bottom: 16px;
   }
 
   &__text--big {
@@ -69,8 +60,8 @@
   &__reviews {
     display: flex;
     justify-content: space-between;
-    padding-bottom: $card-content-min-padding * 6;
-    align-items: center;
+    padding-bottom: 24px;
+    align-items: flex-end;
   }
 
   &__button-buy {
@@ -80,15 +71,19 @@
     text-transform: uppercase;
     color: $light-accent-text-color;
     background-color: $accent-color;
+    height: 40px;
     width: 100%;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     padding-block: 12px;
-    border-radius: $border-radius;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
-    -ms-border-radius: $border-radius;
-    -o-border-radius: $border-radius;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $light-accent-text-color;
+      border: 1px solid $accent-color;
+      color: $accent-color;
+    }
   }
 }
