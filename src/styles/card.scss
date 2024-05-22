@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $card-bg;
+
+  &__image {
+    height: 134px;
+    width: 160px;
+    margin-bottom: 40px;
+    align-self: center;
+  }
+
+  &__text {
+    font:
+      400 10px Roboto,
+      Arial,
+      sans-serif;
+    line-height: 14px;
+    color: $text-color;
+    margin: 0;
+
+    &--header {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $h-color;
+      margin-bottom: 4px;
+    }
+
+    &--money {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &--value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $h-color;
+    }
+
+    &--product-code {
+      margin-bottom: 16px;
+    }
+
+    &--reviews {
+      color: $h-color;
+    }
+  }
+
+  &__stars {
+    width: 100%;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__button-buy {
+    box-sizing: border-box;
+    padding-block: 11px;
+    font:
+      700 14px Roboto,
+      Arial,
+      sans-serif;
+    line-height: 16px;
+    color: $card-bg;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    background-color: $button-color;
+
+    &:hover {
+      color: $button-color;
+      background-color: $card-bg;
+    }
+  }
+}
