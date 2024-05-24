@@ -1,20 +1,19 @@
 .product-card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
+  padding: 32px 16px 16px;
 
   &__image {
     height: 134px;
     width: 160px;
-    margin: 32px 19px 40px;
+    margin-inline: 3px;
+    margin-bottom: 40px;
   }
 
   &__name {
-    @include constent-inline-margin;
-
     color: $primaryColor;
     font-weight: 500;
     font-size: 12px;
@@ -29,7 +28,6 @@
     font-size: 10px;
     line-height: 14px;
     margin-bottom: 16px;
-    margin-left: 16px;
   }
 
   &__reviews {
@@ -37,8 +35,6 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
-
-    @include constent-inline-margin;
 
     &-text {
       font-size: 10px;
@@ -52,8 +48,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include constent-inline-margin;
+    margin-bottom: 16px;
 
     &-text {
       font-size: 12px;
@@ -72,7 +67,6 @@
 
   &__button {
     display: flex;
-    box-sizing: border-box;
     align-items: center;
     justify-content: center;
     width: 166px;
@@ -82,16 +76,15 @@
     font-weight: 700;
     text-decoration: none;
     color: #fff;
-    background-color: #00acdc;
+    background-color: $buttonColor;
     padding: 12px 0;
-    margin: 16px;
-    border: 1px solid #00acdc;
+    border: 1px solid $buttonColor;
     border-radius: 5px;
   }
 
   &__button:hover {
     color: #00acdc;
     background-color: #fff;
-    border: 1px solid #00acdc;
+    border: 1px solid $buttonColor;
   }
 }
