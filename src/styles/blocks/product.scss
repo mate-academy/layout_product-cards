@@ -1,0 +1,51 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+.product {
+  border: 1px solid $gray-border;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 408px;
+  width: 200px;
+
+  > * {
+    margin: 0 16px 16px;
+  }
+
+  &__img {
+    margin: 32px auto 40px;
+    height: 134px;
+  }
+
+  &__title {
+    @include font-propotion(12px, 18px);
+
+    color: $black;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include font-propotion(10px, 14px);
+
+    color: $gray-text;
+  }
+
+  &__button {
+    @include font-propotion(14px, 16px);
+
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    font-weight: 700;
+    height: 40px;
+
+    &:hover {
+      background-color: $white;
+      color: $button-color;
+    }
+  }
+}
