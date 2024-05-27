@@ -1,3 +1,117 @@
-body {
+$mainColor: #00acdc;
+$blackColor: #060b35;
+$greyColor: #616070;
+$whiteColor: #fff;
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 28px;
+  text-align: center;
+  border: 1px solid $greyColor;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    width: 166px;
+    font-size: 12px;
+    line-height: 18px;
+    color: $blackColor;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $greyColor;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  &-review {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__stars {
+      display: flex;
+      width: 96px;
+    }
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      background-image: url(/src/images/star.svg);
+      background-size: 85%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__star:nth-child(-n + 4) {
+      background-image: url(/src/images/star-active.svg);
+    }
+
+    &__count {
+      font-size: 10px;
+      line-height: 14px;
+      color: $blackColor;
+      font-weight: 400;
+    }
+  }
+
+  &-price {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      color: $greyColor;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__amont {
+      font-size: 16px;
+      font-weight: 700;
+      color: $blackColor;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    color: $whiteColor;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: $mainColor;
+    padding: 12px 70px;
+    border: 1px solid $mainColor;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  &__button:hover {
+    color: $mainColor;
+    background-color: $whiteColor;
+  }
 }
