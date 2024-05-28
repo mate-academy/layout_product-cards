@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  text-align: center;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 36px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    color: $blackColor;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $greyColor;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  &-review {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__count {
+      display: flex;
+      align-items: end;
+      font-size: 10px;
+      line-height: 14px;
+      color: $blackColor;
+    }
+  }
+
+  &-price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+      color: $greyColor;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+    }
+
+    &__amont {
+      font-size: 16px;
+      font-weight: 700;
+      color: $blackColor;
+      line-height: 18px;
+      text-align: right;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $whiteColor;
+    height: 40px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: $mainColor;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+      height: 38px;
+      border: 1px solid $mainColor;
+      background-color: $whiteColor;
+      color: $mainColor;
+    }
+  }
+}
