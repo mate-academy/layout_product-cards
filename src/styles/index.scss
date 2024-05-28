@@ -15,7 +15,7 @@ body {
 
 .card {
   width: 200px;
-  padding: 32px 16px 28px;
+  padding: 32px 16px 16px;
   text-align: center;
 
   &__image {
@@ -25,7 +25,6 @@ body {
   }
 
   &__title {
-    width: 166px;
     font-size: 12px;
     line-height: 18px;
     color: $blackColor;
@@ -40,10 +39,10 @@ body {
     color: $greyColor;
     font-weight: 400;
     text-align: left;
+    margin-bottom: 16px;
   }
 
   &-review {
-    margin-top: 16px;
     margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
@@ -51,14 +50,13 @@ body {
 
     &__stars {
       display: flex;
-      width: 96px;
     }
 
     &__star {
       width: 16px;
       height: 16px;
       background-image: url(/src/images/star.svg);
-      background-size: 85%;
+      gap: 4px;
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -68,6 +66,8 @@ body {
     }
 
     &__count {
+      display: flex;
+      align-items: end;
       font-size: 10px;
       line-height: 14px;
       color: $blackColor;
@@ -76,15 +76,17 @@ body {
   }
 
   &-price {
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &__text {
       color: $greyColor;
       font-weight: 400;
       font-size: 12px;
       line-height: 18px;
+      text-align: left;
     }
 
     &__amont {
@@ -92,25 +94,31 @@ body {
       font-weight: 700;
       color: $blackColor;
       line-height: 18px;
+      text-align: right;
     }
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $whiteColor;
+    height: 40px;
+    width: 100%;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     background-color: $mainColor;
-    padding: 12px 70px;
-    border: 1px solid $mainColor;
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.2s;
-  }
-
-  &__button:hover {
-    color: $mainColor;
-    background-color: $whiteColor;
+  
+    &:hover {
+      height: 38px;
+      border: 1px solid $mainColor;
+      background-color: $whiteColor;
+      color: $mainColor;
+    }
   }
 }
