@@ -1,0 +1,21 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  height: 18px;
+
+  &__text {
+    @include font-propotion(12px, 18px);
+
+    color: $gray-text;
+  }
+
+  &__amount {
+    @include font-propotion(16px, 18px);
+
+    font-weight: 700;
+    color: $black;
+  }
+}
