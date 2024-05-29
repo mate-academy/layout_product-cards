@@ -1,3 +1,126 @@
-body {
+$main-color: #060b35;
+$secondary-color: #616070;
+$button-color: #00acdc;
+$button-default: #fff;
+$font-default: Roboto, sans-serif;
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-default;
+
+  &__picture {
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+  }
+
+  &__headline {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: $secondary-color;
+    margin-top: 4px;
+  }
+
+  &__button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    width: 166px;
+    height: 40px;
+    top: 351px;
+    left: 17px;
+    border-radius: 5px;
+    background-color: $button-color;
+    color: $button-default;
+    border: none;
+  }
+
+  &__button:hover {
+    background-color: $button-default;
+    color: $button-color;
+    border: 1px solid $button-color;
+    color: $button-color;
+  }
+
+  &__ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    color: $main-color;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 8px;
+
+    &--ammount {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+      color: $secondary-color;
+    }
+
+    &--currency {
+      color: $main-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: raw;
+  margin-bottom: 0;
+  align-items: start;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--4 > &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
 }
