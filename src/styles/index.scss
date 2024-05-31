@@ -1,3 +1,146 @@
+html {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --blue-color: #00acdc;
+
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    width: 160px;
+    height: 134px;
+    top: 32px;
+    left: 19px;
+  }
+
+  &__name-item {
+    position: absolute;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--main-color);
+    margin: 206 16 164;
+  }
+
+  &__product-code {
+    position: absolute;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    top: 246px;
+    left: 16px;
+    width: 98px;
+    height: 14px;
+    color: var(--secondary-color);
+  }
+
+  &__rating {
+    position: relative;
+    top: 276px;
+    justify-content: space-between;
+
+    &-reviews {
+      position: absolute;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 16px;
+      color: var(--main-color);
+      right: 16px;
+      text-align: right;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    top: 316px;
+    left: 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--secondary-color);
+  }
+
+  &__sum {
+    position: absolute;
+    top: 316px;
+    right: 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: var(--main-color);
+  }
+
+  &__buy {
+    position: absolute;
+    top: 350px;
+    left: 16px;
+    border-radius: 5px;
+    background-color: var(--blue-color);
+    width: 166px;
+    height: 40px;
+    box-sizing: border-box;
+
+    &-buttom {
+      position: sticky;
+      top: 363px;
+      left: 86px;
+      width: 27px;
+      height: 16px;
+      font-family: Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:hover {
+      border: 1px solid var(--blue-color);
+      background-color: #fff;
+    }
+
+    &-buttom:hover {
+      color: var(--blue-color);
+    }
+  }
+}
+
+.stars {
+  position: absolute;
+  width: 96px;
+  left: 16px;
+  gap: 4px;
+  display: flex;
+
+  &___stars {
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
 }
