@@ -16,12 +16,15 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 - Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
 - Find the required font on [google fonts](https://fonts.google.com/) and use.
 
+@import 'stars.scss';
+@import 'card.scss';
+
 ## Checklist
 
-❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
+❗️ Replace `scarblase` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://scarblase.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://scarblase.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
