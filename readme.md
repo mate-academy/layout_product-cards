@@ -16,6 +16,9 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 - Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
 - Find the required font on [google fonts](https://fonts.google.com/) and use.
 
+@import 'stars.scss';
+@import 'card.scss';
+
 ## Checklist
 
 ❗️ Replace `scarblase` with your Github username and copy the links to `Pull Request` description:
