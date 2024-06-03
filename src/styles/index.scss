@@ -17,7 +17,7 @@
 }
 
 img {
-  padding: 32px 20px 40px;
+  margin: 32px 20px;
   width: 160px;
   height: 134px;
 }
@@ -32,6 +32,7 @@ img {
   height: 36px;
   padding-left: 16px;
   padding-right: 16px;
+  color: #060b35;
 }
 
 .card__code {
@@ -41,41 +42,45 @@ img {
   line-height: 14px;
   text-align: left;
   padding-left: 16px;
+  padding-top: 4px;
+  color: #616070;
+  margin-top: 4px;
+}
+
+.card__grade {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 4px;
 }
 
 .stars {
-  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
 
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   gap: 4px;
+}
 
-  &__star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+.stars--1 :first-child,
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(n + 1) {
+  background-image: url(../images/star-active.svg);
+  color: #ffde6a;
+}
 
-    &--1 {
-      :nth-child(-n + 1) &--2 {
-        :nth-child(-n + 2) &--3 {
-          :nth-child(-n + 3) &--4 {
-            :nth-child(-n + 4) &--5 {
-              :nth-child(-n + 5) &--1,
-              &--2,
-              &--3,
-              &--4 {
-                background-image: url(../images/star-active.svg);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/star.svg);
 }
 
 .card__reviews {
@@ -84,6 +89,52 @@ img {
   font-weight: 400;
   line-height: 14px;
   text-align: right;
-  padding-left: 129px;
   padding-right: 16px;
+}
+
+.card__price {
+  width: 166px;
+  height: 18px;
+  padding: 24px 16px 16px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #616070;
+}
+
+.number {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: right;
+  color: #060b35;
+}
+
+a {
+  display: block;
+  margin-left: 16px;
+}
+
+.card__button {
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #00acdc;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  padding-top: 12px;
 }
