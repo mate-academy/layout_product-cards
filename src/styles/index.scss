@@ -1,3 +1,125 @@
+html {
+  --main-color: #060b35;
+  --secondary-color: #616070;
+  --blue-color: #00acdc;
+
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--secondary-color);
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40;
+  }
+
+  &__name {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--main-color);
+    margin: 0 0 4;
+  }
+
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    width: 98px;
+    height: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &-rating {
+      color: var(--main-color);
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+    &-label {
+      font-family: Roboto, sans-serif;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: var(--secondary-color);
+    }
+
+    &-sum {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: var(--main-color);
+    }
+  }
+
+  &__buttom {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--blue-color);
+    box-sizing: border-box;
+    padding: auto;
+
+    &:hover {
+      border: 1px solid var(--blue-color);
+      background-color: #fff;
+
+      color: var(--blue-color);
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__stars {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
 }
