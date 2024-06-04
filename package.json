@@ -1,14 +1,15 @@
 {
   "name": "product-cards",
+  "source": "src/index.html",
   "version": "1.0.0",
   "description": "Frontend practice with product cards",
   "scripts": {
     "init": "mate-scripts init",
-    "start": "mate-scripts start",
+    "start": "parcel --open",
     "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
     "lint": "npm run format && mate-scripts lint",
     "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
+    "build": "parcel build --public-url=/dist/",
     "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
@@ -23,7 +24,7 @@
     "@mate-academy/backstop-config": "latest",
     "@mate-academy/bemlint": "latest",
     "@mate-academy/linthtml-config": "latest",
-    "@mate-academy/scripts": "^1.7.3",
+    "@mate-academy/scripts": "^1.8.1",
     "@mate-academy/stylelint-config": "latest",
     "@parcel/transformer-sass": "^2.12.0",
     "backstopjs": "6.2.2",
@@ -37,5 +38,14 @@
     "linters": {
       "javascript": false
     }
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taniaisthatyou/layout_product-cards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taniaisthatyou/layout_product-cards/issues"
+  },
+  "homepage": "https://github.com/taniaisthatyou/layout_product-cards#readme"
 }
