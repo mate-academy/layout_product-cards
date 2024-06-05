@@ -1,10 +1,11 @@
 .stars {
   display: flex;
   justify-content: space-between;
-  width: 166px;
-  height: 16px;
+  width: calc ($container-width * 0.83);
+  height: auto;
   margin-top: 16px;
   margin-left: 16px;
+  margin-right: 16px;
   align-items: end;
 
   &__container {
@@ -27,8 +28,10 @@
     line-height: 14px;
     color: #060b35;
   }
+}
 
-  &__star:nth-child(-n + 4) {
+@for $i from 0 through 5 {
+  .stars--count--#{$i} .stars__star:nth-child(-n + #{$i}) {
     background-image: url(/src/images/star-active.svg);
     background-position: center;
     background-repeat: no-repeat;
