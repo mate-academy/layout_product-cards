@@ -1,12 +1,12 @@
 .stars {
   display: flex;
   justify-content: space-between;
-  width: calc ($container-width * 0.83);
+  width: 84%;
   height: auto;
   margin-top: 16px;
   margin-left: 16px;
   margin-right: 16px;
-  align-items: end;
+  align-items: flex-end;
 
   &__container {
     display: flex;
@@ -26,14 +26,14 @@
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #060b35;
+    color: $mainTextColor;
   }
-}
 
-@for $i from 0 through 5 {
-  .stars--count--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background-image: url(/src/images/star-active.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+  @for $i from 0 through 5 {
+    &--count--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(/src/images/star-active.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
