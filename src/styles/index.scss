@@ -1,17 +1,19 @@
 .page {
   scroll-behavior: smooth;
   background: #fff;
-}
 
-.page__body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
+  &_body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+  }
 }
 
 .card {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 198px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 img {
@@ -29,9 +31,8 @@ img {
   font-weight: 500;
   line-height: 18px;
   text-align: left;
-  width: 166px;
-  padding-left: 16px;
-  padding-right: 16px;
+  width: 100%;
+
   color: #060b35;
 }
 
@@ -40,7 +41,6 @@ img {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
-  padding-left: 16px;
   color: #616070;
   margin-top: 4px;
   margin-bottom: 16px;
@@ -55,31 +55,28 @@ img {
 }
 
 .stars {
-  padding-left: 16px;
-  padding-right: 16px;
-
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   gap: 4px;
-}
 
-.stars--1 :first-child,
-.stars--2 :nth-child(-n + 2),
-.stars--3 :nth-child(-n + 3),
-.stars--4 :nth-child(-n + 4),
-.stars--5 :nth-child(n + 1) {
-  background-image: url(../images/star-active.svg);
-  color: #ffde6a;
-}
+  &--1 :first-child,
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(n + 1) {
+    background-image: url(../images/star-active.svg);
+    color: #ffde6a;
+  }
 
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../images/star.svg);
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/star.svg);
+  }
 }
 
 .card__reviews {
@@ -87,12 +84,12 @@ img {
   font-weight: 400;
   line-height: 14px;
   text-align: right;
-  padding-right: 16px;
 }
 
 .card__price {
-  width: 166px;
-  padding: 24px 16px 16px;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 16px;
 
   display: flex;
   justify-content: space-between;
@@ -125,7 +122,7 @@ a {
 }
 
 .card__button {
-  width: 166px;
+  width: 100%;
   border-radius: 5px;
   background-color: #00acdc;
   color: #fff;
@@ -139,7 +136,7 @@ a {
 }
 
 .card__button:hover {
-  width: 166px;
+  width: 100%;
   border-radius: 5px;
   border: 1px solid #00acdc;
   background-color: #fff;
