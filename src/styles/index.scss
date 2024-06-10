@@ -1,3 +1,5 @@
+@import './variables';
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -16,26 +18,11 @@ ul li {
 
 .card {
   width: 200px;
-  height: 408px;
-  border: 1px solid #f3f3f3;
-  background-color: #fff;
+  border: 1px solid $color-border;
+  background-color: $color-background;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 32px 16px 16px;
-
-  // &__img {
-  //   display: block;
-  //   width: 160px;
-  //   height: 134px;
-  //   background-image: url(../images/imac.jpeg);
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  //   bac
-  //   margin: 0 3px 40px;
-
-  //   // margin-bottom: 40px;
-  // }
   &__img {
     margin: 0 2px 0 3px;
     img {
@@ -47,14 +34,14 @@ ul li {
   }
 
   &__title {
-    color: #060b35;
+    color: $color-text-brown;
     font-weight: 500;
     line-height: 18px;
     font-size: 12px;
     margin-bottom: 4px;
   }
   &__product-code {
-    color: #616070;
+    color: $color-text-gray;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
@@ -70,7 +57,7 @@ ul li {
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
-    color: #060b35;
+    color: $color-text-brown;
   }
 
   &__price-block {
@@ -79,7 +66,7 @@ ul li {
     align-items: center;
     margin-bottom: 16px;
     .price-title {
-      color: #616070;
+      color: $color-text-gray;
       font-size: 12px;
       line-height: 18px;
     }
@@ -87,7 +74,7 @@ ul li {
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
-      color: #060b35;
+      color: $color-text-brown;
     }
   }
   &__buy-button {
@@ -102,21 +89,22 @@ ul li {
     text-transform: uppercase;
     text-align: center;
 
-    color: #fff;
-    background-color: #00acdc;
+    color: $color-background;
+    background-color: $color-button;
 
     &:hover {
-      background-color: #fff;
-      border: 1px solid #00acdc;
-      color: #00acdc;
+      background-color: $color-background;
+      border: 1px solid $color-button;
+      color: $color-button;
     }
   }
 }
 
 .stars {
   display: flex;
+
   &__item {
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
@@ -126,15 +114,24 @@ ul li {
       margin-right: 4px;
     }
   }
-  &__item5 {
-    background-image: url(../images/star.svg);
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
+
+  &--1 .stars__item:nth-child(-n + 1) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &--2 .stars__item:nth-child(-n + 2) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &--3 .stars__item:nth-child(-n + 3) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &--4 .stars__item:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &--5 .stars__item:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
   }
 }
-
-// .stars--5 .stars__item:nth-child(-n + 5) {
-//   background-image: url(../images/star.svg);
-// }
