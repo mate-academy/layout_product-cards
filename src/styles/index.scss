@@ -3,87 +3,83 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+:root {
+  --main-bg-color: #fff;
+  --main-bt-color: #060b35;
+  --main-tx-color: #00acdc;
+  --main-pc-color: #616070;
 }
 
-.container {
+.card {
   box-sizing: border-box;
-  background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
-  height: 408px;
   padding: 32px 16px 16px;
-}
-
-.container__img {
-  margin: 0 2px 0 3px;
 }
 
 .img {
   width: 160px;
   height: 134px;
-  margin-bottom: 36px;
+  margin: 0 3px 40px;
+  display: block;
 }
 
-.container__title {
-  color: #060b35;
+.card__title {
+  color: var(--main-bt-color);
   margin-bottom: 4px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
 }
 
-.container__code {
-  color: #616070;
+.card__code {
+  color: var(--main-pc-color);
   margin-bottom: 16px;
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
 }
 
-.container__stars {
+.card__stars {
   justify-content: space-between;
   align-items: end;
   margin-bottom: 24px;
   display: flex;
 }
 
-.container__reviews {
-  color: #060b35;
+.card__reviews {
+  color: var(--main-bt-color);
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
 }
 
-.container__price {
+.card__price {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
   display: flex;
 }
 
-.container__pricet {
-  color: #616070;
+.card__pricet {
+  color: var(--main-pc-color);
   font-size: 12px;
   line-height: 18px;
 }
 
-.container__priceg {
-  color: #060b35;
+.card__priceg {
+  color: var(--main-bt-color);
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
 }
 
-.container__buy {
+.card__buy {
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
-  background-color: #00acdc;
+  color: var(--main-bg-color);
+  background-color: var(--main-tx-color);
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -93,14 +89,17 @@ ul {
   line-height: 16px;
 }
 
-.container__buy:hover {
-  color: #00acdc;
-  background-color: #fff;
-  border: 1px solid #00acdc;
+.card__buy:hover {
+  color: var(--main-tx-color);
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-tx-color);
 }
 
 .stars {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .stars__star {
