@@ -8,13 +8,12 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.bloc {
+.card {
   padding-left: $pad-box;
   padding-right: $pad-box;
   display: flex;
   flex-direction: column;
   width: $size-box;
-  height: auto;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -60,10 +59,11 @@ body {
       line-height: 14px;
       font-weight: 400;
     }
-
-    &-stst {
-      width: 12.8px;
-      height: 12.8px;
+    &-star {
+      width: 12px;
+      height: 12px;
+      background-size: cover;
+      background-image: url('../images/star.svg');
     }
   }
 
@@ -109,4 +109,20 @@ body {
   border: 1px solid $col-b;
   background-color: #fff;
   color: $col-b;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.card__review-stars.stars--1 .card__review-star:nth-child(-n + 1),
+.card__review-stars.stars--2 .card__review-star:nth-child(-n + 2),
+.card__review-stars.stars--3 .card__review-star:nth-child(-n + 3),
+.card__review-stars.stars--4 .card__review-star:nth-child(-n + 4),
+.card__review-stars.stars--5 .card__review-star:nth-child(-n + 5) {
+  background-image: url('../images/star-active.svg');
 }
