@@ -13,15 +13,17 @@ body {
   display: block;
   background-color: $bodyColor;
   border-radius: 5px;
+  border: 1px solid $whiteGrayColor;
 }
 
 .img {
-  margin-left: 16px;
-  width: 83%;
+  margin: auto;
+  width: 160px;
   height: 134px;
   background-repeat: no-repeat;
   background-image: url(/src/images/imac.jpeg);
-  background-size: contain;
+  background-size: 160px 134px;
+  background-position: 1%;
 }
 
 .text {
@@ -63,11 +65,11 @@ body {
 
 .price {
   width: 83%;
-  height: 20px;
+  height: 18px;
   display: flex;
   justify-content: space-between;
 
-  line-height: 15px;
+  line-height: 20px;
 
   margin: 24px 16px 16px;
 
@@ -75,17 +77,21 @@ body {
     font-size: 12px;
     font-weight: 400;
     color: $subTextColor;
+    line-height: 18px;
   }
 
   &__num {
+    margin-right: -1.6px;
+    line-height: 18px;
     font-size: 16px;
     font-weight: 700;
     color: $nameTextColor;
   }
 }
 
-[data-qa='hover']:hover {
+.button:hover {
   background-color: $bodyColor;
   color: $buttonColor;
   border: 1px solid $buttonColor;
+  cursor: pointer;
 }
