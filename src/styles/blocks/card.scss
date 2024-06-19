@@ -1,0 +1,91 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 32px 0 16px;
+  width: 200px;
+  box-sizing: border-box;
+  display: block;
+  background-color: $bodyColor;
+  border-radius: 5px;
+}
+
+.img {
+  margin-left: 16px;
+  width: 83%;
+  height: 134px;
+  background-repeat: no-repeat;
+  background-image: url(/src/images/imac.jpeg);
+  background-size: contain;
+}
+
+.text {
+  width: 83%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $nameTextColor;
+  margin-top: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.product_code {
+  margin-top: 4px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: $subTextColor;
+}
+
+.button {
+  width: 166px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: $buttonColor;
+  color: $bodyColor;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  width: 83%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  line-height: 15px;
+
+  margin: 24px 16px 16px;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $subTextColor;
+  }
+
+  &__num {
+    font-size: 16px;
+    font-weight: 700;
+    color: $nameTextColor;
+  }
+}
+
+[data-qa='hover']:hover {
+  background-color: $bodyColor;
+  color: $buttonColor;
+  border: 1px solid $buttonColor;
+}
