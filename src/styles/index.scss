@@ -3,15 +3,20 @@ $color-white: #fff;
 $color-black: #060b35;
 $color-gray: #616070;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
 }
 
 .card {
+  padding: 32px 16px 16px;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  width: 198px;
   background-color: $color-white;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -20,7 +25,7 @@ body {
     display: block;
     width: 160px;
     height: 134px;
-    margin: 32px 19px 0;
+    margin: auto;
   }
 
   &__product-name {
@@ -29,27 +34,30 @@ body {
     font-size: 12px;
     line-height: 18px;
     color: $color-black;
-    margin: 40px 16px 0;
+    margin: 40px auto 0;
   }
 
   &__product-code {
+    width: 100%;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $color-gray;
-    margin: 4px 16px 0;
+    margin: 4px auto 0;
   }
 
   &__review {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 16px 16px 0;
+    margin: 16px auto 0;
   }
 
   &__price-value {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    margin: 24px 16px 0;
+    margin: 24px auto 0;
   }
 }
 
@@ -75,11 +83,12 @@ body {
 }
 
 .reviews {
+  margin: 0;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: $color-black;
-  margin: 0;
+  text-align: right;
 }
 
 .price {
@@ -96,22 +105,22 @@ body {
 }
 
 .button {
+  width: 100%;
   border: 1px solid $color-blue;
   height: 40px;
   border-radius: 5px;
   background-color: $color-blue;
-  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  text-align: center;
   text-transform: uppercase;
   color: $color-white;
-  margin: 16px;
+  margin: 16px auto;
 }
 
 button:hover {
   background-color: $color-white;
   border: 1px solid $color-blue;
   color: $color-blue;
-  margin: 16px;
 }
