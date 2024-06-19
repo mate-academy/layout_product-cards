@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +9,11 @@
 
 body {
   font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  line-height: $mainLineHeight;
 
-  color: #616070;
+  color: $mainColor;
 
   display: flex;
   justify-content: center;
@@ -84,7 +86,10 @@ body {
     border: 1px solid transparent;
     border-radius: 5px;
 
-    transition: 0.3s background-color;
+    transition:
+      0.3s color,
+      0.3s background-color,
+      0.3s border;
 
     &:hover {
       background-color: transparent;
@@ -141,29 +146,30 @@ body {
     margin-bottom: 23px;
   }
 
-  &__stars {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  &__star {
-    background-image: url('../images/star-active.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: 16px;
-    height: 16px;
-
-    &--inactive {
-      background-image: url('../images/star.svg');
-    }
-  }
-
-  &__block {
-  }
-
   &__text {
     font-size: 10px;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+  }
+
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
   }
 }
