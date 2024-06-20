@@ -1,61 +1,55 @@
 @import 'variables';
 
 .card {
-  width: $card-width;
-  height: $card-height;
-  border: $card-border;
-  border-radius: $card-border-radius;
-  box-shadow: $card-shadow;
-  font-family: $font-family;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: $card-padding;
-  background-color: #fff;
   transition: box-shadow 0.3s;
+  width: $card-width;
+  padding: $card-padding;
+  border: $card-border;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  background-color: $card-bg-color;
 
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: $card-hower-shadow;
   }
 
   &__image {
+    justify-self: flex-start;
+    margin-bottom: 40px;
     width: 160px;
     height: 134px;
-    margin-top: 32px;
   }
 
   &__title {
     display: block;
-    width: 166px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    margin-top: 40px;
+    align-self: flex-start;
     margin-bottom: 4px;
+    width: 166px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    font-weight: 500;
     color: $card-title-color;
   }
 
   &__code {
     display: block;
-    font-size: 10px;
-    font-weight: 400;
+    align-self: flex-start;
+    margin-bottom: 16px;
     line-height: 14px;
     color: $card-code-color;
-    margin-bottom: 16px;
-    align-self: flex-start;
-    margin-left: 16px;
   }
 
   &__reviews {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 166px;
-    font-size: 10px;
-    font-weight: 400;
+    width: 100%;
+    margin-bottom: 24px;
     line-height: 14px;
     color: $card-reviews-color;
-    margin-bottom: 24px;
 
     &-text {
       display: block;
@@ -63,21 +57,20 @@
   }
 
   &__price {
-    width: 166px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
     align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
 
     &-attribute {
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 1.2rem;
       line-height: 18px;
       color: $card-price-attribute-color;
     }
 
     &-value {
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: $price-font-weight;
       color: $price-color;
     }
@@ -85,21 +78,22 @@
 
   &__link {
     display: block;
-    width: 166px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $button-bg-color;
+    border-radius: 5px;
     padding: 12px 0;
+    background-color: $button-bg-color;
+    font-size: 1.4rem;
+    line-height: 16px;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
     color: $button-text-color;
-    background-color: $button-bg-color;
-    border: 1px solid $button-bg-color;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
 
     &:hover {
-      background-color: $button-hover-bg-color;
       border-color: $button-hover-border-color;
+      background-color: $button-hover-bg-color;
       color: $button-hover-text-color;
     }
   }
