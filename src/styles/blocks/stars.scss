@@ -1,0 +1,27 @@
+.stars {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+
+  &__star {
+    background-image: url(./../images/star.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--#{$active-stars} {
+    position: relative;
+    visibility: visible;
+
+    & :nth-child(-n + #{$active-stars}) {
+      background-image: url(./../images/star-active.svg);
+    }
+  }
+}
