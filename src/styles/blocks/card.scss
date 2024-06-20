@@ -1,0 +1,95 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: block;
+  width: 200px;
+  height: 408px;
+  background-color: $body-color;
+  border: 1px solid $container-border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+  background-image: url(/src/images/imac.jpeg);
+  background-size: 160px 134px;
+  margin-top: 32px;
+  margin-left: 19px;
+}
+
+.title {
+  width: 84%;
+  height: auto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  color: $black-text-color;
+  margin-top: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.product_code {
+  margin-top: 4px;
+  margin-left: 16px;
+  width: fit-content;
+  height: auto;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $grey-text-color;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: $button-color;
+  color: $body-color;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  width: 84%;
+  margin-left: 16px;
+  margin-right: 16px;
+  line-height: 18px;
+  margin-top: 24px;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $grey-text-color;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: 700;
+    color: $black-text-color;
+  }
+}
+
+[data-qa='hover']:hover {
+  background-color: $body-color;
+  color: $button-color;
+  border: 1px solid $button-color;
+}
