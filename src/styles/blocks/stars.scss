@@ -1,7 +1,5 @@
 .stars {
-  position: absolute;
   display: flex;
-  visibility: hidden;
 
   &__star {
     background-image: url(./../images/star.svg);
@@ -16,12 +14,8 @@
     }
   }
 
-  &--#{$active-stars} {
-    position: relative;
-    visibility: visible;
-
-    & :nth-child(-n + #{$active-stars}) {
-      background-image: url(./../images/star-active.svg);
-    }
+  &--active :nth-child(-n + #{$active-stars}) {
+    background-image: url(./../images/star-active.svg);
   }
 }
+
