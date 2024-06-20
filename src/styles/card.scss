@@ -1,0 +1,100 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s;
+  width: $card-width;
+  padding: $card-padding;
+  border: $card-border;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  background-color: $card-bg-color;
+
+  &:hover {
+    box-shadow: $card-hower-shadow;
+  }
+
+  &__image {
+    justify-self: flex-start;
+    margin-bottom: 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 4px;
+    width: 166px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    font-weight: 500;
+    color: $card-title-color;
+  }
+
+  &__code {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 16px;
+    line-height: 14px;
+    color: $card-code-color;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 24px;
+    line-height: 14px;
+    color: $card-reviews-color;
+
+    &-text {
+      display: block;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+
+    &-attribute {
+      font-size: 1.2rem;
+      line-height: 18px;
+      color: $card-price-attribute-color;
+    }
+
+    &-value {
+      font-size: 1.6rem;
+      font-weight: $price-font-weight;
+      color: $price-color;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $button-bg-color;
+    border-radius: 5px;
+    padding: 12px 0;
+    background-color: $button-bg-color;
+    font-size: 1.4rem;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: $button-text-color;
+
+    &:hover {
+      border-color: $button-hover-border-color;
+      background-color: $button-hover-bg-color;
+      color: $button-hover-text-color;
+    }
+  }
+}

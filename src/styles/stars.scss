@@ -1,0 +1,26 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+
+    &--active {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
