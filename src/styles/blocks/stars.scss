@@ -14,7 +14,11 @@
     }
   }
 
-  &--active :nth-child(-n + #{$active-stars}) {
+  &--1 :nth-child(1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 &__star {
     background-image: url(./../images/star-active.svg);
   }
 }
