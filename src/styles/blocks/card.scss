@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-.container {
+.card {
   padding: 32px 0 16px;
   width: 200px;
   box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
   border: 1px solid $whiteGrayColor;
 }
 
-.img {
+.card__img {
   margin: auto;
   width: 160px;
   height: 134px;
@@ -26,7 +26,7 @@ body {
   background-position: 1%;
 }
 
-.text {
+.card__text {
   width: 83%;
   font-size: 12px;
   font-weight: 500;
@@ -37,7 +37,7 @@ body {
   margin-right: 16px;
 }
 
-.product_code {
+.card__product {
   margin-top: 4px;
   margin-left: 16px;
   margin-bottom: 16px;
@@ -47,7 +47,32 @@ body {
   color: $subTextColor;
 }
 
-.button {
+.card__price {
+  width: 83%;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+
+  line-height: 20px;
+
+  margin: 24px 16px 16px;
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $subTextColor;
+    line-height: 18px;
+  }
+
+  &-num {
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $nameTextColor;
+  }
+}
+
+.card__button {
   width: 166px;
   height: 40px;
   box-sizing: border-box;
@@ -63,33 +88,7 @@ body {
   justify-content: center;
 }
 
-.price {
-  width: 83%;
-  height: 18px;
-  display: flex;
-  justify-content: space-between;
-
-  line-height: 20px;
-
-  margin: 24px 16px 16px;
-
-  &__text {
-    font-size: 12px;
-    font-weight: 400;
-    color: $subTextColor;
-    line-height: 18px;
-  }
-
-  &__num {
-    margin-right: -1.6px;
-    line-height: 18px;
-    font-size: 16px;
-    font-weight: 700;
-    color: $nameTextColor;
-  }
-}
-
-.button:hover {
+.card__button:hover {
   background-color: $bodyColor;
   color: $buttonColor;
   border: 1px solid $buttonColor;
