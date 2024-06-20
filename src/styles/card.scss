@@ -1,0 +1,111 @@
+// #region main
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #878e76;
+}
+
+// #endregion
+// #region card
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $card-width;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $background-color;
+  padding-bottom: 16px;
+  padding-top: 32px;
+}
+
+// #endregion
+// #region image
+.card__image {
+  background-image: url(../images/imac.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: $image-width;
+  height: $image-height;
+  padding-bottom: 40px;
+}
+
+// #endregion
+// #region text
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  display: block;
+  color: $main-color;
+  padding-bottom: 4px;
+  padding-inline: $inline-padding;
+}
+
+.card__text {
+  padding: 0 84px 16px 16px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $secondary-color;
+}
+
+// #endregion
+// #region price
+.card__item.card__item--price {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 85px;
+  padding-bottom: 16px;
+  padding-inline: $inline-padding;
+
+  &--text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $secondary-color;
+    padding: 0;
+  }
+
+  &--number {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $main-color;
+    padding: 0;
+  }
+}
+
+// #endregion
+// #region button
+.card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $button-width;
+  height: $button-height;
+  border-radius: 5px;
+  border: none;
+  background-color: $button-color;
+  padding: 0;
+
+  &:hover {
+    border: 1px solid $button-color;
+    background-color: transparent;
+  }
+
+  &--text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $button-text-color;
+
+    &:hover {
+      color: $button-color;
+    }
+  }
+}
+
+// #endregion

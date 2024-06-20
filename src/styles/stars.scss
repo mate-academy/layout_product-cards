@@ -1,0 +1,48 @@
+/* #region main container */
+.stars {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */
+
+/* #region stars */
+.stars__star {
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+/* #endregion */
+
+/* #region active star */
+.stars .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+/* #endregion */
+// #region star position
+.card__item.card__item--stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+  padding-bottom: 24px;
+  padding-inline: $inline-padding;
+}
+
+.card__item--text {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $main-color;
+}
+
+// #endregion
