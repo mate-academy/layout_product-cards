@@ -1,0 +1,17 @@
+.stars {
+  display: flex;
+  margin-right: 17px;
+  list-style: none;
+
+  &__list-item {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url('/images/star.svg'); /* Неактивні зірочки */
+    background-size: cover;
+
+    &:nth-child(-n + 4) {
+      background-image: url('/images/star-active.svg'); /* Активні зірочки */
+    }
+  }
+}
