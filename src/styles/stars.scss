@@ -14,9 +14,9 @@
     background-image: url(../images/star.svg);
   }
 
-  @for $i from 1 through 5 {
-    &__star--#{$i} {
-      @if $i <= 4 {
+  @for $i from 0 through 5 {
+    &--count-#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
         background-image: url(../images/star-active.svg);
       }
     }
