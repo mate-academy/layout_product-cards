@@ -19,8 +19,10 @@
   margin-right: 4px;
 }
 
-.stars .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
+@for $starsStatus from 1 through $active-stars {
+  .stars .stars__star:nth-child(-n + #{$starsStatus}) {
+    background-image: url(../images/star-active.svg);
+  }
 }
 
 .card__stars {
