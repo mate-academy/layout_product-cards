@@ -1,4 +1,4 @@
-.list {
+.stars {
   display: flex;
   list-style: none;
   margin-left: 16px;
@@ -10,15 +10,14 @@
     background-position: center;
     height: 16px;
     width: 16px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
   }
 
-  &__star:nth-child(-n + 4) {
+  &--#{$stars-quantity} .stars__star:nth-child(-n + #{$stars-quantity}) {
     background-image: url(/src/images/star-active.svg);
     background-repeat: no-repeat;
-    margin-right: 0;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 4px;
   }
 }
