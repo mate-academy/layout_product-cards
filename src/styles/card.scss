@@ -1,0 +1,120 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $card-width;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $background-color;
+  padding-bottom: 16px;
+  padding-top: 32px;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: $image-width;
+    height: $image-height;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    display: block;
+    color: $main-color;
+    padding-top: 40px;
+    padding-bottom: 4px;
+    padding-inline: $inline-padding;
+  }
+
+  &__text {
+    padding: 0 84px 16px 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-color;
+    text-align: right;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 17px;
+    padding-bottom: 24px;
+    padding-inline: $inline-padding;
+  }
+
+  &__review {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-color;
+  }
+}
+
+.card-price {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 85px;
+  padding-bottom: 16px;
+  padding-inline: $inline-padding;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $secondary-color;
+    padding: 0;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $main-color;
+    padding: 0;
+  }
+}
+
+.card-btn__text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $button-text-color;
+  text-transform: uppercase;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $button-width;
+  height: $button-height;
+  border-radius: 5px;
+  border: none;
+  background-color: $button-color;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $button-color;
+    background-color: transparent;
+    color: $button-color;
+
+    .card-btn__text {
+      color: $button-color;
+    }
+  }
+}
