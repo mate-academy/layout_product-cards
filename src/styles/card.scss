@@ -72,6 +72,14 @@ body {
 }
 
 // #region button
+.card-btn__text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $button-text-color;
+  text-transform: uppercase;
+}
+
 .card-btn {
   display: flex;
   justify-content: center;
@@ -82,20 +90,15 @@ body {
   border: none;
   background-color: $button-color;
   padding: 0;
+  color: inherit;
+  cursor: pointer;
 
   &:hover {
     border: 1px solid $button-color;
     background-color: transparent;
-  }
+    color: $button-color;
 
-  &__text {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    color: $button-text-color;
-    text-transform: uppercase;
-
-    &:hover {
+    .card-btn__text {
       color: $button-color;
     }
   }
