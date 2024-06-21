@@ -1,28 +1,28 @@
 @import 'variables';
 
 .card {
-  font-family: $font-family;
   display: flex;
   flex-direction: column;
   width: $card-width;
-  border: 1px solid $border-color;
-  background-color: $background-color;
   padding: 32px 16px 16px;
+  border: 1px solid $border-color;
   border-radius: 5px;
+  background-color: $background-color;
+  font-family: $font-family;
 
   &__image {
+    object-fit: contain;
     width: 166px;
     height: 134px;
-    object-fit: contain;
     border-radius: 5px;
   }
 
   &__title {
     text-align: left;
     padding-top: 40px;
+    line-height: 18px;
     font-size: 12px;
     font-weight: 500;
-    line-height: 18px;
     color: $main-text-color;
   }
 
@@ -39,13 +39,13 @@
   }
 
   &__reviews {
-    font-size: 10px;
-    color: $main-text-color;
-    font-weight: 400;
-    text-align: right;
-    line-height: 14px;
     margin-top: 16px;
     margin-left: 17px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $main-text-color;
+    text-align: right;
   }
 
   &__price {
@@ -55,41 +55,41 @@
   }
 
   &__priceWord {
+    margin-right: 5px;
     font-size: 12px;
     line-height: 18px;
-    color: $regular-font-color;
     font-weight: 400;
-    margin-right: 5px;
+    color: $regular-font-color;
   }
 
   &__priceNumber {
     font-size: 16px;
     font-weight: 700;
-    color: $main-text-color;
     line-height: 18px;
+    color: $main-text-color;
   }
 
   &__button {
     display: block;
     width: 100%;
     height: 40px;
-    text-align: center;
-    background-color: $link-color;
-    color: $background-color;
-    text-transform: uppercase;
+    margin-top: 16px;
     padding: 10px;
-    border-radius: 5px;
     border: none;
-    text-decoration: none;
-    font-weight: 700;
+    border-radius: 5px;
+    background-color: $link-color;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $background-color;
 
     &:hover {
+      border: 1px solid $link-color;
       background-color: $background-color;
       color: $link-color;
-      border: 1px solid $link-color;
     }
   }
 }
