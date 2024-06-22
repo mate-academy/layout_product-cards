@@ -1,0 +1,36 @@
+@mixin no-active-stars {
+  background: $no-active $background;
+}
+
+@mixin active-stars {
+  background: $active $background;
+}
+
+// REVIEW's Stars
+@mixin stars {
+  display: flex;
+
+  &_star {
+    content: '';
+    width: 16px;
+    height: 16px;
+
+    @include no-active-stars;
+
+    &:nth-of-type(1) {
+      margin-right: $commonMargin;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-left: $commonMargin;
+    }
+
+    &:not(&:nth-of-type(1), &:nth-last-of-type(1)) {
+      margin-inline: $commonMargin;
+    }
+  }
+
+  &--active &_star:nth-child(-n + 4) {
+    @include active-stars;
+  }
+}
