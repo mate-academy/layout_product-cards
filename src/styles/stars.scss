@@ -13,7 +13,9 @@
     }
   }
 
-  &--active &__star:nth-child(-n + #{$activeStarsAmount}) {
-    @include active-stars;
+  @each $active-star in $activeStarsAmount {
+    &--#{$active-star} &__star:nth-child(-n + #{$active-star}) {
+      @include active-stars;
+    }
   }
 }
