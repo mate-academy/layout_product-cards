@@ -1,3 +1,115 @@
+html {
+  --main-color: #00acdc;
+  --text-accent-color: #060b35;
+  --text-secondary-color: #616070;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+}
+
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
+
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin: 0 0 4px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-accent-color);
+  }
+
+  &__code {
+    color: var(--text-secondary-color);
+    margin-bottom: 16px;
+  }
+
+  &__review-container {
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--text-accent-color);
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    color: var(--text-secondary-color);
+  }
+
+  &__price-label {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color: var(--text-accent-color);
+  }
+
+  &__buy {
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    border-color: var(--main-color);
+
+    &:hover {
+      background-color: #fff;
+      color: var(--main-color);
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
 }
