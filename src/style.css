@@ -1,5 +1,6 @@
 html,
 body,
+h2,
 div,
 p,
 a,
@@ -22,14 +23,11 @@ a {
 
 .card {
   width: 198px;
-  height: 406px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 374px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   color: #060b35;
+  padding-block: 32px 0;
 }
 
 .card__image,
@@ -41,16 +39,14 @@ a {
   width: 166px;
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .card__image {
   width: 160px;
   height: 134px;
-  margin: 16px 3px 40px;
-  background-image: url(./images/imac.jpeg);
-  background-repeat: no-repeat;
-  background-size: 100% 100.2%;
-  background-position: center;
+  margin-bottom: 40px;
+  padding-inline: 3px;
 }
 
 .card__descreption {
@@ -72,36 +68,6 @@ a {
   justify-content: space-between;
   align-items: end;
   margin-bottom: 24px;
-}
-
-.card__reviews-stars {
-  display: flex;
-}
-
-.card__reviews-stars_star {
-  content: '';
-  width: 16px;
-  height: 16px;
-  background: url(./images/star.svg) center no-repeat;
-}
-
-.card__reviews-stars_star:nth-of-type(1) {
-  margin-right: 2px;
-}
-
-.card__reviews-stars_star:nth-last-of-type(1) {
-  margin-left: 2px;
-}
-
-.card__reviews-stars_star:not(
-    .card__reviews-stars_star:nth-of-type(1),
-    .card__reviews-stars_star:nth-last-of-type(1)
-  ) {
-  margin-inline: 2px;
-}
-
-.card__reviews-stars--active .card__reviews-stars_star:nth-child(-n + 4) {
-  background: url(./images/star-active.svg) center no-repeat;
 }
 
 .card__reviews-data {
@@ -141,6 +107,36 @@ a {
 .card__button:hover {
   color: #00acdc;
   background-color: #fff;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: url(./images/star.svg) center no-repeat;
+}
+
+.stars__star:nth-of-type(1) {
+  margin-right: 2px;
+}
+
+.stars__star:nth-last-of-type(1) {
+  margin-left: 2px;
+}
+
+.stars__star:not(
+    .stars__star:nth-of-type(1),
+    .stars__star:nth-last-of-type(1)
+  ) {
+  margin-inline: 2px;
+}
+
+.stars--active .stars__star:nth-child(-n + 4) {
+  background: url(./images/star-active.svg) center no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
