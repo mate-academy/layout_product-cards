@@ -1,0 +1,21 @@
+.stars {
+  display: flex;
+
+  &__star {
+    content: '';
+    width: 16px;
+    height: 16px;
+
+    @include no-active-stars;
+
+    &:not(&:last-child) {
+      margin-right: $commonMargin;
+    }
+  }
+
+  @each $active-star in $activeStarsAmount {
+    &--#{$active-star} &__star:nth-child(-n + #{$active-star}) {
+      @include active-stars;
+    }
+  }
+}
