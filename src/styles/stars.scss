@@ -1,30 +1,16 @@
 .stars {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 16px;
-
-  &__list {
-    display: flex;
-    
-  }
 
   &__star {
     width: 16px;
     height: 16px;
-    background-image: url(../images/star.svg);
-    margin-right: 4px;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
 
-    &:last-child {
-      margin-right: 0;
+    &:not(:last-child) {
+      margin-right: 4px;
     }
-  }
-
-  &__reviews {
-    font-size: 10px;
-    line-height: 14px;
   }
 }
 
