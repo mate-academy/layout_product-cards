@@ -1,3 +1,147 @@
+@import './variables';
+
 body {
   margin: 0;
+}
+
+.product-card {
+  box-sizing: border-box;
+
+  width: 200px;
+  height: 408px;
+
+  padding: 32px 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__logo {
+    display: flex;
+    margin-bottom: 40px;
+
+    &-img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__info {
+    font-family: Roboto, sans-serif;
+    line-height: 18px;
+    width: 166px;
+    padding: 0;
+
+    margin-bottom: 16px;
+
+    &-title {
+      color: $dark-color;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 0 0 4px;
+    }
+
+    &-code {
+      display: block;
+      color: $gray-color;
+      line-height: 14px;
+      font-size: 10px;
+
+      font-weight: 400;
+
+      margin-bottom: 16px;
+    }
+
+    &-review {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+
+      &-stars {
+        width: 96px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-star {
+          width: 16px;
+          height: 16px;
+
+          background-image: url(../images/star.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        &-star:nth-child(-n + 4) {
+          background-image: url(../images/star-active.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &-count {
+        font-weight: 400;
+        font-size: 10px;
+
+        line-height: 14px;
+        align-items: center;
+      }
+    }
+
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-title {
+        color: $gray-color;
+        font-weight: 400;
+        font-size: 12px;
+      }
+
+      &-sum {
+        color: $dark-color;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+
+    width: 166px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $button-blue;
+
+    border: 1px solid $button-blue;
+    border-radius: 5px;
+
+    &-link {
+      text-decoration: none;
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #ffff;
+    }
+
+    &:hover {
+      background-color: #ffff;
+    }
+
+    &:hover > &-link {
+      color: $button-blue;
+    }
+  }
 }
