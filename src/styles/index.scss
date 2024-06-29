@@ -1,3 +1,122 @@
+$bodyFont: 'Roboto', sans-serif;
+$accentColor: #060b35;
+$sexondoryColor: #616070;
+$blueColor: #00acdc;
+
 body {
   margin: 0;
+  font-family: $bodyFont;
+}
+
+.card {
+  width: 198px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__content {
+    padding: 0 16px;
+  }
+
+  &__product {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $accentColor;
+    margin: 0;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.4;
+    color: $sexondoryColor;
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-word {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.5;
+      color: $sexondoryColor;
+      margin: 0;
+    }
+    &-number {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $accentColor;
+      margin: 0;
+    }
+  }
+  &__button {
+    width: 166px;
+    height: 40px;
+    background-color: $blueColor;
+    color: white;
+    font-family: $bodyFont;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 16px;
+  }
+  &__button:hover {
+    background-color: #fff;
+    border: 1px solid $blueColor;
+    border-radius: 5px;
+    color: $blueColor;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: $bodyFont;
+  }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star-text {
+  font-weight: 400;
+  font-size: 10px;
+  margin: auto;
+  padding-left: 17px;
+  color: $accentColor;
+  font-family: $bodyFont;
+}
+
+.stars__star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stars--4 :nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  display: block;
+  padding: 32px 19px 40px;
+}
+
+.card__stars {
+  margin-bottom: 24px;
 }
