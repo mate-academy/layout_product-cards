@@ -1,0 +1,31 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__star {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(n + 5) {
+    background-image: url(../images/star.svg);
+  }
+
+  &__star:last-of-type {
+    margin-right: 0;
+  }
+
+  &__grade {
+    font-size: 10px;
+    font-weight: $font-weight;
+    line-height: 14px;
+    color: $main-color;
+  }
+}
