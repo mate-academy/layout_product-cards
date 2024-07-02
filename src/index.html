@@ -11,11 +11,25 @@
       rel="stylesheet"
       href="./styles/index.scss"
     />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="card">
       <div class="card__content">
-        <div class="card__image card__image--padding"></div>
+        <div class="card__image-container">
+          <div class="card__image"></div>
+        </div>
 
         <div class="card__details">
           <h2 class="card__tittle">
@@ -24,17 +38,28 @@
           <p class="card__code">Product code: 195434</p>
 
           <div class="card__rating">
-            <div class="card__stars"></div>
-            <span class="card__reviews"></span>
+            <div class="card__stars">
+              <div class="card__stars-star"></div>
+              <div class="card__stars-star"></div>
+              <div class="card__stars-star"></div>
+              <div class="card__stars-star"></div>
+              <div class="card__stars-star"></div>
+            </div>
+            <span class="card__reviews">Reviews: 5</span>
           </div>
 
-          <div class="card__price">
-            <span class="card__price-label"></span>
-            <span class="card__price-amount"></span>
+          <div class="card__price-container">
+            <span class="card__price-label">Price:</span>
+            <span class="card__price-amount">$2,199</span>
           </div>
         </div>
 
-        <button class="card__button"></button>
+        <button
+          class="card__button"
+          data-qa="hover"
+        >
+          BUY
+        </button>
       </div>
     </div>
   </body>
