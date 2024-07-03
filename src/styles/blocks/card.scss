@@ -3,6 +3,7 @@
   background-color: $bg-color;
   border-radius: 5px;
   padding: 32px 16px 16px;
+  box-sizing: border-box;
   border: 1px solid $border-color;
 
   .card__photo {
@@ -25,7 +26,7 @@
 
     flex-direction: column;
     text-align: center;
-    margin: 0 0 16px;
+    margin: 0;
   }
 
   .card__title {
@@ -33,7 +34,7 @@
     font-size: 12px;
     line-height: 18px;
     color: $main-font-color;
-    margin-bottom: 4px;
+    margin: 0 0 4px;
     text-align: left;
   }
 
@@ -43,6 +44,7 @@
     font-weight: 400;
     line-height: 14px;
     color: $secondary-font-color;
+    margin: 0;
     width: 100%;
   }
 
@@ -58,6 +60,7 @@
     font-weight: 400;
     line-height: 14px;
     text-align: right;
+    margin: 0;
     color: $secondary-font-color;
   }
 
@@ -72,12 +75,14 @@
     font-size: 12px;
     line-height: 18px;
     color: $secondary-font-color;
+    margin: 0;
   }
 
   .card__sum {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
+    margin: 0;
   }
 
   .card__link {
@@ -85,7 +90,6 @@
     height: 40px;
     border-radius: 5px;
     background-color: $btn-gb-color;
-    margin: 0 0 16px;
     transition: 200ms ease-in-out;
 
     @include d-justify-align-center;
@@ -102,7 +106,7 @@
 
     &:hover {
       background-color: $bg-color;
-      border: 1px solid $btn-color;
+
       cursor: pointer;
 
       .card__a {
@@ -115,12 +119,12 @@
     @include d-justify-align-center;
   }
 
-  .stars__star {
+  .stars--4 > .stars__star {
     @include card-rate-properties;
 
     background-image: url('../images/star-active.svg');
   }
-  .stars__star:last-child {
+  .stars--4 > .stars__star:last-child {
     @include card-rate-properties;
 
     background-image: url('../images/star.svg');
