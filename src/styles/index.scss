@@ -3,7 +3,7 @@
 :root {
   font-size: $text-size;
   color: $main-text-color;
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-weight: $text-weight;
   line-height: $text-lineheight;
 }
@@ -15,41 +15,30 @@ body {
 .card {
   box-sizing: border-box;
   width: 200px;
-  height: 408px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  margin: 8px;
-  position: relative;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__image-container {
-    padding: $content-padding;
-  }
+  padding: $content-padding;
+  background: #fff;
 
   &__image {
-    background-image: url(../images/imac.jpeg);
+    display: block;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
-    background-size: cover;
+    margin-bottom: 40px;
   }
 
-  &__details {
-    margin: 40px 0 0;
-    padding: 0 16px;
-  }
-
-  &__tittle {
-    margin: 0;
+  &__title {
     font-size: 12px;
     font-weight: 500;
+    margin: 0 0 4px;
   }
   &__code {
+    margin: 0; // Remove default margins
+    padding: 0;
+    display: flex;
     color: $secondary-text-color;
-    margin-top: $content-margin;
+    margin-bottom: $content-margin + 12px;
     line-height: 14px;
   }
   &__reviews {
@@ -58,8 +47,8 @@ body {
   &__rating {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: $content-margin + 12px;
+    align-items: flex-end;
+    margin-bottom: $content-margin + 20px;
   }
   &__stars {
     display: flex;
@@ -86,7 +75,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: $content-margin + 20px;
+    margin-bottom: $content-margin + 12px;
   }
   &__price-label {
     font-size: 12px;
@@ -97,18 +86,19 @@ body {
     font-weight: 700;
   }
   &__button {
-    position: absolute;
     height: 40px;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
     background-color: #00acdc;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 0;
     font-weight: 700;
+    font-size: 14px;
     line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
       border: 1px solid #00acdc;
