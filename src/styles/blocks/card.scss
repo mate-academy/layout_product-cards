@@ -115,20 +115,14 @@
     @include d-justify-align-center;
   }
 
-  @for $i from 1 through 5 {
-    @if $i == 5 {
-      .card__stars > .card__star--#{$i} {
-        @include card-rate-properties;
+  .stars__star {
+    @include card-rate-properties;
 
-        background-image: url('../images/star.svg');
-      }
-    } @else {
-      .card__stars > .card__star--#{$i} {
-        @include card-rate-properties;
-
-        background-image: url('../images/star-active.svg');
-      }
-    }
+    background-image: url('../images/star-active.svg');
   }
+  .stars__star:last-child {
+    @include card-rate-properties;
 
+    background-image: url('../images/star.svg');
+  }
 }
