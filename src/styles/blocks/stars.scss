@@ -1,0 +1,19 @@
+.card__stars {
+  @include d-justify-align-center;
+}
+
+@for $i from 1 through 5 {
+  @if $i == 5 {
+    .card__stars > .card__star--#{$i} {
+      @include card-rate-properties;
+
+      background-image: url('../images/star.svg');
+    }
+  } @else {
+    .card__stars > .card__star--#{$i} {
+      @include card-rate-properties;
+
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
