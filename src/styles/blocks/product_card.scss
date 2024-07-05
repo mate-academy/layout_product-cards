@@ -2,26 +2,21 @@ body {
   background-color: #eee;
 }
 
-.product__card {
-  margin: 40px 16px 16px;
-  background-color: #fff;
-}
-
 .product {
+  padding: 32px 16px 16px;
   background-color: #fff;
-  display: block;
   box-sizing: border-box;
   width: 200px;
-  height: 408px;
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
 
   &_img {
     display: flex;
     justify-content: center;
-    padding: 32px 19px 0;
+    margin-inline: auto;
     width: 160px;
     height: 134px;
+    margin-bottom: 40px;
   }
 
   &_name {
@@ -30,7 +25,6 @@ body {
     font-family: $mainFont;
     font-weight: 500;
     color: rgba(6, 11, 53, 1);
-
     margin: 0 0 4px;
   }
 
@@ -61,6 +55,7 @@ body {
   &_pricing {
     display: flex;
     justify-content: space-between;
+    margin: 0 0 16px;
 
     &_line {
       font-size: 12px;
@@ -78,6 +73,33 @@ body {
       font-weight: 700;
       color: rgba(6, 11, 53, 1);
       margin: 0;
+    }
+  }
+
+  &_buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 16px;
+    height: 40px;
+    font-weight: 700;
+
+    border: 1px solid $blueColor;
+    background-color: $blueColor;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+
+    margin: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      color: $blueColor;
     }
   }
 }
