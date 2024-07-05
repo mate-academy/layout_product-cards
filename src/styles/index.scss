@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+@import './stars';
 
 $accent-color: #00acdc;
 $dark-text-color: #060b35;
@@ -37,98 +38,75 @@ p {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
-}
 
-.card__image {
-  display: block;
-  height: 134px;
-  width: 160px;
-  margin-inline: auto;
-}
-
-.card__title {
-  margin-top: 40px;
-
-  @include font-styles(12px, 500, 18px, $dark-text-color);
-}
-
-.card__code {
-  margin-top: 4px;
-
-  @include font-styles(10px, 400, 14px, $light-text-color);
-}
-
-.stars {
-  display: flex;
-
-  .stars__star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    margin-right: 4px;
+  &__image {
+    display: block;
+    height: 134px;
+    width: 160px;
+    margin-inline: auto;
   }
 
-  & .stars__star:last-child {
-    margin: 0;
+  &__title {
+    margin-top: 40px;
+
+    @include font-styles(12px, 500, 18px, $dark-text-color);
   }
-}
 
-@for $i from 1 through 5 {
-  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background-image: url(../images/star-active.svg);
+  &__code {
+    margin-top: 4px;
+
+    @include font-styles(10px, 400, 14px, $light-text-color);
   }
-}
 
-.card__review {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  &__review {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 
-  @include font-styles(10px, 400, 14px, $dark-text-color);
-}
-
-.card__price {
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @include font-styles(12px, 400, 18px, $light-text-color);
-
-  .card__price-value {
-    text-align: end;
-
-    @include font-styles(16px, 700, 18px, $dark-text-color);
+    @include font-styles(10px, 400, 14px, $dark-text-color);
   }
-}
 
-.card__button {
-  padding: 11px 0;
-  border: 1px solid $accent-color;
-  margin-top: 16px;
-  border-radius: 5px;
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 40px;
+    @include font-styles(12px, 400, 18px, $light-text-color);
 
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: $accent-color;
-  transition:
-    background-color 300ms ease-in,
-    color 300ms ease-in;
+    .card__price-value {
+      text-align: end;
 
-  @include font-styles(14px, 700, 16px, #fff);
+      @include font-styles(16px, 700, 18px, $dark-text-color);
+    }
+  }
 
-  &:hover,
-  &:focus {
-    background-color: transparent;
-    color: $accent-color;
+  &__button {
+    padding: 11px 0;
+    border: 1px solid $accent-color;
+    margin-top: 16px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $accent-color;
+    transition:
+      background-color 300ms ease-in,
+      color 300ms ease-in;
+
+    @include font-styles(14px, 700, 16px, #fff);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $accent-color;
+    }
   }
 }
