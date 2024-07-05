@@ -1,3 +1,112 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+@import './stars';
+
+$accent-color: #00acdc;
+$dark-text-color: #060b35;
+$light-text-color: #616070;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@mixin font-styles($size, $weight, $height, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
+
+.card {
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+
+  &__image {
+    display: block;
+    height: 134px;
+    width: 160px;
+    margin-inline: auto;
+  }
+
+  &__title {
+    margin-top: 40px;
+
+    @include font-styles(12px, 500, 18px, $dark-text-color);
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    @include font-styles(10px, 400, 14px, $light-text-color);
+  }
+
+  &__review {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include font-styles(10px, 400, 14px, $dark-text-color);
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include font-styles(12px, 400, 18px, $light-text-color);
+
+    .card__price-value {
+      text-align: end;
+
+      @include font-styles(16px, 700, 18px, $dark-text-color);
+    }
+  }
+
+  &__button {
+    padding: 11px 0;
+    border: 1px solid $accent-color;
+    margin-top: 16px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $accent-color;
+    transition:
+      background-color 300ms ease-in,
+      color 300ms ease-in;
+
+    @include font-styles(14px, 700, 16px, #fff);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $accent-color;
+    }
+  }
 }
