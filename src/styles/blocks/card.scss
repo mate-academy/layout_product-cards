@@ -1,0 +1,93 @@
+$main-color: #060b35;
+$second-color: #616070;
+$main-text-weight: 500;
+$second-text-weight: 400;
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__photo {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin-inline: auto;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    font-weight: $main-text-weight;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-color;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: $second-text-weight;
+    font-size: 10px;
+    line-height: 14px;
+    color: $second-color;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18px;
+    margin-bottom: 16px;
+
+    &-name {
+      color: $second-color;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-value {
+      color: $main-color;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    line-height: 16px;
+    text-align: center;
+
+    background-color: #00acdc;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+
+    &:hover {
+      color: #00acdc;
+      background-color: #fff;
+      border-color: #00acdc;
+    }
+  }
+}
