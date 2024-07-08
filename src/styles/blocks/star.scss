@@ -1,0 +1,29 @@
+.card__container-reyting {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  & .card__stars {
+    display: flex;
+
+    & .star {
+      background-image: url(../images/star.svg);
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  & .card__reviews {
+    margin: 0;
+  }
+}
