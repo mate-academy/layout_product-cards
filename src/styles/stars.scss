@@ -1,0 +1,22 @@
+$icon-side-size: 16px;
+
+.stars {
+  display: flex;
+
+  & :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.star {
+  display: flex;
+  width: $icon-side-size;
+  height: $icon-side-size;
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:not(:first-child) {
+    margin-left: 4px;
+  }
+}
