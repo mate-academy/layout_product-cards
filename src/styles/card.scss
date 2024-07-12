@@ -1,0 +1,68 @@
+.layout__imac-container {
+  height: $card-height;
+  width: $card-width;
+  border: 0;
+  box-sizing: border-box;
+  position: relative;
+  background-color: $container-background;
+
+  &__imac-image {
+    width: $image-width;
+    height: $image-height;
+    position: absolute;
+    top: $image-top;
+    left: $image-left;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__imac-text {
+    width: $button-width;
+    height: 36px;
+    position: absolute;
+    top: 207px;
+    left: 17px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+    text-align: center;
+  }
+
+  &__imac-code {
+    width: 98px;
+    height: 14px;
+    position: absolute;
+    top: 247px;
+    left: 17px;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+    text-align: center;
+  }
+
+  &__imac-button {
+    width: $button-width;
+    height: $button-height;
+    position: absolute;
+    top: 351px;
+    left: 17px;
+    border-radius: $button-border-radius;
+    background-color: $button-background;
+    color: $button-text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+
+    @include hover-effect(
+      $button-hover-background,
+      $button-hover-text-color,
+      $border-color
+    );
+  }
+}
