@@ -1,3 +1,116 @@
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  text-align: center;
+  align-items: flex-end;
+
+  width: 200px;
+  height: 408px;
+
+  border: 1px #f3f3f3 solid;
+  border-radius: 5px;
+
+  background-image: url(../images/imac.jpeg);
+  background-size: 160px 134px;
+  background-repeat: no-repeat;
+  background-position-y: 32px;
+  background-position-x: 19px;
+  background-color: $color-default;
+}
+
+.card__head {
+  margin: 206px 16px 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-text;
+  text-align: left;
+}
+
+.card__code {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  margin: 4px 84px 0 16px;
+  color: $color-grey-text;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 16px 0;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.reviews {
+  font-size: 10px;
+  font-weight: 400;
+  text-align: right;
+  color: $color-text;
+}
+
+.stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-grey-text;
+}
+
+.values {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  color: $color-text;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 23px 16px 0;
+  align-items: center;
+}
+
+.card__button {
+  width: 166px;
+  height: 40px;
+  background-color: $color-blue;
+  border-radius: 5px;
+  border: none;
+  margin: 16px;
+  cursor: pointer;
+  color: $color-default;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  background-color: $color-default;
+  color: $color-blue;
+  border: 1px solid $color-blue;
 }
