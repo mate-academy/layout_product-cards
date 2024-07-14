@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  padding: 32px 16px 16px;
+  color: $main-color;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+
+  &__imac {
+    align-self: center;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: $title-font-weight;
+  }
+
+  &__product-code {
+    margin-top: 4px;
+    margin-bottom: 0;
+    color: $product-color;
+    font-weight: $font-weight;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $general-margin-row;
+    margin-bottom: 24px;
+
+    &-reviews {
+      color: $product-color;
+      font-size: 10px;
+      line-height: 14px;
+      padding-top: 1px;
+      margin: 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: corowlumn;
+    align-items: center;
+    justify-content: space-between;
+
+    &-text {
+      font-weight: $font-weight;
+      color: $product-color;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-cost {
+      font-size: 16px;
+      font-weight: 700;
+      color: $main-color;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    margin-top: $general-margin-row;
+    margin-bottom: $general-margin-row;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.4s;
+
+    cursor: pointer;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    background-color: $button-color;
+    color: $button-text-color;
+
+    &:hover {
+      color: $button-color;
+      background-color: $button-text-color;
+    }
+  }
+}
