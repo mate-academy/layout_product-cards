@@ -1,16 +1,4 @@
-.card__rating {
-  display: flex;
-  margin-bottom: 24px;
-  height: 16px;
-  width: auto;
-  justify-content: space-between;
 
-  &-reviews {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    color: $main-text-color;
-  }
 
   .stars {
     display: inline-flex;
@@ -30,10 +18,13 @@
       }
     }
 
-    &--4 {
-      .stars__star:nth-child(-n + 4) {
-        background-image: url(../images/star-active.svg);
-      }
-    }
+    &--0 .stars__star:nth-child(-n + 0),
+    &--1 .stars__star:nth-child(-n + 1),
+    &--2 .stars__star:nth-child(-n + 2),
+    &--3 .stars__star:nth-child(-n + 3),
+    &--4 .stars__star:nth-child(-n + 4),
+    &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
   }
-}
+  }
+
