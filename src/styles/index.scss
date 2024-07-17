@@ -1,3 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px 16px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 16px 0;
+
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    color: rgba(97, 96, 112, 1);
+    margin-bottom: 4px 84px 16px 16px;
+
+  }
+
+
+
+  &__rating {
+    display: flex;
+    margin-bottom: 4px;
+
+    &-star {
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+      background-image: url("../images/star-active.svg");
+      margin-right: 4px;
+
+
+      &--inactive {
+        background-image: url("../images/star.svg");
+      }
+
+    }
+    &-reviews{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 16px 0;
+      gap: 17px;
+
+
+    }
+
+  }
+
+  &__reviews {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 16px;
+    white-space: nowrap;
+  }
+
+  &__price-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 16px;
+
+    &-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // margin-bottom: 16px;
+      gap: 80px;
+
+    }
+  }
+
+  &__buy {
+    display: flex;
+    padding: 8px 16px;
+    background-color: rgba(0, 172, 220, 1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 166px;
+    height: 40px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 172, 220, 1);
+      color: rgba(0, 172, 220, 1);
+    }
+  }
 }
