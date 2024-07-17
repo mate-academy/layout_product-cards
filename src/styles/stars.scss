@@ -1,0 +1,22 @@
+@import './variables';
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: $star-image-default;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--active {
+      background-image: $star-image-active;
+    }
+
+    & + & {
+      margin-left: $padding / 4;
+    }
+  }
+}
