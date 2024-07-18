@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+$main-color: #060b35;
+$card-gray-color: #616070;
+$color-blue: rgba(0, 172, 220, 1);
+$color-white: #fff;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +14,7 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 
@@ -33,13 +38,12 @@ body {
     font-weight: 500;
     margin-bottom: 4px;
     line-height: 18px;
-    color: #060b35;
+    color: $main-color;
   }
 
   &__code {
-    font-weight: 400;
     font-size: 10px;
-    color: #616070;
+    color: $card-gray-color;
     margin-bottom: 16px;
     line-height: 14px;
   }
@@ -54,7 +58,7 @@ body {
   &__reviews-text {
     font-size: 10px;
     line-height: 14px;
-    color: #060b35;
+    color: $main-color;
   }
 
   &__price {
@@ -64,7 +68,7 @@ body {
   }
 
   &__price-label {
-    color: #616070;
+    color: $card-gray-color;
     font-size: 12px;
     line-height: 18px;
   }
@@ -73,17 +77,17 @@ body {
     font-weight: bold;
     font-size: 16px;
     line-height: 18px;
-    color: #060b35;
+    color: $main-color;
   }
 
   &__buy {
     display: flex;
     padding: 8px 16px;
-    background-color: rgba(0, 172, 220, 1);
-    color: #fff;
+    background-color: $color-blue;
+    color: $color-white;
     text-decoration: none;
     border-radius: 5px;
-    width: 166px;
+    width: 100%;
     height: 40px;
     font-size: 14px;
     font-weight: 700;
@@ -92,9 +96,9 @@ body {
     justify-content: center;
 
     &:hover {
-      background-color: #fff;
-      border: 1px solid rgba(0, 172, 220, 1);
-      color: rgba(0, 172, 220, 1);
+      background-color: $color-white;
+      border: 1px solid $color-blue;
+      color: $color-blue;
     }
   }
 }
