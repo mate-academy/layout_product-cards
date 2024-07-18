@@ -4,7 +4,6 @@
   width: $card-width;
   height: $card-height;
   border: 1px solid $border-color;
-  padding: $padding;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,18 +11,18 @@
   background: $background-color;
 
   &__image {
-    margin: 32px auto 40px;
+    margin-top: 32px;
     width: 160px;
     height: 134px;
   }
 
   &__title {
-    margin-bottom: 4px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     font-family: $font-family;
     color: #060b35;
+    padding: 40px 16px 0;
   }
 
   &__code {
@@ -31,6 +30,9 @@
     line-height: 14px;
     color: #616070;
     width: 100%;
+    text-align: left;
+    padding-left: 16px;
+    padding-top: 4px;
   }
 
   &__price {
@@ -38,10 +40,11 @@
     justify-content: space-between;
     width: 100%;
     margin: 0;
+    padding: 8px 16px 0;
+    align-items: center;
 
     &-tag {
       font-size: 12px;
-      margin-bottom: 16px;
     }
 
     &-money {
@@ -56,7 +59,8 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 16px;
+    padding: 16px;
+    align-items: center;
   }
 
   &__reviews {
@@ -68,10 +72,12 @@
   }
 
   &__buy {
-    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $hover-color;
     color: white;
     text-decoration: none;
-    padding: 8px 16px;
     width: 166px;
     height: 40px;
     border-radius: $border-radius;
@@ -79,7 +85,7 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    text-align: center;
+    margin: 16px;
   }
 
   &:hover {
