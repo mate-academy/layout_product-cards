@@ -1,0 +1,39 @@
+@import './variables';
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: $star-image-default;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--0 .stars__star {
+    background-image: $star-image-default;
+  }
+
+  &--1 .stars__star:nth-child(-n + 1) {
+    background-image: $star-image-active;
+  }
+
+  &--2 .stars__star:nth-child(-n + 2) {
+    background-image: $star-image-active;
+  }
+
+  &--3 .stars__star:nth-child(-n + 3) {
+    background-image: $star-image-active;
+  }
+
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: $star-image-active;
+  }
+
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: $star-image-active;
+  }
+}

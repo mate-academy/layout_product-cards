@@ -1,0 +1,96 @@
+@import './variables';
+
+.card {
+  width: $card-width;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-family;
+  background: $background-color;
+
+  &__image {
+    margin-top: 32px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    font-family: $font-family;
+    color: $title-color;
+    padding: 40px 16px 0;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $code-color;
+    width: $width;
+    text-align: left;
+    padding-left: $padding;
+    padding-top: $padding / 4;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $width;
+    margin: 0;
+    padding: $padding / 2 $padding 0;
+    align-items: center;
+
+    &-label {
+      font-size: 12px;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    width: $width;
+    justify-content: space-between;
+    padding: $padding;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-family: $font-family;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    color: $title-color;
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $hover-color;
+    color: $background-color;
+    text-decoration: none;
+    width: $buy-width;
+    height: $buy-height;
+    border-radius: $border-radius;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    margin: $padding;
+  }
+
+  &__buy:hover {
+    border: 1px solid $hover-color;
+    color: $hover-color;
+    background: $background-color;
+  }
+}
