@@ -1,3 +1,121 @@
+$main-accent: #060b35;
+$secondary-accent: #616070;
+$blue-accent: #00acdc;
+
+@mixin set-font($size, $weight, $height, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 16px 16px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__img {
+    height: 134px;
+    width: 160px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    @include set-font(12px, 500, 18px, $main-accent);
+
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include set-font(10px, 400, 14px, $secondary-accent);
+
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    @include set-font(12px, 400, 18px, $secondary-accent);
+  }
+
+  &__price-value {
+    @include set-font(16px, 700, 18px, $main-accent);
+  }
+
+  &__buy-btn {
+    @include set-font(14px, 700, 16px, #fff);
+
+    width: 166px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $blue-accent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      box-sizing: border-box;
+      background-color: #fff;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+      border-radius: 5px;
+    }
+  }
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+
+    &--active {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__amount {
+    @include set-font(10px, 400, 14px, $main-accent);
+  }
 }
