@@ -1,0 +1,93 @@
+@use '../utils/variables' as *;
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  padding: $main-font-size;
+  background-color: #fff;
+  border: calc($main-font-size / 16);
+  border-style: solid;
+  border-color: $card-border-color;
+  border-radius: calc($card-width / 40);
+
+  &__product-image {
+    width: calc($card-width * 0.8);
+    padding-top: $main-font-size;
+    margin: 0 auto;
+  }
+
+  &__product-image img {
+    width: calc($card-width * 0.8);
+    height: calc($card-width * 0.67);
+    vertical-align: bottom;
+  }
+
+  &__product-name {
+    padding-top: calc($card-width / 5);
+    font-size: $secondary-font-size;
+    font-weight: 500;
+  }
+
+  &__product-code {
+    padding-top: calc($main-font-size / 4);
+    font-size: $smallest-font-size;
+    line-height: $smallest-line-height;
+    color: $secondary-color;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $main-font-size;
+  }
+
+  &__number-of-reviews {
+    align-self: flex-end;
+    font-size: $smallest-font-size;
+    line-height: $smallest-line-height;
+  }
+
+  &__product-price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: calc($secondary-font-size * 2);
+  }
+
+  &__price-tittle {
+    font-size: $secondary-font-size;
+    line-height: $main-line-height;
+    color: $secondary-color;
+  }
+
+  &__price-value {
+    font-weight: 700;
+  }
+
+  &__buy-link {
+    padding-top: $main-font-size;
+  }
+
+  &__buy-link a {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc($card-width / 5);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: calc($main-font-size * 0.88);
+    font-weight: 700;
+    color: #fff;
+    border-radius: calc($card-width / 40);
+    background-color: $buy-link-color;
+  }
+
+  &__buy-link a:hover {
+    background-color: #fff;
+    border: calc($main-font-size / 16);
+    border-style: solid;
+    border-color: $buy-link-color;
+    color: $buy-link-color;
+    transition: 0.4s;
+  }
+}
