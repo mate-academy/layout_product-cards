@@ -3,7 +3,6 @@
 .card {
   box-sizing: border-box;
   width: 200px;
-  height: 406px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 16px 16px;
@@ -17,23 +16,27 @@
   }
 
   &__name {
-    color: $Main-accent;
+    color: $main-accent;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    margin: 0 0 4px;
+    margin: 0;
+    margin-bottom: 4px;
   }
 
   &__code {
-    margin: 0 0 16px;
-    color: $Secondary;
+    margin: 0;
+    margin-bottom: 16px;
+    color: $secondary;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
   }
+
   &__rating {
     display: flex;
     justify-content: space-between;
+    margin: 0;
     margin-bottom: 24px;
 
     &-reviews {
@@ -41,7 +44,7 @@
       line-height: 16px;
       font-size: 10px;
       font-weight: 400;
-      color: $Main-accent;
+      color: $main-accent;
     }
   }
 
@@ -49,23 +52,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     margin-bottom: 16px;
-  }
 
-  &__text {
-    margin: 0;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $Secondary;
-  }
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+    }
 
-  &__cost {
-    margin: 0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $Main-accent;
+    &-cost {
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-accent;
+    }
   }
 
   &__buy {
@@ -74,23 +78,23 @@
     width: 100%;
     height: 40px;
     display: flex;
-    color: $White;
+    color: $white;
     text-decoration: none;
     justify-content: center;
-    background-color: $Blue-accent;
+    background-color: $blue-accent;
     border-radius: 5px;
-    border: 1px solid $Blue-accent;
+    border: 1px solid $blue-accent;
 
     &:hover {
-      background-color: $White;
-      color: $Blue-accent;
+      background-color: $white;
+      color: $blue-accent;
     }
-  }
 
-  &__buy-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: uppercase;
+    &-text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 10px;
+      text-transform: uppercase;
+    }
   }
 }
