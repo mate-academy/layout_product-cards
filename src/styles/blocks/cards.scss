@@ -1,0 +1,67 @@
+@import '../utils/mixins';
+@import '../utils/colors';
+
+.card {
+  @include flex-center;
+
+  width: 200px;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $background-color;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+
+  &__img {
+    margin-top: 32px;
+    height: 134px;
+    width: 160px;
+  }
+
+  &__title {
+    @include product-title-font;
+
+    margin-top: 40px;
+  }
+
+  &__product-code {
+    @include product-code-font;
+    @include flex-left;
+
+    align-self: start;
+    margin-top: 4px;
+  }
+
+  &__product-price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__price-text {
+    @include product-code;
+  }
+
+  &__price {
+    @include price-font;
+
+    color: #060b35;
+  }
+
+  &__buy-button {
+    @include buy-button-font;
+
+    margin-top: 16px;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+      background-color: $background-color;
+      color: $buy-botton-bc-color;
+      border: 1px solid $buy-botton-bc-color;
+    }
+  }
+}

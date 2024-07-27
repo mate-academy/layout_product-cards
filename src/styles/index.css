@@ -3,12 +3,15 @@ body {
   padding: 0;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  height: 408px;
   width: 200px;
   padding: 0;
   padding-left: 16px;
@@ -21,6 +24,7 @@ body {
 .card__img {
   margin-top: 32px;
   height: 134px;
+  width: 160px;
 }
 
 .card__title {
@@ -62,10 +66,10 @@ body {
 
 .card__price {
   font-family: Roboto, sans-serif;
+  color: #616070;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #060b35;
 }
 
 .card__buy-button {
@@ -111,7 +115,7 @@ body {
   flex-direction: row;
 }
 
-.stars__ranking {
+.stars__star {
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -120,7 +124,8 @@ body {
   height: 16px;
 }
 
-.stars__ranking:nth-child(-n + 4) {
+.stars__star:nth-child(-n + 4),
+.stars__star--4 {
   background-image: url(../images/star-active.svg);
 }
 
