@@ -1,0 +1,50 @@
+@import './variables';
+
+.stars {
+  width: $price-width;
+  height: $stars-size;
+  position: absolute;
+  top: $stars-top;
+  left: $stars-left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-block {
+    display: flex;
+  }
+
+  &-star {
+    width: $stars-size;
+    height: $stars-size;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/star.svg');
+
+    &:not(:last-child) {
+      margin-right: $stars-margin-right;
+    }
+  }
+
+  .star-active {
+    background-image: url('../images/star-active.svg');
+  }
+
+  &-reviews {
+    font-size: $reviews-font-size;
+    font-weight: $reviews-font-weight;
+    line-height: $reviews-font-size;
+    text-align: $reviews-text-align;
+    color: $reviews-text-color;
+    margin-left: auto;
+  }
+
+  // Modificadores para estrelas destacadas
+  &--1 .stars-star:nth-child(1),
+  &--2 .stars-star:nth-child(-n + 2),
+  &--3 .stars-star:nth-child(-n + 3),
+  &--4 .stars-star:nth-child(-n + 4),
+  &--5 .stars-star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
