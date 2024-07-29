@@ -1,12 +1,23 @@
-.layout__imac-container {
-  height: $card-height;
+@import './variables';
+
+// Mixin para efeito hover
+@mixin hover-effect($hover-bg, $hover-color, $border-color) {
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+    border: 1px solid $border-color;
+  }
+}
+
+.card {
+  font-family: $font-family;
   width: $card-width;
-  border: 0;
+  height: $card-height;
   box-sizing: border-box;
   position: relative;
   background-color: $container-background;
 
-  &__imac-image {
+  &__image {
     width: $image-width;
     height: $image-height;
     position: absolute;
@@ -17,7 +28,7 @@
     background-position: center;
   }
 
-  &__imac-text {
+  &__text {
     width: $button-width;
     height: 36px;
     position: absolute;
@@ -27,22 +38,49 @@
     font-weight: 500;
     line-height: 18px;
     color: rgba(6, 11, 53, 1);
-    text-align: center;
   }
 
-  &__imac-code {
+  &__code {
     width: 98px;
     height: 14px;
     position: absolute;
     top: 247px;
     left: 17px;
     font-size: 10px;
+    font-weight: 400;
     line-height: 14px;
     color: rgba(97, 96, 112, 1);
     text-align: center;
   }
 
-  &__imac-button {
+  &__price {
+    width: $price-width;
+    height: $price-height;
+    position: absolute;
+    top: $price-top;
+    left: $price-left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $price-color;
+
+    &-label {
+      color: $price-label-font-color;
+      font-size: $price-label-font-size;
+      font-weight: $price-label-font-weight;
+      line-height: $price-label-line-height;
+      text-align: $price-label-text-align;
+    }
+
+    &-value {
+      font-size: $price-value-font-size;
+      font-weight: $price-value-font-weight;
+      line-height: $price-value-line-height;
+      text-align: $price-value-text-align;
+    }
+  }
+
+  &__button {
     width: $button-width;
     height: $button-height;
     position: absolute;

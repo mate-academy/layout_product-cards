@@ -1,6 +1,8 @@
-.layout__stars {
-  width: 166px;
-  height: 16px;
+@import './variables';
+
+.stars {
+  width: $price-width;
+  height: $stars-size;
   position: absolute;
   top: $stars-top;
   left: $stars-left;
@@ -29,12 +31,20 @@
   }
 
   &-reviews {
-    margin-left: auto;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
+    font-size: $reviews-font-size;
+    font-weight: $reviews-font-weight;
+    line-height: $reviews-font-size;
     text-align: $reviews-text-align;
     color: $reviews-text-color;
-    transform: translateX(50%);
+    margin-left: auto;
+  }
+
+  // Modificadores para estrelas destacadas
+  &--1 .stars-star:nth-child(1),
+  &--2 .stars-star:nth-child(-n + 2),
+  &--3 .stars-star:nth-child(-n + 3),
+  &--4 .stars-star:nth-child(-n + 4),
+  &--5 .stars-star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
   }
 }
