@@ -1,4 +1,4 @@
-body {
+html {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -8,7 +8,7 @@ body {
 .card {
   box-sizing: border-box;
   width: 200px;
-  padding: 31px 16px 16px;
+  padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
@@ -16,19 +16,17 @@ body {
   flex-direction: column;
 
   &__img {
+    display: block;
     width: 160px;
-    height: 135px;
+    height: 134px;
     align-self: center;
-    background-image: url(../images/imac.jpeg);
-    background-size: 160px 134px;
-    background-repeat: no-repeat;
-    background-position: center;
     margin-bottom: 40px;
   }
 
   &__details {
     margin-bottom: 16px;
   }
+
   &__title {
     font-weight: 500;
     font-size: 12px;
@@ -37,6 +35,7 @@ body {
     color: $accentColor;
     line-height: 18px;
   }
+
   &__description {
     font-weight: 400;
     font-size: 10px;
@@ -48,6 +47,7 @@ body {
   &__reviews {
     display: flex;
     justify-content: space-between;
+    margin-top: 16px;
     margin-bottom: 24px;
 
     &-text {
@@ -65,13 +65,13 @@ body {
     margin-bottom: 16px;
     line-height: 18px;
 
-    &-title {
+    &-label {
       font-size: 12px;
       margin: 0;
 
       color: $secondColor;
     }
-    &-price {
+    &-value {
       font-size: 16px;
       font-weight: 700;
       margin: 0;
