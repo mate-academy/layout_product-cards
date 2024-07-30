@@ -63,10 +63,14 @@ body {
     &:last-child {
       margin-right: 0;
     }
+  }
 
-    &--active {
-      background-image: url(../images/star-active.svg);
-    }
+  &__stars--1 .card__star:nth-child(1),
+  &__stars--2 .card__star:nth-child(-n + 2),
+  &__stars--3 .card__star:nth-child(-n + 3),
+  &__stars--4 .card__star:nth-child(-n + 4),
+  &__stars--5 .card__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
   }
 
   &__review {
