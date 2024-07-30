@@ -11,17 +11,17 @@ body {
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-}
 
-.header__image {
-  width: 160px;
-  height: 134px;
-  padding-inline: 19px;
-  padding-top: 32px;
-}
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding-inline: 19px;
+    padding-top: 32px;
+  }
 
-.main {
-  padding-inline: $content-padding-inline;
+  &__main {
+    padding-inline: $content-padding-inline;
+  }
 
   &__product-name {
     font-size: 12px;
@@ -40,24 +40,15 @@ body {
     text-align: left;
     margin-top: 4px;
   }
-}
 
-.reviews {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  text-align: right;
-  margin-left: 17px;
-  margin-block: 0;
-}
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
 
-.price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-
-  &__text {
+  &__price-text {
     color: $second-text-color;
     font-size: 12px;
     font-weight: 400;
@@ -65,25 +56,25 @@ body {
     text-align: left;
   }
 
-  &__value {
+  &__price-value {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
     text-align: right;
   }
-}
 
-.button {
-  display: flex;
-  width: 166px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #00acdc;
-  margin: 16px;
-  justify-content: center;
-  align-items: center;
+  &__button {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00acdc;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+  }
 
-  &__link {
+  &__button-link {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -93,13 +84,13 @@ body {
     text-transform: uppercase;
   }
 
-  &:hover {
+  &__button:hover {
     box-sizing: border-box;
     border: 1px solid #00acdc;
     background-color: #fff;
   }
 
-  &:hover &__link {
+  &__button:hover &__button-link {
     color: #00acdc;
   }
 }
