@@ -13,12 +13,10 @@
     margin-right: 4px;
   }
 
-  & :first-child,
-  & :nth-child(-n + 2),
-  & :nth-child(-n + 3),
-  & :nth-child(-n + 4),
-  & :nth-child(-n + 5) {
-    background-image: url(../images/star-active.svg);
+  @for $activeStars from 0 through 4 {
+    &--#{$activeStars} :nth-child(-n + #{$activeStars}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 
   &__reviews {
