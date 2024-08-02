@@ -1,5 +1,8 @@
 $primary-color: #f3f3f3;
 $additional-color: #00acdc;
+$white-color: #fff;
+$dark-gray: #616070;
+$dark-blue: #060b35;
 
 body {
   margin: 0;
@@ -30,7 +33,7 @@ p {
     font-weight: 500;
     margin-bottom: 0;
     line-height: 18px;
-    color: #060b35;
+    color: $dark-blue;
   }
 
   &__code {
@@ -38,7 +41,7 @@ p {
     margin-top: 4px;
     font-size: 10px;
     font-weight: 400;
-    color: #616070;
+    color: $dark-gray;
     line-height: 14px;
   }
 
@@ -50,13 +53,13 @@ p {
     line-height: 18px;
 
     &-text {
-      color: #616070;
+      color: $dark-gray;
       font-size: 12px;
       font-weight: 400;
     }
 
     &-value {
-      color: #060b35;
+      color: $dark-blue;
       font-size: 16px;
       font-weight: 700;
       text-align: right;
@@ -75,16 +78,17 @@ p {
     width: 16px;
     height: 16px;
     margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
-  &:last-child {
-    margin-right: 0;
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
   }
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
 
 .card__reviews {
   justify-content: space-between;
@@ -98,7 +102,7 @@ p {
   font-size: 10px;
   text-align: right;
   font-weight: 400;
-  color: #060b35;
+  color: $dark-blue;
   line-height: 14px;
   margin: 0;
 }
@@ -114,7 +118,7 @@ p {
   height: 40px;
   font-size: 14px;
   padding: 0;
-  color: white;
+  color: $white-color;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -123,7 +127,7 @@ p {
   transition: background-color 0.25s;
 
   &:hover {
-    background-color: #fff;
+    background-color: $white-color;
     color: $additional-color;
     border-color: $additional-color;
   }
