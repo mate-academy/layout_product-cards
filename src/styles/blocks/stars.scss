@@ -1,14 +1,20 @@
-.product__stars {
+.stars {
   display: flex;
   margin-top: 17px;
-  /*
-  position: absolute;
-  left: $item-position-left;
-  top: 276px;
-  */
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-left: 16px;
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    color: $main-text-color;
+  }
 }
 
-.product__star {
+.star {
   height: 16px;
   width: 16px;
   margin-right: 4px;
@@ -21,17 +27,6 @@
   }
 }
 
-.product__stars--4 .product__star:nth-child(-n + 4) {
+.stars--4 .star:nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
-}
-
-.product__reviews {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  margin-left: 16px;
-  text-align: right;
-  display: flex;
-  align-items: flex-end;
-  color: $main-text-color;
 }
