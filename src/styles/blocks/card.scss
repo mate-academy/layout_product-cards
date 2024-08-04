@@ -1,3 +1,4 @@
+@use '../utils/variables' as *;
 
 .card {
   box-sizing: border-box;
@@ -6,13 +7,17 @@
   flex-direction: column;
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: $font-family;
 
   &__image {
-    margin: 33px 20px 0;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
   }
 
   &__header {
+    color: $color-black;
+    line-height: 18px;
     font-weight: 500;
     font-size: 12px;
     margin: 40px 16px 0;
@@ -21,43 +26,58 @@
   &__product_code {
     font-weight: 400;
     font-size: 10px;
-    margin: 4px 0 0 16px;
-    color: rgba(97, 96, 112, 1);
+    margin: 5px 0 0 16px;
+    color: $grey-color;
   }
 
   &__stars {
-  display: flex;
+    display: flex;
+    margin: 18px 16px 0;
+    height: 16px;
   }
 
   &__price {
+    width: 166px;
     display: flex;
     justify-content: space-between;
     margin: 24px 16px 0;
 
     &-text {
-      color: rgba(97, 96, 112, 1);
+      text-align: center;
+      color: $grey-color;
       font-size: 12px;
       font-weight: 400;
+      margin: 0;
+      padding-top: 2px;
     }
 
     &-value {
-      color: rgba(6, 11, 53, 1);
+      color: $color-black;
       font-weight: 700;
+      margin: 0;
+      padding-bottom: 1px;
     }
   }
 
   &__button {
+    font-family: $font-family;
     box-sizing: border-box;
     height: 40px;
-    margin: 16px;
-    background-color: rgba(0, 172, 220, 1);
+    margin: 14px 16px 16px;
+    background-color: $blue-color;
     border: none;
     border-radius: 5px;
-    color: rgba(255, 255, 255, 1);
+    color: $white-color;
+    line-height: 16px;
     font-weight: 700;
     font-size: 14px;
     text-align: center;
     padding: 0;
+
+    &:hover {
+      background-color: $white-color;
+      border: 1px solid $blue-color;
+      color: $blue-color;
+    }
   }
 }
-
