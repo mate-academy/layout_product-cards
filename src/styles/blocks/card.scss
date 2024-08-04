@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
 }
@@ -9,13 +7,15 @@ body {
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
   width: 200px;
-  height: 408px;
+  height: 406px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 16px;
 
   &__image {
+    display: block;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
   }
@@ -25,17 +25,17 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    text-align: left;
-    margin-top: 36px;
+    margin-top: 40px;
     margin-bottom: 4px;
   }
 
   &__code {
-    text-align: left;
+    margin: 0;
+    justify-content: space-between;
     color: #616070;
     font-size: 10px;
     font-weight: 400;
-    line-height: 14px;
+    line-height: 16px;
     margin-top: 4px;
   }
 
@@ -44,7 +44,6 @@ body {
     justify-content: space-between;
     margin-top: 24px;
     align-items: center;
-
   }
 
   &__price-text {
@@ -55,37 +54,42 @@ body {
   }
 
   &__price-value {
+    color: #060b35;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
     text-align: right;
   }
-}
 
-.card__button {
+  &__button {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #00acdc;
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    border-radius: 5px;
-    border: 1px solid #00acdc;
-    text-decoration: none;
-    width: 100%;
+    width: 166px;
     height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00acdc;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button-link {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
     box-sizing: border-box;
-
-    &__button-link{
-      text-decoration: none;
-    }
-
-  &:hover {
+    border: 1px solid #00acdc;
     background-color: #fff;
-    border: 1px solid;
-    color: #00acdc;
+  }
 
+  &__button:hover &__button-link {
+    color: #00acdc;
   }
 }
