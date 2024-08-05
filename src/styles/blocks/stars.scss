@@ -12,9 +12,15 @@
     margin-right: 4px;
   }
 
-  &--4 .stars__star:nth-child(-n + 4) {
-    background-image: url('../images/star-active.svg');
+  @for $activeStars from 0 through 5 {
+    &--#{$activeStars} :nth-child(-n + #{$activeStars}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
+
+  // &--4 .stars__star:nth-child(-n + 4) {
+  //   background-image: url('../images/star-active.svg');
+  // }
 
   &__reviews {
     font-size: 10px;
