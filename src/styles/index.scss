@@ -1,3 +1,133 @@
-body {
+$font-family: 'Roboto', sans-serif;
+$text-color: #060b35;
+$second-text-color: #616070;
+$primary-color: #00acdc;
+$link-color: #fff;
+
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .card {
+    width: 200px;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    padding: 32px 16px 16px;
+
+    img {
+      margin: auto;
+      width: 160px;
+      display: block;
+      height: 134px;
+    }
+
+    &__title {
+      margin-top: 40px;
+      margin-bottom: 4px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: $text-color;
+    }
+
+    &__code {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $second-text-color;
+      margin-bottom: 16px;
+    }
+
+    .stars {
+      display: flex;
+      align-items: center;
+
+      &__star {
+        background-image: url('../images/star.svg');
+        background-position: center;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        margin-right: 4px;
+      }
+
+      &.stars--1 .stars__star:nth-child(1),
+      &.stars--2 .stars__star:nth-child(-n + 2),
+      &.stars--3 .stars__star:nth-child(-n + 3),
+      &.stars--4 .stars__star:nth-child(-n + 4),
+      &.stars--5 .stars__star:nth-child(-n + 5) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+
+    &__reviews {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    &__reviews-count {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $text-color;
+    }
+
+    &__price {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $second-text-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      span {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: $text-color;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      display: block;
+      padding: 12px;
+      background-color: $primary-color;
+      border-radius: 5px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $link-color;
+      border: 1px solid $primary-color;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $link-color;
+        color: $primary-color;
+        transition: all 0.3s ease;
+      }
+    }
+  }
 }
