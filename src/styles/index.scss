@@ -1,3 +1,130 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  align-items: center;
+
+  &__imac {
+    content: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: #060b35;
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 12px;
+    width: 166px;
+    height: 36px;
+    margin-bottom: 4px;
+    align-items: flex-start;
+  }
+}
+
+.main {
+  font-weight: 400;
+  line-height: 14px;
+  font-size: 10px;
+  width: 166px;
+  margin-bottom: 16px;
+
+  &__product {
+    color: #616070;
+    align-self: start;
+  }
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  margin-bottom: 24px;
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  &__star {
+    background-image: url(../images/star-active.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__stars--0 &__star:nth-child(n + 5) {
+    filter: grayscale(100%);
+  }
+
+  &__review {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #060b35;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  height: 18px;
+  margin-bottom: 16px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    color: #616070;
+  }
+  &__money {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background: #00acdc;
+  border: 1px solid #00acdc;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #fff;
+  border: 1px solid #00acdc;
+  color: #00acdc;
 }
