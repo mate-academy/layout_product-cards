@@ -1,3 +1,68 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $button-big-text;
+  margin-bottom: 24px;
+  width: $button-widht;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $button-widht;
+  height: 18px;
+  margin-bottom: 16px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    color: $button-text-gr-color;
+  }
+  &__money {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.button {
+  color: $button-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $button-widht;
+  height: 40px;
+  border-radius: 5px;
+  background: $button-bl-color;
+  border: 1px solid $button-bl-color;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.button:hover {
+  background: $button-color;
+  border: 1px solid $button-bl-color;
+  color: $button-bl-color;
 }
