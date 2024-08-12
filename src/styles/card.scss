@@ -1,8 +1,12 @@
-.footer {
-  padding: 0 16px 16px;
+.card {
+  width: $card-width;
+  height: $card-height;
+  box-sizing: border-box;
+  border: solid 1px #f3f3f3;
+  border-radius: 5px;
 
-  &__name {
-    margin-bottom: 4px;
+  &__container {
+    margin: 0 16px;
   }
 
   &__h {
@@ -10,6 +14,7 @@
     font-size: 12px;
     line-height: 18px;
     color: $main-card-color;
+    padding-bottom: 4px;
   }
 
   &__code {
@@ -27,37 +32,10 @@
     margin-bottom: 24px;
   }
 
-  &__rate-stars {
-    display: flex;
-    align-items: center;
-  }
-
   &__rate-reviews {
     font-weight: 400;
     font-size: 10px;
     color: $main-card-color;
-  }
-
-  &__rate-stars-star {
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-  }
-
-  &__rate-stars-star:last-child {
-    margin-right: 0;
-  }
-
-  &__rate-stars--0 &__rate-stars-star:nth-child(-n + 0),
-  &__rate-stars--1 &__rate-stars-star:nth-child(-n + 1),
-  &__rate-stars--2 &__rate-stars-star:nth-child(-n + 2),
-  &__rate-stars--3 &__rate-stars-star:nth-child(-n + 3),
-  &__rate-stars--4 &__rate-stars-star:nth-child(-n + 4),
-  &__rate-stars--5 &__rate-stars-star:nth-child(-n + 5) {
-    background-image: url(../images/star-active.svg);
   }
 
   &__price {
@@ -77,6 +55,7 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
+    color: $main-card-color;
   }
 
   &__buy {
@@ -96,5 +75,10 @@
     color: $main-brand-color;
     border: 1px solid $main-brand-color;
   }
-}
 
+  &__photo {
+    width: $header-photo-width;
+    height: $header-photo-height;
+    margin: 32px 19px 36px;
+  }
+}
