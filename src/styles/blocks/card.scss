@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: Roboto, sans-serif;
 }
 
@@ -59,24 +59,26 @@ body {
     justify-content: space-between;
     margin-bottom: $card-padding;
     align-items: center;
+
+    .price-text {
+      color: $secondary-text;
+      font-size: $font-size-medium;
+      font-weight: 400;
+      line-height: $line-height-medium;
+    }
+
+    .price-value {
+      color: $primary-text;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: $line-height-medium;
+      text-align: right;
+    }
   }
 
-  &__price-text {
-    color: $secondary-text;
-    font-size: $font-size-medium;
-    font-weight: 400;
-    line-height: $line-height-medium;
-  }
 
-  &__price-value {
-    color: $primary-text;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: $line-height-medium;
-    text-align: right;
-  }
 
-  &__buttonBuy {
+  &__button {
     display: flex;
     justify-content: center;
     align-items: center;
