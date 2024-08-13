@@ -2,6 +2,7 @@ $main-font: Roboto, sans-serif;
 $button-color: #00acdc;
 $text-main-color: #060b35;
 $text-secondary-color: #616070;
+$white: white;
 
 html {
   font-family: $main-font;
@@ -85,14 +86,14 @@ body {
     border-radius: 5px;
     font-size: 14px;
     line-height: 16px;
-    color: white;
+    color: $white;
     font-weight: 700;
     border: 1px solid $button-color;
   }
 
   &__buy:hover {
     color: $button-color;
-    background-color: white;
+    background-color: $white;
   }
 }
 
@@ -113,6 +114,10 @@ body {
   }
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
   background-image: url(../images/Star__active.png);
 }
