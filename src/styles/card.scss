@@ -1,0 +1,98 @@
+@import 'variables';
+
+.card {
+  width: $card-width;
+  border: 1px solid $gray-color;
+  border-radius: 5px;
+  padding-left: 19px;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 18px;
+    color: $primary-color;
+  }
+
+  &__code {
+    margin: 0;
+    line-height: 14px;
+    font-size: 10px;
+    color: $secondary-color;
+    margin-bottom: 18px;
+  }
+
+  &__stars {
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    width: 166px;
+
+    .stars__icon {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--filled {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &--empty {
+      background-image: url(../images/star.svg);
+    }
+  }
+
+  .stars__reviews {
+    font-size: 10px;
+    color: $primary-color;
+    margin-left: 17px;
+  }
+
+  &__price {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: $secondary-color;
+  }
+
+  &__amount {
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 80px;
+    color: $primary-color;
+  }
+
+  &__buy-button {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    width: 166px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 16px;
+
+    &:hover {
+      background-color: #fff;
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+  }
+}
