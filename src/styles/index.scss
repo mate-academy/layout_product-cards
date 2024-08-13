@@ -1,3 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  background: #fff;
+  width: 200px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 32px;
+    margin-left: 19px;
+  }
+
+  &__title {
+    width: 166px;
+    height: 36px;
+    margin-top: 40px;
+    margin-left: 16px;
+  }
+
+  &__product-name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__product {
+    height: 14px;
+    margin-top: -7px;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    color: #616070;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    height: 16px;
+    align-items: center;
+    margin-top: 16px;
+    margin-left: -2px;
+  }
+
+  &__review-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #060b35;
+    margin-top: 12px;
+    padding-bottom: 2px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    margin-top: 11px;
+    margin-bottom: 6px;
+  }
+
+  &__price-text {
+    height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #616070;
+    line-height: 18px;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    color: #060b35;
+    line-height: 10px;
+  }
+
+  &__buttom {
+    background-color: #00acdc;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: -2px;
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #00acdc;
+
+      a {
+        color: #00acdc;
+      }
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  margin-top: 1px;
+
+  &__star {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+
+  &__star:last-child {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
 }
