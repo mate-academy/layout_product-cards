@@ -1,0 +1,13 @@
+.stars {
+  background-image: url(../images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @for $i from 1 through $count-stars {
+    &--#{$i} {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
