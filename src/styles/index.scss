@@ -1,26 +1,31 @@
-@import 'variables/variables.scss';
+@import 'variables/variables';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.card {
-  box-sizing: border-box;
+.product {
   width: 200px;
   height: 408px;
   padding: 32px 16px 0;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  &__image {
+
+  &__photo {
     display: block;
-    background-image: url('../images/imac.jpeg');
     background-size: cover;
+    margin: 0 auto;
     width: 160px;
     height: 134px;
   }
+
   &__title {
     padding-top: 40px;
     font-size: 12px;
@@ -28,36 +33,44 @@ body {
     font-weight: 500;
     color: $main-color;
   }
+
   &__subtitle {
     color: #616070;
     font-size: 10px;
     line-height: 14px;
     padding-top: 4px;
   }
-  &-secondPart {
-    padding-top: 16px;
-  }
-  &__reviews {
+
+  &__rating {
+    padding-top: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-count {
-      font-size: 10px;
-      line-height: 14px;
-      font-weight: 400;
-      color: $main-color;
-    }
   }
+
+  &__review-count {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $main-color;
+  }
+
   &__price {
-    padding-top: 24px;
     display: flex;
     justify-content: space-between;
-    &-text {
+    align-items: center;
+    line-height: 18px;
+    font-weight: 700;
+    color: $main-color;
+    padding-top: 16px;
+
+    &-label {
       font-size: 12px;
       line-height: 18px;
       font-weight: 400;
       color: #616070;
     }
+
     &-value {
       font-size: 16px;
       line-height: 18px;
@@ -65,8 +78,8 @@ body {
       color: $main-color;
     }
   }
-  &__button {
-    margin-top: 16px;
+
+  &__buy-button {
     width: 166px;
     height: 40px;
     background-color: #00acdc;
@@ -76,24 +89,40 @@ body {
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
-  }
-  &__button:hover {
-    cursor: pointer;
-    background-color: #fff;
-    color: #00acdc;
-    transition: all 0.3s;
-  }
-  &__reviews-stars {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 16px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: #00acdc;
+      transition: all 0.3s;
+    }
   }
-  &__stars {
+}
+
+.stars {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__star {
     background-image: url('../images/star.svg');
     background-position: center;
     background-repeat: no-repeat;
     width: 16px;
     height: 16px;
+    margin-right: 4px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  &--allStars .card__stars:nth-child(-n + 4) {
+  &--count-4 .stars__star:nth-child(-n + 4) {
     background-image: url('../images/star-active.svg');
   }
 }
