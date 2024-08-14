@@ -14,6 +14,10 @@
     margin: 0;
   }
 
+  h2 {
+    margin: 0;
+  }
+
   &__image {
     width: 160px;
     height: 134px;
@@ -24,57 +28,77 @@
   &__title {
     font-size: 12px;
     font-weight: 500;
-    margin-bottom: 4px;
     line-height: 18px;
     color: $primary-color;
+    padding-bottom: 4px;
   }
 
   &__code {
     line-height: 14px;
     font-size: 10px;
     color: $secondary-color;
-    margin-bottom: 18px;
+    padding-bottom: 17px;
+  }
+
+  &__rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 166px;
+    justify-content: space-between;
+    text-align: center;
   }
 
   &__stars {
     display: flex;
-    margin-bottom: 24px;
-    justify-content: space-between;
-    width: 166px;
+    background-position: center;
 
-    .stars__icon {
+    &-icon {
       width: 12px;
       height: 12px;
       background-repeat: no-repeat;
       background-size: cover;
+      margin-right: 8px;
     }
 
-    &--filled {
+    &-icon:last-child {
+      margin-right: 0;
+    }
+
+    &-icon--filled {
       background-image: url(../images/star-active.svg);
     }
 
-    &--empty {
+    &-icon--empty {
       background-image: url(../images/star.svg);
     }
   }
 
-  .stars__reviews {
+  &__reviews {
+    margin: 0;
     font-size: 10px;
     color: $primary-color;
-    margin-left: 17px;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 12px;
     font-weight: 400;
-    margin-bottom: 16px;
     color: $secondary-color;
+    padding-bottom: 16px;
   }
 
   &__amount {
     font-weight: 700;
     font-size: 16px;
-    margin-left: 80px;
     color: $primary-color;
   }
 
