@@ -87,17 +87,28 @@
   &__buy {
     display: flex;
     justify-content: center;
-    background-color: $buy-button-color;
+    box-sizing: border-box;
     border-radius: 5px;
-    height: 40px;
     align-items: center;
 
     &-link {
       text-decoration: none;
-      color: white;
+      box-sizing: border-box;
+      background-color: $buy-button-color;
+      padding: 12px 70px;
+      border: 1px solid;
+      border-radius: 5px;
+      border-color: $buy-button-color;
+      color: $white-color;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 700;
+
+      &:hover {
+        background-color: $white-color;
+        color: $buy-button-color;
+        border-color: $buy-button-color;
+      }
     }
   }
 }
