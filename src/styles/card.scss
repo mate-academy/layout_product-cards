@@ -1,19 +1,24 @@
 @import 'variables';
 
 .card {
+  box-sizing: border-box;
   width: $card-width;
   border: 1px solid $gray-color;
   border-radius: 5px;
-  padding-left: 19px;
-  padding-top: 32px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  padding: 32px 16px 16px;
+
+  p {
+    margin: 0;
+  }
 
   &__image {
     width: 160px;
     height: 134px;
-    margin-bottom: 30px;
+    display: block;
+    margin: 0 auto 40px;
   }
 
   &__title {
@@ -25,7 +30,6 @@
   }
 
   &__code {
-    margin: 0;
     line-height: 14px;
     font-size: 10px;
     color: $secondary-color;
@@ -34,14 +38,13 @@
 
   &__stars {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     justify-content: space-between;
     width: 166px;
 
     .stars__icon {
       width: 12px;
       height: 12px;
-      margin-right: 4px;
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -87,7 +90,6 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    margin-bottom: 16px;
 
     &:hover {
       background-color: #fff;
