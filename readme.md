@@ -1,6 +1,6 @@
 # Product cards
 
-Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev).
+Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](<https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev>).
 
 > Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
@@ -20,13 +20,13 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://YuliiaShatkovska.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://YuliiaShatkovska.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
-- [ ] there 2 BEM blocks `card` and `stars` each in it own file
-- [ ] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
-- [ ] SCSS Variables are used for main values and placed in a **separate file**
-- [ ] all `stars--N` modifiers work as expected (Highlight first `N` stars)
-- [ ] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
+- [x] there 2 BEM blocks `card` and `stars` each in it own file
+- [x] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
+- [x] SCSS Variables are used for main values and placed in a **separate file**
+- [x] all `stars--N` modifiers work as expected (Highlight first `N` stars)
+- [x] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
