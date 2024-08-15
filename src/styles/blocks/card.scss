@@ -1,37 +1,43 @@
 .card {
   width: 200px;
-  height: 406px;
   padding: 32px 16px 16px;
-  border: 1px solid #fff;
-  border-radius: 5px;
   box-sizing: border-box;
+
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+
   font-size: 12px;
+
   color: $main-card-color;
 
   &__photo {
     width: 160px;
     height: 134px;
+
     display: block;
     margin: 0 auto 40px;
-    text-align: center;
   }
 
   &__title {
     display: block;
-    margin-bottom: 4px;
-    color: inherit;
+    margin: 0 0 4px;
+
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     text-decoration: none;
+
+    color: inherit;
   }
 
   &__product-code {
     display: block;
     margin-bottom: 16px;
-    color: $secondary-card-color;
+
     font-size: 10px;
     line-height: 14px;
+
+    color: $secondary-card-color;
   }
 
   &__rating {
@@ -60,6 +66,7 @@
   &__price-label {
     font-size: 12px;
     line-height: 18px;
+
     color: $secondary-card-color;
   }
 
@@ -72,18 +79,24 @@
   &__buy-button {
     display: block;
     padding: 12px 70px;
+    box-sizing: border-box;
+
+    border: 1px solid $card-button-border-color;
     border-radius: 5px;
+
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    color: #fff;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #00acdc;
+
+    color: $card-button-color;
+    background-color: $card-button-bg;
 
     &:hover {
-      @include card-button-hovered;
+      color: $card-button-hovered-color;
+      background-color: $card-button-hovered-bg;
     }
   }
 }
