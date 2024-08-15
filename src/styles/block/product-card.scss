@@ -1,30 +1,18 @@
-$main-color: #060b35;
-$secondary-font-size: 10px;
-$secondary-color: #616070;
-$line-height-bigger: 18px;
-$line-height-smaller: 14px;
-$btn-color: #00acdc;
-
 .product-card {
   box-sizing: border-box;
-
   padding: 32px 16px 16px;
   width: 200px;
-
   border: 1px solid #f3f3f3;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
   color: $main-color;
   font-size: 12px;
+
   &__image {
     box-sizing: border-box;
     display: block;
-
     margin: 0 auto 40px;
-
     height: 134px;
-
-
     background-size: cover;
   }
 
@@ -32,13 +20,15 @@ $btn-color: #00acdc;
     font-weight: 500;
     line-height: $line-height-bigger;
     margin-bottom: 4px;
+    font-size: 12px;
   }
+
   &__code {
     margin-bottom: 16px;
-
     line-height: $line-height-smaller;
     font-size: $secondary-font-size;
     color: $secondary-color;
+
     &::before {
       content: 'Product code: ';
     }
@@ -53,11 +43,6 @@ $btn-color: #00acdc;
 
   &__reviews-counter {
     font-size: $secondary-font-size;
-
-
-    // &::before {
-    //  content: 'Reviews:  ';
-    // }
   }
 
   &__price {
@@ -65,29 +50,26 @@ $btn-color: #00acdc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 16px;
 
     &-text {
       color: $secondary-color;
-
     }
 
     &-value {
       font-weight: 700;
       font-size: 16px;
 
-
       &::before {
         content: '$';
       }
     }
   }
+
   &__buy-btn {
     display: block;
     box-sizing: border-box;
 
-    width: 100%;
     height: 40px;
 
     color: #fff;
