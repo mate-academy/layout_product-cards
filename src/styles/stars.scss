@@ -2,24 +2,21 @@
 
 .stars {
   display: flex;
+}
 
-  &__icon {
-    width: 16px; // Розмір зірки
-    height: 16px;
-    margin-right: 4px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/star.svg);
+}
 
-  &__icon:not(.stars--filled) {
-    background-image: url(../images/star.svg);
-  }
-
-  &--1 .stars__icon:nth-child(1),
-  &--2 .stars__icon:nth-child(-n + 2),
-  &--3 .stars__icon:nth-child(-n + 3),
-  &--4 .stars__icon:nth-child(-n + 4),
-  &--5 .stars__icon:nth-child(-n + 5) {
-    background-image: url(../images/star-active.svg);
-  }
+.stars--1 .star:nth-child(1),
+.stars--2 .star:nth-child(-n + 2),
+.stars--3 .star:nth-child(-n + 3),
+.stars--4 .star:nth-child(-n + 4),
+.stars--5 .star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
 }
