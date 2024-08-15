@@ -1,17 +1,12 @@
 .card {
-  box-sizing: border-box;
-
   width: 200px;
   padding: 32px 16px 16px;
-  border: 1px;
-  border-style: solid;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
-  border-color: $card-border-color;
 
   &__image {
-    margin-bottom: 36px;
-    margin-right: 3px;
-    margin-left: 3px;
+    display: block;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
   }
@@ -34,11 +29,10 @@
 
   &__reviews {
     display: flex;
-    align-items: end;
     justify-content: space-between;
+    align-items: end;
 
-    margin-top: 16px;
-    margin-bottom: 24px;
+    margin: 16px 0 24px;
 
     &-number {
       font-size: 10px;
@@ -50,8 +44,8 @@
 
   &__product-price {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
 
     &-label {
@@ -71,8 +65,8 @@
 
   &__buy-link {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     border-radius: 5px;
     height: 40px;
@@ -88,9 +82,7 @@
     text-transform: uppercase;
 
     &:hover {
-      border: 1px;
-      border-style: solid;
-      border-color: $button-color;
+      border: 1px solid $button-color;
       color: $button-color;
       background-color: $link-text-color;
     }
