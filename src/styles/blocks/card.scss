@@ -1,6 +1,5 @@
 .card {
   width: 200px;
-  height: 408px;
   padding: 32px 16px 16px;
   box-sizing: border-box;
   display: flex;
@@ -8,18 +7,13 @@
   flex-direction: column;
 
   background-color: white;
-  border: 1px $border-color;
+  border: 1px solid $border-color;
   border-radius: 5px;
 
-  &__picture {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-
-    &-img {
-      height: 134px;
-      width: 160px;
-    }
+  &__img {
+    margin: 0 auto 40px;
+    height: 134px;
+    width: 160px;
   }
 
   &__naming {
@@ -34,7 +28,7 @@
 
     &-name {
       margin-bottom: 4px;
-
+      color: $review-color;
       line-height: 18px;
     }
 
@@ -55,6 +49,7 @@
     &-info {
       font-size: 10px;
       font-weight: 400;
+      line-height: 14px;
       color: $review-color;
     }
   }
@@ -67,40 +62,39 @@
     &-sum {
       font-size: 16px;
       font-weight: 700;
+      color: $review-color;
+      line-height: 18px;
     }
 
     &-text {
       color: $info-color;
       font-size: 12px;
       font-weight: 400;
+      line-height: 18px;
     }
   }
 
-  &__buy {
-    display: flex;
-    justify-content: center;
+  &__link {
+    display: block;
+    text-decoration: none;
     box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border: 1px solid;
     border-radius: 5px;
-    align-items: center;
 
-    &-link {
-      text-decoration: none;
-      box-sizing: border-box;
-      padding: 10px 41%;
-      border: 1px solid;
-      border-radius: 5px;
+    border-color: $buy-button-color;
+    color: $white-color;
+    background-color: $buy-button-color;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
 
-      border-color: $buy-button-color;
-      color: $white-color;
-      background-color: $buy-button-color;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 700;
-
-      &:hover {
-        background-color: $white-color;
-        color: $buy-button-color;
-      }
+    &:hover {
+      background-color: $white-color;
+      color: $buy-button-color;
     }
   }
 }
