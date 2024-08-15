@@ -1,11 +1,11 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 16px;
-  box-sizing: border-box;
   width: 200px;
-  height: 400px;
+  height: 408px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 
   background-color: white;
   border: 1px $border-color;
@@ -14,10 +14,9 @@
   &__picture {
     display: flex;
     justify-content: center;
-    margin-top: 16px;
+    margin-bottom: 40px;
 
     &-img {
-      display: flex;
       height: 134px;
       width: 160px;
     }
@@ -25,13 +24,17 @@
 
   &__naming {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
+    margin-bottom: 16px;
+
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
-    gap: 4px;
 
     &-name {
+      margin-bottom: 4px;
+
       line-height: 18px;
     }
 
@@ -47,23 +50,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 17px;
-
-    &-stars {
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 96px;
-      gap: 4px;
-    }
+    margin-bottom: 24px;
 
     &-info {
-      display: flex;
       font-size: 10px;
       font-weight: 400;
-      align-items: center;
       color: $review-color;
     }
   }
@@ -71,7 +62,7 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-bottom: 16px;
 
     &-sum {
       font-size: 16px;
@@ -95,12 +86,13 @@
     &-link {
       text-decoration: none;
       box-sizing: border-box;
-      background-color: $buy-button-color;
-      padding: 12px 70px;
+      padding: 10px 41%;
       border: 1px solid;
       border-radius: 5px;
+
       border-color: $buy-button-color;
       color: $white-color;
+      background-color: $buy-button-color;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 700;
