@@ -1,13 +1,11 @@
 .card {
   display: flex;
-  justify-content: center;
   box-sizing: border-box;
   flex-wrap: wrap;
 
-  padding: 16px;
+  padding-inline: 16px;
 
   width: 200px;
-  height: 406px;
   border-radius: 5px;
   border: 1px solid $card-border-color;
 
@@ -16,17 +14,17 @@
   &__content {
     display: flex;
 
-    padding: 16px 3px;
+    margin-top: 32px;
+    margin-inline: 3px;
 
-    width: 164px;
+    width: 160px;
     height: 134px;
   }
 
-  &__nameofproduct {
+  &__title {
     display: flex;
 
-    padding-top: 24px;
-    padding-bottom: 2px;
+    margin-top: 40px;
 
     font-weight: 500;
     font-size: 12px;
@@ -35,22 +33,18 @@
     color: $main-text-color;
   }
 
-  &__productcode {
+  &__id {
     display: block;
 
-    width: 100%;
-    padding-top: 2px;
-    padding-bottom: 8px;
+    margin-top: 4px;
 
-    font-weight: 400;
     font-size: 10px;
-    text-align: left;
     line-height: 14px;
 
     color: $other-text-color;
   }
 
-  &_buy {
+  &__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,10 +52,9 @@
     text-decoration: none;
     width: 100%;
     height: 40px;
-    line-height: 40px;
     box-sizing: border-box;
 
-    margin: 0;
+    margin-top: 16px;
     border-radius: 5px;
 
     text-align: center;
@@ -73,47 +66,43 @@
     background-color: $button-bg-color;
   }
 
-  &_buy:hover {
+  &__button:hover {
     background-color: $card-bg-color;
     color: $button-bg-color;
 
     border: 1px solid $button-bg-color;
   }
 
-  &_price {
+  &__price {
     display: flex;
     justify-content: space-between;
 
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 16px;
+    margin-top: 24px;
+  }
 
-    &__label {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
+  &__label {
+    font-size: 12px;
 
-      color: $other-text-color;
-    }
+    color: $other-text-color;
+  }
 
-    &__sum {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      text-align: right;
+  &__sum {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
 
-      color: $main-text-color;
-    }
+    color: $main-text-color;
   }
 
   &__reviews {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 
-    font-weight: 400;
+    width: 100%;
+    margin-top: 16px;
+
     font-size: 10px;
-    line-height: 14px;
   }
 }
