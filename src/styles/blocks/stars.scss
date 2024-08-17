@@ -1,25 +1,18 @@
 .stars {
   display: flex;
-  padding: 0;
+  gap: 4px;
 
   &__star {
     display: block;
     height: 16px;
     width: 16px;
-    margin-right: 4px;
 
     background: center no-repeat url(../images/star.svg);
-
-    &:last-child {
-      margin: 0;
-    }
   }
 
   @for $amount from 1 through 5 {
-    &--#{$amount} {
-      .stars__star:nth-child(-n + #{$amount}) {
-        background: center no-repeat url(../images/star-active.svg);
-      }
+    &--#{$amount} &__star:nth-child(-n + #{$amount}) {
+      background: center no-repeat url(../images/star-active.svg);
     }
   }
 }
