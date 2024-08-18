@@ -1,3 +1,128 @@
+@import './variables';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+
+  align-items: center;
+
+  &__image {
+    margin-top: 32px;
+    width: 160px;
+    height: 134px;
+  }
+  &__product_name {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    width: $block-width;
+    color: $text-color-black;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: $text-color-grey;
+    align-self: flex-start;
+    margin-top: 4px;
+    margin-left: 16px;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $block-width;
+    margin-top: 24px;
+  }
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: $text-color-grey;
+  }
+  &__dollars {
+    width: 50px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+    color: $text-color-black;
+  }
+
+  &__button {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $text-color-blue;
+    border: 1px solid #f3f3f3;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  &__button:hover {
+    background: #fff;
+    border: 1px solid $text-color-blue;
+    color: $text-color-blue;
+  }
+}
+
+.stars {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  margin-top: 16px;
+  margin-left: 16px;
+  align-items: center;
+
+  &__container {
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__star {
+    background-image: url(/src/images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+  &__star:nth-child(n + 5) {
+    background-image: url(../images/star.svg);
+  }
+  &__text {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    width: 53px;
+    height: 16px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+    color: $text-color-black;
+  }
 }
