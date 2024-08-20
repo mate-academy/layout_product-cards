@@ -4,18 +4,20 @@
   margin: 0;
   padding: 0;
 
+  @for $i from 1 through 5 {
+    &--star--#{$i} {
+      background: url(../images/star.svg) var(--background-properties);
+      margin-right: 4px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   :nth-child(-n + 4) {
     background: url(../images/star-active.svg) var(--background-properties);
   }
 
-  &-star {
-    background: url(../images/star.svg) var(--background-properties);
-    margin-right: 4px;
-    width: 16px;
-    height: 16px;
-  }
-
-  &-star:last-child {
+  &:last-child {
     margin-right: 0;
   }
 }
