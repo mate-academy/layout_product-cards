@@ -1,6 +1,6 @@
 .card {
   width: $cardWidth;
-  min-height: $cardHeight;
+  min-height: 408px;
   border: 1px solid $cardColorBorder;
   border-radius: $cardBorderRadius;
   display: flex;
@@ -9,23 +9,31 @@
   padding: 0 16px;
 
   &__top {
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     margin: 32px auto 40px;
+  }
+
+  &__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__image > img {
+    object-fit: contain;
     width: 160px;
     height: 134px;
   }
 
-  &__product-name {
+  &__title {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 4px;
   }
 
-  &__product-code {
+  &__code {
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
@@ -37,20 +45,49 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    &-name {
+      color: $cardColorProductCode;
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 16px;
+    }
+
+    &-value {
+      color: $cardColorPriceProduct;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
-  &__price-name {
-    color: $cardColorProductCode;
-    font-size: 12px;
-    line-height: 18px;
+  &__button {
+    display: inline-flex;
+    justify-content: center;
     margin-bottom: 16px;
-  }
-
-  &__price-product {
-    color: $cardColorPriceProduct;
+    width: 100%;
+    height: $buttonHeight;
+    border-radius: $buttonBorderRadius;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    background-color: $cardColorButtonHover;
+    border-color: $cardColorButtonHover;
+    align-items: center;
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 14px;
+    color: $cardColorButtonLink;
+    text-decoration: none;
+    font-family: $bodyFont;
+
+    &:hover {
+      border: 1px solid $cardColorButtonHover;
+      background-color: $cardColorButtonLink;
+      color: $cardColorButtonHover;
+    }
   }
 }
 
@@ -66,36 +103,6 @@
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
-  }
-}
-
-.button {
-  &-buy {
-    display: inline-flex;
-    justify-content: center;
-    margin-bottom: 16px;
-    width: 100%;
-    height: $buttonHeight;
-    border-radius: $buttonBorderRadius;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    background-color: $cardColorButtonHover;
-    border-color: $cardColorButtonBorder;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 14px;
-    color: $cardColorButtonLink;
-    text-decoration: none;
-    font-family: $bodyFont;
-  }
-
-  &-buy:hover {
-    border: 1px solid $cardColorButtonBorder;
-    background-color: $cardColorButtonLink;
-    color: $cardColorButtonHover;
+    align-items: end;
   }
 }
