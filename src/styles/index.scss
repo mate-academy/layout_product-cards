@@ -1,8 +1,70 @@
-@import './card';
-@import './stars';
+.card {
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
 
-.iMac_photo {
-  width: 160px;
-  height: 134px;
-  margin: 32px 19px 36px;
+  &_photo {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 36px;
+  }
+
+  &__title {
+    width: 166px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 18px;
+
+    text-align: left;
+    font-weight: 500;
+    margin: 0 16px;
+  }
+
+  &__label {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    text-align: left;
+    color: var(--secondary-color);
+    margin: 4px 0 0 16px;
+  }
+
+  &__price {
+    display: flex;
+    gap: 86px;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--secondary-color);
+    margin: 0 16px;
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--main-color);
+    }
+  }
+
+  &__buy-button {
+    text-align: center;
+    text-transform: uppercase;
+
+    width: 166px;
+    height: 40px;
+    line-height: 38px;
+    margin: 16px;
+
+    border-radius: 5px;
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: #fff;
+    font-weight: 700;
+
+    &:hover {
+      background: #fff;
+      color: var(--accent-color);
+    }
+  }
 }
