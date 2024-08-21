@@ -1,0 +1,24 @@
+.stars {
+  display: flex;
+  width: 96px;
+  position: relative;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  display: block;
+}
+
+@for $i from 1 through 5 {
+  .stars__star:nth-child(#{$i}) {
+    @if $i <= $stars-amount {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
