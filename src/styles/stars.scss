@@ -1,33 +1,24 @@
 .stars {
-  display: flex;
-  align-items: flex-end;
-
   list-style: none;
   padding: 0;
-
-  width: 166px;
-  height: 16px;
-  margin: 16px 16px 23px;
+  margin: 0;
+  display: flex;
+  align-items: center;
 
   &__item {
-    background: url(../images/star.svg) var(--background-properties);
+    background: url(../images/star.svg) $background-properties;
     margin-right: 4px;
     width: 16px;
     height: 16px;
 
-    &:nth-child(-n + 4) {
-      background: url(../images/star-active.svg) var(--background-properties);
+    @for $i from 1 through 4 {
+      &:nth-child(-n + #{$i}) {
+        background: url(../images/star-active.svg) $background-properties;
+      }
     }
 
     &:last-child {
       margin-right: 0;
     }
-  }
-
-  &__label {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    margin-left: 18px;
   }
 }
