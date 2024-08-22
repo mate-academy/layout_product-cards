@@ -7,10 +7,8 @@
   padding: 32 16 16;
   border-radius: 10px;
 
-  background: $white-background;
+  background: $main-background;
   border: 1px solid $card-border-color;
-
-  transition: 0.3s;
 
   &__image {
     align-self: center;
@@ -28,11 +26,6 @@
     line-height: 18px;
     font-weight: 500;
     color: $link-color;
-
-    &__:hover {
-      color: #34568b;
-      transition: color 0.3s;
-    }
   }
 
   &__product-code {
@@ -104,17 +97,15 @@
     line-height: 40px;
     font-size: 14px;
     font-weight: 700;
-    color: $white-background;
-    background: $blue-accent;
+    color: $main-background;
+    background: $main-accent;
+    border: 1px solid $main-accent;
 
-    transition: 0.3s;
+    transition: color, $transition-duration;
   }
 
   &__buy-button:hover {
-    font-weight: 700;
-    color: $blue-accent;
-
-    background-color: $white-background;
-    border: 1px solid $blue-accent;
+    color: $main-accent;
+    background-color: $main-background;
   }
 }
