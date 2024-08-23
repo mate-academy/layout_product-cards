@@ -1,0 +1,125 @@
+html,
+body,
+h1,
+h2,
+p {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  padding: 32px 16px 16px;
+
+  &__product {
+    &-image {
+      width: 160px;
+      height: 134px;
+      flex-shrink: 0;
+      align-self: center;
+      margin: 0 auto;
+    }
+
+    &-name {
+      text-align: left;
+      margin-top: 40px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $main-accent-color;
+    }
+
+    &-code {
+      margin-top: 4px;
+      color: $secondary-color;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-reviews {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 16px;
+
+      &-amount {
+        margin: 0;
+        text-align: right;
+        color: $main-accent-color;
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 24px;
+      margin-bottom: 16px;
+
+      &-tag {
+        font-size: 12px;
+        line-height: 18px;
+        color: $secondary-color;
+      }
+
+      &-number {
+        margin: 0;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: $main-accent-color;
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin: 0 auto;
+      width: 100%;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 5px;
+      border: 0;
+      background-color: $button-collor;
+      color: $button-text-color-inactive;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px; /* 114.286% */
+      text-transform: uppercase;
+      text-align: center;
+
+      &:hover {
+        border-radius: 5px;
+        border: 1px solid $button-collor;
+        background: $button-text-color-inactive;
+        color: $button-collor;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px; /* 114.286% */
+        text-transform: uppercase;
+      }
+    }
+  }
+}
