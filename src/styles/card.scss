@@ -1,84 +1,75 @@
 .card {
-  box-sizing: border-box;
-  width: $card-width;
-  height: $card-height;
-  border: $card-border-width solid $card-border-color;
-  border-radius: $card-border-radius;
-  background-color: $card-background-color;
-  padding: 32px 16px 16px;
+  padding-inline: 16px;
+  padding-block: 32px 16px;
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-width) solid var(--card-border-color);
 
-  &__image {
-    width: 160px;
-    height: auto;
-    padding-bottom: 40px;
+  &__imgContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      width: 160px;
+      height: 134px;
+      background-image: url(../images/imac.jpeg);
+      background-size: 100% 100%;
+    }
   }
 
   &__title {
-    font-weight: 500;
+    margin-block: 40px 0;
+    color: var(--main-color);
     font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 18px;
-    padding-bottom: 4px;
-
-    &::after {
-      content: 'Product code: 195434';
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 14px;
-      padding-bottom: 16px;
-    }
   }
 
-  &__response {
-    display: flex;
-    padding-bottom: 24px;
-    align-items: center;
-    justify-content: space-between;
-    &-text {
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 14px;
-    }
+  &__product-code {
+    margin-block: 4px 16px;
+    color: var(--second);
+    font-size: 10px;
+    line-height: 14px;
   }
 
   &__price {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-bottom: 16px;
+    align-items: center;
+    margin-top: 8px;
 
-    &::before {
-      content: 'Price:';
-      font-weight: 400;
+    &-text {
+      align-items: center;
+      color: var(--second);
       font-size: 12px;
       line-height: 18px;
-      color: #616070;
     }
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: #060b35;
+    &-sum {
+      color: var(--main-color);
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+    }
   }
 
-  &__button-link {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+  &__button {
     width: 100%;
     height: 40px;
-    border-radius: $card-border-radius;
-    background-color: $bottom-link-color;
-    color: $link-color;
-    text-decoration: none;
+    color: var(--white);
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    background: var(--blue);
 
     &:hover {
-      background-color: $bottom-link-hover-color;
-      color: $link-hover-color;
-      border: $card-border-width solid #00acdc;
+      color: var(--blue);
+      background: var(--white);
+      border: 1px solid var(--blue);
     }
   }
 }
