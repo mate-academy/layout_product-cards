@@ -1,0 +1,23 @@
+@import 'vars';
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-position: center;
+  }
+
+  &--1 &__star:nth-child(1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
