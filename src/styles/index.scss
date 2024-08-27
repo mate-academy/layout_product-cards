@@ -4,38 +4,42 @@ body {
 
 $bodyFont: Roboto, sans-serif;
 $bodyColor: rgba(6, 11, 53, 1);
+$buttonColor: rgba(0, 172, 220, 1);
+$padingCard: 0 17px;
 
-.main {
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-top: 33px;
+  padding-bottom: 16px;
 
-  height: 408px;
   width: 200px;
 
   &__img {
     height: 134px;
     width: 160px;
 
-    margin-top: 33px;
-    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
   }
 
-  &__title-1 {
+  &__title {
+    justify-content: center;
     font-family: $bodyFont;
     color: $bodyColor;
     line-height: 18px;
     font-size: 12px;
     font-weight: 500;
+    padding: $padingCard;
 
-    height: 36px;
-    width: 166px;
+    width: 100%;
     margin-bottom: 4px;
   }
 
-  &__title-2 {
+  &__subtitle {
     align-self: flex-start;
-    padding-left: 17px;
+    padding: $padingCard;
     margin: 0;
     margin-bottom: 16px;
     font-family: $bodyFont;
@@ -43,65 +47,6 @@ $bodyColor: rgba(6, 11, 53, 1);
     font-size: 10px;
     font-weight: 400;
     color: rgba(97, 96, 112, 1);
-  }
-
-  .stars {
-    display: flex;
-    flex-direction: row;
-
-    width: 166px;
-    height: 16px;
-    margin-bottom: 24px;
-
-    &__star-active {
-      height: 16px;
-      width: 16px;
-      margin-right: 4px;
-      background-image: url('../images/star-active.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    &__star {
-      height: 16px;
-      width: 16px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url('../images/star.svg');
-      margin-right: 22.8px;
-    }
-
-    &__title {
-      margin: 0;
-      font-family: $bodyFont;
-      line-height: 18px;
-      font-size: 10px;
-      font-weight: 400;
-      color: $bodyColor;
-    }
-  }
-
-  .footer {
-    display: flex;
-    margin-bottom: 16px;
-
-    &__title-1 {
-      margin: 0;
-      font-family: $bodyFont;
-      line-height: 18px;
-      font-size: 12px;
-      font-weight: 400;
-      color: rgba(97, 96, 112, 1);
-      margin-right: 86.1px;
-    }
-
-    &__title-2 {
-      margin: 0;
-      font-family: $bodyFont;
-      line-height: 18px;
-      font-size: 16px;
-      font-weight: 700;
-      color: $bodyColor;
-    }
   }
 
   &__button {
@@ -121,14 +66,75 @@ $bodyColor: rgba(6, 11, 53, 1);
 
     margin: 0;
     height: 40px;
-    width: 166px;
+    width: 100%;
     border-radius: 5px;
-    background-color: rgba(0, 172, 220, 1);
+    background-color: $buttonColor;
   }
 
   &__button:hover {
     border: 1px solid;
-    color: rgba(0, 172, 220, 1);
+    color: $buttonColor;
     background-color: #fff;
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  margin-bottom: 22px;
+  padding: $padingCard;
+
+  &__star-active {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star-active.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/star.svg');
+  }
+
+  &__title {
+    margin: 0;
+    margin-left: 22.8px;
+    font-family: $bodyFont;
+    line-height: 18px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $bodyColor;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: $padingCard;
+  margin: 0;
+  margin-bottom: 16px;
+
+  &__title {
+    margin: 0;
+    font-family: $bodyFont;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: $bodyFont;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $bodyColor;
   }
 }
