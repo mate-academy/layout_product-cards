@@ -1,3 +1,133 @@
 body {
   margin: 0;
 }
+
+$bodyFont: Roboto, sans-serif;
+$bodyColor: rgba(6, 11, 53, 1);
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 408px;
+  width: 200px;
+
+  &__img {
+    height: 134px;
+    width: 160px;
+
+    margin-top: 33px;
+    margin-bottom: 32px;
+  }
+
+  &__title-1 {
+    font-family: $bodyFont;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 500;
+
+    height: 36px;
+    width: 166px;
+    margin-bottom: 4px;
+  }
+
+  &__title-2 {
+    align-self: flex-start;
+    padding-left: 17px;
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: $bodyFont;
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  .stars {
+    display: flex;
+    flex-direction: row;
+
+    width: 166px;
+    height: 16px;
+    margin-bottom: 24px;
+
+    &__star-active {
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+      background-image: url('../images/star-active.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &__star {
+      height: 16px;
+      width: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('../images/star.svg');
+      margin-right: 22.8px;
+    }
+
+    &__title {
+      margin: 0;
+      font-family: $bodyFont;
+      line-height: 18px;
+      font-size: 10px;
+      font-weight: 400;
+      color: $bodyColor;
+    }
+  }
+
+  .footer {
+    display: flex;
+    margin-bottom: 16px;
+
+    &__title-1 {
+      margin: 0;
+      font-family: $bodyFont;
+      line-height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(97, 96, 112, 1);
+      margin-right: 86.1px;
+    }
+
+    &__title-2 {
+      margin: 0;
+      font-family: $bodyFont;
+      line-height: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      color: $bodyColor;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: $bodyFont;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+
+    margin: 0;
+    height: 40px;
+    width: 166px;
+    border-radius: 5px;
+    background-color: rgba(0, 172, 220, 1);
+  }
+
+  &__button:hover {
+    border: 1px solid;
+    color: rgba(0, 172, 220, 1);
+    background-color: #fff;
+  }
+}
