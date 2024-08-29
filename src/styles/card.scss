@@ -1,4 +1,7 @@
-@use './stars.scss' as stars;
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
 
 .product-card {
   margin: auto;
@@ -58,7 +61,18 @@
     display: flex;
     justify-content: space-between;
 
-    @include stars;
+    &-title {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      width: 53px;
+      height: 16px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+      color: $color-dark-accent;
+    }
   }
 
   &__price {
