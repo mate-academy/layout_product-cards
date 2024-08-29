@@ -1,3 +1,134 @@
-body {
+$color-text: #060b35;
+$color-text-small: #616070;
+$color-button: #00acdc;
+
+.page__item {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.card {
+  height: 408px;
+  width: 200px;
+  margin: 10px;
+
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__foto {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+  }
+
+  &__name {
+    font-family: inherit;
+    display: flex;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $color-text;
+    margin: 0;
+    padding-top: 40px;
+    padding-inline: 16px;
+  }
+
+  &__code {
+    font-family: inherit;
+    margin: 0;
+    padding-top: 4px;
+    font-size: 10px;
+    line-height: 14px;
+    padding-inline: 16px;
+    color: $color-text-small;
+  }
+
+  &__reviews {
+    font-family: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 16px;
+
+    &-text {
+      font-family: inherit;
+      margin: 0;
+      margin-left: 18px;
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $color-text;
+    }
+  }
+
+  &__prise {
+    font-family: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-inline: 16px;
+
+    &-text {
+      font-family: inherit;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-text-small;
+      margin: 0;
+    }
+
+    &-sum {
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $color-text;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    font-family: inherit;
+    padding: 0;
+    margin: 16px;
+    height: 40px;
+    width: 166px;
+    background-color: $color-button;
+    border-radius: 5px;
+    border: none;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $color-button;
+      background-color: #fff;
+      color: $color-button;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(/src/images/star.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+  }
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+  &--0 &__star:nth-child(-n + 4) {
+    background-image: url(/src/images/star-active.svg);
+  }
 }
