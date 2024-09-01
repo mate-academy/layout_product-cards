@@ -1,3 +1,120 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+$accentBtn: #00acdc;
+$mainAccent: #060b35;
+$secondaryAccent: #616070;
+$line-height_xl: 18px;
+$line-height_lg: 16px;
+$line-height_md: 14px;
+$font-size_xl: 16px;
+$font-size_lg: 14px;
+$font-size_md: 12px;
+$font-size_sm: 10px;
+
 body {
   margin: 0;
+  background-color: beige;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  margin: 100px auto;
+  padding: 32px 19px 16px;
+  border-radius: 5px;
+
+  background-color: white;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    line-height: $line-height_xl;
+    font-size: $font-size_md;
+    font-weight: 500;
+    color: $mainAccent;
+    margin-bottom: 4px;
+  }
+
+  &__subinfo {
+    color: $secondaryAccent;
+    font-size: $font-size_sm;
+    line-height: $line-height_md;
+    margin-bottom: 16px;
+    align-self: flex-start;
+  }
+
+  &__rate {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .rate__stars {
+      display: flex;
+      gap: 4px;
+
+      svg {
+        height: 16px;
+        width: 16px;
+      }
+    }
+
+    .rate__reviews {
+      font-size: $font-size_sm;
+      line-height: $line-height_md;
+    }
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &_hint {
+      line-height: $line-height_xl;
+      font-size: $font-size_md;
+      color: $secondaryAccent;
+    }
+
+    &_amount {
+      line-height: $line-height_xl;
+      font-size: $font-size_xl;
+      font-weight: 700;
+      color: $mainAccent;
+    }
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  background-color: $accentBtn;
+  color: white;
+  font-weight: 700;
+  line-height: $line-height_lg;
+  font-size: $font-size_lg;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: inherit;
+    color: $accentBtn;
+    border: 1px solid $accentBtn;
+  }
 }
