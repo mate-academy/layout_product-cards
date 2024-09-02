@@ -11,6 +11,10 @@ $font-size_lg: 14px;
 $font-size_md: 12px;
 $font-size_sm: 10px;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: beige;
@@ -19,11 +23,11 @@ body {
 
 .card {
   margin: 100px auto;
-  padding: 32px 19px 16px;
+  padding: 32px 16px 16px;
   border-radius: 5px;
-
+  border: 1px solid #f3f3f3;
   background-color: white;
-  max-width: 200px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +44,7 @@ body {
     font-weight: 500;
     color: $mainAccent;
     margin-bottom: 4px;
+    margin-top: unset;
   }
 
   &__subinfo {
@@ -96,7 +101,6 @@ body {
 }
 
 .button {
-  box-sizing: border-box;
   background-color: $accentBtn;
   color: white;
   font-weight: 700;
@@ -108,9 +112,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 0;
+  padding: 11px 0;
   width: 100%;
   transition: 0.2s;
+  text-decoration: none;
 
   &:hover {
     background-color: inherit;
