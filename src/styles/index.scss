@@ -12,6 +12,7 @@ body {
   $secondary-text-color: #616070;
   $button-color: #00acdc;
   $button-hover-color: #00a1c9;
+  $reviewStars: 1 2 3 4 5;
 
   a {
     text-decoration: none;
@@ -69,28 +70,26 @@ body {
       margin-bottom: 24px;
       width: 166px;
 
-      .card__stars {
+      &_stars {
         display: flex;
         height: fit-content;
         align-items: center;
-        .card__star {
+        &-star {
           width: 16px;
           height: 16px;
-          background-image: url('../images/star.svg');
           background-repeat: no-repeat;
           background-position: center;
+          background-image: url('../images/star.svg');
           margin-right: 4px;
-          &_active {
-            width: 16px;
-            height: 16px;
-            background-image: url('../images/star-active.svg');
-            background-repeat: no-repeat;
-            background-position: center;
+        }
+        &-star:last-child {
+          margin-right: 0;
+        }
 
-            margin-right: 4px;
-          }
-          &:last-child {
-            margin-right: 0;
+        @each $star in $reviewStars {
+          &--#{$star} .card__review_stars-star:nth-child(-n + #{$star}) {
+            // Your styles for the stars
+            background-image: url('../images/star-active.svg');
           }
         }
       }

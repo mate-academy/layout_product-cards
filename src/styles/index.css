@@ -68,32 +68,43 @@ body .card__review {
   width: 166px;
 }
 
-body .card__review .card__stars {
+body .card__review_stars {
   display: flex;
   height: fit-content;
   align-items: center;
 }
 
-body .card__review .card__stars .card__star {
+body .card__review_stars-star {
   width: 16px;
   height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url('../images/star.svg');
-  background-repeat: no-repeat;
-  background-position: center;
   margin-right: 4px;
 }
 
-body .card__review .card__stars .card__star_active {
-  width: 16px;
-  height: 16px;
-  background-image: url('../images/star-active.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-}
-
-body .card__review .card__stars .card__star:last-child {
+body .card__review_stars-star:last-child {
   margin-right: 0;
+}
+
+body .card__review_stars--1 .card__review_stars-star:nth-child(-n + 1) {
+  background-image: url('../images/star-active.svg');
+}
+
+body .card__review_stars--2 .card__review_stars-star:nth-child(-n + 2) {
+  background-image: url('../images/star-active.svg');
+}
+
+body .card__review_stars--3 .card__review_stars-star:nth-child(-n + 3) {
+  background-image: url('../images/star-active.svg');
+}
+
+body .card__review_stars--4 .card__review_stars-star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
+}
+
+body .card__review_stars--5 .card__review_stars-star:nth-child(-n + 5) {
+  background-image: url('../images/star-active.svg');
 }
 
 body .card__review .card__count {
