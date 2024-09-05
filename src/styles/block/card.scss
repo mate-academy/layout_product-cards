@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  width: $main-card-width + 100px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  padding-top: 32px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+
+  &__img {
+    width: $main-card-width + $main-card-width * $withd-img;
+  }
+
+  &__content {
+    width: $main-card-width + $main-card-width * $withd-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: $main-margin-bt;
+  }
+
+  &__title {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $main-margin-bt;
+  }
+
+  &__price-text {
+    font-size: 1.2em;
+    line-height: 18px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__price-value {
+    font-weight: 500;
+    font-size: 1.6em;
+    line-height: 18px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid $main-btn-color;
+    border-radius: 5px;
+    background: $main-btn-color;
+    transition: all 0.3s;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 16px;
+
+    margin-bottom: $main-margin-bt;
+
+    &:hover {
+      background: none;
+      color: $main-btn-color;
+      transition: all 0.3s;
+    }
+  }
+}

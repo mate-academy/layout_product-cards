@@ -1,0 +1,34 @@
+.card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &-stars {
+    display: flex;
+    gap: 4px;
+    width: $width-stars;
+
+    & > :nth-child(n) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    & > :last-child {
+      background-image: url(../images/star.svg);
+    }
+  }
+
+  &-star {
+    width: 16px;
+    height: 16px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &-text {
+    font-size: 1em;
+    line-height: 14px;
+    color: rgba(6, 11, 53, 1);
+  }
+}
