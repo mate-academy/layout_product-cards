@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 
   width: $main-card-width + 100px;
   border: 1px solid rgba(243, 243, 243, 1);
@@ -20,52 +19,77 @@ body {
   font-size: 10px;
 
   &__img {
-    width: $main-card-width + $main-card-width * $withd-img;
-  }
+    width: $width-img;
 
-  &__content {
-    width: $main-card-width + $main-card-width * $withd-content;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: $main-margin-bt;
+    &--margin {
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
+    width: $width-content;
     font-size: 1.2em;
     font-weight: 500;
     line-height: 18px;
     color: rgba(6, 11, 53, 1);
+
+    &--margin {
+      margin: 0;
+    }
   }
 
   &__description {
+    width: $width-content;
     font-weight: 400;
     font-size: 1em;
     line-height: 14px;
     color: rgba(97, 96, 112, 1);
+
+    &--margin {
+      margin-bottom: $main-margin-bt;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $width-content;
+
+    &--margin {
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      margin: 0;
+      font-size: 1em;
+      line-height: 14px;
+      color: rgba(6, 11, 53, 1);
+    }
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $main-margin-bt;
-  }
+    width: $width-content;
 
-  &__price-text {
-    font-size: 1.2em;
-    line-height: 18px;
-    color: rgba(97, 96, 112, 1);
-  }
+    &--margin {
+      margin-bottom: $main-margin-bt;
+    }
 
-  &__price-value {
-    font-weight: 500;
-    font-size: 1.6em;
-    line-height: 18px;
+    &-text {
+      margin: 0;
+      font-size: 1.2em;
+      line-height: 18px;
+      color: rgba(97, 96, 112, 1);
+    }
+
+    &-value {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.6em;
+      line-height: 18px;
+    }
   }
 
   &__button {
@@ -74,7 +98,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    width: $width-content;
     height: 40px;
 
     border: 1px solid $main-btn-color;
@@ -89,7 +113,9 @@ body {
     font-weight: 700;
     line-height: 16px;
 
-    margin-bottom: $main-margin-bt;
+    &--margin {
+      margin-bottom: $main-margin-bt;
+    }
 
     &:hover {
       background: none;
