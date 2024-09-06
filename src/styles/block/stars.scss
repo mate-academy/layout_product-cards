@@ -1,21 +1,17 @@
-  .stars {
-    display: flex;
-    gap: 4px;
-    width: $width-stars;
+.stars {
+  display: flex;
+  gap: 4px;
+  width: $width-stars;
 
-    & > :nth-child(n) {
-      background-image: url(../images/star-active.svg);
-    }
-
-    & > :last-child {
-      background-image: url(../images/star.svg);
-    }
-    &__star {
-      width: 16px;
-      height: 16px;
-
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
   }
 
+  &--4 > :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
