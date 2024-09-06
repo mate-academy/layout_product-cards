@@ -1,0 +1,40 @@
+.stars {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  width: $block-width;
+  margin-top: 16px;
+  margin-left: 16px;
+  align-items: center;
+  height: 16px;
+  &__container {
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__star {
+    background-image: url(/src/images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+  &__star:nth-child(n + 5) {
+    background-image: url(../images/star.svg);
+  }
+  &__text {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    width: 53px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+    color: $text-color-black;
+  }
+}
