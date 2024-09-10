@@ -1,12 +1,14 @@
-$product-info-color: #616070;
-$main-color: #060b35;
-$btn-color: #00acdc;
+@import 'variables';
+@import 'stars';
+
+html {
+  font-family: Roboto, sans-serif;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
 }
 
 .container {
@@ -51,24 +53,6 @@ $btn-color: #00acdc;
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
-
-    .container__stars-reviews-star {
-      display: flex;
-    }
-
-    .container__stars-reviews-star-icon {
-      width: 16px;
-      height: 16px;
-      background-size: center;
-      background-image: url('../images/star.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-right: 4px;
-
-      &:nth-child(-n + 4) {
-        background-image: url('../images/star-active.svg');
-      }
-    }
 
     .review-text {
       color: $main-color;
