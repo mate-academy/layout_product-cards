@@ -1,0 +1,99 @@
+.card {
+  @include add-border($color-off-white);
+
+  font-family: $font;
+  width: 200px;
+  padding: 32px 16px 16px;
+  margin: auto;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+    @include text($text-size: 12px, $text-thickness: 500, $text-height: 18px);
+
+    margin-bottom: 4px;
+  }
+
+  &__details {
+    // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+    @include text($text-color: $color-gray);
+
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    @include flex-row;
+
+    margin-bottom: 24px;
+
+    &-text {
+      // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+      @include text;
+
+      align-self: end;
+    }
+  }
+
+  &__price {
+    @include flex-row;
+
+    margin-bottom: 16px;
+
+    &-text {
+      // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+      @include text(
+        $text-color: $color-gray,
+        $text-size: 12px,
+        $text-height: 18px
+      );
+
+      align-self: center;
+    }
+
+    &-amount {
+      // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+      @include text($text-size: 16px, $text-thickness: 700, $text-height: 18px);
+    }
+  }
+
+  &__button {
+    // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+    @include text(
+      $text-color: $color-white,
+      $text-size: 16px,
+      $text-thickness: 700
+    );
+
+    // add-border($color: $color-white)
+    @include add-border;
+
+    background-color: $color-blue;
+    display: block;
+    text-transform: uppercase;
+    padding: 12px 70px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      // text($text-color: $color-black, $text-size: 10px, $text-thickness: 400, $text-height: 14px)
+      @include text(
+        $text-color: $color-blue,
+        $text-size: 16px,
+        $text-thickness: 700,
+        $text-height: 16px
+      );
+
+      // add-border($color: $color-white)
+      @include add-border($color-blue);
+
+      cursor: pointer;
+      background-color: $color-white;
+    }
+  }
+}
