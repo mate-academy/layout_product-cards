@@ -7,6 +7,9 @@ body {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
 .card {
   width: 200px;
   border: 1px solid #f3f3f3;
@@ -14,13 +17,15 @@ body {
   box-sizing: border-box;
 
   &__img {
+    box-sizing: border-box;
     width: 100%;
-    padding-bottom: 40px;
+    padding: 0 3px 40px;
   }
 
   &__info {
     font-family: $font;
     font-size: 12px;
+    line-height: 18px;
     font-weight: 500;
     color: $mainColor;
     padding-bottom: 4px;
@@ -29,6 +34,7 @@ body {
   &__productCode {
     font-family: $font;
     font-size: 10px;
+    line-height: 14px;
     font-weight: $fontWeightStandard;
     padding-bottom: 16px;
     color: $secondColor;
@@ -55,12 +61,14 @@ body {
 
   &__price {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-bottom: 16px;
 
     &_label {
       font-family: $font;
       font-size: 12px;
+      line-height: 18px;
       font-weight: $fontWeightStandard;
 
       color: $secondColor;
@@ -68,6 +76,7 @@ body {
     &_amount {
       font-family: $font;
       font-size: 16px;
+      line-height: 18px;
       font-weight: 700;
       color: $mainColor;
     }
@@ -77,13 +86,16 @@ body {
     display: flex;
     justify-content: space-between;
     padding-bottom: 24px;
+
     .stars {
       display: flex;
+      align-items: center;
+
       &__star {
         width: 16px;
         height: 16px;
         background-image: url(../images/star.svg);
-        margin-right: 4px;
+    ht: 4px;
         background-position: center;
         background-repeat: no-repeat;
       }
@@ -95,6 +107,7 @@ body {
     &__text {
       font-family: $font;
       font-size: 10px;
+      line-height: 14px;
       font-weight: $fontWeightStandard;
     }
   }
