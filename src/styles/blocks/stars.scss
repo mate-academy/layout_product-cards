@@ -1,0 +1,35 @@
+@import '../utils/mixins';
+
+.stars-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+
+  &__text {
+    @include product-code-font;
+
+    margin-top: 2px;
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+
+    &:nth-child(-n + 4),
+    &--4 {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
