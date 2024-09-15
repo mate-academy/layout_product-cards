@@ -1,21 +1,17 @@
 .card {
   box-sizing: border-box;
-  height: 408px;
+  padding: 16px;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
   &__image {
-    margin: 32px 0 36px;
+    margin: 16px 0 36px;
     text-align: center;
   }
 
   &__photo {
     height: 134px;
-  }
-
-  &__info {
-    margin-inline: 16px;
   }
 
   &__name {
@@ -58,8 +54,10 @@
   }
 
   &__button {
+    display: flex;
     box-sizing: border-box;
     height: 40px;
+    width: 166px;
     font-size: 14px;
     font-weight: 700;
     line-height: 40px;
@@ -67,20 +65,11 @@
     background-color: $button-main-color;
     border-radius: 5px;
     cursor: pointer;
-  }
 
-  &__buy {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $button-second-color;
-  }
-
-  &__button:hover {
-    background-color: $button-second-color;
-    border: 1px solid $button-main-color;
-    transition-duration: 1s;
-
-    & .card__buy {
+    &:hover {
+      background-color: $button-second-color;
+      border: 1px solid $button-main-color;
+      transition-duration: 300ms;
       color: $button-main-color;
     }
   }
