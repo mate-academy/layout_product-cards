@@ -1,0 +1,105 @@
+@import 'variable';
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: fit-content;
+  border: solid 1px #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__logo {
+    height: 134px;
+    width: 160px;
+    margin: 32px 16px 16px;
+  }
+
+  &__title {
+    width: $blockWidth;
+    font-family: $card-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 40px 0 0;
+  }
+
+  &__subtitle {
+    font-family: $card-font;
+    font-size: 10px;
+    line-height: 14px;
+    color: $card-second-color;
+    margin: 4px 16px 0;
+    margin-right: auto;
+  }
+
+  &__rating {
+    width: $blockWidth;
+    display: flex;
+    margin-top: 16px;
+    line-height: 0;
+    align-items: end;
+  }
+
+  &__text-rating {
+    font-family: $card-font;
+    font-size: 10px;
+    margin-block: 0;
+    color: $card-first-color;
+    margin-left: auto;
+    line-height: 14px;
+  }
+
+  &__price {
+    width: $blockWidth;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__text-price {
+    margin-block: 0;
+    font-family: $card-font;
+    font-size: 12px;
+    line-height: 18px;
+    color: $card-second-color;
+  }
+
+  &__count {
+    margin-block: 0;
+    font-family: $card-font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $card-first-color;
+  }
+
+  &__button {
+    font-family: $card-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    width: $blockWidth;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00acdc;
+    margin-top: 16px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+
+    &:hover {
+      border: solid 1px $button-color;
+      background-color: white;
+      color: $button-color;
+    }
+  }
+}
