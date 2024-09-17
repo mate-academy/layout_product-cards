@@ -1,3 +1,115 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+
+  --primary-color: #060b35;
+  --secondary-color: #616070;
+}
+
+.card {
+  width: 166px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 16px;
+  padding-top: 32px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    height: 18px;
+  }
+
+  &__price-text {
+    color: var(--secondary-color);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-amount {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__name > p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+    color: var(--primary-color);
+  }
+
+  &__product-code {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 4px 0 16px;
+    color: var(--secondary-color);
+  }
+
+  &__button {
+    border-radius: 5px;
+    background: #00acdc;
+    border: none;
+    height: 40px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+
+  &__button:hover {
+    border: 1px solid #00acdc;
+    background-color: #fff;
+    color: #00acdc;
+    cursor: pointer;
+  }
+
+  &__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    height: 16px;
+    color: #060b35;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background: url(../images/star.svg) no-repeat center;
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  &--4 > .stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
 }
