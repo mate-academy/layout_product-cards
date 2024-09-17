@@ -1,0 +1,78 @@
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
+  font-family: Roboto, sans-serif;
+  color: $color-main;
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: $line-height;
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+
+    @include text-small;
+
+    color: $color-secondary;
+  }
+
+  &__rating {
+    margin-bottom: 24px;
+
+    @include content-flex-around;
+
+    align-items: flex-end;
+  }
+
+  &__reviews {
+    @include text-small;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+
+    @include content-flex-around;
+  }
+
+  &__price-text {
+    font-size: 12px;
+    color: $color-secondary;
+    line-height: $line-height;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: $line-height;
+  }
+
+  &__button {
+    border-radius: 5px;
+    width: 166px;
+    height: 40px;
+    border: none;
+    background-color: $button-color;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: $button-color-active;
+  }
+
+  &__button:hover {
+    border: 1px solid $button-color;
+    background-color: $button-color-active;
+    color: $button-color;
+  }
+}
