@@ -1,3 +1,100 @@
+$bodyFont: 'Roboto';
+$bodyColor: rgba(0, 0, 0, 1);
+
 body {
   margin: 0;
+  padding: 0;
+  height: 406px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.card {
+  overflow: auto;
+  font-family: $bodyFont;
+  color: $bodyColor;
+
+  &__image {
+    height: 134px;
+    width: 160px;
+    background-image: url(../images/Rectangle\ 4.png);
+    margin: 32px 19px 40px;
+    background-size: contain;
+  }
+
+  &__apple {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    margin-inline: 16px;
+    padding: 0;
+  }
+
+  &__code {
+    color: rgba(97, 96, 112, 1);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    margin: 4px 84px 16px 16px;
+    padding: 0;
+  }
+
+  &__price {
+    margin-inline: 16px;
+    margin-top: 24px;
+    width: 166px;
+    height: 18px;
+  }
+
+  &__button {
+    margin: 16px;
+    width: 166px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00acdc;
+    color: white;
+    font-weight: 500;
+  }
+
+  &__button:hover {
+    background-color: white;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
+
+  &__stars :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__stars :nth-child(-n + 1) {
+    margin-inline: 16px;
+  }
+
+  &__stars {
+    display: flex;
+
+    &--star {
+      background-image: url(../images/star.svg);
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--star:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &--reviews {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 18px;
+      justify-content: space-between;
+    }
+  }
 }
