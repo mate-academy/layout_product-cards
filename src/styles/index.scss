@@ -1,135 +1,108 @@
+$bc-image: url(/src/images/star-active.svg);
+$btn-color: #00acdc;
+$main-acent: #060b35;
+$secondary: #616070;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
 }
 
 .card {
   box-sizing: border-box;
-  background: #fff;
+  width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  width: 200px;
   padding: 32px 16px 16px;
-
-  img {
-    width: 160px;
-    height: 134px;
+  &__photo {
     display: block;
     margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
   }
-
-  .name {
-    font-family: Roboto, sans-serif;
-    width: 166px;
-    height: 36px;
+  &__name {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     text-align: left;
-    color: #060b35;
-    margin-top: 40px;
+    color: $main-acent;
+    margin-bottom: 4px;
   }
-
-  .code {
-    color: #616070;
-    font-size: 10px;
-    font-weight: 400;
+  &__code {
     line-height: 14px;
     text-align: left;
-    margin-top: 4px;
-    font-family: Roboto, sans-serif;
+    margin-bottom: 16px;
+    color: $secondary;
   }
-}
-
-.reviewBlock {
-  width: 166px;
-  height: 16px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    margin-bottom: 16px;
+    color: $secondary;
+  }
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    color: #060b35;
+  }
+  &__price-header {
+    font-size: 12px;
+    text-align: left;
+    color: #616070;
+  }
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__review-count {
+    text-align: right;
+    color: $main-acent;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid $btn-color;
+    border-radius: 5px;
+    background: $btn-color;
+    &:hover {
+      background: #fff;
+      color: $btn-color;
+    }
+  }
 }
 
 .stars {
-  width: 96px;
-  height: 16px;
   display: flex;
-
-  .starOn {
-    background-image: url(/src/images/star-active.svg);
-    background-repeat: no-repeat;
+  flex-direction: row;
+  &__star {
+    background-image: url(../images/star.svg);
     background-position: center;
-    width: 16px;
     height: 16px;
-    text-align: center;
     margin-right: 4px;
-  }
-
-  .starOff {
-    background-image: url(/src/images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
     width: 16px;
-    height: 16px;
-    text-align: center;
+    background-repeat: no-repeat;
   }
-}
-
-.reviews {
-  height: 16px;
-  width: 53px;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  font-family: Roboto, sans-serif;
-  color: #060b35;
-}
-
-.priceBlock {
-  width: 166px;
-  height: 18px;
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.price {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  color: #616070;
-  font-family: Roboto, sans-serif;
-}
-
-.priceN {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  text-align: right;
-  color: #060b35;
-  font-family: Roboto, sans-serif;
-}
-
-button {
-  width: 166px;
-  height: 40px;
-  gap: 0;
-  border-radius: 5px;
-  border: 0;
-  background: #00acdc;
-  color: #fff;
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
-  margin-top: 16px;
-}
-
-button:hover {
-  background: #fff;
-  color: #00acdc;
-  border: 1px #00acdc solid;
+  &.stars--4 :nth-child(-n + 4) {
+    background-image: $bc-image;
+  }
+  & :last-of-type {
+    margin: 0;
+  }
 }
