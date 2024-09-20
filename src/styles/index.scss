@@ -1,18 +1,17 @@
 $bodyFont: 'Roboto';
-$bodyColor: rgba(0, 0, 0, 1);
 
 body {
   margin: 0;
   padding: 0;
   height: 406px;
   width: 200px;
-  box-sizing: border-box;
 }
 
 .card {
   overflow: auto;
   font-family: $bodyFont;
-  color: $bodyColor;
+  border: 1px solid rgba(243, 243, 243, 1);
+  box-sizing: border-box;
 
   &__image {
     height: 134px;
@@ -29,6 +28,7 @@ body {
     text-align: left;
     margin-inline: 16px;
     padding: 0;
+    color: rgba(6, 11, 53, 1);
   }
 
   &__code {
@@ -37,15 +37,10 @@ body {
     font-weight: 400;
     line-height: 14px;
     text-align: left;
-    margin: 4px 84px 16px 16px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    margin-left: 16px;
     padding: 0;
-  }
-
-  &__price {
-    margin-inline: 16px;
-    margin-top: 24px;
-    width: 166px;
-    height: 18px;
   }
 
   &__button {
@@ -54,9 +49,13 @@ body {
     height: 40px;
     border: none;
     border-radius: 5px;
-    background-color: #00acdc;
-    color: white;
-    font-weight: 500;
+    background-color: rgba(0, 172, 220, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    padding: 0;
   }
 
   &__button:hover {
@@ -65,16 +64,18 @@ body {
     border: 1px solid #00acdc;
   }
 
-  &__stars :nth-child(-n + 4) {
+  &__container :nth-child(-n + 4) {
     background-image: url(../images/star-active.svg);
   }
 
-  &__stars :nth-child(-n + 1) {
+  &__container :nth-child(-n + 1) {
     margin-inline: 16px;
   }
 
-  &__stars {
+  &__container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &--star {
       background-image: url(../images/star.svg);
@@ -89,12 +90,35 @@ body {
     }
 
     &--reviews {
-      margin: 0;
-      padding: 0;
+      padding-inline: 17px 16px;
       font-size: 10px;
       font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+      align-items: flex-end;
+      color: rgba(6, 11, 53, 1);
+    }
+
+    &--price {
+      font-size: 12px;
+      font-weight: 400;
       line-height: 18px;
-      justify-content: space-between;
+      text-align: left;
+      color: rgba(97, 96, 112, 1);
+      margin-inline: 16px 85px;
+      margin-top: 24px;
+    }
+
+    &--numbers {
+      width: 50px;
+      height: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      margin-top: 24px;
+      padding-inline-end: 16px;
+      text-align: right;
+      color: rgba(6, 11, 53, 1);
     }
   }
 }
