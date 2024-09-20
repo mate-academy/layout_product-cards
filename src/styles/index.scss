@@ -1,7 +1,8 @@
 $bc-image: url(/src/images/star-active.svg);
-$btn-color: #00acdc;
 $main-acent: #060b35;
 $secondary: #616070;
+$btn-white-color: #ffffff;
+$btn-turquoise-color: #00acdc;
 
 body {
   margin: 0;
@@ -24,6 +25,7 @@ body {
     width: 160px;
     height: 134px;
   }
+
   &__name {
     font-size: 12px;
     font-weight: 500;
@@ -33,6 +35,8 @@ body {
     margin-bottom: 4px;
     margin-top: 0;
   }
+
+
   &__code {
     line-height: 14px;
     text-align: left;
@@ -40,6 +44,7 @@ body {
     margin-top: 0;
     color: $secondary;
   }
+
   &__price {
     display: flex;
     justify-content: space-between;
@@ -48,17 +53,20 @@ body {
     margin-top: 0;
     color: $secondary;
   }
+
   &__price-value {
     font-size: 16px;
     font-weight: 700;
     text-align: right;
     color: #060b35;
   }
+
   &__price-header {
     font-size: 12px;
     text-align: left;
     color: #616070;
   }
+
   &__review {
     display: flex;
     justify-content: space-between;
@@ -68,15 +76,17 @@ body {
     height: 16px;
     width: 166px;
   }
+
   &__review-count {
     text-align: right;
     color: $main-acent;
   }
+
   &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: $btn-white-color;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 14px;
@@ -85,12 +95,13 @@ body {
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    border: 1px solid $btn-color;
+    border: 1px solid $btn-turquoise-color;
     border-radius: 5px;
-    background: $btn-color;
+    background: $btn-turquoise-color;
+
     &:hover {
       background: #fff;
-      color: $btn-color;
+      color: $btn-turquoise-color;
     }
   }
 }
@@ -111,6 +122,7 @@ body {
   &.stars--4 :nth-child(-n + 4) {
     background-image: $bc-image;
   }
+
   & :last-of-type {
     margin: 0;
   }
