@@ -53,6 +53,7 @@ body {
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
     font-weight: 700;
+    font-family: $bodyFont;
     line-height: 16px;
     text-align: center;
     padding: 0;
@@ -64,18 +65,20 @@ body {
     border: 1px solid #00acdc;
   }
 
-  &__container :nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
-
-  &__container :nth-child(-n + 1) {
-    margin-inline: 16px;
-  }
-
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &--1 :nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+    &--1 :nth-child(-n + 1) {
+      margin-inline: 16px;
+    }
+    &--1 {
+      padding-inline-end: 16px;
+    }
 
     &--star {
       background-image: url(../images/star.svg);
@@ -83,6 +86,7 @@ body {
       height: 16px;
       background-position: center;
       background-repeat: no-repeat;
+      align-items: flex-end;
     }
 
     &--star:not(:last-child) {
@@ -90,7 +94,7 @@ body {
     }
 
     &--reviews {
-      padding-inline: 17px 16px;
+      padding-inline-start: 19px;
       font-size: 10px;
       font-weight: 400;
       line-height: 14px;
@@ -100,6 +104,8 @@ body {
     }
 
     &--price {
+      width: 31px;
+      height: 18px;
       font-size: 12px;
       font-weight: 400;
       line-height: 18px;
