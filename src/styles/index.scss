@@ -1,5 +1,10 @@
 $bodyFont: 'Roboto';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,51 +13,48 @@ body {
 }
 
 .card {
-    box-sizing: border-box;
-    border: 1px solid #f3f3f3;
-    font-family: Roboto;
-    padding: 32px 16px 16px;
-    overflow: auto;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  font-family: $bodyFont;
+  padding: 32px 16px 16px;
+  overflow: auto;
 
   &__image {
-      width: 160px;
-      height: 134px;
-      display: block;
-      margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto 40px;
   }
 
   &__apple {
-      color: #060b35;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 18px;
-      margin-bottom: 4px;
+    color: #060b35;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
   }
 
   &__code {
-      color: #616070;
-      text-align: left;
-      margin-bottom: 16px;
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-
+    color: #616070;
+    text-align: left;
+    margin-bottom: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
   }
 
   &__button {
-    margin: 16px;
-    width: 166px;
-    height: 40px;
+    color: #fff;
+    text-align: center;
+    background-color: #00acdc;
     border: none;
     border-radius: 5px;
-    background-color: rgba(0, 172, 220, 1);
-    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 40px;
+    font-family: $bodyFont;
     font-size: 14px;
     font-weight: 700;
-    font-family: $bodyFont;
     line-height: 16px;
-    text-align: center;
-    padding: 0;
   }
 
   &__button:hover {
@@ -62,71 +64,32 @@ body {
   }
 
   &__review {
-    &--container {
-      display: flex;
-      justify-content: space-between;
+    &-container {
       flex-wrap: wrap;
+      justify-content: space-between;
+      display: flex;
+      margin-bottom: 24px;
     }
   }
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 16px;
 
-    &__stars :nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
-    &__stars :nth-child(-n + 1) {
-      margin-inline: 16px;
-    }
-    &__stars {
-      padding-inline-end: 16px;
-    }
-
-    &--star {
-      background-image: url(../images/star.svg);
-      width: 16px;
-      height: 16px;
-      background-position: center;
-      background-repeat: no-repeat;
-      align-items: flex-end;
-    }
-
-    &--star:not(:last-child) {
-      margin-right: 4px;
-    }
-
-    &__review {
-      padding-inline-start: 19px;
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-      text-align: right;
-      align-items: flex-end;
-      color: rgba(6, 11, 53, 1);
-    }
-
-    &--price {
-      width: 31px;
-      height: 18px;
+    &-price {
+      color: #616070;
       font-size: 12px;
       font-weight: 400;
       line-height: 18px;
-      text-align: left;
-      color: rgba(97, 96, 112, 1);
-      margin-inline: 16px 85px;
-      margin-top: 24px;
     }
 
-    &--numbers {
+    &-numbers {
       width: 50px;
       height: 18px;
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
-      margin-top: 24px;
-      padding-inline-end: 16px;
       text-align: right;
       color: rgba(6, 11, 53, 1);
     }
@@ -134,6 +97,7 @@ body {
 }
 
 .stars {
+  display: flex;
   &__star {
     background-image: url(../images/star.svg);
     width: 16px;
@@ -143,18 +107,15 @@ body {
     align-items: flex-end;
   }
 }
-  .stars:not(:last-child) {
+
+.stars :not(:last-child) {
   margin-right: 4px;
 }
-  .stars :nth-child(-n + 4) {
+
+.stars :nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
 }
-  .stars :nth-child(-n + 1) {
-  margin-inline: 16px;
-}
-  .stars {
-  padding-inline-end: 16px;
-}
+
 p {
   padding-inline-start: 19px;
   font-size: 10px;
