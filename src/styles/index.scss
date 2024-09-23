@@ -1,8 +1,13 @@
+$main-accent: #060b35;
+$secondary: #616070;
+$blue-accent: #00acdc;
+$white-accent: #fff;
+
 .product-card {
   font-family: Roboto, Arial, Helvetica, 'Segoe UI', sans-serif, system-ui;
   font-weight: 500;
   font-size: 12px;
-  color: #060b35;
+  color: $main-accent;
 
   &__page {
     margin: 0;
@@ -12,7 +17,7 @@
     box-sizing: border-box;
     width: 200px;
     border: 1px solid #f3f3f3;
-    background: #fff;
+    background: $white-accent;
     border-radius: 5px;
   }
 
@@ -44,7 +49,7 @@
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #616070;
+    color: $secondary;
     margin-bottom: 6px;
   }
 
@@ -53,7 +58,7 @@
     flex-direction: row;
     align-items: center;
     line-height: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     width: 168px;
   }
 
@@ -85,16 +90,19 @@
     flex-direction: row;
     align-items: center;
     height: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    width: 168px;
   }
 
-  &__price--text {
-    color: #616070;
+  &__price-text {
+    color: $secondary;
     font-weight: 400;
     margin-right: 85px;
   }
 
-  &__price--numbers {
+  &__price-numbers {
+    margin-left: 1px;
+    padding-bottom: 1px;
     font-size: 16px;
     font-weight: 700;
   }
@@ -103,18 +111,18 @@
     display: flex;
     justify-content: center;
     font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    background: #00acdc;
+    font-weight: 600;
+    color: $white-accent;
+    background: $blue-accent;
     border: none;
     height: 40px;
-    line-height: 40px;
+    line-height: 37px;
     border-radius: 5px;
   }
 
   &__button:hover {
-    background-color: #fff;
-    border: 1px solid #00acdc;
-    color: #00acdc;
+    background-color: $white-accent;
+    border: 1px solid $blue-accent;
+    color: $blue-accent;
   }
 }
