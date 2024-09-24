@@ -1,9 +1,7 @@
-$stars_size: 16px;
+$stars-size: 16px;
 
 body {
   margin: 0;
-  font-size: 10px;
-  font-weight: 400;
   font-family: Roboto, sans-serif;
 }
 
@@ -13,8 +11,8 @@ body {
 
 .stars__star {
   background-image: url(../images/star.svg);
-  width: #{$stars_size};
-  height: #{$stars_size};
+  width: $stars-size;
+  height: $stars-size;
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 4px;
@@ -41,12 +39,12 @@ body {
   flex-direction: column;
 }
 
-.card_info {
+.card__info {
   text-align: left;
   padding: 0 16px;
 }
 
-.card_imac_img {
+.card__imac-img {
   margin-top: 32px;
   margin-bottom: 36px;
   width: 160px;
@@ -54,7 +52,7 @@ body {
   padding: 0 19px;
 }
 
-.card_text_name {
+.card__text-name {
   color: #060b35;
   margin: 0;
   font-size: 12px;
@@ -62,7 +60,7 @@ body {
   line-height: 18px;
 }
 
-.card_text_code {
+.card__text-code {
   color: #616070;
   margin-top: 4px;
   margin-bottom: 16px;
@@ -71,13 +69,13 @@ body {
   line-height: 14px;
 }
 
-.card_stars {
+.card__stars {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.stars_number {
+.card__reviews {
   display: flex;
   align-items: center;
   color: #060b35;
@@ -87,20 +85,21 @@ body {
   line-height: 14px;
 }
 
-.card_price {
+.card__price {
   display: flex;
   justify-content: space-between;
 }
 
-.card_price_name {
+.card__price-name {
   color: #616070;
   margin: 0;
   font-size: 12px;
+  font-weight: 400;
   line-height: 18px;
   text-align: left;
 }
 
-.card_price_number {
+.card__price-number {
   color: #060b35;
   margin: 0;
   font-size: 16px;
@@ -109,35 +108,35 @@ body {
   text-align: right;
 }
 
-.card_button {
+.card__button {
   display: flex;
   justify-content: center;
 }
 
-.card_button_link {
+.card__button-link {
   text-decoration: none;
 }
 
-.card_button_buy {
-  all: unset;
+.card__button-buy {
+  display: block;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
   color: #fff;
-
   background-color: #00acdc;
   width: 166px;
   height: 40px;
   border-radius: 5px;
   margin: 16px 0;
   cursor: pointer;
+  line-height: 40px;
+  border: none;
+  box-sizing: border-box;
 }
 
-.card_button_buy:hover {
+.card__button-buy:hover {
   color: #00acdc;
-  box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  cursor: pointer;
 }
