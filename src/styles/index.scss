@@ -1,3 +1,122 @@
+$card-width: 200px;
+$font-family: 'Roboto', sans-serif;
+$main-color: #060b35;
+$secondary-color: #616070;
+$button-bg-color: #00acdc;
+$button-bg-color-hover: #fff;
+$button-text-color: white;
+
 body {
   margin: 0;
+  font-family: $font-family;
+  color: $main-color;
 }
+
+.product-card {
+  width: $card-width;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
+  background-color: #fff;
+  &__img {
+    width: 160px;
+    display: block;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  &__code {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-color;
+  }
+  &__review {
+    margin-top: 0;
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 16px;
+  }
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;
+  }
+  &__stars {
+    display: flex;
+    &-star {
+      height: 16px;
+      width: 16px;
+      background-image: url('../images/star.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 4px;
+    }
+    &-star:last-child {
+      margin-right: 0;
+    }
+    &-star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &__price {
+    margin-top: 0;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &-label {
+      font-weight: 400;
+      color: $secondary-color;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__buy-button {
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 166px;
+    height: 40px;
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-weight: 700;
+    size: 14px;
+    line-height: 16px;
+  }
+  &__buy-button:hover {
+    background-color: $button-bg-color-hover;
+    color: $button-bg-color;
+    border: $button-bg-color 1px solid;
+    size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+} /*# sourceMappingURL=index.css.map */
