@@ -1,106 +1,95 @@
 @use './variables' as *;
 
-.product {
+.card {
   box-sizing: border-box;
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
   padding: 0 16px;
 
-  &__main-image {
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
     margin: 32px auto 40px;
   }
 
-  &__item--name {
+  &__name {
+    font-family: $main-font;
+    font-weight: 500;
+    color: $text-main-color;
+    font-size: 12px;
+    line-height: 18px;
     margin-bottom: 4px;
   }
 
-  &__item--description {
-    margin-bottom: $margin-main;
-  }
-
-  &__wrapper {
-    margin-bottom: $margin-main;
-  }
-
-  &__button {
-    margin-bottom: $margin-main;
-  }
-}
-
-.main-image {
-  background-image: url(../images/imac.jpeg);
-  width: 160px;
-  height: 134px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.item {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-
-  &--name {
-    font-weight: 500;
-    color: $text-main-color;
-  }
-
-  &--description {
+  &__description {
+    font-family: $main-font;
+    font-weight: $main-font-weight;
     font-size: 10px;
     line-height: 14px;
     color: $text-secondary-color;
+    margin-bottom: $margin-main;
   }
 
-  &--views {
+  &__review {
+    font-family: $main-font;
+    font-weight: $main-font-weight;
     font-size: 10px;
     line-height: 14px;
     color: $text-main-color;
     margin-top: 2px;
   }
 
-  &--price {
+  &__price {
+    font-family: $main-font;
+    font-weight: $main-font-weight;
+    font-size: 12px;
+    line-height: 18px;
     color: $text-secondary-color;
-    padding-top: 24px;
   }
 
-  &--amount {
+  &__amount {
+    font-family: $main-font;
     font-size: 16px;
     font-weight: 700;
     color: $text-main-color;
-    padding-top: 24px;
   }
-}
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  color: #fff;
-  width: 166px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: $button-color;
-  text-decoration: none;
-  text-transform: uppercase;
+  &__wrapper {
+    row-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $margin-main;
+  }
 
-  &:hover {
-    border: 1px solid $button-color;
-    background-color: transparent;
-    color: $button-color;
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $button-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: $margin-main;
+
+    &:hover {
+      border: 1px solid $button-color;
+      background-color: transparent;
+      color: $button-color;
+    }
   }
 }
