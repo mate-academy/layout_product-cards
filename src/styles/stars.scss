@@ -1,0 +1,30 @@
+.rate {
+  &__stars {
+    display: flex;
+
+    &-star {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      margin-right: 4px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__text {
+    font-size: 10px;
+    line-height: 14px;
+    color: $important-text-collor;
+  }
+}
+
+.rate__stars :nth-child(n),
+.rate__stars :nth-child(n + 2),
+.rate__stars :nth-child(n + 3),
+.rate__stars :nth-child(n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.rate__stars:last-child {
+  background-image: url(../images/star.svg);
+  margin: 0;
+}
