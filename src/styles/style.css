@@ -2,12 +2,13 @@
   margin: 0;
 
   --border-color: rgb(240, 7, 228);
+  --hover-color: blue;
 
   font-family: Roboto, sans-serif;
 }
 
 .card {
-  width: 199px;
+  max-width: 199px;
   height: 100%;
   border: 1px solid var(--border-color);
   display: flex;
@@ -21,13 +22,14 @@
   background-size: cover;
   width: 160px;
   height: 134px;
-  margin: 33px 0 0 20px;
+  margin-top: 33px;
+  margin-left: 19px;
 }
 
 .card__name {
   width: 166px;
   height: 36px;
-  padding: 40px 16px 0;
+  padding: 40px 16px 4px;
 
   font-size: 12px;
   font-weight: 500;
@@ -48,8 +50,10 @@
 }
 
 .card:hover {
-  border: 1px solid blue;
+  outline: #00acdc;
+  border: 1px solid var(--hover-color);
   border-radius: 5px;
+  box-shadow: #ed0303;
 }
 
 .card__price {
@@ -102,7 +106,7 @@
   flex-direction: row;
 }
 
-.stars__star-active {
+.star-active {
   width: 16px;
   height: 16px;
   background-image: url(../images/star-active.svg);
@@ -113,7 +117,7 @@
   background-repeat: no-repeat;
 }
 
-.stars__star {
+.star {
   width: 16px;
   height: 16px;
   background-image: url(../images/star.svg);
@@ -124,11 +128,11 @@
   background-repeat: no-repeat;
 }
 
-.stars__star-active:last-child {
+.star-active:last-child {
   margin-right: 0;
 }
 
-.stars__star:last-child {
+.star:last-child {
   margin-right: 0;
 }
 
