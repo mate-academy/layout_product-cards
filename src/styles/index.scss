@@ -1,3 +1,7 @@
+@import './variables';
+@import './block/card';
+@import './block/stars';
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -5,6 +9,19 @@ body {
   font-style: normal;
 }
 
-@import './variables';
-@import './block/card';
-@import './block/stars';
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 16px 0;
+}
+
+.reviews__review {
+  display: flex;
+  align-items: flex-end;
+
+  &-text {
+    margin: 0;
+    font-size: 10px;
+    color: $primary-color;
+  }
+}
