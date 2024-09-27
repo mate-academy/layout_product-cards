@@ -1,3 +1,124 @@
+$colorMain: #060b35;
+$colorSecon: #616070;
+$colorButton: #00acdc;
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
+}
+
+.img {
+  display: block;
+  width: 160px;
+  margin: 0 auto 40px;
+  height: 134px;
+}
+
+.descrip {
+  display: flex;
+  text-align: left;
+
+  &--mac {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $colorMain;
+  }
+
+  &--code {
+    display: block;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $colorSecon;
+    margin-bottom: 16px;
+  }
+}
+
+.review {
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__review {
+    font-size: 10px;
+    line-height: 14px;
+    color: #060b35;
+    margin: 0;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__stars {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars .stars__stars:last-child {
+  background-image: url(../images/star.svg);
+  margin-right: 0;
+}
+
+.price {
+  margin-bottom: 16px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+
+  &__letter {
+    font-weight: 400;
+    font-size: 12px;
+    color: $colorSecon;
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+    color: $colorMain;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid $colorButton;
+  border-radius: 5px;
+  background-color: $colorButton;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #00acdc;
 }
