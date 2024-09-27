@@ -1,0 +1,83 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    margin: 0 auto;
+    height: 134px;
+    object-fit: cover;
+  }
+
+  &__description {
+    margin-top: 40px;
+    font-weight: 500;
+
+    @include font-size-medium;
+  }
+  &__code {
+    color: $secondary-text-color;
+    margin-top: 4px;
+
+    @include font-size-minimal;
+  }
+
+  &__reviews {
+    @include font-size-minimal;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    color: $secondary-text-color;
+
+    @include font-size-medium;
+  }
+
+  &__amount {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__grade {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    background: $blue-accent-color;
+    color: #fff;
+    padding: 11px 70px 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      background-color: #fff;
+      color: $blue-accent-color;
+      border: 1px solid $blue-accent-color;
+    }
+  }
+  &__link {
+    color: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
