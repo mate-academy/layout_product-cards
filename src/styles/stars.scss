@@ -1,0 +1,44 @@
+.card {
+  &__reviews {
+    margin-bottom: rem(24);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &-stars {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+    }
+
+    $stars: 1, 2, 3, 4, 5;
+
+    @each $star in $stars {
+      &-stars--#{$star} {
+        .card__reviews-star:nth-child(-n + #{$star}) {
+          background-image: url(../images/star-active.svg);
+        }
+      }
+    }
+
+    &-star {
+      position: relative;
+      width: rem(16);
+      height: rem(16);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../images/star.svg);
+
+      &:not(:last-child) {
+        margin-right: rem(4);
+      }
+    }
+
+    &-count {
+      font-size: rem(10);
+      color: $main;
+      line-height: lineheight(14, 10);
+    }
+  }
+}
