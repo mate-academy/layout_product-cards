@@ -5,17 +5,10 @@
   border: 1px solid #f3f3f3;
   padding: 32px 16px 16px;
 
-  // background-color: yellow;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-direction: column;
-  // align-items: center;
-
   &__logo {
     width: 160px;
     height: 134px;
     margin: 0 auto;
-    box-sizing: border-box;
     background-image: url(../images/imac.jpeg);
     background-repeat: no-repeat;
     background-position: center;
@@ -69,13 +62,9 @@
   }
 
   &__button {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 40px;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid $active-color;
     box-sizing: border-box;
 
@@ -84,9 +73,22 @@
     height: 40px;
     border-radius: 5px;
 
+    &-link {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
     &:hover {
-      background-color: #f3f3f3;
+      background-color: #fff;
       border: 1px solid $active-color;
+    }
+
+    &-link:hover {
       color: $active-color;
     }
   }
