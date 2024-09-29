@@ -1,0 +1,36 @@
+@import '../styles/variables';
+
+.card {
+  &__stars-reviews-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $large-margin;
+  }
+
+  &__star {
+    display: flex;
+    width: $star-size;
+    height: $star-size;
+    margin-right: $small-margin;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__stars--1 &__star:nth-child(1),
+  &__stars--2 &__star:nth-child(-n + 2),
+  &__stars--3 &__star:nth-child(-n + 3),
+  &__stars--4 &__star:nth-child(-n + 4),
+  &__stars--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
