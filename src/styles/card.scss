@@ -1,0 +1,126 @@
+@import 'variables';
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  border: 1px solid $color-border-card;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 32px 19px 36px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    width: 166px;
+    height: 36px;
+    margin: 0 16px 4px;
+    font-family: $font-roboto;
+    font-weight: $font-medium;
+    color: $color-font;
+  }
+
+  &__subtitle {
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0 16px 16px;
+    font-family: $font-roboto;
+    font-weight: $font-regular;
+    min-height: 14px;
+    max-width: 98px;
+    color: $color-font-secondary;
+  }
+
+  &__reviews {
+    display: flex;
+    margin: 0 auto 24px;
+    box-sizing: border-box;
+    width: 166px;
+    height: 16px;
+    text-align: center;
+    justify-content: space-between;
+    padding: 2px 0 0 2px;
+
+    &-text {
+      width: 53px;
+      height: 16px;
+      font-family: $font-roboto;
+      font-weight: $font-medium;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+      color: $color-font;
+    }
+
+    &-stars {
+      display: flex;
+      box-sizing: border-box;
+      width: 96px;
+      height: 16px;
+      border-radius: 0.5px;
+    }
+
+    &-star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+    }
+
+    &-star:nth-child(-n + 4) {
+      margin-right: 4px;
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 16px;
+    align-items: center;
+    width: 166px;
+    height: 18px;
+
+    &-text {
+      font-family: $font-roboto;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-font-secondary;
+    }
+
+    &-value {
+      font-family: $font-roboto;
+      font-weight: $font-bold;
+      font-size: 16px;
+      line-height: 18px;
+      color: $color-font;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    min-height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    color: $color-white;
+    background-color: $color-button;
+    font-family: $font-roboto;
+    font-weight: $font-bold;
+    line-height: 16px;
+    margin: 0 16px 16px;
+
+    &:hover {
+      background-color: $color-white;
+      border: 1px solid $color-button;
+      color: $color-button;
+    }
+  }
+}
