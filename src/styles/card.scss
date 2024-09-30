@@ -2,14 +2,14 @@
 
 .card {
   box-sizing: border-box;
-  width: 200px;
-  height: 408px;
+  max-width: 200px;
+  min-height: 408px;
   border-radius: 5px;
   border: 1px solid $color-border-card;
 
   &__image {
-    width: 160px;
-    height: 134px;
+    width: 8.33vw;
+    height: 12.41vh;
     background-size: contain;
     background-repeat: no-repeat;
     margin: 32px 19px 36px;
@@ -18,8 +18,8 @@
   &__name {
     font-size: 12px;
     line-height: 18px;
-    width: 166px;
-    height: 36px;
+    max-width: 166px;
+    min-height: 36px;
     margin: 0 16px 4px;
     font-family: $font-roboto;
     font-weight: $font-medium;
@@ -32,8 +32,8 @@
     margin: 0 16px 16px;
     font-family: $font-roboto;
     font-weight: $font-regular;
-    height: 14px;
-    width: 98px;
+    min-height: 14px;
+    max-width: 98px;
     color: $color-font-secondary;
   }
 
@@ -42,7 +42,7 @@
     margin: 0 auto 24px;
     box-sizing: border-box;
     width: 166px;
-    height: 16px;
+    min-height: 16px;
     text-align: center;
     justify-content: space-between;
     padding: 2px 0 0 2px;
@@ -66,14 +66,14 @@
       border-radius: 0.5px;
     }
 
-    &-star {
+    &-star4 {
       width: 16px;
       height: 16px;
       background-image: url(../images/star.svg);
       background-repeat: no-repeat;
     }
 
-    &-star:nth-child(-n + 4) {
+    &-star4:nth-child(-n + 4) {
       margin-right: 4px;
       background-image: url(../images/star-active.svg);
     }
@@ -85,7 +85,7 @@
     margin: 0 auto 16px;
     align-items: center;
     width: 166px;
-    height: 18px;
+    min-height: 18px;
 
     &-text {
       font-family: $font-roboto;
@@ -106,7 +106,7 @@
 
   &__button {
     width: 166px;
-    height: 40px;
+    min-height: 40px;
     border-radius: 5px;
     font-size: 14px;
     border: none;
