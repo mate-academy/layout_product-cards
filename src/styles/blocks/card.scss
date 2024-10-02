@@ -3,86 +3,90 @@
   height: 408px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 16px;
+}
 
-  &__img {
-    width: 160px;
-    height: 134px;
-    margin-top: 16px;
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin-top: 16px;
+  display: block;
+}
+
+.card__info {
+  margin-top: 40px;
+
+  &-name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
   }
 
-  &__info {
-    margin-top: 40px;
+  &-product-code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-text-color;
+    margin-top: 4px;
+  }
+}
 
-    &-name {
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 18px;
-    }
+.card__review {
+  width: 100%;
+  margin-top: 16px;
 
-    &-product-code {
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-      color: $secondary-text-color;
-      margin-top: 4px;
-      text-align: left;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-text {
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+
+.card__price {
+  width: 100%;
+  margin-top: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-title {
+    color: $secondary-text-color;
+    font-size: 12px;
+    font-weight: 400;
   }
 
-  &__review {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 16px;
-
-    &-text {
-      font-size: 10px;
-      font-weight: 400;
-    }
-  }
-
-  &__price {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 24px;
-
-    &-title {
-      color: $secondary-text-color;
-      font-size: 12px;
-      font-weight: 400;
-    }
-
-    &-count {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18px;
-    }
-  }
-
-  &__button {
-    margin-top: 16px;
-    width: 166px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: $button-color;
-    color: #fff;
-    border: none;
-    font-size: 14px;
+  &-count {
+    font-size: 16px;
     font-weight: 700;
-    line-height: 16px;
-    text-align: center;
+    line-height: 18px;
+  }
+}
 
-    &:hover {
-      border: 1px solid $button-color;
-      background-color: #fff;
-      color: $button-color;
-    }
+.card__button {
+  margin-top: 16px;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+
+  background-color: $button-color;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+
+  &:hover {
+    border: 1px solid $button-color;
+    background-color: #fff;
+    color: $button-color;
   }
 }
