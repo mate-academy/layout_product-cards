@@ -7,16 +7,17 @@
   border-radius: 5px;
 }
 
-.image {
+.card__img {
   height: 134px;
   width: 160px;
-  background-image: url(../images/Rectangle\ 4.png);
+
   background-position: center;
   background-size: cover;
   margin: 33 20 0;
 }
 
-.name__goods {
+.card__title {
+  display: block;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -26,7 +27,8 @@
   height: 36px;
 }
 
-.code__product {
+.card__code {
+  display: block;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -36,17 +38,20 @@
   height: 14px;
 }
 
-.reviews {
+.card__review {
   display: flex;
   width: 166px;
   justify-content: space-between;
   margin: 17 17 0;
-  text-align: center;
+  align-items: center;
   height: 16px;
 }
 
-.reviews__stars {
-  display: block;
+.stars {
+  display: flex;
+}
+
+.stars__star {
   background-image: url(../images/star-active.svg);
   height: 16px;
   width: 16px;
@@ -54,15 +59,15 @@
   background-repeat: no-repeat;
 }
 
-.noactive {
-  background-image: url(../images/star.svg);
-}
-
-.reviews__stars:not(:first-child) {
+.stars__star:not(:first-child) {
   margin-left: 4px;
 }
 
-.reviews__review {
+.stars__star:nth-child(5) {
+  background-image: url(../images/star.svg);
+}
+
+.card__review-amount {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -72,15 +77,16 @@
   margin-left: 16px;
 }
 
-.price {
+.card__price {
   display: flex;
   margin: 24 17 0;
   justify-content: space-between;
+  align-items: center;
   width: 166px;
   height: 18px;
 }
 
-.price__world {
+.card__price-title {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -88,7 +94,7 @@
   color: rgba(97, 96, 112, 1);
 }
 
-.price__sum {
+.card__price-amount {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -96,14 +102,17 @@
   color: rgba(6, 11, 53, 1);
 }
 
-.button {
+.card__buy {
+  display: flex;
   width: 166px;
   height: 40px;
   margin: 16px;
   background-color: rgba(0, 172, 220, 1);
   border-radius: 5px;
   border: none;
-
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -113,7 +122,7 @@
   text-transform: uppercase;
 }
 
-.button:hover {
+.card__buy:hover {
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(0, 172, 220, 1);
   color: rgba(0, 172, 220, 1);
