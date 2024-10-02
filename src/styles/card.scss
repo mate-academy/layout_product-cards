@@ -1,16 +1,19 @@
+$text-color: #616070;
+$button-text-color: #00acdc;
+
 .card {
   display: flex;
   flex-direction: column;
   width: 200px;
   box-sizing: border-box;
-  background-color: #fff;
   border: solid 1px #f3f3f3;
   border-radius: 5px;
+  padding-inline: 16px;
 
   &__image {
     width: 160px;
     height: 134px;
-    margin: 32px 19px 0;
+    margin: 32px 3px 0;
   }
 
   &__title {
@@ -18,15 +21,16 @@
     font-weight: 500;
     line-height: 18px;
     color: #060b35;
-    margin: 40px 16px 0;
+    margin-top: 40px;
   }
 
   &__code {
+    box-sizing: border-box;
     line-height: 14px;
     font-weight: 400;
     font-size: 10px;
-    color: #616070;
-    margin: 4px 16px 0;
+    color: $text-color;
+    margin-top: 4px;
   }
 
   &__reviews {
@@ -34,7 +38,7 @@
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
-    margin: 16px 16px 0;
+    margin-top: 16px;
     align-items: center;
     height: 16px;
   }
@@ -51,22 +55,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 24px 16px 0;
+    margin-top: 24px;
     align-items: center;
-  }
 
-  &__price-text {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    color: #616070;
-  }
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $text-color;
+    }
 
-  &__price-value {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    color: #060b35;
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: #060b35;
+    }
   }
 
   &__button {
@@ -74,19 +78,19 @@
     box-sizing: border-box;
     width: 166px;
     height: 40px;
-    background-color: #00acdc;
+    background-color: $button-text-color;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    margin: 16px;
+    margin-top: 16px;
     border-radius: 5px;
     border: none;
   }
 
   &__button:hover {
-    border: solid 1px #00acdc;
+    border: solid 1px $button-text-color;
     background-color: #fff;
-    color: #00acdc;
+    color: $button-text-color;
   }
 }
