@@ -1,0 +1,90 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  background-color: $white-color;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+
+    background-size: contain;
+    background-image: url(../images/imac.jpeg);
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $main-text-color;
+    margin: 0;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 0;
+    color: $grey-text-color;
+  }
+
+  &__price {
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $grey-text-color;
+  }
+
+  &__price::after {
+    position: absolute;
+    content: '$2,199';
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $main-text-color;
+    right: 0;
+  }
+
+  &__buy {
+    display: flex;
+    margin: 16px 0;
+  }
+
+  &__bottom {
+    color: $white-color;
+    background-color: $blue-color;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    height: 40px;
+    width: 166px;
+    border-radius: 5px;
+  }
+}
+
+a[data-qa='hover']:hover {
+  box-sizing: border-box;
+  color: $blue-color;
+  border: 1px solid $blue-color;
+  border-radius: 5px;
+  background-color: $white-color;
+}
