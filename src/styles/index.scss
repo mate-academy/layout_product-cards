@@ -1,3 +1,151 @@
+@import './variables';
+
+$font-family: 'Roboto', sans-serif;
+$border-color: white;
+$border-radius: 5px;
+$star-size: 16px;
+$buy-button-font-size: 14px;
+$buy-button-font-weight: 700;
+$stars-count: 5;
+
+// Міксин для центрованих елементів
+@mixin flex-center($width, $height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+}
+
+// Міксин для стилю тексту
+@mixin text-style($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+html {
+  font-family: $font-family;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  height: 408px;
+  border: 1px solid $border-color;
+
+  &__image {
+    @include flex-center(160px, 134px);
+
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 19px;
+    margin-top: 32px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-left: $left-margin;
+    height: 36px;
+    width: 166px;
+
+    &-text {
+      @include text-style($text-size, 500, $text-color);
+
+      text-align: center;
+      line-height: 18px;
+    }
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin-left: $left-margin;
+    line-height: 14px;
+    color: $subtext-color;
+
+    &-text {
+      font-size: 10px;
+      font-weight: 400;
+      color: #616070;
+    }
+  }
+
+  &__rating {
+    @include flex-center(166px, 16px);
+
+    margin-left: $left-margin;
+    margin-top: 16px;
+
+    // Цикл для зірок
+    @for $i from 1 through $stars-count {
+      &-stars:nth-child(#{$i}) {
+        width: $star-size;
+        height: $star-size;
+        background-image: url(../images/star.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background-image: url(../images/star-active.svg);
+        }
+      }
+    }
+
+    &-text {
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+      margin-left: auto;
+      color: $text-color;
+    }
+  }
+
+  &__price {
+    @include flex-center(166px, 16px);
+
+    margin-top: 24px;
+    margin-left: $left-margin;
+
+    &-text {
+      @include text-style($text-size, 400, $subtext-color);
+    }
+
+    &-value {
+      font-size: 16px;
+      margin-left: auto;
+      color: $text-color;
+    }
+  }
+
+  &__buy {
+    @include flex-center(166px, 40px);
+
+    margin-top: 16px;
+    margin-left: $left-margin;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: $border-radius;
+
+    &-text {
+      @include text-style(
+        $buy-button-font-size,
+        $buy-button-font-weight,
+        white
+      );
+
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
 }
