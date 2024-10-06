@@ -1,24 +1,19 @@
 .card {
-  display: flex;
-  flex-direction: column;
   background: $color-bg-white;
   width: $card-width;
-  height: $card-height;
   border: 1px solid #f3f3f3;
   border-radius: $border-radius;
-  box-sizing: border-box;
   position: relative;
   padding: 16px;
 
   &__image {
-    display: block;
     background-image: url(../images/imac.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 160px;
     height: 134px;
-    margin: 16px 3px 20px;
+    margin: 16px 3px 40px;
   }
 
   &__title {
@@ -26,7 +21,7 @@
     font-weight: 500;
     font-size: $font-size-medium;
     line-height: 18px;
-    margin-top: 20px;
+    margin: 0;
   }
 
   &__product-code {
@@ -34,52 +29,55 @@
     font-weight: 400;
     line-height: $font-size-large;
     color: $color-text-light;
-    margin: 4px 0 16px;
+    margin-top: 4px;
+    margin-bottom: 0;
   }
 
   &__review {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 166px;
-    height: 16px;
-    margin-bottom: 24px;
+    width: 100%;
+    margin-top: 16px;
   }
 
   &__review-text {
     color: $color-text-dark;
     font-size: $font-size-small;
     text-align: right;
-    width: 53px;
     line-height: $font-size-large;
+    margin: 0;
   }
 
   &__price {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 166px;
-    height: 18px;
-    margin-bottom: 16px;
-  }
+    width: 100%;
+    height: 16px;
+    margin-top: 24px;
 
-  &__price-title {
-    color: $color-text-light;
-    font-size: $font-size-medium;
-    line-height: 16px;
-  }
+    &-title {
+      color: $color-text-light;
+      font-size: $font-size-medium;
+      line-height: 16px;
+      margin: 0;
+    }
 
-  &__price-numbers {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
+    &-numbers {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      margin: 0;
+    }
   }
 
   &__link {
+    display: block;
     text-transform: uppercase;
     background: $color-primary;
-    width: 164px;
-    height: 38px;
+    width: 100%;
+    height: 40px;
     border-radius: $border-radius;
     border: 1px solid $color-primary;
     color: $color-bg-white;
@@ -87,8 +85,9 @@
     font-size: $font-size-large;
     font-weight: 700;
     text-align: center;
-    line-height: 38px;
+    line-height: 40px;
     display: inline-block;
+    margin-top: 16px;
   }
 
   &__link:hover {
