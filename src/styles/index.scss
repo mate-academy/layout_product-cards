@@ -11,50 +11,75 @@
   font-weight: 400;
 
   &__image {
-    width: 160px;
-    height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-size: contain;
     margin-top: 33px;
+
+    &-photo {
+      width: 160px;
+      height: 134px;
+    }
   }
 
   &__model {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    text-align: left;
+    margin-top: 40px;
     width: 166px;
     height: 36px;
-    margin-top: 40px;
-    color: #060b35;
+
+    &-name {
+      font-size: 12px;
+      font-weight: 500;
+      padding-top: 0;
+      color: #060b35;
+    }
   }
 
   &__product-code {
     align-self: start;
     width: 98px;
     height: 14px;
-    padding-left: 17px;
-    padding-top: 4px;
-    font-size: 10px;
-    line-height: 14px;
-    color: #616070;
+    margin-top: 4px;
+
+    &-style {
+      white-space: nowrap;
+      padding-left: 17px;
+      font-size: 10px;
+      line-height: 14px;
+      color: #616070;
+    }
   }
 
   &__grade {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 166px;
     height: 16px;
     margin-top: 16px;
 
     &-stars {
-      background-image: url(../images/stars.png);
+      box-sizing: border-box;
       width: 96px;
       height: 16px;
+
+      &-list {
+        display: block;
+        list-style: none;
+        justify-content: space-between;
+        margin: 1px;
+
+        &:nth-child(n + 1) {
+          display: block;
+          background-image: url(../images/star.png);
+          width: 14px;
+          height: 14px;
+        }
+
+        &--5 {
+          display: none;
+        }
+      }
     }
 
     &-reviews {
-      align-self: center;
       width: 53px;
       height: 16px;
       line-height: 16px;
@@ -64,11 +89,31 @@
   }
 
   &__price {
-    background-image: url(../images/price.png);
-    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
     width: 166px;
     height: 18px;
     margin-top: 24px;
+
+    &-styleText {
+      display: block;
+      width: 31px;
+      height: 18px;
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0;
+      color: #616070;
+    }
+
+    &-stylePrice {
+      margin: 0;
+      width: 50px;
+      height: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: #060b35;
+    }
   }
 
   &__buy-button {
