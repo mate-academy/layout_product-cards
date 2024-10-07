@@ -1,0 +1,34 @@
+.stars {
+  display: flex;
+  height: 16px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &--4 {
+    gap: 4px;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+  }
+
+  &--1 &__star:nth-child(1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__review {
+    margin: 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    color: #060b35;
+  }
+}
