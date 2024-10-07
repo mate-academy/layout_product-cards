@@ -14,8 +14,9 @@
     margin-top: 33px;
 
     &-photo {
-      width: 160px;
-      height: 134px;
+      max-width: 160px;
+      max-height: 134px;
+      object-fit: contain;
     }
   }
 
@@ -23,20 +24,17 @@
     margin-top: 40px;
     width: 166px;
     height: 36px;
-
-    &-name {
-      font-size: 12px;
-      font-weight: 500;
-      padding-top: 0;
-      color: #060b35;
-    }
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 0;
+    color: #060b35;
   }
 
   &__product-code {
+    margin-top: 4px;
     align-self: start;
     width: 98px;
     height: 14px;
-    margin-top: 4px;
 
     &-style {
       white-space: nowrap;
@@ -44,6 +42,7 @@
       font-size: 10px;
       line-height: 14px;
       color: #616070;
+      margin: 0;
     }
   }
 
@@ -61,26 +60,24 @@
       height: 16px;
 
       &-list {
-        display: block;
         list-style: none;
         justify-content: space-between;
         margin: 1px;
 
         &:nth-child(n + 1) {
-          display: block;
           background-image: url(../images/star.png);
           width: 14px;
           height: 14px;
         }
 
-        &--5 {
-          display: none;
+        &-5 {
+          visibility: hidden;
         }
       }
     }
 
     &-reviews {
-      width: 53px;
+      min-width: 53px;
       height: 16px;
       line-height: 16px;
       font-size: 10px;
@@ -95,9 +92,9 @@
     height: 18px;
     margin-top: 24px;
 
-    &-styleText {
+    &-style {
       display: block;
-      width: 31px;
+      min-width: 31px;
       height: 18px;
       font-size: 12px;
       line-height: 18px;
@@ -105,7 +102,7 @@
       color: #616070;
     }
 
-    &-stylePrice {
+    &-amount-style {
       margin: 0;
       width: 50px;
       height: 18px;
