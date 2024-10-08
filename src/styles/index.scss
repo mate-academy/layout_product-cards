@@ -1,3 +1,107 @@
-body {
+// .scss
+$primary-color: #00acdc;
+$font-color: #060b35;
+$light-grey: #616070;
+$font-family: 'Roboto', sans-serif;
+
+html {
   margin: 0;
+  font-family: $font-family;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 200px;
+}
+
+.imac {
+  display: flex;
+  // padding-top: 32px;
+  justify-content: center;
+}
+
+.h2 {
+  color: $font-color;
+  text-align: left;
+  padding-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.product-code {
+  color: $light-grey;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &__revs {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+
+.price {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+
+  &__amount {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-right: 16px;
+  }
+
+  &__text {
+    color: $light-grey;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 16px;
+  }
+}
+
+.button {
+  text-align: center;
+  padding: 16px;
+
+  &__btn {
+    padding: 15px 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: 700;
+    line-height: 16px;
+    min-width: 166px;
+  }
+}
+
+.button__btn:hover {
+  background-color: white;
+  color: $primary-color;
+  border: 2px solid $primary-color;
 }
