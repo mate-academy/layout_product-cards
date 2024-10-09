@@ -11,6 +11,9 @@ h3 {
 }
 
 .cards {
+  --color: #00acdc;
+  --color-second: #fff;
+
   box-sizing: border-box;
   color: #060b35;
   width: 200px;
@@ -66,9 +69,9 @@ h3 {
   }
   &__button {
     box-sizing: border-box;
-    color: #fff;
+    color: var(--color-second);
     text-transform: uppercase;
-    background-color: #00acdc;
+    background-color: var(--color);
     border-radius: 5px;
     justify-content: center;
     align-items: center;
@@ -80,11 +83,11 @@ h3 {
     line-height: 16px;
     text-decoration: none;
     display: flex;
-    border: 1px solid #00acdc;
+    border: 1px solid var(--color);
 
     &:hover {
-      color: #00acdc;
-      background-color: #fff;
+      color: var(--color);
+      background-color: var(--color-second);
     }
   }
 }
@@ -99,7 +102,12 @@ h3 {
     background-position: center;
     margin-right: 4px;
   }
-  &--4 .stars__star:nth-child(-n + 4) {
+  &--0 .stars__star:nth-child(-n + 0),
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
     background-image: url(/src/images/star-active.svg);
   }
 }
