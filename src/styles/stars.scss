@@ -4,21 +4,23 @@
   padding: 0;
   margin: 0;
   line-height: 16px;
-
-  &__star {
-    box-sizing: border-box;
-    list-style-type: none;
-    background: url(../images/star.svg) no-repeat center center;
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  &__star:last-child {
-    margin-right: 0;
-  }
 }
 
-.star-active {
+.stars__star {
+  box-sizing: border-box;
+  list-style-type: none;
+  background: url(../images/star.svg) no-repeat center center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
   background: url(../images/star-active.svg) no-repeat center center;
 }
