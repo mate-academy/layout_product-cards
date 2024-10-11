@@ -1,8 +1,5 @@
 @import './units/variables';
-@import './blocks/button-buy';
 @import './blocks/stars';
-@import './blocks/card-positions';
-@import './blocks/price';
 
 html {
   font-family: Roboto, sans-serif;
@@ -20,6 +17,13 @@ body {
   border: 1px solid $cart-border-color;
   border-radius: 5px;
   background-color: $cart-bg-color;
+  padding: $card-padding;
+
+  &__product-img {
+    display: flex;
+    justify-content: center;
+    padding: $product-img-padding 0;
+  }
 
   &__img {
     width: 160px;
@@ -29,8 +33,8 @@ body {
   &__name {
     font-weight: 500;
     line-height: 18px;
-    margin: 0;
     color: $title-color;
+    margin: $product-img-padding + 8 0 4px;
   }
 
   &__code {
@@ -38,5 +42,47 @@ body {
     font-size: $font-S;
     margin: 0;
     line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0 $product-img-padding;
+
+    &-txt {
+      color: $gray-color;
+      margin: 0;
+    }
+
+    &-sum {
+      color: $title-color;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 18px;
+    }
+  }
+
+  &__button-buy {
+    background-color: $button-color;
+    text-decoration: none;
+    color: $cart-bg-color;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    width: 166px;
+    height: $button-buy-height;
+    border-radius: 5px;
+    text-align: center;
+    line-height: $button-buy-height;
+    border: 1px solid $button-color;
+    box-sizing: border-box;
+
+    &:hover {
+      color: $button-color;
+      background-color: $cart-bg-color;
+    }
   }
 }
