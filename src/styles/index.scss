@@ -1,3 +1,44 @@
+@import './units/variables';
+@import './blocks/button-buy';
+@import './blocks/stars';
+@import './blocks/card-positions';
+@import './blocks/price';
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
 body {
   margin: 0;
+  font-size: 12px;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid $cart-border-color;
+  border-radius: 5px;
+  background-color: $cart-bg-color;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    color: $title-color;
+  }
+
+  &__code {
+    color: $gray-color;
+    font-size: 10px;
+    margin: 0;
+    line-height: 14px;
+  }
 }
