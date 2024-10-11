@@ -2,17 +2,9 @@
 @import 'stars';
 @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   margin: 0;
   padding: 0;
-  font-family: $roboto-font;
-  color: $text-color;
-  font-weight: 400;
 }
 
 .products {
@@ -24,6 +16,9 @@ body {
   background-color: white;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  font-family: $roboto-font;
+  color: $text-color;
+  font-weight: 400;
 
   &__container {
     display: flex;
@@ -88,7 +83,6 @@ body {
     height: 134px;
     padding: 0;
     margin-top: 16px;
-    overflow: hidden;
     position: relative;
   }
 
@@ -109,19 +103,23 @@ body {
     border: 1px solid $accent-color;
     border-radius: 5px;
     margin-top: 16px;
+    transition: background-color 300ms linear;
 
     .button__link {
       text-align: center;
       text-decoration: none;
       color: white;
+      transition: background-color 300ms linear;
     }
 
     &:hover {
       background-color: white;
+      transition: background-color 300ms linear;
     }
 
     &:hover .button__link {
       color: $accent-color;
+      transition: background-color 300ms linear;
     }
   }
 }
