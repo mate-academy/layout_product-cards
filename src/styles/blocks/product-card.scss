@@ -1,0 +1,113 @@
+.product-card {
+  width: 200px;
+  height: 408px;
+  padding: 32px 16px 16px;
+
+  border-radius: 5px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__image {
+    padding-inline: 3px;
+
+    & img {
+      width: 100%;
+      height: 134px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-main;
+  }
+
+  &__code {
+    margin: 4px 0 16px;
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__star {
+    background-image: url(/src/images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url('/src/images/star-active.svg');
+  }
+
+  &__count {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    align-self: end;
+    color: $color-main;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+  }
+
+  &__label {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__value {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-main;
+  }
+
+  &__button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-button;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $color-button;
+      color: $color-button;
+    }
+  }
+}
