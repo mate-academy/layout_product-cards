@@ -1,3 +1,114 @@
-body {
+$text-color: #616070;
+$title-color: #060b35;
+$color-button: #00acdc;
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    color: $title-color;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    color: $text-color;
+    align-self: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 18px;
+    margin-bottom: 16px;
+
+    > .left {
+      font-size: 12px;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+
+  &__buy {
+    text-decoration: none;
+    background-color: $color-button;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+
+    &--active:hover {
+      border: 1px solid $color-button;
+      color: $color-button;
+      background-color: #fff;
+    }
+  }
+}
+
+.card__response {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+
+  .stars {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 16px;
+
+    > .stars__star {
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+    > .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  > .card__text {
+    display: flex;
+    align-items: flex-end;
+    font-size: 10px;
+    font-weight: 400;
+    color: $title-color;
+  }
 }
