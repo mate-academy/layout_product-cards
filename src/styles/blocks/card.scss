@@ -1,0 +1,97 @@
+.card {
+  background-color: $white-color;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  display: flex;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    justify-content: center;
+    height: 130px;
+    width: 160px;
+    margin: 32px 19px;
+  }
+
+  &__title {
+    @include text-main;
+
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include text-secondary;
+
+    font-family: "Roboto", serif;
+    font-style: normal;
+    margin: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    @include display-position;
+
+
+    &--review {
+      @include text-secondary;
+
+      font-family: "Roboto", serif;
+      font-style: normal;
+      margin: 16px;
+    }
+  }
+
+  &__price {
+    @include display-position;
+
+    margin: 0 16px;
+
+    &--title {
+      @include text-main;
+
+      font-family: "Roboto", serif;
+      font-weight: 400;
+      font-style: normal;
+      color: $secondary-text-color;
+    }
+
+    &--value {
+      font-family: "Roboto", serif;
+      font-size: 700;
+      font-weight: bold;
+      font-size: 16px;
+      color: $main-text-color;
+    }
+  }
+}
+
+
+
+.button {
+
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $button-color;
+  background-color: $button-color;
+  border-radius: 5px;
+  width: 160px;
+  height: 40px;
+  margin: 16px;
+}
+
+.button:hover {
+  background-color: $white-color;
+  color: $button-color;
+}
