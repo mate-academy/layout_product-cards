@@ -1,29 +1,30 @@
 .card {
   width: 200px;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $white-color;
+  padding-top: 32px;
 
   &__img {
     display: flex;
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px;
+    margin-inline: 19px;
   }
 
   &__content {
-    padding-inline: 16px;
+    padding: 40px 16px 16px;
   }
 
   &__title {
-    color: #060b35;
     font-size: 12px;
-    line-height: 18px;
     font-weight: 500;
+    line-height: 18px;
+    color: $main-color;
     margin-bottom: 4px;
   }
 
   &__code {
-    color: #616070;
+    color: $secondary-color;
     margin-bottom: 16px;
   }
 
@@ -44,13 +45,13 @@
 
     &-text {
       padding-block: 1px;
-      color: #616070;
+      color: $secondary-color;
       font-size: 12px;
       line-height: 18px;
     }
 
     &-count {
-      color: #060b35;
+      color: $main-color;
       font-size: 16px;
       line-height: 18px;
       font-weight: 700;
@@ -60,24 +61,25 @@
   &__button {
     width: 100%;
     text-align: center;
-    margin-bottom: 16px;
 
     &-link {
-      background-color: #00acdc;
-      border: 1px solid #00acdc;
-      border-radius: 5px;
       display: block;
+      padding-block: 12px;
       text-decoration: none;
       text-transform: uppercase;
-      color: #fff;
+
+      background-color: $button-color;
+      border: 1px solid $button-color;
+      border-radius: 5px;
+
       font-size: 14px;
       font-weight: 700;
       line-height: 16px;
-      padding-block: 12px;
+      color: #fff;
 
       &:hover {
-        background-color: #fff;
         color: #00acdc;
+        background-color: #fff;
       }
     }
   }
