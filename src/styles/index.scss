@@ -1,3 +1,133 @@
 body {
   margin: 0;
+
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+
+  &__photo {
+    width: 160px;
+    height: 134px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 32px;
+    padding-left: 3px;
+  }
+
+  &__tittle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
+
+    display: block;
+    width: 166px;
+
+    padding-top: 40px;
+    margin: 0;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    padding-top: 4px;
+    margin: 0;
+
+    display: block;
+    width: 98px;
+  }
+
+  &__rate {
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    &-stars {
+      display: flex;
+
+      &-star {
+        width: 16px;
+        height: 16px;
+
+        background: url(../images/star.svg) no-repeat center;
+        margin-right: 4px;
+      }
+
+      &-star:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+
+    &-text {
+      display: flex;
+      font-weight: 400;
+      font-size: 10px;
+
+      color: #060b35;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 166px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: right;
+      color: #060b35;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    margin-top: 16px;
+
+    background-color: #00acdc;
+    border-radius: 5px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+
+    &-text {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &:hover {
+      background-color: white;
+      border: 1px solid #00acdc;
+      color: #00acdc;
+      box-sizing: border-box;
+    }
+  }
 }
