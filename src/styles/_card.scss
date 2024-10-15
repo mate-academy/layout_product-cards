@@ -1,73 +1,71 @@
 @import './variables';
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   font-family: $font-family-main;
   box-sizing: border-box;
-  width: 199px;
-  padding: $padding-large $padding-medium $padding-medium;
-  border: 1px solid $border-color;
-  background-color: $secondary-color;
+  width: 200px;
+  padding: 16px;
 
   &__product-image {
-    display: block;
+    display: flex;
     width: 160px;
     height: 134px;
-    top: 33px;
-    left: 20px;
+    padding: 16px 3px 0;
   }
 
   &__product-name {
+    margin: 0;
     padding-top: 40px;
-    font-size: $font-size-medium;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: $text-color-primary;
   }
 
   &__product-code {
-    padding-top: $padding-small;
-    font-size: $font-size-small;
+    margin: 0;
+    padding-top: 4px;
+    font-size: 10px;
     font-weight: 400;
-    line-height: 140%;
+    line-height: 14px;
     color: $text-color-secondary;
   }
 
   &__product-rating {
-    padding-top: $padding-medium;
+    padding-top: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     &-reviews {
+      margin: 0;
       display: flex;
-      font-size: $font-size-small;
-      line-height: 140%;
+      font-size: 10px;
+      line-height: 14px;
       font-weight: 400;
       color: $text-color-primary;
-      text-align: right;
+      align-self: flex-end;
     }
   }
 
   &__product-price {
     padding-top: 24px;
-    padding-bottom: $padding-medium;
+    padding-bottom: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     line-height: 18px;
 
     &-text {
-      font-size: $font-size-medium;
+      margin: 0;
+      font-size: 12px;
       font-weight: 400;
       color: $text-color-secondary;
     }
 
     &-numbers {
-      font-size: $font-size-large;
+      margin: 0;
+      font-size: 16px;
       font-weight: 700;
       color: $text-color-primary;
     }
@@ -75,23 +73,24 @@
 
   &__product-buy-button {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 40px;
-    border-radius: $border-radius;
+    border-radius: 5px;
     background-color: $primary-color;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
     text-decoration: none;
-    text-align: center;
     color: $secondary-color;
 
     &:hover {
       background-color: $secondary-color;
-      border: 1px solid $primary-color;
       color: $primary-color;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $primary-color;
     }
   }
 }
