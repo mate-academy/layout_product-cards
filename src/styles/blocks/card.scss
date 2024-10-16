@@ -1,0 +1,98 @@
+.card {
+  font-family: Roboto, Arial, sans-serif;
+  color: $main-color;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    display: flex;
+    margin: 16px 3px 40px;
+
+    img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 40px; /* 16/14 */
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: $button-color;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+      border: 1px solid $button-color;
+    }
+  }
+}
+
+.description {
+  &__name {
+    @include regular-text;
+
+    font-weight: 500;
+  }
+
+  &__code {
+    color: $secondary-color;
+
+    @include small-text;
+  }
+}
+
+.rate {
+  &__reviews {
+    @include small-text;
+  }
+}
+
+.price {
+  &__text {
+    color: $secondary-color;
+
+    @include regular-text;
+  }
+
+  &__value {
+    font-size: 16px;
+    line-height: 112.5%; /* 18/16 */
+    font-weight: 700;
+  }
+}
