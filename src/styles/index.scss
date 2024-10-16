@@ -1,3 +1,121 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    height: 134px;
+    width: 160px;
+  }
+
+  &__name {
+    margin-top: 40px;
+
+    &-main {
+      margin: 0;
+      color: #060b35;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-product {
+      margin-top: 4px;
+      color: #616070;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__review {
+    width: 166px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-stars {
+      display: flex;
+
+      &-star {
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+      }
+
+      &-star:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+
+    &-review {
+      width: 53px;
+      color: #060b35;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+    }
+  }
+
+  &__price {
+    width: 166px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      color: #616070;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+    }
+
+    &-cost {
+      color: #060b35;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: right;
+    }
+  }
+
+  &__button {
+    margin-top: 16px;
+
+    background-color: #00acdc;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 166px;
+
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+    }
+  }
 }
