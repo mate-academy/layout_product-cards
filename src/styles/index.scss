@@ -1,3 +1,6 @@
+@import 'globals';
+@import 'stars';
+
 body {
   margin: 0;
 }
@@ -23,14 +26,14 @@ body {
     font-size: 12px;
     margin: 0;
     line-height: 18px;
-    color: #060b35;
+    color: $text_color;
   }
   &__code {
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 10px;
-    color: #616070;
+    color: $text2_color;
     margin-top: 5px;
     display: block;
   }
@@ -44,36 +47,21 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 18px;
-    color: #060b35;
+    color: $text_color;
   }
-  &__stars {
-    display: flex;
-    flex-direction: row;
-  }
-  &__star {
-    margin-right: 4px;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    background-image: url(/src/images/star.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    &:nth-child(-n + 4) {
-      background-image: url(/src/images/star-active.svg);
-    }
-  }
+
   &__price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 23px;
+    margin-top: 24px;
   }
   &__pricetext {
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #616070;
+    color: $text2_color;
     font-size: 12px;
   }
   &__pricevalue {
@@ -81,7 +69,7 @@ body {
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
-    color: #060b35;
+    color: $text_color;
   }
   &__button {
     font-family: Roboto, sans-serif;
@@ -91,14 +79,14 @@ body {
     height: 40px;
     width: 166px;
     color: white;
-    background-color: #00acdc;
+    background-color: $hover_color;
     border-color: transparent;
     border-radius: 5px;
-    margin-top: 16px;
+    margin-top: 15px;
     &:hover {
       background-color: white;
-      color: #00acdc;
-      border: #00acdc 1px solid;
+      color: $hover_color;
+      border: $hover_color 1px solid;
     }
   }
 }
