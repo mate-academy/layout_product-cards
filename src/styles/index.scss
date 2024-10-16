@@ -1,3 +1,104 @@
 body {
   margin: 0;
 }
+
+.card {
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 0 0 19px;
+  }
+  &__content {
+    margin: 36px 16px 16px;
+  }
+  &__title {
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0;
+    line-height: 18px;
+    color: #060b35;
+  }
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: #616070;
+    margin-top: 5px;
+    display: block;
+  }
+  &__review {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    color: #060b35;
+  }
+  &__stars {
+    display: flex;
+    flex-direction: row;
+  }
+  &__star {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    background-image: url(/src/images/star.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:nth-child(-n + 4) {
+      background-image: url(/src/images/star-active.svg);
+    }
+  }
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 23px;
+  }
+  &__pricetext {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #616070;
+    font-size: 12px;
+  }
+  &__pricevalue {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #060b35;
+  }
+  &__button {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    height: 40px;
+    width: 166px;
+    color: white;
+    background-color: #00acdc;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-top: 16px;
+    &:hover {
+      background-color: white;
+      color: #00acdc;
+      border: #00acdc 1px solid;
+    }
+  }
+}
