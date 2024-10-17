@@ -1,0 +1,89 @@
+.card {
+  width: 200px;
+
+  @include flex('', '');
+
+  flex-direction: column;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  background-color: $card-bg-color;
+
+  &__image {
+    margin: 32px 19px 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__product-title {
+    margin: 0 16px;
+    padding: 0;
+  }
+
+  &__title {
+    @include flex(center, '');
+    @include font(12px, 500, 18px);
+
+    margin: 0;
+    padding: 0;
+  }
+
+  &__code {
+    @include font(10px, 400, 14px);
+
+    color: $text-secondary-color;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  &__reviews {
+    @include flex(center, space-between);
+
+    height: 16px;
+    margin: 16px 16px 0;
+  }
+
+  &__reviw {
+    @include font(10px, 400, 14px);
+
+    display: flex;
+  }
+
+  &__price {
+    @include flex('center', space-between);
+
+    margin: 24px 16px 0;
+  }
+
+  &__price-text {
+    @include font(12px, 400, 18px);
+
+    color: $text-secondary-color;
+  }
+
+  &__price-value {
+    @include font(16px, 700, 18px);
+
+    color: $text-main-color;
+  }
+
+  &__button {
+    @include flex(center, '');
+    @include font(14px, 700, 16px);
+
+    width: 166px;
+    height: 40px;
+    margin: 16px;
+    padding: 12px 70px 12px 69px;
+    border-radius: 5px;
+    border: 1px solid $button-border-color;
+    background-color: $button-bg-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-white-color;
+
+    &:hover {
+      background-color: $text-white-color;
+      color: $button-bg-color;
+    }
+  }
+}
