@@ -1,0 +1,88 @@
+.card {
+  font-family: Roboto, Arial, sans-serif;
+  color: $main-color;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    margin: 16px 3px 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &-name {
+      @include regular-text;
+
+      font-weight: 500;
+    }
+
+    &-code {
+      @include small-text;
+
+      color: $secondary-color;
+    }
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &-reviews {
+      @include small-text;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      @include regular-text;
+
+      color: $secondary-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 112.5%;
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: $button-color;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+      border: 1px solid $button-color;
+    }
+  }
+}
