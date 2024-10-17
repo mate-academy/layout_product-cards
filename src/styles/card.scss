@@ -1,0 +1,74 @@
+.card {
+  width: $CardWidth;
+  padding: ($CardWidth / 100 * 16) ($CardWidth / 100 * 8) ($CardWidth / 100 * 8);
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: $CardWidth * 4 / 5;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: $FontMedium;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $ColorSecondary;
+    margin-bottom: 16px;
+  }
+
+  &__rank {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: $ColorMainAccent;
+  }
+
+  &__price {
+    font-size: 12px;
+    color: $ColorSecondary;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &-value {
+      font-size: 16px;
+      font-weight: $FontBold;
+      line-height: 18px;
+      color: $ColorMainAccent;
+    }
+  }
+
+  &__buy-button {
+    width: 100%;
+    background: $ColorBlueAccent;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: $FontBold;
+    line-height: 16px;
+    color: $White;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $White;
+      outline: 1px solid $ColorBlueAccent;
+      outline-offset: -1px;
+      color: $ColorBlueAccent;
+      cursor: pointer;
+    }
+  }
+}
