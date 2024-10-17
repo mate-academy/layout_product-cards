@@ -1,12 +1,12 @@
-@use '../_variables/variables.scss';
+@use '../_variables/variables' as *;
 
 .card {
   width: $CardWidth;
-  padding: ($CardWidth / 100 * 16) ($CardWidth / 100 * 8) ($CardWidth / 100 * 8);
+  padding: $CardWidth * 0.01 * 16 $CardWidth * 0.01 * 8 $CardWidth * 0.01 * 8;
   border: 1px solid #f3f3f3;
 
   &__image {
-    width: $CardWidth * 4 / 5;
+    width: $CardWidth * 0.8;
     height: 134px;
     margin: 0 auto 40px;
   }
@@ -27,7 +27,7 @@
   &__rank {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin-bottom: 24px;
   }
 
