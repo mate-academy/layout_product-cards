@@ -1,3 +1,91 @@
+@import 'globals';
+@import 'stars';
+
 body {
   margin: 0;
+}
+.card {
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 0 0 19px;
+  }
+  &__content {
+    margin: 36px 16px 16px;
+  }
+  &__title {
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0;
+    line-height: 18px;
+    color: $text_color;
+  }
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: $text2_color;
+    margin-top: 5px;
+    display: block;
+  }
+  &__review {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    color: $text_color;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  &__pricetext {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $text2_color;
+    font-size: 12px;
+  }
+  &__pricevalue {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: $text_color;
+  }
+  &__button {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    height: 40px;
+    width: 166px;
+    color: white;
+    background-color: $hover_color;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-top: 15px;
+    &:hover {
+      background-color: white;
+      color: $hover_color;
+      border: $hover_color 1px solid;
+    }
+  }
 }
