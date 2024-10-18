@@ -1,3 +1,112 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  &__imgBlock {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    & > img {
+      height: 134px;
+      width: 160px;
+    }
+  }
+
+  &__labelBlock {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: #060b35;
+  }
+  &__productCode {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+    color: #616070;
+  }
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    & > div {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00acdc;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+    }
+  }
+}
+
+.priceBlock {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__label {
+    color: #616070;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #060b35;
+  }
+}
+
+.stars-4 {
+  display: flex;
+  & > div {
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+    &:nth-last-child(n + 2) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
