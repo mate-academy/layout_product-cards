@@ -1,0 +1,81 @@
+.card {
+  width: 20rem;
+  margin: auto;
+  padding: 3.2rem 1.6rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include border(0.1rem, $color-card-bgc, 0.5rem);
+  &__image {
+    width: 16rem;
+    height: 13.4rem;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    margin-bottom: 4rem;
+
+    @extend %bgc-image;
+  }
+
+  &__name,
+  &__reviews,
+  &__price.value {
+    color: $color-txt-dark;
+  }
+
+  &__reviews,
+  &__prices {
+    @extend %flex-between-center;
+  }
+
+  &__code,
+  &__prices {
+    @include font(1rem, 400, 1.4rem);
+
+    margin-bottom: 1.6rem;
+  }
+
+  &__name {
+    @include font(1.2rem, 500, 1.8rem);
+
+    margin-bottom: 0.4rem;
+  }
+
+  &__code {
+    color: $color-txt-semi-dark;
+  }
+
+  &__reviews {
+    margin-bottom: 2.4rem;
+  }
+
+  &__review {
+    @include font(1rem, 400, 1.4rem);
+  }
+
+  &__price {
+    &.text {
+      @include font(1.2rem, 400, 1.8rem);
+
+      color: $color-txt-semi-dark;
+    }
+
+    &.value {
+      @include font(1.6rem, 700, 1.8rem);
+    }
+  }
+  &__button {
+    background-color: $color-button-bgc;
+    color: $color-txt-light;
+    text-transform: uppercase;
+    padding: 1.1rem 0;
+
+    @include border(0.1rem, $color-button-bgc, 0.5rem);
+    @include font(1.4rem, 700, 1.6rem);
+
+    &:hover {
+      color: $color-button-bgc;
+      background-color: transparent;
+    }
+  }
+}
