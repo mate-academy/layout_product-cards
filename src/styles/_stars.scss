@@ -1,0 +1,21 @@
+@import 'variables';
+
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+
+  &-star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat url(/src/images/star.svg);
+    background-position: center;
+  }
+
+  &--active-4 {
+    .card__stars-star:nth-child(-n + 4) {
+      margin-right: 4px;
+      background-image: url(/src/images/star-active.svg);
+    }
+  }
+}
