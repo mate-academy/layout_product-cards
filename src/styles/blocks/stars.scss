@@ -1,0 +1,26 @@
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 12px;
+    width: 12px;
+
+    margin: 2px;
+  }
+
+  &__star:not(:last-child) {
+    /* this margin is used instead `gap` property */
+    margin-right: 6px;
+  }
+}
+
+@for $active-stars from 1 to 6 {
+  .stars--#{$active-stars} .stars__star:nth-child(-n + #{$active-stars}) {
+    background-image: url('../images/star-active.svg');
+  }
+}
