@@ -1,0 +1,104 @@
+@import 'stars';
+@import 'variables';
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: $main-black;
+}
+
+.card {
+  padding: 16px;
+  padding-top: 32px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__image {
+    box-sizing: border-box;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $main-gray;
+    margin: 0;
+    margin-bottom: 16px;
+    flex: 1 1 100%;
+  }
+
+  &__actions {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    font-size: 12px;
+    color: $main-gray;
+  }
+
+  &__price-num {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__button {
+    background-color: $blue-accent;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    border: 1px solid $blue-accent;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: #fff;
+      color: $blue-accent;
+    }
+  }
+}
