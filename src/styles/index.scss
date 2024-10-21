@@ -1,3 +1,115 @@
+@import './variebles';
+@import './mixins';
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__name {
+    @include font-fam('Roboto, sans-serif;', 12px, 500, 18px);
+
+    margin: 0 0 4px;
+    color: $main-text-color;
+  }
+
+  &__code {
+    @include font-fam('Roboto, sans-serif;', 10px, 400, 14px);
+
+    margin: 0 0 16px;
+    color: $secondary-text-color;
+  }
+
+  &__button {
+    @include font-fam('Roboto, sans-serif;', 14px, 700, 16px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    background-color: $blue-color;
+    border-radius: 5px;
+    color: $white-color;
+  }
+
+  &__button:hover {
+    background-color: $white-color;
+    color: $blue-color;
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+  }
+
+  .price-text {
+    @include font-fam('Roboto, sans-serif;', 12px, 400, 18px);
+
+    text-align: left;
+    color: $secondary-text-color;
+    margin: 0;
+  }
+
+  .price-value {
+    @include font-fam('Roboto, sans-serif;', 16px, 700, 18px);
+
+    text-align: right;
+    color: $main-text-color;
+    margin: 0;
+  }
+
+  &__reviews {
+    margin-bottom: 24px;
+    align-items: flex-end;
+    height: 16px;
+  }
+
+  .reviews-text {
+    @include font-fam('Roboto, sans-serif', 10px, 400, 14px);
+
+    text-align: right;
+    color: $main-text-color;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  background-position: center;
+  background-image: url('../images/star.svg');
+}
+
+.stars__star:not(:first-child) {
+  margin-left: 4px;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
 }
