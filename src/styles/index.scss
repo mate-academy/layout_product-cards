@@ -1,3 +1,131 @@
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  flex-direction: column;
+  width: 200px;
+  display: flex;
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+  margin: 32px auto 0;
+  display: flex;
+}
+
+.product-name {
+  color: #060b35;
+  padding-inline: 16px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+}
+
+.product-code {
+  color: #616070;
+  margin-top: 4px;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  display: flex;
+}
+
+.review {
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+  padding-inline: 16px;
+  display: flex;
+}
+
+.review__stars {
+  align-items: center;
+  display: flex;
+}
+
+.review__stars-star {
+  background-image: url(/src/images/star.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+}
+
+.review__stars-star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.review__stars :nth-child(-n + 4) {
+  background-image: url(/src/images/star-active.svg);
+}
+
+.review__number {
+  color: #060b35;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.price {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-inline: 16px;
+  line-height: 18px;
+  display: flex;
+}
+
+.price__title {
+  color: #616070;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.price__cost {
+  color: #060b35;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.buy-button {
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  align-items: center;
+  height: 39px;
+  margin: 16px;
+  display: flex;
+}
+
+.buy-button__link {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.buy-button:hover {
+  background-color: #fff;
+}
+
+.buy-button:hover .buy-button__link {
+  color: #00acdc;
 }
