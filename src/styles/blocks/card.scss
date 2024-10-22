@@ -90,4 +90,16 @@
       color: #00acdc;
     }
   }
+
+  &__stars {
+    @for $i from 1 through 5 {
+      &--#{$i} {
+        @for $k from 1 through $i {
+          .stars__star:nth-child(#{$k}) {
+            background: url(../images/star-active.svg) center no-repeat;
+          }
+        }
+      }
+    }
+  }
 }
