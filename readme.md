@@ -22,7 +22,7 @@ In this task, you can directly link *.scss files to HTML. This is possible becau
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<tkacuk2291>.github.io/layout_product-cards/)
+- [DEMO LINK](https://tkachuk2291.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://<tkacuk2291>.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
