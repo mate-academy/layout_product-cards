@@ -16,7 +16,7 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 - Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
 - Find the required font on [google fonts](https://fonts.google.com/) and use.
 
-In this task, you can directly link *.scss files to HTML. This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle the source code.
+*Note*: In this task, you can directly link `*.scss` files in HTML `<link>` tags. This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle the source code.
 
 ## Checklist
 
