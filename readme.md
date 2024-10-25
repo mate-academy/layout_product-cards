@@ -14,7 +14,7 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 - add `data-qa="hover"` attribute to the link `BUY`
 - `background-image: url()` should be relative to the `index.scss`. So should start with `../images`.
 - Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
-- Find the required font on [google fonts](https://fonts.google.com/) and use.
+- Find the required font on  [google fonts](https://fonts.google.com/) and use.
 
 In this task, you can directly link *.scss files to HTML. This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle the source code.
 
@@ -22,8 +22,8 @@ In this task, you can directly link *.scss files to HTML. This is possible becau
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://MarcinMaka37.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://MarcinMaka37.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 

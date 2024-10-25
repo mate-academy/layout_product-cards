@@ -1,0 +1,42 @@
+@use '../utils/variables' as *;
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--4 {
+    margin-left: $card-margin;
+    margin-top: 16px;
+    margin-right: $card-margin;
+  }
+
+  &__blok {
+    display: flex;
+  }
+
+  &__not_active {
+    background-repeat: no-repeat;
+    margin: 0 2px;
+    background-position: left;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+  }
+
+  &__active {
+    background-repeat: no-repeat;
+    margin: 0 2px;
+    background-position: left;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__review {
+    font-family: $main-font;
+    font-size: 10px;
+    font-weight: 400;
+    color: #060b35;
+  }
+}
