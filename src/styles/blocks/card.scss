@@ -1,0 +1,123 @@
+// #region card
+
+.card {
+  background-color: #fff;
+  width: 198px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    display: flex;
+    background-image: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    background-repeat: no-repeat;
+    background-size: 160px 134px;
+    margin-top: 32px;
+  }
+
+  &__text-conteiner {
+    align-self: flex-start;
+    margin: 0 16px;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    padding-top: 40px;
+    color: $main-text-color;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+    color: #616070;
+    margin-top: 4px;
+  }
+
+  &__reviwe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    &-qtty {
+      font-size: 10px;
+      line-height: 14px;
+      color: $main-text-color;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $main-text-color;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #00acdc;
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 16px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  &__button:hover {
+    background-color: transparent;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
+}
+
+// #endregion
+
+// #region stars
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+// #endregion
