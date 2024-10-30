@@ -1,3 +1,110 @@
+$primary-color: #00acdc;
+$secondary-color: #616070;
+$text-color: #060b35;
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.product-card {
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 32px 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 168px;
+  height: 387px;
+
+  .product-img {
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .name-of-product {
+    color: $text-color;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+
+  .product-code {
+    margin-top: 4px;
+    width: 100%;
+    text-align: left;
+    color: $secondary-color;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .star-stars {
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+  }
+
+  .star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  .product-reviews {
+    color: $text-color;
+    display: inline;
+    position: absolute;
+    line-height: 14px;
+    font-size: 10px;
+    margin-left: 17px;
+    font-weight: 400;
+  }
+
+  .product-price {
+    line-height: 18px;
+    font-size: 12px;
+    margin-top: 24px;
+    color: $secondary-color;
+  }
+
+  .price {
+    color: $text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    display: inline;
+    margin-left: 55px;
+  }
+}
+
+.card-button {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  background-color: #00acdc;
+  border-radius: 5px;
+  margin-top: 16px;
+  width: 100%;
+  height: 40px;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid #00acdc;
+    color: #00acdc;
+  }
 }

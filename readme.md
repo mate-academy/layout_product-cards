@@ -1,6 +1,6 @@
 # Product cards
 
-Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev).
+Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](https://www.figma.com/design/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325-2287&node-type=canvas&t=nyE5dvKtDN5hCazA-0).
 
 > Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
