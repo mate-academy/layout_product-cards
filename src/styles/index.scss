@@ -13,6 +13,7 @@ $color-button: #00acdc;
 }
 
 .card {
+  box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
@@ -22,12 +23,14 @@ $color-button: #00acdc;
   align-items: center;
 
   &__image {
-    width: 100%;
+    width: 160px;
     height: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
   }
 
   &__title {
+    box-sizing: border-box;
+    font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     color: $title-color;
@@ -35,6 +38,8 @@ $color-button: #00acdc;
   }
 
   &__subtitle {
+    box-sizing: border-box;
+    margin: 0;
     font-size: 10px;
     font-weight: 400;
     color: $text-color;
@@ -43,6 +48,7 @@ $color-button: #00acdc;
   }
 
   &__response {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,6 +58,7 @@ $color-button: #00acdc;
     .stars {
       display: flex;
       justify-content: flex-start;
+      gap: 4px;
       width: 100%;
       height: 16px;
 
@@ -61,7 +68,6 @@ $color-button: #00acdc;
         background-position: center;
         width: 16px;
         height: 16px;
-        gap: 4px;
 
         &:nth-child(-n + 4) {
           background-image: url('../images/star-active.svg');
