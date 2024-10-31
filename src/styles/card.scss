@@ -1,0 +1,75 @@
+@import '../styles/variables.scss';
+
+
+.card {
+  width: 198px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 32px 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 387px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__name {
+    color: $text-color;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+
+  &__code {
+    margin-top: 4px;
+    width: 100%;
+    text-align: left;
+    color: $secondary-color;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    line-height: 18px;
+    font-size: 12px;
+    margin-top: 24px;
+    color: $secondary-color;
+
+    &--value {
+      color: $text-color;
+      font-weight: 700;
+      font-size: 16px;
+      display: inline;
+      margin-left: 55px;
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    background-color: $primary-color;
+    border-radius: 5px;
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: white;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+}
