@@ -9,10 +9,68 @@
     <title>Product cards</title>
     <link
       rel="stylesheet"
-      href="./styles/index.scss"
+      href="./styles/style.scss"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="product"
+      data-qa="card"
+    >
+      <div class="product__picture product__picture--modifier"></div>
+
+      <div class="product__name product__name--modifier">
+        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+      </div>
+
+      <div class="product__code product__code--modifier">
+        Product code: 195434
+      </div>
+
+      <div class="product__rating">
+        <div class="product__rating-stars">
+          <div class="product__rating-stars-star"></div>
+          <div class="product__rating-stars-star"></div>
+          <div class="product__rating-stars-star"></div>
+          <div class="product__rating-stars-star"></div>
+          <div class="product__rating-stars-star"></div>
+        </div>
+        <div class="product__rating-reviews">Reviews: 5</div>
+      </div>
+
+      <div class="product__price product__price--modifier">
+        <div class="product__price-text">Price:</div>
+        <div class="product__price-digital">$2,199</div>
+      </div>
+      <div
+        class="product__button"
+        data-qa="hover"
+      >
+        <label for="buy">
+          <a href="#">
+            <input
+              type="button"
+              value="buy"
+              id="buy"
+              name="buy"
+              class="product__button-buy"
+            />
+          </a>
+        </label>
+      </div>
+    </div>
   </body>
 </html>
