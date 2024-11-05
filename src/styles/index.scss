@@ -1,7 +1,6 @@
-body {
-  margin: 0;
-  background: rgb(199, 199, 199);
-}
+@import 'var.scss';
+@import 'card.scss';
+@import 'stars.scss';
 
 * {
   box-sizing: border-box;
@@ -14,31 +13,6 @@ body {
   display: flex;
 }
 
-.card {
-  padding: 32px 16px;
-  border: 1px solid rgb(243, 243, 243);
-  border-radius: 5px;
-  background: rgb(255, 255, 255);
-  width: 200px;
-  height: 408px;
-  &__image {
-    width: 160px;
-    height: 134px;
-  }
-}
-
-div {
-  display: block;
-  unicode-bidi: isolate;
-}
-
-.card__title {
-  color: rgb(6, 11, 53);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  padding-top: 40px;
-}
 
 h2 {
   display: block;
@@ -50,13 +24,6 @@ h2 {
   unicode-bidi: isolate;
 }
 
-.card__code {
-  color: rgb(97, 96, 112);
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  padding-top: 4px;
-}
 
 p {
   display: block;
@@ -65,69 +32,8 @@ p {
   unicode-bidi: isolate;
 }
 
-.card__review {
-  padding-top: 16px;
-  display: flex;
-  align-items: center;
-}
 
-.stars {
-  display: flex;
 
-  &__star {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-    background: url('../images/star-active.svg') no-repeat center center/contain;
 
-    &:last-child {
-      margin-right: 0;
-      background: url('../images/star.svg') no-repeat center center/contain;
-    }
-  }
-}
 
-.card__review-text {
-  font-size: 10px;
-  margin-left: 17px;
-}
 
-.card__price-text {
-  color: rgb(97, 96, 112);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0%;
-  text-align: left;
-}
-
-.card__price {
-  color: rgb(6, 11, 53);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0%;
-  text-align: right;
-}
-
-.card__value {
-  justify-content: space-between;
-  margin-bottom: 16px;
-  display: flex;
-}
-
-.card__button {
-  color: #fff;
-  background-color: #00acdc;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  display: flex;
-  margin-top: 16px;
-}
