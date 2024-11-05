@@ -1,0 +1,17 @@
+@use 'sass:string';
+
+$button-color: #00acdc;
+$main-text-color: #060b35;
+$second-text-color: #616070;
+$price-in-grn: 69999;
+
+@function converter($sum) {
+  $factor: 1000;
+
+  @return round(($sum / 31832.19) * $factor) / $factor;
+}
+
+$price-in-dollars: converter($price-in-grn);
+$result-first-part: string.slice($price-in-dollars + ' ', 0, 1) + ',';
+$result-second-part: string.slice($price-in-dollars + ' ', 3);
+$price-in-string: $result-first-part + $result-second-part;
