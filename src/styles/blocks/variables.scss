@@ -1,4 +1,5 @@
 @use 'sass:string';
+@use 'sass:math';
 
 $button-color: #00acdc;
 $main-text-color: #060b35;
@@ -8,7 +9,7 @@ $price-in-grn: 69999;
 @function converter($sum) {
   $factor: 1000;
 
-  @return round(($sum / 31832.19) * $factor) / $factor;
+  @return math.div(round(($sum / 31832.19) * $factor), $factor);
 }
 
 $price-in-dollars: converter($price-in-grn);
