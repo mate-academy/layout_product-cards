@@ -11,7 +11,6 @@
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   width: 200px;
   border: 1px solid rgba(243, 243, 243, 1);
@@ -23,6 +22,7 @@
   &__picture {
     width: 160px;
     height: 134px;
+
     margin-top: $margin-top;
   }
 
@@ -32,8 +32,6 @@
     line-height: $bigger-line-height;
     color: rgba(6, 11, 53, 1);
 
-    box-sizing: border-box;
-    width: $paragraph-width;
     margin-top: 40px;
   }
 
@@ -43,9 +41,7 @@
     line-height: $smaller-line-height;
     color: rgba(97, 96, 112, 1);
 
-    box-sizing: border-box;
     width: $paragraph-width;
-    text-align: left;
     margin-top: 4px;
   }
 
@@ -61,9 +57,6 @@
     font-size: 10px;
     line-height: $smaller-line-height;
     color: rgba(6, 11, 53, 1);
-
-    clear: both;
-    display: inline-block;
     white-space: nowrap;
   }
 
@@ -74,14 +67,14 @@
     margin-top: 24px;
   }
 
-  &__item-price p:first-child {
+  &__item-price--word {
     font-weight: $smaller-font-weight;
     font-size: 12px;
     line-height: $bigger-line-height;
     color: rgba(97, 96, 112, 1);
   }
 
-  &__item-price p:last-child {
+  &__item-price--amount {
     font-weight: $bigger-font-weight;
     font-size: 16px;
     line-height: $medium-line-height;
@@ -94,21 +87,18 @@
     width: $paragraph-width;
 
     border-radius: 5px;
-    background-color: rgba(0, 172, 220, 1);
-    border: 1px solid rgba(0, 172, 220, 1);
-
-    box-sizing: border-box;
+    background-color: $blue-color;
+    border: 1px solid $blue-color;
 
     font-family: Roboto, sans-serif;
     font-weight: $bigger-font-weight;
     font-size: 14px;
     line-height: $medium-line-height;
-    text-align: center;
     color: white;
 
     &:hover {
-      background-color: rgba(243, 243, 243, 1);
-      color: rgba(0, 172, 220, 1);
+      background-color: white;
+      color: $blue-color;
     }
   }
 }
