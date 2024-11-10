@@ -1,0 +1,92 @@
+.card {
+  padding-block: 32px 16px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  align-items: center;
+
+  &__product {
+    display: flex;
+    &-image {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__details {
+    margin: 40px 0 0;
+    &-name {
+      width: 166px;
+      font-size: 12px;
+      color: $primary-color-text-card;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    &-code {
+      margin: 4px 0 0;
+      font-size: 10px;
+      color: $secondary-color-text-card;
+      font-weight: 400;
+    }
+
+    &-price {
+      margin: 24px 0 0;
+      font-size: 12px;
+      color: $secondary-color-text-card;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        font-weight: 700;
+        font-size: 16px;
+        color: $primary-color-text-card;
+      }
+    }
+  }
+
+  &__reviews {
+    margin: 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-stars {
+      display: flex;
+      align-items: center;
+    }
+
+    &-count {
+      font-size: 10px;
+      color: $primary-color-text-card;
+      font-weight: 400;
+    }
+  }
+
+  &__button-buy {
+    margin: 16px 0 0;
+    width: 166px;
+    height: 40px;
+    background-color: $primary-button-color;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &[data-qa='hover']:hover {
+      color: $primary-button-color;
+      background-color: #fff;
+      border: 1px solid $primary-button-color;
+    }
+  }
+}
