@@ -16,13 +16,13 @@ body {
   border-radius: 5px;
 }
 
-.img {
+.card__img {
   width: 160px;
   height: 134px;
   margin: 32px auto 40px;
 }
 
-.text {
+.card__title {
   font-weight: 500;
   font-size: 12px;
   height: 36px;
@@ -31,7 +31,7 @@ body {
   line-height: 18px;
 }
 
-.description {
+.card__description {
   font-weight: 400;
   font-size: 10px;
   color: #616070;
@@ -40,10 +40,15 @@ body {
   width: 98px;
 }
 
-.stars {
+.card__reviews-block {
   display: flex;
-  width: 166px;
+  height: 16px;
   margin: 16px 0 0 16px;
+}
+
+.stars {
+  height: 16px;
+  display: flex;
 }
 
 .stars__stars {
@@ -63,43 +68,41 @@ body {
   background-image: url(../images/star-active.svg);
 }
 
-.reviews {
-  margin: 0;
-  color: #060b35;
+.card__reviews {
   display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 53px;
+  height: 16px;
+  line-height: 16px;
+  color: #060b35;
   font-weight: 400;
   font-size: 10px;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-left: 17px;
-  width: 53px;
+  margin: 0 0 0 17px;
 }
 
-.price {
-  display: flex;
-  white-space: nowrap;
-  margin: 24px 0 0 16px;
-}
-
-.price__text {
+.card__price-text {
   width: 31px;
-  margin: 0;
+  margin: 24px 0 0 16px;
   color: #616070;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
 }
 
-.price__tag {
+.card__price-tag {
+  left: 132px;
+  top: 316px;
+  position: absolute;
   height: 18px;
+  width: 50px;
   margin: 0;
   color: #060b35;
   font-weight: 700;
   font-size: 16px;
-  margin-left: 85px;
 }
 
-.link {
+.card__link {
   display: flex;
   font-weight: 700;
   margin: 16px;
@@ -114,7 +117,7 @@ body {
   justify-content: center;
 }
 
-.link:hover {
+.card__link:hover {
   box-sizing: border-box;
   color: #00acdc;
   border: 1px #00acdc solid;
