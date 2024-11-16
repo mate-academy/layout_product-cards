@@ -1,0 +1,129 @@
+$product__pading: 32px;
+$product__color--text: #060b35;
+$product__color--button: #00acdc;
+$product__color--description: #616070;
+$product__color--white: #fff;
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $product__color--text;
+}
+
+.product {
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+
+  &__content--paddings {
+    padding-bottom: 24px;
+  }
+
+  &__card {
+    padding: 0 19px;
+
+    &--padings {
+      padding-top: $product__pading;
+    }
+  }
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 160px 134px;
+    height: 134px;
+
+    &--paddings {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+
+    &--paddings {
+      padding: 0 16px;
+      padding-bottom: ($product__pading / 2);
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+
+    &--paddings {
+      padding-bottom: ($product__pading / 8);
+    }
+  }
+
+  &__description {
+    display: flex;
+    color: $product__color--description;
+
+    &--paddings {
+      padding-bottom: ($product__pading / 2);
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    &--paddings {
+      padding-bottom: ($product__pading / 2);
+    }
+  }
+
+  &__key {
+    color: $product__color--description;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__btn {
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+
+    padding-inline: 0;
+
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: $product__color--white;
+    background-color: $product__color--button;
+
+    &:hover {
+      color: $product__color--button;
+      background-color: $product__color--white;
+      border: 1px solid $product__color--button;
+    }
+  }
+}
