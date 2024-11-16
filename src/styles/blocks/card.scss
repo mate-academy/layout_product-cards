@@ -1,0 +1,106 @@
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  width: 200px;
+  height: 408px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid $color-card-border;
+}
+
+.card__image {
+  background-image: url(../images/imac.jpeg);
+  margin-inline: auto;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 134px;
+  background-position: center;
+  background-size: contain;
+}
+
+.card__info {
+  @include roboto-medium-500;
+
+  margin-top: 40px;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+  color: $color-main;
+}
+
+.card__code {
+  @include roboto-regular-400;
+
+  margin-top: 4px;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  color: $color-secondary;
+}
+
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: center;
+
+  &-stars {
+    @include roboto-regular-400;
+
+    font-size: $font-size-small;
+    color: $color-main;
+  }
+
+  &-count {
+    @include roboto-regular-400;
+
+    font-size: $font-size-small;
+    color: $color-main;
+  }
+}
+
+.card__price {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-title {
+    @include roboto-regular-400;
+
+    font-size: $font-size-medium;
+    color: $color-secondary;
+  }
+
+  &-value {
+    @include roboto-bold-700;
+
+    color: $color-main;
+  }
+}
+
+.card__buy-button {
+  margin-top: 16px;
+  background-color: $color-button-background;
+  border: hidden;
+  height: 40px;
+  border-radius: 5px;
+
+  &:hover {
+    border: 1px solid $color-button-background;
+    background-color: $color-button-background-hoover;
+    color: $color-button-test-hoover;
+  }
+
+  &:hover a {
+    color: $color-button-test-hoover;
+  }
+
+  &-link {
+    color: $color-button-text;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+  }
+}
