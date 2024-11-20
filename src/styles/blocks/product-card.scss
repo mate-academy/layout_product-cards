@@ -1,40 +1,65 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
-  border: solid 1px #f3f3f3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 16px;
+  display: flex;
 
   &__image {
     width: 160px;
     height: 134px;
-    margin: 0 19px;
-    margin-top: 32px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 16px;
   }
 
   &__title {
     display: flex;
     font-weight: 500;
     font-size: 12px;
-    margin: 0 16px;
     margin-top: 40px;
+    margin-bottom: 0;
     line-height: 18px;
     color: #060b35;
   }
 
   &__product-code {
+    width: 98px;
+    height: 14px;
     font-weight: 400;
     font-size: 10px;
-    margin: 4px 84px 16px 16px;
+    margin-right: 68px;
+    margin-top: 4px;
+    margin-bottom: 16px;
     line-height: 14px;
     color: #616070;
   }
 
-  &__price {
+  &__rating {
+    width: 100%;
     display: flex;
-    margin: 24px 16px 0;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0;
+    color: #060b35;
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__lable {
@@ -42,12 +67,11 @@
     font-size: 12px;
     line-height: 18px;
     color: #616070;
-    margin-right: 85px;
   }
 
   &__price-tag {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 18px;
     color: #060b35;
   }
@@ -56,13 +80,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 166px;
+    width: 100%;
     height: 40px;
+    line-height: 16px;
     border-radius: 5px;
-    margin: 16px;
+    margin-top: 16px;
     background-color: #00acdc;
     font-weight: 700;
     font-size: 14px;
+    border: 1px solid #00acdc;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -70,8 +96,6 @@
 
   &__button:hover {
     background-color: #fff;
-    border: solid 1px #00acdc;
-    border-radius: 5px;
     color: #00acdc;
   }
 }
