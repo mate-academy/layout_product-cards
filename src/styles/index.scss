@@ -59,12 +59,14 @@ body {
   }
 }
 
-.stars {
-  height: 16px;
+.review {
+  display: flex;
   align-items: center;
-  list-style-type: none;
 
-  &--position {
+  &__stars {
+    height: 16px;
+    align-items: center;
+    list-style-type: none;
     box-sizing: border-box;
     display: flex;
 
@@ -97,10 +99,8 @@ body {
     line-height: 14px;
     font-weight: 400;
     color: #060b35;
-
-    &--position {
-      padding-left: 17px;
-    }
+    display: block;
+    padding-left: 17px;
   }
 }
 
@@ -141,13 +141,10 @@ body {
   width: 166px;
   border-radius: 5px;
   height: 40px;
-
-  &--position {
-    display: inline-block;
-    align-content: center;
-    text-align: center;
-    margin-left: 16px;
-  }
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 16px;
 
   &:hover {
     background-color: #fff;
