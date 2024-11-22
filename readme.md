@@ -6,15 +6,15 @@ Create a page with product card using `flexbox`, `BEM` and `SCSS` based on [this
 
 ### Requirements:
 
-- reset the browser's default margins
-- card width is `200px` including border
+- reset the browser's default margins <Done.>
+- card width is `200px` including border <Done.>
 - use images from [src/images](src/images)
 - change link styles on `:hover`
-- add `data-qa="card"` attribute to the card block
-- add `data-qa="hover"` attribute to the link `BUY`
+- add `data-qa="card"` attribute to the card block <Done.>
+- add `data-qa="hover"` attribute to the link `BUY` <Done.>
 - `background-image: url()` should be relative to the `index.scss`. So it should start with `../images`.
-- Rewrite the `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
-- Find the required font on [google fonts](https://fonts.google.com/) and use.
+- Rewrite the `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it <Done.>
+- Find the required font on [google fonts](https://fonts.google.com/) and use. <Done.>
 
 *Important note*: In this task, you are allowed to link `*.scss` files directly in HTML `<link>` tags using `href` attribute.
 This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle your solution's source code.
@@ -23,8 +23,8 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://GabrielNunes-383.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://GabrielNunes-383.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
