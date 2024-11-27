@@ -1,3 +1,119 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(243, 243, 243, 1);
+  box-sizing: border-box;
+
+  &__photo {
+    background-image: url(..//images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto 40px;
+  }
+
+  &__tittle {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 40px;
+    margin-bottom: auto;
+    color: rgba(6, 11, 53, 1);
+    font-weight: 500;
+  }
+
+  &__prodact-code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+    margin-top: 4px;
+    margin-bottom: auto;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-text {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 24px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__price-value {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    align-items: flex-end;
+    color: rgba(6, 11, 53, 1);
+    margin-top: 24px;
+  }
+
+  &__button-buy {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background: rgba(0, 172, 220, 1);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__button-buy:hover {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 172, 220, 1);
+    border: 1px solid rgba(0, 172, 220, 1);
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    border-radius: 0.5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+    margin-right: 4px;
+    margin-top: 16px;
+
+    &:nth-last-child(n + 2) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__reviews {
+    line-height: 14px;
+    font-weight: 400;
+    padding-left: 17px;
+    font-size: 10px;
+    margin-top: 16px;
+    font-family: Roboto, sans-serif;
+    height: 16px;
+    color: rgba(6, 11, 53, 1);
+  }
 }
