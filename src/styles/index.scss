@@ -1,3 +1,197 @@
+// Fonts
+.roboto-thin {
+  font-family: Roboto, serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: Roboto, serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: Roboto, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: Roboto, serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: Roboto, serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: Roboto, serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: Roboto, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: Roboto, serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+// -----------------colors---------------------
+$body-color: rgb(233, 233, 233);
+$border-color: #f3f3f3;
+$main-color: #060b35;
+$secondary-color: #616070;
+$cards-background-color: #fff;
+$default-btn-text-color: #fff;
+$default-btn-background-color: #00acdc;
+$hover-btn-text-color: #00acdc;
+$hover-btn-background-color: #fff;
+
+// -----------------global-variable-----------------
+$global-radius: 5px;
+
+// -----------------end----------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  background-color: $body-color;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: $main-color;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__laptop {
+    width: 200px;
+    background-color: $cards-background-color;
+    border-radius: $global-radius;
+    border: 1px solid $border-color;
+    cursor: pointer;
+
+    &-image {
+      width: 160px;
+      height: 134px;
+      margin: 32px 19px 36px;
+    }
+    &-titel {
+      font-weight: 500;
+      font-size: 12px;
+      margin: 0 16px;
+      line-height: 18px;
+      margin-bottom: 4px;
+    }
+    &-code {
+      font-size: 10px;
+      line-height: 14px;
+      color: $secondary-color;
+      margin-left: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 16px 24px;
+    height: 16px;
+    &-stars {
+      display: flex;
+      .star {
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+        border-radius: 0.5px;
+        &--active {
+          background-image: url(../images/star-active.svg);
+        }
+      }
+    }
+    &-text {
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+    }
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    margin: 0 16px 16px;
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+    &-sum {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+  &__button {
+    width: 166px;
+    height: 40px;
+    color: $default-btn-text-color;
+    background-color: $default-btn-background-color;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    border-radius: $global-radius;
+    cursor: pointer;
+    margin: 0 16px 16px;
+    &:hover {
+      background-color: $hover-btn-background-color;
+      color: $hover-btn-text-color;
+      border: 1px solid $default-btn-background-color;
+    }
+  }
 }
