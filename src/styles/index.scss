@@ -1,3 +1,127 @@
+@import './variables';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 198px;
+  height: 406px;
+  padding: 16px;
+  border-radius: 5px;
+  color: $main-text-color;
+}
+
+.img {
+  width: 160px;
+  height: 134px;
+}
+
+.discribe {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 4px;
+  margin-top: 40px;
+}
+
+.code {
+  font-size: 10px;
+  line-height: 14px;
+  color: $secondary-color;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  & .stars {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 250px;
+
+    &__star {
+      background-image: url(../src/images/star.svg);
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+      margin-right: 4px;
+    }
+
+    &--4 .stars__star:nth-child(-n + 4) {
+      background-image: url(../src/images/star-active.svg);
+    }
+  }
+
+  & .reviews {
+    color: $main-text-color;
+    font-size: 10px;
+    line-height: 14px;
+    width: 400px;
+    margin: 0;
+    text-align: right;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 18;
+  height: 18px;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 24px;
+
+  & .price {
+    color: $secondary-color;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  & h2 {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.buy-button {
+  color: $button-text;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  line-height: 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+
+  & a {
+    text-decoration: none;
+    color: $button-text;
+  }
+
+  &:hover {
+    background-color: #fff;
+    border-color: #00acdc;
+
+    & a {
+      color: #00acdc;
+    }
+  }
 }
