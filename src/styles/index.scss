@@ -1,3 +1,105 @@
 body {
   margin: 0;
 }
+
+section {
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 198px;
+  height: 406px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+}
+
+.comp {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 16px;
+  font-family: Roboto, sans-serif;
+
+  &__name {
+    padding-top: 207px;
+    font-weight: 500;
+    font-size: 12px;
+    align-self: center;
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 160px 134px;
+    background-position: 0 33px;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 8px;
+    color: #616070;
+  }
+
+  &__rate {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--stars {
+      display: flex;
+
+      &--star {
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 4px;
+      }
+    }
+
+    &--stars--4 .comp__rate--stars--star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &--reviews {
+      color:#060B35;
+      font-weight: 400;
+      font-size: 10px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    &--1 {
+      color: #616070;
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    &--2 {
+      color: #060B35;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__to-buy {
+    margin-top: 16px;
+    margin-inline: 16px;
+    background-color: #00ACDC;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+
+    &:hover {
+      border: 1px solid #00ACDC;
+      color: #00ACDC;
+      background-color: #f3f3f3;
+    }
+  }
+}
