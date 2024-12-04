@@ -21,15 +21,15 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 
 ## Checklist
 
-❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
 
-❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
+- [DEMO LINK](https://DjSerji.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://DjSerji.github.io/layout_product-cards/report/html_report/)
 
-- [ ] there 2 BEM blocks `card` and `stars` each in their own file
-- [ ] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
-- [ ] SCSS Variables are used for main values and placed in a **separate file**
-- [ ] all `stars--N` modifiers work as expected (Highlight first `N` stars)
-- [ ] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
+
+
+- [х] there 2 BEM blocks `card` and `stars` each in their own file
+- [х] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
+- [х] SCSS Variables are used for main values and placed in a **separate file**
+- [х] all `stars--N` modifiers work as expected (Highlight first `N` stars)
+- [х] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
