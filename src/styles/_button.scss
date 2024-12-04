@@ -1,0 +1,27 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.button {
+  @include center;
+  @include roboto700;
+
+  height: 40px;
+  width: $primary-width;
+  left: 16px;
+  border-radius: 5px;
+  margin-top: 16px;
+  border-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #00acdc;
+
+  &:hover {
+    background-color: #fff;
+    border-color: #00acdc;
+    color: #00acdc;
+  }
+}

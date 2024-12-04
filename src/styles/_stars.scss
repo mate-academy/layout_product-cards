@@ -1,0 +1,33 @@
+@use './mixins' as *;
+@use './variables' as *;
+@use './card' as *;
+
+.stars {
+  @include center;
+
+  line-height: 14px;
+  margin-top: 16px;
+  width: $primary-width;
+
+  &__star {
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star-active.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__star:nth-child(n + 5) {
+    background-image: url('../images/star.svg');
+    margin-right: 33px;
+  }
+
+  &__reviews {
+    @include roboto400;
+
+    color: #060b35;
+    justify-content: space-between;
+    font-size: 10px;
+    width: 53px;
+  }
+}
