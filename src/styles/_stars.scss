@@ -1,0 +1,19 @@
+.stars {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  width: 80px;
+  height: 16px;
+  background: url(../images/star.svg) repeat-x 0 0 / 16px;
+
+  &::after {
+    content: '';
+    background: url(../images/star-active.svg) repeat-x 0 0 / 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 64px;
+    overflow: hidden;
+  }
+}
