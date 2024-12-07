@@ -1,0 +1,27 @@
+@use './variables.scss' as *;
+
+.stars {
+  width: 96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @for $index from 1 through 5 {
+    .stars__star-#{$index} {
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @if $index <= 4 {
+      .stars__star-#{$index} {
+        background-image: url(../images/star-active.svg);
+      }
+    } @else {
+      .stars__star-#{$index} {
+        background-image: url(../images/star.svg);
+      }
+    }
+  }
+}

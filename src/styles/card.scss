@@ -1,0 +1,84 @@
+@use './variables.scss' as *;
+@use './fonts.scss' as *;
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  font-family: Roboto, sans-serif;
+
+  box-sizing: border-box;
+  padding: calc($margin-value * 2) $margin-value $margin-value;
+
+  background-color: $colors--white;
+  border: 1px solid $colors--gray-elements;
+  border-radius: $border-radius;
+
+  &__picture {
+    display: block;
+    margin: 0 auto calc($margin-value * 2.5);
+    width: 160px;
+    height: 134px;
+  }
+  &__title {
+    margin-bottom: calc($margin-value / 4);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $colors--main-accent;
+  }
+  &__product-code {
+    margin-bottom: $margin-value;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $colors--secondary;
+  }
+  &__reviews {
+    margin-bottom: calc($margin-value * 1.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  &__price {
+    margin-bottom: $margin-value;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $colors--secondary;
+    &::after {
+      content: '$2,199';
+      font-size: 16px;
+      font-weight: 700;
+      color: $colors--main-accent;
+    }
+  }
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $colors--white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+
+    background-color: $colors--blue-accent;
+    border: none;
+    border-radius: $border-radius;
+    height: 40px;
+
+    &:hover {
+      background: none;
+      border: 1px solid $colors--blue-accent;
+      color: $colors--blue-accent;
+    }
+  }
+}
