@@ -1,36 +1,29 @@
-@use './mixins' as *;
-@use './variables' as *;
-@use './card' as *;
-
-.stars {
-  @include center;
-
+.card__stars {
+  display: flex;
   line-height: 14px;
-  margin-top: 16px;
+  margin-top: 24px;
   width: 100%;
 
-  &__star {
-    background-position: center;
+  &-star {
+    align-items: center;
+    position: relative;
+    left: 16px;
     width: 16px;
     height: 16px;
-    margin: 4px;
-    justify-content: space-between;
+    margin-right: 4px;
     background-image: url('../images/star-active.svg');
     background-repeat: no-repeat;
   }
 
-  &__star:nth-child(n + 5) {
+  &-star:nth-child(n + 5) {
     background-image: url('../images/star.svg');
-    margin-right: 33px;
-    justify-content: space-between;
+    margin-right: 40px;
   }
 
-  &__reviews {
+  &-reviews {
     @include roboto400;
 
     color: #060b35;
-    justify-content: space-between;
     font-size: 10px;
-    width: 53px;
   }
 }

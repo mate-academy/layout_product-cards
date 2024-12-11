@@ -1,33 +1,43 @@
 .card {
+  @include center;
+
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   flex-direction: column;
+  width: 200px;
+  height: 408px;
 
   &__image {
+    @include center;
+
+    position: relative;
+    margin-top: -28px;
     width: 160px;
     height: 134px;
     background-image: url('../images/imac.jpeg');
   }
-}
 
-.title {
-  display: inline;
+  &__title {
+    position: relative;
+    margin-top: 40px;
 
-  &__text {
-    @include roboto500;
+    &-text {
+      @include roboto500;
 
-    top: 40px;
-    font-size: 12px;
-    line-height: 18px;
-    color: #060b35;
-  }
+      width: 166px;
+      display: flex;
+      font-size: 12px;
+      line-height: 18px;
+      color: #060b35;
+    }
 
-  &__product-code {
-    @include roboto400;
+    &-product-code {
+      @include roboto400;
 
-    color: #616070;
-    font-size: 10px;
-    line-height: 14px;
-    margin-top: 4px;
+      color: #616070;
+      font-size: 10px;
+      line-height: 14px;
+      margin-top: 4px;
+    }
   }
 }
