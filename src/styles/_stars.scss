@@ -1,13 +1,11 @@
 .card__stars {
-  display: flex;
+  @include center;
+
   line-height: 14px;
-  margin-top: 24px;
   width: 100%;
+  margin-top: 17px;
 
   &-star {
-    align-items: center;
-    position: relative;
-    left: 16px;
     width: 16px;
     height: 16px;
     margin-right: 4px;
@@ -17,12 +15,12 @@
 
   &-star:nth-child(n + 5) {
     background-image: url('../images/star.svg');
-    margin-right: 40px;
   }
 
   &-reviews {
     @include roboto400;
 
+    margin-left: 16px;
     color: #060b35;
     font-size: 10px;
   }
