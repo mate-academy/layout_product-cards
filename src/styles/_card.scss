@@ -1,50 +1,4 @@
-/* #region Reset */
-:root {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* #endregion */
-
-/* #region Variable */
-$main: #060b35;
-$secondary: #616070;
-
-/* #endregion */
-
-/* #region Body */
-body {
-  margin: 0 auto;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $main;
-}
-
-/* #endregion */
-
-/* #region Stars Component */
-.stars {
-  display: flex;
-  align-items: center;
-}
-
-.stars__star {
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-  background-image: url('../images/star.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url('../images/star-active.svg');
-}
-
-/* #endregion */
+@use './variables';
 
 /* #region Card Component */
 .card {
@@ -61,7 +15,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: $main;
+    color: variables.$main;
     flex: 1;
     display: flex;
     align-items: flex-start;
@@ -76,7 +30,7 @@ body {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: $secondary;
+    color: variables.$secondary;
     flex: 1;
     display: flex;
     align-items: flex-start;
@@ -113,7 +67,7 @@ body {
     &-label {
       font-size: 12px;
       font-weight: 400;
-      color: $secondary;
+      color: variables.$secondary;
     }
 
     &-value {
@@ -129,9 +83,9 @@ body {
 button {
   width: 166px;
   height: 40px;
-  background-color: #00acdc;
+  background-color: variables.$third;
   color: white;
-  border: 1px solid #00acdc;
+  border: 1px solid variables.$third;
   border-radius: 5px;
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -149,18 +103,9 @@ button {
 
   &:hover {
     background-color: white;
-    color: #00acdc;
-    border: 1px solid #00acdc;
+    color: variables.$third;
+    border: 1px solid variables.$third;
   }
-}
-
-/* #endregion */
-
-/* #region Image Component */
-img {
-  width: 160px;
-  height: 134px;
-  padding: 32 19 40 19px;
 }
 
 /* #endregion */
