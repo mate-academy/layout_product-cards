@@ -1,49 +1,32 @@
-.product-card {
-  &__stars {
-    box-sizing: border-box;
-    margin: 0 4px 0 3px;
-    padding: 0;
+@import 'variables';
+
+.product-card__stars {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.product-card__star {
+  display: inline-block;
+  width: $star-width;
+  height: $star-height;
+  background-image: $star-bg;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin-right: 7px;
+
+  &:hover,
+  &:hover ~ .product-card__star {
+    background-image: $star-active-bg;
   }
 
-  &__star {
-    display: inline-block;
-    background-image: $star-bg;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: $star-width;
-    height: $star-height;
-    cursor: pointer;
-  }
-
-  &:nth-child(1) {
-    &.star--active ~ .star {
-      background-image: $star-active-bg;
-    }
-  }
-
-  &:nth-child(2) {
-    &.star--active ~ .star {
-      background-image: $star-active-bg;
-    }
-  }
-
-  &:nth-child(3) {
-    &.star--active ~ .star {
-      background-image: $star-active-bg;
-    }
-  }
-
-  &:nth-child(4) {
-    &.star--active ~ .star {
-      background-image: $star-active-bg;
-    }
-  }
-
-  &:nth-child(5) {
-    &.star--active ~ .star {
-      background-image: $star-active-bg;
-    }
+  &:nth-child(1):checked ~ .product-card__star:nth-child(-n + 1),
+  &:nth-child(2):checked ~ .product-card__star:nth-child(-n + 2),
+  &:nth-child(3):checked ~ .product-card__star:nth-child(-n + 3),
+  &:nth-child(4):checked ~ .product-card__star:nth-child(-n + 4),
+  &:nth-child(5):checked ~ .product-card__star:nth-child(-n + 5) {
+    background-image: $star-active-bg;
   }
 }
