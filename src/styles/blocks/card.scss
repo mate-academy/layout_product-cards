@@ -1,0 +1,72 @@
+.card {
+  @include flex($direction: column, $items: center);
+
+  box-sizing: border-box;
+  max-width: 200px;
+  width: 100%;
+  border: 1px solid $light-white-color;
+  border-radius: $default-border-radius;
+  background-color: $white-color;
+  padding: 32px 16px 16px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    @include font(12px, 500, 18px);
+
+    margin-top: 40px;
+  }
+
+  &__product-code {
+    @include font($line-height: 14px, $color: $secondary-color);
+
+    margin-top: 4px;
+  }
+
+  &__product-rating {
+    @include flex(row, space-between, center);
+
+    margin-top: 16px;
+  }
+
+  &__reviews {
+    line-height: 14px;
+    text-align: right;
+  }
+
+  &__price-box {
+    @include flex(row, space-between, center);
+
+    margin-top: 24px;
+  }
+
+  &__price-label {
+    @include font($size: 12px, $line-height: 18px, $color: $secondary-color);
+  }
+
+  &__price-value {
+    @include font($size: 16px, $weight: 700, $line-height: 18px);
+  }
+
+  &__button {
+    @include font(14px, 700, 16px, $white-color);
+
+    border: none;
+    text-transform: uppercase;
+    background-color: $blue-accent-color;
+    border-radius: $default-border-radius;
+    margin-top: 16px;
+    padding: 12px 70px;
+    height: 40px;
+
+    &:hover {
+      color: $blue-accent-color;
+      background-color: $white-color;
+      border: 1px solid $blue-accent-color;
+    }
+  }
+}
