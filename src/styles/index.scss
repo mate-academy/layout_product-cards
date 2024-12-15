@@ -1,3 +1,141 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, serif;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  padding: 32px 16px 16px;
+}
+
+.imac-img {
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  // margin: 0;
+  margin-bottom: 4px;
+}
+
+.product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  position: relative;
+  color: #616070;
+}
+
+.stars-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: right;
+
+  margin-top: 16px;
+}
+
+.card-review {
+  color: #060b35;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  display: flex;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+  }
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.price {
+  justify-content: space-between;
+  margin-bottom: 16px;
+  display: flex;
+
+  &-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    height: 18px;
+    width: 31px;
+    color: #616070;
+  }
+
+  &-num {
+    width: 50px;
+    height: 18px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: #060b35;
+  }
+}
+
+.button {
+  font-family: Roboto, serif;
+  width: 166px;
+  height: 40px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  align-items: center;
+  color: #fff;
+  box-sizing: border-box;
+
+  border-radius: 5px;
+  background-color: #00acdc;
+  border: none;
+  justify-content: center;
+
+  position: absolute;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid #00acdc;
+  color: #00acdc;
 }
