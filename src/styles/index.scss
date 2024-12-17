@@ -1,3 +1,147 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card {
+  max-width: 200px;
+  width: 100%;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+
+  &__img {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__prod {
+    margin-bottom: 16px;
+  }
+  &__rewie {
+    margin-bottom: 24px;
+  }
+  &__price {
+    margin-bottom: 16px;
+  }
+}
+
+.product {
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #060b35;
+    margin-bottom: 4px;
+  }
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    color: #616070;
+  }
+}
+
+.rewiews {
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  min-width: 116px;
+  width: 100%;
+  gap: 17px;
+
+  &__stars {
+    flex-grow: 1;
+  }
+
+  &__count {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    text-align: right;
+    color: #060b35;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &--1 &__star:nth-child(1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+
+  &__titel {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #616070;
+  }
+
+  &__current {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 112%;
+    text-align: right;
+    color: #060b35;
+  }
+}
+
+.btn-link {
+  display: block;
+  border-radius: 5px;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  transition: all 0.3s;
+
+  &--hover:hover {
+    background-color: #fff;
+    color: #00acdc;
+    border: solid 1px #00acdc;
+  }
 }
