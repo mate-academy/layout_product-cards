@@ -1,8 +1,7 @@
-@import 'variables';
-
 .product-card {
+  box-sizing: border-box;
   width: $card-width;
-  height: 356px;
+  height: 412px;
   display: flex;
   align-items: center;
   flex-flow: column wrap;
@@ -10,16 +9,16 @@
   border-radius: 5px;
   background-color: #fff;
   text-align: center;
-  margin: 0;
-  padding: 32px 0 16px;
+  margin: 20px;
+  padding: 32px 0 8px;
 
   &__bg {
-    width: 160px;
+    width: 158px;
     height: 134px;
     background-image: url('../images/imac.jpeg');
     background-size: cover;
     background-position: center;
-    margin-left: 3px;
+    margin-left: 0;
     margin-bottom: 40px;
   }
 
@@ -48,16 +47,18 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #616070;
-    margin-top: 4px;
-    margin-bottom: 16px;
+    margin-top: 5px;
+    margin-bottom: 14px;
   }
 
   &__rating {
-    width: 166px;
+    width: 167px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    margin: 12px 0 3px;
+    padding-left: 2px;
+    font-family: Roboto, sans-serif;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
@@ -67,12 +68,23 @@
     color: #060b35;
   }
 
+  &__reviews {
+    width: 53px;
+    display: flex;
+    box-sizing: border-box;
+    text-align: right;
+    padding-top: 4px;
+    padding-bottom: 0;
+    padding-left: 3px;
+    margin-right: 0;
+  }
+
   &__price {
     width: 166px;
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: 23px;
+    margin-bottom: 15px;
 
     &-title {
       font-size: 12px;
@@ -82,16 +94,20 @@
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
       color: #616070;
+      margin-bottom: -1px;
     }
 
     &-sum {
+      box-sizing: border-box;
       font-size: 16px;
       font-weight: 700;
       line-height: 18px;
       text-align: right;
+      text-align: end;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
       color: #060b35;
+      padding-top: 1px;
     }
   }
 
@@ -103,16 +119,18 @@
     height: 40px;
     border-style: none;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 0 auto;
     color: #fff;
     text-decoration: none;
     background-color: #00acdc;
+    font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    text-transform: uppercase;
 
     &:hover {
       color: #00acdc;
