@@ -1,3 +1,122 @@
+$base-color: #060b35;
+$additional-color: #616070;
+$blue-color: #00acdc;
+
 body {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-size: 12px;
   margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    padding: 32px 19px 23px;
+  }
+
+  &__description {
+    padding: 0 16px;
+    margin-top: 5px;
+  }
+
+  &__description p:first-child {
+    line-height: 18px;
+    margin-bottom: 0;
+  }
+
+  &__description p:last-child {
+    font-size: 10px;
+    font-weight: 400;
+    color: $additional-color;
+    margin-top: 5px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-top: 8px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin: 27px 0 19px;
+
+    & div:first-child {
+      color: $additional-color;
+      font-size: 12px;
+      line-height: 11px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    & div:last-child {
+      font-size: 16px;
+      line-height: 12px;
+      font-weight: 700;
+      margin: 0;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin: 0 16px 16px;
+    background-color: $blue-color;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__button:hover {
+    border: 1px solid $blue-color;
+    color: $blue-color;
+    background: #fff;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 2px;
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.card__stars p:last-child {
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0;
+  height: 16px;
+  line-height: 18px;
 }
