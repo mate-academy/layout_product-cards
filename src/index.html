@@ -1,3 +1,4 @@
+<!-- #region head -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,8 +26,12 @@
       href="./styles/index.scss"
     />
   </head>
+  <!-- #endregion -->
   <body>
-    <div class="product-card" data-qa="card">
+    <div
+      class="product-card"
+      data-qa="card"
+    >
       <img
         class="product-card__image"
         src="images/imac.jpeg"
@@ -37,14 +42,26 @@
       </div>
       <div class="product-card__code">Product code: 195434</div>
       <div class="product-card__review">
-        <div class="product-card__review-stars"></div>
+        <div class="product-card__review-stars-container">
+          <div class="product-card__review-star"></div>
+          <div class="product-card__review-star"></div>
+          <div class="product-card__review-star"></div>
+          <div class="product-card__review-star"></div>
+          <div class="product-card__review-star"></div>
+        </div>
         <div class="product-card__review-text">Reviews: 5</div>
       </div>
       <div class="product-card__price">
         <div class="product-card__price-text">Price:</div>
         <div class="product-card__price-numbers">$2,199</div>
       </div>
-      <button class="product-card__button" data-qa="hover">Buy</button>
+      <a
+        class="product-card__buy"
+        href="#Buy"
+        data-qa="hover"
+      >
+        Buy
+      </a>
     </div>
   </body>
 </html>

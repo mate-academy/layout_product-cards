@@ -1,3 +1,7 @@
+$secondaryColor: #616070;
+$buyButtonHeight: 40px;
+
+// #region fonts
 .roboto-regular {
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -16,11 +20,14 @@
   font-style: normal;
 }
 
+// #endregion
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
+  color: #060b35;
 }
 
 body {
@@ -35,6 +42,7 @@ body {
   padding-block: 32px 16px;
 
   border: 1px solid #f3f3f3;
+
   border-radius: 5px;
 
   &__image {
@@ -42,5 +50,106 @@ body {
     height: 134px;
 
     margin: 0 3px;
+  }
+
+  &__name {
+    margin-top: 40px;
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondaryColor;
+  }
+
+  // #region review
+  &__review {
+    margin-top: 16px;
+
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__review-stars-container {
+    width: 96px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__review-star {
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__review-star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__review-text {
+    width: 56px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+  }
+
+  // #endregion
+
+  // #region price
+  &__price {
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-text {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: $secondaryColor;
+  }
+
+  &__price-numbers {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  // #endregion
+
+  &__buy {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 16px;
+    width: 166px;
+    height: $buyButtonHeight;
+
+    line-height: $buyButtonHeight;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+    background-color: #00acdc;
+    border-radius: 5px;
+    border: 1px solid #00acdc;
+  }
+
+  &__buy:hover {
+    background-color: #fff;
+    color: #00acdc;
   }
 }
