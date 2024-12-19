@@ -3,6 +3,14 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+@mixin bottom-color {
+  background-color: #00acdc;
+}
+
+@mixin text-color {
+  color: #060b35;
+}
+
 .product-card {
   width: 200px;
   box-sizing: border-box;
@@ -30,7 +38,8 @@ body {
     line-height: 18px;
     font-weight: 500;
     margin-bottom: 4px;
-    color: #060b35;
+
+    @include text-color;
   }
 
   &__description {
@@ -57,7 +66,8 @@ body {
     line-height: 14px;
     text-align: right;
     font-weight: 400;
-    color: #060b35;
+
+    @include text-color;
   }
 }
 
@@ -94,7 +104,8 @@ body {
     font-weight: 700;
     line-height: 18px;
     text-align: right;
-    color: #060b35;
+
+    @include text-color;
   }
 }
 
@@ -108,7 +119,8 @@ body {
   text-decoration: none;
   border-radius: 5px;
   font-weight: 700;
-  background-color: #00acdc;
+
+  @include bottom-color;
 
   &:hover {
     display: block;
