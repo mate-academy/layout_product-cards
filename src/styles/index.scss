@@ -1,103 +1,116 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  text-align: left;
-  color: #060B35;
 }
 
 .card {
-  border: 1px solid #F3F3F3;
+  font-family: Roboto, sans-serif;
+  color: #060b35;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 198px;
   height: 406px;
   position: relative;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+  text-align: left;
 
-  .card__image {
-    background-image: url('../images/imac.jpeg');
-    background-size: cover;
+  &__image {
+    background-image: url(../images/Rectangle\ 4.png);
     background-position: center;
     width: 160px;
     position: absolute;
-      height: 134px;
-      top: 33px;
-      left: 20px;
+    height: 134px;
+    top: 33px;
+    left: 19px;
+    margin-bottom: 40px;
   }
 
-  .card__content {
- padding: 20px 15px;
+  &__content {
+    margin: 206px 16px;
   }
 
- .card__title {
-   font-size: 12px;
-   font-weight: 500;
-   line-height: 1.5;
-   margin: 0 0 8px;
-   color: #060B35;
-    }
-  .card__product {
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 4px;
+
+  }
+
+  &__product {
     font-size: 10px;
     font-weight: 400;
-    color:#060B35;
-   }
-
-  .card__rating-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin: 12px 0;
-}
-
-.card__star svg {
-  fill: #e5e5e5;
-  cursor: pointer;
-}
-
-.card__star:hover svg,
-.card__star:hover~.card__star svg {
-  background-color: #FFDE6A;
-  stroke-width: 0;
-}
-
-.card__reviews {
+    line-height: 14px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+&__price {
   font-size: 10px;
   font-weight: 400;
-  color: #fff;
+  width: 98px;
+  height: 14px;
+  top: 247px;
+  left: 16px;
+  margin-top: 24px;
 }
+  &--number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    margin-top: -24px;
+    margin-left: 85px;
 
-.card__price {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 12px 0;
-  color: #060B35;
-}
+  }
 
- .card__actions {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
+ &__actions {
+   position: absolute;
+   bottom: 16px;
+   width: 100%;
+   left: 16px;
  }
 
-.card__button {
-  background-color: #00ACDC;
-  color: #fff;
-  font-weight: 700;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 12px;
-}
+ &__button {
+   background-color: #00acdc;
+   color: #fff;
+   cursor: pointer;
+   width: 166px;
+   height: 40px;
+   font-size: 14px;
+   font-weight: 700;
+   top: 351px;
+   border-radius: 5px;
+   border: 1px solid #00acdc;
 
-  .card__button:hover {
-    background-color: #fff;
-    color: #00ACDC;
-    border: 1px solid #00ACDC;
+   &:hover {
+     background-color: #fff;
+     color: #00acdc;
+     border: 1px solid #00acdc;
+   }
+ }
+
+  &__reviews {
+    display: flex;
+    font-size: 10px;
+    font-weight: 400;
+    width: 98px;
+    height: 14px;
+    flex-wrap: nowrap;
+  }
+
+    & .stars__star {
+        background-image: url(../images/star.svg);
+        display: inline-block;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+
+    }
+    .stars--4 .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+
+    ;
+    }
   }
 
 
