@@ -1,0 +1,117 @@
+@use 'variables';
+
+.card {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: variables.$mainAccentColor;
+
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  padding-inline: 16px;
+  padding-block: 32px 16px;
+
+  border: 1px solid #f3f3f3;
+
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+
+    margin-inline: 3px;
+  }
+
+  &__name {
+    margin-top: 40px;
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: variables.$secondaryColor;
+  }
+
+  // #region review
+  &__review {
+    margin-top: 16px;
+
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__review-stars {
+    width: 96px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__review-text {
+    width: 56px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+  }
+
+  // #endregion
+
+  // #region price
+  &__price {
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-text {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: variables.$secondaryColor;
+  }
+
+  &__price-numbers {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  // #endregion
+
+  &__buy {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 16px;
+    width: 166px;
+    height: variables.$buyButtonHeight;
+
+    line-height: variables.$buyButtonHeight;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: variables.$buyTextColor;
+
+    background-color: variables.$buyBackgroundColor;
+    border-radius: 5px;
+    border: 1px solid variables.$buyBackgroundColor;
+
+    &:hover {
+      background-color: variables.$buyTextColor;
+      color: variables.$buyBackgroundColor;
+    }
+  }
+}
