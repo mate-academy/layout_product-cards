@@ -1,5 +1,4 @@
-$secondaryColor: #616070;
-$buyButtonHeight: 40px;
+@use 'variables';
 
 // #region fonts
 .roboto-regular {
@@ -22,19 +21,32 @@ $buyButtonHeight: 40px;
 
 // #endregion
 
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  color: #060b35;
-}
-
 body {
   margin: 0;
 }
 
-.product-card {
+.stars {
+  &__star {
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.card {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $mainAccentColor;
+
   box-sizing: border-box;
   width: 200px;
   height: 408px;
@@ -46,10 +58,11 @@ body {
   border-radius: 5px;
 
   &__image {
+    display: block;
     width: 160px;
     height: 134px;
 
-    margin: 0 3px;
+    margin-inline: 3px;
   }
 
   &__name {
@@ -76,23 +89,10 @@ body {
     align-items: center;
   }
 
-  &__review-stars-container {
+  &__review-stars {
     width: 96px;
     display: flex;
     justify-content: space-between;
-  }
-
-  &__review-star {
-    background-image: url(../images/star.svg);
-    width: 16px;
-    height: 16px;
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &__review-star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
   }
 
   &__review-text {
@@ -125,6 +125,7 @@ body {
   &__price-numbers {
     font-family: Roboto, sans-serif;
     font-weight: 700;
+    font-size: 16px;
     text-align: right;
   }
 
@@ -138,18 +139,19 @@ body {
     height: $buyButtonHeight;
 
     line-height: $buyButtonHeight;
+    font-size: 14;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: $buyTextColor;
 
-    background-color: #00acdc;
+    background-color: $buyBackgroundColor;
     border-radius: 5px;
-    border: 1px solid #00acdc;
-  }
+    border: 1px solid $buyBackgroundColor;
 
-  &__buy:hover {
-    background-color: #fff;
-    color: #00acdc;
+    &:hover {
+      background-color: $buyTextColor;
+      color: $buyBackgroundColor;
+    }
   }
 }
