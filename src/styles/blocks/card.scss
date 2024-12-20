@@ -1,0 +1,82 @@
+@use '../utils/variables' as *;
+
+.card {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__name {
+    font-size: 1.2em;
+    margin-top: 40px;
+    line-height: 18px;
+    font-weight: $secondary-weight;
+  }
+
+  &__code {
+    font-size: 1em;
+    color: $secondary-color;
+    margin-top: 4px;
+    line-height: 14px;
+  }
+
+  &__stars,
+  &__cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  &__cost {
+    margin-top: 24px;
+  }
+
+  &__price {
+    font-size: 1.2em;
+    color: $secondary-color;
+    line-height: $line;
+    font-weight: $main-weight;
+    font-weight: 400;
+  }
+
+  &__total {
+    font-size: 1.6em;
+    font-weight: $main-weight;
+    line-height: $line;
+  }
+
+  &__button {
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 0;
+    background-color: $blue-color;
+    color: $white-color;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    font-weight: $main-weight;
+    font-size: 1.4em;
+  }
+
+  &__button:hover {
+    background-color: $white-color;
+    color: $blue-color;
+    border: 1px solid $blue-color;
+  }
+}
