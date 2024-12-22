@@ -3,6 +3,7 @@ body {
 }
 
 .card {
+
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 200px;
@@ -17,11 +18,13 @@ body {
   }
 
   &__title {
-    font-style: Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 18px;
     color: #060b35;
+    margin: 0;
+    padding: 0;
   }
 
   &__product {
@@ -32,20 +35,17 @@ body {
   }
 
   &__price {
+  display: flex;
     font-size: 12px;
     font-weight: 400;
     height: 18px;
     color: #616070;
-  }
+    margin-bottom: 16px;
+    padding: 0;
+    justify-content: space-between;
 
-  &__number {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: right;
-    margin-top: -34px;
-    margin-left: 85px;
-  }
+
+}
 
   &__button {
     background-color: #00acdc;
@@ -75,21 +75,23 @@ body {
     line-height: 14px;
     gap: 17px;
     color: #060b35;
+    margin: 0;
+    padding: 0;
   }
 
-  .stars {
-    display: flex;
-    gap: 4px;
-  }
+    .stars {
+      display: flex;
+      gap: 4px;
+    }
 
-  .stars__star {
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
-  }
+    .stars__star {
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+    }
 
-  .stars--4 .stars__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
+    .stars--4 .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
 }
