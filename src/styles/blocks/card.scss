@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: $card-padding;
+
+  &__img {
+    padding: 0 3px;
+    &-img {
+      display: block;
+      background-image: url('../images/imac.jpeg');
+      background-size: cover;
+      height: 134px;
+    }
+  }
+
+  &__header {
+    font-size: $font-size-base;
+    line-height: 18px;
+    font-weight: 500;
+    color: $main-text-color;
+    margin: 0;
+    padding-top: 40px;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $second-text-color;
+    margin: 0;
+    padding-top: 4px;
+  }
+
+  &__response {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &-reviews {
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $main-text-color;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+
+    &-price {
+      font-size: $font-size-base;
+      line-height: 18px;
+      font-weight: 400;
+      color: $second-text-color;
+      margin: 0;
+    }
+
+    &-tag {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $main-text-color;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 16px;
+    background-color: $main-button-color;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    width: 166px;
+
+    text-transform: uppercase;
+    font-size: $font-size-base;
+    line-height: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__button:active {
+    border: 1px solid $main-button-color;
+    background-color: #fff;
+    color: $main-button-color;
+  }
+}
