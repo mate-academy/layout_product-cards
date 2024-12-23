@@ -1,0 +1,32 @@
+.stars {
+  gap: 4px;
+  margin-top: 16px;
+  display: flex;
+  margin-left: 16px;
+  margin-bottom: 24px;
+
+  &__star {
+    background-image: url(/src/images/star.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__reviews {
+    font-family: var(--font-family);
+    margin-top: 1.7px;
+    margin-left: 18px;
+    margin-right: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    color: var(--main-accent);
+    text-align: right;
+  }
+}
+
+.stars__star:nth-child(-n + 4) {
+  background-image: url(/src/images/star-active.svg);
+  background-repeat: no-repeat;
+}
