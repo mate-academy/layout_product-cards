@@ -1,3 +1,125 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: Roboto, serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 0;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.iMac {
+  margin: 0 auto;
+  width: 160px;
+  height: 134px;
+}
+
+.card__title {
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #060b35;
+  line-height: 18px;
+}
+
+.card__code {
+  font-weight: 400;
+  font-size: 10px;
+  color: #616070;
+  margin-top: 4px;
+  line-height: 14px;
+}
+
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  height: 16px;
+  width: 100%;
+}
+
+.stars__star {
+  display: inline-block;
+  background-image: url(../images/star.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.card__reviews {
+  color: #060b35;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 24px;
+}
+
+.card__price-price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #616070;
+  line-height: 18px;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #060b35;
+}
+
+.card__buy {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  margin-top: 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 1;
+}
+
+.card__buy:hover {
+  color: #00acdc;
+  border: 1px solid #00acdc;
+  background-color: #fff;
+  opacity: 1;
 }
