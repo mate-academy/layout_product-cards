@@ -9,7 +9,7 @@ Create a page with product card using `flexbox`, `BEM` and `SCSS` based on [this
 - reset the browser's default margins
 - card width is `200px` including border
 - use images from [src/images](src/images)
-- change link styles on `:hover`
+- change link styles on `:hover
 - add `data-qa="card"` attribute to the card block
 - add `data-qa="hover"` attribute to the link `BUY`
 - `background-image: url()` should be relative to the `index.scss`. So it should start with `../images`.
@@ -23,8 +23,8 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://MN1rvana.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://MN1rvana.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
