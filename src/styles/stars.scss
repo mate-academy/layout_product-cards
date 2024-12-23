@@ -8,8 +8,10 @@
     margin-right: 4px;
     width: 16px;
     height: 16px;
+  }
 
-    &--active {
+  @for $activeStar from 1 through 4 {
+    &__star:nth-child(-n + #{$activeStar}) {
       background-image: url('../images/star-active.svg');
     }
   }
