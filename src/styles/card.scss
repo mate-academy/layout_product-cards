@@ -1,0 +1,92 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  background-color: $background-color;
+  padding: 32px 16px 16px;
+
+  @include display-items(flex, column, center, center);
+  @include border-radius;
+  @include border(1px, solid, $border-color);
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 4px;
+
+    @include text-values(normal, 500, 12px, 18px, $primary-text-color, left);
+  }
+
+  &__product-code {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include text-values(normal, 400, 10px, 14px, $secondary-text-color, left);
+  }
+
+  &__rate {
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include display-items(flex, row, flex-end, space-between);
+
+    &-number-review {
+      height: 100%;
+
+      @include text-values(normal, 400, 10px, 14px, $primary-text-color, right);
+    }
+  }
+
+  &__price {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include display-items(flex, row, end, space-between);
+
+    &-title {
+      @include text-values(
+        normal,
+        400,
+        12px,
+        18px,
+        $secondary-text-color,
+        left
+      );
+    }
+    &-number {
+      @include text-values(normal, 700, 16px, 18px, $primary-text-color, right);
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white-text-color;
+
+    @include border-radius;
+    @include text-values(normal, 700, 14px, 16px, $white-text-color, center);
+
+    &:hover {
+      background-color: $background-color;
+      color: $primary-color;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include border(1px, solid, $primary-color);
+    }
+  }
+}
