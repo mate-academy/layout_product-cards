@@ -1,7 +1,15 @@
+:root {
+  --primary-color: #007bff;
+  --hover-color: #0056b3;
+  --border-color: #ccc;
+  --text-color: #333;
+  --background-color: lightblue;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  background-color: lightblue;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,45 +23,70 @@ h1 {
 }
 
 .product-card {
-  width: 200px;
+  width: 300px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .product-card__image {
   max-width: 100%;
   border-radius: 4px;
   margin-bottom: 12px;
 }
+
 .product-card__title {
   font-size: 18px;
-  color: #333;
+  color: var(--text-color);
   margin: 8px 0;
 }
-.product-card__description {
+
+.product-card__code {
   font-size: 14px;
-  color: black;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-card__rating {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: 12px;
 }
+
+.product-card__rating .product-card__stars {
+  color: #fc0;
+  font-size: 14px;
+}
+
+.product-card__rating .product-card__reviews {
+  font-size: 14px;
+  color: #666;
+}
+
 .product-card__price {
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 16px;
 }
+
 .product-card__button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -61,8 +94,7 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.product-card__button:hover {
-  background-color: #0056b3;
-}
 
-/*# sourceMappingURL=index.css.map */
+.product-card__button:hover {
+  background-color: var(--hover-color);
+}
