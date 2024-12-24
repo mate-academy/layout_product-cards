@@ -1,7 +1,13 @@
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$border-color: #ccc;
+$text-color: #333;
+$background-color: lightblue;
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: lightblue;
+  background-color: $background-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +21,9 @@ h1 {
 }
 
 .product-card {
-  width: 200px;
+  width: 200px; // Включає рамки
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   border-radius: 8px;
   padding: 16px;
   display: flex;
@@ -39,35 +45,35 @@ h1 {
 
   &__title {
     font-size: 18px;
-    color: #333;
+    color: $text-color;
     margin: 8px 0;
   }
 
   &__description {
     font-size: 14px;
-    color: #777;
+    color: color.adjust($text-color, $lightness: -20%);
     margin-bottom: 12px;
   }
 
   &__price {
     font-size: 16px;
     font-weight: bold;
-    color: #000;
+    color: $text-color;
     margin-bottom: 16px;
   }
 
   &__button {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: $primary-color;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3;
-      cursor: pointer;
+      background-color: $hover-color;
     }
   }
 }
