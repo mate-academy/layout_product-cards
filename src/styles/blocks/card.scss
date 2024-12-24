@@ -1,0 +1,72 @@
+.card {
+  position: relative;
+  width: 200px;
+  height: 408px;
+
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  background-image: url(../images/imac.jpeg);
+  background-position: 19px 32px;
+  background-size: 160px 134px;
+  background-repeat: no-repeat;
+
+  &__productName {
+    position: absolute;
+    top: 206px;
+    left: 16px;
+    right: 16px;
+
+    &--title {
+      font-weight: 500;
+    }
+
+    &--text {
+      color: $secondary-text-color;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    top: 316px;
+    left: 16px;
+    right: 16px;
+    padding-top: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 85px;
+
+    &--label {
+      color: $secondary-text-color;
+    }
+
+    &--value {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+
+    background-color: $blue-accent;
+    color: #fff;
+    border-color: $blue-accent;
+    border-radius: 5px;
+    padding: 8px;
+
+    &:hover {
+      background-color: #fff;
+      color: $blue-accent;
+      border-color: $blue-accent;
+      transition: 0.7s;
+    }
+  }
+}
