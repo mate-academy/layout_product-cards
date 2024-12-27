@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  color: $font-color;
+}
+
+.card {
+  font-size: $font-size-card;
+  width: $width-product-card;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__cord-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    display: inline-block;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__info-product {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title-product {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__article-product {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 14px;
+    color: $articl-font-color;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  &__rating-stars {
+    position: relative;
+    top: -2px;
+
+    .stars--0,
+    .stars--1,
+    .stars--2,
+    .stars--3,
+    .stars--4,
+    .stars--5 {
+      opacity: 0;
+    }
+
+    .stars--#{$quantities-stars} {
+      opacity: 1;
+    }
+  }
+
+  &__reviews {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__price-label {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 18px;
+    color: #616070;
+  }
+
+  &__price-value {
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 18px;
+
+    &::before {
+      content: '$';
+    }
+  }
+
+  &__button {
+    margin-top: 16px;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #00acdc;
+      color: #00acdc;
+    }
+  }
+}
