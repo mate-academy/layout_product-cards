@@ -32,4 +32,4 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 - [x] SCSS Nesting is used for `elements`, `modifiers` and `pseudo-classes`
 - [x] SCSS Variables are used for main values and placed in a **separate file**
 - [x] all `stars--N` modifiers work as expected (Highlight first `N` stars)
-- [x] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
+- [x] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules) 
