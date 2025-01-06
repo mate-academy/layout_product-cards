@@ -1,3 +1,138 @@
+$hover-text-color: #34568b;
+$main-color: #00acdc;
+$text-color: #060b35;
+$small-text-color: #616070;
+$backround-color: #fff;
+$border-color: #f3f3f3;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: $backround-color;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  padding: 32px 16px 16px;
+  background-position: center;
+
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__title {
+    display: flex;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: $text-color;
+
+    &:hover {
+      color: $hover-text-color;
+    }
+  }
+
+  &__description {
+    font-size: 10px;
+    line-height: 14px;
+    color: $small-text-color;
+    margin: 0 0 16px;
+  }
+
+  &__review {
+    display: flex;
+    height: 16px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    font-weight: 400;
+    color: $text-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-label {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+      color: $small-text-color;
+      margin: 0;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+      color: $text-color;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $backround-color;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: $main-color;
+
+    &:hover {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 700;
+      position: relative;
+      background-color: $backround-color;
+      color: $main-color;
+      box-sizing: border-box;
+      border: 1px solid $main-color;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    border-radius: 0.5px;
+    gap: 4px;
+    margin-right: 4px;
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
