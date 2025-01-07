@@ -1,0 +1,35 @@
+.stars-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 21px;
+
+  .stars {
+    display: flex;
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/star.svg');
+      background-repeat: no-repeat;
+      margin-right: 4px;
+    }
+
+    .stars__star:nth-child(n + 5) {
+      margin-right: 0;
+    }
+
+    &--4 .stars__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__span {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-tiny;
+    line-height: $line-height-medium;
+    color: #060b35;
+  }
+}
