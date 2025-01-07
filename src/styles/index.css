@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 24px;
+  margin: 0 0 21px;
 }
 .stars-block .stars {
   display: flex;
@@ -18,6 +18,10 @@ body {
   height: 16px;
   background-image: url("../images/star.svg");
   background-repeat: no-repeat;
+  margin-right: 4px;
+}
+.stars-block .stars .stars__star:nth-child(n+5) {
+  margin-right: 0;
 }
 .stars-block .stars--4 .stars__star:nth-child(-n+4) {
   background-image: url("../images/star-active.svg");
@@ -31,23 +35,24 @@ body {
 }
 
 .card {
+  width: 200px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
   padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
 }
 .card__img {
   width: 160px;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 .card__title {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #000;
-  margin: 0 0 4px;
+  margin: 0 0 5px;
 }
 .card__code {
   width: 100%;
@@ -61,24 +66,25 @@ body {
 .card__link {
   width: 166px;
   height: 40px;
-  color: #00acdc;
-  background-color: transparent;
+  color: #fff;
+  background-color: #00acdc;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
   border: 1px solid #00acdc;
-  margin: 0;
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 40px;
 }
 .card__link:hover {
-  color: #fff;
-  background-color: #00acdc;
+  color: #00acdc;
+  background-color: #fff;
 }
 
 .price-block {
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -87,6 +93,7 @@ body {
   margin: 0 0 16px;
 }
 .price-block__text {
+  margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
