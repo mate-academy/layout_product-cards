@@ -1,0 +1,137 @@
+.productCard {
+  padding: 32px 16px 16px;
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__img {
+    margin: 0 auto 40px;
+    height: 134px;
+    width: 160px;
+    display: block;
+  }
+
+  &__name {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $main-text-color;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #616070;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    height: 16px;
+
+    &-stars {
+      display: flex;
+
+      &--0,
+      &--1,
+      &--2,
+      &--3,
+      &--4 {
+        width: 16px;
+        height: 16px;
+        border-radius: 0.5px;
+        margin-right: 4px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &--0,
+      &--1,
+      &--2,
+      &--3 {
+        background-image: url('../images/star-active.svg');
+      }
+
+      &--4 {
+        background-image: url(../images/star.svg);
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: #060b35;
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    &--1 {
+      font-size: 12px;
+      color: #616070;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      text-align: left;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    &--2 {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: $main-text-color;
+      text-align: right;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      line-height: 1;
+      text-align: right;
+      vertical-align: middle;
+    }
+  }
+
+  &__bottom {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-transform: uppercase;
+    height: 40px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #00acdc;
+    color: #fff;
+    align-content: center;
+    cursor: pointer;
+    line-height: 40px;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+      cursor: pointer;
+    }
+  }
+}
