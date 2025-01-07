@@ -1,103 +1,85 @@
-.productCard {
+.card {
   padding: 32px 16px 16px;
   width: 200px;
-  height: 408px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid $border-color;
 
-  &__img {
-    margin: 0 auto 40px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__banner {
+    margin-bottom: 40px;
+  }
+
+  &__photo {
     height: 134px;
     width: 160px;
     display: block;
+    margin: 0 auto;
   }
 
-  &__name {
+  &__title {
+    font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    font-weight: 500;
-    color: $main-text-color;
     margin-bottom: 4px;
   }
 
   &__code {
-    display: block;
-    margin-bottom: 16px;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: $secondary-text-color;
+    color: $secondary-color;
+    margin-bottom: 16px;
   }
 
-  &__reviews {
+  &__rating {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
-    height: 16px;
+  }
 
-    &-text {
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 14px;
-      color: #060b35;
-    }
+  &__number-reviews {
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
   }
 
   &__price {
     display: flex;
-    margin-bottom: 16px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 16px;
+    line-height: $primary-lineheight;
 
-    &--1 {
-      font-size: $font-size-small;
-      color: $secondary-text-color;
-      margin: 0;
-      padding: 0;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      line-height: 1;
-      vertical-align: middle;
+    &-label {
+      font-size: 12px;
+      color: $secondary-color;
     }
 
-    &--2 {
-      margin: 0;
-      padding: 0;
-      font-weight: 700;
-      font-size: $font-size-medium;
-      color: $main-text-color;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      line-height: 1;
-      vertical-align: middle;
+    &-number {
+      font-weight: bold;
+      font-size: 16px;
     }
   }
 
-  &__bottom {
+  &__button-element {
     display: block;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-transform: uppercase;
     height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
 
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
+    color: white;
+    font-weight: bold;
     text-align: center;
-    background-color: $primary-color;
-    color: #fff;
     align-content: center;
-    cursor: pointer;
-    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $blue-accent-color;
+    border: 1px solid $blue-accent-color;
 
     &:hover {
-      background-color: #fff;
-      color: $primary-color;
-      border: 1px solid $primary-color;
+      color: $blue-accent-color;
+      background-color: white;
       cursor: pointer;
     }
   }
