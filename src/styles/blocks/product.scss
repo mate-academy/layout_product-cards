@@ -4,7 +4,7 @@
   height: 408px;
   box-sizing: border-box;
   border-radius: 5px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
 
   &__img {
     margin: 0 auto 40px;
@@ -30,7 +30,7 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #616070;
+    color: $secondary-text-color;
   }
 
   &__reviews {
@@ -38,35 +38,6 @@
     justify-content: space-between;
     margin-bottom: 24px;
     height: 16px;
-
-    &-stars {
-      display: flex;
-
-      &--0,
-      &--1,
-      &--2,
-      &--3,
-      &--4 {
-        width: 16px;
-        height: 16px;
-        border-radius: 0.5px;
-        margin-right: 4px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-
-      &--0,
-      &--1,
-      &--2,
-      &--3 {
-        background-image: url('../images/star-active.svg');
-      }
-
-      &--4 {
-        background-image: url(../images/star.svg);
-      }
-    }
 
     &-text {
       font-weight: 400;
@@ -83,14 +54,12 @@
     align-items: center;
 
     &--1 {
-      font-size: 12px;
-      color: #616070;
+      font-size: $font-size-small;
+      color: $secondary-text-color;
       margin: 0;
       padding: 0;
-      text-align: left;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
-      text-align: left;
       line-height: 1;
       vertical-align: middle;
     }
@@ -99,13 +68,11 @@
       margin: 0;
       padding: 0;
       font-weight: 700;
-      font-size: 16px;
+      font-size: $font-size-medium;
       color: $main-text-color;
-      text-align: right;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
       line-height: 1;
-      text-align: right;
       vertical-align: middle;
     }
   }
@@ -121,7 +88,7 @@
     font-size: 14px;
     font-weight: 700;
     text-align: center;
-    background-color: #00acdc;
+    background-color: $primary-color;
     color: #fff;
     align-content: center;
     cursor: pointer;
@@ -129,8 +96,8 @@
 
     &:hover {
       background-color: #fff;
-      color: #00acdc;
-      border: 1px solid #00acdc;
+      color: $primary-color;
+      border: 1px solid $primary-color;
       cursor: pointer;
     }
   }
