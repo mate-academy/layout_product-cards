@@ -1,5 +1,4 @@
 .card {
-  position: relative;
   width: 200px;
   height: 408px;
 
@@ -7,61 +6,60 @@
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
-  background-image: url(../images/imac.jpeg);
-  background-position: 19px 32px;
-  background-size: 160px 134px;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding: 32px 19px 40px;
+  }
 
   &__productName {
-    position: absolute;
-    top: 160px;
-    left: 16px;
-    right: 16px;
-    text-align: center;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-    &--title {
-      font-weight: 500;
-    }
+  &__productNameTitle {
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
 
-    &--text {
-      color: $secondary-text-color;
-      font-size: 10px;
-      line-height: 14px;
-      text-align: center;
-    }
+  &__productNameText {
+    color: $secondary-text-color;
+    font-size: 10px;
+    line-height: 14px;
   }
 
   &__price {
-    position: absolute;
-    top: 280px;
-    left: 16px;
-    right: 16px;
-    padding-top: 24px;
+    padding: 24px 16px 16px;
     justify-content: space-between;
 
     display: flex;
     align-items: center;
     gap: 85px;
+  }
 
-    &--label {
-      color: $secondary-text-color;
-    }
+  &__priceLabel {
+    color: $secondary-text-color;
+  }
 
-    &--value {
-      font-weight: 700;
-      font-size: 16px;
-    }
+  &__priceValue {
+    font-weight: 700;
+    font-size: 16px;
   }
 
   &__button {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
     padding: 10px 20px;
-    width: auto;
+    width: 166px;
     text-align: center;
     border: 2px solid $blue-accent;
+    margin-top: auto;
+    margin-bottom: 16px;
 
     background-color: $blue-accent;
     color: #fff;
