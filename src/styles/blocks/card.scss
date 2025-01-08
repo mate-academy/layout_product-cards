@@ -1,47 +1,39 @@
 .card {
   width: 200px;
-  height: 400px;
-  margin: 40px;
-
-  padding: 32px 19px 16px;
+  height: auto;
+  padding: 32px 16px 16px;
 
   border: 1px solid rgb(214, 212, 212);
   border-radius: 5px;
+
   box-sizing: border-box;
-  align-items: center;
 
-  &__item-image {
-    background: no-repeat;
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 134px;
-  }
-
-  &__content {
-    height: 100%;
+  &__product-image-mac {
+    height: auto;
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 
   &__item-name {
     font-size: 12px;
     font-weight: 500;
+    margin: 40 0 0;
   }
 
   &__item-code {
-    margin-top: 4px;
     font-size: 10px;
     color: $light-color-text;
+    margin-top: 4px;
   }
 }
 
 .review {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__comments {
     font-size: 10px;
@@ -52,6 +44,7 @@
 .price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__item {
     color: $light-color-text;
@@ -64,7 +57,7 @@
   }
 }
 
-.buy {
+.buy-button {
   height: 40px;
   border-radius: 5px;
 
