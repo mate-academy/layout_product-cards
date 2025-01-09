@@ -1,0 +1,92 @@
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__device-name {
+    @include font(12px, 500);
+
+    margin: 0 0 4px;
+    height: 36px;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__device-code {
+    @include font(10px, 400);
+
+    color: #616070;
+    height: 14px;
+    line-height: 14px;
+    margin: 0 0 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    width: 166px;
+    height: 16px;
+    line-height: 14px;
+    justify-content: space-between;
+    margin: 0 0 24px;
+  }
+
+  &__text {
+    margin: 0;
+    color: #060b35;
+    text-align: right;
+
+    @include font(10px, 400);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 0 16px;
+  }
+
+  &__price-price {
+    margin: 0;
+    color: #616070;
+
+    @include font(12px, 400);
+  }
+
+  &__price-price_2199 {
+    margin: 0;
+    color: #060b35;
+    text-align: right;
+
+    @include font(16px, 700);
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    line-height: 16px;
+    font-family: Roboto, sans-serif;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    color: $secondary-color;
+    background-color: $primary-color;
+
+    @include font(14px, 700);
+
+    &:hover {
+      background-color: transparent;
+      color: $primary-color;
+    }
+  }
+}
