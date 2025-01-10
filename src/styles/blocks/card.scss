@@ -11,16 +11,14 @@ body {
   display: block;
   box-sizing: border-box;
 
-  width: 200px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-}
-
-.product {
-  margin-top: 32px;
   padding: 0 16px;
+  padding-top: 32px;
 
-  &__image-iMac {
+  width: 200px;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+
+  &__image {
     padding: 0 3px;
     padding-bottom: 35px;
     height: 134px;
@@ -28,7 +26,7 @@ body {
   }
 
   &__name {
-    color: #060b35;
+    color: $main-text-color;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
@@ -36,7 +34,7 @@ body {
   }
 
   &__code {
-    color: #616070;
+    color: $secondary-text-color;
     font-size: 10px;
     line-height: 14px;
   }
@@ -46,10 +44,37 @@ body {
     padding-top: 16px;
     justify-content: space-between;
   }
+
+  &__button {
+    display: flex;
+    box-sizing: border-box;
+
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+
+    color: $button-bg-color-hover;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+
+    border: $button-bg-color solid 1px;
+    background-color: $button-bg-color;
+
+    &:hover {
+      color: $button-bg-color;
+      background-color: $button-bg-color-hover;
+    }
+  }
 }
 
 .review__text {
-  color: #060b35;
+  color: $main-text-color;
   font-size: 10px;
   line-height: 14px;
 }
@@ -60,44 +85,15 @@ body {
   justify-content: space-between;
 
   &__price {
-    color: #616070;
+    color: $secondary-text-color;
     font-size: 12px;
     line-height: 18px;
   }
 
   &__cost {
-    color: #060b35;
+    color: $main-text-color;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
   }
-}
-
-.product__buy-button {
-  display: flex;
-  box-sizing: border-box;
-  border-radius: 5px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-
-  height: 40px;
-
-  justify-content: center;
-  align-items: center;
-
-  border: #00acdc solid 1px;
-  background-color: #00acdc;
-
-  &:hover {
-    color: #00acdc;
-    background-color: #fff;
-  }
-}
-
-.button {
-  color: white;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-decoration: none;
 }
