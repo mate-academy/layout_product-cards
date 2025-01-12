@@ -1,0 +1,17 @@
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &--0 .stars__star:nth-child(-n + #{$product-rating}) {
+    background-image: url('../images/star-active.svg');
+  }
+}
