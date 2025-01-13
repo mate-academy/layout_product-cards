@@ -1,0 +1,32 @@
+@use './variables.scss' as vars;
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__star {
+    width: vars.$star-size;
+    height: vars.$star-size;
+    margin-right: 4px;
+  }
+}
+
+@for $i from 1 through 5 {
+  --#{$i} {
+    &__star:nth-child(-n + #{$i}) {
+      filter: brightness(1);
+    }
+    &__star:nth-child(n + #{$i + 1}) {
+      filter: brightness(0.5);
+    }
+  }
+}
+
+.reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin-right: 16px;
+  margin-top: 4px;
+}
