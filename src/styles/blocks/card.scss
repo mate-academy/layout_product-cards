@@ -1,5 +1,7 @@
 .card {
   width: 200px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
@@ -13,13 +15,12 @@
   &__image {
     width: 160px;
     height: 134px;
-    padding: 32px 19px 40px;
+    margin-top: 32px;
+    margin-bottom: 40px;
   }
 
   &__productName {
-    margin: 0;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-bottom: 16px;
   }
 
   &__productNameTitle {
@@ -36,16 +37,16 @@
   }
 
   &__price {
-    padding-top: 24px;
-    padding-bottom: 16px;
     justify-content: space-between;
     display: flex;
     align-items: center;
     gap: 85px;
+    margin-bottom: 16px;
   }
 
   &__priceLabel {
     color: $secondary-text-color;
+    font-weight: bold;
   }
 
   &__priceValue {
@@ -54,24 +55,23 @@
   }
 
   &__button {
-    padding: 10px 20px;
+    padding: 10px 24px;
     width: 166px;
     text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    border: 2px solid $blue-accent;
+    border: solid $blue-accent;
     margin-bottom: 16px;
 
     background-color: $blue-accent;
     color: #fff;
-    border-color: $blue-accent;
     border-radius: 5px;
 
     &:hover {
       background-color: #fff;
       color: $blue-accent;
-      border-color: $blue-accent;
+      border: 1px solid $blue-accent;
       transition: 0.7s;
     }
   }
