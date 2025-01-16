@@ -1,0 +1,21 @@
+@import './variables';
+
+.stars {
+  line-height: 16px;
+  display: flex;
+  align-items: end;
+  gap: 4px;
+
+  &__element {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--active {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
