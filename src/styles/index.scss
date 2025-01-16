@@ -1,3 +1,165 @@
+$card-width: 200px;
+$card-padding: 16px;
+
 body {
+  font-family: Roboto, serif;
   margin: 0;
+}
+
+// card
+
+.card {
+  box-sizing: border-box;
+  max-width: $card-width;
+  padding: $card-padding;
+  border-radius: 5px;
+  border: 1px;
+  border-style: solid;
+  border-color: #f3f3f3;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// card image part
+
+.card__image {
+  background-image: url('../../src/images/imac.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 134px;
+  margin: (32px - $card-padding) 3px;
+  margin-bottom: 40px;
+}
+
+// card title part
+
+.card__title {
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.card__title-product {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+  padding-bottom: 4px;
+}
+
+.card__title-code {
+  width: 98px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #616070;
+}
+
+// card review part
+
+.card__review {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.card__review-stars {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.card__review-star {
+  background-image: url(../images/star-active.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__review-star:last-child {
+  background-image: url(../images/star.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__review-data {
+  font-weight: 400;
+  font-size: 10px;
+  color: #060b35;
+}
+
+// card price part
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 18px;
+  padding-bottom: 16px;
+}
+
+.card__price-title {
+  color: #616070;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.card__price-info {
+  color: #060b35;
+  font-weight: 700;
+}
+
+// card button part
+
+.card__button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  background-color: #00acdc;
+}
+
+.card__button-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+}
+
+.card:hover {
+  .card__button {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    color: #00acdc;
+    background-color: #fff;
+    border: 1px;
+    border-style: solid;
+    border-color: #00acdc;
+  }
+
+  .card__button-link {
+    color: #00acdc;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+  }
 }
