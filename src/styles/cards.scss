@@ -1,0 +1,114 @@
+$product-hover-color: #00acdc;
+$title-color: #060b35;
+$txt-color: #616070;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: auto;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  margin-top: 20px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > h1,
+    & > p {
+      margin: 0 16px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+
+    margin: 32px 19px 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $title-color;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    color: $txt-color;
+
+    margin-bottom: 16px;
+  }
+
+  &__evaluation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 16px 16px 24px 16px;
+  }
+
+  &__price-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 16px 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+
+    color: $txt-color;
+    margin-right: 85px;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+
+    color: $title-color;
+  }
+
+  &__buy-button {
+    display: inline-block;
+    border-radius: 5px;
+    background: #00acdc;
+    padding: 12px 70px;
+    margin: 0 16px 16px;
+    transition: all 0.5s ease;
+
+    &-title {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.5s ease;
+      text-align: center;
+    }
+
+    &:hover {
+      border: 1px solid $product-hover-color;
+      background-color: #fff;
+
+      .product__buy-button-title {
+        color: $product-hover-color;
+      }
+    }
+  }
+}
