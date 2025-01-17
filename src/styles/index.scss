@@ -1,3 +1,5 @@
+$font-size: 10px;
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -10,114 +12,113 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.card__image {
-  margin-top: 32px;
-  box-sizing: border-box;
-  background-image: url(/src/images/imac.jpeg);
-  background-size: cover;
-  width: 160px;
-  height: 134px;
-}
+  &__image {
+    margin-top: 32px;
+    box-sizing: border-box;
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    width: 160px;
+    height: 134px;
+  }
 
-.card__info {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  margin-left: 17px;
-  margin-right: 17px;
-}
+  &__info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-left: 17px;
+    margin-right: 17px;
+  }
 
-.card__name {
-  margin-top: 40px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  text-align: left;
-  color: #000000;
-}
+  &__name {
+    margin-top: 40px;
+    font-size: $font-size * 1.2;
+    font-weight: 500;
+    line-height: $font-size * 1.8;
+    text-align: left;
+    color: #000000;
+  }
 
-.card__code {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  text-align: left;
-  color: #616070;
-  margin-top: 4px;
-}
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: $font-size * 1.4;
+    text-align: left;
+    color: #616070;
+    margin-top: 4px;
+  }
 
-.card__rating {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
-}
+  .&__rating {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.card__stars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  &__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.card__star {
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  background-image: url(/src/images/star.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  margin-right: 4px;
-}
+  .&__star {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    margin-right: 4px;
+  }
 
-.card__reviews {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  text-align: right;
-}
+  .&__reviews {
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: $font-size * 1.4;
+    text-align: right;
+  }
 
-.card__price {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .&__price {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.card__priceText {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #616070;
-}
+  .&__priceText {
+    font-size: $font-size * 1.2;
+    font-weight: 400;
+    line-height: $font-size * 1.8;
+    color: #616070;
+  }
 
-.card__priceValue {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #060B35;
-}
+  .&__priceValue {
+    font-size: $font-size * 1.6;
+    font-weight: 700;
+    line-height: $font-size * 1.8;
+    color: #060B35;
+  }
 
-.card__button {
-  box-sizing: border-box;
-  margin-top: 16px;
-  background-color: #00ACDC;
-  font-size: 14px;
-  line-height: 16px;
-  width: 166px;
-  height: 40px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #FFFFFF;
-  text-transform: uppercase;
+  &__button {
+    box-sizing: border-box;
+    margin-top: 16px;
+    background-color: #00ACDC;
+    font-size: $font-size * 1.4;
+    line-height: $font-size * 1.6;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
 }
 
 .card .card__star:nth-child(-n+4) {
-  background-image: url(/src/images/star-active.svg);
-  transition: transform 0.3s ease;
+  background-image: url(../images/star-active.svg);
 }
 
 .card__button:hover {
