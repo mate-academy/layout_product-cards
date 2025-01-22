@@ -5,82 +5,86 @@
   border: 1px solid $border-color;
 
   @include card-border-radius;
-}
 
-.card__photo {
-  width: 160px;
-  height: 134px;
-  margin: 32px 19px;
-}
 
-.card__description {
-  font-weight: 500;
-  font-size: 12px;
-  color: $main-text-color;
+  &__photo {
+   width: 160px;
+   height: 134px;
+   margin: 32px 19px;
+  }
 
-  @include card-inline-margin;
+  &__description {
+    font-weight: 500;
+    font-size: 12px;
+    color: $main-text-color;
 
-  margin-block: 8px 4px;
-}
+    @include card-inline-margin;
 
-.card__product-code {
-  color: $text-grey-color;
-  line-height: 14px;
-  margin-bottom: $card-margin;
+    margin-block: 8px 4px;
+  }
 
-  @include card-inline-margin;
-}
+  &__product-code {
+    color: $text-grey-color;
+    line-height: 14px;
+    margin-bottom: $card-margin;
 
-.card__review {
-  display: flex;
-  justify-content: space-between;
-  margin-block: $card-margin;
+    @include card-inline-margin;
+  }
 
-  @include card-inline-margin;
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    margin-block: $card-margin;
 
-  align-items: center;
-}
+    @include card-inline-margin;
 
-.card__price {
-  display: flex;
-  justify-content: space-between;
-  margin-block: 24px $card-margin;
+    align-items: center;
 
-  @include card-inline-margin;
-}
 
-.card__button {
-  all: unset;
-  background-color: $button-color;
 
-  @include card-border-radius;
+    &-amount {
+     line-height: 14px;
+     color: $main-text-color;
+    }
+  }
 
-  width: 165px;
-  height: 40px;
-  margin-bottom: $card-margin;
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 24px $card-margin;
 
-  @include card-inline-margin;
+    @include card-inline-margin;
+  }
 
-  border-color: $button-color;
-  box-shadow: none;
-  color: $main-background-color;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-}
+  &__button {
+    all: unset;
+    background-color: $button-color;
 
-.card__button:hover {
-  background-color: $main-background-color;
-  border: 1px solid $button-color;
-  color: $button-color;
-}
+    @include card-border-radius;
 
-.card__link {
-  text-decoration: none;
-}
+    width: 165px;
+    height: 40px;
+    margin-bottom: $card-margin;
 
-.card__review-amount {
-  line-height: 14px;
-  color: $main-text-color;
+    @include card-inline-margin;
+
+    border-color: $button-color;
+    box-shadow: none;
+    color: $main-background-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+
+    &:hover {
+     background-color: $main-background-color;
+     border: 1px solid $button-color;
+     color: $button-color;
+    }
+  }
+  
+  &__link {
+    text-decoration: none;
+  }
 }
