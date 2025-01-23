@@ -1,0 +1,143 @@
+.card {
+  &__content {
+    padding: 0;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    padding-inline: 16px;
+    width: 200px;
+
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  &__img {
+    padding: 32px 0 40px;
+    margin: 0 auto;
+
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__cod {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__stars {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-star {
+      height: 16px;
+      width: 16px;
+      background-image: url(/src/images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:nth-child(-n + 4) {
+        background-image: url(/src/images/star-active.svg);
+      }
+    }
+
+    &-text {
+      padding: 0;
+      margin: 0;
+
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+
+  &__stars-grop {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__price {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      padding: 0;
+      margin: 0;
+
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+      color: rgba(97, 96, 112, 1);
+    }
+
+    &-price {
+      padding: 0;
+      margin: 0;
+
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+
+    height: 40px;
+    width: 100%;
+
+    background-color: rgba(0, 172, 220, 1);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+
+    border: 1px solid rgba(0, 172, 220, 1);
+    border-radius: 5px;
+
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(0, 172, 220, 1);
+    }
+  }
+}
