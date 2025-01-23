@@ -8,12 +8,12 @@
     background-repeat: no-repeat;
     margin-right: 4px;
 
-    &--1,
-    &--2,
-    &--3,
-    &--4 {
-      background-image: url(../images/star-active.svg);
+    @for $i from 1 through 4 {
+      &--#{$i} {
+        background-image: url(../images/star-active.svg);
+      }
     }
+
     &--5 {
       background-image: url(../images/star.svg);
     }
