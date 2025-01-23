@@ -13,8 +13,12 @@
   }
 
   &__img {
-    padding: 32px 0 40px;
-    margin: 0 auto;
+    margin: 32px 0 40px;
+
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     width: 160px;
     height: 134px;
@@ -39,7 +43,7 @@
     font-weight: 400;
     line-height: 14px;
 
-    color: rgba(97, 96, 112, 1);
+    color: $grey-color;
   }
 
   &__stars {
@@ -51,34 +55,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    &-star {
-      height: 16px;
-      width: 16px;
-      background-image: url(/src/images/star.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-
-      &:nth-child(-n + 4) {
-        background-image: url(/src/images/star-active.svg);
-      }
-    }
-
-    &-text {
-      padding: 0;
-      margin: 0;
-
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-
-      color: rgba(6, 11, 53, 1);
-    }
-  }
-
-  &__stars-grop {
-    display: flex;
-    gap: 4px;
   }
 
   &__price {
@@ -99,7 +75,7 @@
       font-weight: 400;
       line-height: 18px;
 
-      color: rgba(97, 96, 112, 1);
+      color: $grey-color;
     }
 
     &-price {
@@ -110,7 +86,7 @@
       font-weight: 700;
       line-height: 18px;
 
-      color: rgba(0, 0, 0, 1);
+      color: $color-text;
     }
   }
 
@@ -123,21 +99,21 @@
     height: 40px;
     width: 100%;
 
-    background-color: rgba(0, 172, 220, 1);
+    background-color: $border-color;
 
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
 
-    border: 1px solid rgba(0, 172, 220, 1);
+    border: 1px solid $border-color;
     border-radius: 5px;
 
-    color: rgba(255, 255, 255, 1);
+    color: $white-color;
     text-transform: uppercase;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 1);
-      color: rgba(0, 172, 220, 1);
+      background-color: $white-color;
+      color: $border-color;
     }
   }
 }
