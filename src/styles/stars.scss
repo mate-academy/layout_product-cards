@@ -8,14 +8,14 @@
     background-repeat: no-repeat;
     margin-right: 4px;
 
-    @for $i from 1 through 4 {
-      &--#{$i} {
-        background-image: url(../images/star-active.svg);
-      }
-    }
-
-    &--5 {
+    &:last-of-type {
       background-image: url(../images/star.svg);
+    }
+  }
+
+  @for $i from 0 through 5 {
+    &--#{$i} > &__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
     }
   }
 }
