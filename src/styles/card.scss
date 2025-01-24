@@ -1,0 +1,120 @@
+@use './vars.scss';
+
+body {
+  margin: 0;
+  font-family: vars.$font;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  margin: auto;
+}
+
+.card__layout {
+  width: 198px;
+  height: 406px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &-image {
+    width: 160px;
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-position: center;
+    background-size: 160px 134px;
+    margin: 32px 19px 0;
+  }
+
+  &-title {
+    color: vars.$primary-font-color;
+    width: 166px;
+    height: 36px;
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 12px;
+    margin: 40px 16px 0;
+  }
+
+  &-productCode {
+    color: vars.$secondary-font-color;
+    font-size: 10px;
+    font-weight: 400;
+    width: 98px;
+    line-height: 14px;
+    margin: 5px 0 0 17px;
+  }
+
+  &-review {
+    width: 166px;
+    height: 16px;
+    margin: 15px 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-stars {
+      border-radius: 0.5px;
+      order: 1;
+    }
+
+    &-text {
+      order: 2;
+      padding-top: 3px;
+      color: vars.$primary-font-color;
+      font-size: 10px;
+      font-weight: 400;
+    }
+  }
+
+  &-price {
+    width: 166px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 16px 0;
+
+    &-text {
+      padding-top: 0;
+      color: vars.$secondary-font-color;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-amount {
+      color: vars.$primary-font-color;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &-button {
+    width: 166;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: vars.$button-color;
+    border-radius: 5px;
+    border: 1px solid vars.$button-color;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 16px 16px 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      color: vars.$button-color;
+    }
+  }
+}
