@@ -1,0 +1,124 @@
+$font-color-main: #060b35;
+$font-color-secondary: #616070;
+$button-bcg-color: #00acdc;
+$button-hover-bcg-color: #fff;
+$text-hover-color: #00acdc;
+$text-color: #fff;
+$card-border-color: #f3f3f3;
+$catalog-width: 198px;
+$catalog-height: 406px;
+
+.catalog {
+  box-sizing: border-box;
+  width: $catalog-width;
+  height: $catalog-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  padding-top: 32px;
+  padding-left: 19px;
+  padding-right: 19px;
+
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    &-img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &-title {
+    font-family: Roboto, sans-serif;
+    color: $font-color-main;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 4px;
+  }
+
+  &-code {
+    font-family: Roboto, sans-serif;
+    color: $font-color-secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 16px;
+  }
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 24px;
+
+    &-reviwes {
+      font-family: Roboto, sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $font-color-main;
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 16px;
+
+    &-price {
+      font-family: Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $font-color-secondary;
+    }
+
+    &-number {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &-button {
+    padding: 11px 70px;
+    background-color: $button-bcg-color;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid $button-hover-bcg-color;
+
+    &:hover {
+      background-color: #fff;
+      color: $button-bcg-color;
+      border: 1px solid $button-bcg-color;
+    }
+  }
+
+  &-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
