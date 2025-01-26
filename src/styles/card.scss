@@ -3,39 +3,34 @@
   box-sizing: border-box;
   background-color: $main-background-color;
   border: 1px solid $border-color;
+  padding: 32px $card-margin $card-margin;
 
   @include card-border-radius;
 
   &__photo {
     width: 160px;
     height: 134px;
-    margin: 32px 19px;
+    padding-inline: 2.5px;
   }
 
   &__description {
     font-weight: 500;
     font-size: 12px;
     color: $main-text-color;
-
-    @include card-inline-margin;
-
-    margin-block: 8px 4px;
+    margin-bottom: 4px;
+    margin-top: 40px;
   }
 
   &__product-code {
     color: $text-grey-color;
     line-height: 14px;
     margin-bottom: $card-margin;
-
-    @include card-inline-margin;
   }
 
   &__review {
     display: flex;
     justify-content: space-between;
-    margin-block: $card-margin;
-
-    @include card-inline-margin;
+    margin-bottom: 24px;
 
     align-items: center;
 
@@ -53,9 +48,7 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    margin-block: 24px $card-margin;
-
-    @include card-inline-margin;
+    margin-bottom: $card-margin;
   }
 
   &__button {
@@ -66,10 +59,7 @@
 
     width: 165px;
     height: 40px;
-    margin-bottom: $card-margin;
     padding-top: 12px;
-
-    @include card-inline-margin;
 
     border-color: $button-color;
     color: $main-background-color;
