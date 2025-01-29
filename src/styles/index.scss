@@ -1,3 +1,126 @@
+@import './utils/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+p,
+h2 {
+  margin: 0;
+}
+
+html {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.4;
+  color: $secondary;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  max-width: 200px;
+  padding: 32px 16px 16px;
+  background: $white;
+  border: 1px solid $gray-elements;
+  border-radius: 5px;
+
+  &__picture {
+    max-width: 160px;
+    margin: 0 auto 40px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $main-accent;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    display: block;
+    padding: 11px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid $blue-accent;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: $white;
+    border-radius: 5px;
+    background: $blue-accent;
+
+    &:hover {
+      background: $white;
+      color: $blue-accent;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  width: fit-content;
+
+  &__star {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) no-repeat center;
+    margin-right: 4px;
+  }
+
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background: url(../images/star-active.svg) no-repeat center;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $secondary;
+  }
+
+  &__numbers {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.12;
+    text-align: right;
+    color: $main-accent;
+  }
 }
