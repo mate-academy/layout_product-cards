@@ -1,7 +1,15 @@
-@use './blocks/card.scss';
-@use './blocks/stars.scss';
-@use './vars.scss';
+@import 'vars';
+@import 'mixin';
+@import 'reset';
+@import 'card';
+@import 'stars';
 
-body {
-  margin: 0;
+html {
+  @include standard-page;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
 }
