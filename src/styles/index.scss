@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
+  font-family: $font-family;
 }
 
 .item {
-  width: 198px;
-  background-color: #fff;
+  max-width: 200px;
+  background-color: $white;
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
   display: flex;
@@ -17,24 +17,23 @@ body {
 .item__img {
   margin-top: 32px;
   margin-bottom: 40px;
-  width: 160px;
+  max-width: 160px;
 }
 
 .img {
-  width: 100%;
-  height: auto;
+  width: 160px;
+  height: 134px;
 }
 
 .item__name {
   margin-bottom: 4px;
-  
 }
 
 .name {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: rgba(6, 11, 53, 1);
+  color: $main-accent;
   margin: 0;
 }
 
@@ -47,7 +46,7 @@ body {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  color: rgba(97, 96, 112, 1);
+  color: $secondary;
   margin: 0;
 }
 
@@ -56,7 +55,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 .stars {
@@ -64,29 +63,18 @@ body {
   gap: 4px;
 }
 
-.star {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/star-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.star:last-child {
-  background-image: url(../images/star.svg);
-}
-
 .reviews {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  color: rgba(6, 11, 53, 1);
+  color: $main-accent;
 }
 
 .item__price {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  align-items: center;
   width: 160px;
 }
 
@@ -100,14 +88,14 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: rgba(97, 96, 112, 1);
+  color: $secondary;
 }
 
 .num {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  color: rgba(6, 11, 53, 1);
+  color: $main-accent;
 }
 
 .item__button {
@@ -116,19 +104,19 @@ body {
 
 .button {
   width: 160px;
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(0, 172, 220, 1);
+  background-color: $blue-accent;
+  border: 1px solid $blue-accent;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
-  color: rgba(0, 172, 220, 1);
+  color: $white;
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
 .button:hover {
-  background-color: rgba(0, 172, 220, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: $white;
+  color: $blue-accent;
 }
