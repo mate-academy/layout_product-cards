@@ -6,15 +6,12 @@
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
-  &__banner {
-    margin-bottom: 40px;
-  }
-
   &__photo {
     height: 134px;
     width: 160px;
     display: block;
-    margin: 0 auto;
+    margin-inline: auto;
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -27,7 +24,7 @@
   &__code {
     font-weight: 400;
     font-size: 10px;
-    line-height: 14px;
+    line-height: $secondary-lineheight;
     color: $secondary-color;
     margin-bottom: 16px;
   }
@@ -35,11 +32,12 @@
   &__rating {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 24px;
   }
 
   &__number-reviews {
-    line-height: 14px;
+    line-height: $secondary-lineheight;
     font-size: 10px;
     font-weight: 400;
   }
@@ -49,33 +47,36 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    line-height: $primary-lineheight;
 
     &-label {
       font-size: 12px;
+      line-height: $primary-lineheight;
       color: $secondary-color;
     }
 
     &-number {
       font-weight: bold;
+      line-height: $primary-lineheight;
       font-size: 16px;
     }
   }
 
   &__button-element {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 40px;
+    border: 1px solid $blue-accent-color;
     border-radius: 5px;
     box-sizing: border-box;
 
+    font-size: 14px;
     color: white;
     font-weight: bold;
-    text-align: center;
-    align-content: center;
     text-transform: uppercase;
     text-decoration: none;
     background-color: $blue-accent-color;
-    border: 1px solid $blue-accent-color;
 
     &:hover {
       color: $blue-accent-color;
