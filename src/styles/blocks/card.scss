@@ -1,0 +1,97 @@
+[data-qa='card'] {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  font-family: $font-cards;
+
+  width: 200px;
+
+  gap: 0;
+
+  border: 1px solid $border-color;
+  border-radius: 5px;
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+
+  background-image: url(../images/imac.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  margin: 32px 19px 0;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  padding-inline: $padding-inline;
+  padding-top: 40px;
+}
+
+.code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: $second-font-color;
+
+  padding-inline-start: $padding-inline;
+  padding-top: 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding-inline: $padding-inline;
+  padding-top: 24px;
+
+  &__price {
+    color: $second-font-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__meaning {
+    color: $first-font-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+[data-qa='hover'] {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: $buttom-text-color;
+
+  background-color: $buttom-color;
+
+  margin: 16px;
+}
+
+[data-qa='hover']:hover {
+  background-color: $buttom-text-color;
+  color: $buttom-color;
+
+  border: 1px solid $buttom-color;
+}
