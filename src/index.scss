@@ -1,0 +1,119 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  width: 200px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  flex-direction: column;
+
+  &__image {
+    padding: 32px 19px 40px;
+    img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__title {
+    text-align: start;
+    line-height: 18px;
+    font-size: 12px;
+    margin: 0 16px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 4px 84px 18px 16px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 16px;
+
+    .stars {
+      display: flex;
+      align-items: center;
+
+      &__star {
+        width: 16px;
+        height: 16px;
+        background-image: url('./images/star.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__star:last-child {
+        margin-right: 0;
+      }
+
+      &__star:nth-child(-n + 4) {
+        background-image: url('./images/star-active.svg');
+      }
+    }
+  }
+
+  &__price-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 400;
+    color: #616070;
+    align-items: center;
+    margin: 16px;
+
+    p {
+      margin: 0;
+    }
+
+    p:last-child {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #060b35;
+    }
+  }
+
+  &__button {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    margin: 0 16px 16px;
+    background-color: #00acdc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      background-color: white;
+      border: 1px solid #00acdc;
+      a {
+        color: #00acdc;
+      }
+    }
+  }
+}
