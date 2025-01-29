@@ -1,0 +1,29 @@
+@use "../root/mixin" as *;
+
+$initial-star: 1;
+$total-stars: 5;
+$active-stars: 4;
+
+.card__stars {
+  display: flex;
+
+  width: fit-content;
+
+  .stars {
+    @for $star from $initial-star through $total-stars {
+      &--star--#{$star} {
+        @include star-mixin;
+
+        background-image: url(../images/star.svg);
+      }
+
+      &--star--#{$star}:nth-child(-n + #{$active-stars}) {
+        background-image: url(../images/star-active.svg);
+      }
+
+      &--star--#{$star}:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
