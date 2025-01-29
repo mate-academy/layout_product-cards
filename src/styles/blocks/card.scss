@@ -1,31 +1,29 @@
 .card {
   padding: 32px 16px 16px;
-  width: 200px;
-
+  width: $card-width;
+  border-radius: 5px;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
-  border-radius: 5px;
 
   &__photo {
-    height: 134px;
-    width: 160px;
     display: block;
-    margin-inline: auto;
+    width: 160px;
+    height: 134px;
     margin-bottom: 40px;
+    margin-inline: auto;
   }
 
   &__title {
-    font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    font-weight: 500;
+    line-height: $primary-lineheight;
     margin-bottom: 4px;
   }
 
-  &__code {
-    font-weight: 400;
+  &__product-code {
     font-size: 10px;
     line-height: $secondary-lineheight;
-    color: $secondary-color;
+    color: $secondary-text-color;
     margin-bottom: 16px;
   }
 
@@ -33,12 +31,13 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
     margin-bottom: 24px;
   }
 
-  &__number-reviews {
-    line-height: $secondary-lineheight;
+  &__reviews {
     font-size: 10px;
+    line-height: $secondary-lineheight;
     font-weight: 400;
   }
 
@@ -46,42 +45,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     margin-bottom: 16px;
 
     &-label {
+      color: $secondary-text-color;
       font-size: 12px;
+      font-weight: 400px;
       line-height: $primary-lineheight;
-      color: $secondary-color;
     }
 
     &-number {
-      font-weight: bold;
-      line-height: $primary-lineheight;
+      font-weight: 700;
       font-size: 16px;
+      line-height: $primary-lineheight;
     }
   }
 
-  &__button-element {
+  &__button {
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: 40px;
-    border: 1px solid $blue-accent-color;
-    border-radius: 5px;
     box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $blue-accent-color;
 
+    color: #fff;
     font-size: 14px;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 16px;
+
     text-decoration: none;
+    text-transform: uppercase;
     background-color: $blue-accent-color;
 
     &:hover {
+      background-color: #fff;
       color: $blue-accent-color;
-      background-color: white;
-      cursor: pointer;
     }
   }
 }
