@@ -1,3 +1,127 @@
+$font-color-main: #060b35;
+$font-color-second: #616070;
+$button-color: #00acdc;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 134px;
+    width: 160px;
+    margin: 0 auto;
+    background-image: url(../images/imac.jpeg);
+  }
+
+  &__text {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $font-color-main;
+  }
+
+  &__code {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $font-color-second;
+  }
+
+  &__reviews {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    &-number {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $font-color-main;
+    }
+  }
+
+  .stars {
+    display: flex;
+
+    &__star {
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    & .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    &-name {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $font-color-second;
+    }
+
+    &-prices {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $font-color-main;
+    }
+  }
+
+  &__link {
+    margin-top: 16px;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    background-color: $button-color;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: none;
+      color: $button-color;
+    }
+  }
 }
