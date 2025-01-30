@@ -1,0 +1,67 @@
+@use "../root/mixin" as *;
+@use "../root/variables" as *;
+
+.card {
+  @include card-mixin;
+
+  &__hero {
+    width: 100%;
+    height: 134px;
+    margin-bottom: 36.5px;
+    padding: 0 3px;
+
+    object-fit: fill;
+  }
+
+  &__font {
+    color: $primary-color;
+
+    @include font-mixin(10px, 400, 14px);
+
+    &--title {
+      @include font-mixin(12px, 500, 18px);
+    }
+
+    &--subtitle {
+      margin: 4px 0 16px;
+
+      color: $secondary-color;
+    }
+
+    &--review {
+      margin-top: 1px;
+
+      @include font-mixin(10px, 400, 12px);
+    }
+
+    &--price {
+      color: $secondary-color;
+
+      @include font-mixin(12px, 400, 18px);
+    }
+
+    &--value {
+      margin-top: -0.5px;
+
+      @include font-mixin(16px, 700, 18px);
+    }
+  }
+
+  &__review {
+    @include flex-mixin;
+  }
+
+  &__price {
+    @include flex-mixin;
+
+    margin: 24px 0 16px;
+  }
+
+  &__link {
+    line-height: 16px;
+
+    &--button {
+      @include button-mixin;
+    }
+  }
+}
