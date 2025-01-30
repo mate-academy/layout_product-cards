@@ -1,0 +1,100 @@
+.card {
+  margin: 0;
+  padding: 0 16px;
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  font-family: Roboto, sans-serif;
+  color: $color--accent;
+
+  &__img {
+    height: 134px;
+    width: 160px;
+    display: block;
+    margin-inline: auto;
+    margin-block: 32px 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-decoration: none;
+    color: $color--accent;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.4;
+    color: $color--grey;
+    margin-block: 4px 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__price {
+    padding-block: 24px 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-title {
+    @include reset-block-margin;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color--grey;
+  }
+
+  &__price-price {
+    @include reset-block-margin;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.12;
+    text-align: start;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__button {
+    display: block;
+    height: 40px;
+    padding-block: 12px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: #fff;
+    text-decoration: none;
+    background-color: $color--blue;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      color: $color--blue;
+      background-color: #fff;
+      border: 1px solid $color--blue;
+    }
+  }
+}

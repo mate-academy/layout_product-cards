@@ -1,0 +1,18 @@
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  :nth-child(-n + #{$count--stars}) {
+    background-image: url('../images/star-active.svg');
+  }
+
+  &__star {
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+  }
+}
