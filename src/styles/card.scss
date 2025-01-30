@@ -1,0 +1,106 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  border-radius: $border-rounding;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  &__img {
+    object-fit: contain;
+    width: 160px;
+    height: 134px;
+    margin: 32px 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    width: 166px;
+    height: 36px;
+    color: $main-text-color;
+  }
+
+  &__product-code {
+    align-self: normal;
+    font-size: 10px;
+    line-height: 14px;
+    width: 98px;
+    height: 14px;
+    color: $secondary-text-color;
+  }
+
+  &__reviews {
+    display: flex;
+    align-self: normal;
+    justify-content: space-around;
+    align-items: center;
+
+    &-stars {
+      display: flex;
+    }
+
+    &-stars :last-child {
+      background-image: url(../images/star.svg);
+    }
+
+    &-star {
+      margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-text {
+      font-size: 10px;
+      line-height: 16px;
+      color: $main-text-color;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-self: normal;
+    justify-content: space-around;
+    align-items: center;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-text-color;
+    }
+
+    &-amount {
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-align: center;
+    width: 166px;
+    height: $card-link-height;
+    border: none;
+    border-radius: $border-rounding;
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: $card-link-height;
+  }
+
+  &__link:hover {
+    cursor: pointer;
+    border: 1px solid;
+    background-color: $button-text-color;
+    color: $button-bg-color;
+  }
+}
