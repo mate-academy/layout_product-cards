@@ -13,106 +13,90 @@ html {
 }
 
 body {
-  font-family: $font-family;
   margin: 0;
-  padding: 0;
+  font-family: Roboto, serif;
+  color: $main-text-color;
 }
 
 .card {
-  display: flex;
-  width: 198px;
-  height: 405px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
-  flex-direction: column;
-  background-color: white;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid;
 
   &__image {
-    width: 160px;
+    display: block;
     height: 134px;
-    object-fit: contain;
+    width: 160px;
+    margin-bottom: 40px;
+    margin-inline: auto;
   }
 
   &__title {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    height: 36px;
+    font-size: 12px;
     font-weight: 500;
-    font-size: $font-size-md;
-    line-height: $line-height-md;
+    line-height: $primary-lineheight;
+    margin-bottom: 4px;
   }
 
   &__code {
-    width: 98px;
-    height: $line-height-sm;
-    font-weight: 400;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
-    align-self: flex-start;
-    margin: 4px 0 0 16px;
-    padding-right: 40px;
+    line-height: $secondary-lineheight;
+    color: $secondary-text-color;
+    font-size: 10px;
+    margin-bottom: 16px;
   }
 
   &__rating {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin: 12px 0;
+    margin-bottom: 24px;
   }
 
   &__rewiews {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 166px;
-    height: 16px;
-    margin-top: 16px;
+    font-size: 10px;
+    line-height: $secondary-lineheight;
+  }
+
+  &__label {
+    color: $secondary-text-color;
+    line-height: $primary-lineheight;
+    font-size: 12px;
   }
 
   &__price {
-    &-wrapper {
-      width: 31px;
-      height: $line-height-md;
-      font-weight: 400;
-      font-size: $font-size-md;
-      line-height: $line-height-md;
-      margin-right: 83px;
-    }
-    &-label {
-      width: 50px;
-      height: $line-height-md;
-      font-weight: 700;
-      font-size: $font-size-lg;
-      line-height: $line-height-md;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
 
-    &-value {
-      width: 50px;
-      height: $line-height-md;
-      font-weight: 700;
-      font-size: $font-size-lg;
-      line-height: $line-height-md;
-    }
+  &__value {
+    line-height: $primary-lineheight;
+    font-size: 16px;
+    font-weight: 700;
   }
 
   &__button {
-    width: 100%;
-    height: 40px;
-    background: $primary-color;
-    color: $white;
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: blue_color_for_card;
     border-radius: 5px;
-    font-family: $font-family;
-    transition: all 0.3s ease;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
-      background: $white;
-      color: $primary-color;
-      border: 1px solid $primary-color;
-      cursor: pointer;
+      background-color: #fff;
+      color: blue_color_for_card;
+      border: 1px solid blue_color_for_card;
     }
   }
 }
