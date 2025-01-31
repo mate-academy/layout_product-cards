@@ -1,117 +1,14 @@
+@import './values.scss';
+@import './card.scss';
+@import './stars.scss';
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 10px;
   line-height: 14px;
-
-  --main-color: #00acdc;
-  --text-main-color: #060b35;
-  --text-secondary-color: #616070;
 }
 
 body {
   margin: 0;
 }
 
-.card {
-  width: 200px;
-  box-sizing: border-box;
-  border: 1px solid #edeef3;
-  border-radius: 5px;
-  padding: 32px 16px 16px;
-}
-
-.card__image {
-  display: block;
-  width: 160px;
-  height: 134px;
-  margin: 0 auto 40px;
-}
-
-.card__title {
-  margin: 0 auto 4px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 500;
-  color: var(--text-main-color);
-}
-
-.card__code {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  margin-bottom: 16px;
-  color: var(--text-secondary-color);
-}
-
-.card__review-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 24px;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.stars__star:last-child {
-  margin-right: 0;
-}
-
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
-.card__review-count {
-  color: var(--text-main-color);
-}
-
-.card__price-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.card__price-label {
-  color: var(--text-secondary-color);
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.card__price {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
-  color: var(--text-secondary-color);
-}
-
-.card__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--main-color);
-  box-sizing: border-box;
-  height: 40px;
-  border: 1px solid var(--main-color);
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.card__button:hover {
-  background-color: #fff;
-  color: #00acdc;
-}
