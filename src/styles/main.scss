@@ -1,10 +1,10 @@
-@import 'blocks/variables';
+@import './variables';
 
 .product-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   width: 200px;
   height: 408px;
@@ -12,19 +12,17 @@
   border: 1px solid $color-border;
   padding: 32px 16px 16px;
 
-  &_photo {
+  &__photo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 134px;
   }
 
   &__img {
     display: block;
     margin: auto;
-    max-width: 100%;
-    max-height: 100%;
+    width: 160px;
+    height: 134px;
     object-fit: contain;
   }
 
@@ -46,8 +44,8 @@
     color: $color-text;
     font-weight: 500;
     line-height: $line-height-large;
-    width: 166px;
-    padding-top: 40px;
+    margin-top: 40px;
+    text-decoration: none;
   }
 
   &__code {
@@ -60,14 +58,13 @@
   &__reviews,
   &__stars {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
 
   &__reviews {
-    align-items: center;
     width: 166px;
-    margin-top: 16px;
+    align-items: center;
+    margin-top: 18px;
   }
 
   &__stars {
@@ -86,27 +83,19 @@
     background-position: center;
   }
 
-  &__stars--4 > .product-card__star:nth-child(-n + 4) {
+  &__star:nth-child(-n + 4) {
     background-image: url(../images/star-active.svg);
   }
 
-  &__text {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 53px;
-    height: 16px;
-    flex-shrink: 0;
-  }
-
-  &__rev {
+  &__reviews-text {
     display: flex;
     text-align: right;
     color: $color-text;
     font-size: $font-size-small;
     font-style: normal;
     font-weight: 400;
+    text-decoration: none;
+    height: 16px;
     line-height: $line-height-small;
   }
 
@@ -115,17 +104,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 166px;
     height: 16px;
-    margin-top: 24px;
+    width: 166px;
+    margin-top: 25px;
   }
 
-  &__price-label {
+  &__label {
     display: flex;
     justify-content: center;
-  }
-
-  &__price-text {
     font-size: $font-size-medium;
     color: $color-secondary-text;
     font-style: normal;
@@ -138,9 +124,6 @@
     justify-content: center;
     flex-direction: row;
     flex-shrink: 0;
-  }
-
-  &__num-text {
     text-align: right;
     color: $color-text;
     font-size: $font-size-large;
@@ -149,47 +132,28 @@
     line-height: $line-height-large;
   }
 
-  &__btn-text {
+  &__btn {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 27px;
-    height: 16px;
-    font-size: 14px;
+    align-items: center;
+    height: 40px;
+    width: 166px;
+    text-decoration: none;
+    font-size: $font-size-middle;
     font-style: normal;
     font-weight: 700;
     line-height: $line-height-medium;
     text-transform: uppercase;
+    border-radius: $border-radius;
+    background-color: $color-button;
     color: $color-basic;
-    transition: color 0.3s;
+    border: 1px solid transparent;
+    margin-top: 16px;
   }
 
-  &__btn-link {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-[data-qa='hover'] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 166px;
-  height: 40px;
-  border-radius: $border-radius;
-  background-color: $color-button;
-  border: 1px solid transparent;
-  margin-top: 16px;
-
-  &:hover {
+  &__btn:hover {
     border: 1px solid $color-button;
     background-color: $color-basic;
-  }
-
-  &:hover .product-card__btn-text {
     color: $color-button;
   }
 }

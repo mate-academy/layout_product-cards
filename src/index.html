@@ -1,3 +1,4 @@
+<!-- #region head -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,9 +14,10 @@
     />
     <link
       rel="stylesheet"
-      href="./styles/index.css"
+      href="./styles/index.scss"
     />
   </head>
+  <!-- #endregion -->
   <body>
     <main
       class="product-card"
@@ -30,45 +32,45 @@
       </div>
 
       <div class="product-card__header">
-        <p class="product-card__title">
+        <a
+          href="#apple"
+          class="product-card__title"
+          data-qa="hover"
+        >
           APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
-        </p>
+        </a>
         <p class="product-card__code">Product code: 195434</p>
       </div>
 
       <div class="product-card__reviews">
-        <div class="product-card__stars product-card__stars--4">
+        <div class="product-card__stars">
           <div class="product-card__star"></div>
           <div class="product-card__star"></div>
           <div class="product-card__star"></div>
           <div class="product-card__star"></div>
           <div class="product-card__star"></div>
         </div>
-        <div class="product-card__text">
-          <p class="product-card__rev">Reviews: 5</p>
-        </div>
+        <a
+          href="#reviews"
+          class="product-card__reviews-text"
+          data-qa="hover"
+        >
+          Reviews: 5
+        </a>
       </div>
 
       <div class="product-card__price">
-        <div class="product-card__price-label">
-          <p class="product-card__price-text">Price:</p>
-        </div>
-        <div class="product-card__num">
-          <p class="product-card__num-text">$2,199</p>
-        </div>
+        <p class="product-card__label">Price:</p>
+        <p class="product-card__num">$2,199</p>
       </div>
 
-      <div
+      <a
+        href="#buy"
         class="product-card__btn"
         data-qa="hover"
       >
-        <a
-          href="#"
-          class="product-card__btn-link"
-        >
-          <p class="product-card__btn-text">buy</p>
-        </a>
-      </div>
+        buy
+      </a>
     </main>
   </body>
 </html>
