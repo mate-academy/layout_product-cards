@@ -3,33 +3,28 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   width: 200px;
-  height: 408px;
+  height: 410px;
   border-radius: $border-radius;
   border: 1px solid $color-border;
-  padding: 32px 16px 16px;
 
   &__photo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 32px;
   }
 
   &__img {
-    display: block;
-    margin: auto;
     width: 160px;
     height: 134px;
-    object-fit: contain;
   }
 
   &__header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-top: 40px;
     gap: 4px;
   }
 
@@ -40,11 +35,11 @@
   }
 
   &__title {
+    width: 166px;
     font-size: $font-size-medium;
     color: $color-text;
     font-weight: 500;
     line-height: $line-height-large;
-    margin-top: 40px;
     text-decoration: none;
   }
 
@@ -55,23 +50,21 @@
     line-height: $line-height-small;
   }
 
-  &__reviews,
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 16px;
+    margin-top: 16px;
+    gap: 17px;
+  }
+
   &__stars {
     display: flex;
     justify-content: space-between;
-  }
-
-  &__reviews {
-    width: 166px;
     align-items: center;
-    margin-top: 18px;
-  }
-
-  &__stars {
     width: 96px;
     height: 16px;
-    flex-shrink: 0;
-    line-height: $line-height-medium;
   }
 
   &__star {
@@ -80,7 +73,6 @@
     background-image: url(../images/star.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
   }
 
   &__star:nth-child(-n + 4) {
@@ -89,56 +81,55 @@
 
   &__reviews-text {
     display: flex;
-    text-align: right;
+    align-items: center;
     color: $color-text;
     font-size: $font-size-small;
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
     height: 16px;
-    line-height: $line-height-small;
   }
 
   &__price {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    height: 16px;
+    height: 18px;
     width: 166px;
-    margin-top: 25px;
+    margin-top: 24px;
+    flex-shrink: 0;
+    line-height: 1px;
   }
 
   &__label {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: $font-size-medium;
     color: $color-secondary-text;
+    line-height: $line-height-large;
     font-style: normal;
     font-weight: 400;
-    line-height: $line-height-large;
+    height: 18px;
   }
 
   &__num {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-shrink: 0;
-    text-align: right;
     color: $color-text;
+    height: 18px;
+    line-height: $line-height-large;
     font-size: $font-size-large;
     font-style: normal;
     font-weight: 700;
-    line-height: $line-height-large;
   }
 
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     height: 40px;
     width: 166px;
-    text-decoration: none;
+    margin-top: 16px;
     font-size: $font-size-middle;
     font-style: normal;
     font-weight: 700;
@@ -147,13 +138,17 @@
     border-radius: $border-radius;
     background-color: $color-button;
     color: $color-basic;
-    border: 1px solid transparent;
-    margin-top: 16px;
+    text-decoration: none;
   }
 
   &__btn:hover {
+    box-sizing: border-box;
     border: 1px solid $color-button;
     background-color: $color-basic;
     color: $color-button;
   }
+}
+
+p {
+  margin: 0;
 }
