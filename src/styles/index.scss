@@ -1,3 +1,20 @@
+// 1. reset browsers default margins, so body and/or html needs to be margin 0.
+// 2. card width is 200px including border, so what I could do is either A width - border or B I could do box-sizing style.
+// 3. Need to use image from the folder. I should be able to use an <img> tag this time.
+// 4. Link styles on :hover needs to be changed. It is NOT a BUTTON, it is a LINK so <li><a>Buy</a></li>. on Hover the button needs to go from all blue to white with blue border.
+// 5. Need to add `data-qa="card"` attribute to the card, basically the parent of the card.
+// 6. Need to add `data-qa="hover"` attribute to the link `BUY`
+// 7. `background-image: url()` should be relative to the `index.scss`. So it should start with `../images`
+// 8. I can rewrite STARS assignment with SASS and use it here.
+// 9. I need to use a different FONT, currently i am not sure which one. Maybe its the one from Navbar exercise?? As in catalog task I think i will have to reuse the navbar. Fonts -> [google fonts](https://fonts.google.com/)
+
+@use 'card';
+@use 'button';
+@use 'stars';
+@use 'variables';
+
 body {
   margin: 0;
+  font-family: variables.$roboto, sans-serif;
+  font-weight: normal;
 }
