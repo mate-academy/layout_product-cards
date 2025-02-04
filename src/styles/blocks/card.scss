@@ -1,86 +1,85 @@
-@use 'variables' as vars;
-
 .card {
   display: flex;
   flex-direction: column;
 
   box-sizing: border-box;
-  width: vars.$card-width;
+  width: $card-width;
   padding: 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
 
-  &__img {
+  &-img {
     height: 134px;
     width: 160px;
     margin: 16px auto 40px;
-    object-fit: cover;
+    object-fit: fill;
   }
 
-  &__content {
+  &-content {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: vars.$card-main-color;
+    color: $card-main-color;
   }
 
-  &__description {
+  &-description {
     margin-bottom: 4px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
   }
 
-  &__code {
-    color: vars.$card-secondary-color;
+  &-code {
+    color: $card-secondary-color;
     margin-bottom: 16px;
   }
 
-  &__rating {
+  &-rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
   }
 
-  &__price {
+  &-price {
     display: flex;
     justify-content: space-between;
     line-height: 18px;
     margin-bottom: 16px;
+
+    &-lable {
+      font-size: 12px;
+      color: $card-secondary-color;
+    }
+
+    &-cost {
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 
-  &__button {
+  &-button {
     display: flex;
     flex-direction: column;
   }
 
-  &__link {
-    height: vars.$card-button-height;
-    line-height: vars.$card-button-height;
+  &-link {
+    height: $card-button-height;
+    line-height: $card-button-height;
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    color: vars.$card-button-hover-color;
-    background-color: vars.$card-button-color;
+    color: $card-button-hover-color;
+    background-color: $card-button-color;
     border-radius: 5px;
   }
 
-  &__link:hover {
-    color: vars.$card-button-color;
-    background-color: vars.$card-button-hover-color;
-    border: 1px solid vars.$card-button-color;
+  &-link:hover {
+    color: $card-button-color;
+    box-sizing: border-box;
+    background-color: $card-button-hover-color;
+    border: 1px solid $card-button-color;
   }
-}
-
-.price {
-  font-size: 12px;
-  color: vars.$card-secondary-color;
-}
-
-.cost {
-  font-size: 16px;
-  font-weight: 700;
 }
