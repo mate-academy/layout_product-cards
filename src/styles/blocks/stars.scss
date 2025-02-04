@@ -4,13 +4,9 @@
   margin-top: 15px;
   position: relative;
 
-  @include margin-left;
-
   &__list {
     display: flex;
     list-style: none;
-
-    @include margin-right;
   }
 
   &__reviews {
@@ -19,7 +15,6 @@
 
     @include font-weight(400);
     @include line-height;
-    @include margin-right;
 
     text-align: right;
     text-underline-position: from-font;
@@ -35,7 +30,11 @@
     margin-right: 4px;
   }
 
-  &--4 &__star:nth-child(-n + 4) {
+  &--4 &__star:nth-child(-n + 4),
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--5 &__star:nth-child(-n + 5) {
     background-image: url('../images/star-active.svg');
   }
 }
