@@ -6,17 +6,19 @@
   align-items: center;
   box-sizing: border-box;
   width: 200px;
-  height: 410px;
+  height: 408px;
   border-radius: $border-radius;
   border: 1px solid $color-border;
+  padding: 32px 16px 16px;
 
   &__photo {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
+    margin-bottom: 40px;
   }
 
   &__img {
+    display: block;
     width: 160px;
     height: 134px;
   }
@@ -24,8 +26,8 @@
   &__header {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     gap: 4px;
+    margin-bottom: 18px;
   }
 
   &__title,
@@ -35,7 +37,6 @@
   }
 
   &__title {
-    width: 166px;
     font-size: $font-size-medium;
     color: $color-text;
     font-weight: 500;
@@ -53,69 +54,43 @@
   &__reviews {
     display: flex;
     justify-content: space-between;
-    width: 166px;
-    height: 16px;
-    margin-top: 16px;
     gap: 17px;
-  }
-
-  &__stars {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 96px;
-    height: 16px;
-  }
-
-  &__star {
-    width: 13px;
-    height: 12px;
-    background-image: url(../images/star.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
+    margin-bottom: 24px;
   }
 
   &__reviews-text {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: $color-text;
     font-size: $font-size-small;
+    line-height: $line-height-small;
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
-    height: 16px;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    height: 18px;
     width: 166px;
-    margin-top: 24px;
     flex-shrink: 0;
-    line-height: 1px;
   }
 
   &__label {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     font-size: $font-size-medium;
     color: $color-secondary-text;
     line-height: $line-height-large;
     font-style: normal;
     font-weight: 400;
-    height: 18px;
   }
 
   &__num {
     display: flex;
     justify-content: center;
     color: $color-text;
-    height: 18px;
     line-height: $line-height-large;
     font-size: $font-size-large;
     font-style: normal;
@@ -140,15 +115,11 @@
     color: $color-basic;
     text-decoration: none;
   }
-
-  &__btn:hover {
-    box-sizing: border-box;
-    border: 1px solid $color-button;
-    background-color: $color-basic;
-    color: $color-button;
-  }
 }
 
-p {
-  margin: 0;
+.product-card__btn:hover {
+  box-sizing: border-box;
+  border: 1px solid $color-button;
+  background-color: $color-basic;
+  color: $color-button;
 }
