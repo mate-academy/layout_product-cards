@@ -29,7 +29,7 @@
     @include margin-left;
     @include margin-right;
 
-    &_code {
+    &-code {
       display: inline-block;
       width: 98px;
       height: 14px;
@@ -73,29 +73,9 @@
     line-height: 16px;
     text-align: center;
     text-decoration: none;
-  }
 
-  &__buy:hover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 166px;
-    height: 40px;
-    position: relative;
-    margin-top: 16px;
-
-    @include margin-left;
-
-    border-radius: 5px;
-
-    @include button-colors($secondary-color, $primary-color);
-
-    font-size: 14px;
-
-    @include font-weight(700);
-
-    line-height: 16px;
-    text-align: center;
-    text-decoration: none;
+    &:hover {
+      @include button-colors($secondary-color, $primary-color);
+    }
   }
 }
