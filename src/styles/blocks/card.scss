@@ -3,20 +3,16 @@
   background-color: white;
   border-radius: 5px;
   width: 200px;
-  height: 408px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   border: 1px solid #f3f3f3;
 
   &__image {
-    background-image: url(../images/imac.jpeg);
-    width: 100%;
+    width: 160px;
     height: 134px;
     margin: 16px 0 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    align-self: center;
   }
 
   &__title {
@@ -27,6 +23,22 @@
 
   &__code {
     margin-bottom: 16px;
+    height: 14px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: end;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    height: 18px;
+    align-items: center;
   }
 
   &__code,
@@ -61,34 +73,17 @@
     color: #616070;
   }
 
-  &__reviews {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-
-  &__reviews-label {
-    align-self: flex-end;
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    align-items: center;
-  }
-
   &__buy-button {
     color: white;
     text-decoration: none;
-    background-color: #00acdc;
+    background-color: $button-blue;
     width: 100%;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: 1px solid #00acdc;
+    border: 1px solid $button-blue;
     box-sizing: border-box;
     text-transform: uppercase;
     font-size: 14px;
@@ -96,6 +91,6 @@
 
   &__buy-button:hover {
     background-color: white;
-    color: #00acdc;
+    color: $button-blue;
   }
 }
