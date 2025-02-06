@@ -1,3 +1,151 @@
+$size: 0;
+$main-accent: #060b35;
+$secondary: #616070;
+$blue-accent: #00acdc;
+
+html {
+  color: $secondary;
+
+  font-family: Roboto, serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body {
-  margin: 0;
+  margin: $size;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: #fff;
+  border: 1px #f3f3f3 solid;
+  border-radius: 5px;
+
+  &__top {
+    width: 160px;
+    height: 134px;
+
+    background-image: url('../images/imac.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    margin: 32px 19px 40px;
+  }
+
+  &__bottom {
+    margin: 0 16px 16px;
+  }
+}
+
+.product-name {
+  margin-bottom: 4px;
+  color: $main-accent;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+}
+
+.stars-reviews {
+  margin-top: 16px;
+  height: 16px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+
+  color: $main-accent;
+  text-align: right;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  &_star {
+    background-image: url(/src/images/star-active.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin-right: 4px;
+
+    width: 16px;
+    height: 16px;
+  }
+
+  & > :nth-child(5) {
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url(/src/images/star.svg);
+  }
+}
+
+.reviews {
+  width: 53px;
+  margin-top: 2px;
+}
+
+.price {
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  &-cost {
+    color: $main-accent;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+  }
+}
+
+.button {
+  position: static;
+  box-sizing: border-box;
+  margin-top: 16px;
+  padding-bottom: 1px;
+
+  background-color: $blue-accent;
+  color: #fff;
+
+  border-radius: 5px;
+  border: 1px solid $blue-accent;
+
+  height: 40px;
+  width: 100%;
+
+  &__text {
+    padding-left: 62px;
+    padding-bottom: 2px;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    font-optical-sizing: auto;
+
+    width: 27px;
+    height: 16px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $blue-accent;
+
+    .button__text {
+      color: $blue-accent;
+    }
+  }
 }
