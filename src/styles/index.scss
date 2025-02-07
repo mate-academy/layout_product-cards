@@ -1,3 +1,153 @@
-body {
+$title-color: #060b35;
+$text-color: #616070;
+$button-color: #00acdc;
+$background-color: #f2f0f0; // Додано змінну для фонового кольору
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: $background-color; // Змінено колір фону на більш світлий
+}
+
+.card {
+  padding: 32px 16px 16px;
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  background-color: #fff;
+
+  &__title {
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $title-color;
+  }
+
+  &__info-code {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $text-color;
+    margin-top: 4px;
+    align-self: start;
+  }
+
+  &__rating {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 166px;
+
+    &-stars {
+      display: flex;
+      align-items: center;
+
+      &-block {
+        display: flex;
+        align-items: center;
+
+      }
+
+      &-star {
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-image: url('../images/star.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 4px;
+        border-radius: 0.5px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:nth-child(-n + 4) {
+          background-image: url('../images/star-active.svg');
+        }
+      }
+    }
+
+    &-reviews {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: center;
+      color: $title-color;
+    }
+  }
+
+  &__price-box {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    height: 18px;
+    top: 317px;
+    left: 17px;
+  }
+
+  &__price-name {
+    font-size: 12px; // Змінено розмір шрифту
+    color: $text-color;
+  }
+
+  &__price-value {
+    font-size: 16px; // Змінено розмір ціни
+    font-weight: 700;
+    line-height: 18px;
+    color: $title-color;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  .card__info {
+    margin-top: 40px;
+    flex-flow: column nowrap;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.card__button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 166px; // Змінено розмір кнопки
+  height: 40px;
+  border-radius: 5px;
+  background-color: $button-color;
+  margin-top: 16px;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 14px; // Оновлено розмір шрифту
+  font-weight: 700;
+  line-height: 16px;
+  border: none;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid $button-color;
+    color: $button-color;
+  }
 }
