@@ -1,0 +1,70 @@
+.card {
+  max-width: 200px;
+  padding: 32px 16px 16px;
+
+  @include center;
+  & > * {
+    width: 100%;
+  }
+  &__image {
+    max-width: 160px;
+    margin-block-end: 40px;
+  }
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-block-end: 4px;
+  }
+  &__code {
+    color: $secondary-text-color;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: left;
+    align-self: flex-start;
+    margin-block-end: 24px;
+  }
+  &__review {
+    @include center-space-between;
+
+    margin-block-end: 16px;
+    .card__review-count {
+      font-size: 10px;
+      line-height: 1.4; /* 14/10 */
+    }
+  }
+  &__price {
+
+    @include center-space-between;
+    margin-block-end: 16px;
+    .card__price-label {
+      color: $secondary-text-color;
+      font-size: 12px;
+      line-height: 1.5; /* 18/12 */
+    }
+    .card__price-value {
+      text-align: right;
+      font-weight: 700;
+      line-height: 1.13; /* 18/16 */
+    }
+  }
+  &__btn {
+    border: 1px solid transparent;
+    background-color: $accent-color;
+    color: $btn-text-color;
+    border-radius: 5px;
+    padding-block: 11px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14; /* 16/14 */
+    text-transform: uppercase;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #fff;
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+  }
+}
