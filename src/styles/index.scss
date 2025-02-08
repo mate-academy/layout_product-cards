@@ -1,3 +1,8 @@
+$margin-left-and-right: 16px;
+$color-to-border: #00acdc;
+$text-color: #060b35;
+$text-color-small: #616070;
+
 body {
   margin: 0;
   width: 200px;
@@ -16,30 +21,30 @@ body {
   &_text {
     font-weight: 500;
     margin-right: 16px;
-    margin-left: 16px;
+    margin-left: $margin-left-and-right;
     padding-top: 206px;
     margin-bottom: 0;
     font-size: 12px;
   }
 
-  &_product_code {
-    color: #616070;
+  &_product-code {
+    color: $text-color-small;
     font-weight: 400;
     font-size: 10px;
-    margin-left: 16px;
+    margin-left: $margin-left-and-right;
     margin-top: 4px;
   }
 
   &_container {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: $margin-left-and-right;
+    margin-right: $margin-left-and-right;
     margin-top: 16px;
   }
 
   &_stars {
     display: flex;
 
-    &__star {
+    &-star {
       background-image: url(/src/images/star.svg);
       background-repeat: no-repeat;
       width: 16px;
@@ -51,25 +56,25 @@ body {
   &_reviews {
     font-weight: 400;
     font-size: 10px;
-    color: #060b35;
+    color: $text-color;
     margin-left: 13px;
   }
 
   &_price {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: $margin-left-and-right;
+    margin-right: $margin-left-and-right;
     margin-top: 24px;
 
-    &_text {
+    &-text {
       font-size: 12px;
       font-weight: 400;
-      color: #616070;
+      color: $text-color-small;
     }
 
-    &_strong {
+    &-strong {
       font-size: 16px;
       font-weight: 700;
-      color: #060b35;
+      color: $text-color;
       margin-left: 80px;
       text-align: right;
     }
@@ -81,11 +86,12 @@ body {
     width: 166px;
     height: 40px;
     position: relative;
-    border: 1px solid #00acdc;
+    border: 1px solid $color-to-border;
     border-radius: 5px;
-    background-color: #00acdc;
+    background-color: $color-to-border;
     margin: 16px;
-    &_button {
+
+    &-button {
       color: white;
       font-size: 14px;
       font-weight: 700;
@@ -98,10 +104,10 @@ body {
   background-color: white;
 }
 
-.card_buy_button:hover {
-  color: #00acdc;
+.card_buy-button:hover {
+  color: $color-to-border;
 }
 
-.card_stars--4 .card_stars__star:nth-child(-n + 4) {
+.card_stars--4 .card_stars-star:nth-child(-n + 4) {
   background-image: url(/src/images/star-active.svg);
 }
