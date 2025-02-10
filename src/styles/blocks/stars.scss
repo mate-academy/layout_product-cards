@@ -1,22 +1,29 @@
-.card__stars {
+.stars {
   display: flex;
+  align-items: center;
 }
 
-.card__star {
-  margin-right: 4px;
-  box-sizing: border-box;
-  width: 16px;
+.stars__star {
   height: 16px;
-  background-image: url('/src/images/star.svg');
-  background-size: contain;
+  width: 16px;
+  margin: 0 2px;
   background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/star.svg);
 }
 
-.card__stars--4 {
-  .card__star:nth-child(1),
-  .card__star:nth-child(2),
-  .card__star:nth-child(3),
-  .card__star:nth-child(4) {
-    background-image: url('/src/images/star-active.svg');
-  }
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars__star:first-child {
+  margin-left: 0;
+}
+
+.stars--5 > .stars__star,
+.stars--1 > .stars__star:nth-child(1),
+.stars--2 > .stars__star:nth-child(-n + 2),
+.stars--3 > .stars__star:nth-child(-n + 3),
+.stars--4 > .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
 }
