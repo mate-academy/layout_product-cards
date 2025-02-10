@@ -1,10 +1,10 @@
-.stars {
+.reviews {
   display: flex;
   margin-bottom: 24px;
   height: 18px;
   justify-content: space-between;
 
-  &__stars-4 {
+  &--4 {
     display: flex;
   }
 
@@ -22,8 +22,12 @@
     background-repeat: no-repeat;
     margin-right: 4px;
   }
+}
 
-  &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
+.reviews--1 .reviews__star:nth-child(-n + 1),
+.reviews--2 .reviews__star:nth-child(-n + 2),
+.reviews--3 .reviews__star:nth-child(-n + 3),
+.reviews--4 .reviews__star:nth-child(-n + 4),
+.reviews--5 .reviews__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
 }
