@@ -17,6 +17,8 @@
     height: 134px;
     border-radius: $card-border-radius;
     margin-top: $margin-top;
+    padding-bottom: 40px;
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,13 +35,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    margin: 0 $margin-left-right;
     flex-grow: 1;
+    margin: 40px $margin-left-right 16px;
 
     &-title {
       font-size: $product-card__details-title-font-size;
       font-weight: bold;
-      margin-top: 40px;
       color: black;
     }
 
@@ -50,15 +51,15 @@
     }
   }
   &__reviews {
-    padding: $product-card-reviews-padding-top;
+    margin-top: $product-card-reviews-padding-top;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+
     &-stars {
       display: flex;
       align-items: center;
       margin-right: 17px;
-
       &-star {
         width: $star-size;
         height: $star-size;
@@ -84,6 +85,7 @@
       font-size: $product-card-review-count-font-size;
       color: #060b35;
       font-weight: 500;
+      text-align: center;
     }
   }
 
@@ -91,7 +93,7 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    margin: 24px $margin-left-right 0;
+    margin: 24px $margin-left-right 16px;
 
     &-label {
       font-size: $product-card-price-label-font-size;
@@ -123,7 +125,7 @@
     text-align: center;
     text-decoration: none;
     border: 1px solid $buy-button-border-color;
-    margin: 16px;
+    margin-bottom: 16px;
 
     &:hover {
       color: $buy-button-hover-text-color;
