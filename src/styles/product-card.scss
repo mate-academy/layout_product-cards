@@ -36,14 +36,14 @@
     align-items: center;
     text-align: center;
 
-    &__title {
-      font-size: 1.2em;
+    &-title-description {
+      font-size: $font-size;
       font-weight: bold;
       margin-bottom: 10px;
       color: #333;
     }
 
-    &__description {
+    &-product-code {
       font-size: $font-size;
       color: #666;
       margin-bottom: 15px;
@@ -55,20 +55,26 @@
       color: #333;
       margin-bottom: 20px;
     }
+  }
 
-    &__buy {
-      padding: 10px 20px;
-      font-size: 1em;
-      color: white;
-      background-color: $button-color;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+  &__link-buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $product-card__link-buy-width;
+    height: $product-card__link-buy-height;
+    font-size: $product-card__link-buy-hover-font-size;
+    color: $product-card__link-buy-text-color;
+    background-color: $product-card__link-buy-background-color;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 
-      &:hover {
-        background-color: $button-hover-color;
-      }
+    &:hover {
+      color: $product-card__link-buy-hover-text-color;
+      background-color: $product-card__link-background-color-hover;
+      border: 1px $product-card__link-buy-border-color;
     }
   }
 }
