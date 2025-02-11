@@ -33,7 +33,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    margin: 0 16px;
+    margin: 0 $margin-left-right;
     flex-grow: 1;
 
     &-title {
@@ -88,21 +88,25 @@
   }
 
   &__price {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 20px;
+    align-items: center;
+    margin: 24px $margin-left-right 0;
 
     &-label {
-      font-size: 12px;
+      font-size: $product-card-price-label-font-size;
       color: #616070;
+      margin-left:$margin-left-right ;
     }
 
     &-value {
-      font-size: 16px;
+      font-size: $product-card-price-value--font-size;
+      margin-left: 85px;
       font-weight: bold;
+      text-align: left;
       color: #060b35;
+      margin-right:$margin-left-right ;
+
     }
   }
 
@@ -119,6 +123,9 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    border: 1px solid $buy-button-border-color;
+    margin: 16px;
+
 
     &:hover {
       color: $buy-button-hover-text-color;
