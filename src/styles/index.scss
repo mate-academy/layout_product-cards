@@ -3,6 +3,12 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .product {
   box-sizing: border-box;
   width: 200px;
@@ -16,7 +22,7 @@ body {
   width: 160px;
   height: 135px;
   margin: 30px 20px 0;
-  background-image: './images/imac.jpeg';
+  background-image: url(../images/imac.jpeg);
   background-size: cover;
 }
 
@@ -42,9 +48,11 @@ body {
   margin-left: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .stars {
+  height: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,13 +61,13 @@ body {
 .stars__star {
   height: 16px;
   width: 16px;
-  background-image: './images/star.svg';
+  background-image: url(../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .stars--level :nth-child(-n + 4) {
-  background-image: './images/star-active.svg';
+  background-image: url(../images/star-active.svg);
 }
 
 .product__reviews {
@@ -95,11 +103,20 @@ body {
   height: 40px;
   margin-bottom: 16px;
   margin-left: 16px;
+  color: #fff;
   background-color: #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 5px;
 }
 
 .button-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
   text-transform: uppercase;
-  color: #fff;
+}
+
+.product__button--buy {
+  background-color: #f3f3f3;
+  color: #00acdc;
 }
