@@ -1,3 +1,143 @@
+html {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
 body {
   margin: 0;
+}
+
+$item_hrift: Roboto, sans-serif;
+$content-width: 200px;
+
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  width: #{$content-width};
+
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  &__Photo {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__Name {
+    margin-bottom: 4px;
+    text-align: left;
+    font-family: #{$item_hrift};
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+  }
+  &__index {
+    display: block;
+
+    margin-bottom: 16px;
+
+    font-family: #{$item_hrift};
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(97, 96, 112, 1);
+  }
+  &__revizor {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: flex-end;
+  }
+  .stars {
+    display: flex;
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .stars--4 .stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+  }
+  &__revi {
+    font-family: #{$item_hrift};
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(6, 11, 53, 1);
+  }
+  &__price {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: space-between;
+
+    &--price {
+      display: block;
+      font-family: #{$item_hrift};
+      font-size: 12px;
+      font-weight: 400;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+      color: rgba(97, 96, 112, 1);
+    }
+    &--money {
+      display: block;
+      font-family: #{$item_hrift};
+
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: end;
+      text-underline-position: from-font;
+
+      text-decoration-skip-ink: none;
+
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+  &__Botton {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    height: 40px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 172, 220, 1);
+    border-radius: 5px;
+    background-color: rgba(0, 172, 220, 1);
+
+    box-shadow: none;
+    font-family: #{$item_hrift};
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+  }
+  a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 172, 220, 1);
+  }
 }
