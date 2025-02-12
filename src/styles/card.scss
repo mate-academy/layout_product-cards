@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 16px;
+  padding-top: 32px;
+
+  &__productimage {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+  }
+
+  &__name::after {
+    content: 'Product code: 195434';
+    display: inline-block;
+    line-height: 14px;
+    font-weight: 400;
+    font-size: 10px;
+    color: #616070;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+
+    &-price {
+      font-weight: 400;
+      font-size: 12px;
+      display: inline-block;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-sum {
+      font-weight: 700;
+      box-sizing: border-box;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    font-weight: 700;
+    margin-top: 16px;
+    background-color: #00acdc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
+    background-color: #f3f3f3;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
+}
