@@ -9,13 +9,12 @@
   border-radius: $card-border-radius;
 
   &__icon {
-    background-image: url('../images/imac.jpeg');
+    box-sizing: border-box;
+
     width: 160px;
     height: 134px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 auto 40px;
+
+    // margin-bottom: 40px;
 
     img {
       width: 100%;
@@ -25,34 +24,41 @@
   }
 
   &__details {
-    display: flex;
+    box-sizing: border-box;
+    display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    text-align: left;
-    flex-grow: 1;
+
+    margin-bottom: 16px;
 
     &-title {
       font-size: $product-card__details-title-font-size;
       font-weight: bold;
       color: black;
+      margin-bottom: 4px;
+      text-align: left;
     }
 
     &-code {
       font-size: $product-card__details--font-size;
-      margin-top: 4px;
       color: #616070;
+      text-align: center;
     }
   }
+
   &__reviews {
+    box-sizing: border-box;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 24px;
 
     &-stars {
       display: flex;
       align-items: center;
-      margin-right: 17px;
+      padding-right: 17px;
+
       &-star {
         width: $star-size;
         height: $star-size;
@@ -86,13 +92,13 @@
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    margin: 24px 0 16px;
+    margin-bottom: 16px;
 
     &-label {
       font-size: $product-card-price-label-font-size;
       color: #616070;
       text-align: left;
-      margin-right: 85px;
+      padding-right: 85px;
     }
 
     &-value {
@@ -100,7 +106,6 @@
       font-weight: bold;
       text-align: right;
       color: #060b35;
-      margin-left: -$margin-left-right;
     }
   }
 
