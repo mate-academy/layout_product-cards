@@ -1,0 +1,37 @@
+.ratecontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars--1 :first-child,
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url(/src/images/star-active.svg);
+}
+
+.reviews {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
