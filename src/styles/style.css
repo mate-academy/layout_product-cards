@@ -9,7 +9,7 @@ body {
   align-items: center;
 }
 
-.product {
+.card {
   box-sizing: border-box;
   width: 200px;
   height: 410px;
@@ -18,7 +18,7 @@ body {
   border-radius: 5px;
 }
 
-.product__image {
+.card__image {
   width: 160px;
   height: 135px;
   margin: 30px 20px 0;
@@ -26,7 +26,7 @@ body {
   background-size: cover;
 }
 
-.product__name {
+.card__name {
   width: 165px;
   height: 35px;
   margin: 40px 15px 0;
@@ -35,7 +35,7 @@ body {
   line-height: 18px;
 }
 
-.product__code {
+.card__code {
   margin-top: 4px;
   margin-left: 16px;
   font-weight: 400;
@@ -43,7 +43,9 @@ body {
   line-height: 14px;
 }
 
-.product__stars {
+/* #region stars */
+
+.stars {
   width: 165px;
   margin-left: 16px;
   display: flex;
@@ -51,14 +53,14 @@ body {
   align-items: center;
 }
 
-.stars {
+.stars__star {
   height: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.stars__star {
+.star {
   height: 16px;
   width: 16px;
   background-image: url(../images/star.svg);
@@ -66,17 +68,19 @@ body {
   background-position: center;
 }
 
-.stars--level :nth-child(-n+4) {
+.stars__star--level :nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
 }
 
-.product__reviews {
+.stars__reviews {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
 }
 
-.product__price {
+/* #endregion */
+
+.card__price {
   width: 165px;
   margin-left: 16px;
   display: flex;
@@ -98,7 +102,7 @@ body {
   line-height: 18px;
 }
 
-.product__button {
+.card__button {
   width: 165px;
   height: 40px;
   margin-bottom: 16px;
@@ -109,6 +113,12 @@ body {
   border-radius: 5px;
 }
 
+.card__button:hover {
+  background-color: #f3f3f3;
+  color: #00acdc;
+  cursor: pointer;
+}
+
 .button-text {
   font-weight: 700;
   font-size: 14px;
@@ -116,7 +126,7 @@ body {
   text-transform: uppercase;
 }
 
-.product__button--buy {
+.card__button--buy {
   background-color: #f3f3f3;
   color: #00acdc;
 }
