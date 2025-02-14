@@ -1,3 +1,133 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 198px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 16px;
+  align-items: center;
+}
+
+.card__img {
+  margin-top: 32px;
+  width: 160px;
+  height: 134px;
+  margin-inline: 19px;
+}
+
+.card__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 40px;
+}
+
+.card__code {
+  align-self: flex-start;
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 4px;
+  color: #616070;
+}
+
+.card__review {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__review-reviews {
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: right;
+}
+
+.card__price {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-price {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #616070;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: right;
+}
+
+.card__link {
+  width: 100%;
+  margin-top: 16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  background-color: #00acdc;
+  color: #fff;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border: 1px #00acdc solid;
+}
+
+.stars {
+  display: flex;
+  position: relative;
+}
+
+.stars__star {
+  position: relative;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  top: 2px;
+  left: 2px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('../images/star.svg');
+  background-size: cover;
+}
+
+.stars__star:nth-of-type(5) {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-of-type(-n + 1),
+.stars--2 .stars__star:nth-of-type(-n + 2),
+.stars--3 .stars__star:nth-of-type(-n + 3),
+.stars--4 .stars__star:nth-of-type(-n + 4),
+.stars--5 .stars__star:nth-of-type(-n + 5) {
+  background-image: url('../images/star-active.svg');
 }
