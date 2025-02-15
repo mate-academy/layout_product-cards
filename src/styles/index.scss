@@ -1,3 +1,107 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+@import './stars';
+
+$main-color: #00acdc;
+$dark-text-color: #060b35;
+$light-text-color: #616070;
+$card-border-color: #f3f3f3;
+$card-border-radius: 5px;
+$transition-duration: 250ms;
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+@mixin font-styles($size, $color, $weight, $height) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+.card {
+  padding: 32px 16px 16px;
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+  width: 200px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: 40px;
+
+    @include font-styles(12px, $dark-text-color, 500, 18px);
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    @include font-styles(10px, $light-text-color, 400, 14px);
+  }
+
+  &__review {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include font-styles(10px, $dark-text-color, 400, 14px);
+  }
+
+  &__price {
+    display: flex;
+    margin-top: 24px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include font-styles(12px, $light-text-color, 400, 18px);
+  }
+
+  &__price-value {
+    @include font-styles(16px, $dark-text-color, 700, 18px);
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+
+    padding: 12px 0;
+    margin-top: 16px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $main-color;
+    transition: background-color $transition-duration ease-in;
+
+    @include font-styles(14px, #fff, 700, 16px);
+
+    &:hover {
+      background-color: transparent;
+      color: $main-color;
+    }
+  }
 }
