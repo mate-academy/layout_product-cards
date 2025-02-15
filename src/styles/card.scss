@@ -1,0 +1,98 @@
+@import 'variables';
+
+.card {
+  border: 1px solid $primary-white;
+  border-radius: 5px;
+  background-color: $primary-white;
+
+  height: 406px;
+  width: 198px;
+
+  &__wrapper {
+    margin-top: $xxl-gap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__product {
+    height: 134px;
+    width: 160px;
+    background: url(../images/imac.jpeg) no-repeat;
+    display: block;
+    background-size: 160px 134px;
+  }
+
+  .content {
+    margin-left: $n-gap;
+    margin-right: $n-gap;
+
+    &__wrapper {
+      margin-top: $lx-gap;
+    }
+
+    &__title {
+      color: $strong-text-blue;
+      font-size: $s-gap;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    &__product-code {
+      margin-top: 4px;
+      color: $subtext-gray;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      align-items: start;
+    }
+
+    &__price {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+
+      &-label {
+        color: $subtext-gray;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      &-value {
+        color: $strong-text-blue;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: $n-gap;
+    margin-left: $n-gap;
+    margin-right: $n-gap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $lx-gap;
+    width: 166px;
+    background-color: $primary-light-blue;
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $primary-white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $primary-white;
+      color: $primary-light-blue;
+      border: 1px solid $primary-light-blue;
+      height: 38px;
+      width: 164px;
+    }
+  }
+}
