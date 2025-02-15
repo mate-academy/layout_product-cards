@@ -1,3 +1,111 @@
+@import '../styles/text_style';
+@import '../styles/stars_style';
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.catalog {
+  &_img {
+    display: block;
+    height: 134px;
+    width: 160px;
+    margin: 32px auto 40px;
+  }
+
+  &_name {
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: $text-color;
+    display: block;
+    margin: 0;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  &_reviews {
+    font-family: Roboto, Arial, sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 10px;
+    color: $text-color;
+    margin: 0;
+    padding-left: 13px;
+  }
+
+  &_code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $little-text-color;
+    margin: 4px 0 16px;
+    padding-left: 16px;
+  }
+
+  &_price {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #{$little-text-color};
+    margin: 0;
+    padding-left: 16px;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    &-value {
+      display: flex;
+      color: #{$text-color};
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+      margin: 0 0 0 auto;
+      padding-right: 16px;
+    }
+  }
+
+  &_btn-buy {
+    font-family: Roboto, Arial, sans-serif;
+    display: block;
+    margin: 16px auto 40px;
+    height: 40px;
+    width: 100%;
+    max-width: 166px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $btn-color;
+    color: #fff;
+    background-color: $btn-color;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &_btn-buy:hover {
+    background-color: #fff;
+    color: $btn-color;
+  }
+}
+
+.card {
+  max-height: 408px;
+  width: 200px;
+  box-sizing: border-box;
+  border: solid #f3f3f3 1px;
+  border-radius: 5px;
+  margin: 0 0 48px;
 }
