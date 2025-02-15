@@ -1,0 +1,122 @@
+* {
+  color: $mainTextColor;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  border: solid 1px #f3f3f3;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  padding-top: 32px;
+
+  &__image {
+    height: 134px;
+    width: 160px;
+    margin-inline: 19px;
+  }
+
+  &__title {
+    padding-inline: $inlinePaddings;
+  }
+
+  &__name {
+    font-family: $basicFont;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+
+    margin-top: 40px;
+  }
+
+  &__code {
+    font-family: $basicFont;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondTextColor;
+
+    margin-top: 4px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 16px;
+
+    &-text {
+      display: block;
+
+      font-family: $basicFont;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      height: 14px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 24px;
+
+    &-text {
+      margin: 0;
+
+      font-family: $basicFont;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $secondTextColor;
+    }
+
+    &-cost {
+      margin: 0;
+
+      font-family: $basicFont;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-block: 16px;
+
+    height: 40px;
+
+    line-height: 38px;
+
+    width: 100%;
+
+    background-color: $accentColor;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: $basicFont;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+
+    border: solid 1px $accentColor;
+
+    &:hover {
+      background-color: transparent;
+      color: $accentColor;
+    }
+  }
+}
