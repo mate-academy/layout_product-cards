@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: $main-card-width + 100px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  padding-top: 32px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+
+  &__img {
+    width: $width-img;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    width: $width-content;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+
+    margin: 0;
+  }
+
+  &__description {
+    width: $width-content;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+
+    margin-bottom: $main-margin-bt;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $width-content;
+
+    margin-bottom: 24px;
+
+    &-text {
+      margin: 0;
+      font-size: 1em;
+      line-height: 14px;
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $width-content;
+
+    margin-bottom: $main-margin-bt;
+
+    &-text {
+      margin: 0;
+      font-size: 1.2em;
+      line-height: 18px;
+      color: rgba(97, 96, 112, 1);
+    }
+
+    &-value {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.6em;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $width-content;
+    height: 40px;
+
+    border: 1px solid $main-btn-color;
+    border-radius: 5px;
+    background: $main-btn-color;
+    transition: all 0.3s;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 16px;
+
+    margin-bottom: $main-margin-bt;
+
+    &:hover {
+      background: none;
+      color: $main-btn-color;
+      transition: all 0.3s;
+    }
+  }
+}
