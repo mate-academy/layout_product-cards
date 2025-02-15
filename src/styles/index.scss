@@ -1,3 +1,111 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+@import 'stars';
+
+$white: #fff;
+$blue: #00ACDC;
+$offblack: #060B35;
+$gray: #616070;
+
+.card {
+  width: 200px;
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    margin-left: 3px;
+    max-width: 160px;
+    height: 134px;
+    box-sizing: border-box;
+  }
+
+  &__discription {
+    color: $offblack;
+    padding-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0;
+    height: 36px;
+    margin: 0;
+  }
+
+  &__prodact {
+    height: 14px;
+    color: $gray;
+    font-size: 10px;
+    padding-top: 4px;
+    margin: 0;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+
+    &-count {
+      margin-inline: 0;
+      font-size: 10px;
+      line-height: 14px;
+      color: $offblack;
+      padding-left: 17px;
+      margin: 0;
+    }
+  }
+
+  &__price {
+    justify-content: space-between;
+    display: flex;
+    padding-top: 24px;
+
+    &-text {
+      color: $gray;
+      font-size: 12px;
+      line-height: 18px;
+      margin-inline: 0;
+      margin: 0;
+    }
+
+    &-cost {
+      color: $offblack;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      padding-left: 85px;
+      margin-inline: 0;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    padding-top: 16px;
+
+    &-buy {
+      background-color: $blue;
+      width: 166px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      justify-content: space-around;
+      color: $white;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-align: center;
+
+      &:hover {
+        border: 1px solid $blue;
+        color: $blue;
+        background-color: $white;
+      }
+    }
+  }
 }
+
