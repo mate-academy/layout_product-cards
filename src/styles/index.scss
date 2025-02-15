@@ -1,3 +1,125 @@
-body {
+$main-accent: #060b35;
+$secondary: #616070;
+$blue-accent: #00acdc;
+$white-accent: #fff;
+
+.product-card {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: $main-accent;
   margin: 0;
+
+  &__element {
+    box-sizing: border-box;
+    width: 200px;
+    border: 1px solid #f3f3f3;
+    background: $white-accent;
+    border-radius: 5px;
+  }
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 160px 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__info {
+    margin: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    width: 166px;
+  }
+
+  &__name {
+    margin: 0;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary;
+    margin-bottom: 6px;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 16px;
+    margin-bottom: 14px;
+    width: 168px;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 19px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 18px;
+    margin-bottom: 16px;
+    width: 168px;
+  }
+
+  &__price-text {
+    color: $secondary;
+    font-weight: 400;
+    margin-right: 85px;
+  }
+
+  &__price-numbers {
+    margin-left: 1px;
+    padding-bottom: 1px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: $white-accent;
+    background: $blue-accent;
+    border: none;
+    height: 40px;
+    line-height: 37px;
+    border-radius: 5px;
+  }
+
+  &__button:hover {
+    background-color: $white-accent;
+    border: 1px solid $blue-accent;
+    color: $blue-accent;
+  }
 }
