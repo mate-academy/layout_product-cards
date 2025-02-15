@@ -1,0 +1,96 @@
+@use './variables';
+
+.card {
+  width: 200px;
+  padding: 0 16px 16px;
+  border: 1px solid $border-card-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    margin: 32px auto 0;
+    width: 160px;
+    height: 134px;
+    display: block;
+  }
+
+  &__name {
+    margin-top: 40px;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-medium;
+    color: $text-color-primary;
+  }
+
+  &__product-code {
+    margin-block: 4px 0;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-small;
+    color: $text-color-secondary;
+    display: flex;
+    align-items: center;
+  }
+
+  &__ratings {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-small;
+    color: $text-color-primary;
+  }
+
+  &__price {
+    margin: 24px 0 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      margin-block: 0;
+      text-align: center;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-medium;
+      color: $text-color-secondary;
+    }
+
+    &-value {
+      margin-block: 0;
+      font-size: $font-size-large;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-medium;
+      color: $text-color-primary;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $button-color;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $button-color;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    height: 40px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: white;
+      color: $button-color;
+    }
+  }
+}
