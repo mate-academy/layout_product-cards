@@ -1,0 +1,32 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  &-container__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    margin: 2px 0 0;
+    color: #060b35;
+  }
+
+  &--0 {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg); /* Active star image */
+    }
+  }
+}
