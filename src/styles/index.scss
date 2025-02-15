@@ -1,3 +1,154 @@
+@import './variables';
+
+// Міксин для центрованих елементів
+@mixin flex-center($width, $height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+}
+
+@mixin star-position {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Міксин для стилю тексту
+@mixin text-style($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+html {
+  font-family: $font-family;
+}
+
 body {
   margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  width: $card-width;
+  height: $card-height;
+
+  &__content {
+    width: $card-width;
+    height: $card-height;
+    border-radius: 5px;
+  }
+
+  &__image {
+    @include flex-center(160px, 134px);
+
+    background-image: url(../images/imac.jpeg);
+    margin-left: 19px;
+    margin-top: 32px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-left: $left-margin;
+    height: 36px;
+    width: 166px;
+
+    &-text {
+      @include text-style($text-size, 500, $text-color);
+
+      line-height: 18px;
+    }
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin-top: 4px;
+    margin-left: $left-margin;
+    line-height: 14px;
+
+    &-text {
+      font-size: 10px;
+      font-weight: 400;
+      color: $subtext-color;
+    }
+  }
+
+  &__rating {
+    @include flex-center(166px, 16px);
+
+    margin-left: 17px;
+    margin-top: 16px;
+
+    // Цикл для стилізації зірок (діти класу &__rating)
+    .rating-star {
+      background-image: url(../images/star.svg); // Зображення за замовчуванням для всіх зірок
+
+      // Цикл для стилізації активних зірок
+      @for $i from 1 through $stars-count {
+        &:nth-child(#{$i}) {
+          @if $i <= $active-stars {
+            background-image: url(../images/star-active.svg); // Заповнена зірка для активних
+          }
+
+          @include star-position; // Позиціонування зірки
+        }
+      }
+    }
+  }
+
+  &-text {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    margin-left: auto;
+    color: $text-color;
+  }
+}
+
+&__price {
+  @include flex-center(166px, 16px);
+
+  margin-top: 24px;
+  margin-left: $left-margin;
+
+  &-text {
+    @include text-style($text-size, 400, $subtext-color);
+  }
+
+  &-value {
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: auto;
+    color: $text-color;
+  }
+}
+
+&__buy {
+  @include flex-center(166px, 40px);
+
+  margin-top: 16px;
+  margin-left: $left-margin;
+  background-color: $button-color;
+  border: 1px solid $button-color;
+  border-radius: $border-radius;
+
+  &-text {
+    @include text-style($buy-button-font-size, $buy-button-font-weight, white);
+
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: white;
+  }
 }
