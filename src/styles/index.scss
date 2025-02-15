@@ -1,3 +1,134 @@
-body {
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 408px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+
+  &__image {
+    margin-top: 33px;
+
+    &-photo {
+      max-width: 160px;
+      max-height: 134px;
+      object-fit: contain;
+    }
+  }
+
+  &__model {
+    margin-top: 40px;
+    width: 166px;
+    height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 0;
+    color: #060b35;
+  }
+
+  &__product-code {
+    margin-top: 4px;
+    align-self: start;
+    width: 98px;
+    height: 14px;
+
+    &-style {
+      white-space: nowrap;
+      padding-left: 17px;
+      font-size: 10px;
+      line-height: 14px;
+      color: #616070;
+      margin: 0;
+    }
+  }
+
+  &__grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 166px;
+    height: 16px;
+    margin-top: 16px;
+
+    &-stars {
+      box-sizing: border-box;
+      width: 96px;
+      height: 16px;
+
+      &-list {
+        list-style: none;
+        justify-content: space-between;
+        margin: 1px;
+
+        &:nth-child(n + 1) {
+          background-image: url(../images/star.png);
+          width: 14px;
+          height: 14px;
+        }
+
+        &-5 {
+          visibility: hidden;
+        }
+      }
+    }
+
+    &-reviews {
+      min-width: 53px;
+      height: 16px;
+      line-height: 16px;
+      font-size: 10px;
+      color: #060b35;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+    margin-top: 24px;
+
+    &-style {
+      display: block;
+      min-width: 31px;
+      height: 18px;
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0;
+      color: #616070;
+    }
+
+    &-amount-style {
+      margin: 0;
+      width: 50px;
+      height: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: #060b35;
+    }
+  }
+
+  &__buy-button {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: inherit;
+    background-color: #00acdc;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+
+    &:hover {
+      color: #00acdc;
+      background-color: #fff;
+    }
+  }
 }
