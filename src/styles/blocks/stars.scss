@@ -1,0 +1,30 @@
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: no-repeat url(../images/star.svg) center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $star-active from 1 through 5 {
+    &--#{$star-active} &__star:nth-child(-n + #{$star-active}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
+
+.number_reviewse {
+  color: var(--text-bg-color);
+}
