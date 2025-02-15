@@ -1,0 +1,70 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  color: $main-font-color;
+
+  &__image {
+    background-image: url(/src/images/imac.jpeg);
+    height: 134px;
+    width: 160px;
+    background-size: 100% 100%;
+    margin-bottom: 40px;
+    margin-inline: auto;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    margin-block: 0 4px;
+  }
+
+  &__code {
+    color: $second-font-color;
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: flex-end;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(/src/images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+      background-image: url(/src/images/star-active.svg);
+    }
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__cost {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    color: $second-font-color;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
