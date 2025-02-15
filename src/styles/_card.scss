@@ -1,0 +1,106 @@
+@import './variables';
+
+// Mixin para efeito hover
+@mixin hover-effect($hover-bg, $hover-color, $border-color) {
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+    border: 1px solid $border-color;
+  }
+}
+
+.card {
+  font-family: $font-family;
+  width: $card-width;
+  height: $card-height;
+  box-sizing: border-box;
+  position: relative;
+  background-color: $container-background;
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+    position: absolute;
+    top: $image-top;
+    left: $image-left;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__text {
+    width: $button-width;
+    height: 36px;
+    position: absolute;
+    top: 207px;
+    left: 17px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    position: absolute;
+    top: 247px;
+    left: 17px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+    text-align: center;
+  }
+
+  &__price {
+    width: $price-width;
+    height: $price-height;
+    position: absolute;
+    top: $price-top;
+    left: $price-left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $price-color;
+
+    &-label {
+      color: $price-label-font-color;
+      font-size: $price-label-font-size;
+      font-weight: $price-label-font-weight;
+      line-height: $price-label-line-height;
+      text-align: $price-label-text-align;
+    }
+
+    &-value {
+      font-size: $price-value-font-size;
+      font-weight: $price-value-font-weight;
+      line-height: $price-value-line-height;
+      text-align: $price-value-text-align;
+    }
+  }
+
+  &__button {
+    width: $button-width;
+    height: $button-height;
+    position: absolute;
+    top: 351px;
+    left: 17px;
+    border-radius: $button-border-radius;
+    background-color: $button-background;
+    color: $button-text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+
+    @include hover-effect(
+      $button-hover-background,
+      $button-hover-text-color,
+      $border-color
+    );
+  }
+}
