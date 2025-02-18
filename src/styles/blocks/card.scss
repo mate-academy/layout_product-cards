@@ -1,0 +1,116 @@
+$title-color: rgba(6, 11, 53, 1);
+$code-color: rgba(97, 96, 112, 1);
+$review-color: rgba(6, 11, 53, 1);
+$price-color: rgba(0, 0, 0, 1);
+$button-color: rgba(0, 172, 220, 1);
+$button-text-color: rgba(255, 255, 255, 1);
+$button-hover-color: rgba(255, 255, 255, 1);
+$button--hover-text-color: rgba(0, 172, 220, 1);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  border-width: 1px;
+
+  &__photo {
+    display: block;
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+
+    margin: 32px 19px 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-inline: 16px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $title-color;
+
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $code-color;
+
+    margin: 0;
+    margin-bottom: 16px;
+
+    align-self: start;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $code-color;
+      margin: 0;
+    }
+
+    &-amount {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $price-color;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background: $button-color;
+    border: none;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    text-transform: uppercase;
+    color: $button-text-color;
+
+    margin-bottom: 16px;
+
+    &:hover {
+      border: 1px solid rgba(0, 172, 220, 1);
+      background-color: $button-hover-color;
+      color: $button--hover-text-color;
+      cursor: pointer;
+    }
+  }
+}
