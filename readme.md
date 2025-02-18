@@ -1,23 +1,28 @@
 # Moyo Product Card
 
-### Description
+## 🎮 About the Project
+A responsive "Moyo Product Card" component featuring a modern design for displaying product information.
 
-- Added "Moyo Product Card" component
+## 🚀 Tech Stack
+- **HTML** (BEM methodology for structured markup)
+- **CSS** (Responsive & clean styles)
+- **JavaScript** (Basic interactivity)
 
-### Stack
+## 🛠️ Tools & Dependencies
+- **ESLint** – Ensuring code quality
+- **Prettier** – Code formatting for readability
+- **Jest** – Unit testing framework
+- **Parcel** – Bundler for fast development
 
-- HTML (BEM)
-- CSS
-- JS
+## 📌 Features
+✅ Modern product card design  
+✅ Fully responsive and adaptive for mobile and desktop  
 
-### Tools
+## 🌐 Demo
+🔗 [Live Demo](https://AndriiZakharenko.github.io/moyo-product-card/)
 
-- ESlint
-- Prettier
-- Jest
-- Parcel
+## 🎨 Figma
+🔗 [View on Figma](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev)
 
-### Demo links
-
-- [Demo](https://AndriiZakharenko.github.io/moyo-product-card/)
-- [Figma](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev)
+## 📜 License
+This project is forked from 💻 [Mate Academy](https://github.com/mate-academy/layout_product-cards)
