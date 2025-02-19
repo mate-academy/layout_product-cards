@@ -21,9 +21,9 @@
 
     margin: 0;
     align-items: center;
-
-    @include contentPadding;
     margin-bottom: 4px;
+
+    @include content-padding;
   }
 
   &__product-code {
@@ -39,12 +39,12 @@
   &__stars {
     display: flex;
     margin-top: 16px;
-
-    @include contentPadding;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 16px;
+
+    @include content-padding;
   }
 
   &__reviews {
@@ -57,11 +57,12 @@
     display: flex;
     height: 18px;
     margin-top: 24px;
-
-    @include contentPadding;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include content-padding;
+
   }
 
   &__price-text {
@@ -73,6 +74,15 @@
     font-weight: 700;
     font-size: 16px;
     color: $main_text_color_1;
+  }
+
+  &__link-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
   }
 
   &__link {
@@ -98,12 +108,4 @@
     }
   }
 
-  &__link-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
 }
