@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+img {
+  width: 160px;
+  height: 134px;
+  margin: 32px 19px 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+  }
+
+  &__name {
+    margin: 36px 16px 0;
+    color: #060b35;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    margin-top: 4px;
+    margin-left: 16px;
+    margin-bottom: 0;
+    color: #616070;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    width: $card-element-width;
+    height: 16px;
+    margin-top: 24px;
+    margin-left: 16px;
+    justify-content: space-between;
+
+    &-text {
+      margin: 0;
+      color: #616070;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-number {
+      margin: 0;
+      color: #060b35;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: $card-element-width;
+    height: 40px;
+    border: 1px solid $card-button-color;
+    border-radius: 5px;
+    margin-top: 18px;
+    margin-left: 16px;
+    background-color: $card-button-color;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__button:hover {
+    background-color: $card-border-color;
+    color: $card-button-color;
+    cursor: pointer;
+  }
+
+  &__button-text {
+    display: inline-block;
+    margin-top: 11px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
