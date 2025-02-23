@@ -1,3 +1,150 @@
+// $height-h1: 70px;
+// $height: 100vh;
+$height-box: 408px;
+$width-box: 200;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  line-height: 14px;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $width-box;
+  border: 1px solid #f3f3f3;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+
+  &__box {
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+  }
+}
+
+.img-prod {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 0 auto 40px;
+}
+
+.title-desc {
+  margin: 0 0 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.prod-code {
+  font-size: 10px;
+  display: flexbox;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.review {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: flex-end;
+
+  .stars {
+    display: flex;
+
+    .star {
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+    }
+    .star:last-child {
+      margin: 0;
+    }
+
+  }
+
+  .stars--1 .star:nth-child(-n+1),
+  .stars--2 .star:nth-child(-n+2),
+  .stars--3 .star:nth-child(-n+3),
+  .stars--4 .star:nth-child(-n+4),
+  .stars--5 .star:nth-child(-n+5)
+  {
+    background-image: url(../images/star-active.svg);
+  }
+
+
+  .span-review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+  }
+
+  &__rate {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &_text {
+    font-size: 12px;
+    line-height: 18px;
+    color: #616070;
+  }
+  &_value {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #00acdc;
+  background-color: #00acdc;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  width: 166;
+  height: 40;
+  top: 351px;
+  left: 17px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #00acdc;
+  border: 1px solid #00acdc;
+}
+
+.button2 {
+  width: 166;
+  height: 40;
+  top: 351px;
+  left: 17px;
+  border-radius: 5px;
+  margin-top: 16px;
+  background-color: white;
+  color: #00acdc;
+  border: 1px solid #00acdc;
 }
