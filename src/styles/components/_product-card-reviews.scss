@@ -1,0 +1,40 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.product-card__reviews {
+  @include flexbox(row, center, space-between);
+
+  margin-bottom: 24px;
+
+  &-stars {
+    @include flexbox(row, center, flex-start);
+
+    padding-right: 17px;
+
+    &-star {
+      width: $star-size;
+      height: $star-size;
+      background-image: url('../images/star.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: $star-spacing;
+    }
+
+    @for $i from 1 through 5 {
+      &--#{$i} {
+        @for $j from 1 through $i {
+          .product-card__reviews-stars-star:nth-child(#{$j}) {
+            background-image: url('../images/star-active.svg');
+          }
+        }
+      }
+    }
+  }
+
+  &-text {
+    font-size: $product-card-review-count-font-size;
+    line-height: 14px;
+    color: #060b35;
+    font-weight: 400;
+  }
+}
