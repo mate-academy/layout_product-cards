@@ -1,0 +1,49 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexbox($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin button(
+  $button-background-color,
+  $button-text-color,
+  $button-font-size,
+  $button-font-line-height,
+  $button-text-decoration,
+  $button-border-color,
+  $button-border-radius,
+  $button-height,
+  $button-width,
+  $button-hover-text-color,
+  $button-background-hover
+) {
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border: 1px solid $button-border-color;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: $button-width;
+  height: $button-height;
+  cursor: pointer;
+  border-radius: $button-border-radius;
+  transition: all 0.3s ease;
+  text-decoration: $button-text-decoration;
+
+  &:hover {
+    color: $button-hover-text-color;
+    background-color: $button-background-hover;
+  }
+}
+
+@mixin responsive-image($width, $height) {
+  width: $width;
+  height: $height;
+}
