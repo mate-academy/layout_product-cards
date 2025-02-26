@@ -1,0 +1,92 @@
+@import './variables';
+
+.product-card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 134px;
+    margin: 0 3px 40px;
+    display: block;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 12px;
+    color: $color__description;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    color: $color__description-code;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__ratings {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 85px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    color: $color__description_code;
+  }
+
+  &__dollar-price {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color__description;
+  }
+
+  .button {
+    border: 1px solid $color__button;
+    background-color: $color__button;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    color: $color__button__text;
+    font-weight: 700;
+    font-size: 14px;
+    outline: none;
+    line-height: 16px;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: $color__button-border;
+      color: $color__button;
+      border: 1px solid $color__button;
+      line-height: 16px;
+      align-items: center;
+    }
+  }
+}
