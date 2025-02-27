@@ -1,3 +1,64 @@
-body {
+@import "./stars"; // Import stars styles
+
+// Global styles - Reset margins
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+// Variables
+$card-width: 200px;
+$font-color: #333;
+$button-bg: #ff6b00;
+$button-bg-hover: #ff3b00;
+
+// Card block (BEM methodology)
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+  border: 1px solid #ddd;
+  padding: 16px;
+  background-color: #fff;
+  align-items: center;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: $font-color;
+  }
+
+  &__price {
+    font-weight: bold;
+    color: $font-color;
+  }
+
+  .stars {
+    margin: 10px 0;
+  }
+
+  &__button {
+    background-color: $button-bg;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $button-bg-hover;
+    }
+  }
 }
