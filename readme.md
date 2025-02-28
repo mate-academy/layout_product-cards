@@ -1,6 +1,6 @@
 # Product cards
 
-Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev).
+Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [this mockup](<https://www.figma.com/file/ojkArVazq7vsX0nbpn9CxZ/Moyo-%2F-Catalog-(ENG)?node-id=11325%3A2287&mode=dev>).
 
 > Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
@@ -16,14 +16,14 @@ Create a pages with product card using `flexbox`, `BEM` and `SCSS` based on [thi
 - Rewrite `stars` block from the [Stars task](https://github.com/mate-academy/layout_stars) with SCSS and use it
 - Find the required font on [google fonts](https://fonts.google.com/) and use.
 
-In this task, you can directly link *.scss files to HTML. This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle the source code.
+In this task, you can directly link \*.scss files to HTML. This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle the source code.
 
 ## Checklist
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://veronikamaliar.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://veronikamaliar.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
