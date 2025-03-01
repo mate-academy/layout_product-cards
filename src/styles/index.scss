@@ -1,3 +1,153 @@
 body {
+  font-family: Roboto, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  .card__image {
+    border-bottom-width: 40px;
+    padding-bottom: 40px;
+
+    padding-left: 3px;
+    padding-right: 3px;
+
+    margin-top: 32px;
+    max-width: 100%;
+    width: 160px;
+    height: 134px;
+  }
+
+  .card__title {
+    display: flex;
+    margin: 0;
+    position: relative;
+    top: -4;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  .card__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .card__rating {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .card__reviews {
+    font-size: 10px;
+    color: #060b35;
+    padding-left: 17px;
+  }
+
+  .card__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card__price-label {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    color: #616070;
+  }
+
+  .card__price {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    color: #060b35;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .card__buy {
+    margin-bottom: 16px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    background-color: #00acdc;
+    color: #fff;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    border: 1px solid #00acdc;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
+
+    &:hover {
+      background-color: #f3f3f3;
+      border-color: #00acdc;
+      color: #00acdc;
+    }
+    &:active {
+      background-color: #00acdc;
+      border-color: #00acdc;
+      color: #f3f3f3;
+    }
+  }
+}
+
+// Блок зірочок, інтеграція з вашим кодом
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 0.5px;
+    margin-right: 4px;
+    background-image: url('../images/star-active.svg');
+    background-size: cover;
+  }
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+/* Активна зірочка */
+.stars__star--active {
+  background-image: url('../images/star-active.svg');
+}
+
+/* Неактивна зірочка */
+.stars__star--inactive {
+  background-image: url('../images/star.svg');
 }
