@@ -1,0 +1,28 @@
+// _stars.scss
+@import 'variables';
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    border-radius: 0.5px;
+    margin-right: 4px;
+    background-image: $star-active-image;
+    background-size: cover;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &__star--active {
+    background-image: $star-active-image;
+  }
+
+  &__star--inactive {
+    background-image: $star-inactive-image;
+  }
+}
