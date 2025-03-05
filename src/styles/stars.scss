@@ -1,0 +1,39 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  margin: 16px 0 0;
+
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    transform: scale(0.95);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__reviews {
+    margin-top: auto;
+    color: #060b35;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+  }
+
+  // Генерація класів для рейтингу
+  @for $i from 0 through 5 {
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
