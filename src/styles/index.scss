@@ -1,3 +1,62 @@
+@import 'blocks/card';
+@import 'blocks/stars';
+
+$main-color: #060b35;
+$secondary-color: #616070;
+$blue-color: #00acdc;
+
 body {
   margin: 0;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 17px;
+  align-items: center;
+
+  &_text {
+    width: 31;
+    height: 18;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary-color;
+  }
+
+  &_amount {
+    width: 50;
+    height: 18;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+  }
+}
+
+.button {
+  display: flex;
+  width: 166;
+  height: 40;
+
+  background-color: $blue-color;
+  border-radius: 5px;
+  margin-left: 17px;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+    color: $blue-color;
+  }
 }
