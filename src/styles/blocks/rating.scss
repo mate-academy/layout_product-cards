@@ -1,0 +1,32 @@
+.rating {
+  padding: 0;
+  margin: 0;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &_reviews {
+    font-size: 10px;
+  }
+}
+
+.stars {
+  &__star {
+    font-size: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &__star.active {
+    background-image: url('../images/star-active.svg');
+  }
+}
