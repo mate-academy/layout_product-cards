@@ -1,3 +1,6 @@
+@import './card';
+@import './stars';
+
 *,
 *::after,
 *::before {
@@ -12,103 +15,4 @@ body {
   margin: 0;
 }
 
-.card {
-  padding: 32px 16px 16px;
-  width: 200px;
-  height: auto;
-  overflow: hidden;
 
-  &__stars {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__title {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    color: #060b35;
-  }
-
-  &__subtitle {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-  }
-
-  &__text {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-    text-align: right;
-    vertical-align: bottom;
-  }
-
-  &__buy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &-text {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      vertical-align: bottom;
-    }
-
-    &-price {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      text-align: right;
-      vertical-align: bottom;
-      color: #060b35;
-    }
-  }
-
-  &__button {
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    text-transform: uppercase;
-
-    width: 100%;
-    height: 40px;
-    background: #00acdc;
-    border: none;
-    border-radius: 5px;
-
-    &:hover {
-      background-color: #fff;
-      border: 1px solid #00acdc;
-      color: #00acdc;
-    }
-  }
-}
-
-.card img {
-  width: 160px;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin-bottom: 40px;
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/star.svg);
-  background-size: cover;
-  margin: 4px;
-}
-
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
