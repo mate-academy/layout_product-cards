@@ -1,3 +1,139 @@
+
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 198px;
+  height: 406px;
+  margin: 28px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+  box-sizing: border-box;
+  padding: 32px 0 16px;
+}
+
+
+.board__image{
+  width: 160px;
+  height: 134px;
+  background-image: url(../images/imac.jpeg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.board__text {
+  font-size: 12px;
+  margin: 40px 16px 0;
+}
+
+.board__product {
+font-weight: 400;
+font-size: 10px;
+line-height: 14px;
+letter-spacing: 0%;
+color: #616070;
+align-self: start;
+margin-left: 16px;
+}
+
+.board__link {
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #00ACDC;
+  display: block;
+  justify-content: center;
+  margin: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.board__link:hover {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #00ACDC;
+  color: #00ACDC;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating__text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+  margin-right: 16px;
+  margin-left: 8.5px;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.price__text{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #616070;
+
+}
+
+.price__number {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-right: 4.5px;
+  margin-left: 16px;
+}
+
+.stars__star {
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px 0 0;
+  object-fit: contain;
+  background-position: 50%;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  object-fit: contain;
+  background-position: 50%;
+  background-image: url('../images/star-active.svg');
 }
