@@ -1,3 +1,5 @@
+@import './variable';
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -5,7 +7,7 @@ body {
 
 .card {
   box-sizing: border-box;
-  width: 198px;
+  width: 200px;
   height: 406px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
@@ -38,25 +40,6 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 166px;
-
-    &--stars-4 {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-
-      &--star {
-        display: block;
-        height: 16px;
-        width: 16px;
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
-
-    &--stars-4 :nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-    }
 
     &--content {
       font-weight: 400;
@@ -119,6 +102,25 @@ body {
   }
 
   &__buy:hover {
-    background-color: #00acdc;
+    background-color: $background-color;
   }
+}
+
+.stars-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__star {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars-4 :nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
 }
