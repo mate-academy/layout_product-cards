@@ -1,0 +1,32 @@
+.stars {
+  display: flex;
+  width: 100%;
+  margin-bottom: 22px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: 0;
+    margin-left: 18.8px;
+    font-family: $bodyFont;
+    line-height: 18px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $bodyColor;
+  }
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url('../images/star-active.svg');
+}
