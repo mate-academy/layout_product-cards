@@ -1,3 +1,124 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    margin: 32px 19px 35px;
+    padding: 0;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 0 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: #060b35;
+  }
+  &__product-code {
+    margin: 4px 16px 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+  }
+  &__reviews {
+    display: flex;
+    margin: 0 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 166px;
+
+    &--stars-4 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &--star {
+        display: block;
+        height: 16px;
+        width: 16px;
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &--stars-4 :nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    &--content {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+      color: #060b35;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    margin: 24px 16px 16px;
+
+    &--name {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: #616070;
+    }
+
+    &--amount {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+      color: #060b35;
+    }
+  }
+
+  &__buy {
+    margin: 0 16px;
+    width: 166px;
+    height: 40px;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0%;
+  }
+  &__buy--link {
+    padding: 15px 65px;
+    text-decoration: none;
+    color: #00acdc;
+  }
+
+  &__buy--link:hover {
+    color: #fff;
+  }
+
+  &__buy:hover {
+    background-color: #00acdc;
+  }
 }
