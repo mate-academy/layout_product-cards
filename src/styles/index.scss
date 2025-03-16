@@ -1,3 +1,109 @@
+@import './variable';
+@import './block__stars';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    margin: 32px 19px 38px;
+    padding: 0;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 0 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $text-color;
+  }
+  &__product-code {
+    margin: 4px 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+  }
+  &__reviews {
+    display: flex;
+    margin: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+
+    &--content {
+      display: block;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    margin: 0 16px;
+
+    &--name {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: #616070;
+    }
+
+    &--amount {
+      display: block;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $text-color;
+    }
+  }
+
+  &__buy {
+    box-sizing: border-box;
+    margin: 0 16px;
+    width: 166px;
+    height: 40px;
+    background-color: $background-color;
+    border: 1px solid $background-color;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0%;
+  }
+  &__buy--link {
+    padding: 12px 65px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__buy--link:hover {
+    color: $background-color;
+  }
+
+  &__buy:hover {
+    background-color: #fff;
+  }
 }
