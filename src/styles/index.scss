@@ -1,3 +1,124 @@
+@import './values';
+@import './block-stars';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flexbox;
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    margin: 30px 19px 35px;
+    width: 160px;
+    height: 134px;
+  }
+  &__title {
+    display: block;
+    width: $element-width;
+    margin: 0 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $main-text-color;
+  }
+
+  &__product-code {
+    display: block;
+    width: 98px;
+    height: 14px;
+    margin: 4px 16px 10px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $secondary-text-color;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    width: $element-width;
+    margin: 0 16px;
+    padding: 0;
+    align-items: baseline;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $element-width;
+    align-items: center;
+    margin: 0 16px;
+    padding: 0;
+  }
+
+  &__link {
+    display: block;
+    width: $element-width;
+    height: 40px;
+    margin: 0 16px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0%;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+  }
+}
+
+.review {
+  display: block;
+  width: 53px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: $main-text-color;
+}
+
+.price {
+  display: block;
+  width: 31px;
+  height: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: $secondary-text-color;
+}
+
+.amount {
+  display: block;
+  width: 50px;
+  height: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: $main-text-color;
 }
