@@ -1,3 +1,127 @@
 body {
+  background-color: #616070;
   margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product-card {
+  font-family: Roboto, sans-serif;
+  border: 1px;
+  border-color: #F3F3F3;
+  background-color: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px;
+  text-align: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 33px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  &__title {
+    width: 166px;
+    height: 36px;
+    justify-content: center;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 41px;
+    margin-bottom: 0;
+    color: #060b35;
+  }
+
+  &__code {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    justify-self: start;
+    margin-top: 4px;
+  }
+
+  &__rating {
+    width: 166px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  &__price {
+    width: 166px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #616070;
+    margin-top: 24px;
+  }
+
+  &__price_price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__button {
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    width: 166px;
+    background-color: #00acdc;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__button:hover {
+    background-color: #fff;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/src/images/star.svg);
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(/src/images/star-active.svg);
 }
