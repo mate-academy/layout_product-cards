@@ -1,127 +1,105 @@
+$secondary: #616070;
+$btn-white-color: #fff;
+$btn-turquoise-color: #00acdc;
+$main-acent: #060b35;
+
 body {
-  background-color: #616070;
   margin: 0;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
 }
 
-.product-card {
-  font-family: Roboto, sans-serif;
-  border: 1px, solid;
-  border-color: #f3f3f3;
-  background-color: #fff;
-  padding-left: 16px;
-  padding-right: 16px;
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
-  text-align: center;
+  padding: 32px 16px 16px;
 
-  &__image {
+  &__photo {
+    display: block;
+    margin: 0 auto 40px;
     width: 160px;
     height: 134px;
-    margin-top: 33px;
-    margin-left: 4px;
-    margin-right: 4px;
   }
 
-  &__title {
-    width: 166px;
-    height: 36px;
-    justify-content: center;
-    text-align: justify;
-    font-weight: 500;
+  &__name {
     font-size: 12px;
+    font-weight: 500;
     line-height: 18px;
-    margin-top: 41px;
-    margin-bottom: 0;
-    color: #060b35;
+    text-align: left;
+    color: $main-acent;
+    margin-bottom: 4px;
+    margin-top: 0;
   }
 
   &__code {
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 400;
-    font-size: 10px;
     line-height: 14px;
-    color: #616070;
-    justify-self: start;
-    margin-top: 4px;
-  }
-
-  &__rating {
-    width: 166px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    align-items: center;
-    margin-top: 16px;
+    text-align: left;
+    margin-bottom: 16px;
+    margin-top: 0;
+    color: $secondary;
   }
 
   &__price {
-    width: 166px;
-    height: 18px;
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: #616070;
-    margin-top: 24px;
+    line-height: 18px;
+    margin-bottom: 16px;
+    margin-top: 0;
+    color: $secondary;
   }
 
-  &__price_price {
-    font-weight: 700;
+  &price-value {
     font-size: 16px;
-    line-height: 18px;
+    font-weight: 700;
+    text-align: right;
     color: #060b35;
   }
 
-  &__button {
-    display: inline-block;
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 40px;
+  &price-header {
+    font-size: 12px;
+    text-align: left;
+    color: #616070;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-top: 0;
+    height: 16px;
     width: 166px;
-    background-color: #00acdc;
-    border: 1px solid #00acdc;
-    border-radius: 5px;
-    color: #fff;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    cursor: pointer;
+  }
+
+  &review-count {
+    text-align: right;
+    color: $main-acent;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $btn-white-color;
+    text-transform: uppercase;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid $btn-turquoise-color;
+    border-radius: 5px;
+    background: $btn-turquoise-color;
+
+    &:hover {
+      background: #fff;
+      color: $btn-turquoise-color;
+    }
   }
-
-  &__button:hover {
-    background-color: #fff;
-    color: #00acdc;
-    border: 1px solid #00acdc;
-  }
-}
-
-.stars {
-  display: flex;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/star.svg);
-}
-
-.stars--1 .stars__star:nth-child(1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url(../images/star-active.svg);
 }
