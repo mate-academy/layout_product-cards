@@ -1,0 +1,31 @@
+.rating {
+  padding: 0;
+  margin: 0;
+  height: $rating-content-size;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &_reviews {
+    font-size: 11px;
+  }
+}
+
+.stars {
+  padding-top: 3px;
+  width: 96px;
+  &__star {
+    font-size: 0;
+    display: inline-block;
+    width: $rating-content-size;
+    height: $rating-content-size;
+    background-image: url('../images/star.svg');
+    background-size: 79%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star.active {
+    background-size: 80%;
+    background-image: url('../images/star-active.svg');
+  }
+}
