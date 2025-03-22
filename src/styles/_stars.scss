@@ -13,6 +13,7 @@
 .stars {
   padding-top: 3px;
   width: 96px;
+  display: flex;
   &__star {
     font-size: 0;
     display: inline-block;
@@ -26,6 +27,16 @@
 
   &__star.active {
     background-size: 80%;
+    background-image: url('../images/star-active.svg');
+  }
+
+  // Highlight the first N stars using stars--N modifiers
+  &--0 .stars__star:nth-child(-n + 0),
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
     background-image: url('../images/star-active.svg');
   }
 }
