@@ -1,0 +1,91 @@
+@import '../utils/variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: $card-width;
+  padding: 32px 16px 16px;
+  border: 1px solid $card-border-color;
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    color: #616070;
+  }
+
+  &__reviews,
+  &__price {
+    @include flex-space-between;
+
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    align-items: center;
+    margin-bottom: 24px;
+
+    &-count {
+      align-self: end;
+    }
+  }
+
+  &__price {
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $card-button-bgcolor;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $card-button-bgcolor;
+
+    &:hover {
+      color: $card-button-bgcolor;
+      background-color: transparent;
+    }
+  }
+}
