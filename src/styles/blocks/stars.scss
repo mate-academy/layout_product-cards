@@ -12,7 +12,9 @@
     margin-right: 4px;
   }
 
-  &--4 &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
+  @for $n from 1 through 5 {
+    &--#{$n} &__star:nth-child(-n + #{$n}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
