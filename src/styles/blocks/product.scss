@@ -1,0 +1,88 @@
+.product {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+
+    @include set-inline-and-top-paddings(32px, 19px);
+  }
+
+  &__name {
+    margin: 0;
+    display: flex;
+
+    @include configure-font(500, 12px, 18px, $defaultTextColor);
+    @include set-inline-and-top-paddings(40px, $defaultInlinePadding);
+  }
+
+  &__code {
+    margin: 0;
+
+    @include configure-font(400, 10px, 14px, #616070);
+
+    padding-left: 16px;
+    padding-top: 4px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include set-inline-and-top-paddings(24px, $defaultInlinePadding);
+
+    &-placeholder {
+      margin: 0;
+
+      @include configure-font(400, 12px, 18px, #616070);
+    }
+
+    &-amount {
+      margin: 0;
+
+      @include configure-font(700, 16px, 18px, $defaultTextColor);
+    }
+  }
+
+  &__buy {
+    @include set-inline-and-top-paddings-one-value($defaultInlinePadding);
+
+    &-button {
+      border-radius: 5px;
+      width: 100%;
+      height: 40px;
+      background-color: $blueAccentColor;
+      border: none;
+
+      @include configure-font(700, 14px, 16px, #fff);
+
+      text-transform: uppercase;
+
+      &:hover {
+        border: 1px solid $blueAccentColor;
+        background-color: #fff;
+        color: $blueAccentColor;
+      }
+    }
+  }
+
+  &__review {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include set-inline-and-top-paddings-one-value($defaultInlinePadding);
+
+    &-count {
+      margin: 0;
+
+      @include configure-font(400, 10px, 14px, $defaultTextColor);
+    }
+  }
+}
