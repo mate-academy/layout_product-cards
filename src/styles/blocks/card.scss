@@ -3,7 +3,7 @@
   box-sizing: border-box;
 
   padding: 32px 16px 16px;
-  border: 1px solid black;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
 
   &__image {
@@ -13,7 +13,7 @@
   }
 
   &__title {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -24,8 +24,9 @@
 
   &__product-code {
     margin-top: 0;
+    margin-bottom: 16px;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
@@ -36,6 +37,19 @@
   &__review {
     display: flex;
     justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 24px;
+  }
+
+  &__count-review {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+
+    margin: 0;
   }
 
   &__price {
@@ -44,7 +58,7 @@
   }
 
   &__price-text {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
@@ -53,7 +67,7 @@
   }
 
   &__price-amount {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
@@ -64,10 +78,12 @@
   }
 
   &__buy {
+    display: block;
+
     background-color: #00acdc;
     border-radius: 5px;
 
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -75,7 +91,14 @@
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
 
     padding-block: 12px;
+
+    &:hover {
+      border: 1px solid #00acdc;
+      background-color: #fff;
+      color: #00acdc;
+    }
   }
 }
