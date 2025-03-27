@@ -11,9 +11,9 @@ body {
 }
 
 .card {
+  @include bcg-color;
+
   width: 198px;
-  height: 406px;
-  background-color: #fff;
   border: solid 1px #f3f3f3;
   border-radius: 5px;
 
@@ -43,8 +43,8 @@ body {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #616070;
 
+    @include color-grey;
     @include margin-inline;
   }
 
@@ -73,9 +73,11 @@ body {
     margin-right: 4px;
   }
 
-  &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
+   &__stars--4 {
+    .card__star:nth-child(-n+4) {
+      background-image: url(../images/star-active.svg);
+    }
+   }
 
   &__reviews {
     display: flex;
@@ -108,7 +110,8 @@ body {
     padding-bottom: 2px;
     font-size: 12px;
     font-weight: 400;
-    color: #616070;
+
+    @include color-grey;
   }
 
   &__number {
@@ -118,13 +121,14 @@ body {
   }
 
   &__button {
-    width: 166px;
+    width: calc(100% - 32px);
     height: 40px;
     background-color: #00acdc;
     color: #fff;
     border: none;
     border-radius: 5px;
     margin-top: 15px;
+    margin-bottom: 16px;
 
     font-size: 13px;
     font-weight: 700;
@@ -139,6 +143,8 @@ body {
     border: solid 1px #00acdc;
     border-radius: 5px;
     color: #00acdc;
-    background-color: #fff;
+
+    @include bcg-color;
   }
 }
+
