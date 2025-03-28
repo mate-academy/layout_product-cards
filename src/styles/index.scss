@@ -1,3 +1,125 @@
-body {
+@import './variables';
+
+* {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product-card {
+  width: 200px;
+  padding: $small-gap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid $gray-elements-color;
+  border-radius: 5px;
+  background-color: $white;
+  box-sizing: border-box;
+
+  &__image-wrapper {
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 160px;
+    height: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc($big-gap - $small-gap);
+  }
+
+  /* &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  } */
+
+  &__title {
+    color: $main-accent-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-top: $verybig-gap;
+  }
+
+  &__code {
+    color: $secondary-color;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    width: 100%;
+    margin-top: $tiny-gap;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: $small-gap;
+
+    &-reviews {
+      color: $main-accent-color;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0%;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: $medium-gap;
+
+    &-text {
+      color: $secondary-color;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+    }
+
+    &-value {
+      color: $main-accent-color;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+    }
+  }
+
+  &__button {
+    color: $white;
+    background-color: $blue-accent;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: $small-gap;
+    &:hover {
+      background-color: $white;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+      transition: all 0.3s ease;
+    }
+  }
 }
