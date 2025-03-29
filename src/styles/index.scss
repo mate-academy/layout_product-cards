@@ -1,3 +1,125 @@
+@use './variables.scss' as vars;
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  height: 408px;
+  width: 200px;
+  border: vars.$border_size solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  &__image {
+    display: block;
+    height: 134px;
+    width: 160px;
+    margin: 32px auto 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin: 40px 16px 4px;
+    color: #060b35;
+  }
+
+  &__productCode {
+    margin: 0 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: #616070;
+  }
+
+  &__ratings {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 16px 0;
+    align-items: flex-end;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: vars.$star_width;
+    height: vars.$star_height;
+    margin: 0 4px 0 0;
+
+    &:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &__reviews {
+    // position: relative;
+    // top: 50%;
+    // transform: translateY(-36%);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: #060b35;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 24px 16px 0;
+    &-text {
+      // position: relative;
+      // top: 50%;
+      // transform: translateY(8%);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      color: #616070;
+    }
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+      color: #060b35;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    width: 166px;
+    height: 40px;
+    background-color: #00acdc;
+    margin: 16px;
+    &:hover {
+      background-color: white;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+    }
+  }
 }
