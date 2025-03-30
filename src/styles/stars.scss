@@ -4,7 +4,7 @@
   display: flex;
 
   &__star {
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,10 @@
   }
 
   & :last-child {
-    background-image: url(../images/star.svg);
     margin-right: 0;
+  }
+
+  &--4 > :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
   }
 }
