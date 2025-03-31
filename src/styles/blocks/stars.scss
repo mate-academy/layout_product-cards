@@ -1,0 +1,42 @@
+.stars-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Раздвигаем элементы по краям
+  width: 100%; // Растягиваем контейнер
+  margin: 16px 0 24px;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+    background-image: url('/src/images/star.svg'); // Серый (неактивный)
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  // Закрашиваем N первых звёзд
+  @for $i from 1 through 5 {
+    .stars--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url('/src/images/star-active.svg'); // Жёлтая (активная)
+    }
+  }
+}
+
+.stars-reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+  margin: 0;
+  color: $primary-color;
+}
