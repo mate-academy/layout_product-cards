@@ -1,79 +1,92 @@
 .card {
   width: 200px;
   height: 408px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border: 1px solid $white-color;
   border-radius: 5px;
 
-  &imac {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  &__imac {
     width: 160px;
     height: 134px;
     margin: 32px 19px 40px;
   }
 
-  &item {
+  &__item {
     align-items: center;
-    margin-left: 16px;
-    margin-bottom: 4px;
-    font-weight: 500;
 
+    margin-bottom: 4px;
+    margin-left: 16px;
+
+    font-weight: 500;
     color: rgb(0, 0, 1);
   }
 
-  &code {
-    font-size: 10px;
-    font-weight: 400;
+  &__code {
     margin-top: 4px;
     padding-left: 16px;
-    color: $grey-color;
-  }
 
-  &reviews {
     font-size: 10px;
     font-weight: 400;
-    margin: 16px;
-    text-align: right;
-    justify-content: space-between;
-  }
-
-  &price {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 16px;
-    font-size: 12px;
-    font-weight: 400;
-    align-items: center;
     color: $grey-color;
   }
 
-  &sum {
-    font-size: 16px;
-    font-weight: 700;
-    margin-left: 16px;
+  &__reviews {
+    justify-content: space-between;
+
+    margin: 16px;
+
+    font-size: 10px;
+    font-weight: 400;
+    text-align: right;
   }
 
-  &buy {
+  &__price {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+
+    margin: 0 16px;
+
+    font-size: 12px;
+    font-weight: 400;
+    color: $grey-color;
+  }
+
+  &__sum {
+    margin-left: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 1);
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 166px;
     height: 40px;
-    border-radius: 5px;
-    border: 1px solid $concept-color;
-    background-color: $concept-color;
     margin: 16px;
+    border: 1px solid $concept-color;
+    border-radius: 5px;
 
     font-size: 14px;
     font-weight: 700;
     color: $white-color;
 
-    &buy:hover {
+    background-color: $concept-color;
+
+    &--hover:hover {
       cursor: pointer;
-      border-radius: 5px;
+
       border: 1px solid $concept-color;
-      background-color: rgba(255, 255, 255);
+      border-radius: 5px;
+
       color: $concept-color;
+
+      background-color: rgba(255, 255, 255);
+
     }
   }
 }
