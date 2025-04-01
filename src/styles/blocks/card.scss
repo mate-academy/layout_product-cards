@@ -1,0 +1,109 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  width: 200px;
+  background-color: $main-background-color;
+  border: 1px solid $main-border-color;
+  border-radius: 5px;
+
+  &__photo {
+    @include flex(center, center);
+
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    @include image-size(160px, 134px);
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 16px;
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+
+    @include text-styles(500, 12px, 150%, $bold-text-color);
+  }
+
+  &__code {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  &__code-text {
+    margin: 0;
+  }
+
+  &__code-value {
+    margin: 0;
+  }
+
+  &__rating {
+    @include flex(space-between, center);
+
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__reviews-text {
+    margin: 0;
+  }
+
+  &__reviews-value {
+    margin: 0;
+  }
+
+  &__price {
+    @include flex(space-between, center);
+
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price-value {
+    margin: 0;
+
+    @include text-styles(700, 16px, 18px, $bold-text-color);
+  }
+
+  &__button {
+    box-sizing: border-box;
+
+    @include flex(center, center);
+
+    height: 40px;
+    background-color: $button-blue-color;
+    border-radius: 5px;
+
+    @include text-styles(500, 14px, 16px, $button-white-color);
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $button-white-color;
+      border: 1px solid $button-blue-color;
+      color: $button-blue-color;
+      cursor: pointer;
+    }
+  }
+}
