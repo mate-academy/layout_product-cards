@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &--0 &__star:nth-child(-n + 4) {
+    background-image: url(../../images/star-active.svg);
+  }
+
+  &-text {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: bottom;
+    color: #060b35;
+  }
+}
