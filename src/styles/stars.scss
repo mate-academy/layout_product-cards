@@ -1,0 +1,40 @@
+// ADDED: Import color module to use color.adjust
+@use 'sass:color';
+
+// Stars component
+.stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  // Individual star
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+
+    // background-image: url('../../images/star.svg');
+    background-image: url('~/src/images/star.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // Review count text
+  &__reviews {
+    margin: 0 0 0 10px;
+    font-size: $font-size-small;
+
+    // UPDATED: Using color.adjust instead of lighten
+    color: color.adjust($color-text-primary, $lightness: $light-text-amount);
+  }
+
+  // Modifiers for different star ratings
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        // background-image: url('../../images/star-active.svg');
+        background-image: url('~/src/images/star-active.svg');
+      }
+    }
+  }
+}
