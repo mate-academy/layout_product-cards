@@ -1,0 +1,106 @@
+// Card component
+.card {
+  width: $card-width;
+  background-color: $color-bg-primary;
+  border-radius: $card-border-radius;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  // Card image container
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // Card content section
+  &__content {
+    padding: $card-padding;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  // Card title
+  &__title {
+    font-size: $font-size-medium;
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+
+  // Product code
+  &__code {
+    font-size: $font-size-small;
+
+    // UPDATED: Using color.adjust instead of lighten
+    color: color.adjust($color-text-primary, $lightness: $light-text-amount);
+    margin: 0 0 10px;
+  }
+
+  // Bottom section with price
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  // Price label
+  &__price-label {
+    font-size: $font-size-medium;
+    margin: 0;
+  }
+
+  // Price value
+  &__price-value {
+    font-size: $font-size-large;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  // Buy button
+  &__button {
+    display: block;
+    width: 100%;
+    background-color: $color-button-primary;
+    color: $color-white;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: $card-border-radius;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: auto;
+    transition: all 0.3s ease;
+
+    // Hover state for button
+    &:hover {
+      // UPDATED: Using color.adjust instead of darken
+      background-color: color.adjust($color-button-primary, $lightness: -10%);
+    }
+
+    // Style for the hover state card button
+    &--hover {
+      background-color: $color-white;
+      color: $color-button-primary;
+      border: 1px solid $color-button-primary;
+    }
+  }
+
+  // Hover card variant
+  &--hover {
+    .card__button {
+      background-color: $color-white;
+      color: $color-button-primary;
+      border: 1px solid $color-button-primary;
+    }
+  }
+}
