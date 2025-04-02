@@ -1,10 +1,10 @@
 .card {
   box-sizing: border-box;
-  width: 195px;
+  width: 200px;
   height: 406px;
-  border-width: 1px;
-  background: #fff;
-  border-radius: 5px solid #f3f3f3;
+  border-radius: 5px;
+  background: $card-background-color;
+  border: 1px solid #f3f3f3;
   padding: 32px 16px 16px;
   display: flex;
   flex-direction: column;
@@ -15,13 +15,13 @@
     display: flex;
     margin-bottom: 40px;
     margin-inline: 3px;
-    background-image: url(../../images/imac.jpeg);
+    background-image: url(../images/imac.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   &__title {
-    color: #060b35;
+    color: $card-title-color;
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -40,7 +40,7 @@
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 0%;
-    color: #616070;
+    color: $card-code-color;
     margin-bottom: 16px;
   }
 
@@ -51,5 +51,38 @@
     width: 166px;
     height: 16px;
     margin-bottom: 24px;
+  }
+
+  &__price {
+    width: 166px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      width: 31px;
+      height: 18px;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: #616070;
+    }
+
+    &-sum {
+      width: 50px;
+      height: 18px;
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+      color: $card-price-color;
+    }
   }
 }

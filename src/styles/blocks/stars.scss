@@ -4,14 +4,18 @@
   &__star {
     width: 16px;
     height: 16px;
-    background-image: url(../../images/star.svg);
+    background-image: url(../images/star.svg);
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 4px;
   }
 
-  &--0 &__star:nth-child(-n + 4) {
-    background-image: url(../../images/star-active.svg);
+
+  // Закрашиваем N первых звёзд
+  @for $i from 1 through 5 {
+    .stars--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg); // Жёлтая (активная)
+    }
   }
 
   &-text {
