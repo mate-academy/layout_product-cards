@@ -1,0 +1,33 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 22px;
+  padding-left: 1.5px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__reviews {
+    font-weight: 400;
+    font-size: $font-size-small;
+  }
+}
+
+.stars__container--0 .stars__star:nth-child(-n + 0),
+.stars__container--1 .stars__star:nth-child(-n + 1),
+.stars__container--2 .stars__star:nth-child(-n + 2),
+.stars__container--3 .stars__star:nth-child(-n + 3),
+.stars__container--4 .stars__star:nth-child(-n + 4),
+.stars__container--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
