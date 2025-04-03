@@ -1,3 +1,6 @@
+@import '../utils/variables';
+@import '../styles/blocks/stars';
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -6,7 +9,6 @@ body {
 
 .card {
   width: 200px;
-
   box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #f3f3f3;
@@ -20,52 +22,58 @@ body {
     height: 134px;
     padding: 32px 19px 40px;
   }
+
   &__content {
     padding: 0 16px 16px;
   }
+
   &__title {
-    font-size: 12px;
+    font-size: $font-size-medium;
     margin: 0 0 5px;
     line-height: 18px;
     font-weight: 430;
-    color: #060b35;
+    color: $text-color;
   }
 
   &__code {
-    font-size: 10px;
+    font-size: $font-size-small;
     color: #616070;
     margin-bottom: 17px;
     margin-top: 0;
   }
-  &__container {
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    background-color: $button-color;
+    border-radius: 5px;
+    border: 1px solid $button-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 0 22px;
-    padding-left: 1.5px;
+    line-height: 16px;
+    letter-spacing: 0;
   }
 
-  &__stars {
-    display: flex;
+  &__button:hover {
+    background-color: #fff;
+    border: 1px solid $button-color;
   }
 
-  &__star {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-  }
-
-  &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
-
-  &__text {
-    font-weight: 400;
-    font-size: 10px;
-
-    vertical-align: bottom;
+  &__button:hover .card__link {
+    color: $button-color;
   }
 }
 
@@ -76,49 +84,15 @@ body {
   margin: 0 0 16px;
 
   &__label {
-    font-size: 12px;
+    font-size: $font-size-medium;
     color: #616070;
     line-height: 18px;
   }
 
   &__value {
-    font-size: 16px;
-    color: #060b35;
+    font-size: $font-size-large;
+    color: $text-color;
     font-weight: 700;
     line-height: 18px;
   }
-}
-
-.card__button {
-  width: 166px;
-  height: 40px;
-  background-color: #00acdc;
-  border-radius: 5px;
-  border: 1px solid #00acdc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-.card__link {
-  font-size: 14px;
-  font-weight: 700;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  line-height: 16px;
-  letter-spacing: 0;
-}
-
-.card__button:hover {
-  background-color: #fff;
-  border: 1px solid #00acdc;
-}
-
-.card__button:hover .card__link {
-  color: #00acdc;
 }
