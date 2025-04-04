@@ -1,0 +1,25 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $stars-right;
+
+  &__star {
+    width: $star-width;
+    height: $star-height;
+    background-image: url(#{$image-path}star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: $star-margin;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through $max-stars {
+    &[data-stars='#{$i}'] > :nth-child(-n + #{$i}) {
+      background-image: url(#{$image-path}star-active.svg);
+    }
+  }
+}
