@@ -1,0 +1,80 @@
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  &:hover .card__button {
+    background-color: #fff;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+  }
+
+  &__wrapper {
+    width: 167px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__link-title {
+    @include font-properties(500, 12px, 18px, $color-primary);
+
+    text-align: start;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    @include font-properties(400, 10px, 14px, $color-secondary);
+
+    margin-bottom: 16px;
+    padding: 0;
+    width: 100%;
+    text-align: start;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__review-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include font-properties(400, 10px, 14px, $color-primary);
+
+    padding-top: 2px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+  }
+}
+
+.button {
+  @include font-properties(700, 14px, 16px, #fff);
+
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $color-blue;
+  padding: 12px 0;
+  border-radius: 5px;
+}
