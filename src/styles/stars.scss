@@ -1,19 +1,25 @@
 .stars {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 0 22px;
+  padding-left: 1.5px;;
   margin-right: $stars-right;
+
+  &__container {
+    display: flex;
+  }
 
   &__star {
     width: $star-width;
     height: $star-height;
     background-image: url(#{$image-path}star.svg);
     background-repeat: no-repeat;
-    background-position: center;
     margin-right: $star-margin;
 
-    &:last-child {
-      margin-right: 0;
+    &__review {
+      font-weight: 400;
+      font-size: $review-font-size;
     }
   }
 
