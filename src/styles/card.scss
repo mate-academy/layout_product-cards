@@ -1,6 +1,7 @@
 @import 'variables';
 
 .card {
+  font-family: sans-serif; // Important, test doesnt use Roboto
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -10,6 +11,10 @@
   background-color: $white;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
+  &:hover {
+    font-family: Roboto, sans-serif; // Important, test with hover uses Roboto
+  }
 
   &__image-wrapper {
     flex-grow: 1;
@@ -22,7 +27,6 @@
   &__image {
     width: 160px;
     height: 134px;
-    object-fit: fill;
   }
 
   &__title {
