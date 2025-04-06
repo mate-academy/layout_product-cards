@@ -1,0 +1,94 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  padding: 16px;
+  background-color: $white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image-wrapper {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    place-content: center;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: fill;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    margin-bottom: 16px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    display: block;
+    height: 40px;
+    background-color: $blue-accent;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-accent;
+    }
+  }
+}
