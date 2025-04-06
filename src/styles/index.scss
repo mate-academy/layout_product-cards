@@ -1,3 +1,126 @@
+$main-accent: #060b35;
+$blue-accent: #00acdc;
+$secondary: #616070;
+$white: #fff;
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: $main-accent;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  padding: 16px;
+  background-color: $white;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image-wrapper {
+  flex-grow: 1;
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 40px;
+  place-content: center;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  object-fit: contain;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  font-size: 10px;
+  line-height: 14px;
+  color: $secondary;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+}
+
+@for $value from 1 through 5 {
+  .stars--#{$value} {
+    .stars__star:nth-child(-n + #{$value}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
+
+.stars__star {
+  background-image: url('../images/star.svg');
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__reviews {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.card__price-text {
+  font-size: 12px;
+  color: $secondary;
+}
+
+.card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__button {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $blue-accent;
+  display: block;
+  height: 40px;
+  border: 1px solid $blue-accent;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+
+.card__button:hover {
+  background-color: $blue-accent;
+  color: $white;
 }
