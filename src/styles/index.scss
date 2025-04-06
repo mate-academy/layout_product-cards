@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   width: 200px;
-  height: 406px;
+  height: 408px;
   padding: 16px;
   background-color: $white;
   border: 1px solid #f3f3f3;
@@ -37,7 +37,7 @@ body {
 .card__image {
   width: 160px;
   height: 134px;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 .card__title {
@@ -77,7 +77,8 @@ body {
   background-image: url('../images/star.svg');
   width: 16px;
   height: 16px;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .stars__star:not(:last-child) {
@@ -107,13 +108,15 @@ body {
 }
 
 .card__button {
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  color: $blue-accent;
+  color: $white;
   display: block;
   height: 40px;
+  background-color: $blue-accent;
   border: 1px solid $blue-accent;
   border-radius: 5px;
   text-align: center;
@@ -121,6 +124,6 @@ body {
 }
 
 .card__button:hover {
-  background-color: $blue-accent;
-  color: $white;
+  background-color: $white;
+  color: $blue-accent;
 }
