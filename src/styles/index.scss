@@ -1,3 +1,76 @@
+$primaryColor: #060b35;
+$secondaryColor: #616070;
+$primaryFont: 12px;
+
+@import 'card';
+@import 'stars';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &__number {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 2px;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__title {
+    font-size: $primaryFont;
+    font-weight: 400;
+    color: $secondaryColor;
+  }
+
+  &__number {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &--blue {
+    background-color: #00acdc;
+    color: #fff;
+  }
+
+  &:hover {
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    background-color: #fff;
+    cursor: pointer;
+    width: 164px;
+    height: 38px;
+  }
 }
