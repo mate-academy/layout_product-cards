@@ -1,3 +1,124 @@
+$primaryColor: #060b35;
+$secondaryColor: #616070;
+$primaryFont: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    font-size: $primaryFont;
+    font-weight: 500;
+    line-height: 18px;
+    color: $primaryColor;
+    margin-bottom: 5px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    color: $secondaryColor;
+    margin-bottom: 18px;
+  }
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &__number {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 2px;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/src/images/star-active.svg);
+  }
+
+  &__star:last-child {
+    margin-left: 0;
+    background-image: url(/src/images/star.svg);
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__title {
+    font-size: $primaryFont;
+    font-weight: 400;
+    color: $secondaryColor;
+  }
+
+  &__number {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &--blue {
+    background-color: #00acdc;
+    color: #fff;
+  }
+
+  &:hover {
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    background-color: #fff;
+    cursor: pointer;
+    width: 164px;
+    height: 38px;
+  }
 }
