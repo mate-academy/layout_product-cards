@@ -1,3 +1,123 @@
+$botomn-color: #00acdc;
+$text-color: #060b35;
+$text-code-color: #616070;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.Card {
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  padding: 0 16px;
+}
+
+.Product {
+  display: block;
+  width: 160px;
+  height: 134px;
+  margin: 32px 4px 40px;
+}
+
+.name_product {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $text-color;
+  margin-bottom: 4px;
+}
+
+.product_code {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $text-code-color;
+  margin-bottom: 16px;
+}
+
+.reit {
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('/src/images/star.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url('/src/images/star-active.svg') !important;
+  }
+}
+
+.revu {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $text-color;
+}
+
+.price {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.price_text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $text-code-color;
+}
+
+.price_number {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.botomn {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  background-color: $botomn-color;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.botomn:hover {
+  display: flex;
+  text-decoration: none;
+  color: $botomn-color;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid $botomn-color;
 }
