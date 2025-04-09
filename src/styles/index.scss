@@ -1,3 +1,89 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  .card__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-left: 19px;
+  }
+  .card__content {
+    margin: 34px 20px 4px 16px;
+    .card__title {
+      line-height: 18.5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #060b35;
+      text-align: justify;
+      margin-bottom: -5px;
+    }
+    .card__description {
+      font-size: 10px;
+      font-weight: 400;
+      color: #616070;
+    }
+    .stars {
+      margin-top: 19px;
+      margin-bottom: 24px;
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      &__star {
+        width: 12px;
+        height: 12px;
+        background-size: cover;
+        margin-right: 9px;
+        background-image: url('../images/star.svg');
+      }
+
+      &__reviews {
+        font-size: 10px;
+        color: #060b35;
+        position: absolute;
+        right: 0;
+      }
+    }
+    .stars--4 .stars__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+
+    .card__price {
+      font-size: 12px;
+      font-weight: 400;
+      color: #616070;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card__price-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: #060b35;
+      margin-bottom: 16px;
+    }
+
+    .card__buy-button {
+      width: 166px;
+      height: 40px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      background-color: #00acdc;
+      border: 1px #00acdc solid;
+      border-radius: 5px;
+    }
+    .card__buy-button:hover {
+      background-color: white;
+      color: #00acdc;
+    }
+  }
 }
