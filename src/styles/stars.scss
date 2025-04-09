@@ -24,11 +24,11 @@
 
 @for $i from 1 through 5 {
   .stars--#{$i} {
-    .stars__star:nth-child(-n + #{if($i == 5, 4, $i)}) {
+    .stars__star:nth-child(-n + #{$i}) {
       background-image: $star-active;
     }
 
-    .stars__star:nth-child(n + #{if($i == 5, 5, $i + 1)}) {
+    .stars__star:nth-child(n + #{$i + 1}) {
       background-image: $star-empty;
     }
   }
