@@ -1,3 +1,9 @@
+@import './stars.scss';
+
+$white-color: #f3f3f3;
+$gray-color: #616070;
+$blue-color: #00acdc;
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -20,7 +26,7 @@ h3 {
 
   padding: 32px 16px 16px;
 
-  border: 1px solid #f3f3f3;
+  border: 1px solid $white-color;
   border-radius: 5px;
 
   &__img {
@@ -45,7 +51,7 @@ h3 {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #616070;
+    color: $gray-color;
   }
 
   &__price {
@@ -64,7 +70,7 @@ h3 {
   &__text {
     line-height: 18px;
     font-size: 12px;
-    color: #616070;
+    color: $gray-color;
   }
 
   &__price-vaule {
@@ -83,53 +89,18 @@ h3 {
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
-    color: #fff;
+    color: $white-color;
 
     width: 166px;
     height: 40px;
 
-    border: 1px solid #00acdc;
+    border: 1px solid $blue-color;
     border-radius: 5px;
-    background-color: #00acdc;
+    background-color: $blue-color;
   }
 
   &__btn:hover {
-    background-color: #fff;
-    color: #00acdc;
+    background-color: $white-color;
+    color: $blue-color;
   }
-}
-
-.evaluation {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100%;
-
-  margin-top: 16px;
-  margin-bottom: 24px;
-
-  &__reviews {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-  }
-
-  &__stars {
-    display: flex;
-  }
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-
-  margin-right: 4px;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/star.svg);
-}
-
-.stars .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
 }
