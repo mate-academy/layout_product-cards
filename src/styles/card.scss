@@ -11,7 +11,9 @@
   }
 
   &__top {
-    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 16px 16px;
   }
 
   &__name {
@@ -43,19 +45,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  &__price-text {
-    font-size: 12px;
-    color: $secondary-color;
-    margin: 0;
-  }
+    &-text {
+      font-size: 12px;
+      color: $secondary-color;
+      margin: 0;
+    }
 
-  &__price {
-    font-size: 16px;
-    font-weight: 700;
-    color: $main-color;
-    margin: 0;
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: $main-color;
+      margin: 0;
+    }
   }
 
   &__button {
@@ -72,15 +74,24 @@
     text-transform: uppercase;
 
     background-color: $blue;
+
+    &-buy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &-buy:hover {
+      background-color: $blue-accent-color;
+    }
   }
 
   &__button:hover {
     background-color: #fff;
     border: 1px solid $button-color;
   }
-
-  &__button:hover .card__link {
-    color: $button-color;
-  }
-
 }
