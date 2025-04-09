@@ -1,0 +1,27 @@
+@import 'variables';
+
+.stars {
+  margin: 19px 0 24px;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    margin-right: 9px;
+    background-size: cover;
+    background-image: url('../images/star.svg');
+  }
+
+  &__reviews {
+    font-size: 10px;
+    color: $color-main;
+    position: absolute;
+    right: 0;
+  }
+
+  &--4 .stars__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+}
