@@ -9,7 +9,6 @@
 
 %text-base {
   font-family: Roboto, sans-serif;
-  text-align: left;
 }
 
 %size-width {
@@ -61,13 +60,15 @@ body {
 
 .description {
   @extend %size-width;
-  @extend %text-base;
 
   @include mx(16px);
 
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
+  color: #060b35;
+  margin-bottom: 4px;
+  font-family: Roboto, sans-serif;
 }
 
 // #endregion
@@ -78,7 +79,6 @@ body {
 
   width: fit-content;
   margin-top: 4px;
-  margin-bottom: 8px;
   line-height: 14px;
 }
 
@@ -101,6 +101,7 @@ body {
 
   width: 53px;
   height: 16px;
+  margin-left: 16px;
 
   font-family: Roboto, sans-serif;
   font-size: 10px;
@@ -135,6 +136,7 @@ body {
   font-weight: 400;
   line-height: 18px;
   color: #616070;
+  text-align: right;
 }
 
 .product__price-value {
@@ -169,13 +171,20 @@ body {
   border-radius: 5px;
 
   font-family: Roboto, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
 
   background-color: #00acdc;
+  border: none;
+
   &:hover {
-    background-color: #007ca3;
+    // если отдельно реализуешь, без ховера карточки
+    background-color: #fff;
+    color: #00acdc;
+    border: 1px solid #00acdc;
   }
 }
 
