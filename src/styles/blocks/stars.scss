@@ -1,0 +1,30 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  &__mark {
+    display: flex;
+
+    &-star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 4px;
+    }
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+
+.stars__mark--4 .stars__mark-star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
