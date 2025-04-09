@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  bottom: 10px;
-  left: 10px;
   width: 100%;
 
   &__star {
@@ -23,14 +21,16 @@
     font-weight: 400;
   }
 
-  &__star:nth-child(1),
-  &__star:nth-child(2),
-  &__star:nth-child(3),
-  &__star:nth-child(4) {
-    background-image: $star-active;
-  }
+}
 
-  &__star:nth-child(5) {
-    background-color: $star-empty;
+@for $i from 1 through 5 {
+  .stars--#{$i} {
+    .stars__star:nth-child(-n + #{if($i == 5, 4, $i)}) {
+      background-image: $star-active;
+    }
+
+    .stars__star:nth-child(n + #{if($i == 5, 5, $i + 1)}) {
+      background-image: $star-empty;
+    }
   }
 }
