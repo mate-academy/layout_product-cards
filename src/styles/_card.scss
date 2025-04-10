@@ -1,0 +1,98 @@
+.card {
+  width: 200px;
+  border: 1px solid rgb(236, 223, 223);
+  padding: 19px;
+
+  &__image {
+    margin-top: 33px;
+    width: 160px;
+    height: 134px;
+  }
+
+  .product__name {
+    font-size: 12px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+
+  .product__code {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: var(--font-weight);
+    color: #616070;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+
+    &__text {
+      font-size: 12px;
+      color: #616070;
+      font-weight: var(--font-weight);
+    }
+
+    &__num {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  .reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    &__num {
+      font-size: 10px;
+      font-weight: var(--font-weight);
+    }
+  }
+
+  .stars {
+    display: flex;
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      background-image: url('../images/star.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:nth-child(-n + 4) {
+        background-image: url('../images/star-active.svg');
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .button {
+    display: inline-block;
+
+    &--buy {
+      margin-top: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+      background-color: var(--button-color);
+      border: none;
+      border-radius: 5px;
+      width: 166px;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid var(--button-color);
+        background-color: white;
+        color: var(--button-color);
+      }
+    }
+  }
+}
