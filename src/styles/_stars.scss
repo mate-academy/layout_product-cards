@@ -1,0 +1,38 @@
+.product__rating {
+  @extend %size-width;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.product__stars-wrapper {
+  margin-left: 16px;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--4 &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+}
