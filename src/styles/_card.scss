@@ -2,22 +2,28 @@
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  padding: 19px;
+  padding: 17px;
+  padding-top: 32px;
+
+  // padding-bottom: 16px;
   box-sizing: border-box;
   flex-direction: column;
   display: flex;
 
   &__image {
-    margin-top: 14px;
     width: 160px;
     height: 134px;
+    display: block;
+    margin: 0 auto;
   }
 
   &__name {
-    font-size: 12px;
     margin-top: 40px;
+    width: 166px;
+    font-size: 12px;
     font-weight: 500;
-    color: #060b35;
+    color: var(--text-color);
+    flex-direction: column;
   }
 
   &__code {
@@ -28,11 +34,12 @@
   }
 
   &__reviews {
+    // margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
     width: 100%;
+    color: var(--text-color);
   }
 
   &__reviews-num {
@@ -45,18 +52,19 @@
     justify-content: space-between;
     margin-top: 26px;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
   }
 
   &__price-text {
     font-size: 12px;
+    line-height: 18px;
     color: #616070;
     font-weight: var(--font-weight);
   }
 
   &__price-num {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: var(--bold-text);
   }
 
   &__button {
@@ -70,7 +78,7 @@
   display: inline-block;
 
   &--buy {
-    font-weight: 700;
+    font-weight: var(--bold-text);
     font-size: 14px;
     text-transform: uppercase;
     align-content: center;
