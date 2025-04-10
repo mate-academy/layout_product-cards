@@ -23,9 +23,9 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
-
+- [DEMO LINK](https://tempiqq.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://tempiqq.github.io/layout_product-cards/report/html_report/)
+git
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
 - [ ] there 2 BEM blocks `card` and `stars` each in their own file
