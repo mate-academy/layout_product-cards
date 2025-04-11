@@ -1,0 +1,28 @@
+@import 'variables';
+
+.stars {
+  position: absolute;
+  left: 17px;
+  top: 277px;
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &--filled {
+      background-image: url('../images/star-active.svg'); // Estrela preenchida
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
