@@ -1,0 +1,33 @@
+.rating {
+  color: #060b35;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  line-height: 16px;
+  width: 100%;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__stars--4 &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+    margin-right: 4px;
+  }
+
+  &__stars {
+    display: flex;
+    list-style: none;
+  }
+
+  &__reviews {
+    color: #060b35;
+
+    line-height: 16px;
+  }
+}
