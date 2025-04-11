@@ -1,3 +1,4 @@
+<!-- src/index.html -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,13 +7,78 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
+    <title>Card with Stars</title>
+
+    <!-- Google Font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SCSS (Parcel дозволяє напряму підключати SCSS як CSS) -->
     <link
       rel="stylesheet"
-      href="./styles/index.scss"
+      href="./index.scss"
+    />
+    <link
+      rel="stylesheet"
+      href="./stars.scss"
+    />
+    <link
+      rel="stylesheet"
+      href="./card.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <img
+        src="/src/images/imac.jpeg"
+        alt="Product"
+        class="card__image"
+      />
+
+      <div class="card__info">
+        <div class="card__title">
+          APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+        </div>
+        <div class="card__code">Product code: 195434</div>
+      </div>
+
+      <div class="rating">
+        <div class="rating__stars stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+        <div class="rating__reviews">Reviews: 5</div>
+      </div>
+
+      <div class="card__price">
+        <span class="card__label">Price:</span>
+        <span class="card__value">$2,199</span>
+      </div>
+
+      <a
+        href="#"
+        class="card__buy"
+        data-qa="hover"
+      >
+        BUY
+      </a>
+    </div>
   </body>
 </html>
