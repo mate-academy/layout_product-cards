@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url('../src/images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.rating__stars {
+  display: flex;
+  align-items: center;
+  height: 100%; // щоб зірки не "висіли" вгорі, якщо буде висота
+}
+
+// Active stars based on modifier class
+@for $i from 0 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background-image: url('../src/images/star-active.svg');
+  }
+}
