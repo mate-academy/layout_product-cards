@@ -1,11 +1,5 @@
 .stars {
   display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  gap: 4px;
-  line-height: 1;
-  height: 16px;
 
   list-style: none;
 
@@ -13,19 +7,20 @@
     width: 16px;
     height: 16px;
     list-style: none;
-    overflow: hidden;
+
     margin: 0;
     padding: 0;
-    border-radius: 0.5px;
 
-    background-image: url('../images/star-active.svg');
+    background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    flex-shrink: 0;
   }
+}
 
-  .stars--4 &__star:nth-child(n + 5) {
-    background-image: url('../images/star.svg');
-  }
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
 }
