@@ -1,14 +1,16 @@
+@import './styles/variables';
+
 .card {
-  width: 178px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  font-family: Roboto, sans-serif;
-  padding: 16px;
+  width: $card-width;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $card-radius;
+  font-family: $font-main;
+  padding: $card-padding;
 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрує всі дочірні елементи по горизонталі */
+  align-items: center;
   text-align: center;
   letter-spacing: 0;
   line-height: 18px;
@@ -22,9 +24,9 @@
 
 .card__info {
   display: block;
-  color: #060b35;
+  color: $color-text;
   text-align: left;
-  margin: 8px 6px 10px;
+  margin: 8px 0 10px;
 }
 
 .card__title {
@@ -33,10 +35,15 @@
   font-weight: 500;
 }
 
+.card__code {
+  font-size: 10px;
+  color: $color-subtext;
+}
+
 .rating {
   display: flex;
   justify-content: space-between;
-  width: 93%;
+  width: 100%;
   align-items: flex-start;
   gap: 6px;
   margin: 4px 0 22px;
@@ -46,42 +53,42 @@
   font-size: 10px;
 }
 
-.card__code {
-  font-size: 10px;
-  color: #616070;
-}
-
 .card__price {
   display: flex;
   justify-content: space-between;
-  color: #616070;
-  width: 93%; // Щоб простір розподілився правильно
+  color: $color-subtext;
+  width: 100%;
 }
 
 .card__value {
   font-size: 16px;
   font-weight: 700;
-  color: #060b35;
+  color: $color-text;
 }
 
 .card__buy {
   display: block;
-  width: 93%;
+  width: 100%;
   margin-top: 16px;
-  padding: 12px 0;
-  background-color: #00acdc;
-
+  padding: 12.5px;
+  background-color: $color-button;
   color: white;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  border-radius: 5px;
+  border-radius: $card-radius;
   transition: background-color 0.3s ease;
-}
 
-.card__buy:hover {
-  background-color: #009fc7;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: $color-button-hover;
+    color: $color-hover-text;
+    border: $color-border-hover;
+    text-decoration: none;
+  }
 }
 
 .card__label {
