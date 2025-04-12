@@ -1,3 +1,90 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap';
+
+$font-large: 16px;
+$font-normal: 12px;
+$font-small: 10px;
+$grey: #616070;
+$main-color: #060b35;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif, serif;
+  padding: 10%;
+  color: #{$main-color};
+  box-sizing: border-box;
+}
+
+.card {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.card_bottom {
+  width: 100%;
+  max-width: 166px;
+  padding: 16px;
+}
+
+.card_image {
+  display: flex;
+  align-items: center;
+  max-width: 160px;
+  margin: 33px auto;
+  background-color: gray;
+}
+
+.card_heading {
+  font-size: #{$font-normal};
+  line-height: 18px;
+  letter-spacing: 0%;
+  width: 166px;
+}
+
+.card_paragraph {
+  font-size: #{$font-small};
+  color: #{$grey};
+  max-width: 166px;
+}
+
+.card_button {
+  width: 166px;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #00acdc;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin: auto;
+}
+
+.card_reviews_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin-bottom: 16px;
+}
+
+.card_reviews_stars {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card_reviews_text {
+  font-size: $font-small;
+  width: 100%;
+  text-align: end;
+}
+
+.card_reviews_star {
+  background-image: url('/src/images/star.svg');
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.card_price_container {
+  display: flex;
+  justify-content: space-between;
 }
