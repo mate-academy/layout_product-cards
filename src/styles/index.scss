@@ -1,31 +1,53 @@
 @import 'variables';
 
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 .card {
+  margin: 0;
+  width: 200px;
   &__img {
+    width: 160px;
     height: 134px;
     left: 20px;
     padding: 32px 16px 0;
+
   }
   &__info {
     padding-inline: $pd_inline;
     font-weight: 500;
-    font-size: 12px;
+    font-size: $fs + 2px;
     line-height: $lh;
     color: $color_1;
     padding-top: $pd_top * 10;
   }
   &__code {
     font-weight: 400;
-    font-size: 10px;
+    font-size: $fs;
     line-height: $lh - 4px;
     color: $color_2;
     padding-inline: 16px;
     padding-top: $pd_top;
   }
+  &__rating{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: $pd_inline;
+  }
   &__reviews {
     display: flex;
     font-weight: 400;
-    font-size: 10px;
+    font-size: $fs;
     line-height: $lh - 4px;
     text-align: right;
     vertical-align: bottom;
@@ -34,7 +56,7 @@
   }
   &__p {
     font-weight: 400;
-    font-size: 12px;
+    font-size: $fs + 2px;
     line-height: $lh;
     vertical-align: bottom;
     color: $color_2;
@@ -46,6 +68,32 @@
     text-align: right;
     vertical-align: bottom;
     color: $color_1;
+
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: $pd_inline;
+    padding-top: $pd_top * 7;
+    padding-bottom: 16px;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: $pd_inline;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $color_3;
+    border:
+      1px solid,
+      $color_3;
+  }
+  &__bottom:hover {
+    background-color: $color_4;
+    border:
+      1px solid,
+      $color_3;
   }
   &__a {
     display: flex;
@@ -54,7 +102,7 @@
     height: 100%;
     width: 100%;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $fs + 4px;
     line-height: $lh - 2px;
     text-align: center;
     text-transform: uppercase;

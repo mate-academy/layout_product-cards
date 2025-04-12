@@ -1,28 +1,22 @@
 @import 'variables';
 
-.card__stars {
+.stars {
+  margin: 0;
   display: flex;
-  padding-top: $pd_top * 4;
-  justify-content: space-between;
-  padding-inline: $pd_inline;
-  .stars {
-    &.stars--4 {
-      display: flex;
-      gap: 4px;
-      .stars__item {
-        background-size: cover;
-        background-image: url('../images/star-active.svg');
-        width: 16px;
-        height: 16px;
-        border-radius: 0.5px;
-      }
-      .stars__nitem {
-        background-size: cover;
-        background-image: url('../images/star.svg');
-        width: 16px;
-        height: 16px;
-        border-radius: 0.5px;
-      }
-    }
+  margin-top: $pd_top * 4;
+
+  .stars__item {
+    background-size: cover;
+    background-image: url('../images/star.svg');
+    width: 16px;
+    height: 16px;
+    border-radius: 0.5px;
+    margin-right: 4px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__item:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
   }
 }
