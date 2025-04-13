@@ -1,27 +1,21 @@
 .card {
-  padding: 32px 16px 16px;
-  height: 408px;
-  width: 200px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
+  background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+  flex-direction: column;
+  width: 200px;
+  height: 408px;
+  padding: 16px;
+  font-family: sans-serif;
+  display: flex;
+
   &__reviews {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    margin: 0 0 24px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: flex;
     &-text {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 53px;
-      height: 16px;
       margin: 0;
       font-size: 10px;
       font-weight: 400;
@@ -30,17 +24,17 @@
   }
 
   &__image {
+    margin-top: 16px;
+    margin-bottom: 40px;
     display: flex;
-    width: 160px;
-    min-height: 134px;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0 40px;
-    background-image: url('../images/imac.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    flex-grow: 1;
+
+    &-wrapper {
+      width: 160px;
+      height: 134px;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
   }
 
   &__title {
@@ -58,7 +52,6 @@
     line-height: 14px;
     color: $secondary2-color;
     justify-content: flex-start;
-    margin: 0 0 16px;
   }
 
   &__price {
