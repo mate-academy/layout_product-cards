@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Product card</title>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -14,7 +14,6 @@
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
-      crossorigin="anonymous"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -25,51 +24,45 @@
       href="./styles/index.scss"
     />
   </head>
-
   <body>
-    <h1>Product cards</h1>
-
     <div
       class="card"
       data-qa="card"
     >
       <img
+        class="card__img"
         src="./images/imac.jpeg"
-        alt="APPLE A1419 iMac 27 Retina 5K Monoblock"
-        class="card__image"
+        alt="Apple A1419 iMac 27 Monoblock"
       />
 
-      <h3 class="card__name">
+      <h2 class="card__title">
         APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
-      </h3>
+      </h2>
 
-      <p class="card__product-code">Product code: 195434</p>
+      <p class="card__code">Product code: 195434</p>
 
-      <div
-        class="stars"
-        data-stars="4"
-      >
-        <div class="stars__container">
-          <div class="stars__star"></div>
-          <div class="stars__star"></div>
-          <div class="stars__star"></div>
-          <div class="stars__star"></div>
-          <div class="stars__star"></div>
-        </div>
-        <p class="stars__reviews">Reviews: 4</p>
+      <div class="card__rating">
+        <ul class="stars stars--4">
+          <li class="stars__star"></li>
+          <li class="stars__star"></li>
+          <li class="stars__star"></li>
+          <li class="stars__star"></li>
+          <li class="stars__star"></li>
+        </ul>
+        <span class="card__reviews">Reviews: 5</span>
       </div>
 
-      <div class="card__prices">
-        <p class="card__prices-text">Price:</p>
-        <p class="card__prices-value">$2,199</p>
+      <div class="card__price">
+        <span>Price:</span>
+        <span class="card__cost">$2,199</span>
       </div>
 
       <a
-        href="#cardButton"
         class="card__button"
+        href="#"
         data-qa="hover"
       >
-        <button class="card__button-buy">Buy</button>
+        Buy
       </a>
     </div>
   </body>
