@@ -1,22 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-}
-
-:root {
-  --main-color: #060b35;
-  --secondary-color: #616070;
-  --light-color: #fff;
-  --buy-color: #00acdc;
+  box-sizing: border-box;
+  font-family: Roboto, Helvetica, serif;
 }
 
 .card {
   padding: 32px 16px 16px;
-  width: 200px;
-  border: 1px solid;
-  border-radius: 5px;
   background-color: var(--light-color);
 }
 
@@ -80,9 +70,7 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 70px;
-  background: var(--btn-color);
-  color: var(--light-color);
+  padding: 12px 86px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 700;
@@ -90,6 +78,8 @@ body {
   text-decoration: none;
   max-width: 100%;
   min-height: 40px;
+  background: var(--btn-color);
+  color: var(--light-color);
 }
 
 .card__buy:hover {
@@ -102,23 +92,8 @@ body {
   display: flex;
 }
 
-.stars__star {
-  background-image: url('/images/star.svg');
-  background-repeat: no-repeat;
-  background-position: 50%;
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-}
-
 .stars__star:last-child {
   margin-right: 0;
 }
 
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
-  background-image: url('/images/star-active.svg');
-}
+
