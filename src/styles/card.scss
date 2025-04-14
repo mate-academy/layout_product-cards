@@ -70,32 +70,33 @@
     text-transform: uppercase;
 
     background-color: $blue;
-  }
 
+    &-buy {
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+  
+      width: 100%;
+      height: auto; // Ensure height is not 0
+  
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+  
+      background-color: $blue;
+  
+      &:hover {
+        background-color: $blue-accent-color;
+      }
+    }
+  }
+  
   &__button:hover {
     border: 1px solid $button-color;
     background-color: #fff;
   }
 
-  &__button:hover .card__link {
+  &__button:hover {
     color: $button-color;
-  }
-}
-
-.card__button-buy {
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: auto; // Ensure height is not 0
-
-  color: #fff;
-  text-decoration: none;
-
-  background-color: $blue;
-
-  &:hover {
-    background-color: $blue-accent-color;
   }
 }

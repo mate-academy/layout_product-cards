@@ -1,11 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Product card</title>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
+    />
+    <title>Product cards</title>
+    <link
+      rel="stylesheet"
+      href="./styles/index.scss"
     />
     <link
       rel="preconnect"
@@ -14,56 +18,62 @@
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
-      href="./styles/index.scss"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     />
   </head>
+
   <body>
     <div
       class="card"
       data-qa="card"
     >
       <img
-        class="card__img"
+        class="card__image"
         src="./images/imac.jpeg"
-        alt="Apple A1419 iMac 27 Monoblock"
+        alt="imac"
       />
 
-      <h2 class="card__title">
-        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
-      </h2>
+      <div class="card__top">
+        <h3 class="card__name">
+          APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+        </h3>
 
-      <p class="card__code">Product code: 195434</p>
+        <p class="card__product-code">Product code: 195434</p>
 
-      <div class="card__rating">
-        <ul class="stars stars--4">
-          <li class="stars__star"></li>
-          <li class="stars__star"></li>
-          <li class="stars__star"></li>
-          <li class="stars__star"></li>
-          <li class="stars__star"></li>
-        </ul>
-        <span class="card__reviews">Reviews: 5</span>
+        <div
+          class="stars"
+          data-stars="4"
+        >
+          <div class="stars__container">
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+            <div class="stars__star"></div>
+          </div>
+          <span class="stars__reviews">Reviews: 5</span>
+        </div>
+
+        <div class="card__prices">
+          <p class="card__prices-text">Price:</p>
+
+          <p class="card__prices-value">$2,199</p>
+        </div>
+
+        <button class="card__button">
+          <a
+            href="#"
+            class="card__button-buy"
+            data-qa="hover"
+          >
+            Buy
+          </a>
+        </button>
       </div>
-
-      <div class="card__price">
-        <span>Price:</span>
-        <span class="card__cost">$2,199</span>
-      </div>
-
-      <a
-        class="card__button"
-        href="#"
-        data-qa="hover"
-      >
-        Buy
-      </a>
     </div>
   </body>
 </html>
