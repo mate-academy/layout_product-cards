@@ -1,8 +1,8 @@
 .card {
+  display: block;
   box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
-  display: block;
 
   &__image {
     width: 160px;
@@ -17,17 +17,18 @@
   }
 
   &__name {
+    margin: 0 0 4px;
+
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: $main-color;
-    margin: 0 0 4px;
   }
 
   &__product-code {
+    margin: 0;
     font-size: 10px;
     color: $secondary-color;
-    margin: 0;
   }
 
   &__reviews {
@@ -42,16 +43,16 @@
     justify-content: space-between;
 
     &-text {
+      margin: 0;
       font-size: 12px;
       color: $secondary-color;
-      margin: 0;
     }
 
     &-value {
+      margin: 0;
       font-size: 16px;
       font-weight: 700;
       color: $main-color;
-      margin: 0;
     }
   }
 
@@ -69,28 +70,32 @@
     text-transform: uppercase;
 
     background-color: $blue;
-
-    &-buy {
-      display: inline-block;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-      color: #fff;
-    }
-
-    &-buy:hover {
-      background-color: $blue-accent-color;
-    }
   }
 
   &__button:hover {
-    background-color: #fff;
     border: 1px solid $button-color;
+    background-color: #fff;
   }
 
   &__button:hover .card__link {
     color: $button-color;
+  }
+}
+
+.card__button-buy {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: auto; // Ensure height is not 0
+
+  color: #fff;
+  text-decoration: none;
+
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue-accent-color;
   }
 }
