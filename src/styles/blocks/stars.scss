@@ -12,8 +12,8 @@
     margin-right: 4px;
   }
 
-  @for $num from 1 through 4 {
-    &__star--#{$num} {
+  @for $num from 1 through 5 {
+    &--#{$num} &__star:nth-child(-n + #{$num}) {
       background-image: url(../images/star-active.svg);
     }
   }
