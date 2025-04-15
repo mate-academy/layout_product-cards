@@ -1,0 +1,23 @@
+.stars {
+  @include flex(flex-start, center);
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include image-size(16px, 16px);
+
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    &--#{$i} {
+      @include stars-active($i);
+    }
+  }
+}
