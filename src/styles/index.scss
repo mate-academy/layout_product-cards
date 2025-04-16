@@ -31,7 +31,6 @@ $star-count: 5;
   background-image: url('../images/imac.jpeg'); // adapte le chemin si besoin
 }
 
-
 .card {
   width: $card-width;
   border: $card-border;
@@ -60,8 +59,11 @@ $star-count: 5;
     font-weight: bold;
   }
 
-  &__price {
+  &__price,
+  &__product-code,
+  &__reviews {
     color: #888;
+    font-size: 0.9rem;
   }
 
   &__buy {
@@ -82,6 +84,11 @@ $star-count: 5;
 
 .stars {
   display: flex;
+  gap: 2px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &__star {
     font-size: 1.2rem;
@@ -94,5 +101,11 @@ $star-count: 5;
   &--4 .stars__star:nth-child(-n + 4),
   &--5 .stars__star:nth-child(-n + 5) {
     color: $star-color;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      color: $star-color;
+    }
   }
 }
