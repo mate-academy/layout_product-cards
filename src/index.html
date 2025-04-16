@@ -2,24 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Product cards</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="./styles/main.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./src/styles/index.scss"
+    />
   </head>
   <body>
     <h1>Product cards</h1>
-
-    <div class="card" data-qa="card">
-      <img src="./images/imac.jpeg" alt="Product" class="card__image">
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <div class="card__image card__image--imac"></div>
       <div class="card__content">
-        <h3 class="card__title">Product Name</h3>
-        <div class="stars stars--4" data-qa="stars">
-          ★★★★★
+        <h2 class="card__title">Cool Product</h2>
+        <p class="card__price">$19.99</p>
+        <div class="stars stars--3">
+          <span class="stars__star">&#9733;</span>
+          <span class="stars__star">&#9733;</span>
+          <span class="stars__star">&#9733;</span>
+          <span class="stars__star">&#9733;</span>
+          <span class="stars__star">&#9733;</span>
         </div>
-        <a href="#" class="card__link" data-qa="hover">BUY</a>
+        <a
+          class="card__buy"
+          data-qa="hover"
+          href="#"
+        >
+          BUY
+        </a>
       </div>
     </div>
+    <script src="./src/scripts/main.js"></script>
   </body>
 </html>
-
