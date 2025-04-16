@@ -1,0 +1,49 @@
+.card {
+  width: $card-width;
+  border: $card-border;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+
+    &--imac {
+      background-image: url('../images/imac.jpeg');
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__price,
+  &__product-code,
+  &__reviews {
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  &__buy {
+    margin-top: 0.5rem;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
