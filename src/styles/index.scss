@@ -1,3 +1,107 @@
+// styles/main.scss
+@import 'variables';
+@import 'card';
+@import 'stars';
+
 body {
   margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// styles/_variables.scss
+$card-width: 200px;
+$border-color: #ddd;
+$primary-color: #333;
+$hover-color: #ff0000;
+$font-stack: 'Roboto', sans-serif;
+
+// styles/_card.scss
+.card {
+  width: $card-width;
+  border: 1px solid $border-color;
+  font-family: $font-stack;
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    padding: 15px;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+
+    &:hover {
+      color: $hover-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// styles/_card.scss
+.card {
+  width: $card-width;
+  border: 1px solid $border-color;
+  font-family: $font-stack;
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    padding: 15px;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+
+    &:hover {
+      color: $hover-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// styles/_stars.scss
+.stars {
+  color: #ccc;
+  font-size: 1.2em;
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      > :nth-child(-n+#{$i}) {
+        color: #ffd700;
+      }
+    }
+  }
 }
