@@ -1,0 +1,27 @@
+.card {
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+
+    &--4 .card__star:nth-child(1),
+    &--4 .card__star:nth-child(2),
+    &--4 .card__star:nth-child(3),
+    &--4 .card__star:nth-child(4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
