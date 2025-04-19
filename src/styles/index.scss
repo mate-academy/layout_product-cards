@@ -1,13 +1,134 @@
-@import './variables';
-@import './card';
-@import './stars';
-
-* {
-  box-sizing: border-box;
+body {
+  font-family: Roboto, sans-serif;
 }
 
-body {
+* {
   margin: 0;
-  padding: 10px;
-  font-family: Roboto, sans-serif;
+  padding: 0;
+}
+
+$secondary: #616070;
+$main-accent: #060b35;
+$blue-accent: #00acdc;
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-top: 16px;
+    padding: 0 3px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-top: 40px;
+    color: $main-accent;
+    width: 100%;
+  }
+
+  &__id {
+    color: $secondary;
+    font-size: 10px;
+    line-height: 14px;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    text-decoration: none;
+    display: block;
+    width: 166px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-top: 16px;
+    letter-spacing: 0%;
+    color: white;
+    background-color: $blue-accent;
+    padding: 12px 0;
+    border-radius: 5px;
+    transition: 300ms;
+  }
+
+  &__link:hover {
+    background-color: white;
+    color: $blue-accent;
+    border: 1px solid $blue-accent;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  &__description {
+    color: $secondary;
+    letter-spacing: 0%;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  &__value {
+    color: $main-accent;
+    letter-spacing: 0%;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+.review {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star--active {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__count {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0%;
+    color: $main-accent;
+  }
 }
