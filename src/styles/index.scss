@@ -1,10 +1,9 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap';
-
 $font-large: 16px;
 $font-normal: 12px;
 $font-small: 10px;
 $grey: #616070;
 $main-color: #060b35;
+$button: #00acdc;
 
 body {
   margin: 0;
@@ -15,29 +14,50 @@ body {
 }
 
 .card {
-  margin: 0 auto;
   width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
 }
 
 .card_bottom {
-  width: 100%;
   max-width: 166px;
-  padding: 16px;
+  margin: 8px auto 0;
+}
+
+.card_image-wrapper {
+  margin: 32px 19px;
+  display: flex;
+  justify-content: center;
 }
 
 .card_image {
   display: flex;
   align-items: center;
   max-width: 160px;
-  margin: 33px auto;
-  background-color: gray;
 }
 
 .card_heading {
-  font-size: #{$font-normal};
   line-height: 18px;
-  letter-spacing: 0%;
+  margin: 0;
+  color: $main-color;
+  width: 100% !important;
+  font-size: 12px;
+
+}
+
+.card_heading h3 {
+  font-weight: 500;
   width: 166px;
+  letter-spacing: 0%;
+}
+
+.card_paragraph p {
+  margin-top: 4px;
+  line-height: 14px;
+  font-weight: 400;
 }
 
 .card_paragraph {
@@ -46,23 +66,39 @@ body {
   max-width: 166px;
 }
 
+.card_price_label,
+.card_reviews_text {
+  font-weight: regular;
+  font-size: 12px;
+  color: #{$grey};
+}
+
 .card_button {
-  width: 166px;
+  width: 100% !important;
   border-radius: 5px;
   height: 40px;
-  background-color: #00acdc;
+  background-color: $button;
+  border: 1px solid transparent;
   color: white;
   text-transform: uppercase;
-  border: none;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.card_button:hover {
+  border: 1px solid $button;
+  background-color: transparent;
+  color: $button;
 }
 
 .card_reviews_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 80%;
-  margin-bottom: 16px;
+  width: 100%;
 }
 
 .card_reviews_stars {
@@ -75,9 +111,17 @@ body {
   font-size: $font-small;
   width: 100%;
   text-align: end;
+  margin-left: auto;
 }
 
 .card_reviews_star {
+  background-image: url('/src/images/star-active.svg');
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.card_reviews_star:last-child {
   background-image: url('/src/images/star.svg');
   height: 16px;
   width: 16px;
@@ -87,4 +131,9 @@ body {
 .card_price_container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.card_price {
+  font-weight: 700;
 }
