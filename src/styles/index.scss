@@ -8,30 +8,28 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   color: #060b35;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
 }
 
-.card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-}
+// .card-wrapper {
+//   display: flex;
+// }
 
 .card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 200px;
   height: 408px;
-  border: 1px solid #dcdcdc;
-  border-radius: 3px;
-  margin-left: 20px;
-  padding-top: 15px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 
   &__content {
     padding: 0 15px;
@@ -42,41 +40,38 @@ body {
 
   &__title {
     font-weight: 500;
+    font-family: inherit;
     font-size: 12px;
     line-height: 18px;
     text-align: left;
-    margin: 10px 0 8px;
+    margin: 40px 0 4px;
   }
 
   &__subtitle {
+    font-family: inherit;
     font-size: 10px;
     line-height: 14px;
+    font-weight: 400;
     color: #616070;
     text-align: left;
-    margin-bottom: 10px;
   }
 }
 
 .product-image {
-  background-image: url(../images/imac.jpeg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 160px;
   height: 134px;
-  margin: 20px auto;
+  margin-top: 16px;
 }
 
 .card__stars-reviews {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-top: 16px;
 }
 
 .stars {
   display: flex;
-
   &__star {
     width: 16px;
     height: 16px;
@@ -96,20 +91,23 @@ body {
   line-height: 14px;
   margin-left: 6px;
   display: inline-flex;
-  align-items: center;
+  align-self: flex-end;
+  font-family: inherit;
 }
 
 .card__price-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .card__price {
+  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #616070;
+  font-family: inherit;
 }
 
 .card__price-value {
@@ -124,10 +122,11 @@ body {
   height: 40px;
   border: 1px solid #00acdc;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: inherit;
 
   &__link {
     text-decoration: none;
@@ -162,4 +161,3 @@ body {
 [data-ga='hover']:hover .buy-btn__link {
   color: #00acdc;
 }
-
