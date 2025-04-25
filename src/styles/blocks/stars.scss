@@ -1,0 +1,33 @@
+.review {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__stars {
+    display: flex;
+
+    .star {
+      background-image: url('../images/star.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 4px;
+      width: 16px;
+      height: 16px;
+
+      @for $star from 1 through 4 {
+        &:nth-of-type(-n + #{$star}) {
+          background-image: url('../images/star-active.svg');
+        }
+      }
+    }
+  }
+
+  &__quantity {
+    padding-top: 2px;
+    font-size: $font-size-xs;
+    line-height: 14px;
+    font-weight: 400;
+    color: $color-text-main;
+  }
+}
