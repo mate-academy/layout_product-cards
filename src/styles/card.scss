@@ -1,47 +1,117 @@
+@import 'variables';
+@import 'stars';
+
 body {
   margin: 0;
+  font-family: $font-family-main;
 }
+
 .product-card {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-
+  width: $product-card-width;
+  height: $product-card-height;
+  padding: 33px;
+  position: relative;
+  
 
 &__image {
-  width:$image-width ;
+  width:$image-width;
   height:$image-height;
+  margin-bottom: 36px;
  }
  &__title {
   font-size: $font-size-base;
   font-weight:$font-weight-medium;
-  width: $image-width;
+  width: $title-width;
+  color: $text-color-main;
+  margin-bottom: 0px;
+  margin-left: 0;
+    margin-right: 0;
+
+
+
  }
+
  &__code {
  font-size: $font-size-small;
  color:$text-color-second;
  font-weight: $font-weight-regular;
- }
+ margin-bottom: 12px;
+
+}
+
+&__stars-and-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%
+}
+
  &__reviews {
+
+  display: flex;
+  align-items: center;
   font-size: $font-size-small;
   color:$text-color-main;
   font-weight: $font-weight-regular;
+  white-space: nowrap;
+  margin-left: auto;
  }
+
   &__price {
   font-size:$font-size-base;
   color:$text-color-second;
   font-weight:$font-weight-regular;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+
+
+
+
+
   }
+  &__price-value {
+  font-weight: $font-weight-bold;
+  color: $text-color-main;
+  font-size: $font-size-value;
+  margin-left: auto;
+
+
+
+  }
+
+
   &__button {
+
    width: $button-width;
    height:$button-height;
    background-color: $button-color;
    color: $text-color-button;
    font-size: $font-size-button;
    border-radius:$button-border-radius;
-   border:$button-border;
+   border: $button-color;
+   font-family: $font-family-main;
+   font-weight: $font-weight-bold;
+   font-size: $font-size-button;
+   text-transform: uppercase;
 
+
+
+  &:hover {
+    background-color: $button-color-hover;
+    color:$button-color;
+    border: 1px solid $button-color;
+
+    }
+   }
   }
- }
+
 
 
 

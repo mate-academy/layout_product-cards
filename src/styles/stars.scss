@@ -1,18 +1,31 @@
 @import 'variables';
 .stars {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+
+
 
   &__star {
+    display: inline-flex;
     height: $star-size;
     width: $star-size;
     text-decoration: none;
     background-size: contain;
     background-image: url($star-image);
-    margin-left: $star-gap;
-  }
 
+
+
+  &:not(:first-child) {
+    margin-left: $star-gap;
+   }
+  }
   &--4 .stars__star:nth-child(-n+4) {
  background-image: url($star-image-active);
   }
 }
+
 
