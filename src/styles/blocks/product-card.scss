@@ -1,0 +1,84 @@
+.product-card {
+  border-radius: 5px;
+  border: 1px solid $color-neutral-light;
+  width: 200px;
+
+  &__content {
+    @include flex(flex-start, flex-start, column);
+
+    padding: 32px 16px 16px;
+    gap: 16px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__caption {
+    @include text-style(12px, 500, 18px);
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    @include text-style(
+      $text-small,
+      $text-small-weight,
+      $text-small-line-height,
+      $color-text-gray
+    );
+  }
+
+  &__reviews,
+  &__price,
+  &__footer {
+    width: 100%;
+  }
+
+  &__reviews {
+    @include flex(space-between);
+
+    &-count {
+      @include text-style;
+    }
+  }
+
+  &__price {
+    margin-top: 8px;
+
+    @include flex(space-between);
+
+    &-text {
+      @include text-style(12px, $text-small-weight, 18px, $color-text-gray);
+    }
+
+    &-amount {
+      @include text-style(16px, 700, 18px);
+    }
+  }
+
+  &__btn {
+    height: 40px;
+    width: 100%;
+    border: 1px solid $color-button-primary;
+    border-radius: 5px;
+    background-color: $color-button-primary;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
+
+    @include flex;
+    @include text-style(14px, 700, 16px, $color-neutral-light);
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-neutral-light;
+      color: $color-button-primary;
+    }
+  }
+}

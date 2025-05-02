@@ -1,0 +1,18 @@
+@mixin text-style(
+  $font-size: $text-small,
+  $font-weight: $text-small-weight,
+  $line-height: $text-small-line-height,
+  $text_color: $color-text-default
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $text_color;
+}
+
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $direction $wrap;
+}
