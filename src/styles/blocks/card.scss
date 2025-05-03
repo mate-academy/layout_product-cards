@@ -1,93 +1,98 @@
 .card {
   width: 200px;
+  box-sizing: border-box;
+  font-family: $main-text-font-family;
+  font-weight: 400;
   border: 1px #f3f3f3 solid;
   border-radius: 5px;
 
   &__image {
-    display: block;
-    object-fit: contain;
-    padding-inline: $main-padding-inline + 3;
-    padding-top: 32px;
     width: 160px;
+    height: 134px;
+    padding-top: 32px;
+    padding-inline: 19px;
+
+    display: block;
+    object-fit: fill;
   }
 
   &__title {
-    padding-inline: $main-padding-inline;
+    padding-inline: $main-padding;
+    margin: 0;
+    padding-top: 40px;
+
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0;
-    padding-top: 40px;
-    margin: 0;
+    color: $dark-color;
   }
 
   &__code {
-    padding-inline: $main-padding-inline;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: 0;
-    color: $secondray-text-color;
+    padding-inline: $main-padding;
     padding-top: 4px;
     margin: 0;
+
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey-color;
   }
 
   &__rating {
-    padding-inline: $main-padding-inline;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding-inline: $main-padding;
     padding-top: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 
   &__reviews {
-    font-weight: 400;
+    margin: 0;
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: 0;
-    margin: 0;
+    vertical-align: bottom;
+    align-self: flex-end;
+    color: $dark-color;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    padding-inline: $main-padding-inline;
+    padding-inline: $main-padding;
     padding-top: 24px;
 
     &-label {
-      color: $secondray-text-color;
-      font-weight: 400;
+      color: $grey-color;
       font-size: 12px;
       line-height: 18px;
-      letter-spacing: 0;
     }
 
     &-value {
       font-weight: 700;
       font-size: 16px;
       line-height: 18px;
-      letter-spacing: 0;
+      color: $dark-color;
     }
   }
 
   &__button {
     height: 40px;
+    width: 166px;
+    background-color: $blue-color;
+    margin: $main-padding;
+    border: none;
     border-radius: 5px;
-    background-color: #00acdc;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0;
     text-transform: uppercase;
-    color: #fff;
-    border: 0;
-    margin: $main-padding-inline;
-    width: 166px;
+    color: $white-color;
+    justify-content: center;
 
     &:hover {
-      border: 1px #00acdc solid;
-      background-color: #fff;
-      color: #00acdc;
+      border: 1px $blue-color solid;
+      background-color: $white-color;
+      color: $blue-color;
     }
   }
 }

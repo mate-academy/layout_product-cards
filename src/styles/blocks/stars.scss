@@ -9,12 +9,19 @@
     background-image: url(../images/star.svg);
     width: 16px;
     height: 16px;
-    display: flex;
-    background-size: cover;
-    background-position: center;
+    border-radius: 0.5px;
 
-    &--active {
-      background-image: url(../images/star-active.svg);
+    display: flex;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @for $i from 0 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
     }
   }
 }
