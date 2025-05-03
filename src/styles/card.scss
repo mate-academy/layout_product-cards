@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  padding: 16px;
+
+  img {
+    margin-top: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    margin-top: 40px;
+    line-height: 16px;
+    color: $main-ascent-color;
+
+    p:first-child {
+      font-weight: 500;
+      font-size: 12px;
+      color: $main-ascent-color;
+    }
+
+    p:last-child {
+      font-weight: 400;
+      font-size: 10px;
+      color: $secondary;
+      margin-top: 8px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: $main-ascent-color;
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stars__star {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+      background-image: url('../images/star.svg');
+      background-size: cover;
+    }
+
+    .stars--4 .stars__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 16px;
+
+    p:first-child {
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary;
+    }
+
+    p:last-child {
+      font-size: 16px;
+      font-weight: 700;
+      color: $main-ascent-color;
+    }
+  }
+
+  &__button {
+    background-color: $blue-ascent-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    padding: 12px 0;
+    border: none;
+  }
+
+  &__button:hover {
+    background-color: $white;
+    border: 1px solid $blue-ascent-color;
+    color: $blue-ascent-color;
+    cursor: pointer;
+  }
+}
+
+[data-qa='hover'] {
+  background-color: $white;
+  border: 1px solid $blue-ascent-color;
+  color: $blue-ascent-color;
+  cursor: pointer;
+}
