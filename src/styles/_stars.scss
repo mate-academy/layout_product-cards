@@ -1,0 +1,26 @@
+.product-card__stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars_star {
+  background-image: url(../images/star.svg);
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@for $i from 0 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
