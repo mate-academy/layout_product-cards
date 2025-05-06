@@ -1,0 +1,25 @@
+@mixin text-styles($font-weight, $font-size, $line-height, $color) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin image-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin stars-active($count) {
+  @for $i from 1 through $count {
+    .stars__star:nth-child(#{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
