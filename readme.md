@@ -33,3 +33,50 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 - [ ] SCSS Variables are used for main values and placed in a **separate file**
 - [ ] all `stars--N` modifiers work as expected (Highlight first `N` stars)
 - [ ] Code follows all the [Code Style Rules ❗️](https://mate-academy.github.io/layout_task-guideline/html-css-code-style-rules)
+
+
+
+Картки товарів
+Створи сторінку з картками товарів, використовуючи flexbox, BEM і SCSS, базуючись на цьому макеті.
+
+Ознайомся з Інструкцією до верстки макетів
+
+Вимоги:
+скинь стандартні відступи браузера
+
+ширина картки повинна бути 200px (включаючи рамку)
+
+використовуй зображення з src/images
+
+змінюй стилі посилання при наведенні :hover
+
+додай атрибут data-qa="card" до блоку картки
+
+додай атрибут data-qa="hover" до посилання "BUY"
+
+background-image: url() має бути відносним до index.scss. Тобто має починатися з ../images
+
+Перепиши блок stars із завдання зі зірками, використовуючи SCSS
+
+Знайди потрібний шрифт на Google Fonts і підключи його
+
+Важлива примітка: У цьому завданні дозволено підключати *.scss файли безпосередньо в HTML через тег <link> з атрибутом href. Це можливо завдяки використанню бібліотеки Parcel.
+
+Чекліст
+❗️ Замінити <your_account> на свій GitHub username і вставити посилання у опис Pull Request'у:
+
+DEMO LINK
+
+TEST REPORT LINK
+
+❗️ Скопіювати цей Checklist в опис Pull Request після посилань і поставити - [x] навпроти кожного пункту, який виконано:
+
+ є 2 BEM-блоки card та stars, кожен у власному файлі
+
+ для елементів, модифікаторів і псевдокласів використано SCSS Nesting
+
+ основні значення оформлено через SCSS-змінні, які винесено в окремий файл
+
+ всі модифікатори stars--N працюють як треба (підсвічуються перші N зірок)
+
+ Код відповідає всім Правилам стилю ❗️
