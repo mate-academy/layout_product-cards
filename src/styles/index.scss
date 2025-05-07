@@ -1,3 +1,121 @@
+$bodyFont: Roboto, sans-serif;
+$colorContainerandButton: #f3f3f3;
+$colorCodandProd: #616070;
+
 body {
   margin: 0;
+  font-family: $bodyFont;
+  font-size: 12px;
+}
+
+.product {
+  border: 1px solid $colorContainerandButton;
+  height: 408px;
+  width: 200px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+/* campo de imagem do produto */
+
+.product__image {
+  background-image: url(../images/imac.jpeg);
+  height: 134px;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+/* fim */
+
+/* campo titulo do produto */
+
+.title-product h1 {
+  font-size: 12px;
+  width: 166px;
+  height: 36px;
+  margin-top: 20px;
+}
+
+/* fim */
+
+/* campo codigo produto */
+
+.product__code {
+  font-size: 10px;
+  color: $colorCodandProd;
+  text-align: left;
+  margin-left: 35px;
+  padding-left: 0;
+  width: 100%;
+  margin-top: -45px;
+}
+
+/* fim */
+
+/* campo avaliacao do produto */
+
+.avaliation {
+  width: 166px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .img {
+    width: 96px;
+    height: 16px;
+    display: flex;
+
+    .star {
+      width: 16px;
+      height: 16px;
+    }
+
+    .star--gold {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+    }
+
+    .star--gray {
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+/* fim */
+
+/* campo preco do produto */
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 85px;
+  margin-bottom: -20px;
+
+  .text {
+    color: $colorCodandProd;
+    font-weight: normal;
+  }
+}
+
+/* fim */
+
+/* campo botao compra */
+
+.product button {
+  background-color: #00acdc;
+  width: 166px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 0;
+  color: colorContainer;
 }
