@@ -1,3 +1,138 @@
+$primary-color: #060b35;
+$secondary-color: #616070;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__info {
+    &--title {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0;
+      margin: 0 16px;
+      color: $primary-color;
+    }
+
+    &--code {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $secondary-color;
+      margin: 4px 16px;
+    }
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2px;
+
+    &-stars {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+
+      .star {
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+
+        &--active {
+          background-image: url('../images/star-active.svg');
+        }
+
+        &--unactive {
+          background-image: url('../images/star.svg');
+        }
+      }
+    }
+
+    &-reviews {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $primary-color;
+      margin-right: 16px;
+      padding-top: 2px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+
+    &--text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $secondary-color;
+      margin-left: 16px;
+      padding-bottom: 3px;
+    }
+
+    &--amount {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $primary-color;
+      margin-right: 16px;
+      padding-top: 2px;
+    }
+  }
+
+  &__buy {
+    width: 166px;
+    height: 40px;
+
+    &--link {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0%;
+      color: #fff;
+      background-color: #00acdc;
+      border-radius: 5px;
+      margin: 0 16px;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid #00acdc;
+        color: #00acdc;
+      }
+    }
+  }
 }
