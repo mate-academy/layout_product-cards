@@ -1,3 +1,115 @@
-body {
+$main-color: #060b35;
+
+* {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  &__image {
+    height: 134px;
+    width: 160px;
+    margin-top: 32px;
+    margin-inline: 19px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
+    margin-top: 40px;
+    margin-inline: 16px;
+  }
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    margin-top: 4px;
+    margin-left: 16px;
+  }
+  &__reviews {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    margin-inline: 16px;
+    .stars {
+      display: flex;
+      flex-direction: row;
+      &__star {
+        background-image: url(../images/star-active.svg);
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+      }
+      &__star:last-child {
+        background-image: url(../images/star.svg);
+      }
+    }
+    &__reviews-number {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: #060b35;
+    }
+  }
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-inline: 16px;
+    &__price-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+    &__price-cost {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060b35;
+    }
+  }
+  &__button {
+    background-color: #00acdc;
+    width: 166px;
+    height: 40px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 16px;
+  }
+  &__link:hover {
+    &__button {
+      background-color: #fff;
+      width: 166px;
+      height: 40px;
+      box-sizing: border-box;
+      color: #00acdc;
+      border-radius: 5px;
+      border: 1px solid #00acdc;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 }
