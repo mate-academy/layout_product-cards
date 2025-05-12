@@ -1,8 +1,12 @@
-@import './var.scss';
+@import './var';
 
-.page{
+.page {
   font-family: Roboto, sans-serif;
   background-color: $White;
+}
+
+.body {
+  margin: 0;
 }
 
 .card {
@@ -18,11 +22,7 @@
   width: 160px;
   height: 134px;
   margin: 32px 19px 40px;
-  background-image: url(../images/imac.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-
 
 .card__product-name {
   margin: 0 16px 4px;
@@ -61,7 +61,6 @@
   font-size: 16px;
   color: $Main-accent;
   margin: 0;
-
 }
 
 .card__link-button {
@@ -73,7 +72,7 @@
   text-transform: uppercase;
 }
 
-.card__link-button:hover{
+[data-qa='hover']:hover {
   color: $Blue-accent;
 }
 
@@ -90,17 +89,16 @@
   align-items: center;
 }
 
-.card__button:hover{
+.card__button:hover {
   background-color: $White;
-  border: 1px solid $Blue-accent
+  border: 1px solid $Blue-accent;
 }
-
 
 .stars {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 16px 24px 16px;
+  margin: 0 16px 24px;
 }
 
 .stars__star {
@@ -109,22 +107,19 @@
   background-position: center;
   width: 16px;
   height: 16px;
-
 }
 
 .stars--1 .stars__star:nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
-
 }
 
-
-.stars-review{
-font-weight: 400;
-font-size: 10px;
-color: $Main-accent;
-margin: 0;
+.stars-review {
+  font-weight: 400;
+  font-size: 10px;
+  color: $Main-accent;
+  margin: 0;
 }
 
-.stars__star-content{
+.stars__star-content {
   display: flex;
 }
