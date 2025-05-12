@@ -1,154 +1,123 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sen:wght@400';
-@import 'variables';
+html {
+  --main-color: #00acdc;
+  --text-accent-color: #060b35;
+  --text-secondary-color: #616070;
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.stars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 6px;
-}
-
-.stars__group {
-  display: flex;
-  flex-direction: row;
-}
-
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-}
-
-@for $i from 1 through 5 {
-  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background-image: url(../images/star-active.svg);
-  }
-}
-
-.review {
-  color: #060b35;
   font-family: Roboto, sans-serif;
-  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-  letter-spacing: 0%;
-  text-align: right;
-  vertical-align: bottom;
-  margin-top: 2px;
-  margin-left: 17px;
+  color: var(--text-secondary-color);
+}
+
+body {
+  margin: 0;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 166px;
-  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  width: 200px;
   border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
 }
 
-.imac {
-  align-items: center;
+.card__image {
+  display: block;
+  margin: 0 auto 40px;
   width: 160px;
   height: 134px;
-  object-fit: contain;
-  margin: 0 auto 30px;
 }
 
-.name {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
+.card__title {
+  margin: 0 0 4px;
   font-size: 12px;
   line-height: 18px;
-  letter-spacing: 0%;
-  color: #060b35;
+  font-weight: 500;
+  color: var(--text-accent-color);
 }
 
-.code {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 0%;
-  color: #616070;
-  align-self: flex-start;
-  margin-top: -6px;
+.card__code {
+  margin-bottom: 16px;
 }
 
-.price {
+.card__review-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  margin-bottom: 10px;
-  margin-top: 14px;
+  align-items: flex-end;
+  margin-bottom: 24px;
 }
 
-.button-link {
+.card__review-count {
+  color: var(--text-accent-color);
+}
+
+.card__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card__price-label {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--text-accent-color);
+}
+
+.card__buy {
   display: flex;
   justify-content: center;
   align-items: center;
+
   box-sizing: border-box;
   height: 40px;
-  width: 166px;
-  border: 1px solid $main-color;
+  border: 1px solid var(--main-color);
   border-radius: 5px;
+
   font-size: 14px;
-  font-family: Roboto, sans-serif;
   line-height: 16px;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: $main-color;
-  margin-top: -4px;
+
+  background-color: var(--main-color);
 }
 
-.price_number {
-  color: #000;
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  text-align: right;
-  vertical-align: bottom;
+.card__buy:hover {
+  color: var(--main-color);
+  background-color: #fff;
 }
 
-.price_name {
-  color: #616070;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  vertical-align: bottom;
+.stars {
+  display: flex;
 }
 
-.buy {
-  text-decoration: none;
-  color: white;
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0%;
-  text-align: center;
-  text-transform: uppercase;
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.button-link:hover {
-  background-color: white;
-  color: $main-color;
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
 }
