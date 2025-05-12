@@ -1,3 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__laptop {
+    width: 160px;
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    margin-bottom: 40px;
+    margin-left: 19px;
+  }
+
+  &__item-name {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    margin: 0 16px 4px;
+  }
+
+  &__item-code {
+    font-weight: 400;
+    font-size: 10px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__item-reviews {
+    display: flex;
+    margin-left: 16px;
+    width: 166px;
+    height: 16px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+
+    .card__item-stars {
+      display: flex;
+      margin-bottom: 22px;
+
+      .card__item-star {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+        background-image: url('../images/star.svg');
+        background-size: cover;
+
+        &:nth-child(-n + 4) {
+          background-image: url('../images/star-active.svg');
+        }
+      }
+    }
+
+    .card__item-review-count {
+      margin-right: 16px;
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
+
+  &__item-price {
+    display: flex;
+    width: 166px;
+    height: 18px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+
+    .card__price-value {
+      margin-left: 78px;
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(92, 160, 223);
+    color: white;
+    margin-left: 16px;
+
+    &:hover {
+      background-color: white;
+      color: rgb(92, 160, 223);
+    }
+  }
 }
