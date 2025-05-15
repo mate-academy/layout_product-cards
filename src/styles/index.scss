@@ -1,3 +1,141 @@
+@use '../styles/variables' as *;
+
+html {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  border: 1px solid $Border;
+  border-radius: 5px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 36px;
+  }
+
+  &__product-name {
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin: 0 16px 4px;
+    color: $Main-accent;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    font-style: Roboto, sans-serif;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 0 0 16px 16px;
+    color: $Secondary;
+  }
+
+  &__content-price {
+    margin: 0 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $Secondary;
+    margin: 0;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $Main-accent;
+    margin: 0;
+  }
+
+  &__link-button {
+    text-decoration: none;
+    color: $White;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    padding: 0;
+    margin: 0 16px 16px;
+    width: 164px;
+    height: 38px;
+    background-color: $Blue-accent;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $Blue-accent;
+  }
+
+  &__button:hover {
+    background-color: $White;
+    border: 1px solid $Blue-accent;
+    color: $Blue-accent;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 24px;
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star-content {
+    display: flex;
+  }
+
+  &__star-content &__star:last-child {
+    margin: 0;
+  }
+
+  &--1 &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    color: $Main-accent;
+    line-height: 14px;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 2px;
+  }
 }
