@@ -1,3 +1,123 @@
-body {
+@use 'abstracts/variables.scss';
+
+.body {
   margin: 0;
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+
+  &__imac-img {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 134px;
+    width: 160px;
+    padding: 32px 0 40px 19px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    padding: 0 16px;
+    color: #060b35;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    padding: 4 16px 16px;
+    color: #616070;
+  }
+
+  &__rating {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-stars {
+      display: flex;
+      gap: 4px;
+    }
+
+    &-star {
+      height: 16px;
+      width: 16px;
+      background-image: url(../images/star-active.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &:last-child {
+        background-image: url(../images/star.svg);
+      }
+    }
+
+    &-reviews {
+      margin-top: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px 16px;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: #616070;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+      color: #060b35;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 11px 0;
+    text-transform: uppercase;
+    background-color: variables.$button-color;
+    letter-spacing: 0;
+    border: 1px solid variables.$button-color;
+    font-weight: 700;
+    border-radius: 5px;
+    border-color: variables.$button-color;
+    line-height: 16px;
+    text-align: center;
+    color: white;
+    margin: 0 16px 16px;
+    font-family: Roboto, sans-serif;
+  }
+  &__button:hover {
+    background-color: #fff;
+    color: variables.$button-color;
+  }
 }
