@@ -1,20 +1,21 @@
 .stars {
   display: flex;
-  gap: 2px;
+  gap: 6px;
 
   &__star {
-    width: 12px;
-    height: 12px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFD700"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>')
-      no-repeat center;
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
-
-    &:last-child {
-      opacity: 0.3;
-    }
   }
 
-  &--4 &__star:nth-child(5) {
-    opacity: 0.3;
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
   }
 }
