@@ -1,23 +1,23 @@
 @import './variables';
 
 .card {
+  align-items: center;
+  justify-content: center;
   box-sizing: content-box;
   width: 200px;
   height: 406px;
 
   &__img {
     display: block;
-
     width: 160px;
     height: 134px;
-    margin: 0 19px;
-    padding-top: 32px;
+    margin: 0 20px;
+    padding-top: 33px;
   }
 
   &__title {
     max-width: 166px;
-    margin: 40px 16px 4px;
-
+    margin: 40px 17px 4px;
     font-size: 12px;
     font-weight: $main-font-weight;
     line-height: 18px;
@@ -25,17 +25,45 @@
   }
 
   &__code {
-    margin: 0 84px 16px 16px;
+    margin: 0 84px 17px 17px;
     font-size: 10px;
     font-weight: $secondary-font-weight;
     color: $secondary-text-color;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 166px;
+    margin: 0 17px;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__reviews {
+    margin-left: 18px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $main-text-color;
   }
 
   &__price {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-top: 24px;
     padding: 0 16px;
   }
@@ -58,21 +86,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 166px;
     height: 40px;
     margin: 16px;
     border-radius: 5px;
-
     font-size: 14px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 1);
+    color: white;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-
     background-color: rgba(0, 172, 220, 1);
-
     transition: all 0.3s ease;
 
     &:hover {
