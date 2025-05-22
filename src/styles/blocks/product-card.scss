@@ -1,15 +1,18 @@
-@use '../utlis/variables.scss' as *;
+@use '../utils/variables.scss' as *;
 
 .product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  border: solid #f3f3f3 1px;
+  border-radius: 5px;
   margin: 0;
+  padding: $product-card-padding;
   width: $product-card-width;
 
   [class*='product-card__'] {
-    width: $product-card-content-width;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -17,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 16px;
 
     > img {
       width: 160px;
