@@ -1,3 +1,140 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 200px;
+  box-sizing: border-box;
+
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    display: flex;
+    align-self: center;
+
+    height: 134px;
+    width: 160px;
+    padding: 16px 3px 0;
+  }
+
+  &__title {
+    width: 166px;
+    margin: 0;
+    padding-top: 40px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__product-code {
+    display: flex;
+    margin-top: 4px;
+    height: 10px;
+
+    &-title {
+      font-size: 10px;
+      line-height: 10px;
+      color: #616070;
+    }
+  }
+
+  &__review {
+    padding-top: 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    &-stars {
+      display: flex;
+      gap: 4px;
+
+      &-active {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+
+        background-image: url(../images/star-active.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &-disabled {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+
+        background-image: url(../images/star.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &-count {
+      font-size: 10px;
+      line-height: 14px;
+      color: #060b35;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-amount {
+      font-size: 16px;
+      line-height: 18px;
+      color: black;
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    margin-top: 16px;
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #fff;
+      background-color: #00acdc;
+      border-radius: 5px;
+
+      &:hover {
+        color: #00acdc;
+        background-color: #fff;
+        border: 1px solid #00acdc;
+      }
+    }
+  }
 }
