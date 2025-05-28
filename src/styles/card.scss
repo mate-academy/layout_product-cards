@@ -1,14 +1,15 @@
 @use 'variables';
 
 .card {
+  box-sizing: content-box;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  box-sizing: content-box;
+
   width: 200px;
   height: 406px;
   border: 1px solid #f3f3f3;
-  border-radius: 5px;
   padding-bottom: 12px;
+  border-radius: 5px;
 
   &__container {
     display: flex;
@@ -17,13 +18,15 @@
   }
 
   &__image {
-    box-sizing: border-box;
     display: block;
+    box-sizing: border-box;
+
     padding-top: 33px;
     padding-bottom: 41px;
-    padding-inline: 20px;
     width: 100%;
+    padding-inline: 20px;
     height: auto;
+
     object-fit: contain;
   }
 
@@ -32,8 +35,8 @@
     font-weight: variables.$font-weight-medium;
     line-height: 18px;
     color: #000;
-    text-decoration: none;
     margin-bottom: 4px;
+    text-decoration: none;
   }
 
   &__product-code {
