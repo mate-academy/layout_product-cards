@@ -1,26 +1,25 @@
 @use 'variables';
 
+body {
+  margin: 0;
+}
+
 .card {
   box-sizing: border-box;
   width: 200px;
   font-family: Roboto, sans-serif;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
   font-weight: variables.$font-weight-medium;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 17px;
-  }
+  display: flex;
+  flex-direction: column;
 
   &__image {
-    box-sizing: border-box;
+    margin-inline: auto;
+    margin-bottom: 40px;
     display: block;
-    padding-top: 33px;
-    padding-bottom: 41px;
-    padding-inline: 20px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    width: 160px;
+    height: 134px;
   }
 
   &__title {
@@ -51,7 +50,7 @@
   }
 
   &__star {
-    background-image: url(/src/images/star-active.svg);
+    background-image: url(../images/star-active.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 16px;
@@ -60,9 +59,8 @@
   }
 
   &__star:last-child {
-    background-image: url(/src/images/star.svg);
+    background-image: url(../images/star.svg);
   }
-
 
   &__reviews {
     font-weight: variables.$font-weight-small;
@@ -95,7 +93,6 @@
 
   &__button {
     box-sizing: border-box;
-    margin-bottom: 16px;
     width: 100%;
     font-size: 14px;
     padding: 11px 0;
@@ -107,6 +104,8 @@
     border-color: variables.$button-color;
     font-weight: variables.$font-weight-large;
     line-height: 16px;
+    cursor: pointer;
+    color: #fff;
     text-align: center;
   }
 
