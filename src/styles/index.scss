@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   width: 200px;
-  border: 1px solid $Border;
+  border: 1px solid $border;
   border-radius: 5px;
 
   &__image {
@@ -36,7 +36,7 @@ body {
     line-height: 18px;
     letter-spacing: 0%;
     margin: 0 16px 4px;
-    color: $Main-accent;
+    color: $main-accent;
   }
 
   &__product-code {
@@ -44,7 +44,7 @@ body {
     line-height: 14px;
     font-weight: 400;
     margin: 0 0 16px 16px;
-    color: $Secondary;
+    color: $secondary;
   }
 
   &__content-price {
@@ -58,7 +58,7 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: $Secondary;
+    color: $secondary;
     margin: 0;
   }
 
@@ -66,7 +66,7 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: $Main-accent;
+    color: $main-accent;
     margin: 0;
   }
 
@@ -75,20 +75,20 @@ body {
     margin: 0 16px 16px;
     width: 164px;
     height: 38px;
-    background-color: $Blue-accent;
+    background-color: $blue-accent;
     border-radius: 5px;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    border: 1px solid $Blue-accent;
+    border: 1px solid $blue-accent;
     text-decoration: none;
   }
 
   &__button:hover {
-    background-color: $White;
-    border: 1px solid $Blue-accent;
-    color: $Blue-accent;
+    background-color: $white;
+    border: 1px solid $blue-accent;
+    color: $blue-accent;
   }
 }
 
@@ -115,14 +115,18 @@ body {
     margin: 0;
   }
 
-  &--1 &__star:nth-child(-n + 4) {
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
     background-image: url(../images/star-active.svg);
   }
 
   &__review {
     font-weight: 400;
     font-size: 10px;
-    color: $Main-accent;
+    color: $main-accent;
     line-height: 14px;
     margin: 0;
     display: flex;
