@@ -3,29 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Cards</title>
-    <link rel="stylesheet" href="./styles/index.scss" />
+    <title>Product Card</title>
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
-    <section class="imac">
-      <img src="images/imac.jpeg" alt="iMac" />
-    </section>
-
-    <h1 data-qa="product-title">
-      APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
-    </h1>
-
-    <section class="product-info">
-      <div class="stars stars--4" data-qa="product-rating">
-        <img src="images/star-active.svg" alt="star-active" />
-        <img src="images/star-active.svg" alt="star-active" />
-        <img src="images/star-active.svg" alt="star-active" />
-        <img src="images/star-active.svg" alt="star-active" />
-        <img src="images/star-active.svg" alt="star-active" />
+    <section class="card">
+      <div class="card__image">
+        <img src="./images/imac.jpeg" alt="iMac" />
       </div>
-      <h2 data-qa="review-count">Reviews: 5</h2>
-      <h3 data-qa="product-price">Price: $2,199</h3>
-      <button class="buy-button" data-qa="buy-button">Buy</button>
+
+      <h2 class="card__title" data-qa="product-title">
+        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+      </h2>
+
+      <p class="card__code">Product code: 195434</p>
+
+      <div class="stars stars--4" data-qa="product-rating">
+        <img src="./images/star-active.svg" alt="star" />
+        <img src="./images/star-active.svg" alt="star" />
+        <img src="./images/star-active.svg" alt="star" />
+        <img src="./images/star-active.svg" alt="star" />
+        <img src="./images/star-active.svg" alt="star" />
+      </div>
+
+      <div class="card__info">
+        <p data-qa="review-count">Reviews: 5</p>
+        <p class="card__price" data-qa="product-price">$2,199</p>
+      </div>
+
+      <button class="card__buy-button" data-qa="buy-button">BUY</button>
     </section>
   </body>
 </html>
