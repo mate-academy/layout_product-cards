@@ -1,0 +1,33 @@
+// Stars component styles (extracted for modularity)
+// Note: _variables.scss will be imported in index.scss, making variables available here.
+
+.stars {
+  display: flex;
+  gap: $star-gap;
+  height: $star-size; // Height from Figma
+
+  &__item {
+    width: $star-size;
+    height: $star-size;
+    background-image: url($star-inactive-img);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    // This class can still be used for individual active stars if needed,
+    // but the primary mechanism will be the parent modifiers.
+    &--active {
+      background-image: url($star-active-img);
+    }
+  }
+
+  // Modifiers for highlighting N stars (e.g., .stars--3 highlights the first 3 stars)
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      // Target the first N children of .stars__item
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url($star-active-img);
+      }
+    }
+  }
+}
