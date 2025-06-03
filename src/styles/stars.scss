@@ -1,0 +1,38 @@
+@use '/src/styles/Variables';
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-self: stretch;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.rate__stars {
+  display: flex;
+  width: 96px;
+  height: 16px;
+  gap: 4px;
+}
+
+.rate__star {
+  width: 16px;
+  height: 16px;
+
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rate__stars--4 .rate__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.rate__reviews {
+  display: block;
+
+  font-size: var(--font-size-small);
+  font-style: normal;
+  line-height: 14px;
+  color: var(--font-color-1);
+}
