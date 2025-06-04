@@ -1,3 +1,111 @@
 body {
   margin: 0;
 }
+
+.card {
+  width: 198px;
+  font-family: Roboto, sans-serif;
+  border: 1px solid #eceaea;
+  border-radius: 5px;
+  margin: 16px;
+
+  &__img {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    margin: 33px 20px 0;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__product {
+    margin: 16px;
+
+    &-description {
+      margin-top: 40px;
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+
+    &-code {
+      margin-top: -8px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+
+    &-reviews {
+      display: flex;
+      justify-content: space-between;
+
+      .stars {
+        display: flex;
+        margin-top: 8px;
+
+        .star-active {
+          background-image: url(../images/star-active.svg);
+          width: 12px;
+          height: 12px;
+          background-size: cover;
+          margin-right: 8px;
+        }
+
+        .star-inative {
+          background-image: url(../images/star.svg);
+          width: 12px;
+          height: 12px;
+          background-size: cover;
+        }
+      }
+
+      .reviews {
+        margin-top: -2px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+      }
+    }
+
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -4px;
+
+      .price-text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-top: 6px;
+      }
+
+      .price-number {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+      }
+    }
+
+    &-buy {
+      display: flex;
+      margin-top: 2px;
+
+      .buy {
+        flex-grow: 1;
+        background-color: #00acdc;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        padding: 10px 17px;
+        border-radius: 5px;
+        border: 2px solid #00acdc;
+      }
+
+      .buy:hover {
+        background-color: white;
+        color: #00acdc;
+      }
+    }
+  }
+}
