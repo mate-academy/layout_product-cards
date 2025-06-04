@@ -1,9 +1,10 @@
+@import 'variables';
 @import './stars';
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  background-color: #e5e5e5;
+  font-family: $font-main;
+  background-color: $color-bg;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,14 +12,14 @@ body {
 }
 
 .card {
-  width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: white;
-  padding: 16px;
+  width: $card-width;
+  border: 1px solid $color-border;
+  border-radius: $card-radius;
+  background-color: $color-white;
+  padding: $card-padding;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: $card-gap;
 
   &__image {
     width: 100%;
@@ -27,14 +28,14 @@ body {
   }
 
   &__title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1e1e56;
+    font-size: $font-size-title;
+    font-weight: $font-weight-bold;
+    color: $color-title;
   }
 
   &__code {
-    font-size: 12px;
-    color: gray;
+    font-size: $font-size-code;
+    color: $color-gray;
   }
 
   &__stars {
@@ -50,31 +51,31 @@ body {
   }
 
   &__label {
-    font-size: 14px;
-    color: gray;
+    font-size: $font-size-label;
+    color: $color-gray;
   }
 
   &__price {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1e1e56;
+    font-size: $font-size-price;
+    font-weight: $font-weight-bold;
+    color: $color-title;
   }
 
   &__buy {
     display: block;
     text-align: center;
-    background-color: #00b2ff;
-    color: white;
+    background-color: $color-primary;
+    color: $color-white;
     text-decoration: none;
-    padding: 10px 0;
+    padding: $button-padding-y 0;
     border-radius: 4px;
     font-weight: bold;
     transition: 0.3s;
 
     &:hover {
-      background-color: white;
-      color: #00b2ff;
-      border: 1px solid #00b2ff;
+      background-color: $color-white;
+      color: $color-primary;
+      border: 1px solid $color-primary;
     }
   }
 }

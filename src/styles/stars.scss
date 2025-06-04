@@ -1,17 +1,18 @@
+@import 'variables';
+
 .stars {
   display: flex;
   padding: 0;
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: $star-size;
+    height: $star-size;
     background-image: url('../images/star.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 4px;
+    margin-right: $star-gap;
   }
 
-  // Mixin para as estrelas ativas
   @for $i from 1 through 5 {
     &--#{$i} {
       .stars__star:nth-child(-n + #{$i}) {
