@@ -1,3 +1,80 @@
+@import './stars';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e1e56;
+  }
+
+  &__code {
+    font-size: 12px;
+    color: gray;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: gray;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e1e56;
+  }
+
+  &__buy {
+    display: block;
+    text-align: center;
+    background-color: #00b2ff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: white;
+      color: #00b2ff;
+      border: 1px solid #00b2ff;
+    }
+  }
 }
