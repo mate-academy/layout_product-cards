@@ -16,14 +16,15 @@
 .card__image {
   width: 160px;
   height: 134px;
-  margin: 0 auto;
-}
+  margin-left: auto;
+  margin-right: auto;
 
-.card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 }
 
 .card__title {
@@ -33,32 +34,34 @@
   color: #2c3e50;
   margin-top: 12px;
   margin-bottom: 4px;
-  padding: 0 4px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .card__code {
   font-size: 0.75rem;
   color: gray;
   text-align: left;
-  margin: 0 0 8px 0;
-  padding: 0 4px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .card__rating-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 10px;
-  margin: 0 0 10px 0;
-}
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 
-.card__rating-row .stars {
-  display: flex;
-  gap: 4px;
-}
+  .stars {
+    display: flex;
+    gap: 4px;
 
-.card__rating-row .stars img {
-  width: 20px;
+    img {
+      width: 20px;
+    }
+  }
 }
 
 .card__reviews {
@@ -70,8 +73,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 16px;
-  margin: 0 0 16px 0;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .card__price-label {
@@ -89,16 +92,16 @@
   width: 100%;
   height: 40px;
   border-radius: $button-radius;
-  background: $primary-color;
+  background-color: $primary-color;
   border: none;
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-}
 
-.card__buy-button:hover {
-  background: #fff;
-  border: 2px solid $primary-color;
-  color: $primary-color;
+  &:hover {
+    background-color: #fff;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
 }
