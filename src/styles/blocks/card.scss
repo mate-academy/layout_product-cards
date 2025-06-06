@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $main-font-weight;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  color: $main-text-color;
+}
+
+body {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: solid 1px #f3f3f3;
+  &__img {
+    background-image: url(../images/imac.jpeg);
+    margin-inline: auto;
+    width: 160px;
+    height: 134px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      margin-bottom: 4px;
+    }
+
+    &-code {
+      margin-top: 0;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0;
+      color: $second-text-color;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-price {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      color: $second-text-color;
+      margin: 0;
+      align-self: flex-end;
+    }
+
+    &-amount {
+      font-weight: $second-font-weight;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+
+    &-buy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: $button-color;
+      border: solid 1px $button-color;
+      border-radius: 5px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: $second-font-weight;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0;
+      cursor: pointer;
+    }
+
+    &-buy:hover {
+      color: #00acdc;
+      background-color: white;
+      border: solid 1px $button-color;
+    }
+  }
+}
