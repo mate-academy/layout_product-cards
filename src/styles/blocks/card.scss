@@ -1,0 +1,106 @@
+.card {
+  background-color: #fff;
+  width: 198px;
+  height: 406px;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  border-radius: 1px;
+  border: 1px solid $color-light;
+
+  &__photo {
+    background-image: url(../images/imac.jpeg);
+    background-position: center;
+    width: 160px;
+    height: 134px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $color-dark;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $color-grey;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &-reviews {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0%;
+      color: $color-dark;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $color-grey;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $color-dark;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    background-color: $color-blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid $color-blue;
+    text-align: center;
+    transition: all 0.5s ease;
+
+    &-text {
+      margin: 0;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 40px;
+      letter-spacing: 0%;
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      border: 1px solid $color-blue;
+      background-color: #fff;
+    }
+
+    &:hover .card__button-text {
+      color: $color-blue;
+    }
+  }
+}
