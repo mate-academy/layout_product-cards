@@ -12,8 +12,12 @@
     margin-right: 4px;
     background-image: url('../images/star.svg');
 
-    &--filled {
-      background-image: url('../images/star-active.svg');
+    @for $i from 1 through 5 {
+      &--#{$i} {
+        .stars__star:nth-child(-n + #{$i}) {
+          background-image: url('../images/star-active.svg');
+        }
+      }
     }
   }
 }
