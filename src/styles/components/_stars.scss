@@ -1,6 +1,6 @@
 @import '../variables';
 
-.rating-stars {
+.stars {
   display: inline-flex;
 
   &__star {
@@ -11,12 +11,12 @@
     background-repeat: no-repeat;
     margin-right: 4px;
     background-image: url('../images/star.svg');
+  }
 
-    @for $i from 1 through 5 {
-      &--#{$i} {
-        .stars__star:nth-child(-n + #{$i}) {
-          background-image: url('../images/star-active.svg');
-        }
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
       }
     }
   }
