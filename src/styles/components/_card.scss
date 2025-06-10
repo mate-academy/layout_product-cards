@@ -1,0 +1,105 @@
+@import '../variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  background-color: $color-background;
+  box-sizing: border-box;
+
+  &__image {
+    width: 163px;
+    height: 134px;
+    object-fit: contain;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0 0 4px;
+    text-align: left;
+    letter-spacing: 0%;
+    width: 166px;
+    color: $color-text-dark;
+  }
+
+  &__code {
+    font-size: 10px;
+    color: $color-text-light;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    width: 166px;
+    margin-bottom: 16px;
+  }
+
+  &__rating-group {
+    display: table-row;
+    height: 16px;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 166px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    height: 16px;
+    line-height: 18px;
+    color: $color-text-dark;
+    float: right;
+    vertical-align: bottom;
+  }
+
+  &__price-group {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    margin-top: 24px;
+    height: 18px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-text-light;
+    vertical-align: bottom;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $color-text-dark;
+  }
+
+  &__button {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    width: 166px;
+    height: 40px;
+    line-height: 16px;
+    background-color: $color-primary;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $color-primary;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 16px;
+    text-align: center;
+
+    &:hover {
+      background-color: $color-primary-hover;
+      color: $color-primary-text-hover;
+    }
+  }
+}
