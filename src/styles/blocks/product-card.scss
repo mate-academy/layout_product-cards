@@ -1,0 +1,87 @@
+.product-card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  padding-top: 32px;
+  padding-bottom: $basic-margins;
+
+  &__picture {
+    background-image: url(../images/imac.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 134px;
+    margin-inline: 19px;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    width: $product-info-width;
+
+    @include font-style(12px, 500, #060b35, 18px);
+
+    margin-inline: $basic-margins;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__code {
+    @include font-style(10px, 400, #616070);
+
+    margin-top: 4px;
+    margin-bottom: $basic-margins;
+  }
+
+  &__review-tab {
+    width: $product-info-width;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-inline: $basic-margins;
+    margin-bottom: 24px;
+  }
+
+  &__review-counter {
+    align-self: flex-end;
+
+    @include font-style(10px, 400);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-inline: $basic-margins;
+    margin-bottom: $basic-margins;
+    width: $product-info-width;
+    height: 18px;
+  }
+
+  &__price-title {
+    @include font-style(12px, 400, #616070, 18px);
+  }
+
+  &__amount {
+    @include font-style(16px, 700, #060b35, 18px);
+  }
+
+  &__buy-button {
+    @include button-style;
+    @include font-style(14px, 700, #fff, 38px);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+      box-sizing: border-box;
+    }
+  }
+}
