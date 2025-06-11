@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
 }
@@ -15,20 +14,21 @@ body {
   left: 1px;
   border-radius: 5px;
   background: #fff;
-  display: flex;
 }
 
 .card__img {
   width: 160px;
   height: 134px;
-  top: 33px;
-  left: 20px;
- display: flex;
+  margin-top: 33px;
+  margin-left: 20px;
+  display: flex;
 }
 
 .card__title {
-  margin-top: 171px;
+  margin-top: 40px;
+  margin-left: 0;
   display: flex;
+  flex-direction: column;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -42,7 +42,7 @@ body {
 .card__code {
   display: flex;
   background-color: #fff;
-  margin-top: 247px;
+  margin-top: 0;
   left: 17px;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -52,11 +52,15 @@ body {
   color: #616070;
 }
 
+.grade {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 $stars-count: 5;
 
 .stars {
-  top: 277px;
-  left: 17px;
   display: flex;
   &__star {
     width: 16px;
@@ -68,15 +72,13 @@ $stars-count: 5;
   @for $i from 1 through $stars-count {
     &--#{$i} {
       .stars__star:nth-child(-n + #{$i}) {
-        opacity: 1;
+        opacity: 2;
       }
     }
   }
 }
 
 .reviews {
-  top: 277px;
-  right: 17px;
   display: flex;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -90,6 +92,7 @@ $stars-count: 5;
 }
 
 .price {
+  margin-top: 20px;
   top: 317px;
   left: 17px;
   justify-content: space-between;
@@ -123,6 +126,9 @@ $stars-count: 5;
 }
 
 .card__button {
+  width: 166px;
+  height: 40px;
+  margin-top: 20px;
   top: 351px;
   left: 17px;
   font-family: Roboto, sans-serif;
@@ -134,8 +140,12 @@ $stars-count: 5;
   color: #fff;
   border-radius: 5px;
   background-color: #00acdc;
+  display: flex;
+  text-decoration: none;
   text-align: center;
- display: flex
+  justify-content: center;
+  align-items: center;
+  border-color: #00acdc;
 }
 
 .button:hover {
