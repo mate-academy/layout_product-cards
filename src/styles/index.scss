@@ -1,111 +1,175 @@
+// VARIÁVEIS
+$productFont: Roboto, sans-serif;
+$productBorderColor: #f3f3f3;
+$productDarkColor: #060b35;
+$productLightColor: #616070;
+$productButtonColor: #00acdc;
+
+// CONFIGURAÇÃO GLOBAL
 body {
   margin: 0;
 }
 
-.card {
-  width: 200px;
-  font-family: Roboto, sans-serif;
-  border: 1px solid #eceaea;
-  border-radius: 5px;
-  margin: 16px;
+// ESTRELAS DE AVALIAÇÃO
+.review-stars {
+  height: 16px;
+  border-radius: 0.5px;
+  display: flex;
 
-  &__img {
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
-    margin: 33px 19px 0;
-    width: 160px;
-    height: 134px;
+  .review-stars__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  &__menu {
-    margin: 16px;
+  &.review-stars--1 .review-stars__star:nth-child(-n + 1),
+  &.review-stars--2 .review-stars__star:nth-child(-n + 2),
+  &.review-stars--3 .review-stars__star:nth-child(-n + 3),
+  &.review-stars--4 .review-stars__star:nth-child(-n + 4),
+  &.review-stars--5 .review-stars__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
 
-    &-description {
-      margin-top: 40px;
-      margin-bottom: 0;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 18px;
-    }
+// CARTÃO DO PRODUTO
+.product-card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid $productBorderColor;
+  border-radius: 5px;
+  background-color: #fff;
 
-    &-code {
-      margin-top: -8px;
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 14px;
-    }
+  .product-picture {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-left: 19px;
+  }
 
-    &-reviews {
-      display: flex;
-      justify-content: space-between;
+  .product-name {
+    width: 166px;
+    height: 36px;
+    margin-top: 36px;
+    margin-left: 16px;
+    font-family: $productFont;
+    font-weight: 500;
+    font-size: 12px;
+    color: $productDarkColor;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
 
-      .stars {
-        display: flex;
-        margin-top: 8px;
+  .product-code {
+    width: 98px;
+    height: 14px;
+    margin-top: 4px;
+    margin-left: 16px;
+    font-family: $productFont;
+    font-size: 10px;
+    color: $productLightColor;
+    line-height: 14px;
+    letter-spacing: 0;
+  }
 
-        .star-active {
-          background-image: url(../images/star-active.svg);
-          width: 12px;
-          height: 12px;
-          background-size: cover;
-          margin-right: 8px;
-        }
+  .review {
+    width: 166px;
+    height: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
 
-        .star {
-          background-image: url(../images/star.svg);
-          width: 12px;
-          height: 12px;
-          background-size: cover;
-        }
-      }
-
-      .reviews {
-        margin-top: -2px;
-        font-size: 10px;
-        font-weight: 400;
-        line-height: 14px;
-      }
-    }
-
-    &-price {
-      display: flex;
-      justify-content: space-between;
-      margin-top: -4px;
-
-      .price-text {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
-        margin-top: 6px;
-      }
-
-      .price-number {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18px;
-      }
-    }
-
-    &-buy {
-      display: flex;
+    .review-text {
+      width: 53px;
+      height: 16px;
       margin-top: 2px;
+      font-family: $productFont;
+      color: $productDarkColor;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+    }
+  }
 
-      .buy {
-        flex-grow: 1;
-        background-color: #00acdc;
-        color: white;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16px;
-        padding: 10px 17px;
-        border-radius: 5px;
-        border: 2px solid #00acdc;
-      }
+  .product-price {
+    width: 166px;
+    margin-top: 24px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
 
-      .buy:hover {
-        background-color: white;
-        color: #00acdc;
-      }
+    .price-label {
+      width: 31px;
+      font-family: $productFont;
+      color: $productLightColor;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      align-self: flex-end;
+    }
+
+    .price-amount {
+      width: 50px;
+      font-family: $productFont;
+      font-weight: 700;
+      color: $productDarkColor;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-align: right;
+      align-self: flex-end;
+    }
+  }
+
+  .product-buy-button {
+    width: 166px;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 16px;
+    border-radius: 5px;
+    background-color: $productButtonColor;
+    display: flex;
+    justify-content: space-around;
+
+    .buy-button-text {
+      margin-top: 12px;
+      font-family: $productFont;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+
+  .product-buy-button:hover {
+    width: 166px;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 16px;
+    border: 1px solid $productButtonColor;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+
+    .buy-button-text {
+      margin-top: 11px;
+      font-family: $productFont;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+      color: $productButtonColor;
     }
   }
 }
