@@ -1,0 +1,47 @@
+.stars {
+  display: flex;
+
+  &-product {
+    display: flex;
+    margin-top: 16px;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin: 0 2px;
+  }
+
+  &__star:first-child {
+    margin: 0 2px 0 0;
+  }
+
+  &__star:last-child {
+    margin: 0 0 0 2px;
+  }
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+.reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: right;
+}
