@@ -1,0 +1,36 @@
+@import '../styles/utils/variables';
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  height: 16px;
+
+  &-stars {
+    display: flex;
+  }
+
+  &-star {
+    width: 16px;
+    height: 16px;
+    margin: 0 2px;
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:first-child {
+      margin: 0 2px 0 0;
+    }
+
+    &:last-child {
+      background-image: url(../images/star.svg);
+      margin: 0 0 0 2px;
+    }
+  }
+
+  &-reviews {
+    font-size: 10px;
+    color: $card-color-text-main;
+  }
+}
