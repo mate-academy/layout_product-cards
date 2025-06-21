@@ -12,7 +12,9 @@
     "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "test": "npm run lint && npm run test:only",
+    "compile:sass": "sass --style expanded src/styles/index.scss src/styles/style.css",
+    "watch:sass": "sass --style expanded src/styles/index.scss src/styles/style.css --watch"
   },
   "keywords": [],
   "author": "Mate Academy",
@@ -22,7 +24,7 @@
     "@mate-academy/backstop-config": "latest",
     "@mate-academy/bemlint": "latest",
     "@mate-academy/linthtml-config": "latest",
-    "@mate-academy/scripts": "^1.8.6",
+    "@mate-academy/scripts": "^2.1.1",
     "@mate-academy/stylelint-config": "latest",
     "@parcel/transformer-sass": "^2.12.0",
     "backstopjs": "6.3.23",
