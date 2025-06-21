@@ -1,0 +1,29 @@
+$star-size: 16px;
+$star-spacing: 4px;
+$star-image: '../images/star.svg';
+$star-active-image: '../images/star-active.svg';
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url($star-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+
+    &:not(:last-child) {
+      margin-right: $star-spacing;
+    }
+  }
+
+  &--4 {
+    .stars__star {
+      &:nth-child(-n + 4) {
+        background-image: url($star-active-image);
+      }
+    }
+  }
+}
