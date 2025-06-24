@@ -1,8 +1,14 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
 
 h1 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
   margin: 0;
   padding: 0;
 }
@@ -42,10 +48,17 @@ h1 {
     display: flex;
     font-size: 12px;
     font-weight: 400;
-    height: 18px;
+    line-height: 18px;
     color: #616070;
     margin-bottom: 16px;
     justify-content: space-between;
+    align-items: center;
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: #060b35;
+    }
   }
 
   &__button {
@@ -60,6 +73,7 @@ h1 {
     line-height: 16px;
     border-radius: 5px;
     border: 1px solid #00acdc;
+    font-family: Roboto, sans-serif;
 
     &:hover {
       background-color: #fff;
@@ -78,17 +92,19 @@ h1 {
     color: #060b35;
     margin-bottom: 24px;
   }
+
   .stars {
-  display: flex;
-  gap: 4px;
-  &_star {
-    background-image: url('../images/star.svg');
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
+    display: flex;
+    gap: 4px;
+
+    &__star {
+      background-image: url('../images/star.svg');
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+    }
   }
-  .stars--4:nth-child(n + 4) {
+  .stars--4 :nth-child(-n + 4) {
     background-image: url('../images/star-active.svg');
   }
- }
 }
