@@ -1,3 +1,88 @@
-body {
+@import 'variables';
+@import 'stars';
+@import 'card';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-main;
+}
+
+// Header
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    height: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    position: relative;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &.is-active {
+      color: $accent-color;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+// Main
+.main {
+  padding: 50px 40px 72px;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.catalog__row {
+  display: flex;
+  justify-content: space-between;
 }
