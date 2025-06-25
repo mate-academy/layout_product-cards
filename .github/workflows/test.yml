@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -15,13 +14,28 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - run: npm install
-    - run: npm test
-    - name: Upload HTML report(backstop data)
+
+    # 🟡 Запускаємо dev-сервер у фоновому режимі
+    - name: Start dev server
+      run: npm run dev &
+
+    # 🕐 Чекаємо, поки сервер стане доступним
+    - name: Wait for server
+      run: npx wait-on http://localhost:1234  # заміни на свій порт, якщо інший
+
+    # ✅ Запускаємо тест
+    - name: Run BackstopJS
+      run: npx backstop test
+
+    # 📤 Завантажуємо звіт
+    - name: Upload HTML report (backstop data)
       if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
