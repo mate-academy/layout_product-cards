@@ -1,0 +1,114 @@
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  width: 200px;
+  height: 100%;
+  margin: 10px 0 0 10px;
+  &__container {
+    padding: 32px 16px 16px;
+  }
+
+  &__image {
+    margin: auto;
+    margin-bottom: 40px;
+    background-image: url(../images/imac.jpeg);
+    height: 134px;
+    width: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // &__info {
+  // }
+
+  &__name {
+    color: $main-card-color;
+    margin-bottom: 4px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    color: $grey-card-color;
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+
+    margin-bottom: 24px;
+    &-list {
+      display: flex;
+      gap: 4px;
+      padding: 0;
+    }
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--active {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__rating-reviews {
+    color: $main-card-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-label {
+      color: $grey-card-color;
+      line-height: 14px;
+    }
+
+    &-value {
+      color: $main-card-color;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    &-buy {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      width: 166px;
+      height: 40px;
+
+      color: #fff;
+      background-color: #00acdc;
+      border: none;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+  }
+}

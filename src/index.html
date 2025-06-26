@@ -1,3 +1,4 @@
+<!-- #region head -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,11 +9,73 @@
     />
     <title>Product cards</title>
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
+  <!-- #endregion -->
   <body>
-    <h1>Product cards</h1>
+    <article
+      class="card"
+      data-qa="card"
+    >
+      <div class="card__container">
+        <div class="card__image"></div>
+
+        <div class="card__info">
+          <div class="card__name">
+            APPLE A1419 iMac 27" Retina
+            <br />
+            5K Monoblock (MNED2UA/A)
+          </div>
+          <div class="card__product-code">Product code: 195434</div>
+
+          <div class="card__rating">
+            <ul class="card__rating-list">
+              <li class="card__star card__star--active"></li>
+              <li class="card__star card__star--active"></li>
+              <li class="card__star card__star--active"></li>
+              <li class="card__star card__star--active"></li>
+              <li class="card__star"></li>
+            </ul>
+
+            <a
+              href="#"
+              class="card__rating-reviews"
+            >
+              Reviews: 5
+            </a>
+          </div>
+
+          <div class="card__price">
+            <div class="card__price-label">Price:</div>
+            <div class="card__price-value">$2,199</div>
+          </div>
+          <div class="card__button">
+            <a
+              href="#"
+              class="card__button-buy"
+              data-qa="hover"
+            >
+              Buy
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
   </body>
 </html>
