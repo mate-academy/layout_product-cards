@@ -1,0 +1,28 @@
+@use '../base/variables' as *;
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+
+  &__star {
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+  }
+
+  &--active {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__reviews {
+    margin-left: 17px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-dark-blue;
+  }
+}
