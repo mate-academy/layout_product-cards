@@ -1,16 +1,25 @@
 .card {
   width: 200px;
-  padding: 33px 20px 16px;
+  padding: 32px 16px 16px;
   box-sizing: border-box;
   border: 1px solid $border-color;
   border-radius: $card-border-radius;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 134px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
 
   &__image {
-    display: flex;
     height: 134px;
-    margin-bottom: 40px;
+    width: 160px;
   }
 
   &__name {
@@ -21,8 +30,6 @@
     letter-spacing: 0%;
     color: $text-dark-primary;
     margin-bottom: 4px;
-    white-space: normal;
-    word-break: break-word;
     width: 166px;
     height: 36px;
   }
@@ -48,13 +55,14 @@
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 0%;
-    color: $text-dark-primary;
+    text-align: right;
+    vertical-align: bottom;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 16px;
   }
 
@@ -74,11 +82,11 @@
     color: $text-dark-primary;
   }
 
-  &__buy-link {
+  &__link-buy {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
+    width: 166px;
     height: 40px;
     border-radius: $card-border-radius;
     background-color: $accent-color;
@@ -92,11 +100,11 @@
     color: #fff;
     text-transform: uppercase;
     border: 1px solid transparent;
+  }
 
-    &:hover {
-      background-color: transparent;
-      color: $accent-color;
-      border: 1px solid $accent-color;
-    }
+  &:hover &__buy-link {
+    background-color: transparent;
+    color: $accent-color;
+    border: 1px solid $accent-color;
   }
 }
