@@ -1,4 +1,5 @@
-@use './star.scss';
+@import './star';
+@import './variables';
 
 :root {
   font-family: Roboto, sans-serif;
@@ -10,7 +11,8 @@
 }
 
 .product-card {
-  background-color: #fff;
+  position: relative;
+  background-color: $color-with;
   display: flex;
   width: 198px;
   align-items: center;
@@ -45,15 +47,16 @@
   padding-top: 4px;
   font-weight: 400;
   font-size: 10px;
-  color: #616070;
+  color: $color-grey;
 }
 
 .price {
   display: flex;
   height: 18px;
-  margin-top: 22px;
-  margin-left: 16px;
+  margin-top: 24px;
+  margin-left: 22px;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
 }
 
@@ -62,7 +65,8 @@
   font-weight: 400;
   line-height: 18px;
   font-size: 12px;
-  color: #616070;
+  margin-left: 5px;
+  color: $color-grey;
 }
 
 .price__number {
@@ -70,18 +74,17 @@
   line-height: 18px;
   font-weight: 700;
   font-size: 16px;
-  margin-right: 16px;
-  margin-left: 86px;
+  margin-right: 28px;
 }
 
 .button {
-  background-color: #00acdc;
+  background-color: $color-blue;
   text-decoration: none;
   width: 166px;
   height: 40px;
-  border: 1px solid #00acdc;
+  border: 1px solid $color-blue;
   border-radius: 5px;
-  color: #fff;
+  color: $color-with;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -89,6 +92,6 @@
 }
 
 .button:hover {
-  background-color: #fff;
-  color: #00acdc;
+  background-color: $color-with;
+  color: $color-blue;
 }
