@@ -1,0 +1,137 @@
+.card {
+  display: flex;
+  width: 200px;
+  height: 400px;
+  padding: 0;
+
+  border: 1px solid #f3f3f3;
+
+  border-radius: 5px;
+
+  flex-direction: column;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    margin-top: 32px;
+    margin-left: 20px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent;
+    font-weight: 500;
+
+    margin-left: 16px;
+    margin-top: 40px;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary;
+    font-weight: 400;
+    align-self: flex-start;
+    margin-left: 16px;
+
+    margin-top: 4px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16px;
+    width: 168px;
+
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+
+  &__stars {
+    display: flex;
+    height: 16px;
+  }
+
+  &__star {
+    background-image: url(../images/star.svg);
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--active {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__reviews {
+    font-size: 10px;
+    text-decoration: none;
+    color: $main-accent;
+    line-height: 16px;
+    font-weight: 500;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 166px;
+
+    margin-top: 24px;
+    margin-left: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $secondary;
+  }
+
+  &__price-amount {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color: $main-accent;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 16px;
+
+    background-color: $blue-accent;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 16px;
+    font-weight: bold;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+    }
+  }
+}
