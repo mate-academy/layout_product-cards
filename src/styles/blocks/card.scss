@@ -1,0 +1,118 @@
+.card {
+  box-sizing: border-box;
+  max-width: $card-width;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+
+    @include content-padding-inline;
+  }
+
+  &__product-name {
+    width: 166px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 40px 0 0;
+    color: $main-accent;
+
+    @include content-padding-inline;
+  }
+
+  &__product-code {
+    width: 98px;
+    height: 14px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 4px 0 0;
+    color: $secondary;
+
+    @include content-padding-inline;
+  }
+
+  &__rating {
+    width: 166px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17px;
+    padding-block: 0;
+    margin: 16px 0 0;
+
+    @include content-padding-inline;
+  }
+
+  &__review-text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+  }
+
+  &__price {
+    width: 166px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 85px;
+    margin-top: 24px;
+
+    @include content-padding-inline;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: $secondary;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: $main-accent;
+  }
+
+  &__button {
+    display: block;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+
+    width: 166px;
+    height: 40px;
+
+    background-color: $blue-accent;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+
+    margin: 16px 16px 0;
+  }
+
+  &__button:hover {
+    color: $blue-accent;
+    background-color: #fff;
+  }
+}
