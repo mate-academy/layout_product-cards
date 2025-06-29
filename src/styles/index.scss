@@ -1,3 +1,118 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap';
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: #f5f5f5;
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  padding: 24px 17px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+  }
+
+  &__title {
+    width: 166px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 24px;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    color: #757575;
+  }
+
+  &__price-line {
+    margin-top: 16px;
+    width: 166px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #757575;
+  }
+
+  &__price {
+    color: #1c1c1c;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.stars {
+  width: 166px;
+  height: 16px;
+  display: flex;
+  margin-top: 12px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url('../images/star.svg') no-repeat center/cover;
+  }
+
+  &--0 &__star:nth-child(-n + 0),
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
+
+.btn {
+  width: 166px;
+  height: 40px;
+  margin-top: 16px;
+  background: #0cb8b5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.25s;
+
+  &:hover {
+    background: #0aa7a4;
+  }
 }
