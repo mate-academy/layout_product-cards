@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Roboto, serif;
+  background-color: $white;
+}
+
+.card {
+  width: 198px;
+  height: 406px;
+  border: 1px solid $white;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    box-sizing: border-box;
+    width: 160px;
+    height: 134px;
+    background-size: contain;
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  &__content {
+    margin: 40px 16px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include text-style(12px, 18px, 500);
+    color: $dark-blue;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include text-style(10px, 14px);
+    color: $grey;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__reviews {
+    @include text-style(10px, 14px);
+    color: $dark-blue;
+  }
+
+  &__price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  &__price-label {
+    @include text-style(12px, 18px);
+    color: $grey;
+  }
+
+  &__price {
+    @include text-style(16px, 18px, 700);
+    text-align: right;
+    color: $dark-blue;
+  }
+
+  &__buy-button {
+    width: 166px;
+    height: 40px;
+    border: 1px solid $light-blue;
+    border-radius: $border-radius;
+    background-color: $light-blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    @include text-style(14px, 16px, 700);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__buy-button:hover {
+    background-color: $white;
+    color: $light-blue;
+  }
+}
