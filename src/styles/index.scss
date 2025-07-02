@@ -1,3 +1,114 @@
+@use './utils/variables';
+@use './blocks/image.scss';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: variables.$card-height;
+  width: variables.$card-width;  padding: 32px 16px 16px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  background-color: variables.$main-color;
+
+  &__description {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: variables.$dark-blue;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 40px;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 4px;
+    line-height: 14px;
+    color: variables.$grey;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .stars {
+      display: flex;
+      gap: 4px;
+
+      &__star {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0.5px;
+        background-image: url(../images/star.svg);
+      }
+
+      &__star:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      color: variables.$dark-blue;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    .price-text {
+      font-weight: 400;
+      color: variables.$grey;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .price-amount {
+      font-weight: 700;
+      color: variables.$dark-blue;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    background-color: variables.$blue;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    width: 166px;
+    height: 40px;
+    color: variables.$main-color;
+
+    :link {
+    color: variables.$main-color;
+  }
+
+  :hover {
+    background-color: variables.$main-color;
+    border: 1px solid variables.$blue;
+    color: variables.$blue;
+  }
+  }
 }
