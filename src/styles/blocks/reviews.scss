@@ -1,0 +1,35 @@
+@use '../utils/variables' as *;
+
+.product-card {
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .stars {
+      display: flex;
+      gap: 4px;
+
+      &__star {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0.5px;
+        background-image: url(../images/star.svg);
+      }
+
+      &__star:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      color: $dark-blue;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+}
