@@ -3,15 +3,19 @@
 .card {
   box-sizing: border-box;
   width: 200px;
-  height: 406px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 16px;
 
   &__img {
-    width: 160px;
+    width: 100%;
     height: 134px;
     margin-top: 32px;
+    margin-left: 3px;
+    margin-right: 3px;
   }
 
   &__desc {
@@ -20,28 +24,29 @@
     font-size: 12px;
     line-height: 18px;
     margin-top: 40px;
-    color: rgba(0, 0, 0, 1);
-    width: 166px;
+    color: rgba(6, 11, 53, 1);
+    width: 100%;
     height: 36px;
   }
 
   &__product-code {
     color: rgba(97, 96, 112, 1);
-    width: 98px;
+    width: 100%;
     height: 14px;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     align-self: flex-start;
-    margin-left: 16px;
     margin-top: 4px;
   }
 
   &__price-tag {
     display: flex;
     justify-content: space-between;
-    width: 166px;
+    align-items: flex-end;
+    width: 100%;
     margin-top: 24px;
+    color: rgba(97, 96, 112, 1);
   }
 
   &__label {
@@ -57,13 +62,10 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    letter-spacing: 0%;
-    text-align: right;
-    vertical-align: bottom;
   }
 
   &__button {
-    width: 166px;
+    width: 100%;
     height: 40px;
     background-color: $background-color;
     color: $font-color;

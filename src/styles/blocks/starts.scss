@@ -1,10 +1,10 @@
-
 .stars {
   margin-top: 16px;
   width: 166px;
   height: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 
   &__opinion {
     display: flex;
@@ -15,9 +15,7 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    text-align: right;
-    vertical-align: bottom;
-    width: 53px;
+    align-self: flex-end;
   }
 
   &__star {
@@ -25,13 +23,19 @@
     height: 16px;
     width: 16px;
     background-repeat: no-repeat;
-    margin: 0;
+    margin: 0 2px;
     background-position: center;
+  }
+
+  &__star:first-child {
+    margin-left: 0;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
   }
 
   &__opinion &__star:nth-child(-n + 4) {
     background-image: url('../images/star-active.svg');
   }
 }
-
-
