@@ -8,6 +8,11 @@
   display: flex;
   flex-direction: column;
 
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
+
   &__name {
     margin: 40px 0 4px;
     line-height: 18px;
@@ -24,14 +29,16 @@
   }
 
   &__price {
+    height: 18px;
     font-weight: 400;
     color: $grey-font-color;
     font-size: 12px;
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
-    &:nth-last-child {
+    &-value {
       font-weight: 700;
       color: $default-font-color;
       font-size: 16px;
@@ -41,7 +48,7 @@
   &__button-buy {
     font-weight: 700;
     font-size: 14px;
-    
+
     margin-top: 16px;
     height: 40px;
     width: 100%;
