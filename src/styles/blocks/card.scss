@@ -2,96 +2,96 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-family: $font-main;
+  font-optical-sizing: $font-optical-sizing;
+  font-weight: $font-weight-normal;
   font-style: normal;
-}
-
-h2 {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: #060b35;
 }
 
 h1 {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: #060b35;
+  font-family: $font-main;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-l;
+  line-height: $line-height-m;
+  letter-spacing: $letter-spacing-default;
+  color: $color-dark;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-s;
+  line-height: $line-height-m;
+  letter-spacing: $letter-spacing-default;
+  color: $color-dark;
 }
 
 p {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 0%;
+  font-family: $font-main;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
+  letter-spacing: $letter-spacing-default;
 }
 
 a {
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0%;
+  font-family: $font-main;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-m;
+  line-height: $line-height-s;
+  letter-spacing: $letter-spacing-default;
   text-transform: uppercase;
-  color: #fff;
+  color: $color-white;
 }
 
 .price__text {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: #616070;
+  font-family: $font-main;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-s;
+  line-height: $line-height-m;
+  letter-spacing: $letter-spacing-default;
+  color: $color-gray;
 }
 
 .product {
   &__code {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: 0%;
-    margin-top: 4px;
-    color: #616070;
+    font-family: $font-main;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    letter-spacing: $letter-spacing-default;
+    margin-top: $spacing-s;
+    color: $color-gray;
   }
 
   &__name {
-    margin-top: 40px;
-    color: #060b35;
+    margin-top: $spacing-xxl;
+    color: $color-dark;
   }
 
   &__color {
-    color: #616070;
+    color: $color-gray;
   }
 }
 
 .card {
-  width: 200px;
+  width: $card-width;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  padding: 32px 16px 16px;
+  border: 1px solid $color-border;
+  border-radius: $radius-s;
+  padding: $card-padding;
   align-items: center;
 }
 
 .card__img {
-  width: 160px;
-  height: 134px;
+  width: $img-width;
+  height: $img-height;
   display: block;
   margin-inline: 3px;
 }
@@ -99,43 +99,44 @@ a {
 .price {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: $spacing-l;
 }
 
 .stars__position {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 16px;
+  margin-top: $spacing-m;
 }
 
 .stars__review-count {
-  color: #060b35;
+  color: $color-dark;
 }
 
 .button {
   display: flex;
-  margin-top: 16px;
-  background-color: #00acdc;
-  height: 40px;
-  border-radius: 5px;
+  margin-top: $spacing-m;
+  background-color: $color-primary;
+  height: $spacing-xxl;
+  border-radius: $radius-s;
 
   &__link {
     width: 100%;
     text-decoration: none;
     list-style: none;
-    color: #fff;
+    color: $color-white;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   &:hover {
-    background-color: white;
-    border: 1px solid #00acdc;
+    background-color: $color-white;
+    border: 1px solid $color-primary;
     box-sizing: border-box;
   }
+
   &__link:hover {
-    color: #00acdc;
+    color: $color-primary;
   }
 }
