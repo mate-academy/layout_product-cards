@@ -1,0 +1,81 @@
+@import 'variables';
+
+.card {
+  box-sizing: $box-sizing;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: 200px;
+  height: 408px;
+  padding: 32px 16px 20px;
+  color: $title-color;
+
+  &__card-img {
+    box-sizing: $box-sizing;
+    width: 160px;
+    height: 134px;
+    border: none;
+    margin-left: 3px;
+    margin-bottom: 40px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/imac.jpeg);
+  }
+
+  &__title {
+    font-size: 12px;
+    margin: 0 0 4px;
+    color: $title-color;
+    width: 168px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    margin: 0 0 17px;
+    color: $card-color;
+    font-weight: $font-weight-normal;
+    font-size: 10px;
+  }
+
+  &__amount {
+    height: 18px;
+    margin-bottom: 16px;
+    display: flex;
+  }
+
+  &__price {
+    font-weight: $font-weight-normal;
+    font-size: 12px;
+    color: $card-color;
+    align-self: center;
+  }
+
+  &__number {
+    font-weight: $font-weight-big;
+    font-size: 16px;
+    margin-left: auto;
+    margin-top: -1px;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: $buy-button;
+    border-radius: 5px;
+    border: 1px solid $buy-button;
+    height: 40px;
+    width: $card-width;
+    color: $button-color;
+    font-weight: $font-weight-big;
+    font-size: 14px;
+    box-sizing: $box-sizing;
+    padding-top: 10px;
+
+    &:hover {
+      background-color: $button-color;
+      color: $buy-button;
+    }
+  }
+}
