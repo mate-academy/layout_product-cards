@@ -1,3 +1,7 @@
+$font-stack: 'Roboto', sans-serif;
+$primary-color: rgba(6, 11, 53, 1);
+$secondary-color: rgba(97, 96, 112, 1);
+
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +14,24 @@ body {
   border-radius: 5px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 1);
+  .card__button {
+  width: 166px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 172, 220, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: $font-stack;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 172, 220, 1);
+    border: 1px solid rgba(0, 172, 220, 1);
+  }
+}
 }
 
 .product {
@@ -18,6 +40,33 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  .product__image {
+    width: 160px;
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 160px 134px;
+  }
+
+  .product__text {
+    font-family: $font-stack;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $primary-color;
+    &--title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    &--productCode {
+      color: $secondary-color;
+      font-weight: 400;
+      font-size: 10px;
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .stars {
@@ -39,4 +88,38 @@ body {
   .stars__star:nth-child(-n + 4) {
     background-image: url('../images/star-active.svg');
   }
+
+  .stars__text {
+    font-family: $font-stack;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $primary-color;
+    text-align: right bottom;
+  }
 }
+
+.price {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .price__text {
+    font-family: $font-stack;
+    line-height: 18px;
+    &--label {
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+    &--value {
+      font-size: 16px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+}
+
+
