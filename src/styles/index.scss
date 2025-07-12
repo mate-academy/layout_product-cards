@@ -8,6 +8,10 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   width: 198px;
   height: 406px;
   border: 1px solid rgba(243, 243, 243, 1);
@@ -35,14 +39,17 @@ body {
 }
 
 .product {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  gap: 40px; // add vertical space between children
 
   .product__image {
-    width: 160px;
+    width: 198px; // match .card width
     height: 134px;
     background-image: url('../images/imac.jpeg');
     background-repeat: no-repeat;
@@ -51,20 +58,20 @@ body {
   }
 
   .product__text {
+    width: 166px;
     font-family: $font-stack;
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 500;
-    color: $primary-color;
+    text-align: left;
     &--title {
-      font-weight: bold;
-      margin-bottom: 8px;
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
     }
     &--productCode {
       color: $secondary-color;
       font-weight: 400;
       font-size: 10px;
-      margin-bottom: 16px;
+      line-height: 14px;
     }
   }
 }
@@ -72,9 +79,17 @@ body {
 .stars {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  .stars__stars-group {
+    display: flex;
+    flex-direction: row;
+  }
 
   .stars__star {
     width: 16px;
@@ -102,6 +117,9 @@ body {
 .price {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
   list-style: none;
   margin: 0;
   padding: 0;
