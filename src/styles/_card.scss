@@ -1,102 +1,90 @@
+@use './variables' as *;
+
 .card {
-  width: $card-width;
-  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $border-color;
   border-radius: 5px;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 1px;
-  left: 1px;
-  opacity: 1;
-  border-width: 1px;
+  padding: 0 16px;
 
   &__image {
     width: 160px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 1;
-    margin-top: 33px;
+    margin-top: 32px;
   }
 
   &__title {
-    font-size: 12px;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
+    font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0%;
-    opacity: 1;
-    width: 166px;
-    margin: 17px;
     margin-top: 40px;
+    color: $desc-color;
+    width: 100%;
+    height: 36px;
   }
 
   &__code {
-    font-size: 10px;
-    color: #666;
+    color: $product-code-color;
+    width: 100%;
+    height: 14px;
     font-weight: 400;
+    font-size: 10px;
     line-height: 14px;
-    letter-spacing: 0%;
-    width: 166px;
-    opacity: 1;
-    margin: 17px;
-    margin-top: -14px;
+    align-self: flex-start;
+    margin-top: 4px;
   }
 
   &__price {
     display: flex;
-    font-weight: bold;
-    font-size: 18px;
-    width: 166px;
-    height: 18px;
-    opacity: 1;
-    margin: 17px;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
     margin-top: 24px;
+    color: $product-code-color;
 
     &-1 {
-      font-size: 12px;
       font-weight: 400;
-      color: #616070;
+      font-size: 12px;
       line-height: 18px;
-      letter-spacing: 0%;
-      text-align: left;
-      width: 100%;
-      opacity: 1;
+      vertical-align: bottom;
+      color: $label-color;
     }
 
     &-2 {
-      font-size: 16px;
+      color: $desc-color;
       font-weight: 700;
-      color: #000;
+      font-size: 16px;
       line-height: 18px;
-      letter-spacing: 0%;
-      text-align: right;
-      width: 100%;
-      opacity: 1;
     }
   }
 
   &__button {
-    display: inline-block;
-    padding: 10px 16px;
-    background-color: $primary-color;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
+    width: 100%;
+    height: 40px;
+    background-color: $background-color;
+    color: $font-color;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
     text-align: center;
-    width: 166px;
-    height: 40;
-    opacity: 1;
-    top: 351px;
-    left: 17px;
-    margin: 17px;
-    margin-top: 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
-      background-color: #f3f3f3;
-      color: #00acdc;
+      color: $background-color;
+      background-color: $font-color;
+      border: 1px solid $background-color;
     }
   }
 }
