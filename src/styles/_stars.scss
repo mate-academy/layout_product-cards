@@ -1,0 +1,24 @@
+.stars {
+  display: flex;
+  align-items: center;
+  height: 16px; // Tak jak w Figma
+  gap: 4px; // Odstęp między gwiazdkami
+  margin: 0;
+  width: auto;
+  padding: 0;
+}
+
+.stars__star {
+  width: 16px; // Wrapper – niech będzie tyle co w projekcie
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-size: 13px 12px; // Tu rzeczywisty wymiar SVG!
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  flex-shrink: 0;
+}
+
+.stars__star--active {
+  background-image: url('../images/star-active.svg');
+}
