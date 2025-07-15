@@ -1,0 +1,148 @@
+@import './variables';
+
+// ---------------------------
+// KARTA PRODUKTU
+// ---------------------------
+.card {
+  width: $card-width;
+  height: auto;
+  background: $card-bg;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding: $padding-top $padding-sides $padding-bottom $padding-sides; // 32px 16px 16px 16px
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-family;
+
+  // ---------------------------
+  // WRAPPER NA OBRAZEK
+  // ---------------------------
+  .card__image-wrapper {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Sam obrazek
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  // ---------------------------
+  // TYTUŁ
+  // ---------------------------
+  .card__title {
+    width: $title-width;
+    font-size: $title-font-size;
+    font-weight: $title-font-weight;
+    line-height: $title-line-height;
+    color: $color-primary;
+    margin-top: 0;
+    margin-bottom: 4px;
+    text-align: left;
+    align-self: flex-start;
+    letter-spacing: 0;
+    word-break: break-word;
+  }
+
+  // ---------------------------
+  // KOD PRODUKTU
+  // ---------------------------
+  .card__code {
+    font-size: $code-font-size;
+    font-weight: $code-font-weight;
+    line-height: $code-line-height;
+    color: $color-secondary;
+    margin-bottom: 16px;
+    text-align: left;
+    width: 100%;
+  }
+
+  // ---------------------------
+  // RATING – GWIAZDKI + REVIEWS
+  // ---------------------------
+  .card__rating {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center; // <- tutaj!
+    height: 16px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card__reviews {
+    width: $reviews-width; // 53px
+    font-size: $reviews-font-size; // 10px
+    font-weight: $reviews-font-weight; // 400
+    line-height: $reviews-line-height; // 14px
+    color: $color-primary;
+    text-align: right;
+    white-space: nowrap; // najważniejsze, nie łamie się linia!
+    margin-left: 0;
+  }
+
+  // ---------------------------
+  // PRICE BOX
+  // ---------------------------
+  .card__price-box {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  .card__price-label {
+    font-size: $price-label-font-size;
+    font-weight: $price-label-font-weight;
+    line-height: $price-label-line-height;
+    color: $color-secondary;
+  }
+
+  .card__price {
+    font-size: $price-font-size;
+    font-weight: $price-font-weight;
+    line-height: $price-line-height;
+    color: $color-primary;
+    text-align: right;
+  }
+
+  // ---------------------------
+  // PRZYCISK
+  // ---------------------------
+  .card__btn {
+    width: $btn-width;
+    height: $btn-height;
+    background: $btn-bg-color;
+    color: $btn-text-color;
+    border-radius: $btn-radius;
+    font-family: $font-family;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    text-transform: $btn-text-transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 0;
+
+    &:hover {
+      border: 1px solid $color-accent;
+      background: $btn-hover-bg;
+      color: $btn-hover-color;
+    }
+  }
+}
