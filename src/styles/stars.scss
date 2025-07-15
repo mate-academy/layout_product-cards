@@ -1,0 +1,20 @@
+@use './variables' as *;
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: ($stars-size + 4px) * 5;
+
+  &__star {
+    width: $stars-size;
+    height: $stars-size;
+    background-image: url(../images/star.svg);
+    background-size: cover;
+  }
+
+  @for $count from 1 through 5 {
+    &--#{$count} &__star:nth-child(-n + #{$count}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
