@@ -1,48 +1,48 @@
 .card {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   width: 200px;
-  height: 408px;
   border: 1px solid $border-color;
   border-radius: 5px;
-  padding: 20px;
-
+  padding: 32px 16px 16px;
+  &__image {
+    display: block;
+    height: 134px;
+    width: 160px;
+    margin: 0 3px 40px;
+  }
   &__description {
     font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    width: 166px;
-    height: 36px;
+    color: $accent-color;
+    margin-bottom: 4px;
   }
-
   &__code {
-    align-self: flex-start;
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    width: 98px;
-    height: 14px;
     color: #616070;
+    margin-bottom: 16px;
   }
-
-  &__image {
-    height: 160px;
-    width: 134px;
+  &__rating {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
   }
-
+  &__reviews {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $accent-color;
+  }
   &__price {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 166px;
-    height: 18px;
+    margin-bottom: 16px;
   }
-
   &__price_text {
     align-self: flex-start;
     font-family: Roboto, sans-serif;
@@ -51,7 +51,6 @@
     line-height: 18px;
     color: #616070;
   }
-
   &__price_value {
     font-family: Roboto, sans-serif;
     font-weight: 700;
@@ -59,17 +58,24 @@
     line-height: 18px;
     color: #060b35;
   }
-
   &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
     font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    border: none;
-    width: 166px;
+    border: 1px solid #00acdc;
     height: 40px;
+    width: 100%;
     color: white;
     background-color: #00acdc;
     border-radius: 4px;
+    &:hover {
+      background-color: white;
+      color: #00acdc;
+    }
   }
 }
