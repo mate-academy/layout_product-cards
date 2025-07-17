@@ -1,3 +1,182 @@
-body {
+// === Переменные ===
+$accent: #00acdc;
+$gray: #f3f3f3;
+$main: #060b35;
+$secondary: #616070;
+$white: #fff;
+$star-size: 16px;
+
+// === Миксины ===
+@mixin standard-page {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  padding: 0;
+  color: $main;
+}
+
+@mixin regular-text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin small-text {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin buy-size {
+  width: 166px;
+  height: 40px;
+}
+
+// === Сброс стилей ===
+body,
+h2,
+p {
   margin: 0;
+}
+
+// === Стили страницы ===
+html {
+  @include standard-page;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// === Стили карточки товара ===
+.card {
+  box-sizing: border-box;
+  position: relative;
+  padding: 16px;
+  width: 200px;
+  height: 406px;
+  flex-shrink: 0;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  background-color: $white;
+
+  &__image {
+    display: block;
+    align-items: center;
+    width: 160px;
+    height: 134px;
+    max-width: 100%;
+    margin: 16px auto 0;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+  }
+
+  &__code {
+    margin: 4px 0;
+    color: $secondary;
+    font-family: Roboto, sans-serif;
+
+    @include small-text;
+
+    line-height: 14px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 16px;
+  }
+
+  &__review-text {
+    @include small-text;
+
+    color: $main;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__price-word {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: #616070;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__buy {
+    @include buy-size;
+
+    background-color: $accent;
+    border-radius: 5px;
+    flex-shrink: 0;
+    text-align: center;
+    color: $white;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+
+    &:hover {
+      background-color: $white;
+      border-radius: 5px;
+      border: 1px solid $accent;
+      box-sizing: border-box;
+      color: $accent;
+    }
+  }
+}
+
+// === Звезды рейтинга ===
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $star-size;
+    height: $star-size;
+    margin-right: 4px;
+    flex-shrink: 0;
+    background-position: center;
+  }
+
+  &--0 {
+    background-color: $white;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+  
 }
