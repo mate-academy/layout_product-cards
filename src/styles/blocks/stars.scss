@@ -1,0 +1,27 @@
+@use '../utils/variables.scss' as *;
+
+.card__stars {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.card__star {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
+}
+
+.card__reviews {
+  display: flex;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  color: $fontColor;
+}
