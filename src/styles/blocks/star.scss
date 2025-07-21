@@ -1,0 +1,36 @@
+.stars {
+  display: flex;
+  gap: 4px;
+  justify-content: space-between; // rozsuwa elementy
+  align-items: center;
+  width: 100%;
+
+  &__star {
+    width: 13px;
+    height: 12px;
+    background-image: url('../images/star.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__reviews {
+    font-size: 0.5rem;
+    color: #444;
+    text-align: right;
+    margin-left: 0.5rem; // odstęp od ostatniej gwiazdki
+  }
+
+  // Usunięcie marginesu po ostatniej gwiazdce
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  // Aktywne gwiazdy dla każdego bloku
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
