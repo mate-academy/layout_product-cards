@@ -1,0 +1,22 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('star.svg'); // use um SVG ou emoji se quiser
+    background-size: cover;
+    filter: grayscale(1);
+  }
+
+  &--1 .stars__star:nth-child(-n+1),
+  &--2 .stars__star:nth-child(-n+2),
+  &--3 .stars__star:nth-child(-n+3),
+  &--4 .stars__star:nth-child(-n+4),
+  &--5 .stars__star:nth-child(-n+5) {
+    filter: none;
+  }
+}
