@@ -1,0 +1,70 @@
+@import 'variables';
+
+.card {
+  background-color: white;
+  border-radius: $border-radius;
+  width: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow $transition-speed;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 400;
+  }
+
+  &__code {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &-label {
+      font-size: 16px;
+    }
+
+    &-amount {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all $transition-speed;
+
+    &:hover {
+      background-color: #fff;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+    }
+  }
+}
