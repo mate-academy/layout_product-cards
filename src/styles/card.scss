@@ -1,22 +1,53 @@
 @import 'variables';
 
 .card {
+  width: 200px;
   background: $card-bg;
-  padding: $card-padding;
   border-radius: $card-border-radius;
   box-shadow: $card-shadow;
   font-family: $font-family;
-  max-width: 300px;
-  margin: 1rem auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: $card-padding;
+    gap: 0.5rem;
+    text-align: center;
+  }
 
   &__title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #666;
-    margin-bottom: 1rem;
+  }
+
+  &__buy {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #444;
+    }
   }
 }
