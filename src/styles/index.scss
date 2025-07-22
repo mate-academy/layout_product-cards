@@ -1,95 +1,128 @@
-$blue: #00BCD4;
-$light-gray: #f5f5f5;
-$font-color: #333;
+// 🔧 Variáveis
+$primary-color: #00BCD4;
+$text-color: #333;
+$background-color: #f5f5f5;
 $border-radius: 10px;
 $transition-speed: 0.3s;
+$font-family: 'Roboto', sans-serif;
+
+// 🔧 Reset Básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 50px;
+  font-family: $font-family;
+  background-color: $background-color;
+  padding: 40px;
+  color: $text-color;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+// 🔧 BEM Card
 .card {
-    background-color: white;
-    padding: 20px;
-    width: 320px;
+  background-color: white;
+  border-radius: $border-radius;
+  width: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow $transition-speed;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 400;
+  }
+
+  &__code {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+
+    .star {
+      width: 16px;
+      height: 16px;
+      background-color: lightgray;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+      display: inline-block;
+
+      &.active {
+        background-color: gold;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &-label {
+      font-size: 16px;
+    }
+
+    &-amount {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
     border-radius: $border-radius;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: box-shadow $transition-speed;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all $transition-speed;
 
     &:hover {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      color: $primary-color;
+      border: 1px solid $primary-color;
     }
-
-    img {
-        width: 100%;
-        border-radius: 5px;
-        margin-bottom: 15px;
-    }
-
-    h2 {
-        font-size: 16px;
-        color: $font-color;
-        margin: 10px 0;
-        font-weight: 400;
-    }
-
-    .product-code {
-        font-size: 14px;
-        color: gray;
-        margin-bottom: 10px;
-    }
-
-    .rating {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 16px;
-        margin: 15px 0;
-
-        .reviews {
-            font-size: 14px;
-            color: gray;
-        }
-    }
-
-    .price {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $font-color;
-        font-size: 16px;
-        margin-bottom: 20px;
-
-        .amount {
-            font-size: 24px;
-            font-weight: bold;
-        }
-    }
-
-    .btn {
-        width: 100%;
-        padding: 10px 0;
-        background-color: $blue;
-        color: #fff;
-        border: none;
-        border-radius: $border-radius;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all $transition-speed;
-
-        &:hover {
-            background-color: #fff;
-            color: $blue;
-            border: 1px solid $blue;
-        }
-    }
+  }
 }
