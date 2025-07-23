@@ -1,4 +1,4 @@
-@import './utils/mixins.scss';
+@import './utils/mixins';
 @import './utils/variables';
 
 html {
@@ -16,11 +16,11 @@ p {
 
 .card {
   box-sizing: border-box;
+  background-color: #fff;
   width: 200px;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: $border-radius-standard;
-  background-color: #fff;
   &__img {
     display: block;
     margin-inline: 3px;
@@ -46,33 +46,36 @@ p {
 
   &__rating {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     margin: 16px;
     .stars stars--4 {
       display: flex;
       align-items: center;
       &__star {
-        background-image: url(../images/star-active.svg);
         height: 16px;
         width: 16px;
+        background-image: url(../images/star-active.svg);
+        /*height: 16px;
+        width: 16px;
         border-radius: 0.5px;
-        vertical-align: middle;
-        background-position: center;
-        background-repeat: no-repeat;
         margin-right: 4px;
+        vertical-align: middle;
+        background-image: url(../images/star-active.svg);
+        background-position: center;
+        background-repeat: no-repeat;*/
         &:nth-child(5) {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-image: url(../images/star.svg);
           height: 16px;
           width: 16px;
           margin-right: 0;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url(../images/star.svg);
         }
       }
     }
     &__reviews {
       @include small-text;
+
       color: $title-color;
     }
   }
@@ -81,19 +84,17 @@ p {
     justify-content: space-between;
     margin-top: 24px;
     &__price-item {
-      font-style: normal;
-      font-weight: $font-width-regular;
       color: $text-color;
+      font-weight: $font-width-regular;
       font-size: $font-size-s;
       line-height: $line-hight-m;
     }
 
     &__price-cost {
+      color: $title-color;
+      font-size: $font-size-l;
       font-weight: $font-width-bold;
       line-height: $line-hight-m;
-      font-size: $font-size-l;
-      font-style: normal;
-      color: $title-color;
     }
   }
 
