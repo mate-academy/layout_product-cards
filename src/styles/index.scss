@@ -1,3 +1,108 @@
+@import './variables';
+
 body {
   margin: 0;
+  font-family: $font-family;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  background-color: $color-white;
+  border-radius: $border-radius-standart;
+  border: 1px solid $color-light-grey;
+
+  &__logo {
+    display: block;
+    margin-inline: 3px;
+    width: 160px;
+    height: 134px;
+  }
+  &__name {
+    margin: 40px 0 0;
+    font-weight: $font-width-medium;
+    font-size: $font-size-sm;
+    line-height: $line-height-m;
+    color: $color-dark-blue;
+    width: 100%;
+  }
+  &__product-code {
+    margin-top: 4px;
+    font-weight: $font-width-regular;
+    font-size: $font-size-xs;
+    line-height: $line-height-s;
+    color: $color-grey;
+    width: 100%;
+  }
+  &__rating {
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__reviews {
+    font-weight: $font-width-regular;
+    font-size: $font-size-xs;
+    line-height: $line-height-s;
+    color: #060b35;
+  }
+  &__price {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__price-label {
+    font-weight: $font-width-regular;
+    font-size: $font-size-sm;
+    line-height: $line-height-m;
+    color: $color-grey;
+  }
+  &__price-value {
+    font-weight: 700;
+    font-size: 16;
+    line-height: 18px;
+    color: #060b35;
+    margin-left: auto;
+  }
+  &__button {
+    width: 166px;
+    height: 40px;
+    margin-top: 16px;
+    border-radius: $border-radius-standart;
+    border: none;
+    color: $color-white;
+    background-color: $color-accent-blue;
+    font-weight: $font-width-bold;
+    font-size: $font-size-m;
+    line-height: 16px;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-accent-blue;
+      background-color: $color-white;
+      border: 1px solid $color-accent-blue;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  &__star {
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
 }
