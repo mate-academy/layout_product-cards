@@ -47,22 +47,19 @@ p {
   &__rating {
     display: flex;
     justify-content: space-between;
-    margin: 16px;
-    .stars stars--4 {
+    margin-top: 16px;
+    .stars {
       display: flex;
       align-items: center;
       &__star {
         height: 16px;
         width: 16px;
-        background-image: url(../images/star-active.svg);
-        /*height: 16px;
-        width: 16px;
-        border-radius: 0.5px;
         margin-right: 4px;
-        vertical-align: middle;
+        border-radius: 0.5px;
+        vertical-align: auto;
         background-image: url(../images/star-active.svg);
+        background-repeat: no-repeat;
         background-position: center;
-        background-repeat: no-repeat;*/
         &:nth-child(5) {
           height: 16px;
           width: 16px;
@@ -73,7 +70,7 @@ p {
         }
       }
     }
-    &__reviews {
+    &__rating-reviews {
       @include small-text;
 
       color: $title-color;
@@ -83,14 +80,13 @@ p {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
-    &__price-item {
+    &-price-item {
       color: $text-color;
       font-weight: $font-width-regular;
       font-size: $font-size-s;
       line-height: $line-hight-m;
     }
-
-    &__price-cost {
+    &-price-cost {
       color: $title-color;
       font-size: $font-size-l;
       font-weight: $font-width-bold;
@@ -99,31 +95,32 @@ p {
   }
 
   &__button {
-    height: 40px;
-    width: 100%;
-    flex-shrink: 0;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    flex-shrink: 0;
     margin: 16px 0;
+    padding: 0;
     background-color: $button-color;
-    font-size: $font-size-m;
-    text-transform: uppercase;
-    text-align: center;
     font-family: Roboto, sans-serif;
     font-style: normal;
-    border-radius: $border-radius-standard;
+    font-size: $font-size-m;
     font-weight: $font-width-bold;
-    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
     line-height: 16px;
-    padding: 0;
+    border-radius: $border-radius-standard;
+    border: none;
     &:hover {
+      box-sizing: border-box;
       color: $button-color;
       background-color: #f3f3f3;
       border-radius: $border-radius-standard;
       border: 1px solid $button-color;
-      box-sizing: border-box;
     }
   }
 }
