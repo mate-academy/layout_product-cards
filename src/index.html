@@ -1,18 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product cards</title>
-    <link
-      rel="stylesheet"
-      href="./styles/index.scss"
-    />
+
+    <!-- Fonte Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- CSS compilado -->
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
     <h1>Product cards</h1>
+
+    <div class="card" data-qa="card">
+      <img src="./images/product.jpg" alt="Nome do produto" class="card__image" />
+      <div class="card__content">
+        <h2 class="card__title">Nome do Produto</h2>
+        <p class="card__description">Descrição breve do produto.</p>
+
+        <div class="stars stars--4">
+          <span class="stars__star"></span>
+          <span class="stars__star"></span>
+          <span class="stars__star"></span>
+          <span class="stars__star"></span>
+          <span class="stars__star"></span>
+        </div>
+
+        <a href="#" class="card__buy" data-qa="hover">BUY</a>
+      </div>
+    </div>
   </body>
 </html>
