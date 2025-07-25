@@ -1,14 +1,41 @@
 {
-  "name": "layout-product-cards",
-  "source": "src/index.html",
+  "name": "product-cards",
+  "version": "1.0.0",
+  "description": "Frontend practice with product cards",
   "scripts": {
-    "test": "npm run lint && npm run test:only",
-    "start": "parcel --open",
-    "build": "parcel build --public-url=/dist/"
+    "init": "mate-scripts init",
+    "start": "mate-scripts start",
+    "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
+    "lint": "npm run format && mate-scripts lint",
+    "test:only": "mate-scripts test",
+    "build": "mate-scripts build",
+    "deploy": "mate-scripts deploy",
+    "update": "mate-scripts update",
+    "postinstall": "npm run update",
+    "test": "npm run lint && npm run test:only"
   },
+  "keywords": [],
+  "author": "Mate Academy",
+  "license": "GPL-3.0",
   "devDependencies": {
+    "@linthtml/linthtml": "^0.9.6",
+    "@mate-academy/backstop-config": "latest",
+    "@mate-academy/bemlint": "latest",
+    "@mate-academy/linthtml-config": "latest",
+    "@mate-academy/scripts": "^2.1.1",
+    "@mate-academy/stylelint-config": "latest",
     "@parcel/transformer-sass": "^2.12.0",
-    "backstopjs": "^6.3.25",
-    "parcel": "^2.12.0"
+    "backstopjs": "6.3.23",
+    "jest": "^29.7.0",
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.2",
+    "stylelint": "^16.7.0",
+    "stylelint-scss": "^6.4.1"
+  },
+  "mateAcademy": {
+    "projectType": "layout",
+    "linters": {
+      "javascript": false
+    }
   }
 }
