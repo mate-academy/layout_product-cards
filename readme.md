@@ -1,10 +1,5 @@
 # TEST
-npx puppeteer browsers install chrome
-npm install --save-dev backstopjs
-npx backstop init
-npx backstop reference
-npx backstop test
-
+package.json ==>   "test": "npm run lint && npm run test:only"
 
 # Product cards
 

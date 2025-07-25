@@ -1,14 +1,13 @@
 @use 'star';
-
 @use '../utils/mixins';
 
 :root {
-  --primary-color: #060B35;
+  --primary-color: #060b35;
   --secondary-color: #616070;
-  --main-accent-color: #060B35;
-  --blue-accent-color: #00ACDC;
-  --cl-white: #FFF;
-  --cl-card-border-color: #F3F3F3;
+  --main-accent-color: #060b35;
+  --blue-accent-color: #00acdc;
+  --cl-white: #fff;
+  --cl-card-border-color: #f3f3f3;
   --card-image-width: 160px;
   --card-image-height: 134px;
   --border-radius: 5px;
@@ -25,20 +24,21 @@
 }
 
 .card__content {
-  margin: 32px 16px
+  margin: 32px 16px;
 }
 
 .card__image {
-  margin: 0 3px 40px 3px;
+  margin: 0 3px 40px;
+}
 
-  img {
-    width: var(--card-image-width);
-    height: var(--card-image-height);
-  }
+.card__image img {
+  width: var(--card-image-width);
+  height: var(--card-image-height);
 }
 
 .card__title {
   margin-bottom: 4px;
+
   @include mixins.roboto-font(500, 12px, 18px);
 }
 
@@ -46,6 +46,7 @@
   display: flex;
   margin-bottom: 16px;
   color: var(--secondary-color);
+
   @include mixins.roboto-font(400, 10px, 14px);
 }
 
@@ -60,6 +61,7 @@
   color: var(--main-accent-color);
   justify-content: center;
   align-items: self-end;
+
   @include mixins.roboto-font(400, 10px, 14px);
 }
 
@@ -72,6 +74,7 @@
 .card__price-label {
   color: var(--secondary-color);
   vertical-align: bottom;
+
   @include mixins.roboto-font(400, 12px, 18px);
 }
 
@@ -79,6 +82,7 @@
   color: var(--main-accent-color);
   justify-content: right;
   vertical-align: bottom;
+
   @include mixins.roboto-font(700, 16px, 18px);
 }
 
@@ -93,6 +97,7 @@
   color: var(--cl-white);
   justify-content: center;
   text-transform: uppercase;
+
   @include mixins.roboto-font(700, 14px, 40px);
 }
 
