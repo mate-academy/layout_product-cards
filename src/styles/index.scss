@@ -2,50 +2,53 @@
 
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  padding: 20px;
   font-family: Roboto, sans-serif;
   background-color: #f9f9f9;
-  padding: 20px;
 }
 
 .products {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .card {
   width: 200px;
   height: 408px;
+  padding: 31px 13px 16px;
   border: 0.8px solid $border-color;
   border-radius: 4px;
+
   background-color: $background-white;
-  padding: 31px 13px 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 
   &__image {
-    margin-left: 6px;
     width: 160px;
     height: 134px;
+    margin-left: 6px;
     border-radius: 4px;
   }
 
   &__title {
-    letter-spacing: -0.1px;
-    text-align: left;
+    position: relative;
+
     width: 166px;
     height: 36px;
-    position: relative;
+    margin: 34px 3 7px;
+
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: $text-color-blue-1;
-    margin: 34px 3 7px;
+    text-align: left;
+    letter-spacing: -0.1px;
   }
 
   &__code {
@@ -55,30 +58,33 @@ body {
   }
 
   &__rating {
-    width: 100%;
-    color: $text-color-blue-1;
-    height: 56px;
-    font-size: 10px;
-    font-weight: 400;
-    padding: 25px 3px 30px;
     display: flex;
     align-items: center;
-    white-space: nowrap;
     justify-content: space-between;
+
+    width: 100%;
+    height: 56px;
+    padding: 25px 3px 30px;
+
+    font-size: 10px;
+    font-weight: 400;
+    color: $text-color-blue-1;
+    white-space: nowrap;
   }
 
   &__price-label {
-    color: $text-price;
-    font-size: 12px;
     margin-top: 4px;
+    font-size: 12px;
+    color: $text-price;
   }
 
   &__price-info {
     display: flex;
+    gap: 90px;
     align-items: flex-start;
+
     margin-bottom: 16px;
     margin-left: 3px;
-    gap: 90px;
   }
 
   &__price-value {
@@ -88,28 +94,33 @@ body {
   }
 
   &__buy {
-    margin: 0 3px;
-    text-align: center;
-    align-items: center;
-    display: inline-block;
-    background-color: $button-color;
-    color: $background-white;
-    text-decoration: none;
-    padding: 10 0;
-    border-radius: 5px;
-    width: 166px;
-    height: 40px;
     top: 351px;
     left: 17px;
+
+    display: inline-block;
+    align-items: center;
+
+    width: 166px;
+    height: 40px;
+    margin: 0 3px;
+    padding: 10 0;
+    border-radius: 5px;
+
+    color: $background-white;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: $button-color;
+
     transition:
       background-color 0.3s,
       border-color 0.3s,
       color 0.3s;
 
     &:hover {
-      background-color: transparent;
       border: 1px solid $button-hover;
       color: $button-hover;
+      background-color: transparent;
     }
   }
 }
