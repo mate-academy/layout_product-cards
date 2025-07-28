@@ -1,3 +1,134 @@
-body {
+@import 'variables';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  border: 0.8px solid $border-color;
+  border-radius: 4px;
+  background-color: $background-white;
+  padding: 31px 13px 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+  &__image {
+    margin-left: 6px;
+    width: 160px;
+    height: 134px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    letter-spacing: -0.1px;
+    text-align: left;
+    width: 166px;
+    height: 36px;
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $text-color-blue-1;
+    margin: 34px 3 7px;
+  }
+
+  &__code {
+    margin: 0 3px;
+    font-size: 10px;
+    color: $text-price;
+  }
+
+  &__rating {
+    width: 100%;
+    color: $text-color-blue-1;
+    height: 56px;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 25px 3px 30px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+
+  & .card__stars {
+    height: 16px;
+    border-radius: 0.5px;
+    display: flex;
+    gap: 6px;
+    margin: 1px;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__pricing-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  &__price-label {
+    color: $text-price;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  &__price-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    margin-left: 3px;
+    gap: 90px;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-color-blue-1;
+  }
+
+  &__buy {
+    margin: 0 3px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    background-color: $button-color;
+    color: $background-white;
+    text-decoration: none;
+    padding: 10 0;
+    border-radius: 5px;
+    width: 166px;
+    height: 40px;
+    top: 351px;
+    left: 17px;
+    transition:
+      background-color 0.3s,
+      border-color 0.3s,
+      color 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $button-hover;
+      color: $button-hover;
+    }
+  }
 }
