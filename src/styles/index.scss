@@ -1,3 +1,131 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 408px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    margin-bottom: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  &__image img {
+    max-width: 100%;
+    height: 134px;
+    display: block;
+  }
+
+  &__description {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #616070;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__rating_stars {
+    display: flex;
+    gap: 4px;
+    width: fit-content;
+    height: 16px;
+  }
+
+  &__stars {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__stars img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__rating_reviews {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    color: #060b35;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+    color: #060b35;
+  }
+
+  &__price {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #060b35;
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #616070;
+  }
+
+  &__button {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0%;
+    width: 166px;
+    height: 40px;
+    background-color: #00acdc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__button:hover {
+    background-color: #fff;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
 }
