@@ -1,143 +1,128 @@
-@import 'variable';
+@import './variable';
 
-html {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  color: $text-color;
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-}
-
-.stars {
-  display: flex;
+  padding: 0;
+  font-family: Roboto, sans-serif;
 }
 
 .card {
-  line-height: 14px;
-  width: 200px;
-  height: 408px;
-  box-sizing: border-box;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  left: 1px;
-  top: 1px;
-
+  background-color: $back-ground-color;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $back-ground-color;
+    border: 1px solid $back-ground-border-color;
+    border-radius: 5px;
+    padding-inline: 16px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    width: 200px;
+    box-sizing: border-box;
+  }
   &__image {
     width: 160px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
-    position: absolute;
-    left: 20px;
-    top: 33px;
+    margin: 0 auto 30px;
   }
-
   &__title {
-    line-height: 18px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: inherit;
     font-size: 12px;
     font-weight: 500;
-    position: absolute;
-    left: 16px;
-    top: 195px;
-    letter-spacing: 0%;
+    line-height: 18px;
+    color: $first-text-color;
+    margin-bottom: 4px;
   }
-
-  &__code {
-    color: rgba(97, 96, 112, 1);
-    line-height: 14px;
-    font-size: 10px;
+  &__description {
     font-weight: 400;
-    position: absolute;
-    left: 17px;
-    top: 236px;
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    color: $second-text-color;
+    margin-top: 0;
   }
-
-  &__review {
+  &__like {
     display: flex;
-    width: 166px;
-    height: 16px;
-    align-items: center;
     justify-content: space-between;
-    position: relative;
-    left: 17px;
-    top: 277px;
-    text-align: center;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-left: 2px;
   }
-
+  &__info {
+    width: 100%;
+  }
+  &__reviews {
+    padding-top: 2px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $first-text-color;
+  }
+  &__reviews-count {
+    line-height: 14px;
+  }
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 166px;
-    height: 18px;
-    position: absolute;
-    left: 17px;
-    top: 317px;
-
-    &-text {
-      font-weight: 400;
-      flex-basis: 60px;
-      min-width: 40px;
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 0%;
-      vertical-align: bottom;
-      color: rgba(97, 96, 112, 1);
-    }
-
-    &-value {
-      flex-basis: 60px;
-      min-width: 60px;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18px;
-      text-align: right;
-    }
+    font-family: inherit;
+    line-height: 18px;
+    color: $first-text-color;
+    margin-bottom: 16px;
   }
-
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    color: $second-text-color;
+    margin: 0;
+  }
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    color: $first-text-color;
+  }
   &__button {
-    width: 166px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: rgba(0, 172, 220, 1);
-    color: #fff;
-    border: 1px solid rgba(0, 172, 220, 1);
-    cursor: pointer;
     display: flex;
-    align-items: center;
+    height: 40px;
+    width: 100%;
     justify-content: center;
-    position: absolute;
-    top: 351px;
-    left: 17px;
-    opacity: 1;
-    font-family: Roboto, sans-serif;
-
-    text-decoration: none;
-    text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    background-color: $fourth-text-color;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
 
     &:hover {
-      background: rgba(243, 243, 243, 1);
-      color: rgba(0, 172, 220, 1);
+      padding: 11px 69px;
+      box-sizing: border-box;
+      border-width: 1px;
+      background-color: #fff;
+      border-color: $fourth-text-color;
+      color: $fourth-text-color;
     }
   }
-}
-
-.reviewBlock {
-  position: relative;
-}
-
-.reviewText {
-  font-size: 10px;
-  line-height: 14px;
-  font-weight: 400;
-  letter-spacing: 0%;
-  text-align: center;
 }
