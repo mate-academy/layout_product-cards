@@ -1,6 +1,9 @@
+@import 'variable';
+
 html {
   margin: 0;
   font-family: Roboto, sans-serif;
+  color: $text-color;
 }
 
 body {
@@ -14,6 +17,7 @@ body {
 .card {
   line-height: 14px;
   width: 200px;
+  height: 408px;
   box-sizing: border-box;
   border-radius: 5px;
   display: flex;
@@ -27,21 +31,41 @@ body {
     background-image: url(../images/imac.jpeg);
     background-size: cover;
     background-position: center;
-    margin: 32px 19px 40px;
+    position: absolute;
+    left: 20px;
+    top: 33px;
   }
 
   &__title {
     line-height: 18px;
     font-size: 12px;
     font-weight: 500;
-    margin: 0 17px;
+    position: absolute;
+    left: 16px;
+    top: 195px;
+    letter-spacing: 0%;
   }
 
   &__code {
+    color: rgba(97, 96, 112, 1);
     line-height: 14px;
     font-size: 10px;
     font-weight: 400;
-    margin: 4px 17px 0;
+    position: absolute;
+    left: 17px;
+    top: 236px;
+  }
+
+  &__review {
+    display: flex;
+    width: 166px;
+    height: 16px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: 17px;
+    top: 277px;
+    text-align: center;
   }
 
   &__price {
@@ -50,14 +74,19 @@ body {
     align-items: center;
     width: 166px;
     height: 18px;
-    margin: 24px 16px 0;
+    position: absolute;
+    left: 17px;
+    top: 317px;
 
     &-text {
+      font-weight: 400;
       flex-basis: 60px;
       min-width: 40px;
       font-size: 12px;
-      font-weight: 400;
       line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: rgba(97, 96, 112, 1);
     }
 
     &-value {
@@ -69,41 +98,46 @@ body {
       text-align: right;
     }
   }
-}
 
-.review {
-  width: 166px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: 16px;
-  margin-top: 16px;
+  &__button {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(0, 172, 220, 1);
+    color: #fff;
+    border: 1px solid rgba(0, 172, 220, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 351px;
+    left: 17px;
+    opacity: 1;
+    font-family: Roboto, sans-serif;
 
-  &__text {
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+
+    &:hover {
+      background: rgba(243, 243, 243, 1);
+      color: rgba(0, 172, 220, 1);
+    }
   }
 }
 
-.buy {
-  width: 166px;
-  height: 40px;
-  background-color: rgba(0, 172, 220, 1);
-  color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(0, 172, 220, 1);
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.reviewBlock {
+  position: relative;
+}
 
-  margin: 16px;
-
-  &:hover {
-    background: rgba(243, 243, 243, 1);
-    color: rgba(0, 172, 220, 1);
-  }
+.reviewText {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: center;
 }
