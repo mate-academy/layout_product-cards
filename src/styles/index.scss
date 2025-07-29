@@ -1,3 +1,118 @@
-body {
-  margin: 0;
+@use 'variables';
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  font-family: Roboto, sans-serif;
+  font-weight: variables.$font-weight-medium;
+  &__image {
+    box-sizing: border-box;
+    display: block;
+    padding-bottom: 40px;
+    padding-top: 33px;
+    padding-inline: 20px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 17px;
+  }
+  &__title {
+    font-size: variables.$font-size-medium;
+    line-height: 18px;
+    font-weight: variables.$font-weight-medium;
+    text-decoration: none;
+    color: #060b35
+  }
+ &__product-code {
+    font-weight: variables.$font-weight-small;
+    line-height: 14px;
+    font-size: variables.$font-size-small;
+    color: #616070;
+    margin: 0;
+    padding-block: 4px 16px;
+ }
+ &__rating-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__reviews {
+    font-weight: $font-weight-small;
+    font-size: $font-size-small;
+    margin: 0;
+    margin-top: 2px;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-block: 24px 16px;
+    line-height: 18px;
+  }
+  &__price-title {
+    font-weight: $font-weight-small;
+    font-size: $font-size-medium;
+    color: #616070;
+    margin: 0;
+  }
+    &__price-amount {
+    font-weight: 700;
+    font-size: 16px;
+    color: #060b35;
+    margin: 0;
+  }
+  &__button {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    width: 166px;
+    margin: 16px;
+    font-size: 14px;
+    padding: 11px 0;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #00Acdc;
+    letter-spacing: 0;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    border-color: variables.$button-color;
+    font-weight: variables.$font-weight-large;
+    line-height: 16px;
+    text-align: center;
+    transition: all 0.3 ease;
+  }
+  &__button:hover {
+     border: 1px solid rgba(0, 172, 220, 1);
+      color: rgba(0, 172, 220, 1);
+      background-color: white;
+  }
+}
+
+.star {
+  display: inline-block;
+  justify-content: space-between;
+  padding-left: 16px;
+&__active {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+
+  vertical-align: bottom;
+
+  background-image: url(../images/star-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+&__silver {
+  background-image: url(../images/star.svg);
+}
 }
