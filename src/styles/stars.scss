@@ -1,3 +1,5 @@
+@import './variables';
+
 .stars {
   display: flex;
   align-items: center;
@@ -10,7 +12,7 @@
   }
 
   &__star {
-    background-image: url(../images/star.svg);
+    background-image: url('../images/star.svg');
     height: 13px;
     width: 13px;
     background-repeat: no-repeat;
@@ -24,12 +26,13 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: #060b35;
+    color: $color-text-dark;
   }
 }
 
+// Генерація активних зірок за допомогою SCSS-циклу
 @for $i from 0 through 5 {
   .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background-image: url(../images/star-active.svg);
+    background-image: url('../images/star-active.svg');
   }
 }
