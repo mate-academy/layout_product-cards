@@ -1,12 +1,10 @@
 'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
 
 const backstop = require('@mate-academy/backstop-config');
 const { basicScenario } = backstop;
 
 const basic = {
   ...basicScenario,
-  label: 'Elementary test',
   referenceUrl: basicScenario.referenceUrl + '/product-cards/',
 };
 
@@ -32,9 +30,9 @@ const config = {
       ...basic,
       label: 'Link with data-qa_hover',
       hoverSelector: '[data-qa="hover"]',
-      postInteractionWait: 1000,
+      postInteractionWait: 2000,
       selectors: ['[data-qa="card"]'],
-    },
+    }
   ],
 };
 

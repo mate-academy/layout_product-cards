@@ -1,3 +1,144 @@
-body {
+@use './variables.scss' as *;
+
+$main-color: #00acdc;
+$border-radius: 5px;
+$star-active: url('../images/star-active.svg');
+$star-inactive: url('../images/star.svg');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  opacity: 1;
+  border-radius: $border-radius;
+  border-width: 1px;
+  background-color: #fff;
+}
+
+.product-card__image {
+  margin: 32px 19px 0;
+  background: url(../images/ilustracao1.png) no-repeat;
+  background-size: cover;
+  height: 140px;
+  width: 160px;
+  border-radius: $border-radius;
+  background-position: center;
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+h2 {
+  margin: 0 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #616070;
+  text-align: left;
+}
+
+.product-card__price {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  color: #060b35;
+}
+
+.product-card__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px; /* Adicionando um espaço entre o card e o botão */
+}
+
+.stars {
+  display: flex;
+  margin-left: 10px;
+}
+
+.stars__star {
+  height: 16px; /* Defina o tamanho da estrela */
+  width: 16px; /* Defina o tamanho da estrela */
+  display: block;
+  background-size: contain;
+  margin: 2px; /* Espaçamento entre as estrelas */
+}
+
+.stars__star--active {
+  background-image: $star-active;
+}
+
+.stars__star--inactive {
+  background-image: $star-inactive;
+}
+
+.product-card {
+  width: 200px;
+  border: 1px solid #e0e0e0;
+}
+
+.product-card__button--buy {
+  margin: 16px;
+  width: 166px;
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: $border-radius;
+  background-color: $main-color;
+  border: none;
+  color: #fff;
+}
+
+.product-card__button--buy:hover {
+  background-color: #fff;
+  border: 1px solid $main-color;
+  color: $main-color;
+}
+
+.product-card__price-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.product__price--money {
+  letter-spacing: 0%;
+
+  margin-right: 16px;
+}
+
+.product-card__reviews {
+  margin-right: 10px;
+}
+
+p {
+  margin: 0 16px;
+  font-size: 12px;
+  position: relative;
 }
