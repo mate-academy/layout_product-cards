@@ -1,0 +1,47 @@
+@use '../utils/variables.scss' as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border: solid #f3f3f3 1px;
+  border-radius: 5px;
+  margin: 0;
+  padding: $product-card-padding;
+  width: $product-card-width;
+
+  [class*='product-card__'] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__product-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+
+    > img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__name-section {
+    margin-top: 40px;
+  }
+
+  &__rate-section {
+    margin-top: 16px;
+  }
+
+  &__price-section {
+    margin-top: 24px;
+  }
+
+  &__button {
+    margin-top: 16px;
+    height: 40px;
+  }
+}
