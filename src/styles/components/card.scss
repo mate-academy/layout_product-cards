@@ -1,0 +1,95 @@
+@use 'variables' as *;
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  overflow: hidden;
+  min-height: 408px;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font-family;
+  &__image {
+    width: 100%;
+    height: auto;
+    padding-bottom: 16px;
+    object-fit: contain;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__title {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: 18px;
+    color: $color-dark;
+    text-decoration: none;
+  }
+  &__product-code {
+    font-size: $font-size-small;
+    margin-bottom: 8px;
+    line-height: 14px;
+    color: $color-gray;
+  }
+  &__rating-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  &__reviews {
+    width: 53px;
+    height: 16px;
+    text-align: right;
+    letter-spacing: 0;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    font-family: $font-family;
+    line-height: 14px;
+    color: $color-dark;
+    vertical-align: bottom;
+    margin: 0;
+  }
+  &__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  &__price-title {
+    font-size: $font-size-medium;
+    color: $color-gray;
+  }
+  &__price-amount {
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-bold;
+    color: $color-dark;
+  }
+  &__button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 11px 0;
+    text-align: center;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    border: 1px solid $color-primary;
+    border-radius: $button-radius;
+    color: $color-white;
+    background-color: $color-primary;
+    transition: all 0.3s ease;
+    &:hover {
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      background-color: $color-white;
+      cursor: pointer;
+    }
+  }
+}
