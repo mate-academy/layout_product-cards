@@ -6,73 +6,55 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
     <title>Product cards</title>
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
     <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap"
     />
   </head>
   <body>
     <div
-      class="card"
+      class="product-card"
       data-qa="card"
     >
-      <a
-        href="#"
-        class="card__product"
-      >
+      <div class="product-card__product-photo">
         <img
           src="./images/imac.jpeg"
-          alt="APPLE A1419 iMac 27"
-          class="card__image"
+          alt="apple"
         />
-      </a>
-
-      <div class="card__detail">
-        <h2 class="card__title">
+      </div>
+      <div class="name-section product-card__name-section">
+        <div class="name-section__header">
           APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
-        </h2>
-        <p class="card__code">Product code: 195434</p>
-        <div class="card__review">
-          <div class="stars stars--4">
-            <div class="stars__star"></div>
-            <div class="stars__star"></div>
-            <div class="stars__star"></div>
-            <div class="stars__star"></div>
-            <div class="stars__star"></div>
-          </div>
-          <p class="card__review-count">Reviews: 5</p>
         </div>
+        <div class="name-section__code">Product code: 195434</div>
       </div>
-
-      <div class="card__price">
-        <p class="card__price-title">Price:</p>
-        <p class="card__price-total">$2,199</p>
+      <div class="rate-section product-card__rate-section">
+        <div class="stars rate-section__stars stars--4">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="rate-section__reviews">Reviews: 5</div>
       </div>
-
-      <div class="card__buy">
-        <button
-          href="#"
-          class="card__buy-link"
-          data-qa="hover"
-        >
-          BUY
-        </button>
+      <div class="price-section product-card__price-section">
+        <div class="price-section__label">Price:</div>
+        <div class="price-section__amount">$2,199</div>
       </div>
+      <a
+        href="#BUY"
+        alt="buy button"
+        class="button product-card__button"
+        data-qa="hover"
+      >
+        BUY
+      </a>
     </div>
   </body>
 </html>
