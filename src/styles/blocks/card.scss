@@ -1,0 +1,103 @@
+@import '../utils.scss/variables';
+
+body {
+  font-family: Roboto, sans-serif;
+
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &__img {
+    display: block;
+    object-position: center;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__information {
+    margin: 0 16px;
+  }
+
+  &__title {
+    flex-wrap: wrap;
+
+    font-weight: 500;
+    font-size: $font-size-big;
+    line-height: $line-height-big;
+    color: $color-main-text;
+
+    margin: 0 0 5px;
+  }
+
+  &__code {
+    margin: 0 0 16px;
+
+    font-weight: $font-weight-small;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    color: $color-small-text;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    font-weight: $font-weight-small;
+    font-size: $font-size-big;
+    line-height: $line-height-big;
+    color: $color-small-text;
+
+    margin: 0;
+  }
+
+  &__cost {
+    font-weight: $font-weight-big;
+    font-size: 16px;
+    line-height: $line-height-big;
+    color: $color-main-text;
+
+    margin: 0;
+    width: 50px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+
+    width: 166px;
+    height: 40px;
+    border: $border-button;
+    border-radius: 5px;
+    background-color: $color-button;
+
+    text-transform: uppercase;
+    font-weight: $font-weight-big;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+
+    &:hover {
+      border: $border-button;
+      background-color: #fff;
+      color: $color-button;
+    }
+  }
+}
