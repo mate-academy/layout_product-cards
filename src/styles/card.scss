@@ -1,0 +1,109 @@
+@import './variables';
+
+.card {
+  width: 198px;
+  height: 406px;
+  border: 1px solid;
+  border-radius: $radius;
+  border-color: rgba(243, 243, 243, 1);
+  display: flex;
+  flex-flow: column nowrap;
+
+  .card__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-left: 19px;
+  }
+
+  .card__product {
+    font-weight: 500;
+    font-size: 12px;
+    height: 36px;
+    width: $primary-width;
+    margin-top: 36px;
+    margin-left: $left;
+    color: $primary-color;
+    line-height: 18px;
+  }
+
+  .card__code {
+    font-weight: $secondary-weight;
+    font-size: 10px;
+    height: 14px;
+    width: 98px;
+    margin-top: 4px;
+    margin-left: $left;
+    color: $secondary-color;
+    line-height: 14px;
+  }
+
+  .card__price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-left: $left;
+    width: $primary-width;
+
+    .card__price--text {
+      margin: 0;
+      font-weight: $secondary-weight;
+      font-size: 12px;
+      width: 31px;
+      text-align: start;
+      color: $secondary-color;
+      line-height: 18px;
+    }
+
+    .card__price--number {
+      margin: 0;
+      font-weight: $primary-weight;
+      font-size: 16px;
+      width: 50px;
+      height: 18px;
+      text-align: end;
+      align-self: center;
+      color: $primary-color;
+    }
+  }
+
+  .card__link {
+    width: $primary-width;
+    height: 40px;
+    margin-left: $left;
+    margin-top: 16px;
+    border-radius: $radius;
+    background-color: rgba(0, 172, 220, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      height: 100%;
+      width: 100%;
+      font-weight: $primary-weight;
+      font-size: 14px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .card__link:hover {
+    width: 164px;
+    height: 38px;
+    border: 1px solid;
+    border-color: rgba(0, 172, 220, 1);
+    background: none;
+
+    a {
+      color: rgba(0, 172, 220, 1);
+    }
+  }
+}
