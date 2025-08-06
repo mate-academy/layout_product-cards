@@ -1,0 +1,97 @@
+// src/blocks/_card.scss
+
+@use '../blocks/base' as base; // Use todas as variáveis e mixins do base
+
+.card {
+  width: 12.5rem;
+  height: 25.38rem;
+  background-color: base.$color-white;
+
+  &__image {
+    margin: base.$spacing-lg 1.19rem 2.5rem;
+    border-radius: base.$border-radius-md;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: base.$font-size-medium;
+    line-height: 1.5;
+    color: base.$color-primary;
+    margin: 0 base.$spacing-md 0.63rem;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: base.$font-size-small;
+    color: base.$color-secondary;
+    margin: 0 base.$spacing-md 1rem;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    gap: base.$spacing-sm;
+    margin: base.$spacing-md 0 base.$spacing-md base.$spacing-md;
+  }
+
+  &__align {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reviews {
+    color: base.$color-secondary;
+    font-size: base.$font-size-small;
+    margin-right: base.$spacing-md;
+  }
+
+  &__container--price {
+    display: flex;
+    justify-content: space-between;
+    padding: base.$spacing-md;
+    margin-top: 0.63rem;
+  }
+
+  &__price--title {
+    font-size: base.$font-size-small;
+    font-weight: 400;
+    color: base.$color-secondary;
+  }
+
+  &__price {
+    font-size: base.$font-size-small;
+    font-weight: 700;
+    color: base.$color-primary;
+    margin: 0 base.$spacing-md 0.25rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.38rem;
+    height: 2.5rem;
+    border-radius: base.$border-radius-sm;
+    background-color: base.$color-accent;
+    color: base.$color-white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      background-color: base.$color-white;
+      border: 0.06rem solid base.$color-accent;
+      color: base.$color-accent;
+    }
+  }
+}
