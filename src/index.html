@@ -6,76 +6,63 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
 
+    <title>Product Card</title>
+
+    <!-- Fonte Roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="./styles/index.scss"
-    />
+    <link rel="stylesheet" href="./styles/style.scss" />
+    <!-- Estilo compilado (CSS) -->
   </head>
 
   <body>
     <main class="main">
       <section
-        class="product-card"
+        class="card"
         data-qa="card"
       >
         <img
+          class="card__image"
           src="./images/ilustracao1.png"
           alt="APPLE iMac 27 inch Retina 5K"
-          class="product-card__image"
         />
 
-        <header class="product-card__info">
-          <h2 class="product-card__info-title">
+        <div class="card__info">
+          <div class="card__title">
             APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
-          </h2>
-        </header>
-
-        <div class="product-card__code">
-          <p class="product-card__reviews product-card__reviews--title">
-            Product code: 195434
-          </p>
-        </div>
-
-        <div class="product-card__stars">
-          <div
-            class="stars stars--4"
-            aria-label="Avaliação: 4 de 5 estrelas"
-          >
-            <span class="stars__star stars__star--active"></span>
-            <span class="stars__star stars__star--active"></span>
-            <span class="stars__star stars__star--active"></span>
-            <span class="stars__star stars__star--active"></span>
-            <span class="stars__star stars__star--inactive"></span>
           </div>
 
-          <div class="product-card__reviews">
-            <p class="product-card__reviews product-card__reviews--title">
-              Reviews: 5
-            </p>
+          <div class="card__code">Product  code: 195434</div>
+
+          <div class="card__stars">
+            <div
+              class="stars stars--4"
+              aria-label="Avaliação: 4 de 5 estrelas"
+            >
+              <span class="stars__star stars__star--active"></span>
+              <span class="stars__star stars__star--active"></span>
+              <span class="stars__star stars__star--active"></span>
+              <span class="stars__star stars__star--active"></span>
+              <span class="stars__star stars__star--inactive"></span>
+            </div>
+            <div class="card__align">
+              <div class="card__reviews">Reviews: 5</div>
+            </div>
           </div>
-        </div>
 
-        <div class="product-card__price">
-          <h3 class="product-card__price-title">Price:</h3>
-          <p class="product-card__price-value product-card__price-value--money">
-            $2,199
-          </p>
-        </div>
-
-        <div class="product-card__button">
-          <button
-            class="product-card__button product-card__button--buy"
-            data-qa="hover"
-          >
-            Buy
-          </button>
+          <div class="card__button">
+            <a
+              class="card__buy"
+              data-qa="hover"
+              href="#"
+            >
+              BUY
+            </a>
+          </div>
         </div>
       </section>
     </main>

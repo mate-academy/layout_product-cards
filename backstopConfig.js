@@ -1,39 +1,41 @@
-'use strict';
-
-const backstop = require('@mate-academy/backstop-config');
-const { basicScenario } = backstop;
-
-const basic = {
-  ...basicScenario,
-  referenceUrl: basicScenario.referenceUrl + '/product-cards/',
-};
-
-const config = {
-  ...backstop,
-  fileNameTemplate: '{scenarioLabel}',
-  onBeforeScript: 'puppet/onBefore.js',
-  onReadyScript: 'puppet/onReady.js',
+module.exports = {
+  id: 'product-cards',
   viewports: [
     {
-      name: 'tablet_h',
+      label: 'desktop',
       width: 1024,
       height: 768,
     },
   ],
   scenarios: [
     {
-      ...basic,
       label: 'Card with data-qa_card',
+      url: 'http://localhost:3000/index.html',
       selectors: ['[data-qa="card"]'],
+      delay: 500,
     },
     {
-      ...basic,
       label: 'Link with data-qa_hover',
+      url: 'http://localhost:3000/index.html',
+      selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
-      postInteractionWait: 2000,
-      selectors: ['[data-qa="card"]'],
-    }
+      delay: 500,
+    },
   ],
+  paths: {
+    bitmaps_reference: 'backstop_data/bitmaps_reference',
+    bitmaps_test: 'backstop_data/bitmaps_test',
+    engine_scripts: 'backstop_data/engine_scripts',
+    html_report: 'backstop_data/html_report',
+    ci_report: 'backstop_data/ci_report',
+  },
+  report: ['browser'],
+  engine: 'puppeteer',
+  engineOptions: {
+    args: ['--no-sandbox'],
+  },
+  asyncCaptureLimit: 5,
+  asyncCompareLimit: 50,
+  debug: false,
+  debugWindow: false,
 };
-
-module.exports = config;
