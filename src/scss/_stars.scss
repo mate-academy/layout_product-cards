@@ -1,0 +1,36 @@
+.stars {
+  display: flex;
+  gap: 4px;
+  color: var(--star-color);
+
+  i.fas.fa-star {
+    color: var(--star-color);
+  }
+
+  .star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+  }
+}
+
+/* Modificadores de quantidade de estrelas (0 a 5) */
+.stars--0 .star { background-color: transparent; }
+.stars--1 .star:nth-child(-n+1) { background-color: var(--star-color); }
+.stars--2 .star:nth-child(-n+2) { background-color: var(--star-color); }
+.stars--3 .star:nth-child(-n+3) { background-color: var(--star-color); }
+.stars--4 .star:nth-child(-n+4) { background-color: var(--star-color); }
+.stars--5 .star:nth-child(-n+5) { background-color: var(--star-color); }

@@ -14,7 +14,6 @@ Projeto para exibir cartões de produtos com avaliação por estrelas, seguindo 
 - Empacotamento com Parcel
 - Testes automatizados com Cypress + Mochawesome
 
-## ⚙️ Testes automatizados (Cypress + Mochawesome)
 
 - **Total de testes:** 1
 - **Falhas:** 0 ❌
@@ -23,17 +22,13 @@ Projeto para exibir cartões de produtos com avaliação por estrelas, seguindo 
 
 ### Teste principal executado:
 
-```js
-cy.visit('http://localhost:1234'); // ou a URL do seu projeto
-cy.get('[data-qa="product-card"]').should('have.length.at.least', 1);
-
 
 🔗 Links importantes
 Link da demonstração do projeto (cards):
 https://layout-product-cards-ivanivaldo.surge.sh
 (Link do seu site hospedado no Surge)
 
-Link do relatório de testes Cypress (Mochawesome):
-https://layout-product-cards-report.surge.sh/html_report/mochawesome.html
-(Link direto para o relatório visual gerado pelo Mochawesome)
+Link do relatório de testes
+https://layout-product-cards-report.surge.sh
+
 
