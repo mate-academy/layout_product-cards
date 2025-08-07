@@ -1,9 +1,10 @@
 @import './stars';
+@import './variables';
 
 body {
   margin: 0;
 
-  font-family: Roboto, sans-serif;
+  font-family: $font-family-main;
 }
 
 .card {
@@ -30,7 +31,7 @@ body {
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
-    color: #060b35;
+    color: $color-primary;
   }
   &__code {
     margin: 4px 0 0;
@@ -45,12 +46,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .reviews {
+    &-count {
       margin: 0;
       font-size: 10px;
       line-height: 14px;
       font-weight: 400;
-      color: #060b35;
+      color: $color-primary;
     }
   }
   &__price {
@@ -58,26 +59,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .price {
+    &-label {
       margin: 0;
       font-size: 12px;
       line-height: 18px;
       font-weight: 400;
       color: #616070;
     }
-    .value {
+    &-amount {
       margin: 0;
       font-size: 16px;
       line-height: 18px;
       font-weight: 700;
-      color: #060b35;
+      color: $color-primary;
     }
   }
   &__button {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
-    background-color: #00acdc;
+    background-color: $color-accent;
     border-radius: 5px;
     color: #fff;
     font-size: 14px;
@@ -88,12 +89,13 @@ body {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     &:hover {
       box-sizing: border-box;
       background-color: #f3f3f3;
-      border: 1px solid #00acdc;
-      color: #00acdc;
+      border: 1px solid $color-accent;
+      color: $color-accent;
     }
   }
 }
