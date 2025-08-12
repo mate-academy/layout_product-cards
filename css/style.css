@@ -1,0 +1,162 @@
+@charset "UTF-8";
+:root {
+  --main-color: #4CAF50;
+  --border-color: #e0e0e0;
+  --text-color: #333;
+  --text-gray: #757575;
+  /* Cor padrão da estrela */
+  --star-color: #FFD700;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+.stars .star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.stars--1 .star:nth-child(-n+1) {
+  background-color: var(--star-color);
+}
+
+.stars--2 .star:nth-child(-n+2) {
+  background-color: var(--star-color);
+}
+
+.stars--3 .star:nth-child(-n+3) {
+  background-color: var(--star-color);
+}
+
+.stars--4 .star:nth-child(-n+4) {
+  background-color: var(--star-color);
+}
+
+.stars--5 .star:nth-child(-n+5) {
+  background-color: var(--star-color);
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.card__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+.card__image img {
+  width: 100%;
+  border-radius: 4px;
+}
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card__info {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+.card__code {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+.card__reviews {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+.card__price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.card__buy {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.card__buy:hover {
+  background-color: #388e3c;
+}
+.card .stars {
+  margin-top: 8px;
+}
+
+/* Reset e estilos globais */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #333;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
