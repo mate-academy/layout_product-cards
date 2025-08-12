@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+$main-color: #00acdc;
+$white: #fff;
+$main-dark: #060b35;
+$main-grey: #616070;
+$grey-bg: #f3f3f3;
+
+.header__top {
+  padding: 32px 19px;
+  margin-bottom: 10px;
+}
+
+.header__top img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.card {
+  font-family: Roboto, Arial, sans-serif;
+  color: $white;
+  width: 200px;
+  height: 408px;
+
+  // margin-inline: 50px;
+  border: 1px solid $grey-bg;
+  border-radius: 8px;
+
+  padding: 0;
+  &__description h1 {
+    color: $main-dark;
+
+    // width: 166px;
+    // height: 36px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    padding: 0 16px;
+    word-break: break-word;
+    white-space: normal;
+    margin: 0;
+    margin-bottom: 4px;
+
+    //  letter-spacing: 0;
+    // padding-bottom: 4px;
+  }
+}
+
+.card__code {
+  font-size: 10px;
+  line-height: 14px;
+  color: $main-grey;
+  padding: 0 16px;
+  font-weight: 400;
+
+  // padding-top: 4px;
+  // margin-top: 4px;
+  // margin: 0 auto;
+}
+
+.card__grade {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 4px;
+  align-items: center;
+
+  // margin: 0 auto;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    display: flex;
+
+    // margin: 0 auto;
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:first-child {
+    margin-left: 16px;
+  }
+
+  &--4 > :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.card__reviews {
+  color: $main-dark;
+  margin-right: 16px;
+  font-size: 10px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 16px 16px;
+
+  &-label {
+    color: $main-grey;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  &-value {
+    color: $main-dark;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+
+.card__buy {
+  background-color: $main-color;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $white;
+  font-weight: 700;
+  width: 166px;
+  height: 40px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+
+  &:hover {
+    background-color: $white;
+    color: $main-color;
+    border: solid 10px $main-color;
+  }
+}
