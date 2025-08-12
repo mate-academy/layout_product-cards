@@ -11,14 +11,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #333;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif; // Fonte corrigida para Inter
   background-color: #f5f5f5;
   padding: 40px 20px;
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  color: var(--text-color);
+  color: var(--text-color); // Agora funciona, pois está definido no :root
 }
 
 .container {
@@ -32,6 +36,10 @@ body {
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
+}
+
+.card {
+  min-width: 200px; // Adicionado para evitar que os cards quebrem demais
 }
 
 @media (max-width: 768px) {

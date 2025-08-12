@@ -1,11 +1,6 @@
 .stars {
   display: flex;
   gap: 4px;
-  color: var(--star-color);
-
-  i.fas.fa-star {
-    color: var(--star-color);
-  }
 
   .star {
     display: inline-block;
@@ -27,10 +22,8 @@
   }
 }
 
-/* Modificadores de quantidade de estrelas (0 a 5) */
-.stars--0 .star { background-color: transparent; }
-.stars--1 .star:nth-child(-n+1) { background-color: var(--star-color); }
-.stars--2 .star:nth-child(-n+2) { background-color: var(--star-color); }
-.stars--3 .star:nth-child(-n+3) { background-color: var(--star-color); }
-.stars--4 .star:nth-child(-n+4) { background-color: var(--star-color); }
-.stars--5 .star:nth-child(-n+5) { background-color: var(--star-color); }
+@for $i from 1 through 5 {
+  .stars--#{$i} .star:nth-child(-n + #{$i}) {
+    background-color: var(--star-color);
+  }
+}
