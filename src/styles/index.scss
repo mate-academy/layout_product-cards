@@ -1,3 +1,118 @@
+@use 'variables';
+
+// #body region
+
 body {
   margin: 0;
+  box-sizing: border-box;
+  background-color: variables.$secondary;
 }
+
+// #end body region
+
+// #card region
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 408px;
+  background-color: variables.$white;
+
+  &__laptop {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+
+  &__text {
+    font-family: variables.$font-default;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: variables.$main-accent;
+  }
+
+  &__product-text {
+    font-family: variables.$font-default;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: variables.$secondary;
+    margin-top: 4px;
+    margin-right: 84px;
+    margin-left: 16px;
+  }
+}
+
+// #end card region
+
+// #price region
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  min-height: 18px;
+  margin-top: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+
+  &-text {
+    font-family: variables.$font-default;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: variables.$secondary;
+  }
+
+  &-value {
+    font-family: variables.$font-default;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: variables.$main-accent;
+    width: 50px;
+    height: 18px;
+  }
+}
+
+// #end price region
+
+// #button region
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: variables.$blue-accent;
+  border-color: variables.$blue-accent;
+  color: variables.$white;
+
+  font-family: variables.$font-default;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-decoration: none;
+
+  &:hover {
+    background-color: variables.$white;
+    color: variables.$blue-accent;
+  }
+}
+
+// end button region
