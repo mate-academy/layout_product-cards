@@ -1,9 +1,11 @@
+@use 'variables';
+
 // #body region
 
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: #616070;
+  background-color: variables.$secondary;
 }
 
 // #end body region
@@ -16,20 +18,18 @@ body {
   flex-direction: column;
   width: 200px;
   height: 408px;
-  background-color: #ffff;
+  background-color: variables.$white;
 
   &__laptop {
     width: 160px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
     margin-top: 32px;
     margin-left: 19px;
     margin-right: 19px;
   }
 
   &__text {
-    font-family: Roboto, sans-serif;
+    font-family: variables.$font-default;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
@@ -37,15 +37,15 @@ body {
     margin-top: 40px;
     margin-left: 16px;
     margin-right: 16px;
-    color: #060b35;
+    color: variables.$main-accent;
   }
 
   &__product-text {
-    font-family: Roboto, sans-serif;
+    font-family: variables.$font-default;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: #616070;
+    color: variables.$secondary;
     margin-top: 4px;
     margin-right: 84px;
     margin-left: 16px;
@@ -53,47 +53,6 @@ body {
 }
 
 // #end card region
-
-// #star region
-
-.card__stars {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 166px;
-  height: 16px;
-  margin-top: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
-
-  &-star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--4 &-star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
-
-  &-reviews {
-    display: flex;
-    align-items: center;
-    width: 53px;
-    height: 16px;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-    color: #060b35;
-    margin-left: 17px;
-  }
-}
-
-// #end star region
 
 // #price region
 
@@ -107,19 +66,19 @@ body {
   margin-right: 16px;
 
   &-text {
-    font-family: Roboto, sans-serif;
+    font-family: variables.$font-default;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: #616070;
+    color: variables.$secondary;
   }
 
   &-value {
-    font-family: Roboto, sans-serif;
+    font-family: variables.$font-default;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: #060b35;
+    color: variables.$main-accent;
   }
 }
 
@@ -127,7 +86,7 @@ body {
 
 // #button region
 
-.card__buy {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,24 +95,20 @@ body {
   height: 40px;
   border-radius: 5px;
   border: 1px solid;
-  background-color: #00acdc;
-  border-color: #00acdc;
-  color: #ffff;
-  text-decoration: none;
-  text-transform: uppercase;
+  background-color: variables.$blue-accent;
+  border-color: variables.$blue-accent;
+  color: variables.$white;
 
-  &-text {
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0%;
-    width: 27px;
-    height: 16px;
-  }
+  font-family: variables.$font-default;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-decoration: none;
+
   &:hover {
-    background-color: #fff;
-    color: #00acdc;
+    background-color: variables.$white;
+    color: variables.$blue-accent;
   }
 }
 
