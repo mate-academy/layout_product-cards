@@ -19,11 +19,11 @@ body {
   flex-direction: column;
   padding-inline: $main-padding-inline;
   align-items: center;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $color-light-gray;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: $main-border-radius;
 
-  background-color: #fff;
+  background-color: $color-white;
 
   &__image {
     width: 160px;
@@ -34,15 +34,15 @@ body {
 
   &__description {
     font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    margin-bottom: 4px;
+    font-size: $second-font-size;
+    line-height: $line-height-eighteen;
+    margin-bottom: $margin-four;
   }
 
   &__code {
-    color: #616070;
+    color: $second-text-color;
     margin-right: auto;
-    margin-bottom: 16px;
+    margin-bottom: $main-margin-botton;
   }
 
   &__reviews {
@@ -61,18 +61,18 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: $main-margin-botton;
 
     &__text {
-      font-size: 12px;
-      line-height: 18px;
-      color: #616070;
+      font-size: $second-font-size;
+      line-height: $line-height-eighteen;
+      color: $second-text-color;
     }
 
     &__value {
       font-weight: 700;
       font-size: 16px;
-      line-height: 18px;
+      line-height: $line-height-eighteen;
     }
   }
 
@@ -80,11 +80,11 @@ body {
     display: flex;
     width: 166px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: $main-border-radius;
     background-color: #00acdc;
     justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: $main-margin-botton;
 
     &__link {
       text-transform: uppercase;
@@ -92,19 +92,20 @@ body {
       font-weight: 700;
       font-size: 14px;
       line-height: 16px;
-      color: #fff;
-    }
+      color: $color-white;
 
-    &:hover {
-      .card-button__link {
-        color: #00acdc;
+      &:hover {
+        color: $color-blue;
+
+        display: flex;
+        background-color: $color-light-gray;
+        border: 1px solid $color-blue;
+        border-radius: $main-border-radius;
+        width: 164px;
+        height: 38px;
+        justify-content: center;
+        align-items: center;
       }
-
-      background-color: #f3f3f3;
-      border: 1px solid #00acdc;
-      border-radius: 5px;
-      width: 164px;
-      height: 38px;
     }
   }
 }
