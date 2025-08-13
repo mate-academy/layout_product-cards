@@ -1,3 +1,4 @@
+@import 'utilites/variables';
 @import 'blocks/stars';
 
 body {
@@ -6,10 +7,26 @@ body {
 
 .card {
   block-size: border-box;
-  width: 200px;
+  width: $card-width;
+  border-radius: $card-border-radius;
+  border: 1px solid $card-border-color;
+  background-color: $card-bg-color;
+
+  &__section {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__image {
-    width: 100%;
-    height: auto;
+    width: 160px;
+    height: 134px;
+    background: no-repeat center/cover url('../images/imac.jpeg');
   }
 }
