@@ -17,24 +17,25 @@ $grey-bg: #f3f3f3;
   margin-bottom: 8px;
 }
 
-.header__top img {
+.card__image {
   width: 160px;
   height: 134px;
   display: block;
+  margin: 0 auto 40px;
 }
 
 .card {
   font-family: Roboto, Arial, sans-serif;
   color: $white;
   width: 200px;
-  height: 408px;
 
+  // height: 408px;
   // margin-inline: 50px;
   border: 1px solid $grey-bg;
   border-radius: 8px;
+  padding: 32px 16px 16px;
 
-  padding: 0;
-  &__description h1 {
+  &__description {
     color: $main-dark;
 
     // width: 166px;
@@ -42,7 +43,8 @@ $grey-bg: #f3f3f3;
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
-    padding: 0 16px;
+
+    // padding: 0 16px;
     word-break: break-word;
     white-space: normal;
     margin: 0;
@@ -57,9 +59,11 @@ $grey-bg: #f3f3f3;
   font-size: 10px;
   line-height: 14px;
   color: $main-grey;
-  padding: 0 16px;
-  font-weight: 400;
 
+  font-weight: 400;
+  margin-bottom: 16px;
+
+  //  padding: 0 16px;
   // padding-top: 4px;
   // margin-top: 4px;
   // margin: 0 auto;
@@ -68,7 +72,7 @@ $grey-bg: #f3f3f3;
 .card__grade {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-bottom: 24px;
 
   // gap: 4px;
   align-items: center;
@@ -91,9 +95,9 @@ $grey-bg: #f3f3f3;
     background-position: center;
   }
 
-  &:first-child {
-    margin-left: 16px;
-  }
+  // &:first-child {
+  //   margin-left: 16px;
+  // }
 
   &--4 > :nth-child(-n + 4) {
     background-image: url(../images/star-active.svg);
@@ -102,14 +106,14 @@ $grey-bg: #f3f3f3;
 
 .card__reviews {
   color: $main-dark;
-  margin-right: 16px;
+
   font-size: 10px;
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
-  margin: 24px 16px 16px;
+  margin-bottom: 16px;
 
   &-label {
     color: $main-grey;
@@ -131,12 +135,14 @@ $grey-bg: #f3f3f3;
   text-decoration: none;
   color: $white;
   font-weight: 700;
-  width: 166px;
+  width: 100%;
   height: 40px;
-  margin: 16px;
+
+  // margin: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
   padding: 0;
   font-size: 14px;
   line-height: 16px;
