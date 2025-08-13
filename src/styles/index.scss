@@ -1,32 +1,93 @@
 @import 'utilites/variables';
 @import 'blocks/stars';
+@import 'blocks/buttons';
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $text-color-main;
+}
 
 body {
   margin: 0;
 }
 
 .card {
-  block-size: border-box;
+  box-sizing: border-box;
   width: $card-width;
+  padding: 16px;
   border-radius: $card-border-radius;
   border: 1px solid $card-border-color;
   background-color: $card-bg-color;
 
-  &__section {
-    margin-bottom: 16px;
+  &__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 16px;
   }
 
   &__image-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 16px 0;
   }
 
   &__image {
     width: 160px;
     height: 134px;
     background: no-repeat center/cover url('../images/imac.jpeg');
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding: 6px 0;
+  }
+
+  &__text {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    &--small {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    &--inline {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+
+  &__rates-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    width: 100%;
   }
 }
