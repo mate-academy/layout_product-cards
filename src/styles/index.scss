@@ -1,3 +1,129 @@
+@import './stars';
+
+// Colors
+$primary-color: #060b35;
+$accent-color: #00acdc;
+$secondary-color: #616070;
+$border-color: #f3f3f3;
+$white-color: #fff;
+
+// Typography
+$font-family-base: Roboto, sans-serif;
+$font-size-xs: 10px; // was $font-size-small
+$font-size-sm: 12px; // was $font-size-base
+$font-size-md: 14px; // was $button-font-size
+$font-size-lg: 16px; // price amount
+$line-height-sm: 14px; // was $secondary-line-height
+$line-height-md: 16px; // button line-height
+$line-height-lg: 18px; // was $main-line-height
+
+// Spacing
+$spacing-none: 0;
+$spacing-xs: 4px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 40px;
+
+// Layout
+$border-radius-base: 5px;
+$card-width: 200px;
+$button-height: 40px;
+$star-size: 16px;
+
 body {
-  margin: 0;
+  margin: $spacing-none;
+  font-family: $font-family-base;
+}
+
+.card {
+  padding: 32px 16px 16px;
+
+  width: 100%;
+  max-width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base;
+  &__image {
+    align-self: center;
+    margin-bottom: $spacing-xl;
+    width: 160px;
+    height: 134px;
+  }
+  &__title {
+    align-self: center;
+    margin: $spacing-none;
+    font-size: $font-size-sm;
+    line-height: $line-height-lg;
+    font-weight: 500;
+    color: $primary-color;
+  }
+  &__code {
+    margin: $spacing-xs 0 0;
+    font-size: $font-size-xs;
+    color: $secondary-color;
+    line-height: $line-height-sm;
+    font-weight: 400;
+  }
+  &__reviews {
+    margin: $spacing-none;
+    margin-top: $spacing-sm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-count {
+      margin: $spacing-none;
+      font-size: $font-size-xs;
+      line-height: $line-height-sm;
+      font-weight: 400;
+      color: $primary-color;
+    }
+  }
+  &__price {
+    margin: $spacing-md 0 $spacing-sm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-label {
+      margin: $spacing-none;
+      font-size: $font-size-sm;
+      line-height: $line-height-lg;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+    &-amount {
+      margin: $spacing-none;
+      font-size: $font-size-lg;
+      line-height: $line-height-lg;
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+  &__button {
+    box-sizing: border-box;
+    width: 100%;
+    height: $button-height;
+    background-color: $accent-color;
+    border-radius: $border-radius-base;
+    color: $white-color;
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $white-color;
+      border: 1px solid $accent-color;
+      color: $accent-color;
+    }
+  }
 }
