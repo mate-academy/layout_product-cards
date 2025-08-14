@@ -1,6 +1,7 @@
 @import 'utilites/variables';
 @import 'blocks/stars';
 @import 'blocks/buttons';
+@import 'blocks/card';
 
 html {
   font-family: Roboto, sans-serif;
@@ -11,96 +12,4 @@ html {
 
 body {
   margin: 0;
-}
-
-.card {
-  box-sizing: border-box;
-  width: $card-width;
-  padding: 32px 16px 16px;
-  border-radius: $card-border-radius;
-  border: 1px solid $card-border-color;
-  background-color: $card-bg-color;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  &__image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 21px;
-  }
-
-  &__image {
-    width: 160px;
-    height: 134px;
-    background: no-repeat center/contain url('../images/imac.jpeg');
-  }
-
-  &__title {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    margin: 0;
-    padding: 4px 0;
-  }
-
-  &__text {
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-
-    &--secondary {
-      color: $text-color-secondary;
-    }
-
-    &--small {
-      font-size: 10px;
-      line-height: 14px;
-      color: $text-color-secondary;
-    }
-
-    &--link {
-      font-size: 10px;
-      line-height: 16px;
-      text-decoration: none;
-      color: $text-color-main;
-      cursor: pointer;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &__rates-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 8px;
-  }
-
-  &__price {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1px;
-
-    &-value {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-    }
-  }
-
-  &__button {
-    width: 100%;
-  }
 }
