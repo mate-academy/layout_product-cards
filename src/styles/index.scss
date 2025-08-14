@@ -24,20 +24,20 @@ body {
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
   }
 
   &__image-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 18px;
+    padding-bottom: 21px;
   }
 
   &__image {
     width: 160px;
     height: 134px;
-    background: no-repeat center/cover url('../images/imac.jpeg');
+    background: no-repeat center/contain url('../images/imac.jpeg');
   }
 
   &__title {
@@ -55,9 +55,14 @@ body {
     font-size: 12px;
     line-height: 18px;
 
+    &--secondary {
+      color: $text-color-secondary;
+    }
+
     &--small {
       font-size: 10px;
       line-height: 14px;
+      color: $text-color-secondary;
     }
 
     &--link {
@@ -86,6 +91,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 1px;
 
     &-value {
       font-weight: 700;
