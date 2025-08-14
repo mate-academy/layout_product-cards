@@ -24,8 +24,10 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    &--active {
-      background-image: url(../images/star-active.svg);
+    @for $stars from 1 through 4 {
+      &--#{$stars} {
+        background-image: url(../images/star-active.svg);
+      }
     }
   }
 }
