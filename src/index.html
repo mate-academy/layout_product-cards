@@ -29,7 +29,10 @@
   <!-- #endregion -->
   <body>
     <main>
-      <article class="card">
+      <article
+        class="card"
+        data-qa="card"
+      >
         <div class="card__content">
           <div class="card__image-container">
             <div class="card__image"></div>
@@ -43,19 +46,40 @@
           </div>
 
           <div class="card__rates-container">
-            <div class="stars stars--4">
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
-              <div class="stars__star"></div>
+            <div
+              class="stars stars--4"
+              aria-label="Rating: 4 out of 5 stars"
+            >
+              <div
+                class="stars__star"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="stars__star"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="stars__star"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="stars__star"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="stars__star"
+                aria-hidden="true"
+              ></div>
             </div>
 
             <div class="card__reviews">
-              <p class="card__text card__text--inline">
+              <a
+                href="#"
+                class="card__text card__text--link"
+              >
                 Reviews:
                 <span class="card__reviews-count">5</span>
-              </p>
+              </a>
             </div>
           </div>
 
@@ -65,7 +89,12 @@
           </div>
 
           <div class="card__button-container">
-            <button class="card__button button">Buy</button>
+            <button
+              class="card__button button"
+              data-qa="hover"
+            >
+              Buy
+            </button>
           </div>
         </div>
       </article>

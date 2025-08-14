@@ -1,12 +1,21 @@
 .button {
   border-radius: 5px;
   background-color: $primery-color;
-  border: none;
+  border: 1px solid $primery-color;
+  color: $text-color-accent;
   font-weight: 700;
   font-size: 1rem;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: $text-color-accent;
   padding: 0 20px;
+  cursor: pointer;
+  transition:
+    background-color $transition-duration $transition-function,
+    color $transition-duration $transition-function;
+
+  &:hover {
+    background-color: #fff;
+    color: $primery-color;
+  }
 }
