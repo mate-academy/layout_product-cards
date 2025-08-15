@@ -1,6 +1,6 @@
 @import './variables';
 
-.product {
+.card {
   box-sizing: border-box;
   max-width: 200px;
 
@@ -29,6 +29,41 @@
     color: $secondary;
 
     margin-left: 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 24px;
+
+    &-number {
+      color: $main-accent;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    padding-inline: 16px;
+
+    &-span {
+      color: $secondary;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+
+    &-value {
+      color: $main-accent;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   &__button {
