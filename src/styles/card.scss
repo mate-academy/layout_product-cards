@@ -1,0 +1,117 @@
+@import './variables';
+
+// Card block styles based on Figma
+.card {
+  width: $card-width;
+  height: $card-height;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $card-radius;
+  box-shadow: 0 2px 5px $color-shadow;
+  overflow: hidden;
+  padding-bottom: 24px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+    display: block;
+    margin: 32px 19px 0;
+    border-radius: $card-radius;
+    background: $color-bg;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-title;
+    letter-spacing: 0;
+    margin: 40px 16px 0;
+    text-align: left;
+  }
+
+  &__code {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-code;
+    margin: 4px 16px 0;
+    text-align: left;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    margin: 16px 16px 0;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__reviews {
+    margin-left: 17px;
+    font-family: $font-main;
+    font-weight: 400;
+    letter-spacing: 0%;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  &__price-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 16px 0;
+  }
+
+  &__price-label {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-code;
+    justify-content: flex-start;
+  }
+
+  &__price {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-price;
+    justify-content: flex-end;
+  }
+
+  &__buy {
+    display: inline-block;
+    width: $buy-width;
+    height: $buy-height;
+    margin: $buy-margin;
+    background-color: $color-accent;
+    color: $color-buy-text;
+    font-family: $font-main;
+    font-size: $buy-font-size;
+    font-weight: $buy-font-weight;
+    text-align: center;
+    line-height: $buy-line-height;
+    border-radius: $buy-radius;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-bg;
+      color: $color-accent;
+      border: 1px solid $color-accent;
+    }
+  }
+}
