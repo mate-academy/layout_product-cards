@@ -1,6 +1,88 @@
 .card {
-  display: inline-block;
+  display: flex;
   justify-content: center;
   height: 16px;
-  width: 200px;
+  width: $main-width;
+
+  &__buy-buy {
+    width: $main-width;
+    height: 40px;
+    margin: $main-margin;
+    background-color: $main-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      border-color: $main-color;
+      border-width: 1px;
+      border-style: solid;
+      color: $main-color;
+    }
+  }
+  &__image {
+    display: block;
+    background-image: url(../images/imac.jpeg);
+    background-size: 160px 134px;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $main-width;
+    height: 18px;
+    margin: $main-margin;
+    margin-top: 24px;
+    &-price {
+      font-weight: $main-font-weight;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &-dolars {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__productCode {
+    width: 98px;
+    height: 14px;
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+    margin: 0 84px 16px 16px;
+  }
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    width: $main-width;
+    height: 16px;
+    margin: $main-margin;
+    margin-bottom: 0;
+    &-reviews {
+      font-weight: $main-font-weight;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+    margin: $main-margin;
+    margin-top: 40px;
+    margin-bottom: 4px;
+    width: $main-width;
+    height: 36px;
+    color: #060b35;
+  }
 }
