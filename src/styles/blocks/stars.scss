@@ -3,14 +3,17 @@
   width: 96px;
   justify-content: space-between;
 
-  &__star {
+  & :nth-child(n) {
     width: 16px;
     height: 16px;
-    background-image: url(../images/star.svg);
-    background-position: center;
-    background-repeat: no-repeat;
 
-    &:nth-child(-n + 4) {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $star from 1 through 5 {
+    &--#{$star} :nth-child(-n + #{$star}) {
       background-image: url(../images/star-active.svg);
     }
   }
