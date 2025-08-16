@@ -1,0 +1,21 @@
+.stars :not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    background-image: url(../images/star.svg);
+
+    @include background-standart;
+    @include card-star-size;
+  }
+
+  &__star--active {
+    background-image: url(../images/star-active.svg);
+
+    @include background-standart;
+    @include card-star-size;
+  }
+}
