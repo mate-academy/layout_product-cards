@@ -1,0 +1,128 @@
+.card {
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 200px;
+  height: 406px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+
+    &-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    &-product-name {
+      font-weight: 500;
+      color: #060b35;
+      margin: 0;
+      width: 166px;
+      line-height: 18px;
+      font-size: 12px;
+    }
+
+    &-product-id {
+      margin: 4px 0 0;
+      color: #616070;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__rating {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .stars {
+      display: flex;
+    }
+
+    .stars__item {
+      height: 16px;
+      width: 16px;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 4px;
+    }
+
+    .stars__item:nth-child(5) {
+      margin: 0;
+    }
+
+    .stars__item:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    .reviews {
+      padding-top: 2px;
+      color: #060b35;
+      width: 53px;
+      height: 14px;
+      text-align: right;
+      margin: 0;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0;
+      vertical-align: bottom;
+    }
+  }
+
+  &__price {
+    margin: 24px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    &-text {
+      color: #616070;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-value {
+      color: #060b35;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    margin: 16px 0 0;
+    width: 165px;
+    height: 40px;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+    background-color: #00acdc;
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button:hover {
+    background-color: #f3f3f3;
+    color: #00acdc;
+  }
+}
