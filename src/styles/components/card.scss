@@ -1,5 +1,9 @@
 @use 'variables' as *;
 
+p {
+  margin: 0;
+}
+
 .card {
   overflow: hidden;
   display: flex;
@@ -20,16 +24,13 @@
   &__image {
     width: 160px;
     height: 134px;
-    padding-bottom: 16px;
+    margin-bottom: 40px;
     object-fit: contain;
   }
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
   &__title {
-    margin-top: 22px;
+    display: block;
+
+    margin-bottom: 4px;
 
     font-size: $font-size-medium;
     font-weight: $font-weight-medium;
@@ -38,18 +39,16 @@
     text-decoration: none;
   }
   &__product-code {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     font-size: $font-size-small;
     line-height: 14px;
     color: $color-gray;
   }
   &__rating-reviews {
     display: flex;
-    gap: 8px;
     align-items: center;
     justify-content: space-between;
-
-    margin-bottom: 8px;
+    margin-bottom: 24px;
   }
   &__stars {
     display: flex;
@@ -72,7 +71,6 @@
   }
   &__reviews {
     width: 53px;
-    height: 16px;
 
     font-family: $font-family;
     font-size: $font-size-small;
@@ -83,16 +81,11 @@
     letter-spacing: 0;
     vertical-align: bottom;
   }
-
-  p {
-    margin: 0;
-  }
-
   &__price {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-bottom: 16px;
   }
   &__price-title {
     font-size: $font-size-medium;
@@ -101,12 +94,12 @@
   &__price-amount {
     font-size: $font-size-xlarge;
     font-weight: $font-weight-bold;
+    line-height: 18px;
     color: $color-dark;
   }
   &__button {
     width: 100%;
     height: 40px;
-    margin-top: 16px;
     padding: 11px 0;
     border: 1px solid $color-primary;
     border-radius: $button-radius;
