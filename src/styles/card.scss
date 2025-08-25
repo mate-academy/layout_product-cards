@@ -1,6 +1,7 @@
 .card {
   width: 198px;
   height: 406px;
+  border: 2px;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -8,8 +9,8 @@
   padding: 8px 16px;
 
   .card__image {
-    width: 160;
-    height: 134;
+    width: 160px;
+    height: 134px;
     opacity: 1;
   }
 
@@ -37,32 +38,6 @@
     text-align: right;
     display: flex;
     justify-content: space-between;
-  }
-
-  .stars {
-    display: flex;
-    gap: 5px;
-    border-radius: 4px;
-    border-color: black;
-  }
-
-  .review {
-    text-align: right;
-  }
-
-  .stars span {
-    height: 16px;
-    width: 16px;
-    justify-content: flex-start;
-  }
-
-  @for $i from 1 through 4 {
-    .stars span:nth-child(#{$i}) {
-      background-image: url('../images/star-active.svg');
-      background-repeat: no-repeat;
-      background-position: left;
-      background-size: contain;
-    }
   }
 
   .card__button {

@@ -1,0 +1,25 @@
+.stars {
+  display: flex;
+  gap: 5px;
+  border-radius: 4px;
+  border-color: black;
+}
+
+.review {
+  text-align: right;
+}
+
+.stars span {
+  height: 16px;
+  width: 16px;
+  justify-content: flex-start;
+}
+
+@for $i from 1 through 5 {
+  .stars span:nth-child(#{$i}) {
+    background-image: url('../images/star-active.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+  }
+}
