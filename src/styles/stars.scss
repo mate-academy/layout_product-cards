@@ -2,10 +2,9 @@
   display: flex;
   gap: 5px;
   border-radius: 4px;
-  border-color: black;
 }
 
-.review {
+.card__rating {
   text-align: right;
 }
 
@@ -16,7 +15,7 @@
 }
 
 @for $i from 1 through 5 {
-  .stars span:nth-child(#{$i}) {
+  .stars--4 span:nth-child(-n+4) {
     background-image: url('../images/star-active.svg');
     background-repeat: no-repeat;
     background-position: left;
