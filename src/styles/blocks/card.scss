@@ -1,14 +1,12 @@
 @import '../variables';
 
-.body {
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.hover:hover {
-  background-color: $color-button;
-}
+
 
 .main {
   width: 198px;
@@ -19,14 +17,12 @@
 }
 
 .card {
-  &_content {
     display: flex;
     flex-direction: column;
     width: 200px;
     box-sizing: border-box;
-  }
 
-  &_title {
+  &__title {
     font-family: $font-stack;
     color: $color-primary;
     font-weight: 500;
@@ -38,7 +34,7 @@
     margin-top: 40px;
   }
 
-  &_code {
+  &__code {
     display: flex;
     flex-wrap: nowrap;
     font-family: $font-stack;
@@ -52,7 +48,7 @@
     margin-right: 84px;
   }
 
-  &_image {
+  &__image {
     width: 160px;
     height: 134px;
     background-image: url(../images/imac.jpeg);
@@ -66,7 +62,7 @@
     margin-right: 19px;
   }
 
-  &_button {
+  &__button {
     margin: 16px;
     display: flex;
     justify-content: center;
@@ -85,10 +81,7 @@
     letter-spacing: 0;
     border-radius: 5px;
   }
-}
-
-.product {
-  &_price {
+  &__price {
     width: 166px;
     height: 18px;
     margin-left: 16px;
@@ -97,19 +90,25 @@
     justify-content: space-between;
     font-family: $font-stack;
   }
-
-  &_value {
+   &__value {
     color: $color-secundary;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0;
   }
-  &_currency {
+   &__currency {
     color: $color-primary;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0;
   }
+  &__button:hover {
+    background-color: $color-button;
+    color: $color-terciary;
+    border: 1px solid $color-terciary;
+
+  }
 }
+
