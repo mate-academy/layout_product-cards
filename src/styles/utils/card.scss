@@ -1,5 +1,9 @@
 @import '../utils/variables';
 
+p {
+  margin: 0;
+}
+
 .card {
   padding: 32px 16px 16px;
   box-sizing: border-box;
@@ -7,14 +11,16 @@
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #fff;
+  flex-direction: column;
 
   &__image {
     width: 160px;
     height: 134px;
     display: block;
     margin-bottom: 40px;
-    margin-top: 33px;
     text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
   }
 
   &__title {
@@ -26,10 +32,11 @@
     margin: 0 0 4px;
     color: $main-color;
     text-decoration: none;
+    display: block;
   }
 
   &__product-code {
-    font-style: 10px;
+    font-size: 10px;
     line-height: $secondary-lineheight;
     letter-spacing: 0;
     color: $secondary-color;
@@ -44,6 +51,7 @@
   }
 
   &__reviews {
+    font-family: Roboto, serif;
     display: flex;
     font-size: 10px;
     line-height: $secondary-lineheight;
@@ -67,12 +75,14 @@
 
   &__price-amount {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: $primary-lineheight;
     letter-spacing: 0;
   }
 
   &__button {
+    font-family: Roboto, serif;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
