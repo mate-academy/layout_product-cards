@@ -1,0 +1,40 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+
+  &__item{
+  display: flex;
+  width: $starSize;
+  height: $starSize;
+  margin-right: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('#{$starDisablePicture}');
+  }
+  &--1 {
+    .stars__item:nth-child(-n+1) {
+      background-image: url('#{$starActivePicture}');
+    }
+  }
+  &--2 {
+    .stars__item:nth-child(-n+2) {
+      background-image: url('#{$starActivePicture}');
+    }
+  }
+  &--3 {
+    .stars__item:nth-child(-n+3) {
+      background-image: url('#{$starActivePicture}');
+    }
+  }
+  &--4 {
+    .stars__item:nth-child(-n+4) {
+      background-image: url('#{$starActivePicture}');
+    }
+  }
+  &--5 {
+    .stars__item:nth-child(-n+5) {
+      background-image: url('#{$starActivePicture}');
+    }
+  }
+}
