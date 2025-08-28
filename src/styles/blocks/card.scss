@@ -3,67 +3,102 @@
   flex-direction: column;
   width: 200px;
   height: 408px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
   background-color: $main-color;
 
   &__image {
+    padding-top: 32px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-position: center;
   }
 
   &__imac {
-    display: flex;
+    display: block;
     max-width: 160px;
     height: 134px;
     object-fit: contain;
-    background-position: center;
   }
 
   &__title {
-    color: $text-color;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
+    color: $text-color;
     font-size: 12px;
     line-height: 18px;
+    margin: 0;
+    padding-top: 40px;
   }
 
   &__code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
     font-size: 10px;
+    line-height: 14px;
+    color: $text-color2;
+    justify-content: flex-start;
+    margin: 0;
+    margin-top: 4px;
+  }
+
+  &__reviews {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    justify-content: space-between;
+    text-align: right;
+    font-size: 10px;
+    line-height: 14px;
+    color: $text-color;
+  }
+
+  &__price {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 26px;
+  }
+
+  &__price-label {
+    margin-right: 85px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
     line-height: 18px;
     color: $text-color2;
   }
 
-  &__reviews {
-    font-size: 12px;
-    color: #777;
-    margin-left: 6px;
-  }
-
-  &card__price {
-    display: flex;
-    justify-content: space-between;
-
-    &__price-label {
-      font-size: 12px;
-      line-height: 18px;
-      color: $text-color2;
-    }
-
-    &__price-value {
-      font-size: 16px;
-      line-height: 18px;
-      color: $text-color;
-    }
+  &__price-value {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text-color;
   }
 
   &__buy {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
     display: flex;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
     width: 166px;
     height: 40px;
+    margin-top: auto;
+    margin-bottom: 16px;
+    border: none;
+    color: $main-color;
     border-radius: 5px;
-    color: $button-color;
+    background-color: $button-color;
 
     &:hover {
+      border: 1px solid $button-color;
+      color: $button-color;
       background-color: $main-color;
     }
   }
