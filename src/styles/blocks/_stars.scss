@@ -9,8 +9,10 @@
     width: 16px;
 
     margin-right: 4px;
+  }
 
-    &:nth-child(-n + 4) {
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
       background-image: url('../../images/star-active.svg');
     }
   }
