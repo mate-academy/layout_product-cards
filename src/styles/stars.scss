@@ -5,13 +5,16 @@
     background-repeat: no-repeat;
     width: 16px;
     height: 16px;
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
     background-position: center;
-    margin-right: 4px;
+    margin-right: $star-gap;
   }
 
   &__star:last-child {
-    background-image: url(../images/star.svg);
     margin-right: 0;
+  }
+
+  &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
   }
 }
