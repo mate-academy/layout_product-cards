@@ -1,4 +1,6 @@
 .card {
+  display: flex;
+  flex-direction: column;
   width: 200px;
   height: 408px;
   background-color: $main-color;
@@ -7,12 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
   }
 
   &__imac {
     max-width: 160px;
     height: 134px;
     object-fit: contain;
+    background-position: center;
   }
 
   &__title {
@@ -37,13 +41,13 @@
   &__price {
     justify-content: space-between;
 
-    &--price-label {
+    &__price-label {
       font-size: 12px;
       line-height: 18px;
       color: $text-color2;
     }
 
-    &--price-value {
+    &__price-value {
       font-size: 16px;
       line-height: 18px;
       color: $text-color;
@@ -55,5 +59,9 @@
     height: 40px;
     border-radius: 5px;
     color: $button-color;
+
+    &:hover {
+      background-color: $main-color;
+    }
   }
 }
