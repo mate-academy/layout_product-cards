@@ -1,12 +1,6 @@
 .stars {
   display: flex;
 
-  &--4 &__star:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-    height: $star-height;
-    width: $star-width;
-  }
-
   &__star {
     background-image: url(../images/star.svg);
     height: $star-height;
@@ -17,5 +11,11 @@
 
   &__star:not(:first-child) {
     margin-left: 4px;
+  }
+
+  &--4 &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+    height: $star-height;
+    width: $star-width;
   }
 }
