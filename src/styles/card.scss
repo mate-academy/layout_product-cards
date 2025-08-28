@@ -1,15 +1,12 @@
 @import './variables';
 
-// Card block styles based on Figma
 .card {
   width: $card-width;
   height: $card-height;
   background: $color-bg;
   border: 1px solid $color-border;
   border-radius: $card-radius;
-  box-shadow: 0 2px 5px $color-shadow;
   overflow: hidden;
-  padding-bottom: 24px;
 
   &__image {
     width: 160px;
@@ -55,14 +52,16 @@
   }
 
   &__reviews {
-    margin-left: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     font-family: $font-main;
     font-weight: 400;
-    letter-spacing: 0%;
     font-size: 10px;
     line-height: 14px;
-    text-align: right;
-    vertical-align: bottom;
+    color: $color-price;
+    margin-left: 23px;
+    margin-top: 1px;
   }
 
   &__price-block {
@@ -91,27 +90,30 @@
   }
 
   &__buy {
-    display: inline-block;
-    width: $buy-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: $buy-height;
-    margin: $buy-margin;
+    width: $buy-width;
     background-color: $color-accent;
     color: $color-buy-text;
+    border: 1px solid $color-bg;
+    border-radius: $buy-radius;
     font-family: $font-main;
-    font-size: $buy-font-size;
     font-weight: $buy-font-weight;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
     text-align: center;
     line-height: $buy-line-height;
-    border-radius: $buy-radius;
-    text-transform: uppercase;
-    text-decoration: none;
+    margin: 16px 16px 0;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: $color-bg;
       color: $color-accent;
-      border: 1px solid $color-accent;
+      border-color: $color-accent;
     }
   }
 }
