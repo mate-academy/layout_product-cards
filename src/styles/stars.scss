@@ -1,0 +1,14 @@
+.stars {
+  display: flex;
+
+  @for $i from 1 through 5 {
+    :nth-child(#{$i}) {
+      background-image: url(/src/images/star-active.svg);
+
+      @include star(16px);
+    }
+  }
+  :last-child {
+    background-image: url(/src/images/star.svg);
+  }
+}
