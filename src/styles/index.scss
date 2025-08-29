@@ -1,47 +1,66 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-
 }
 
-.card__images {
-  background-image: url('../images/imac.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 160;
-  height: 134;
-  margin-top: 33px;
-  margin-left: 20px;
+.card {
+  &__images {
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 160;
+    height: 134;
+    margin-top: 33px;
+    margin-left: 20px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060B35;
+  }
+
+  &__code {
+    margin-top: 4px;
+    margin-left: 16px;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+  }
 }
 
-.card__title {
-  margin-top: 40px;
-  margin-left: 16px;
-  margin-right: 16px;
-  font-size: 12px;
-  line-height: 18px;
-
-  color: #060B35;
+.card__reviews {
+  display: flex;
+  align-items: center;
 }
 
-.card__code {
-  margin-top: 4px;
-  margin-left: 16px;
-  font-size: 10px;
-  line-height: 14px;
-  color: #616070;
+.stars {
+  display: flex;
+
+  &__card {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    height: 16px;
+    width: 16px;
+    margin-left: 16px;
+    margin-right: 4px;
+
+     &:last-child {
+      margin-right: 0;
+  }
+  }
+  &--4 {
+    .stars__card:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
 }
 
-.stars__card {
-  background-image: url('../images/star.svg');
-  background-image: url('../images/star-active.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 16px;
-  margin-left: 16px;
 
-}
