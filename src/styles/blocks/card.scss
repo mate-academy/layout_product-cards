@@ -1,0 +1,110 @@
+@use 'variables' as *;
+
+.card {
+  width: $card-w;
+  box-sizing: border-box;
+  padding: 33px 17px 17px;
+
+  &__photo {
+    display: block;
+    margin: 0 auto;
+    width: $photo-w;
+    height: $photo-h;
+    margin-bottom: $photo-m-b;
+    object-fit: cover;
+  }
+
+  &__title {
+    color: $card-primary-color;
+    padding: $reset;
+    margin: $reset;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: $title-m-b;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $card-secondary-color;
+    padding: $reset;
+    margin: $reset;
+    margin-bottom: $code-m-b;
+  }
+
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    vertical-align: bottom;
+    color: $card-primary-color;
+    padding: $reset;
+    margin: $reset;
+  }
+
+  &__price {
+    padding: $reset;
+    margin: $reset;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: bottom;
+    color: $card-secondary-color;
+    padding: $reset;
+    margin: $reset;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    vertical-align: bottom;
+    color: $card-primary-color;
+    padding: $reset;
+    margin: $reset;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $reset;
+    margin: $reset;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    width: $btn-w;
+    height: $btn-h;
+    background-color: $btn-color;
+    color: $btn-text-color;
+    border-radius: $btn-border-r;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $btn-hover-color;
+      color: $btn-text-hover-color;
+      border: 1px solid $btn-border-color;
+    }
+  }
+}
