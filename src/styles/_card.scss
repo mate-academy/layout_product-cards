@@ -3,19 +3,28 @@
   flex-direction: column;
   width: 200px;
   padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid $border;
+  border-radius: $border-radius;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
 
   &__name {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
     line-height: 18px;
-    margin-top: 40px;
+    margin-top: $spacing-xl;
+    color: $main-accent;
   }
 
   &__code {
-    color: $grey;
-    font-size: 10px;
-    font-weight: 400;
-    margin-top: 4px;
+    color: $secondary;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    margin-top: $spacing-xs;
   }
 
   &__reviews {
@@ -23,32 +32,54 @@
     justify-content: space-between;
     align-items: center;
     gap: 17px;
-    margin-top: 16px;
+    margin-top: $spacing-s;
   }
 
   &__count {
-    color: $black;
-    font-size: 10px;
-    font-weight: 400;
+    color: $main-accent;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 24px;
+    margin-top: $spacing-m;
+  }
 
-    &__title {
-      color: $grey;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
-    }
+  &__price-title {
+    color: $secondary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: 18px;
+  }
 
-    &__value {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18px;
+  &__price-value {
+    color: $main-accent;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    line-height: 18px;
+  }
+  &__buy {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $blue-accent;
+    color: $white;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    border-radius: $border-radius;
+    border: none;
+    margin-top: $spacing-s;
+    line-height: 40px;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $white;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
     }
   }
 }
