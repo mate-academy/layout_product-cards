@@ -4,24 +4,26 @@
   padding-bottom: 16px;
 
   width: 200px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   border-radius: 5px;
+  background-color: $primari-white;
+  box-sizing: border-box;
 
   &__img {
     display: block;
-    margin: 0 20px;
+    margin: 0 $img-margin;
     width: 160px;
     height: 134px;
   }
 
   &__thumb {
     margin-top: 40px;
-    margin-left: 17px;
-    margin-right: 17px;
+    margin-left: $thumb-inline-margin;
+    margin-right: $thumb-inline-margin;
   }
 
   &__title {
-    color: #000;
+    color: $primary-text-color;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
@@ -30,7 +32,7 @@
 
   &__text {
     margin-top: 4px;
-    color: #616070;
+    color: $secomdary-text-color;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
@@ -52,11 +54,11 @@
     margin-top: 16px;
     width: 166px;
     height: 40px;
-    border: 1px solid #00acdc;
+    border: 1px solid $accent-color;
     border-radius: 5px;
 
-    background-color: #00acdc;
-    color: #fff;
+    background-color: $accent-color;
+    color: $primari-white;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -64,12 +66,18 @@
     text-align: center;
     text-transform: uppercase;
   }
-}
 
-.card:hover .card__button {
-  border: 1px solid #00acdc;
-  color: #00acdc;
-  background-color: #fff;
+  &:hover .card__button {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    background-color: $primari-white;
+  }
+
+  &:focus .card__button {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    background-color: $primari-white;
+  }
 }
 
 .rating {
@@ -87,7 +95,7 @@
 }
 
 .price__text {
-  color: #616070;
+  color: $secomdary-text-color;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -95,7 +103,7 @@
 }
 
 .price__cost {
-  color: #000;
+  color: $primary-text-color;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
