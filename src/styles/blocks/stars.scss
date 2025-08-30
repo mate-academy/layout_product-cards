@@ -1,10 +1,12 @@
+@use 'variables' as *;
+
 .stars {
   display: flex;
 
   &__star {
     background-image: url(../../images/star.svg);
-    height: 16px;
-    width: 16px;
+    height: $star-size;
+    width: $star-size;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -12,8 +14,10 @@
   &__star:not(:last-child) {
     margin-right: 4px;
   }
+}
 
-  &__star:nth-child(-n + 4) {
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
     background-image: url(../../images/star-active.svg);
   }
 }
