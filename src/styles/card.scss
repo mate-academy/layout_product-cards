@@ -1,20 +1,14 @@
-$name-text-color: #060b35;
-$other-text-color: #616070;
-$name-font-size: 12px;
-$name-font-weight: 500;
-$price-font-size: 16px;
-$price-font-weight: 700;
-$button-color: #00acdc;
+@use '../styles/variables\ .scss' as *;
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 198px;
+  width: 200px;
   height: 406px;
   box-sizing: border-box;
   background-color: #fff;
-  border: 1px solid #4444;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
 
   &__image {
@@ -43,7 +37,7 @@ $button-color: #00acdc;
     font-size: 10px;
     color: $other-text-color;
     align-self: start;
-    padding-left: 15px;
+    padding-left: 16px;
     padding-top: 4px;
   }
 
@@ -82,7 +76,7 @@ $button-color: #00acdc;
   &__price-value {
     font-size: $price-font-size;
     font-weight: $price-font-weight;
-    padding-bottom: 2px;
+    line-height: 18px;
   }
 
   &__buy {
@@ -102,10 +96,11 @@ $button-color: #00acdc;
     transition: 300ms;
     color: #fff;
     background-color: $button-color;
-  }
+    line-height: 40px;
 
-  &__buy:hover {
-    background-color: #fff;
-    color: $button-color;
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+    }
   }
 }
