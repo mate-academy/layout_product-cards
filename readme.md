@@ -7,6 +7,7 @@ Create a page with product card using `flexbox`, `BEM` and `SCSS` based on [this
 ### Requirements:
 
 - reset the browser's default margins
+
 - card width is `200px` including border
 - use images from [src/images](src/images)
 - change link styles on `:hover`
