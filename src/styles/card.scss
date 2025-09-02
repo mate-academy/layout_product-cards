@@ -1,0 +1,127 @@
+@import 'variables';
+@import 'card';
+
+.card {
+  width: $card-width - ($border-width * 2);
+  height: $card-height - ($border-width * 2);
+  background-color: #fff;
+  margin-top: 20px; /* поміняти на 1 */
+  margin-left: 100px; /* поміняти на 1 */
+  border: $border-width solid #f3f3f3;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  background-image: url('../images/imac.jpeg');
+  width: $card__image-width;
+  height: $card__image-height;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 19px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.card__title {
+  font-family: Roboto, sans-serif;
+
+  &-main {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 16px;
+    color: #060b35;
+  }
+
+  &-sub {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 4px 16px 0;
+    color: #616070;
+  }
+}
+
+.card__stars {
+  display: flex;
+  align-items: center;
+  border-radius: $card__stars--border--radius;
+  gap: 4px;
+  margin: 16px 16px 24px;
+
+  .card__star {
+    height: $card__stars--height;
+    width: $card__stars--width;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/star.svg);
+
+    &--active {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    height: 16px;
+    margin-left: 17px;
+    white-space: nowrap;
+  }
+}
+
+.card__price {
+  margin: 24px 16px;
+  display: flex;
+  align-items: center;
+
+  &-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: 85px;
+  }
+}
+
+.card__buy {
+  height: 40px;
+  width: 166px;
+  background-color: #00acdc;
+  border-radius: 5px;
+  margin: 0 16px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #00acdc;
+  }
+
+  &:hover .card__buy-text {
+    color: #00acdc;
+  }
+}
