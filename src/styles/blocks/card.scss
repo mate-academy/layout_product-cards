@@ -1,5 +1,7 @@
+@use 'variables' as v;
+
 .card {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
@@ -9,7 +11,7 @@
   border-radius: 5px;
 
   border: 1px solid #f3f3f3;
-  background-color: #fff;
+  background-color: v.$background-color;
 
   &__image {
     position: absolute;
@@ -28,7 +30,7 @@
 
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: v.$line-height-base;
     color: #060b35;
   }
 
@@ -52,18 +54,18 @@
     justify-content: space-between;
 
     width: 166px;
-    height: 18px;
+    height: v.$line-height-base;
     top: 316px;
     left: 16px;
 
     &-text {
       width: 31px;
-      height: 18px;
+      height: v.$line-height-base;
       left: 16px;
 
       font-weight: 400;
       font-size: 12px;
-      line-height: 18px;
+      line-height: v.$line-height-base;
       letter-spacing: 0%;
       color: #616070;
     }
@@ -71,47 +73,10 @@
     &-value {
       font-weight: 700;
       font-size: 16px;
-      line-height: 18px;
+      line-height: v.$line-height-base;
       letter-spacing: 0%;
       text-align: right;
       color: #060b35;
-    }
-  }
-
-  &__button {
-    position: absolute;
-    width: 166px;
-    height: 40px;
-    top: 351px;
-    left: 16px;
-
-    border-radius: 5px;
-    border: none;
-    text-transform: uppercase;
-    background: #00acdc;
-    color: #fff;
-
-    &-text {
-      width: 20px;
-      height: 16px;
-      top: 363px;
-      left: 86px;
-
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 163px;
-      text-align: center;
-      letter-spacing: 0%;
-
-      &:hover {
-        color: #00acdc;
-      }
-    }
-
-    &:hover {
-      color: #00acdc;
-      background-color: #fff;
-      border: 1px solid #00acdc;
     }
   }
 }
