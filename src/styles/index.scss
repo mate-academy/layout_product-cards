@@ -1,3 +1,123 @@
+@import './utils/variables';
+@import './stars';
+
+@mixin small-text {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
 body {
   margin: 0;
+  background: #ededed;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: $border-radius-standard;
+  background-color: #fff;
+  margin: 40px auto;
+
+  &__img {
+    display: block;
+    margin-inline: 3px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 40px 0 0;
+    font-weight: $font-width-medium;
+    font-size: $font-size-s;
+    line-height: $line-hight-m;
+    color: $title-color;
+    width: 100%;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-weight: $font-width-regular;
+    font-size: $font-size-xs;
+    line-height: $line-hight-s;
+    color: $text-color;
+    width: 100%;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 16px;
+  }
+
+  &__rating-reviews {
+    @include small-text;
+
+    color: #060b35;
+    margin: 0;
+    font-weight: $font-width-regular;
+    font-size: $font-size-xs;
+    line-height: $line-hight-s;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      font-size: 12px;
+      font-style: normal;
+      color: #616070;
+    }
+
+    &-cost {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      color: $title-color;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+    background-color: $button-color;
+    border-radius: $border-radius-standard;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    line-height: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      border 0.2s;
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $button-color;
+      color: $accent;
+    }
+  }
 }
