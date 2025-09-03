@@ -1,0 +1,94 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.card {
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  display: flex;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 16px;
+  background-color: #fff;
+
+  &__product {
+    padding: 16px 3px 36px;
+  }
+
+  &__image {
+    height: 133.5px;
+  }
+
+  &__description {
+    padding-bottom: 16px;
+  }
+
+  &__title {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+      color: #060b35;
+  }
+
+  &__code {
+      padding-top: 4px;
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 400;
+      color: #616070;
+  }
+}
+
+.reviews {
+  @include mixins.flex-space-between;
+}
+
+.reviews__count {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #060b35;
+}
+
+.price {
+  @include mixins.flex-space-between;
+
+  padding: 24px 0 16px;
+
+  &__label {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #616070;
+  }
+
+  &__value {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #060b35;
+  }
+}
+
+.button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  background-color: variables.$link-color-main;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$link-color-alt;
+
+  &:hover {
+    border: 1px solid variables.$link-color-main;
+    background-color: variables.$link-color-alt;
+    color: variables.$link-color-main;
+  }
+}
