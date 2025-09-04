@@ -1,15 +1,19 @@
-.card-block {
-  &__reviews {
-    display: flex;
-    margin-top: 16px;
-    justify-content: space-between;
-    align-items: end;
-  }
+.blockstr {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+  align-items: end;
 
-  &__stars {
-    display: flex;
-    gap: 4px;
+  &__text {
+    color: $main-text-color;
+    font-size: 10px;
+    line-height: 14px;
   }
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
 
   &__star {
     width: 16px;
@@ -19,13 +23,7 @@
     background-position: center;
   }
 
-  &__stars--4 &__star:nth-child(n + 5) {
+  &--4 &__star:nth-child(n + 5) {
     background-image: url(../images/star.svg);
-  }
-
-  &__text-reviews {
-    color: $main-text-color;
-    font-size: 10px;
-    line-height: 14px;
   }
 }
