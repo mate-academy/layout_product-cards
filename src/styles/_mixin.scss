@@ -1,6 +1,6 @@
 @mixin dis-flex-center {
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
 }
 
@@ -8,10 +8,24 @@
   text-decoration: none;
   color: #fff;
   display: flex;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   height: 40px;
   background-color: $button-blue-accent;
+  border: 1px solid $button-blue-accent;
+  border-radius: $border-radius-5;
+  text-transform: uppercase;
+}
+
+%button-style-hover {
+  text-decoration: none;
+  color: $button-blue-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #fff;
   border: 1px solid $button-blue-accent;
   border-radius: $border-radius-5;
   text-transform: uppercase;
