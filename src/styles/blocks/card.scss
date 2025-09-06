@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .card__image {
   width: 160px;
   height: 134px;
@@ -13,7 +19,13 @@
   border-radius: 8px;
   padding: 32px 16px 16px;
 
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 300ms;
+  }
+
   &__description {
+    font-family: Roboto, Arial, sans-serif;
     color: $main-dark;
     font-size: 12px;
     line-height: 18px;
@@ -22,6 +34,10 @@
     white-space: normal;
     margin: 0;
     margin-bottom: 4px;
+
+    &:hover {
+      color: $fon-color;
+    }
   }
 }
 
@@ -107,6 +123,7 @@
   &:hover {
     background-color: $white;
     color: $main-color;
-    border: solid 1px $main-color;
+
+    // border: solid 1px $main-color;
   }
 }
