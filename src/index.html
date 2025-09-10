@@ -6,13 +6,54 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
+    <title>Product Card</title>
     <link
       rel="stylesheet"
-      href="./styles/index.scss"
+      href="./styles/index.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
     />
   </head>
+
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <div class="card__image">
+        <span class="card__image card__image--imac"></span>
+      </div>
+
+      <div class="card__content">
+        <h2 class="card__title">APPLE iMac 24” M1 Chip</h2>
+        <p class="card__code">Product code: 195434</p>
+
+        <div class="card__reviews-section">
+          <div class="stars">
+            <span class="stars__item stars__item--active"></span>
+            <span class="stars__item stars__item--active"></span>
+            <span class="stars__item stars__item--active"></span>
+            <span class="stars__item stars__item--active"></span>
+            <span class="stars__item"></span>
+          </div>
+          <span class="card__reviews">Reviews: 5</span>
+        </div>
+
+        <div class="card__price-section">
+          <span class="card__label">Price</span>
+          <span class="card__price">$2,199</span>
+        </div>
+
+        <a
+          href="#"
+          class="card__buy-btn"
+          data-qa="hover"
+        >
+          BUY
+        </a>
+      </div>
+    </div>
   </body>
 </html>
