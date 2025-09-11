@@ -1,13 +1,13 @@
 .card {
   width: 200px;
   border: 1px solid $color-border;
-  border-radius: 12px;
+  border-radius: $radius-card;
   background-color: #fff;
-  padding: 16px;
+  padding: $space-md;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: $space-sm;
 
   &__image {
     width: 100%;
@@ -15,32 +15,32 @@
     background-image: url('../images/imac.jpeg');
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
+    border-radius: $radius-img;
 
     &--alt {
-      background-image: url('../images/imac.jpeg');
+      background-image: url('../images/imac.jpeg'); // можно заменить на другую картинку
     }
   }
 
   &__title {
-    font-size: 16px;
+    font-size: $font-size-base;
     font-weight: 500;
     color: $color-text;
   }
 
   &__price {
-    font-size: 18px;
+    font-size: $font-size-lg;
     font-weight: 700;
     color: $color-price;
   }
 
   &__buy {
     display: inline-block;
-    padding: 8px 12px;
+    padding: $space-sm $space-md;
     background-color: $color-primary;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: $radius-img;
     transition: background-color 0.3s ease;
 
     &:hover {
