@@ -1,0 +1,32 @@
+.stars {
+  display: flex;
+  margin-top: 16px;
+
+  &__item {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: $star-spacing;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+
+  &__reviews {
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $cor_texto_primaria;
+  }
+}
