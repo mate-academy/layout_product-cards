@@ -1,3 +1,131 @@
+$main-font: Roboto;
+$main-color: #060b35;
+$width-item: 166px;
+
+@mixin font-style(
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $text-align,
+  $color
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-align: $text-align;
+  color: $color;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: $main-font, Inter, sans-serif;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__picture {
+    width: $width-item - 6;
+    height: 134px;
+    background-repeat: no-repeat;
+    background-size: 158px 134px;
+    background-position: center;
+    background-image: url('../images/imac.jpeg');
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    width: $width-item;
+    margin-bottom: 4px;
+
+    @include font-style($main-font, 12px, 500, 18px, left, #060b35);
+  }
+
+  &__code {
+    width: $width-item;
+    margin-bottom: 16px;
+
+    @include font-style($main-font, 10px, 400, 14px, left, #616070);
+  }
+
+  &__review {
+    width: $width-item;
+    display: flex;
+    margin-bottom: 24px;
+
+    .card__review-stars {
+      width: $width-item - 53;
+      display: flex;
+
+      .stars-star {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: 13px 13px;
+        background-position: center;
+      }
+
+      .stars-star:not(:last-child) {
+        margin-right: 4px;
+      }
+
+      .stars-star:nth-child(-n + 4) {
+        background-image: url('../images/star-active.svg');
+      }
+
+      .stars-star:nth-child(n + 4) {
+        background-image: url('../images/star.svg');
+      }
+    }
+
+    .card__review-amount {
+      width: $width-item - 113;
+
+      @include font-style($main-font, 10px, 400, 14px, right, $main-color);
+    }
+  }
+
+  .card__price {
+    width: $width-item;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      @include font-style($main-font, 12px, 400, 18px, left, #616070);
+    }
+
+    &-amount {
+      @include font-style($main-font, 16px, 700, 18px, right, $main-color);
+    }
+  }
+
+  &__button {
+    width: $width-item;
+    height: 40px;
+    margin: 16px 0;
+    background-color: #00acdc;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    @include font-style($main-color, 14px, 700, 16px, center, #fff);
+  }
+
+  &__button:hover {
+    background-color: #fff;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+  }
 }
