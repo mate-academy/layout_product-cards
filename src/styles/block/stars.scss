@@ -1,0 +1,32 @@
+.stars {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg'); // off por padrão
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__reviews {
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $cor_texto_primaria;
+  }
+
+  // exemplo com 4 estrelas ativas
+  &--4 {
+    .stars__star:nth-child(-n+4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
