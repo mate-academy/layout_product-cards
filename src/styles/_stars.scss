@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+.stars {
+  display: flex;
+  gap: $star-gap;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url(#{$star-icon});
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--1 {
+    &__star:nth-child(-n + 1) {
+      background-image: url(#{$star-icon-active});
+    }
+  }
+  &--2 {
+    &__star:nth-child(-n + 2) {
+      background-image: url(#{$star-icon-active});
+    }
+  }
+  &--3 {
+     &__star:nth-child(-n + 3) {
+      background-image: url(#{$star-icon-active});
+    }
+  }
+  &--4 {
+    &__star:nth-child(-n + 4) {
+      background-image: url(#{$star-icon-active});
+    }
+  }
+  &--5 {
+    &__star:nth-child(-n + 5) {
+      background-image: url(#{$star-icon-active});
+    }
+  }
+}
