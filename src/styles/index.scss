@@ -1,3 +1,126 @@
+$mainColor: #00acdc;
+$textColor: #060b35;
+$textSecondColor: #616070;
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: $textSecondColor;
+}
+
 body {
   margin: 0;
+}
+
+.product-card {
+  width: 200px;
+  height: auto;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    display: block;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $textColor;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__price-tag {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color: $textColor;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid $mainColor;
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $mainColor;
+  }
+
+  &__button:hover {
+    color: $mainColor;
+    background-color: white;
+  }
+
+  .stars {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &__text {
+      color: $textColor;
+    }
+
+    &__star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+
+    &__container {
+      display: flex;
+
+      &--4 {
+        .stars__star:nth-child(-n + 4) {
+          background-image: url(../images/star-active.svg);
+        }
+      }
+    }
+  }
 }
