@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .card {
   width: 200px;
   box-sizing: border-box;
@@ -21,7 +15,7 @@
     box-sizing: border-box;
     object-fit: contain;
     display: block;
-    height: auto;
+    height: 134px;
     max-width: 100%;
     margin: 32px 0 40px;
   }
@@ -33,14 +27,17 @@
     font-size: 12px;
     line-height: 18px;
     color: #060b35;
+    margin-bottom: 4px;
   }
 
   &__product-code {
+    box-sizing: border-box;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
     color: #060b35;
-    margin-top: 4px;
+    margin-bottom: 16px;
+    margin-top: 0;
   }
 
   &__rating-reviews {
@@ -52,14 +49,44 @@
 
   &__stars {
     display: flex;
-    gap: 4px;
+    height: 16px;
+    width: 96px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &__stars--1 .card__star:nth-child(-n + 1) {
+    background-image: url('../images/star-active.svg');
+  }
+  &__stars--2 .card__star:nth-child(-n + 2) {
+    background-image: url('../images/star-active.svg');
+  }
+  &__stars--3 .card__star:nth-child(-n + 3) {
+    background-image: url('../images/star-active.svg');
+  }
+  &__stars--4 .card__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+  &__stars--5 .card__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
   }
 
   &__reviews {
     font-size: 10px;
-    margin: 0;
     margin-top: 2px;
     font-weight: 400;
+    line-height: 14px;
   }
 
   &__price {
@@ -67,7 +94,7 @@
     justify-content: space-between;
     line-height: 18px;
     margin: 24px 0 16px;
-
+    height: 18px;
     align-items: baseline;
   }
 
@@ -75,13 +102,12 @@
     font-size: 12px;
     font-weight: 400;
     color: #616070;
-    margin: 0;
   }
 
   &__price-amount {
     font-weight: 700;
     font-size: 16px;
-    margin: 0;
+    line-height: 18px;
     color: #616070;
   }
 
@@ -91,19 +117,17 @@
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    text-transform: uppercase;
     border: 1px solid #00acdc;
     text-align: center;
     padding: 12px 0;
     margin-bottom: 16px;
     font-size: 14px;
-    line-height: 16px;
     font-weight: 700;
     background-color: #00acdc;
   }
 
   &__button:hover {
-    background-color: #00acdc;
+    background-color: #fff;
     color: #00acdc;
   }
 }
