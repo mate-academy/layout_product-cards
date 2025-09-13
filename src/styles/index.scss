@@ -10,7 +10,7 @@ $width-item: 166px;
   $text-align,
   $color
 ) {
-  font-family: $font-family;
+  font-family: $main-font;
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
@@ -18,13 +18,21 @@ $width-item: 166px;
   color: $color;
 }
 
-body {
-  margin: 0;
+* {
   font-family: $main-font, Inter, sans-serif;
 }
 
-.card {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
   width: 200px;
   background: #fff;
   border: 1px solid #f3f3f3;
@@ -35,7 +43,7 @@ body {
   align-items: center;
 
   &__picture {
-    width: $width-item - 6;
+    width: 166px;
     height: 134px;
     background-repeat: no-repeat;
     background-size: 158px 134px;
@@ -62,6 +70,7 @@ body {
   &__review {
     width: $width-item;
     display: flex;
+    align-items: center;
     margin-bottom: 24px;
 
     .card__review-stars {
@@ -90,7 +99,9 @@ body {
     }
 
     .card__review-amount {
-      width: $width-item - 113;
+      width: 166px;
+      display: table-cell;
+      vertical-align: bottom;
 
       @include font-style($main-font, 10px, 400, 14px, right, $main-color);
     }
@@ -114,7 +125,7 @@ body {
   &__button {
     width: $width-item;
     height: 40px;
-    margin: 16px 0;
+    margin-bottom: 16px;
     background-color: #00acdc;
     border: none;
     border-radius: 5px;
