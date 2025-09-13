@@ -1,0 +1,34 @@
+.stars {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+
+  &__text {
+    color: $textColor;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  @include stars(1);
+  @include stars(2);
+  @include stars(3);
+  @include stars(4);
+  @include stars(5);
+}

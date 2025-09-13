@@ -1,19 +1,4 @@
-$mainColor: #00acdc;
-$textColor: #060b35;
-$textSecondColor: #616070;
-
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 10px;
-  line-height: 14px;
-  color: $textSecondColor;
-}
-
-body {
-  margin: 0;
-}
-
-.product-card {
+.card {
   width: 200px;
   height: auto;
   border: 1px solid #f3f3f3;
@@ -87,40 +72,5 @@ body {
   &__button:hover {
     color: $mainColor;
     background-color: white;
-  }
-
-  .stars {
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 24px;
-
-    &__text {
-      color: $textColor;
-    }
-
-    &__star {
-      width: 16px;
-      height: 16px;
-      background-image: url(../images/star.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-
-      &:not(:last-child) {
-        margin-right: 4px;
-      }
-    }
-
-    &__container {
-      display: flex;
-
-      &--4 {
-        .stars__star:nth-child(-n + 4) {
-          background-image: url(../images/star-active.svg);
-        }
-      }
-    }
   }
 }
