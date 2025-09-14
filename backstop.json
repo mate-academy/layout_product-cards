@@ -1,0 +1,47 @@
+{
+  "id": "product-cards",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "height": 1024
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Card with data-qa_card",
+      "url": "file:///C:/Proekt4/layout_product-cards/index.html",
+      "selectors": ["[data-qa='card']"],
+      "readySelector": "[data-qa='card']",
+      "delay": 1000,
+      "misMatchThreshold": 1
+    },
+    {
+      "label": "Link with data-qa_hover",
+      "url": "file:///C:/Proekt4/layout_product-cards/index.html",
+      "selectors": ["[data-qa='hover']"],
+      "hoverSelector": "[data-qa='hover']",
+      "readySelector": "[data-qa='hover']",
+      "delay": 1000,
+      "misMatchThreshold": 1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "engine": "puppeteer",
+  "report": ["browser"],
+  "engineOptions": {
+    "args": ["--no-sandbox"],
+    "defaultViewport": null,
+    "timeout": 60000
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
