@@ -1,9 +1,11 @@
+@use './variables' as vars;
+
 .card {
-  width: $card-width;
-  border: $card-border;
-  border-radius: $card-radius;
-  background: $card-bg;
-  font-family: $font-family;
+  width: vars.$card-width;
+  border: vars.$card-border;
+  border-radius: vars.$card-radius;
+  background: vars.$card-bg;
+  font-family: vars.$font-family;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -40,17 +42,17 @@
 
   &__buy {
     text-decoration: none;
-    color: $primary-color;
+    color: vars.$star-color;;
     font-weight: bold;
-    border: 1px solid $primary-color;
+    border: 1px solid vars.$star-color;
     padding: 8px 16px;
     border-radius: 4px;
     transition: all 0.3s;
 
     &:hover {
-      background-color: $hover-color;
+      background-color: vars.$hover-color;
       color: #fff;
-      border-color: $hover-color;
+      border-color: vars.$hover-color;
     }
   }
 }
