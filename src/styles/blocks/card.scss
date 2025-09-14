@@ -66,32 +66,27 @@
     }
   }
 
-  &__button {
-    box-sizing: border-box;
+  &__button-text[data-qa="hover"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 166px;
     height: 40px;
     border-radius: 5px;
     background-color: $button-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid transparent;
 
-    &-text {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      color: $background-color;
-    }
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $background-color;
 
     &:hover {
       background-color: $background-color;
       border: 1px solid $button-color;
-
-      .card__button-text {
-        color: $button-color;
-      }
+      color: $button-color;
     }
   }
 }
