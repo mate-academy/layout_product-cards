@@ -7,15 +7,18 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @for $star from 1 through 4 {
-      &--#{$star} {
-        margin-right: 4px;
-        background-image: url(../images/star-active.svg);
-      }
-    }
+  }
 
-    &--5 {
-      background-image: url(../images/star.svg);
+  &--4 {
+    .stars__star {
+      &:nth-child(-n + 4) {
+        margin-right: 4px;
+       background-image: url(../images/star-active.svg);
+      }
+
+      &:nth-child(n + 5){
+        background-image: url(../images/star.svg);
+      }
     }
   }
 }
