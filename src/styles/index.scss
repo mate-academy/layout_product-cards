@@ -1,3 +1,133 @@
+@import './variables';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  width: 200px;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 160px 134px;
+    width: 160px;
+    height: 134px;
+    margin: 32px auto 40px;
+  }
+
+  &__header {
+    font-weight: 500;
+    font-size: 12.3px;
+    line-height: 18px;
+    color: $main-accent;
+    margin: 0 16px;
+  }
+
+  &__articul {
+    color: $secondary;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 3px 16px 15px;
+  }
+
+  &__review {
+    max-width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &--stars {
+      margin: 0 0 0 16px;
+    }
+
+    &--review {
+      font-size: 10px;
+      color: $main-accent;
+      margin: 1px 16px 0;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 24px auto 0;
+
+    &--title {
+      margin: auto 16px;
+      font-size: 12px;
+      color: $secondary;
+      margin-top: 1px;
+    }
+
+    &--value {
+      color: $main-accent;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      margin: auto 16px;
+    }
+  }
+
+  &__button {
+    margin: 16px 16px 24px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    display: block;
+    width: 166px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $blue-accent;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #fff;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+      cursor: pointer;
+      margin: 16px auto;
+      height: 37px;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/star.svg') no-repeat center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
 }
