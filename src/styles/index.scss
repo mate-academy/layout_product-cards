@@ -1,5 +1,11 @@
+@use 'variables';
+
+body {
+  margin: 0;
+}
+
 .card {
-  width: 200px;
+  width: $card-width;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
   border: 1px solid #f3f3f3;
@@ -17,7 +23,7 @@
     display: block;
     height: 134px;
     max-width: 100%;
-    margin: 32px 0 40px;
+    margin: 32px auto 40px;
   }
 
   &__title {
@@ -26,7 +32,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: #060b35;
+    color: $title-color;
     margin-bottom: 4px;
   }
 
@@ -35,7 +41,7 @@
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #060b35;
+    color: $title-color;
     margin-bottom: 16px;
     margin-top: 0;
   }
@@ -44,54 +50,54 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px 0 24px;
+    margin: $spacing-m 0 $spacing-l;
     height: 16px;
   }
 
-  &__stars {
+  .stars {
     display: flex;
     height: 16px;
     width: 96px;
     align-items: center;
-  }
 
-  &__star {
-    width: 16px;
-    height: 16px;
-    background: url(../images/star.svg) no-repeat center;
-    background-size: 16px 16px;
+    &__star {
+      width: 16px;
+      height: 16px;
+      background: url(../images/star.svg);
 
-    &:not(:last-child) {
-      margin-right: 4px;
+      // background-size: 16px 16px;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
     }
-  }
 
-  &__stars--1 .card__star:nth-child(-n + 1) {
-    background-image: url('../images/star-active.svg');
-  }
+    &__stars--1 .card__star:nth-child(-n + 1) {
+      background-image: url('../images/star-active.svg');
+    }
 
-  &__stars--2 .card__star:nth-child(-n + 2) {
-    background-image: url('../images/star-active.svg');
-  }
+    &__stars--2 .card__star:nth-child(-n + 2) {
+      background-image: url('../images/star-active.svg');
+    }
 
-  &__stars--3 .card__star:nth-child(-n + 3) {
-    background-image: url('../images/star-active.svg');
-  }
+    &__stars--3 .card__star:nth-child(-n + 3) {
+      background-image: url('../images/star-active.svg');
+    }
 
-  &__stars--4 .card__star:nth-child(-n + 4) {
-    background-image: url('../images/star-active.svg');
-  }
+    &__stars--4 .card__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
 
-  &__stars--5 .card__star:nth-child(-n + 5) {
-    background-image: url('../images/star-active.svg');
+    &__stars--5 .card__star:nth-child(-n + 5) {
+      background-image: url('../images/star-active.svg');
+    }
   }
 
   &__reviews {
     font-size: 10px;
-    margin-top: 2px;
     font-weight: 400;
     line-height: 14px;
-    height: 16px;
+    margin: 0;
   }
 
   &__price {
@@ -113,7 +119,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: #616070;
+    color: #060b35;
   }
 
   &__button {
@@ -122,17 +128,17 @@
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    border: 1px solid #00acdc;
+    border: 1px solid $blue-color;
     text-align: center;
     padding: 12px 0;
     margin-bottom: 16px;
     font-size: 14px;
     font-weight: 700;
-    background-color: #00acdc;
+    background-color: $blue-color;
   }
 
   &__button:hover {
     background-color: #fff;
-    color: #00acdc;
+    color: $blue-color;
   }
 }
