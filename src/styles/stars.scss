@@ -1,0 +1,22 @@
+@import './variables';
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:first-child) {
+    margin-left: 4px;
+  }
+
+  &__star:not(:last-child) {
+    background-image: url('../images/star-active.svg');
+  }
+}
