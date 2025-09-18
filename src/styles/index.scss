@@ -1,5 +1,6 @@
-$titel-color: #060b35;
-$buttom-color: #00acdc;
+@import './card';
+@import './stars';
+@import './variables';
 
 body {
   margin: 0;
@@ -8,7 +9,7 @@ body {
   font-weight: 400;
 }
 
-.product-card {
+.card {
   padding: 0;
   width: 200px;
   height: 408px;
@@ -25,11 +26,10 @@ body {
     margin: 32px 19px 40px;
   }
 
-  &__body-card {
-    margin: 0 16px;
-  }
-
   &__btn {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0;
     margin: 16px;
     width: 166px;
     height: 40px;
@@ -41,78 +41,13 @@ body {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &[data-qa='hover']:hover {
+      border: 1px solid $buttom-color;
+      color: $buttom-color;
+      background-color: #fff;
+    }
   }
-
-  &__btn:hover {
-    border: 1px solid $buttom-color;
-    color: $buttom-color;
-    background-color: #fff;
-  }
-}
-
-.product-card__title {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0;
-  color: $titel-color;
-}
-
-.product-card__code {
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 0;
-  color: #616070;
-  margin-right: 68px;
-  margin-top: 4px;
-}
-
-.product-card__rating {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 16px;
-}
-
-.product-card__review {
-  font-size: 10px;
-  line-height: 14px;
-  color: $titel-color;
-}
-
-.product-card__stars {
-  display: flex;
-  gap: 4px;
-}
-
-.product-card__star {
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 16px;
-  height: 16px;
-
-  &:nth-child(-n + 4) {
-    background-image: url(..//images/star-active.svg);
-  }
-}
-
-.product-card__price {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
-}
-
-.product-card__price-label {
-  font-size: 12px;
-  line-height: 18px;
-  color: #616070;
-}
-
-.product-card__price-value {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  color: $titel-color;
 }
