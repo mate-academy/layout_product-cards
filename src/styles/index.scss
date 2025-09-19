@@ -1,3 +1,132 @@
+@import 'variables';
+
 body {
   margin: 0;
+}
+
+.card {
+  display: flex;
+  box-sizing: border-box;
+  width: $card-width;
+  height: $card-height;
+  background-color: $color-white;
+  flex-direction: column;
+  border-radius: $border-radius;
+  border: $border-width solid $color-border;
+}
+
+.card__image {
+  display: flex;
+  width: $card-image-width;
+  height: $card-image-height;
+  margin: $spacing-lg $spacing-m 0;
+}
+
+.card__description {
+  margin-top: $spacing-xl;
+  margin-left: $spacing-sm;
+  margin-right: $spacing-sm;
+  font-family: $font-family;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  line-height: $line-height-md;
+  color: $color-primary-text;
+}
+
+.card__code {
+  margin-left: $spacing-sm;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
+  margin-top: $spacing-xs;
+  margin-bottom: $spacing-sm;
+  color: $color-secondary--text;
+}
+
+.stars {
+  display: flex;
+  gap: $star-gap;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
+
+.product_rating__stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: $spacing-sm;
+  margin-right: $spacing-sm;
+}
+
+.product_rating__reviews {
+  font-family: $font-family;
+  transform: translateY(1px);
+  font-weight: $font-weight-normal;
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
+  color: $color-primary-text;
+}
+
+.card__price {
+  margin-top: $spacing-md;
+  display: flex;
+  justify-content: space-between;
+  margin-left: $spacing-sm;
+  margin-right: $spacing-sm;
+  color: $color-secondary--text;
+}
+
+.card__price-label {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-sm;
+  line-height: $line-height-md;
+}
+
+.card__price-value {
+  font-family: $font-family;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  line-height: $line-height-md;
+  color: $color-primary-text;
+}
+
+.buy_button {
+  display: flex;
+  height: $buy-button-height;
+  border-radius: $border-radius;
+  background-color: $color-primary;
+  width: $buy-button-width;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-family;
+  font-size: $font-size-md;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  align-items: center;
+  margin: $spacing-sm;
+  justify-content: center;
+}
+
+.buy_button:hover {
+  box-sizing: border-box;
+  color: #00acdc;
+  background-color: $color-white;
+  border: $border-width solid $color-hover-border;
 }
