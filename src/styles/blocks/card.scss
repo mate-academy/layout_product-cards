@@ -4,7 +4,6 @@ body {
   margin: 0;
   font-family: $font-family;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
 }
@@ -15,7 +14,7 @@ body {
   width: $card-width;
   height: $card-height;
   border-radius: $border-radius;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
 
   &__imac {
     width: $width-inner-content;
@@ -110,28 +109,6 @@ body {
       font-weight: 400;
       line-height: 14px;
       color: $info-color;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    background-image: url(../images/star.svg);
-    height: $stars-size;
-    width: $stars-size;
-    border-radius: 0.5px;
-    margin-right: 4px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  @for $i from 1 through 5 {
-    &--#{$i} {
-      & .stars__star:nth-child(-n + #{$i}) {
-        background-image: url(../images/star-active.svg);
-      }
     }
   }
 }
