@@ -1,3 +1,106 @@
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+  gap: 4px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0;
+}
+
+&__description {
+  margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  &__code {
+    display: block
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-left:  16px;
+    color: #616070;
+  }
+
+  &__info {
+    width: 160px;
+    height: 16px;
+    margin: 16px;
+
+    &__info--reviews{
+      display: inline;
+      margin-left: 16px;
+      font-weight: 400px;
+      font-style: 10px;
+
+    }
+  }
+  &__price {
+    width: 166px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.card__action {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    background-color: #008bb0;
+    border: 1px solid #008bb0;
+    border-radius: 5px;
+
+    a {
+      display: inline;
+      text-decoration: none;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  .stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: url(../images/star.svg) no-repeat center;
+  }
+
+  &--4 .stars__star:nth-child(-n+4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
