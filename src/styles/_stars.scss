@@ -1,0 +1,38 @@
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__review {
+    align-self: flex-end;
+    font-size: 10px;
+    line-height: 140%; /* 14/10 */
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 0 to 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+}
