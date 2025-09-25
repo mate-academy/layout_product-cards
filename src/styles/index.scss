@@ -1,3 +1,117 @@
-body {
-  margin: 0;
+@import './variables';
+@import './reset';
+
+.cards {
+  &__card {
+    max-width: 200px;
+    box-sizing: border-box;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  &__image {
+    width: 160px;
+    align-self: center;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__img {
+    width: 160px;
+    height: 134px;
+  }
+  &__product-name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  &__product-code {
+    color: $second-color;
+    font-size: 10px;
+    line-height: 14px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &__button {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 5px;
+    background-color: $blue;
+    color: $white;
+    text-transform: uppercase;
+    padding: 12px 70px 11px 69px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 114%; /* 16/14 */
+    border: 1px solid $blue;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url(../../src/images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+    &:nth-child(-n + 4) {
+      background-image: url(../../src/images/star-active.svg);
+    }
+  }
+  &__review {
+    align-self: flex-end;
+    font-size: 10px;
+    line-height: 140%; /* 14/10 */
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &__label {
+    color: $second-color;
+    font-size: 12px;
+    line-height: 150%; /* 18/12 */
+  }
+  &__cost {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 112%; /* 18/16 */
+  }
 }
