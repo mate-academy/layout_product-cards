@@ -1,97 +1,114 @@
 body {
-  font-family: Roboto, sans-serif;
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  box-sizing: border-box;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  font-family: Roboto, sans-serif;
 }
 
 .card {
+  margin-top: 32px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 200px;
+  height: 408px;
   border: 1px solid #f3f3f3;
-  background-color: #fff;
-  gap: 4px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 16px 16px;
 
-  &__image {
+  &__text {
+    width: 100%;
+  }
+
+  &__img img {
     display: block;
     width: 160px;
-    height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: 0;
-}
-
-&__description {
-  margin: 0;
+    height: auto;
+    margin: 0 0 32px;
+    object-fit: contain;
+  }
+  &__description {
+    margin-bottom: 4px;
+    display: block;
+    width: 100%;
     font-weight: 500;
     font-size: 12px;
     text-align: left;
+    line-height: 16px;
   }
-
   &__code {
-    display: block
-    font-size: 10px;
     font-weight: 400;
-    margin-top: 0;
-    margin-left:  16px;
+    font-size: 10px;
+    line-height: 14px;
     color: #616070;
   }
 
-  &__info {
-    width: 160px;
-    height: 16px;
-    margin: 16px;
+  &__button {
+    flex-shrink: 0;
+    display: flex;
+    margin-top: auto;
+    width: 100%;
+    height: 40px;
+    background-color: #00acdc;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 14px;
+    text-decoration: none;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    place-content: center;
 
-    &__info--reviews{
-      display: inline;
-      margin-left: 16px;
-      font-weight: 400px;
-      font-style: 10px;
-
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
     }
   }
+
   &__price {
-    width: 166px;
-    height: 18px;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-top: 24px;
-    margin-bottom: 16px;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060b35;
+      justify-content: left;
+      text-align: right;
+    }
   }
 }
 
-.card__action {
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 16px;
+  width: 100%;
+
+  &__icons {
     display: flex;
-    width: 166px;
-    height: 40px;
-    background-color: #008bb0;
-    border: 1px solid #008bb0;
-    border-radius: 5px;
-
-    a {
-      display: inline;
-      text-decoration: none;
-      background-color: #fff;
-      text-align: center;
-    }
-
-    &:hover {
-      background: #fff;
-    }
+    gap: 4px;
   }
 
-  .stars {
-  display: flex;
-  gap: 4px;
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
 
   &__star {
     width: 16px;
@@ -99,8 +116,27 @@ body {
     background: url(../images/star.svg) no-repeat center;
   }
 
-  &--4 .stars__star:nth-child(-n+4) {
+  &--4 .stars__star:nth-child(-n + 4) {
     background-image: url(../images/star-active.svg);
   }
 }
 
+/*
+
+картинка не по-розміру в контейнері (треба з'ясувати, як її правильно розмістити)
+текст product - не зменшується,він навіть більший за опис
+reviews  також не той що треба розмір, а також він має бути ліворуч від зірочок
+текст price великий, а числа мають бути ліворуч
+кнопка перекривається картинкою (напевно), має мати більшу відстань внизу від контейнером
+
+все вилазить за контейнер card
+
+треба з'ясувати як це все зробити, а саме - як керувати контейнером, які значення треба додати або змінити.
+як керувати картинкою, як її вмістити у контейнер, як її розташувати
+як керувати тестом product
+чому не змінюється розмір тексту
+як розмістити текст по-різні краї контейнера
+як зафіксувати розмір кнопки, щоб вони була незалежна
+
+
+*/
