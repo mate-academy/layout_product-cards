@@ -2,20 +2,23 @@
   width: $card-width;
   padding-top: 33px;
   padding-bottom: 16px;
+  padding-left: 17px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   margin: 0;
 
   &__image {
     width: 160px;
     height: 134px;
-    margin-left: 20px;
     display: block;
+    margin-left: 3px;
   }
 
   &__title {
     width: 166px;
     height: 36px;
     margin-top: 40px;
-    margin-left: 17px;
 
     font-weight: 500;
     font-size: 12px;
@@ -30,13 +33,11 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    margin-left: 17px;
     margin-top: 4px;
     color: $color-text-secondary;
   }
 
   &__price {
-    margin-left: 17px;
     margin-top: 24px;
     display: flex;
     align-items: center;
@@ -59,7 +60,6 @@
   }
 
   &__actions {
-    margin-left: 17px;
     margin-top: 16px;
     width: 166px;
   }
@@ -84,7 +84,8 @@
     text-align: center;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: $color-white;
       color: $color-primary;
     }
