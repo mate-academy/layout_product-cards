@@ -1,8 +1,15 @@
 .reviews {
-  @include row-elements-alingnment;
+  @include row-elements-alignnment;
 
   margin-bottom: 24px;
-  align-items: end;
+  display: flex;
+  align-items: flex-end;
+
+  &__stars {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
   &__title {
     @include reset-distances;
