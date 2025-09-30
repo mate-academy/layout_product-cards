@@ -30,8 +30,9 @@
 
   &__image {
     display: block;
-    padding: 33px 19px 0;
-    width: 100%;
+    margin: 32px auto 0;
+    height: 134px;
+    width: 160px;
   }
 
   &__content {
@@ -50,7 +51,7 @@
       color: var(--secondary);
       font-size: 10px;
       line-height: 14px;
-      padding-block: 4px 18px;
+      padding-block: 4px 16px;
     }
 
     &-mark {
@@ -59,15 +60,25 @@
 
       &-stars {
         display: flex;
-        gap: 6px;
       }
 
       &-star {
-        width: 14px;
-        height: 13px;
+        background-image: url(../images/star.svg);
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:not(:first-child) {
+          margin-left: 4px;
+        }
+
+        &:nth-child(-n + 4) {
+          background-image: url(../images/star-active.svg);
+        }
       }
 
       &-reviews {
+        justify-items: right;
         margin: 0;
         color: var(--main-accent);
         font-size: 10px;
@@ -94,18 +105,20 @@
     }
 
     &-button {
+      font-family: Roboto, sans-serif;
       background-color: var(--blue-accent);
       color: #fff;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-weight: 700;
-      line-height: 16px;
-      font-size: 13px;
+      line-height: 40px;
+      font-size: 14px;
       letter-spacing: 0;
       text-transform: uppercase;
       border: 1px solid var(--blue-accent);
       border-radius: 5px;
       height: 40px;
-
       &:hover {
         background-color: #fff;
         color: var(--blue-accent);
