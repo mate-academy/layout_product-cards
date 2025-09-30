@@ -11,9 +11,30 @@
     &:not(:last-child) {
       margin-right: 4px;
     }
+  }
 
-    &:nth-child(-n + 4) {
-            background-image: url(../images/star-active.svg);
+  &__link {
+    &:not(:last-child) {
+      margin-right: 4px;
     }
+  }
+}
+
+@for $number from 1 through 5 {
+  .stars--#{$number} .stars__star:nth-child(-n + #{$number}) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  #stars-#{$number} {
+    position: absolute;
+    z-index: #{$number};
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #stars-#{$number}:target {
+    opacity: 1;
   }
 }

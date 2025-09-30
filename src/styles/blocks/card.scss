@@ -1,3 +1,16 @@
+* {
+  @include reset-distances;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  width: fit-content;
+}
+
 .card {
   width: 200px;
   padding-block: 32px 16px;
@@ -10,12 +23,89 @@
     width: 166px;
   }
 
-  &__code {
-    @include reset-distances;
+  &__picture {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
 
+  &__image {
+    width: 160px;
+    height: 135px;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    line-height: 18px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $darkColor;
+    margin-bottom: 4px;
+  }
+
+  &__code {
     font-size: 10px;
     line-height: 14px;
     color: $lightColor;
     margin-bottom: 16px;
+  }
+
+  &__reviews {
+    @include row-elements-alignnment;
+
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-end;
+
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $darkColor;
+  }
+
+  &__stars {
+    position: relative;
+    width: 96px;
+    height: 16px;
+  }
+
+  &__price {
+    @include row-elements-alignnment;
+
+    height: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    color: $lightColor;
+  }
+
+  &__cost {
+    font-weight: 700;
+    font-size: 16px;
+    color: $darkColor;
+    align-self: flex-start;
+  }
+
+  &__purchase {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding-block: 12px;
+    box-sizing: border-box;
+    background-color: $buttonColor;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+      background-color: #fff;
+      color: $buttonColor;
+      border: 1px solid $buttonColor;
+    }
   }
 }
