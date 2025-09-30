@@ -1,3 +1,117 @@
-body {
+/* #region page */
+
+.page {
+  --main-accent: #060b35;
+  --secondary: #616070;
+  --blue-accent: #00acdc;
+
+  box-sizing: border-box;
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/*  #endregion */
+
+/* #region card  */
+.card {
+  margin: 10px;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    padding: 33px 19px 0;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 16px 16px;
+
+    &-name {
+      margin: 0;
+      color: var(--main-accent);
+      font-weight: 500;
+    }
+
+    &-product-code {
+      margin: 0;
+      color: var(--secondary);
+      font-size: 10px;
+      line-height: 14px;
+      padding-block: 4px 18px;
+    }
+
+    &-mark {
+      display: flex;
+      justify-content: space-between;
+
+      &-stars {
+        display: flex;
+        gap: 6px;
+      }
+
+      &-star {
+        width: 14px;
+        height: 13px;
+      }
+
+      &-reviews {
+        margin: 0;
+        color: var(--main-accent);
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    &-price {
+      padding-block: 24px 16px;
+      display: flex;
+      justify-content: space-between;
+
+      &-letters {
+        margin: 0;
+        color: var(--secondary);
+      }
+
+      &-numbers {
+        margin: 0;
+        color: var(--main-accent);
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+
+    &-button {
+      background-color: var(--blue-accent);
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+      line-height: 16px;
+      font-size: 13px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      border: 1px solid var(--blue-accent);
+      border-radius: 5px;
+      height: 40px;
+
+      &:hover {
+        background-color: #fff;
+        color: var(--blue-accent);
+      }
+    }
+  }
+}
+
+/* #endregion */
