@@ -1,0 +1,79 @@
+@import 'variables';
+
+@mixin flex-content-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: 166px;
+  border-radius: 5px;
+  border: 1px solid #f3f3f3;
+  text-align: center;
+  padding: 16px;
+  padding-top: 32px;
+
+  img {
+    margin-bottom: 36px;
+  }
+
+  h6,
+  p {
+    text-align: left;
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  &__review {
+    @include flex-content-between;
+
+    margin-bottom: 24px;
+    margin-top: 16px;
+
+    p {
+      color: $mainFontColor;
+      margin: 0;
+    }
+  }
+
+  &__price {
+    @include flex-content-between;
+
+    margin-bottom: 16px;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    h5 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    background-color: $blueColor;
+    color: $whiteColor;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__btn:hover {
+    background-color: $whiteColor;
+    color: $blueColor;
+    border: 1px solid $blueColor;
+    width: 164px;
+    height: 38px;
+  }
+}
