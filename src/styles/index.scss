@@ -1,3 +1,116 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  &__code {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  &__reviews {
+    font-size: 12px;
+    color: #666;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  &__buy {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #42a5f5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #1e88e5;
+    }
+
+    &--outline {
+      background-color: transparent;
+      border: 1px solid #42a5f5;
+      color: #42a5f5;
+
+      &:hover {
+        background-color: #42a5f5;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+
+  &__item {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--full {
+      background-image: url('../images/star-active.svg');
+    }
+
+    &--empty {
+      background-image: url('../images/star.svg');
+    }
+  }
 }
