@@ -1,0 +1,98 @@
+@use '../utils/variables' as *;
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: $card-width;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $card-padding;
+
+  &__product-image {
+    padding: $product-image-padding;
+    height: $card-image-height;
+
+    img {
+      width: 100%;
+      height: $card-image-height;
+    }
+  }
+
+  &__product-name {
+    font-family: Roboto, sans-serif;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-xs;
+    margin-top: $spacing-xl;
+    line-height: $line-height-sm;
+    color: $main-accent;
+  }
+
+  &__product-code {
+    font-family: Roboto, sans-serif;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xxs;
+    margin-top: $spacing-xxs;
+    line-height: $line-height-xxs;
+    color: $secondary-accent;
+  }
+
+  &__product-rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $spacing-sm;
+    font-family: Roboto, sans-serif;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xxs;
+    line-height: $line-height-xxs;
+    color: $main-accent;
+  }
+
+  &__product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $spacing-md;
+    line-height: $line-height-sm;
+
+    &-label {
+      font-family: Roboto, sans-serif;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-xs;
+      color: $secondary-accent;
+    }
+
+    &-value {
+      font-family: Roboto, sans-serif;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-md;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $spacing-sm;
+    width: 100%;
+    height: $button-height;
+    border: 1px solid $blue-accent;
+    border-radius: $border-radius;
+    text-decoration: none;
+    background-color: $blue-accent;
+    font-family: Roboto, sans-serif;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+    color: $white-accent;
+    line-height: $line-height-xs;
+
+    &:hover {
+      color: $blue-accent;
+      background-color: $white-accent;
+    }
+  }
+}
