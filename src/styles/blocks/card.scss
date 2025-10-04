@@ -1,0 +1,98 @@
+@use '../utils/variables' as *;
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__product-image {
+    padding: 0 3px;
+    height: 134px;
+
+    img {
+      width: 100%;
+      height: 134px;
+    }
+  }
+
+  &__product-name {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 40px;
+    line-height: 18px;
+    color: $main-accent;
+  }
+
+  &__product-code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 4px;
+    line-height: 14px;
+    color: $secondary-accent;
+  }
+
+  &__product-rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $main-accent;
+  }
+
+  &__product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    line-height: 18px;
+
+    &-label {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: $secondary-accent;
+    }
+
+    &-value {
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $blue-accent;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
+
+    &:hover {
+      color: $blue-accent;
+      background-color: #fff;
+    }
+  }
+}
