@@ -1,3 +1,73 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.card {
+  width: 198px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 406px;
+  top: 1px;
+  left: 1px;
+  border-radius: 1px;
+
+  &__image {
+    width: 166px;
+    height: 134px;
+    top: 33px;
+    left: 20px;
+    display: block;
+  }
+
+  &__info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  &__price {
+    color: #333;
+    font-weight: 500;
+  }
+
+  &__buy {
+    text-decoration: none;
+    text-align: center;
+    padding: 6px 0;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+/* Importar stars */
+@import './stars.scss';
