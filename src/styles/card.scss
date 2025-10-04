@@ -1,0 +1,48 @@
+.card {
+  width: $card-width;
+  border: 1px solid #ccc;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+  background-color: $card-background;
+  display: flex;
+  flex-direction: column;
+  gap: $card-padding;
+  font-family: $font-family;
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__info {
+    padding: $card-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title { 
+    font-size: 1.1rem; 
+    font-weight: 700; 
+  }
+
+
+  &__price { 
+    color: $text-color; font-weight: 500; 
+
+  }
+
+  &__buy {
+    text-decoration: none;
+    text-align: center;
+    padding: 6px 0;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+
+    &:hover { background-color: $primary-color-hover; }
+  }
+}
+

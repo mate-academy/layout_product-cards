@@ -2,32 +2,23 @@
   display: flex;
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: $star-size;
+    height: $star-size;
     background-image: url('../images/star.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 4px;
+    margin-right: $star-spacing;
+    opacity: 0.3;
 
-    &:last-child {
-      margin-right: 0;
-    }
+    &:last-child { margin-right: 0; }
   }
-}
 
-@for $i from 0 through 5 {
-  .stars--#{$i} {
-    display: flex;
 
-    @for $j from 1 through 5 {
-      &::before {
-        content: '';
-      }
-    }
-
-    @for $j from 1 through $i {
-      .stars__star:nth-child(#{$j}) {
-        background-image: url('../images/star-active.svg');
+  @for $i from 0 through 5 {
+    &--rating-#{$i} {
+      .stars__star {
+        &:nth-child(-n + #{$i}) { opacity: 1; }
+        &:nth-child(n + #{ $i + 1 }) { opacity: 0.3; }
       }
     }
   }
