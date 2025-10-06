@@ -1,13 +1,14 @@
 .card {
-  width: 200px;
+  width: $card-width;
   height: 408px;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
-  padding: 0 16px;
-  background: #fff;
+  border: 1px solid $border-color;
+  padding: $card-padding;
+  background: $text-light;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-family: $font-main;
 
   &__img-wrapper {
     width: 100%;
@@ -25,9 +26,8 @@
   }
 
   &__title {
-    font-family: Roboto, sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: $font-size-title;
     line-height: 18px;
     margin-bottom: 4px;
     text-align: left;
@@ -35,9 +35,8 @@
   }
 
   &__code {
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 10px;
+    font-weight: 400;
+    font-size: $font-size-code;
     line-height: 14px;
     margin-bottom: 16px;
     text-align: left;
@@ -48,19 +47,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 166px;
-    height: 16px;
+    width: 100%;
     margin-bottom: 24px;
   }
 
   &__review {
-    font-family: Roboto, sans-serif;
     font-weight: 400;
-    font-size: 10px;
+    font-size: $font-size-code;
     line-height: 14px;
     text-align: right;
-    display: inline-block;
-    vertical-align: bottom;
     color: $main-text;
   }
 
@@ -73,17 +68,15 @@
   }
 
   &__priceTitle {
-    font-family: Roboto, sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-title;
     line-height: 18px;
     color: $secondary;
   }
 
   &__priceTotal {
-    font-family: Roboto, sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: $font-size-price;
     line-height: 18px;
     text-align: right;
     color: $main-text;
@@ -91,13 +84,13 @@
 
   &__link {
     width: 100%;
-    height: 40px;
+    max-width: $link-width;
+    height: $link-height;
     border-radius: 5px;
-    background: #00acdc;
-    color: #fff;
-    font-family: Roboto, sans-serif;
+    background: $primary;
+    color: $text-light;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $font-size-link;
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
@@ -105,12 +98,12 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    margin: 0;
-  }
+    margin: 0 auto;
 
-  &__link:hover {
-    background: #fff;
-    color: #00acdc;
-    border: 1px solid #00acdc;
+    &:hover {
+      background: $primary-hover;
+      color: $primary;
+      border: 1px solid $primary;
+    }
   }
 }
