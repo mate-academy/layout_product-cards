@@ -11,10 +11,11 @@
     background-size: 13px 12px;
   }
 
-  // Правильное применение модификаторов
   @for $i from 0 through 5 {
-    .stars--#{$i} &__star:nth-child(-n + #{$i}) {
-      background-image: url('../images/star-active.svg'); // желтые звезды
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg'); // желтые звезды
+      }
     }
   }
 }
