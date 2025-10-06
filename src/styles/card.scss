@@ -1,5 +1,5 @@
 .card {
-  width: $card-width;
+  width: 200px;
   border: 1px solid #ccc;
   border-radius: $card-border-radius;
   overflow: hidden;
@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: $card-padding;
   font-family: $font-family;
+  box-sizing: border-box;
 
   &__image {
     width: 100%;
@@ -18,31 +19,31 @@
     padding: $card-padding;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: $card-info-gap;
   }
 
-  &__title { 
-    font-size: 1.1rem; 
-    font-weight: 700; 
+  &__title {
+    font-size: $card-title-font-size;
+    font-weight: 700;
   }
 
-
-  &__price { 
-    color: $text-color; font-weight: 500; 
-
+  &__price {
+    color: $text-color;
+    font-weight: 500;
   }
 
   &__buy {
     text-decoration: none;
     text-align: center;
-    padding: 6px 0;
+    padding: $card-buy-padding;
     background-color: $primary-color;
-    color: #fff;
-    border-radius: 4px;
+    color: $card-buy-color;
+    border-radius: $card-buy-border-radius;
     font-weight: 700;
     transition: background-color 0.3s;
 
-    &:hover { background-color: $primary-color-hover; }
+    &:hover {
+      background-color: $primary-color-hover;
+    }
   }
 }
-
