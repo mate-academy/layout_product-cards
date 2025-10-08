@@ -1,6 +1,6 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap';
-@import '../styles/blocks/stars/stars';
-@import '../../utils/variables';
+@import './blocks/utils/variables';
+@import './blocks/stars/stars';
+@import './blocks/cards/card';
 
 body {
   margin: 0;
@@ -8,111 +8,5 @@ body {
   font-family: $font-main;
   font-weight: 500;
 
-  color: #060b35;
-}
-
-&[data-qa='card'] {
-  width: 200px;
-  border-radius: 5px;
-}
-
-&__img {
-  padding: 32px 19px 40px;
-}
-
-&__title {
-  margin: 0;
-
-  font-size: 12px;
-
-  line-height: 18px;
-  letter-spacing: 0%;
-}
-
-&__content {
-  padding: 0 16px 16px;
-}
-
-&__code {
-  font-size: 10px;
-  font-weight: 400;
-
-  line-height: 14px;
-
-  margin-top: 4px;
-
-  color: #616070;
-}
-
-&__price {
-  margin-top: 24px;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-&__price-title {
-  font-size: 12px;
-  font-weight: 400;
-
-  line-height: 18px;
-  letter-spacing: 0%;
-
-  color: #616070;
-}
-
-&__price-value {
-  font-size: 16px;
-  font-weight: 700;
-
-  line-height: 18px;
-}
-
-&__button {
-  width: 100%;
-
-  margin: 16px 0 0;
-  padding: 12px 0;
-
-  text-align: center;
-
-  text-transform: uppercase;
-
-  color: white;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  line-height: 16px;
-
-  letter-spacing: 0%;
-
-  border-radius: 5px;
-  border: 1px solid #00acdc;
-
-  background-color: #00acdc;
-}
-
-&__button[data-qa='hover']:hover {
-  color: #00acdc;
-  background-color: white;
-  transition: 0.5s;
-}
-
-&__stars-section {
-  margin: 16px 0 0;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-&__reviews {
-  font-size: 10px;
-
-  font-weight: 400;
-
-  line-height: 14px;
-
-  letter-spacing: 0%;
+  color: $color-text;
 }
