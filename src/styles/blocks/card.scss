@@ -1,29 +1,34 @@
-* {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-}
-
 .card {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   border: 1px solid $white-border;
   border-radius: 10px;
+  font-weight: 400;
   width: 200px;
-  height: 410px;
-  padding: 16px;
+  background-color: $white;
+  font-family: Roboto, sans-serif;
 
   &__img {
-    padding-top: 16px;
+    display: block;
     width: 160px;
     height: 134px;
-    margin: 0 auto 37px;
+    object-fit: contain;
+    margin: 32px auto 40px;
+  }
+
+  &__content {
+    padding: 0 16px 16px;
   }
 
   &__title {
-    width: 166;
+    width: 168px;
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
     margin-bottom: 4px;
+    margin-top: 0;
+    color: $main-text;
   }
 
   &__code {
@@ -31,38 +36,33 @@
     font-size: 10px;
     line-height: 14px;
     margin-bottom: 16px;
+    color: $text;
   }
 
   &__rating {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 168px;
     margin-bottom: 24px;
   }
 
   &__review {
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    vertical-align: bottom;
-    align-self: flex-end;
-    color: $main-text;
-    margin: 0;
   }
 
   &__price-container {
-    width: 166;
+    width: 168px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
   }
 
   &__price-label {
-    font-weight: 300;
     font-size: 12px;
     line-height: 18px;
-    color: $main-text;
+    color: $text;
   }
 
   &__price-value {
@@ -73,36 +73,24 @@
   }
 
   &__btn {
-    display: flex;
-    display: inline-flex;
-    justify-content: center;
-    width: 166;
-    height: 39px;
+    width: 168px;
+    height: 40px;
     border-radius: 5px;
     background-color: $blue;
-    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0%;
-    align-items: center;
-    margin-bottom: 16px;
-    text-decoration: none;
+    color: $white;
 
     &:hover {
-      font-weight: 700;
       background-color: inherit;
       color: $blue;
-      border: $blue 1px solid;
+      border: 1px solid $blue;
     }
   }
-}
-
-.price {
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: $main-text;
-  font-weight: 700;
-  padding-bottom: 16px;
 }
