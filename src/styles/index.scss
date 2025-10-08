@@ -1,3 +1,104 @@
+$primary-blue: #00acdc;
+$text-color: #060b35;
+$secondary-text: #616070;
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.product-card {
+  width: 200px;
+  height: 408px;
+  padding: 20px;
+
+  &__title {
+    color: $text-color;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+
+  &__border-wrap {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  &__image-container {
+    width: 180px;
+    height: 160px;
+    margin: 0 auto 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    display: block;
+  }
+
+  &__rating-and-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 15px;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    color: $secondary-text;
+    margin-bottom: 15px;
+    line-height: 14px;
+    letter-spacing: 0%;
+  }
+
+  &__reviews {
+    color: $text-color;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+
+  &__price-label {
+    color: $secondary-text;
+    font-size: 12px;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $text-color;
+    font-weight: bold;
+  }
+
+  &__buy-button {
+    width: 100%;
+    padding: 15px;
+    background-color: $primary-blue;
+    color: white;
+    border: 2px solid $primary-blue;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $primary-blue;
+      background-color: #f3f3f3;
+    }
+  }
 }
