@@ -1,0 +1,40 @@
+@mixin star($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stars {
+  display: flex;
+  margin-bottom: 0;
+
+  &__star {
+    margin-right: $spacing-xs;
+    height: $star-size;
+    width: $star-size;
+
+    @include star('../images/star.svg');
+
+    list-style: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Generate modifier for 0 stars (all empty)
+  &--0 {
+    .stars__star {
+      @include star('../images/star.svg');
+    }
+  }
+
+  // Generate modifiers for 1-5 stars
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        @include star('../images/star-active.svg');
+      }
+    }
+  }
+}
