@@ -1,0 +1,118 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+  padding-top: $spacing-xl;
+  padding-bottom: 0;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $spacing-xxl;
+
+    img {
+      width: $image-width;
+      height: $image-height;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    font-size: $font-size-regular;
+    line-height: $line-height-regular;
+    letter-spacing: 0;
+    font-weight: $font-weight-medium;
+    color: $dark-text;
+    margin-bottom: $margin-bottom-title;
+    padding-left: $spacing-md;
+  }
+
+  &__code {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    font-weight: $font-weight-regular;
+    color: $light-text;
+    margin-top: 0;
+    margin-bottom: $margin-bottom-code;
+    padding-left: $spacing-md;
+  }
+
+  &__review {
+    display: flex;
+    margin-bottom: $margin-bottom-review;
+    padding-left: $spacing-md;
+  }
+
+  &__reviews-count {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-small;
+    letter-spacing: 0;
+    align-self: flex-end;
+    color: $dark-text;
+    margin-left: 23.2px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 166.4px;
+    padding-left: $spacing-md;
+    margin-bottom: $margin-bottom-price;
+
+    &-label {
+      font-size: $font-size-regular;
+      line-height: $line-height-regular;
+      font-weight: $font-weight-regular;
+      color: $light-text;
+    }
+
+    &-value {
+      font-family: Roboto, sans-serif;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-price;
+      letter-spacing: 0;
+      line-height: $line-height-regular;
+      color: $dark-text;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $spacing-md;
+  }
+
+  &__buy {
+    display: block;
+    margin-bottom: $margin-bottom-button;
+    width: 100%;
+    text-align: center;
+    background-color: $primary-blue;
+    color: $white;
+    font-size: $font-size-button;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    padding: 11px 0;
+    border-radius: $border-radius;
+    text-decoration: none;
+    border: 1px solid $primary-blue;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-blue;
+    }
+  }
+}

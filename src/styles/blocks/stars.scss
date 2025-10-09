@@ -4,20 +4,14 @@
   background-position: center;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* #region style stars */
 .stars {
   display: flex;
   margin-bottom: 0;
 
   &__star {
-    margin-right: 4px;
-    height: 16px;
-    width: 16px;
+    margin-right: $spacing-xs;
+    height: $star-size;
+    width: $star-size;
 
     @include star('../images/star.svg');
 
@@ -28,16 +22,18 @@ body {
     }
   }
 
+  // Generate modifier for 0 stars (all empty)
+  &--0 {
+    .stars__star {
+      @include star('../images/star.svg');
+    }
+  }
+
+  // Generate modifiers for 1-5 stars
   @for $i from 1 through 5 {
     &--#{$i} {
-      @if $i == 0 {
-        .stars__star {
-          @include star('../images/star.svg');
-        }
-      } @else {
-        .stars__star:nth-child(-n + #{$i}) {
-          @include star('../images/star-active.svg');
-        }
+      .stars__star:nth-child(-n + #{$i}) {
+        @include star('../images/star-active.svg');
       }
     }
   }
