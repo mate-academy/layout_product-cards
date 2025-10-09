@@ -1,0 +1,44 @@
+@mixin star($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* #region style stars */
+.stars {
+  display: flex;
+  margin-bottom: 0;
+
+  &__star {
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+
+    @include star('../images/star.svg');
+
+    list-style: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      @if $i == 0 {
+        .stars__star {
+          @include star('../images/star.svg');
+        }
+      } @else {
+        .stars__star:nth-child(-n + #{$i}) {
+          @include star('../images/star-active.svg');
+        }
+      }
+    }
+  }
+}
