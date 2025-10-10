@@ -1,3 +1,5 @@
+@import 'utils/variables';
+
 .stars {
   display: flex;
 
@@ -6,17 +8,16 @@
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 0.5px;
+    width: $star-size;
     margin-right: $star-gap;
+    border-radius: 0.5px;
 
     &:last-child {
       margin-right: 0;
     }
   }
 
-  @for $i from 1 through 5 {
+  @for $i from 0 through 5 {
     &--#{$i} &__star:nth-child(-n + #{$i}) {
       background-image: url(../images/star-active.svg);
     }
