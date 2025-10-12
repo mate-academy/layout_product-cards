@@ -1,0 +1,128 @@
+.card {
+  // .card__picture
+  background-color: #fff;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  border: 1px solid #f3f3f3;
+
+  &__picture {
+    padding: 32px 19px 0;
+    margin-bottom: 40px;
+  }
+
+  &__pic {
+    aspect-ratio: 160 / 134;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  // .card__content
+
+  &__content {
+    padding: 0 16px 16px;
+  }
+
+  // .card__title
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    color: #060b35;
+    font-weight: $medium;
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 150%; /* 18/12 */
+  }
+
+  // .card__code
+
+  &__code {
+    font-weight: $normal;
+    font-size: 10px;
+    color: #616070;
+    line-height: 140%; /* 14/10 */
+    letter-spacing: 0%;
+    margin-bottom: 16px;
+  }
+
+  // .card__stars
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  // .card__review
+
+  &__review {
+    font-weight: $normal;
+    font-size: 10px;
+    display: flex;
+    line-height: 140%; /* 14/10 */
+    color: #060b35;
+    align-items: flex-end;
+  }
+
+  // .card__price
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-weight: $normal;
+    font-size: 12px;
+    color: #616070;
+    line-height: 150%; /* 18/12 */
+  }
+
+  &__cost {
+    font-family: $font-family;
+    font-weight: $bold;
+    color: #060b35;
+    line-height: 18px; /* 18/16 */
+    font-size: 16px;
+  }
+
+  // .card__btn
+
+  &__btn {
+    display: inline-block;
+    background-color: #00acdc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-weight: $bold;
+    font-size: 14px;
+    padding: 11px 0;
+    height: 40px;
+    line-height: 16px; /* 16/14 */
+    border: 1px solid #00acdc;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box;
+    text-decoration: none; // прибирає підкреслення
+    text-align: center;
+
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      text-decoration: none;
+    }
+  }
+}
