@@ -25,4 +25,40 @@
     font: 500 16px/1.4 $font-family;
     color: $color-main;
   }
+
+  &__buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background-color: #00acdc;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border-color: #00acdc;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  &:hover &__buy {
+    background-color: #fff;
+    color: #00acdc;
+    border-color: #00acdc;
+  }
 }
