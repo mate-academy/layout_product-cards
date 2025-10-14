@@ -1,3 +1,5 @@
+@import '../utils/vars';
+
 .stars {
   display: flex;
   align-items: center;
@@ -18,17 +20,35 @@
   &__reviews {
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 10px;
+    font-weight: $font-weight-s;
+    font-size: $font-size-xs;
     line-height: 14px;
-    color: #060b35;
+    color: $color-text;
   }
-}
 
-.stars--1 .stars__item:nth-child(-n + 1),
-.stars--2 .stars__item:nth-child(-n + 2),
-.stars--3 .stars__item:nth-child(-n + 3),
-.stars--4 .stars__item:nth-child(-n + 4),
-.stars--5 .stars__item:nth-child(-n + 5) {
-  background-image: url('../images/star-active.svg');
+  &--1 {
+    .stars__item:nth-child(-n + 1) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+  &--2 {
+    .stars__item:nth-child(-n + 2) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+  &--3 {
+    .stars__item:nth-child(-n + 3) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+  &--4 {
+    .stars__item:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+  &--5 {
+    .stars__item:nth-child(-n + 5) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
 }
