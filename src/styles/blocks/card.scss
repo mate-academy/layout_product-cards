@@ -1,7 +1,9 @@
 .card {
   width: 200px;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: $card-font-family;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 
   &__product {
     display: flex;
@@ -9,8 +11,6 @@
     flex-direction: column;
     align-items: center;
     padding: 32px 16px 16px;
-    border: 1px solid #f3f3f3;
-    border-radius: 5px;
   }
 
   &__image {
@@ -91,9 +91,9 @@
     margin-top: 16px;
     width: 100%;
     height: 40px;
-    border: 1px solid #00acdc;
+    border: 1px solid $card-button-color;
     border-radius: 5px;
-    background-color: #00acdc;
+    background-color: $card-button-color;
     color: white;
     text-decoration: none;
     font-size: 14px;
@@ -104,9 +104,8 @@
     text-transform: uppercase;
 
     &:hover {
-      color: #00acdc;
+      color: $card-button-color;
       background-color: #fff;
-      border: 1px solid #00acdc;
     }
   }
 }
