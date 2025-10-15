@@ -1,0 +1,102 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid $color-gray;
+  border-radius: $radius-sm;
+  background-color: $color-white;
+
+  padding-top: 32px;
+  padding-bottom: $spacing-m;
+
+  &__image {
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $spacing-m;
+    gap: 4px;
+    margin-bottom: $spacing-m;
+  }
+
+  &__info-name {
+    display: block;
+    width: 100%;
+
+    @include text-info-name;
+    color: $color-main;
+    margin: 0;
+  }
+
+  &__info-code {
+    color: $color-secondary;
+
+    @include text-detail-regular;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $spacing-m;
+    margin-bottom: 24px;
+  }
+
+  &__rating-reviews-value {
+    @include text-detail-regular;
+    color: $color-main;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $spacing-m;
+    margin-bottom: $spacing-m;
+  }
+
+  &__price-text {
+    @include text-body-regular;
+    color: $color-secondary;
+  }
+
+  &__price-value {
+    @include text-price-value;
+    color: $color-main;
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    padding: 0 $spacing-m;
+  }
+
+  &__buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-accent;
+    color: $color-white;
+
+    @include text-button;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: $radius-sm;
+    text-decoration: none;
+  }
+
+  &__buy-button:hover {
+    background-color: $color-white;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+  }
+}
