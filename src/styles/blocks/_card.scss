@@ -1,0 +1,122 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.card {
+  width: vars.$card-width;
+  border: 1px solid vars.$border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-bottom: vars.$space-xl;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__title {
+    @extend %text-reset;
+    margin-bottom: 4px;
+    margin-left: vars.$space-m;
+    margin-right: vars.$space-m;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: vars.$color-text-primary;
+    letter-spacing: 0;
+  }
+
+  &__code {
+    @extend %text-reset;
+    width: 98px;
+    margin-left: vars.$space-m;
+    margin-bottom: vars.$space-m;
+    font-weight: vars.$font-weight-base;
+    font-size: 10px;
+    line-height: 14px;
+    color: vars.$color-text-secondary;
+    letter-spacing: 0;
+  }
+
+  &__rating {
+    @extend %text-reset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 166px;
+    margin-left: vars.$space-m;
+    // margin-right: vars.$space-m;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    @extend %text-reset;
+    // margin-left: 17px;
+    font-weight: vars.$font-weight-base;
+    font-size: 10px;
+    line-height: 14px;
+    color: vars.$color-text-primary;
+  }
+
+  &__price {
+    @extend %text-reset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 166px;
+    margin-left: vars.$space-m;
+    margin-bottom: vars.$space-m;
+    justify-content: space-between;
+
+    &-label {
+      font-weight: vars.$font-weight-base;
+      font-size: 12px;
+      line-height: 18px;
+      color: vars.$color-text-secondary;
+      letter-spacing: 0;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: vars.$color-text-primary;
+      letter-spacing: 0;
+    }
+  }
+
+  &__button {
+    @extend %text-reset;
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid transparent;
+    width: 166px;
+    height: vars.$space-xl;
+    margin-left: vars.$space-m;
+    margin-right: vars.$space-m;
+    margin-bottom: vars.$space-m;
+    background-color: #00acdc;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: vars.$space-xl;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+    }
+  }
+}
