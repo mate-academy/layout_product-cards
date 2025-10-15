@@ -2,6 +2,7 @@
 @use '../mixins';
 
 .card {
+  padding: 32px 16px 16px;
   width: vars.$card-width;
   border: 1px solid vars.$border-color;
   border-radius: 5px;
@@ -12,7 +13,8 @@
   &__image {
     width: 160px;
     height: 134px;
-    margin-top: 32px;
+
+    // margin-top: 32px; add back
     margin-bottom: vars.$space-xl;
     margin-left: auto;
     margin-right: auto;
@@ -23,9 +25,11 @@
 
   &__title {
     @extend %text-reset;
+
     margin-bottom: 4px;
-    margin-left: vars.$space-m;
-    margin-right: vars.$space-m;
+
+    // margin-left: vars.$space-m; add back
+    // margin-right: vars.$space-m; add back
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -35,8 +39,10 @@
 
   &__code {
     @extend %text-reset;
+
     width: 98px;
-    margin-left: vars.$space-m;
+
+    // margin-left: vars.$space-m; add back
     margin-bottom: vars.$space-m;
     font-weight: vars.$font-weight-base;
     font-size: 10px;
@@ -47,19 +53,20 @@
 
   &__rating {
     @extend %text-reset;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 166px;
-    margin-left: vars.$space-m;
-    // margin-right: vars.$space-m;
+
+    // margin-left: vars.$space-m; add back
     justify-content: space-between;
     margin-bottom: 24px;
   }
 
   &__reviews {
     @extend %text-reset;
-    // margin-left: 17px;
+
     font-weight: vars.$font-weight-base;
     font-size: 10px;
     line-height: 14px;
@@ -68,11 +75,13 @@
 
   &__price {
     @extend %text-reset;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 166px;
-    margin-left: vars.$space-m;
+
+    // margin-left: vars.$space-m; add back
     margin-bottom: vars.$space-m;
     justify-content: space-between;
 
@@ -95,14 +104,22 @@
 
   &__button {
     @extend %text-reset;
+
     box-sizing: border-box;
-    display: block;
+
+    // display: block;
+    display: flex; /* remove, use the one above */
+
+    // align-items: center; add back
+    justify-content: center;
+    align-items: center;
     border: 1px solid transparent;
     width: 166px;
     height: vars.$space-xl;
-    margin-left: vars.$space-m;
-    margin-right: vars.$space-m;
-    margin-bottom: vars.$space-m;
+
+    // margin-left: vars.$space-m; add back
+    // margin-right: vars.$space-m;
+    // margin-bottom: vars.$space-m;
     background-color: #00acdc;
     border-radius: 5px;
     text-decoration: none;
