@@ -9,6 +9,7 @@
   position: relative;
   background-color: #fff;
   box-shadow: 0 4px 25px rgba(5, 22, 26, 0.06);
+  margin: 0;
 
   &__image {
     height: #{$image-height};
@@ -22,13 +23,14 @@
     font-family:
       #{$text-font},
       sans-serif;
-    font-weight: #{$text-bold};
+    font-weight: #{$text-weight-h1};
     font-size: 12px;
     line-height: 18px;
     position: absolute;
     top: 207px;
     left: 17px;
     color: #{$main-text-color};
+    margin: 0;
   }
 
   &__product-code {
@@ -42,6 +44,7 @@
     top: 247px;
     left: 17px;
     color: #{$text-secondary-color};
+    margin: 0;
   }
 
   &__rating {
@@ -52,18 +55,22 @@
     top: 277px;
     left: 17px;
     height: 16px;
+    margin: 0;
 
-    &__reviews {
+    &-reviews {
+      box-sizing: border-box;
       font-family:
         #{$text-font},
         sans-serif;
       font-weight: #{$text-weight-h2};
       font-size: 10px;
-      line-height: 16px;
+      line-height: 14px;
       vertical-align: bottom;
       color: #{$main-text-color};
       margin: 0;
-      text-align: center;
+      height: 16px;
+      text-align: right;
+      padding: 4px 0;
     }
   }
 
@@ -75,6 +82,7 @@
     left: 17px;
     width: 166px;
     justify-content: space-between;
+    margin: 0;
 
     &-price {
       font-family:
@@ -84,6 +92,8 @@
       font-size: 16px;
       line-height: 18px;
       margin: 0;
+      text-align: right;
+      vertical-align: bottom;
     }
 
     &-text {
@@ -104,20 +114,20 @@
     font-family:
       #{$text-font},
       sans-serif;
+    font-size: 14px;
     font-weight: #{$text-bold};
     color: #fff;
     position: absolute;
     top: 351px;
     left: 17px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #{$btn-color};
 
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
 
     &:hover {
-      border: 1px solid #{$btn-color};
       background-color: #fff;
       color: #{$btn-color};
     }
