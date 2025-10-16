@@ -1,0 +1,23 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+
+  &__item {
+    height: 16px;
+    width: 16px;
+    background-image: $img-star;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $i from 1 through $stars {
+    &--#{$i} &__item:nth-child(-n + #{$i}) {
+      background-image: $img-active-star;
+    }
+  }
+}
