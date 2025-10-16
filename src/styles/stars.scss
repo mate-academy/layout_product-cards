@@ -1,0 +1,26 @@
+@import 'variables';
+
+.card__rating__stars {
+  display: flex;
+  width: 96px;
+
+  &__star {
+    width: 16px;
+    line-height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px 12px;
+
+    & + & {
+      margin-left: 4px;
+    }
+
+    &--active {
+      background-image: url('../images/star-active.svg');
+    }
+
+    &--disable {
+      background-image: url('../images/star.svg');
+    }
+  }
+}
