@@ -1,0 +1,107 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  width: 200px;
+  height: 408px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $card-background-color;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding: 32px 20px 40px;
+  }
+
+  &__title {
+    width: 166px;
+    height: 36px;
+    margin: 0 17px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $title-text-color;
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin: 4px 16px 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $title-secondary-color;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    height: 18px;
+    margin-top: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    &-name {
+      width: 31px;
+      height: 18px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      vertical-align: bottom;
+      color: $title-secondary-color;
+    }
+
+    &-value {
+      width: 50px;
+      height: 18px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: $title-text-color;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    width: 166px;
+    height: 40px;
+    background-color: $button-background-color;
+    border-radius: 5px;
+
+    &-buy {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 40px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: color 0.2s ease;
+      color: $text-button-color;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  &__action:hover {
+    background-color: $button-background-color-hover;
+    border: 1px solid $border-button-color;
+    border-radius: 5px;
+    .card__action-buy {
+      color: $text-button-color-hover;
+    }
+  }
+}
