@@ -1,6 +1,9 @@
+@import '../variables';
+
 .stars {
   display: flex;
   flex-direction: row;
+  gap: 4px;
 
   margin: 0 17px;
 
@@ -11,17 +14,13 @@
     background-position: center;
     height: 16px;
     width: 16px;
-    margin-right: 4px;
   }
 
-  &__star:nth-child(5) {
-    margin-right: 0;
-  }
-
-  &--3 &__star:nth-child(1),
-  &--3 &__star:nth-child(2),
-  &--3 &__star:nth-child(3),
-  &--3 &__star:nth-child(4) {
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
     background-image: url(../images/star-active.svg);
   }
 
@@ -29,7 +28,9 @@
     display: flex;
     align-items: center;
     text-align: right;
-    padding-left: 16px;
+    padding-left: 17px;
+    width: 53px;
+    height: 16px;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;

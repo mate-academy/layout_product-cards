@@ -1,7 +1,10 @@
+@import '../variables';
+
 .card {
   display: flex;
   flex-direction: column;
   font-family: Roboto, sans-serif;
+  box-sizing: border-box;
   width: 200px;
   height: 408px;
   border: 1px solid $border-color;
@@ -78,8 +81,6 @@
     margin: 16px;
     width: 166px;
     height: 40px;
-    background-color: $button-background-color;
-    border-radius: 5px;
 
     &-buy {
       display: block;
@@ -90,18 +91,16 @@
       font-weight: 700;
       font-size: 14px;
       transition: color 0.2s ease;
+      background-color: $button-background-color;
+      border-radius: 5px;
       color: $text-button-color;
       text-transform: uppercase;
       text-decoration: none;
     }
   }
-
-  &__action:hover {
+  .card__action-buy:hover {
     background-color: $button-background-color-hover;
     border: 1px solid $border-button-color;
-    border-radius: 5px;
-    .card__action-buy {
-      color: $text-button-color-hover;
-    }
+    color: $text-button-color-hover;
   }
 }
