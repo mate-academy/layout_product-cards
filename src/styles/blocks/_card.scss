@@ -1,0 +1,108 @@
+.card {
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  box-sizing: border-box;
+  color: $color-main;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    border-radius: 5px;
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto 16px;
+  }
+
+  &__title {
+    width: 166px;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+
+    a {
+      color: #060B35;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-secondary;
+    margin-bottom: 6px;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    margin-bottom: 10px;
+
+    .stars {
+      transform: scale(0.9);
+      transform-origin: left;
+    }
+
+    .card__meta-reviews {
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-secondary;
+    }
+  }
+
+  &__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    margin-bottom: 12px;
+
+    .card__price-label {
+      font-size: 12px;
+      color: $color-secondary;
+    }
+
+    .card__price-amount {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__buy {
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background: $color-blue;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: transparent;
+      color: $color-blue;
+      border: 2px solid $color-blue;
+    }
+  }
+}
