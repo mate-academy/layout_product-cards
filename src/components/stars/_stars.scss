@@ -1,0 +1,40 @@
+.stars {
+  position: relative;
+  font-size: 16px;
+  line-height: 1;
+
+  &::before {
+    content: "★★★★★";
+    color: #ccc;
+  }
+
+  &::after {
+    content: "★★★★★";
+    color: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+  }
+
+  &--1::after {
+    width: 20%;
+  }
+
+  &--2::after {
+    width: 40%;
+  }
+
+  &--3::after {
+    width: 60%;
+  }
+
+  &--4::after {
+    width: 80%;
+  }
+
+  &--5::after {
+    width: 100%;
+  }
+}
