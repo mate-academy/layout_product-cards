@@ -19,25 +19,12 @@ body {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 16px 16px;
-
   color: #060b35;
-
-  &__images {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  &__images img {
     height: 134px;
     width: 160px;
-
     margin-inline: 3px;
-
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-origin: content-box;
   }
-
   &__title {
     margin-top: 40px;
     margin-bottom: 0;
@@ -48,11 +35,10 @@ body {
     width: 166px;
     text-align: left;
   }
-
   &__code {
     height: 14px;
     width: 98px;
-    margin-top: 5px;
+    margin-top: 4px;
     margin-bottom: 15px;
     color: #616070;
     font-family: Roboto, sans-serif;
@@ -69,32 +55,41 @@ body {
 }
 
 .stars {
-  padding-left: 1px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 24px;
 
+  &.stars--4 {
+    display: flex;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
   &__star {
-    width: 15px;
-    height: 15px;
+    display: flex;
+    width: 16px;
+    height: 16px;
     background-image: url(../images/star-active.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50%;
     margin-right: 5px;
-
-    &--5{
+    &:nth-child(5) {
       background-image: url(../images/star.svg);
+      margin-right: 0;
     }
   }
 
   &__rate {
-    line-height: 16px;
+    align-self: flex-end;
+    line-height: 14px;
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 10px;
     text-align: right;
     vertical-align: bottom;
-    margin-left: auto;
   }
 }
 
@@ -113,9 +108,7 @@ body {
   }
 
   &__value {
-    width: 50px;
-    height: 18px;
-
+    line-height: 18px;
     font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 16px;
