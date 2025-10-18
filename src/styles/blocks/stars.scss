@@ -1,20 +1,36 @@
-.review__stars {
+.stars {
   display: flex;
   flex-direction: row;
 }
 
-.review__stars--star {
+.stars__star {
   background-image: url(../images/star.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 16px;
-  height: 16px;
+  width: $star-width;
+  height: $star-height;
 }
 
-.review__stars--star:not(:last-child) {
-  margin-right: 4px;
+.stars__star:not(:last-child) {
+  margin-right: $star-notlastchild-margin-right;
 }
 
-.review__stars--4 .review__stars--star:nth-of-type(-n + 4) {
+.stars--1 .stars__star:nth-of-type(1) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--2 .stars__star:nth-of-type(-n + 2) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--3 .stars__star:nth-of-type(-n + 3) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--4 .stars__star:nth-of-type(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars--5 .stars__star:nth-of-type(-n + 5) {
   background-image: url(../images/star-active.svg);
 }
