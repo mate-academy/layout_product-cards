@@ -1,0 +1,131 @@
+@import '../vars';
+
+.card {
+  width: $card-width;
+  border: $border-width solid $color-border;
+  border-radius: $border-radius;
+  background: $color-background;
+  padding: 32px 16px 16px;
+  color: $color-text;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__images {
+    height: 400px;
+    width: 200px;
+    margin-inline: 3px;
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__info {
+    margin-top: 40px;
+  }
+
+  &__title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: $font-family;
+    font-weight: $font-weight-medium;
+    font-size: 12px;
+    line-height: 18px;
+    width: 166px;
+    text-align: left;
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__code {
+    height: 14px;
+    width: 98px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: $color-muted;
+    font-family: $font-family;
+    font-size: 10px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    line-height: 16px;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    font-size: 10px;
+    text-align: right;
+    margin-left: auto;
+  }
+}
+
+.price {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    color: $color-muted;
+    font-family: $font-family;
+    font-size: 12px;
+  }
+
+  &__value {
+    width: 50px;
+    height: 18px;
+    font-family: $font-family;
+    font-weight: $font-weight-bold;
+    font-size: 16px;
+    color: $color-price;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    border-radius: $border-radius;
+    font-family: $font-family;
+    font-weight: $font-weight-bold;
+    line-height: 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: $color-button;
+    color: $color-button-hover;
+    border: 1px solid $color-button;
+    cursor: pointer;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-button-hover;
+      color: $color-button;
+      border: 1px solid $color-button;
+    }
+  }
+}
