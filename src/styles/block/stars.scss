@@ -1,0 +1,38 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  &.stars--4 {
+    display: flex;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__star {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-right: 4px;
+    &:nth-child(5) {
+      background-image: url(../images/star.svg);
+      margin-right: 0;
+    }
+  }
+
+  &__rate {
+    align-self: center;
+    line-height: 14px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: right;
+    vertical-align: bottom;
+  }
+}
