@@ -1,0 +1,25 @@
+.card__stars {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @for $i from 1 through 4 {
+    &-#{$i} {
+      background-image: url(../images/star-active.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+
+      margin-right: 4px;
+    }
+  }
+
+  &-5 {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+  }
+}
