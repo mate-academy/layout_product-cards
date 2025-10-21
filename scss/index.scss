@@ -1,0 +1,156 @@
+// index.scss
+
+// -----------------------------------------------------------------------------
+// 1. Reset
+// -----------------------------------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+body {
+    // 1. Reset: Remover margens padrão do navegador
+    margin: 0;
+    padding: 0;
+    // 2. Usar a fonte encontrada no Google Fonts
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+}
+
+// -----------------------------------------------------------------------------
+// 2. Product Catalog (Layout Flexbox)
+// -----------------------------------------------------------------------------
+.product-catalog {
+    // Usar Flexbox para centralizar e organizar os cards lado a lado
+    display: flex;
+    justify-content: center;
+    gap: 30px; // Espaço entre os cards
+    padding: 40px 20px;
+}
+
+
+// -----------------------------------------------------------------------------
+// 3. Stars Block (Reescrito com SCSS)
+// -----------------------------------------------------------------------------
+$star-color: #FFC107; // Cor dourada das estrelas
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &__icon {
+        width: 16px; // Ajuste o tamanho do ícone conforme necessário
+        height: 16px;
+        margin: 0 1px;
+        display: block;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// 4. Product Card Block (BEM e Hover)
+// -----------------------------------------------------------------------------
+$card-border-color: #eee;
+$link-color: #0093E9;
+
+.product-card {
+    // Requisito: card width é 200px (incluindo border)
+    width: 200px;
+    border: 1px solid $card-border-color;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    padding-bottom: 20px; // Espaço para o botão
+
+    // Adiciona transição para o efeito hover (borda/sombra)
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+    // Elementos Internos
+    &__image-wrapper {
+        padding: 10px;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    &__content {
+        padding: 0 15px;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #333;
+        margin: 0 0 5px;
+        min-height: 40px; // Ajuda a manter a altura consistente
+        line-height: 1.4;
+    }
+
+    &__code {
+        font-size: 11px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    &__reviews-count {
+        font-size: 11px;
+        color: #555;
+        margin-left: 5px;
+    }
+
+    &__price-group {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        font-size: 12px;
+        color: #888;
+        margin-right: 5px;
+    }
+
+    &__price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    // Botão BUY (Link) - ESTADO NORMAL (Preenchido)
+    &__buy-link {
+        display: inline-block;
+        width: 90%;
+        padding: 10px 0;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+        // Estilos do Card Normal (Preenchido)
+        background-color: $link-color;
+        color: white;
+        border: 2px solid $link-color;
+    }
+
+    // ESTADO HOVER DO CARD INTEIRO
+    &:hover {
+        // Altera a aparência do card (sombra e borda mais destacada)
+        border-color: #B3E0FF; // Borda mais clara para indicar hover (opcional)
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        // REQUISITO: Altera o link/botão 'BUY' no HOVER (Vazado/Outline)
+        .product-card__buy-link {
+            background-color: white;
+            color: $link-color;
+            border-color: $link-color;
+        }
+    }
+}
