@@ -25,15 +25,15 @@ const config = {
   scenarios: [
     {
       ...basic,
-      label: 'Card with data-qa_card',
-      selectors: ['[data-qa="card"]'],
+      label: 'Card_with_data-qa_cartão',
+      selectors: ['[data-qa="cartão"]'],
     },
     {
       ...basic,
-      label: 'Link with data-qa_hover',
+      label: 'Link_with_data-qa_hover',
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
-      selectors: ['[data-qa="card"]'],
+      selectors: ['[data-qa="cartão"]'],
     },
   ],
 };
