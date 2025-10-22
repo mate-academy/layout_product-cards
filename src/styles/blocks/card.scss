@@ -1,9 +1,8 @@
 .card {
-  font-family: Roboto, sans-serif;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
-  width: 198px;
-  border-radius: 5px;
+  background-color: $color-card-bg;
+  border: 1px solid $color-border;
+  width: $card-w;
+  border-radius: $radius-4;
   border-width: 1px;
 
   display: flex;
@@ -28,86 +27,85 @@
   &__title {
     margin-top: 40px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: $title-fs;
     line-height: 18px;
-    color: #060b35;
+    color: $color-heading;
     width: 100%;
-    margin-left: 16px;
+    margin-left: $space-4;
   }
 
   &__code {
     margin-top: 4px;
     width: 100%;
-    margin-left: 16px;
+    margin-left: $space-4;
   }
 
   &__feedback {
-    margin-top: 16px;
+    margin-top: $space-4;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
     &-rating {
-      margin-left: 16px;
+      margin-left: $space-4;
     }
 
     &-reviews {
-      color: #060b35;
+      color: $color-heading;
       display: inline-block;
-      margin-right: 16px;
-      line-height: 16px;
+      margin-right: $space-4;
+      display: flex;
+      align-items: center;
     }
   }
 
   &__price {
-    margin-top: 24px;
+    margin-top: $space-6;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
     &-label {
-      font-size: 12px;
+      font-size: $title-fs;
       line-height: 18px;
-      margin-left: 16px;
+      margin-left: $space-4;
     }
 
     &-value {
-      font-family: Roboto;
       font-weight: 700;
-      font-size: 16px;
+      font-size: $price-fs;
       line-height: 18px;
       text-align: right;
-      margin-right: 16px;
+      margin-right: $space-4;
     }
   }
 
   &__buy {
     box-sizing: border-box;
-    margin-top: 16px;
-    background-color: #00acdc;
+    margin-top: $space-4;
+    background-color: $color-primary;
     width: 166px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: $radius-4;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    font-family: Roboto;
+    color: $color-card-bg;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 16px;
+    margin-left: $space-4;
     border: 1px solid transparent;
 
     &:hover {
-      background-color: #fff;
-      border: 1px solid #00acdc;
-      color: #00acdc;
+      background-color: $color-card-bg;
+      border: 1px solid $color-primary;
+      color: $color-primary;
     }
   }
 }
