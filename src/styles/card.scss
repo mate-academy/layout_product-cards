@@ -1,0 +1,107 @@
+@use '/src/styles/variables.scss' as vars;
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  padding: vars.$card-padding;
+  width: vars.$card-width;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid vars.$card-border-color;
+  border-radius: vars.$card-border-radius;
+  box-sizing: border-box;
+
+  &__image {
+    display: block;
+
+    width: vars.$image-width;
+    height: vars.$image-height;
+    margin: 0 3px 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    color: vars.$primary-text-color;
+  }
+
+  &__title-code {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: vars.$secondary-text-color;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  &__mark {
+    display: flex;
+
+    text-decoration: none;
+    margin-bottom: 24px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__mark-rewiews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: vars.$primary-text-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: vars.$secondary-text-color;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: vars.$primary-text-color;
+  }
+
+  &__buy {
+    box-sizing: border-box;
+    color: vars.$hover-button-color;
+    background-color: vars.$primary-button-color;
+    border: 1px solid vars.$primary-button-color;
+    border-radius: 5px;
+
+    height: 40px;
+    width: 100%;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__buy:hover {
+    color: vars.$primary-button-color;
+    background-color: vars.$hover-button-color;
+    border-color: vars.$primary-button-color;
+  }
+}

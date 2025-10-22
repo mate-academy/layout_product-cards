@@ -1,0 +1,22 @@
+@use '/src/styles/variables.scss' as vars;
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    display: block;
+    background-image: url(../images/star.svg);
+    height: vars.$stars-height;
+    width: vars.$stars-width;
+    background-repeat: no-repeat;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
