@@ -1,0 +1,93 @@
+@use '../styles/variables.scss' as *;
+
+.card {
+  width: $card-width;
+  padding: 32px 16px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin-left: 3px;
+
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-text;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 4px;
+    color: $color-text-secondary;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-text-secondary;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-number {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      margin: 0;
+      color: $color-black;
+    }
+  }
+
+  &__actions {
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+
+    border-radius: 5px;
+    border: 1px solid $color-primary;
+
+    background-color: $color-primary;
+    color: $color-white;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-white;
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+}
