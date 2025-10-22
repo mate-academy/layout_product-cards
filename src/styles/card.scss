@@ -1,3 +1,5 @@
+@use '/src/styles/variables.scss' as vars;
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -7,107 +9,99 @@ body {
 }
 
 .card {
-  padding-top: 32px;
-  width: 200px;
+  padding: vars.$card-padding;
+  width: vars.$card-width;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  border: 1px solid vars.$card-border-color;
+  border-radius: vars.$card-border-radius;
   box-sizing: border-box;
-}
 
-.card__image {
-  display: block;
+  &__image {
+    display: block;
 
-  width: 160px;
-  height: 134px;
-  margin: 0 19px 40px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/imac.jpeg);
-}
+    width: vars.$image-width;
+    height: vars.$image-height;
+    margin: 0 3px 40px;
+  }
 
-.card__title {
-  width: 166px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  text-decoration: none;
-  color: #060b35;
-  margin: 40px 16px 0;
-}
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    color: vars.$primary-text-color;
+  }
 
-.card__title-code {
-  margin-top: 4px;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  color: #616070;
-  text-align: left;
-}
+  &__title-code {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: vars.$secondary-text-color;
+    text-align: left;
+    margin-bottom: 16px;
+  }
 
-.card__mark {
-  display: flex;
+  &__mark {
+    display: flex;
 
-  width: 166px;
-  text-decoration: none;
-  margin: 16px 16px 24px;
-  align-items: center;
-  justify-content: space-between;
-}
+    text-decoration: none;
+    margin-bottom: 24px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 
-.card__mark-rewiews {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  color: #060b35;
-}
+  &__mark-rewiews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: vars.$primary-text-color;
+  }
 
-.card__price {
-  display: flex;
-  justify-content: space-between;
-  width: 166px;
-  margin: 0 16px;
-}
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
 
-.card__price-label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  color: #616070;
-}
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: vars.$secondary-text-color;
+  }
 
-.card__price-value {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: #060b35;
-  margin-left: 85px;
-}
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: vars.$primary-text-color;
+  }
 
-.card__buy {
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #00acdc;
-  border: 1px solid #00acdc;
-  border-radius: 5px;
+  &__buy {
+    box-sizing: border-box;
+    color: vars.$hover-button-color;
+    background-color: vars.$primary-button-color;
+    border: 1px solid vars.$primary-button-color;
+    border-radius: 5px;
 
-  height: 40px;
-  width: 166px;
-  margin: 16px;
+    height: 40px;
+    width: 100%;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
 
-  text-decoration: none;
-  text-transform: uppercase;
-}
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 
-.card__buy:hover {
-  color: #00acdc;
-  background-color: #fff;
-  border-color: #00acdc;
+  &__buy:hover {
+    color: vars.$primary-button-color;
+    background-color: vars.$hover-button-color;
+    border-color: vars.$primary-button-color;
+  }
 }
