@@ -1,3 +1,5 @@
+@use '/src/styles/variables.scss' as vars;
+
 .stars {
   display: flex;
   align-items: center;
@@ -5,8 +7,8 @@
   &__star {
     display: block;
     background-image: url(../images/star.svg);
-    height: 16px;
-    width: 16px;
+    height: vars.$stars-height;
+    width: vars.$stars-width;
     background-repeat: no-repeat;
   }
 
@@ -15,6 +17,6 @@
   }
 }
 
-.stars .stars__star:nth-child(-n + 4) {
+.stars--4 .stars__star:nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
 }
