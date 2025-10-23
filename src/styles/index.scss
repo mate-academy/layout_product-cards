@@ -1,3 +1,148 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
+$main-accent: #060b35;
+$secondary: #616070;
+$blue-accent: #00acdc;
+$border: 1px;
+$border-radius: 5px;
+
+.page {
+  font-family: Roboto, sans-serif;
+
+  &__body {
+    margin: 0;
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 0 16px;
+  background-color: #fff;
+
+  border: $border solid #f3f3f3;
+  border-radius: $border-radius;
+
+  &__description {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $main-accent;
+
+    padding-inline: 16px;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    display: block;
+    line-height: 14px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 400;
+    color: $secondary;
+
+    padding-inline: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.card__image {
+  padding-inline: 19px;
+}
+
+.button {
+  padding-inline: 16px;
+
+  &__link {
+    display: flex;
+    box-sizing: border-box;
+    text-decoration: none;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+
+    background-color: $blue-accent;
+    border-radius: $border-radius;
+    height: 40px;
+
+    &:hover {
+      color: $blue-accent;
+
+      border: $border solid $blue-accent;
+      background-color: #fff;
+    }
+  }
+}
+
+.link__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
   margin: 0;
+  padding: 12px 0;
+}
+
+.image__img {
+  display: block;
+  height: 134px;
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-inline: 16px;
+
+  &__review {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $main-accent;
+  }
+
+  &__stars {
+    display: flex;
+    height: 16px;
+  }
+}
+
+.stars__star {
+  display: inline-block;
+  background-image: url(/src/images/star.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  background-position: center;
+
+  &:nth-child(-n + 4) {
+    background-image: url(/src/images/star-active.svg);
+  }
+}
+
+.price {
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary;
+  }
+
+  &__cost {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $main-accent;
+  }
 }
