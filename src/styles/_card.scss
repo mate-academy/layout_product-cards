@@ -1,0 +1,84 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $title-color;
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: start;
+  }
+
+  &__reviews {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+
+    &-label {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: right;
+      color: $title-color;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 12px 70px 12px 69px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white;
+
+    background-color: $button-color;
+    border-radius: $border-radius;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid $button-color;
+      color: $button-color;
+      background-color: $white;
+    }
+  }
+}
