@@ -1,10 +1,10 @@
 .card {
   box-sizing: border-box;
-  width: 200px;
-  padding: 32px 16px 16px;
-  background-color: #fff;
+  width: $main-width;
+  padding: $main-padding;
+  background-color: $background-color;
 
-  border: $border solid #f3f3f3;
+  border: $border solid $border-color;
   border-radius: $border-radius;
 
   &__description {
@@ -31,10 +31,10 @@
     justify-content: space-between;
     margin-bottom: 16px;
   }
-}
 
-.card__image {
-  padding-inline: 3px;
+  &__image {
+    padding-inline: 3px;
+  }
 }
 
 .image__img {
@@ -78,28 +78,26 @@
   &__link {
     display: flex;
     box-sizing: border-box;
-    text-decoration: none;
     justify-content: center;
-    color: #fff;
+
+    text-decoration: none;
     text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    margin: 0;
+    padding: 12px 0;
 
     background-color: $blue-accent;
     border-radius: $border-radius;
-    height: 40px;
 
     &:hover {
       color: $blue-accent;
 
       border: $border solid $blue-accent;
-      background-color: #fff;
+      background-color: $background-color;
     }
   }
-}
-
-.link__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  margin: 0;
-  padding: 12px 0;
 }
