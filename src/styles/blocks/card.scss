@@ -26,6 +26,12 @@
     margin-bottom: 16px;
   }
 
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
   &__price {
     display: flex;
     justify-content: space-between;
@@ -34,6 +40,34 @@
 
   &__image {
     padding-inline: 3px;
+  }
+
+  &__button {
+    &__link {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: center;
+
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #551313;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+
+      margin: 0;
+      padding: 12px 0;
+
+      background-color: $blue-accent;
+      border-radius: $border-radius;
+
+      &:hover {
+        color: $blue-accent;
+
+        border: $border solid $blue-accent;
+        background-color: $background-color;
+      }
+    }
   }
 }
 
@@ -44,60 +78,50 @@
   margin-bottom: 40px;
 }
 
-.reviews {
+.reviews__review {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $main-accent;
+}
+
+.price__title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $secondary;
+}
+
+.price__cost {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $main-accent;
+}
+
+.button__link {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
+  box-sizing: border-box;
+  justify-content: center;
 
-  &__review {
-    text-align: center;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 16px;
-    color: $main-accent;
-  }
-}
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $background-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 
-.price {
-  &__title {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary;
-  }
+  margin: 0;
+  padding: 12px 0;
 
-  &__cost {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $main-accent;
-  }
-}
+  background-color: $blue-accent;
+  border-radius: $border-radius;
 
-.button {
-  &__link {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
+  &:hover {
+    color: $blue-accent;
 
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-
-    margin: 0;
-    padding: 12px 0;
-
-    background-color: $blue-accent;
-    border-radius: $border-radius;
-
-    &:hover {
-      color: $blue-accent;
-
-      border: $border solid $blue-accent;
-      background-color: $background-color;
-    }
+    border: $border solid $blue-accent;
+    background-color: $background-color;
   }
 }
