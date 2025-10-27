@@ -1,78 +1,78 @@
 .card {
-    width: $card-width;
-    border: $card-border-width solid $color-light-gray;
+  width: $card-width;
+  border: $card-border-width solid $color-light-gray;
 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $color-white;
+  box-shadow: $card-shadow;
+
+  // Elementy
+  &__top {
+    padding: 10px;
+  }
+
+  &__image-container {
+    height: 150px;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: $color-white;
-    box-shadow: $card-shadow;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 
-    // Elementy
-    &__top {
-        padding: 10px;
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__middle {
+    padding: 10px 15px;
+    flex-grow: 1; // Wymóg Flexbox
+  }
+
+  &__name {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    min-height: 2.2em;
+  }
+
+  &__price {
+    font-size: 1.4em;
+    color: $color-primary;
+    margin-bottom: 5px;
+  }
+
+  &__price-currency {
+    font-size: 0.6em;
+    margin-left: 2px;
+    color: $color-text;
+  }
+
+  &__status {
+    font-size: 0.9em;
+    color: $color-status-success;
+    margin-bottom: 15px;
+  }
+
+  &__bottom {
+    border-top: $card-border-width solid $color-light-gray;
+  }
+
+  &__buy-link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+
+    // Wymaganie: :hover
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -10%);
+      cursor: pointer;
     }
-
-    &__image-container {
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    &__image {
-        max-width: 100%;
-        height: auto;
-    }
-
-    &__middle {
-        padding: 10px 15px;
-        flex-grow: 1; // Wymóg Flexbox
-    }
-
-    &__name {
-        font-size: 1.1em;
-        font-weight: 700;
-        margin-bottom: 5px;
-        min-height: 2.2em;
-    }
-
-    &__price {
-        font-size: 1.4em;
-        color: $color-primary;
-        margin-bottom: 5px;
-    }
-
-    &__price-currency {
-        font-size: 0.6em;
-        margin-left: 2px;
-        color: $color-text;
-    }
-
-    &__status {
-        font-size: 0.9em;
-        color: $color-status-success;
-        margin-bottom: 15px;
-    }
-
-    &__bottom {
-        border-top: $card-border-width solid $color-light-gray;
-    }
-
-    &__buy-link {
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-        background-color: $color-primary;
-        color: $color-white;
-        font-weight: 700;
-        transition: background-color 0.2s ease;
-
-        // Wymaganie: :hover
-        &:hover {
-            background-color: color.adjust($color-primary, $lightness: -10%);
-            cursor: pointer;
-        }
-    }
+  }
 }
