@@ -1,6 +1,5 @@
 .stars {
   display: flex;
-  gap: 4px;
 
   &::before {
     content: '★ ★ ★ ★ ★';
@@ -8,79 +7,55 @@
     color: $color-star-inactive;
   }
 
-  &--0 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 0%,
-        $color-star-inactive 0%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  &--0::before {
+    color: $color-star-inactive;
   }
 
-  &--1 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 11.11%,
-        $color-star-inactive 11.11%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  &--1::before {
+    background: linear-gradient(
+      to right,
+      $color-star-active 11.11%,
+      $color-star-inactive 11.11%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  &--2 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 33.33%,
-        $color-star-inactive 33.33%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  &--2::before {
+    background: linear-gradient(
+      to right,
+      $color-star-active 33.33%,
+      $color-star-inactive 33.33%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  &--3 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 55.55%,
-        $color-star-inactive 55.55%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  &--3::before {
+    background: linear-gradient(
+      to right,
+      $color-star-active 55.55%,
+      $color-star-inactive 55.55%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  &--4 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 77.77%,
-        $color-star-inactive 77.77%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  &--4::before {
+    background: linear-gradient(
+      to right,
+      $color-star-active 77.77%,
+      $color-star-inactive 77.77%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  &--5 {
-    &::before {
-      color: $color-star-active;
-    }
+  &--5::before {
+    color: $color-star-active;
   }
 }
