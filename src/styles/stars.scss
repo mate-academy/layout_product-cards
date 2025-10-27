@@ -1,0 +1,35 @@
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: $main-shift * 6;
+
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+  }
+  &--4 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    gap: 4px;
+    & .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+      background-position: center;
+  }
+  }
+  &__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  color: $main-accent;
+  }
+
+}
