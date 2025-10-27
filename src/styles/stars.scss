@@ -13,16 +13,19 @@
     height: 16px;
     width: 16px;
   }
-  &--4 {
+  @for $i from 1 through 5 {
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__list {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
     gap: 4px;
-    & .stars__star:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-      background-position: center;
   }
-  }
+
   &__text {
   margin: 0;
   font-weight: 400;
@@ -31,5 +34,4 @@
   letter-spacing: 0%;
   color: $main-accent;
   }
-
 }
