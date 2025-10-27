@@ -1,9 +1,30 @@
-@import 'blocks/variables';
-@import 'blocks/stars';
+// 1. IMPORT WSZYSTKICH ZALEŻNOŚCI NA GÓRZE
+@import 'variables';
 @import 'blocks/card';
+@import 'blocks/stars';
+
+
+// 2. WŁAŚCIWY KOD STYLÓW (WBUDOWANY RESET I STYLER KLAS)
+
+// Reset (Bez użycia globalnego selektora *)
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+    // Używa zaimportowanej zmiennej z _variables.scss
+    font-family: $font-main;
+    color: $color-text;
+    background-color: #f8f8f8;
+}
+
+.page-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+    gap: 20px;
 }

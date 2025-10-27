@@ -1,61 +1,30 @@
+// Poprawne ścieżki względne do index.scss (../images/...)
+$star-full-url: "../images/star-active.svg";
+$star-empty-url: "../images/star.svg";
+$star-size: 16px;
+
 .stars {
-  display: flex;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 
-  &::before {
-    content: '★ ★ ★ ★ ★';
-    letter-spacing: 4px;
-    color: $color-star-inactive;
-  }
+    &__star {
+        width: $star-size;
+        height: $star-size;
+        margin: 0 1px;
 
-  &--0::before {
-    color: $color-star-inactive;
-  }
+        background-image: url($star-empty-url);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 
-  &--1::before {
-    background: linear-gradient(
-      to right,
-      $color-star-active 11.11%,
-      $color-star-inactive 11.11%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &--2::before {
-    background: linear-gradient(
-      to right,
-      $color-star-active 33.33%,
-      $color-star-inactive 33.33%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &--3::before {
-    background: linear-gradient(
-      to right,
-      $color-star-active 55.55%,
-      $color-star-inactive 55.55%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &--4::before {
-    background: linear-gradient(
-      to right,
-      $color-star-active 77.77%,
-      $color-star-inactive 77.77%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &--5::before {
-    color: $color-star-active;
-  }
+    // Modifiery: Highlight first N stars (Wymaganie)
+    @for $i from 1 through 5 {
+        &--#{$i} {
+            // Styl dla bloku z modyfikatorem stars--N
+            & > .stars__star:nth-child(-n + #{$i}) {
+                background-image: url($star-full-url);
+            }
+        }
+    }
 }
