@@ -1,3 +1,136 @@
+@import './stars.css';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  width: 200px;
+  height: 408px;
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  color: #616070;
+
+  background-color: #fff;
+
+  &__image {
+    position: absolute;
+    top: 32px;
+
+    display: flex;
+
+    width: 160px;
+    height: 134px;
+
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__title {
+    margin-top: calc(206px - 16px);
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__code {
+    align-self: flex-start;
+
+    width: 98px;
+    margin: 4px 0 16px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  width: 166px;
+  height: 16px;
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    width: 100%;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #060b35;
+  }
+}
+
+.price {
+  display: flex;
+  gap: 85px;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 24px;
+
+  &__content {
+    font-size: 12px;
+  }
+
+  &__value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #060b35;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 166px;
+  height: 40px;
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fff;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: #00acdc;
+
+}
+
+.btn:hover {
+  border: 1px solid #00acdc;
+  color: #00acdc;
+  background-color: transparent;
 }
