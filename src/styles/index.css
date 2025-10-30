@@ -10,9 +10,11 @@ body {
 }
 
 .card {
+  position: relative;
+
   box-sizing: border-box;
-  width: 200px;
-  height: 408px;
+  width: 100%;
+  height: 100%;
   padding: 32px 16px 16px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -23,30 +25,37 @@ body {
 }
 
 .card__image {
+  position: absolute;
+  top: 32px;
+  left: 19px;
+
   display: flex;
 
   width: 160px;
   height: 134px;
-  margin-left: 3px;
 
   background-image: url(../images/imac.jpeg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
 }
 
 .card__title {
-  margin-top: 40px;
+  margin-top: calc(207px - 33px);
 }
 
-.card--content {
+.card__title--content {
+  left: 17px;
+
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   color: #060b35;
 }
 
-.card--code {
+.card__title--code {
+  width: 98px;
   margin: 4px 0 16px;
+
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
@@ -54,8 +63,11 @@ body {
 
 .stars {
   display: flex;
-  align-items: center;
-  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  width: 166px;
+  height: 16px;
 }
 
 .stars__review {
@@ -67,6 +79,7 @@ body {
 
   font-size: 10px;
   font-weight: 400;
+  line-height: 14px;
   color: #060b35;
 }
 
@@ -78,13 +91,10 @@ body {
 }
 
 .price__content {
-  left: 0;
   font-size: 12px;
 }
 
 .price__value {
-  margin-left: 85px;
-
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -96,10 +106,14 @@ body {
   align-items: center;
   justify-content: center;
 
+  box-sizing: border-box;
   width: 166px;
   height: 40px;
   margin-top: 16px;
+  border: 1px solid transparent;
   border-radius: 5px;
+
+  line-height: 16px;
 
   background-color: #00acdc;
 }
@@ -120,7 +134,7 @@ body {
   background-color: transparent;
 }
 
-.btn__content:hover {
+.btn:hover .btn__content {
   color: #00acdc;
 }
 
