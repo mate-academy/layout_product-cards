@@ -1,0 +1,123 @@
+@mixin font() {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $font-line-height;
+}
+
+body {
+  margin: $body-margin;
+  padding: $body-padding;
+
+  font-family: $font-family;
+  font-optical-sizing: $font-optical-sizing;
+  font-style: $font-style;
+  color: $font-color;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: $card-width;
+  border: $card-border;
+  border-radius: $card-border-radius;
+  top: $card-top;
+  left: $card-left;
+
+  box-sizing: border-box;
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+    margin: $image-margin;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    margin: $content-margin;
+  }
+
+  &__name {
+    font-weight: $name-font-weight;
+    font-size: $name-font-size;
+    line-height: $name-line-height;
+  }
+
+  &__code {
+    @include font;
+
+    margin-top: $code-margin-top;
+    color: $code-color;
+  }
+
+  &__review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: $review-margin-top;
+
+    .review__count {
+      @include font;
+
+      text-align: right;
+      vertical-align: bottom;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: $price-margin-top;
+
+    .price__label {
+      font-weight: $font-weight;
+      font-size: $name-font-size;
+      line-height: $name-line-height;
+
+      vertical-align: bottom;
+      color: #616070;
+    }
+
+    .price__value {
+      font-weight: $button-text-font-weight;
+      font-size: $price-value-font-size;
+      line-height: $price-value-line-height;
+
+      text-align: right;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: $button-margin-top;
+    height: $button-height;
+    border: $button-border;
+    border-radius: $button-border-radius;
+
+    font-weight: $button-text-font-weight;
+    font-size: $button-text-font-size;
+    line-height: $button-line-height;
+    text-transform: $button-text-transform;
+    text-decoration: $button-text-decoration;
+
+    color: $button-text-color;
+    background-color: $button-bg-color;
+
+    &:hover {
+      border: $button-hover-border;
+      background-color: $button-hover-bg-color;
+      color: $button-hover-text-color;
+    }
+  }
+}
