@@ -1,0 +1,108 @@
+@use './variables.scss' as *;
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__content {
+    margin: 16px;
+  }
+
+  &__image {
+    height: 134px;
+    margin: 16px auto;
+    width: 160px;
+    background-image: url(../../images/imac.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: $font-size-small;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin: 40px 0 0 0;
+  }
+
+  &__code {
+    font-weight: $font-weight-regular;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $color-white-gray;
+  }
+
+  &__reviews {
+    font-weight: $font-weight-regular;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    margin: 24px 0 16px 0;
+  }
+
+  &__price-label {
+    color: #616070;
+  }
+  &__price-value {
+    font-weight: $font-weight-bold;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  &__stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__link {
+    width: 166px;
+    height: 40px;
+    opacity: 1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-primary;
+    border-radius: 5px;
+    border: none;
+
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &:hover {
+      background: #ffffff;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  }
+}
