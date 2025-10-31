@@ -1,86 +1,27 @@
+/* BLOK STARS */
 .stars {
   display: flex;
-  gap: 4px;
+  margin: 0; /* brak odstępu pionowego między blokami */
+}
 
-  &::before {
-    content: '★ ★ ★ ★ ★';
-    letter-spacing: 4px;
-    color: $color-star-inactive;
-  }
+/* ELEMENT STAR */
+.stars__star {
+  width: 16px; /* spróbuj 16px — pasuje do większości projektów Moyo */
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  &--0 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 0%,
-        $color-star-inactive 0%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+.stars__star:not(:last-child) {
+  margin-right: 4px; /* zamiast gap */
+}
 
-  &--1 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 11.11%,
-        $color-star-inactive 11.11%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--2 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 33.33%,
-        $color-star-inactive 33.33%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--3 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 55.55%,
-        $color-star-inactive 55.55%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--4 {
-    &::before {
-      background: linear-gradient(
-        to right,
-        $color-star-active 0%,
-        $color-star-active 77.77%,
-        $color-star-inactive 77.77%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--5 {
-    &::before {
-      color: $color-star-active;
-    }
-  }
+/* Modyfikatory – aktywne gwiazdy */
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url('../images/star-active.svg');
 }

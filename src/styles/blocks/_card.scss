@@ -1,68 +1,106 @@
 .card {
+  position: relative;
   width: $card-width;
   border: $border-width solid $color-border;
   border-radius: $border-radius;
   box-sizing: border-box;
   font-family: $font-family;
-  padding: $spacing-medium;
+  padding: $spacing-large;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 
   &__image {
-    width: 100%;
-    height: auto;
-    margin-bottom: $spacing-medium;
+    margin-top: 16px;
+    width: 160px;
+    height: 134px;
+    align-self: center;
     display: block;
   }
 
   &__title {
-    font-size: 14px;
-    font-weight: 700;
+    margin: 0;
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
     color: $color-text-primary;
-    margin: 0 0 $spacing-small;
-    line-height: 1.4;
   }
 
-  &__rating {
-    margin-bottom: $spacing-small;
+  &__meta {
+    margin: 0;
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-text-secondary;
   }
 
-  &__price-block {
+  &__rating-block {
+    margin-top: 16px;
     display: flex;
-    gap: $spacing-small;
-    margin-bottom: $spacing-medium;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 19px;
+
+    .card__meta {
+      font-size: 10px;
+      line-height: 14px;
+      text-align: right;
+      color: $color-text-primary;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+    }
   }
 
-  &__price {
-    font-size: 14px;
-    font-weight: 700;
+  &__price--current {
+    margin: 0;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color-text-secondary;
 
-    &--old {
-      color: $color-price-old;
-      text-decoration: line-through;
-      font-weight: 400;
-    }
-
-    &--new {
-      color: $color-price-new;
+    .card__price-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color-text-primary;
+      margin: 0;
+      text-align: right;
     }
   }
 
   &__link {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background-color: $color-link;
-    color: white;
+    margin-top: 16px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: $color-link;
+    border: none;
+    color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: $border-radius;
     font-weight: 700;
-    font-size: 12px;
-    transition: background-color 0.3s;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
 
     &:hover {
-      background-color: $color-link-hover;
+      background-color: #fff;
+      color: $color-link;
+      border: 1px solid $color-link;
     }
   }
 }
