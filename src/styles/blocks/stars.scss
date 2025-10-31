@@ -5,20 +5,6 @@
   margin-top: 16px;
   gap: 17px;
 
-
-  &__bar {
-    display: flex;
-    width: 96px;
-    height: 16px;
-  }
-
-  &__4 {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
   &__star {
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
@@ -34,9 +20,22 @@
     margin-right: 5px;
   }
 
-  &__4 .stars__star:nth-child(-n + 4)/*ativo*/ {
-    background-image: url(../images/star-active.svg);
-    margin-top: 2px;
+  &__bar {
+    display: flex;
+    width: 96px;
+    height: 16px;
+
+    &-4 {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .stars__star:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+        margin-top: 2px;
+      }
+    }
   }
 
   &__reviews {
@@ -47,5 +46,3 @@
     color: $dark-blue;
   }
 }
-
-
