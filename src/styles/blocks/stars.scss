@@ -8,10 +8,9 @@
     background: url('../images/star.svg') no-repeat center / contain;
   }
 
-
   @for $i from 1 through 5 {
     &--#{$i} {
-      .stars__star:nth-child(-n + #{$i}) {
+      &__star:nth-child(-n + #{$i}) {
         background-image: url('../images/star-active.svg');
       }
     }
