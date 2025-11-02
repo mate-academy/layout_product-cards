@@ -1,0 +1,27 @@
+.stars {
+  display: inline-flex;
+  gap: 4px;
+  cursor: pointer;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg) no-repeat center; // або background-image якщо у тебе SVG inline
+    background-size: contain;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:hover ~ .stars__star {
+      background-image: url(../images/star-active.svg); // hover не підсвічує “вперед”
+    }
+  }
+
+  // активні зірки
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
