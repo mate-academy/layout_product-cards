@@ -3,7 +3,16 @@
   margin: 16px 16px 0;
   align-items: center;
 
-  &__stars:last-child {
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url('../images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
     margin-right: 0;
   }
 
@@ -14,17 +23,10 @@
     font-size: 10px;
     margin-left: 17px;
   }
-
-  &__star {
-    height: 16px;
-    width: 16px;
-    background-image: url('../images/star.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 4px;
-  }
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url('../images/star-active.svg');
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
 }
