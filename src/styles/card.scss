@@ -1,7 +1,8 @@
 .card {
   box-sizing: border-box;
   width: 200px;
-  height: 400px;
+  height: auto;
+  border: 1px solid grey;
 
   &__top {
     margin: 32px 19px 40px;
@@ -23,10 +24,11 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
+    color: rgba(6, 11, 53, 1);
   }
 
   &__code {
-    margin-top: 5px;
+    margin-top: 4px;
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 10px;
@@ -37,15 +39,22 @@
 
   &__review {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 22px;
+
     height: 16px;
+    color: rgba(6, 11, 53, 1);
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     margin-top: 16px;
     margin-bottom: 24px;
+
+    &-title {
+      display: inline-block;
+      text-align: right;
+    }
   }
 
   &__price {
@@ -69,22 +78,26 @@
   }
 
   &__button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 166px;
     height: 40px;
     border-radius: 5px;
     background-color: rgba(0, 172, 220, 1);
+    border: 1px solid transparent;
 
     text-transform: uppercase;
-    border: none;
-
     font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     color: white;
+    cursor: pointer;
 
     &:hover {
-      border: 1.5px solid rgba(0, 172, 220, 1);
+      border: 1px solid rgba(0, 172, 220, 1);
       background-color: white;
       color: rgba(0, 172, 220, 1);
     }
