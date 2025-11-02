@@ -1,11 +1,34 @@
-@import 'variables';
-@import 'stars';
-@import 'card';
+@import '../block/variables';
+@import '../block/mixin';
+@import '../block/stars';
+@import '../block/card';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   font-family: Roboto, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.page {
+  background-color: #f7f7f7;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
 }
