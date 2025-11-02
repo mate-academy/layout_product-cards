@@ -1,0 +1,32 @@
+.stars {
+  display: flex;
+  margin: 16px 16px 0;
+  align-items: center;
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    background-image: url('../images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &__title {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 10px;
+    margin-left: 17px;
+  }
+}
+
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
