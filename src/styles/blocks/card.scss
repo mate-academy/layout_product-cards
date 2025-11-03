@@ -4,11 +4,11 @@
   border-radius: $border-radius;
   box-sizing: border-box;
   padding: $spacing-large $spacing-medium $spacing-medium;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
   &__image {
     width: 160px;
@@ -41,7 +41,7 @@
     margin-bottom: 24px;
   }
 
-  &__price--current {
+  &__price {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -49,11 +49,20 @@
     color: $color-text-secondary;
     margin-bottom: 16px;
 
-    .card__price-value {
-      font-size: 16px;
-      font-weight: 700;
-      color: $color-text-primary;
+    &--current {
+      color: $color-text-secondary;
     }
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-text-primary;
   }
 
   &__link {
@@ -64,7 +73,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
-    color: #fff;
+    color: $color-white;
     background-color: $color-link;
     border-radius: $border-radius;
     padding: 12px 0;
@@ -73,7 +82,7 @@
     transition: all 0.3s;
 
     &:hover {
-      background-color: #fff;
+      background-color: $color-white;
       color: $color-link;
       border-color: $color-link;
     }
