@@ -10,14 +10,14 @@
     background-position: center;
 
     &:not(:last-child) {
-      margin-right: 4px;
+      margin-right: $spacing-xsmall;
     }
   }
 
   // SCSS loop for DRY principle
   @for $i from 1 through 5 {
     &--#{$i} &__star:nth-child(-n + #{$i}) {
-      background-image: url('../images/star-active.svg');
+      background-image: url('../../images/star-active.svg');
     }
   }
 }
