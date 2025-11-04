@@ -1,0 +1,122 @@
+html {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: $--card-width;
+  height: $--card-height;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__media {
+    padding-top: 32.9px;
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  &__name {
+    color: $--color-main-text;
+    margin: 40px 16px 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    width: 100%;
+  }
+
+  &__code {
+    margin: 4px 0 16px 16px;
+
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: rgba(130, 130, 130, 1);
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  &__rating-count {
+    margin-left: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $--color-main-text;
+
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 24px 16px 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 85px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin-left: 16px;
+    margin-top: 24px;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+
+  &__btn-buy {
+    background-color: $--button-buy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 166px;
+
+    min-height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+
+  &__btn-buy:hover {
+    border: 1px solid $--button-buy;
+    background-color: rgba(255, 255, 255, 1);
+    color: $--button-buy;
+  }
+}
