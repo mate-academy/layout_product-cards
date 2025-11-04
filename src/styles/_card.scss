@@ -1,11 +1,5 @@
 @use 'variables';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
 }
@@ -18,8 +12,8 @@ body {
   min-height: 408px;
   justify-content: flex-start;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #f3f3f3;
+  background-color: variables.$secondary-theme-color;
+  border: 1px solid variables.$border-color;
   border-radius: 5px;
 
   &__image {
@@ -85,7 +79,7 @@ body {
 
     &-text {
       font-size: 12px;
-      color: #616070;
+      color: variables.$code-color;
       line-height: 18px;
     }
 
@@ -113,14 +107,14 @@ body {
     width: calc(100% - 32px);
     height: 40px;
     text-decoration: none;
-    color: #fff;
+    color: variables.$secondary-theme-color;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 16px;
     font-size: 14px;
 
     &:hover {
-      background-color: white;
+      background-color: variables.$secondary-theme-color;
       color: variables.$main-theme-color;
       border: 1px solid variables.$main-theme-color;
     }
