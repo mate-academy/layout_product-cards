@@ -1,11 +1,9 @@
-/* 1) global box-sizing so width:200px includes border everywhere */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* 2) your existing code with only minimal edits marked */
 body {
   margin: 0;
 }
@@ -14,12 +12,10 @@ body {
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column;
-
   width: 200px;
-  min-height: 408px; // keep min-height (lets content grow if needed)
+  min-height: 408px;
   justify-content: flex-start;
   align-items: center;
-
   background-color: #fff;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
@@ -28,12 +24,11 @@ body {
     display: block;
     background-image: url(../images/imac.jpeg);
     width: 160px;
-    height: 134px; /* keep exact spec box */
-    background-size: cover; /* fill the box (no “short” feel) */
+    height: 134px;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     margin-top: 32px;
-    flex: 0 0 auto; /* don’t let flex shrink it */
   }
 
   &__info-block {
@@ -46,7 +41,7 @@ body {
   &__name {
     font-size: 12px;
     margin-inline: 16px;
-    margin-top: 40px; /* verify against figma if 24/32 looks closer */
+    margin-top: 40px;
     line-height: 18px;
     font-weight: 500;
     margin-bottom: 0;
@@ -68,7 +63,7 @@ body {
   margin: 0 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   width: calc(100% - 32px);
 }
 
@@ -107,7 +102,7 @@ body {
 .price {
   &-block {
     display: flex;
-    flex-direction: row; // one line
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 6px;
@@ -118,30 +113,31 @@ body {
   &-text {
     font-size: 12px;
     color: #616070;
-    line-height: 18px; /* match number so centers align */
+    line-height: 18px;
   }
 
   &-number {
     color: #060b35;
     font-weight: 700;
     font-size: 16px;
-    line-height: 18px; /* baseline match */
+    line-height: 18px;
   }
 }
 
 .button {
   &-box {
     display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  /* box-sizing: border-box; <-- remove duplicate, global handles it */
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: #00acdc;
   border-radius: 5px;
-  margin: 0 16px 16px;
-  width: 166px;
+  width: calc(100% - 32px);
   height: 40px;
   text-decoration: none;
   color: #fff;
