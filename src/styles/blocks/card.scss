@@ -1,101 +1,100 @@
-@use 'sass:color';
+@use '../utils/vars' as *;
 
 .card {
-  width: 198px;
+  width: 200px;
   height: 406px;
-  border-radius: 5px;
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  font-family: Roboto, sans-serif;
+  border-radius: $radius-card;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  font-family: $font-main;
   display: flex;
   flex-direction: column;
   padding: 0 16px;
   align-items: center;
   box-sizing: border-box;
+
+  &__img {
+   padding: 32px 0 40px;
 }
 
-.card__img {
-  padding: 32px 0 40px;
+  &__content {
+   padding: 0 0 16px;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
 }
 
-.card__content {
-  padding: 0 0 16px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+  &__title {
+   font-size: 12px;
+   font-weight: 500;
+   line-height: 18px;
+   letter-spacing: 0%;
+   color: $color-gray-text;
 }
 
-.card__title {
-  width: 100%;
-  margin: 0;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0%;
+  &__code {
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 14px;
+   margin: 4px 0 0;
+   color: $color-gray-text;
 }
 
-.card__code {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  margin: 4px 0 0;
-  color: #616070;
+  &__stars {
+   margin: 16px 0 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
-.card__stars {
-  margin: 16px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__reviews {
+   font-size: 10px;
+   font-weight: 400;
+   letter-spacing: 0%;
 }
 
-.card__reviews {
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0%;
+  &__price {
+   margin-top: 16px;
+   margin-bottom: 12px;
+   display: flex;
+   justify-content: space-between;
 }
 
-.card__price {
-  margin-top: 16px;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
+  &__price-title {
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 18px;
+   letter-spacing: 0%;
+   color: $color-gray-text;
 }
 
-.card__price-title {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: #616070;
+  &__price-value {
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 18px;
 }
 
-.card__price-value {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
+  &__button {
+   width: 100%;
+   margin: 0;
+   height: 40px;
+   text-align: center;
+   text-transform: uppercase;
+   color: $color-white;
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 40px;
+   letter-spacing: 0%;
+   border-radius: $radius-card;
+   box-sizing: border-box;
+   border: 1px solid $color-blue;
+   background-color: $color-blue;
+   transition: all 0.5s;
 }
 
-.card__button {
-  width: 100%;
-  margin: 0;
-  height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0%;
-  border-radius: 5px;
-  box-sizing: border-box;
-  border: 1px solid #00acdc;
-  background-color: #00acdc;
-  transition: all 0.5s;
+&:hover {
+   color: $color-blue;
+   background-color: $color-white;
 }
-
-.card__button:hover {
-  color: #00acdc;
-  background-color: white;
 }
