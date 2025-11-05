@@ -13,7 +13,7 @@
     margin: 0 auto 40px;
   }
 
-  &__product-description {
+  &__title {
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 12px;
@@ -48,25 +48,25 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-  }
 
-  &__price-label {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $secondary-text-color;
-  }
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-text-color;
+    }
 
-  &__price-value {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $main-text-color;
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-text-color;
+    }
   }
 
   &__buy {
     background-color: $accent-color;
-    color: #fff;
+    color: $main-bg;
     display: inline-block;
     padding-block: 12px;
     padding-inline: 70px 69px;
@@ -76,11 +76,12 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-  }
+    border: 1px solid transparent;
 
-  &__buy:hover {
-    background-color: $base-light;
-    color: $accent-color;
-    border: 1px solid $accent-color;
+    &:hover {
+      background-color: $base-light;
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
   }
 }
