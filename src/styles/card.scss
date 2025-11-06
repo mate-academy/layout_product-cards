@@ -1,0 +1,103 @@
+@import './variables';
+
+.card {
+  width: 198px;
+  height: 406px;
+  background-color: $white-color;
+  border-radius: 5px;
+  border: 1px solid $white-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px 16px;
+  }
+
+  &__image {
+    width: 160;
+    height: 134;
+    margin-bottom: 40px;
+    background-image: url('../images/imac.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__product-name {
+    margin-bottom: 4px;
+    font-family: $card-font;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+    color: $primary-text-color;
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+    font-family: $card-font;
+    font-weight: $font-weight-light;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    color: $secondary-text-color;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-count {
+    font-family: $card-font;
+    font-weight: $font-weight-light;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    text-align: right;
+    color: $primary-text-color;
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    font-family: $card-font;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: $button-color;
+    color: $white-color;
+    &:hover {
+      cursor: pointer;
+      background-color: $white-color;
+      border: 1px solid $button-color;
+      color: $button-color;
+    }
+  }
+
+  &__price-text {
+    font-family: $card-font;
+    font-weight: $font-weight-light;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+  }
+
+  &__price-amount {
+    font-family: $card-font;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-price;
+    line-height: $line-height-medium;
+    text-align: right;
+  }
+}
