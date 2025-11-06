@@ -8,94 +8,73 @@
   font-family: $font-main;
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
   align-items: center;
+  padding: 32px 16px 24px;
   box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
 
   &__img {
     width: 100%;
-    padding: 32px 0 40px;
     height: auto;
+    display: block;
+    margin-bottom: 24px;
   }
 
   &__content {
-    padding: 0 0 16px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    flex-grow: 1;
   }
 
   &__title {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    letter-spacing: 0%;
     color: $color-gray-text;
   }
 
   &__code {
+    margin-top: 4px;
     font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
-    margin: 4px 0 0;
     color: $color-gray-text;
   }
 
   &__stars {
-    margin: 16px 0 0;
+    margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__reviews {
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0%;
-  }
-
   &__price {
-    margin-top: 16px;
-    margin-bottom: 12px;
+    margin: 16px 0 12px;
     display: flex;
     justify-content: space-between;
   }
 
-  &__price-title {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0%;
-    color: $color-gray-text;
-  }
-
-  &__price-value {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-  }
-
   &__button {
     width: 100%;
-    margin: 0;
     height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-white;
-    font-size: 14px;
-    font-weight: 700;
     line-height: 40px;
-    letter-spacing: 0%;
     border-radius: $radius-card;
-    box-sizing: border-box;
     border: 1px solid $color-blue;
     background-color: $color-blue;
-    transition: all 0.5s;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    border-color: $color-blue;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    .card__button {
+      background-color: $color-white;
+      color: $color-blue;
+    }
   }
 }
 
-.card__button:hover {
-  color: $color-blue;
-  background-color: $color-white;
-}
