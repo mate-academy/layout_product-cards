@@ -1,0 +1,91 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 200px;
+  height: 408px;
+  padding: 30px 16px 16px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image-block {
+    flex-grow: 1;
+    margin: 3px;
+    margin-bottom: 10px;
+    background: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/imac.jpeg);
+    background-color: #fff;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    max-height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+
+    overflow: hidden;
+  }
+
+  &__meta {
+    display: flex;
+    margin: 0 0 17px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+
+    &-def {
+      margin-left: 2.5px;
+    }
+  }
+
+  &__rating {
+    margin-bottom: 23px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-word {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__buy-link {
+    box-sizing: border-box;
+    display: block;
+    background-color: $blue-accent;
+    border-radius: 5px;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid $blue-accent;
+    transition:
+      color,
+      background-color 0.3s ease;
+
+    &:hover {
+      color: $blue-accent;
+      background-color: #fff;
+    }
+  }
+}
