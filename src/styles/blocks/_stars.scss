@@ -30,18 +30,13 @@
     line-height: 14px;
     font-weight: 400;
     white-space: nowrap;
-    font-family: $font-family;
   }
 
   @for $i from 1 through 5 {
     &--#{$i} {
-      .stars__items {
-        .stars__item:nth-child(-n + #{$i}) {
-          background-image: url('../images/star-active.svg');
-        }
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
       }
     }
   }
 }
-
-/* add styles here */
