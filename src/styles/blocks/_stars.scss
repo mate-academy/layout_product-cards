@@ -1,0 +1,43 @@
+// _stars.scss
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+  flex-wrap: nowrap;
+
+  &__items {
+    display: flex;
+    gap: 4px;
+    margin-right: 17px;
+  }
+
+  &__item {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.5px;
+    cursor: pointer;
+    transition: background-image 0.2s ease-in-out;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    color: $color-secondary;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+}
