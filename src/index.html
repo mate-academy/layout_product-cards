@@ -6,13 +6,61 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
+    <title>Product Card</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SCSS (Parcel will compile this) -->
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
+
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="ProductCard-card"
+      data-qa="card"
+    >
+      <img
+        src="./images/imac.jpeg"
+        alt="APPLE A1419 iMac 27 Retina 5K Monoblock (MNED2UA/A)"
+        class="ProductCard-card__image"
+      />
+
+      <div class="ProductCard-card__info">
+        <h2 class="ProductCard-card__title">
+          APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+        </h2>
+        <p class="ProductCard-card__code">Product code: 195434</p>
+      </div>
+
+      <div class="ProductCard-card__stars-row">
+        <div class="o-stars">
+          <span class="o-stars__item o-stars__item--filled"></span>
+          <span class="o-stars__item o-stars__item--filled"></span>
+          <span class="o-stars__item o-stars__item--filled"></span>
+          <span class="o-stars__item o-stars__item--filled"></span>
+          <span class="o-stars__item"></span>
+        </div>
+        <p class="ProductCard-card__reviews">Reviews: 5 Reviews</p>
+      </div>
+
+      <div class="ProductCard-card__price-row">
+        <span class="ProductCard-card__price-label">Price:</span>
+        <span class="ProductCard-card__price-value">$2,199</span>
+      </div>
+
+      <button
+        class="ProductCard-card__button"
+        data-qa="hover"
+      >
+        BUY
+      </button>
+    </div>
   </body>
 </html>
