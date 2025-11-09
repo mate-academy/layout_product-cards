@@ -14,11 +14,7 @@
     flex-grow: 1;
     margin: 3px;
     margin-bottom: 10px;
-    background: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../images/imac.jpeg);
-    background-color: $white;
+    background: top center / contain no-repeat url(../images/imac.jpeg);
   }
 
   &__title {
@@ -34,12 +30,12 @@
     display: flex;
     margin: 0 0 17px;
     font-size: 10px;
-    line-height: 14px;
+    line-height: $line-height-2;
     color: $secondary-color;
+  }
 
-    &-def {
-      margin-left: 2.5px;
-    }
+  &__meta-def {
+    margin-left: 2.5px;
   }
 
   &__rating {
@@ -47,13 +43,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
 
-    &-count {
-      text-decoration: none;
-      color: $main-color;
-      font-size: 10px;
-      line-height: 14px;
-    }
+  &__rating-count {
+    text-decoration: none;
+    color: $main-color;
+    font-size: 10px;
+    line-height: $line-height-2;
   }
 
   &__price {
@@ -89,7 +85,8 @@
     text-transform: uppercase;
     text-decoration: none;
     border: 1px solid $blue-accent;
-    transition: color 0.3s ease,
+    transition:
+      color 0.3s ease,
       background-color 0.3s ease;
 
     &:hover {
