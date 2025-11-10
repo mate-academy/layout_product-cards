@@ -1,13 +1,13 @@
 'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
-
 const backstop = require('@mate-academy/backstop-config');
 const { basicScenario } = backstop;
 
 const basic = {
   ...basicScenario,
   label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/product-cards/',
+  // 👇 посилання на твій деплой у GitHub Pages
+  url: 'http://localhost:3001/index.html',
+  referenceUrl: 'https://yulka-v.github.io/layout_product-cards/',
 };
 
 const config = {
@@ -27,6 +27,7 @@ const config = {
       ...basic,
       label: 'Card with data-qa_card',
       selectors: ['[data-qa="card"]'],
+      delay: 1000,
     },
     {
       ...basic,
@@ -34,6 +35,7 @@ const config = {
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
       selectors: ['[data-qa="card"]'],
+      delay: 1000,
     },
   ],
 };
