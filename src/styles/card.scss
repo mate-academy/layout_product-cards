@@ -1,0 +1,103 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $card-width;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid $card-border-color;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-inline: 3px;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  &__name {
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    margin-bottom: 16px;
+    color: $card-subtext-color;
+  }
+
+  &__reviews {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &-count {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0%;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $card-subtext-color;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+    }
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $button-buy-collor;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $button-text-color;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: $button-text-color;
+      color: $button-buy-collor;
+      border: 1px solid $button-buy-collor;
+    }
+  }
+}
