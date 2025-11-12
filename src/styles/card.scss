@@ -3,9 +3,9 @@
 .card {
   width: $card-width;
   font-family: $main-font;
-  border: 1px solid #ececec;
+  border: 1px solid $border-color;
   border-radius: $border-radius;
-  background: white;
+  background: $card-bg;
   padding: 16px;
   box-sizing: border-box;
   display: flex;
@@ -36,13 +36,14 @@
     font-size: 14px;
     margin-bottom: 12px;
     display: block;
+    color: $primary-color;
   }
 
   &__buy {
     display: inline-block;
     text-decoration: none;
     background: $accent-color;
-    color: #fff;
+    color: $text-white;
     padding: 8px 20px;
     border-radius: 4px;
     font-size: 14px;
@@ -52,7 +53,7 @@
     &:hover,
     &[data-qa='hover']:hover {
       background: darken($accent-color, 10%);
-      color: #fff;
+      color: $text-white;
       text-decoration: underline;
     }
   }
