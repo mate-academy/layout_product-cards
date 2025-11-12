@@ -2,17 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
+    <title>Product Card Demo</title>
+    <!-- Google Fonts (Montserrat example) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      rel="stylesheet"
     />
-    <title>Product cards</title>
+    <!-- SCSS files linked with Parcel: poprawiona ścieżka do styles -->
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <img
+        class="card__img"
+        src="./images/imac.jpeg"
+        alt="Product Name"
+      />
+      <div class="card__info">
+        <span class="card__title">Product Name</span>
+        <div class="stars stars--3"></div>
+        <span class="card__price">$44.99</span>
+        <a
+          class="card__buy"
+          href="#"
+          data-qa="hover"
+        >
+          BUY
+        </a>
+      </div>
+    </div>
   </body>
 </html>
