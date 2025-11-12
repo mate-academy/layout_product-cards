@@ -1,9 +1,9 @@
 html {
   font-family: Roboto, sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: weight;
   font-style: normal;
-  font-variation-settings: 'wdth' 100;
+  font-variation-settings: "wdth" 100;
 }
 
 body {
@@ -11,9 +11,10 @@ body {
 }
 
 .card {
+  margin: 0 auto;
   display: block;
-  width: 198px;
-  height: 406px;
+  max-width: 198px;
+  max-height: 406px;
   opacity: 1;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
@@ -40,20 +41,25 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
   color: #616070;
-  margin: 0 16px;
+  margin: 4px 16px;
 }
 
 .card__bottom-rating {
-  height: 16px;
-  width: 166px;
   display: flex;
   margin: 16px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 166px;
+}
+
+.card__bottom-star-img {
+  height: 16px;
+  width: 16px;
 }
 
 .card__bottom-stars {
   gap: 4px;
-  height: 16px;
-  width: 96px;
+  display: flex;
 }
 
 .card__bottom-reviews {
@@ -61,11 +67,62 @@ body {
   font-size: 10px;
   line-height: 14px;
   letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #060b35;
+  margin-left: 17px;
+}
+
+.card__txt-price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #616070;
+}
+
+.card__txt-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
   text-align: right;
   vertical-align: bottom;
   color: #060b35;
-  width: 53px;
-  height: 16px;
+}
+
+.card__bottom-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 16px 16px;
+}
+
+.card__button-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  opacity: 1;
+  border-radius: 5px;
+  background-color: #00acdc;
+  margin: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.card__button-txt:hover {
+  border: 1px solid #00acdc;
+  background-color: #fff;
+  color: #00acdc;
 }
 
 /*# sourceMappingURL=index.css.map */
