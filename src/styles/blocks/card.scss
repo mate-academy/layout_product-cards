@@ -4,20 +4,20 @@
   width: 200px;
   border-radius: $radius-card;
   background-color: $color-white;
-  border: 1px solid $color-border;
+  border: 1px solid #f3f3f3;
   font-family: $font-main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 16px 24px;
+  padding: 32px 19px 16px;
   box-sizing: border-box;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s;
 
   &__img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: 24px;
+    padding-bottom: 40px;
   }
 
   &__content {
@@ -28,53 +28,93 @@
   }
 
   &__title {
+    width: 166px;
+    height: 36px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: $color-gray-text;
+    letter-spacing: 0%;
+    color: $color-text;
+    margin-bottom: 4px;
   }
 
   &__code {
-    margin-top: 4px;
     font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    width: 98px;
+    height: 14px;
+    margin-right: 68px;
+    margin-bottom: 16px;
     color: $color-gray-text;
   }
 
   &__stars {
-    margin-top: 16px;
     display: flex;
+    width: 166px;
+    height: 16px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    width: 53px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0%;
+    align-items: center;
+    color: $color-text;
   }
 
   &__price {
-    margin: 16px 0 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color-gray-text;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $color-text;
   }
 
   &__button {
-    width: 100%;
+    display: block;
+    text-decoration: none;
+    width: 166px;
     height: 40px;
     line-height: 40px;
     border-radius: $radius-card;
     border: 1px solid $color-blue;
     background-color: $color-blue;
-    color: $color-white;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-    transition: 0.3s;
+    font-size: 14px;
+    color: $color-white;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  &__button:hover {
+    background-color: $color-white;
+    color: $color-blue;
+    border-color: $color-blue;
   }
 
   &:hover {
-    border-color: $color-blue;
+    border-color: $color-gray;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-
-    .card__button {
-      background-color: $color-white;
-      color: $color-blue;
-    }
   }
 }
-
