@@ -21,7 +21,7 @@ This is possible because [we use the Parcel library](https://en.parceljs.org/scs
 
 ## Checklist
 
-❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
+❗️ Replace `iuridonada` with your GitHub username and copy the links to the `Pull Request` description:
 
 - [DEMO LINK](https://iuridonada.github.io/layout_product-cards/)
 - [TEST REPORT LINK](https://iuridonada.github.io/layout_product-cards/report/html_report/)
