@@ -1,0 +1,32 @@
+@use 'variables';
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  &__icon {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    margin: 0 1px;
+
+    opacity: 1;
+    filter: none;
+
+    transition:
+      filter 0.3s,
+      opacity 0.3s;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__icon:nth-child(n + #{$i + 1}) {
+        opacity: 0.3;
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
