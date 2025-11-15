@@ -1,3 +1,138 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid rgb(243, 243, 243);
+}
+
+.card__image {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 32px;
+  height: 134px;
+  width: 160px;
+  background-image: url(../images/imac.jpeg);
+  background-size: 160px 134px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.card__name {
+  display: flex;
+  align-items: center;
+  width: 166px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-top: 24px;
+  margin-bottom: -5px;
+  color: rgb(6, 11, 53);
+}
+
+.card__code {
+  display: flex;
+  justify-content: flex-start;
+  width: 98px;
+  height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -7px;
+  margin-right: 68px;
+  color: rgb(97, 96, 112);
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 16px;
+  margin-top: -1px;
+}
+
+.card__rating-revievs {
+  font-size: 10px;
+  font-weight: 400;
+  height: 16px;
+  line-height: 14px;
+  color: rgb(6, 11, 53);
+  position: relative;
+  top: 2px;
+}
+
+.card__price {
+  height: 18px;
+  width: 166px;
+  display: flex;
+  justify-content: space-between;
+  gap: 86px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 7px;
+  position: relative;
+  top: 1px;
+}
+
+.card__price-label {
+  width: 31px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(97, 96, 112);
+}
+
+.card__price-value {
+  width: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(6, 11, 53);
+}
+
+.card__buy {
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  width: 166px;
+  border-radius: 5px;
+  background-color: rgb(0, 172, 220);
+  background-size: 40px 166px;
+  margin-top: 1px;
+  margin-bottom: 16px;
+}
+
+.card__buy-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  width: 166px;
+  height: 40px;
+  text-decoration: none;
+  position: relative;
+}
+
+.card__buy:hover {
+  background-color: rgb(255, 255, 255);
+  height: 38px;
+  width: 164px;
+  border: 1px solid rgb(0, 172, 220);
+  border-radius: 5px;
+}
+
+.card__buy-link:hover {
+  color: rgb(0, 172, 220);
+  position: relative;
+  bottom: 1px;
+}
+
 .stars {
   display: flex;
 }
@@ -19,126 +154,4 @@
 body {
   margin: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  height: 406px;
-  box-shadow: 0 0 5px 2px rgba(2, 2, 2, 0.2);
-  border-radius: 5px;
-  margin: 10px;
-}
-
-.card__image {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 33px;
-  height: 134px;
-  width: 160px;
-  background-image: url(../images/imac.jpeg);
-  background-size: 160px 134px;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-}
-
-.card__text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 25px;
-  padding-top: 15px;
-}
-
-.card__prod {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.card__prod-name {
-  display: flex;
-  align-items: center;
-  width: 166px;
-  height: 36px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-}
-
-.card__prod-code {
-  display: flex;
-  justify-content: flex-start;
-  width: 98px;
-  height: 14px;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  margin-right: 68px;
-}
-
-.card__rating {
-  display: flex;
-  justify-content: space-between;
-  width: 166px;
-  height: 16px;
-}
-
-.card__rating-revievs {
-  font-size: 10px;
-  font-weight: 400;
-  height: 16px;
-  line-height: 14px;
-  padding-top: 2px;
-}
-
-.card__price {
-  height: 18px;
-  width: 166px;
-  display: flex;
-  gap: 86px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  margin-top: 8px;
-}
-
-.card__price-label {
-  width: 31px;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.card__price-value {
-  width: 50px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.card__buy {
-  display: flex;
-  justify-content: flex-end;
-  height: 40px;
-  width: 166px;
-  border-radius: 5px;
-  background-color: rgb(0, 172, 220);
-  background-size: 40px 166px;
-  margin-top: auto;
-  margin-bottom: 15px;
-}
-
-.card__buy-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  width: 166px;
-  height: 40px;
-  text-decoration: none;
-  position: relative;
-  bottom: 1px;
 }

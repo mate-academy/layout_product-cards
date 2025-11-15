@@ -1,0 +1,133 @@
+@use '../styles/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 198px;
+  height: 406px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid rgba(243, 243, 243, 1);
+
+  &__image {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+    height: 134px;
+    width: 160px;
+    background-image: url(../images/imac.jpeg);
+    background-size: 160px 134px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    width: 166px;
+    height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 24px;
+    margin-bottom: -5px;
+    color: $main-color;
+  }
+
+  &__code {
+    display: flex;
+    justify-content: flex-start;
+    width: 98px;
+    height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: -7px;
+    margin-right: 68px;
+    color: $secondary-color;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 16px;
+    margin-top: -1px;
+
+    &-revievs {
+      font-size: 10px;
+      font-weight: 400;
+      height: 16px;
+      line-height: 14px;
+      color: $main-color;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &__price {
+    height: 18px;
+    width: 166px;
+    display: flex;
+    justify-content: space-between;
+    gap: 86px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 7px;
+    position: relative;
+    top: 1px;
+
+    &-label {
+      width: 31px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+
+    &-value {
+      width: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      color: $main-color;
+    }
+  }
+  &__buy {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    width: 166px;
+    border-radius: 5px;
+    background-color: $blue-color;
+    background-size: 40px 166px;
+    margin-top: 1px;
+    margin-bottom: 16px;
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: $white-color;
+      width: 166px;
+      height: 40px;
+      text-decoration: none;
+      position: relative;
+    }
+  }
+  &__buy:hover {
+    background-color: $white-color;
+    height: 38px;
+    width: 164px;
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+  }
+  &__buy-link:hover {
+    color: $blue-color;
+    position: relative;
+    bottom: 1px;
+  }
+}
