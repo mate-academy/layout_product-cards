@@ -1,0 +1,9 @@
+@mixin fill-stars($i) {
+  &:nth-child(-n + #{$i}) {
+    background-image: url('../images/star-active.svg');
+  }
+
+  &:nth-last-child(-n + #{ 5 - $i }) {
+    background-image: url('../images/star.svg');
+  }
+}
