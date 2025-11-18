@@ -1,7 +1,7 @@
 .stars {
   position: relative;
   display: inline-block;
-  width: $star-width;
+  width: $star-width * 5;
   height: $star-height;
 
   background-image: url('../images/star.svg');
@@ -17,19 +17,9 @@
     background-repeat: repeat-x;
   }
 
-  &--1::before {
-    width: 16px;
-  }
-  &--2::before {
-    width: 32px;
-  }
-  &--3::before {
-    width: 48px;
-  }
-  &--4::before {
-    width: 64px;
-  }
-  &--5::before {
-    width: 80px;
+  @for $i from 1 through 5 {
+    &--#{$i}::before {
+      width: $star-width * $i;
+    }
   }
 }
