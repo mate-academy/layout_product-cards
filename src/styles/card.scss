@@ -1,0 +1,105 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  padding: 0 19px;
+
+  &__image {
+    background-image: $img-card;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 32px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__header {
+    margin-top: 40px;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    font-weight: $font-weight;
+    line-height: $line-height-title;
+    color: $color-text;
+    width: 166px;
+  }
+
+  &__code {
+    font-size: $font-size-code;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-code;
+    color: $color-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: $font-size-code;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-review;
+    background-position: center;
+    color: $color-text;
+    transform: translateY(1px);
+  }
+
+  &__price {
+    font-size: $font-size-price;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-title;
+    margin-top: 24px;
+    color: $color-text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-title;
+      color: $color-secondary;
+    }
+
+    &-value {
+      font-size: $font-size-price;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-title;
+      color: $color-text;
+    }
+  }
+
+  &__buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-buy;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-review;
+    height: 40px;
+    color: #fff;
+    background-color: #00acdc;
+    text-decoration: none;
+    border-radius: $border-radius;
+    width: 166px;
+    margin: 16px auto;
+    transition: background-color 0.2s;
+  }
+  &__buy:hover {
+    border-radius: $border-radius;
+    color: #00acdc;
+    background-color: #fff;
+    border: 1px solid #00acdc;
+    cursor: pointer;
+  }
+}
