@@ -1,0 +1,81 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: $card-width;
+  height: 406px;
+  border: 1px solid;
+  border-color: $color-border;
+  border-radius: $card-radius;
+
+  &__image {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+  }
+
+  &__description {
+    line-height: 18px;
+    color: $color-main;
+    font-size: 12px;
+    margin: 40px 16px 0;
+  }
+
+  &__description::after {
+    line-height: 14px;
+    font-weight: 400;
+    content: 'Product code: 195434';
+    display: block;
+    color: $color-secondary;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+
+  &__price {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 16px 0;
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-secondary;
+    }
+
+    &-price {
+      font-size: 16px;
+      color: $color-main;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    font-size: 14px;
+    margin: 16px;
+    color: #fff;
+    display: flex;
+    background-color: $color-accent;
+    width: 166px;
+    height: $button-height;
+    border-radius: $card-radius;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  &__button:hover {
+    background-color: transparent;
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}
