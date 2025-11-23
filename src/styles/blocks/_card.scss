@@ -1,11 +1,15 @@
+@use 'variables';
+
 .card {
   display: flex;
   align-items: center;
 
   &__block {
-    border: 1px solid rgb(243, 243, 243);
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid variables.$color-border-card__block;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: variables.$background-color-card__block;
   }
 
   &__img-block {
@@ -26,8 +30,8 @@
   &__text {
     margin-top: 40px;
     margin-inline: 17px;
-    color: rgb(6, 11, 53);
-    font-size: 12px;
+    color: variables.$color-text-card__text;
+    font-size: variables.$font-size-card__text;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0;
@@ -37,24 +41,25 @@
   &__code {
     margin-top: 4px;
     margin-left: 17px;
-    color: rgba(97, 96, 112);
-    font-size: 10px;
+    color: variables.$color-text-card__code;
+    font-size: variables.$font-size-card__code;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0;
     text-align: left;
   }
 
-  &__stars-dlock {
+  &__stars-block {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 16px;
     margin-inline: 17px;
   }
 
   &__stars-text {
-    color: rgb(6, 11, 53);
-    font-size: 10px;
+    color: variables.$color-text-card__text;
+    font-size: variables.$font-size-card__code;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0;
@@ -62,15 +67,15 @@
   }
 
   &__price {
-    display: flex;
-    justify-content: space-between;
     margin-top: 24px;
     margin-inline: 17px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__price-text {
-    color: rgb(97, 96, 112);
-    font-size: 12px;
+    color: variables.$color-text-card__code;
+    font-size: variables.$font-size-card__text;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0;
@@ -78,8 +83,8 @@
   }
 
   &__price-sum {
-    color: rgb(6, 11, 53);
-    font-size: 16px;
+    color: variables.$color-text-card__text;
+    font-size: variables.$font-size-card__price-sum;
     font-weight: 700;
     line-height: 18px;
     letter-spacing: 0;

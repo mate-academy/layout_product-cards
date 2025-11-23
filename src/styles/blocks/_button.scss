@@ -1,14 +1,18 @@
+@use 'variables';
+
 .button {
   text-align: center;
 
-  &__teg {
+  &__link {
+    display: block;
     margin: 16px 17px 17px;
     padding: 12px 70px;
-    background-color: #00ACDC;
+    background-color: variables.$background-color-button__link;
     border-radius: 5px;
-    border: 1px solid rgb(0, 172, 220);
-    color: rgb(255, 255, 255);
-    font-size: 14px;
+    border: 1px solid variables.$background-color-button__link;
+    cursor: pointer;
+    color: variables.$background-color-card__block;
+    font-size: variables.$font-size-button__link;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0;
@@ -16,9 +20,8 @@
     text-transform: uppercase;
   }
 
-
-  &__teg:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 172, 220);
+  &__link:hover {
+    background-color: variables.$background-color-card__block;
+    color: variables.$background-color-button__link;
   }
 }
