@@ -1,40 +1,33 @@
-$stars-width: 12px;
-$stars-height: 12px;
-$star-gap: 2px;
-$active-star: url('../images/star-active.svg');
-$inactive-star: url('../images/star.svg');
+@import './variables.scss';
 
 .stars {
   display: flex;
-  gap: $star-gap;
+  gap: 2px;
 
-  @for $i from 1 through 5 {
-    &::before {
-      content: '';
-    }
+  span {
+    width: $star-size;
+    height: $star-size;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
-  @for $n from 0 through 5 {
-    &--#{$n} {
-      @for $i from 1 through 5 {
-        > :nth-child(#{$i}) {
-          width: $stars-width;
-          height: $stars-height;
-          background-size: contain;
-          background-repeat: no-repeat;
+  @for $i from 0 through 5 {
+    &--#{$i} {
+      @for $s from 1 through 5 {
+        span:nth-child(#{$s}) {
           background-image: if(
-            $i <= $n,
-            url($active-star),
-            url($inactive-star)
+            $s <= $i,
+            url($star-active),
+            url($star-inactive)
           );
         }
       }
     }
   }
+}
 
-  > * {
-    width: $stars-width;
-    height: $stars-height;
-    display: block;
-  }
+> * {
+  width: $stars-width;
+  height: $stars-height;
+  display: block;
 }
