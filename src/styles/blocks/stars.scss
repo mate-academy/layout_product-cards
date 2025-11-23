@@ -1,50 +1,19 @@
 .stars {
   display: flex;
   box-sizing: border-box;
-  width: fit-content;
-  margin-top: 16px;
 
-  &__star-1 {
-    width: $star-width;
-    height: $star-height;
-    background-image: url(../images/star-active.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: $star-shift;
-  }
-
-  &__star-2 {
-    width: $star-width;
-    height: $star-height;
-    background-image: url(../images/star-active.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: $star-shift;
-  }
-
-  &__star-3 {
-    width: $star-width;
-    height: $star-height;
-    background-image: url(../images/star-active.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: $star-shift;
-  }
-
-  &__star-4 {
-    width: $star-width;
-    height: $star-height;
-    background-image: url(../images/star-active.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: $star-shift;
-  }
-
-  &__star-5 {
-    width: $star-width;
-    height: $star-height;
+  &__star {
+    width: 16px;
+    height: 16px;
     background-image: url(../images/star.svg);
-    background-position: center;
     background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
   }
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
 }

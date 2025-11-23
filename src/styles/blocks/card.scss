@@ -47,15 +47,20 @@
   }
 
   &__reviews {
-    width: fit-content;
-    margin-block: -14px 0;
-    justify-self: end;
     font-size: 10px;
     line-height: 14px;
   }
 
+  &__rating {
+    display: flex;
+    margin-top: 9px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__price {
-    margin-block: 24px 16px;
+    margin-block: 16px 16px;
     display: flex;
     justify-content: space-between;
 
@@ -96,6 +101,7 @@
     color: white;
 
     &:hover {
+      box-sizing: border-box;
       color: $button-color;
       background-color: #fff;
       border: 1px solid $button-color;
