@@ -1,3 +1,116 @@
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
+  width: 100%;
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/imac.jpeg);
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: #060b35;
+  }
+
+  &__article {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: #616070;
+  }
+
+  &__review-reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+    color: #060b35;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__word {
+    font-weight: 00;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    color: #616070;
+  }
+
+  &__total {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: bottom;
+    color: #060b35;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+    align-items: center;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+
+    width: 166px;
+    height: 40px;
+  }
+
+  &__button--buy {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #00acdc;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &__ {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/star-active.svg);
+    width: 16;
+    height: 16;
+    opacity: 1;
+    border-radius: 0.5px;
+  }
 }
