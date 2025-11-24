@@ -42,7 +42,8 @@ body {
     margin-bottom: 16px;
   }
 
-  &__review-reviews {
+  &__review {
+    margin-left: 17px;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
@@ -60,7 +61,7 @@ body {
   }
 
   &__text {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 12px;
     line-height: 18px;
 
@@ -68,7 +69,7 @@ body {
     color: #616070;
   }
 
-  &_number {
+  &__number {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
@@ -78,12 +79,25 @@ body {
     color: #060b35;
   }
 
+  &__container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+  }
+
   &__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #00acdc;
     border-radius: 5px;
+    background-color: #00acdc;
 
     width: 166px;
     height: 40px;
@@ -94,40 +108,35 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: #00acdc;
+    color: #fff;
   }
 
   &__button:hover {
-    background-color: #00acdc;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: #00acdc;
+    border: 1px solid #00acdc;
+    background-color: #fff;
   }
 }
 
 .stars {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 24px;
-  height: 16px;
 
-  &__review {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-    text-align: right;
-  }
-
-  &__stars {
+  &__star {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../images/star-active.svg);
     width: 16;
     height: 16;
+    margin-right: 4px;
+  }
+
+  &__star:nth-child(5) {
+    background-image: url(../images/star.svg);
   }
 }
