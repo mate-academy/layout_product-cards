@@ -13,28 +13,10 @@
       margin-right: 0;
     }
   }
-}
 
-.stars--0 .stars__star:nth-of-type(-n + 0) {
-  background-image: url(../images/star-active.svg);
-}
-
-.stars--1 .stars__star:nth-of-type(-n + 1) {
-  background-image: url(../images/star-active.svg);
-}
-
-.stars--2 .stars__star:nth-of-type(-n + 2) {
-  background-image: url(../images/star-active.svg);
-}
-
-.stars--3 .stars__star:nth-of-type(-n + 3) {
-  background-image: url(../images/star-active.svg);
-}
-
-.stars--4 .stars__star:nth-of-type(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
-.stars--5 .stars__star:nth-of-type(-n + 5) {
-  background-image: url(../images/star-active.svg);
+  @for $i from 0 through 5 {
+    &--#{$i} &__star:nth-of-type(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
