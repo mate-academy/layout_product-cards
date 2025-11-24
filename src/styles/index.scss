@@ -1,5 +1,7 @@
-*::before {
+* {
+  letter-spacing: 0%;
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -8,43 +10,41 @@ html {
 
 body {
   width: 100%;
-  margin: 0;
 }
 
 .card {
   width: 200px;
   box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
 
   &__image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(../images/imac.jpeg);
     width: 160px;
     height: 134px;
+    margin-inline: auto;
+    margin-bottom: 40px;
   }
 
   &__name {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0%;
     color: #060b35;
+    margin-bottom: 4px;
   }
 
-  &__article {
+  &__div {
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: 0%;
     color: #616070;
+    margin-bottom: 16px;
   }
 
   &__review-reviews {
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: 0%;
     text-align: right;
     color: #060b35;
   }
@@ -53,22 +53,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 16px;
   }
 
-  &__word {
-    font-weight: 00;
+  &__price--text {
+    font-weight: 700;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0%;
+
     vertical-align: bottom;
     color: #616070;
   }
 
-  &__total {
+  &_price--number {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    letter-spacing: 0%;
+
     text-align: right;
     vertical-align: bottom;
     color: #060b35;
@@ -77,24 +78,31 @@ body {
   &__button {
     display: flex;
     justify-content: center;
-    margin: 16px;
     align-items: center;
     border: 1px solid #00acdc;
     border-radius: 5px;
 
     width: 166px;
     height: 40px;
-  }
 
-  &__button--buy {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #00acdc;
+  }
+
+  &__button:hover {
+    background-color: #00acdc;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
   }
 }
 
@@ -102,6 +110,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 24px;
+  height: 16px;
+
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+  }
 
   &__ {
     background-position: left;
