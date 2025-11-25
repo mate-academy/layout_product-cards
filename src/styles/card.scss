@@ -1,17 +1,4 @@
-$main-color: #00acdc;
-$text-accent-color: #060b35;
-$text-secondary-color: #616070;
-$font-family: 'Roboto', sans-serif;
-
-body {
-  margin: 0;
-}
-
-html {
-  font-size: 10px;
-  line-height: 14px;
-  font-family: $font-family;
-}
+@import 'variables';
 
 .card {
   box-sizing: border-box;
@@ -45,8 +32,8 @@ html {
     background-color: $main-color;
 
     &:hover {
-      background-color: #fff; // фон стає білим
-      color: $main-color; // текст стає кольору основного акценту
+      background-color: #fff;
+      color: $main-color;
       border: 1px solid $main-color;
     }
   }
@@ -61,7 +48,7 @@ html {
 
   &__code {
     margin-bottom: 16px;
-    color: #616070;
+    color: $text-secondary-color;
   }
 
   &__review-container {
@@ -85,7 +72,7 @@ html {
   &__price-label {
     font-size: 12px;
     line-height: 18px;
-    color: #616070;
+    color: $text-secondary-color;
   }
 
   &__price {
@@ -93,27 +80,5 @@ html {
     line-height: 18px;
     font-weight: bold;
     color: $text-accent-color;
-  }
-}
-
-.stars {
-  display: flex;
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &__stars {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-    background-image: url(../images/star.svg);
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
