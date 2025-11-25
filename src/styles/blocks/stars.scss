@@ -8,10 +8,9 @@
     background-position: center center;
     margin-right: 4px;
   }
-}
-
-@for $n from 1 through 5 {
-  .stars--#{n} .stars__star:nth-child(-n + #{$n}) {
-    background-image: url(../images/star-active.svg);
+  @for $n from 1 through 5 {
+    &--#{n} .stars__star:nth-child(-n + #{$n}) {
+      background-image: url(../images/star-active.svg);
+    }
   }
 }
