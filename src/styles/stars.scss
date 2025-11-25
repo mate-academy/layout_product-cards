@@ -10,8 +10,12 @@
     width: $star-size;
     height: $star-size;
   }
+}
 
-  &__star:nth-child(-n + $highlight-stars-count) {
-    background-image: url('../images/star-active.svg');
+@for $i from 1 through $rate-count {
+  .stars--#{$i} {
+    .stars__star:nth-child(-n + #{$i}) {
+      background-image: url('../images/star-active.svg');
+    }
   }
 }
