@@ -4,14 +4,14 @@
   justify-content: left;
 
   &__star {
-    background-image: url('../images/star-active.svg');
+    background-image: url('../images/star.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: $star-size;
     height: $star-size;
   }
 
-  &__star:last-child {
-    background-image: url('../images/star.svg');
+  &__star:nth-child(-n + $highlight-stars-count) {
+    background-image: url('../images/star-active.svg');
   }
 }
