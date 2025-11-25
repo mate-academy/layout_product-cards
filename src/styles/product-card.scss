@@ -1,0 +1,77 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+
+  padding: 32px 16px 16px;
+  width: 200px;
+  box-sizing: border-box;
+
+  border: 1px solid #f3f3f3;
+  border-radius: $card-border-radius;
+  background-color: $card-bg-color;
+
+  &__image {
+    margin-bottom: 40px;
+    align-self: center;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+
+    @include font-config(500, 12px, 18px, $main-txt-accent);
+  }
+
+  &__code {
+    margin: 0 0 16px;
+    align-self: flex-start;
+
+    @include font-config(400, 10px, 14px, $secondary-txt-accent);
+  }
+
+  &__review {
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+
+    @include font-config(400, 10px, 14px, $main-txt-accent);
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include font-config(400, 12px, 14px, $secondary-txt-accent);
+  }
+
+  &__price-value {
+    @include font-config(700, 16px, 18px, $main-txt-accent);
+  }
+
+  &__btn {
+    height: 40px;
+
+    background-color: $btn-bg-color;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: $card-border-radius;
+
+    @include font-config(700, 14px, 16px, $card-bg-color);
+
+    &:hover {
+      background-color: $card-bg-color;
+      color: $btn-bg-color;
+      border: 1px solid $btn-bg-color;
+      cursor: pointer;
+    }
+  }
+}
