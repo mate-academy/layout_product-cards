@@ -1,3 +1,5 @@
+@import 'variables';
+
 .stars {
   display: flex;
   align-items: center;
@@ -5,8 +7,10 @@
   margin-top: 0;
 }
 
-.reviews-count {
+.stars__reviews-count {
   margin-left: 5px;
+  font-size: $font-size-code;
+  color: $color-text-dark;
 }
 
 .stars__star {
@@ -23,33 +27,27 @@
   margin-right: 0;
 }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
+.stars__star:nth-child(-n + 1) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars__star:nth-child(-n + 2) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars__star:nth-child(-n + 3) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+.stars__star:nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
 }
 
 .price {
   display: flex;
   justify-content: space-between;
-}
-
-.buy-button {
-  border: none;
-  outline: none;
-  padding: 0;
-  cursor: pointer;
-  width: auto;
-  height: 40px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #00acdc;
-
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.buy-button:hover {
-  background-color: #fff;
-  border: 1px solid #00acdc;
-  color: #00acdc;
 }

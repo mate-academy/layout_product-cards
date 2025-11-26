@@ -1,11 +1,6 @@
-.container {
-  display: flex;
-  width: 198px;
-  height: 406px;
-  padding: 20px;
-}
+@import 'variables';
 
-.image {
+.card__image {
   width: 160px;
   height: 134px;
   background-image: url(../images/imac.jpeg);
@@ -15,34 +10,34 @@
 }
 
 .card {
-  border: 1px solid #dfdfdf;
+  border: 1px solid $color-border;
   display: flex;
   flex-direction: column;
-  font-weight: 500;
+  font-weight: $font-weight-regular;
 }
 
-.info {
-  padding: 10px;
+.card__info {
+  padding: $padding-default;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.name {
+.card__name {
   width: 166px;
   height: 36px;
-  font-size: 12px;
+  font-size: $font-size-title;
   line-height: 18px;
-  color: #060b35;
+  color: $color-text-dark;
 }
 
-.product-code {
-  font-size: 10px;
-  font-weight: 400;
+.card__product-code {
+  font-size: $font-size-code;
+  font-weight: $font-weight-regular;
   line-height: 14px;
 }
 
-.price-block {
+.card__price-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,13 +45,35 @@
   margin-top: auto;
 }
 
-.price-label {
-  font-size: 12px;
-  color: #999;
+.card__price-label {
+  font-size: $font-size-label;
+  color: $color-text-light;
 }
 
-.price {
-  font-size: 16px;
-  color: #333;
-  font-weight: 700;
+.card__price {
+  font-size: $font-size-price;
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+}
+
+.card__buy-button {
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  width: auto;
+  height: 40px;
+  font-weight: $font-weight-bold;
+  color: $color-primary-hover;
+  background-color: $color-primary;
+
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.card__buy-button:hover {
+  background-color: $color-primary-hover;
+  border: 1px solid $color-primary;
+  color: $color-primary;
 }
