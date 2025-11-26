@@ -1,3 +1,116 @@
 body {
   margin: 0;
 }
+
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  &__title {
+    margin-bottom: 4px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__code {
+    font-optical-sizing: auto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #616070;
+    margin-bottom: 16px;
+  }
+  &__image {
+    display: block;
+    height: 134px;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 160px;
+    margin-bottom: 40px;
+  }
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #060b35;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__price-name {
+    color: #616070;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__price-cost {
+    color: #060b35;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+  &__review-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    margin-bottom: 24px;
+  }
+}
+
+
+
+.stars {
+  display: flex;
+  &__star {
+    display: block;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/star.svg);
+    height: 16px;
+    width: 16px;
+  }
+  &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+
+
+.button {
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-size: 14px;
+  &-box {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #00acdc;
+    border: 1px solid #00acdc;
+    height: 40px;
+    width: 166px;
+    border-radius: 5px;
+  }
+  &:hover {
+    color: #00acdc;
+  }
+  &-box:hover {
+    border: 1px solid #00acdc;
+    background-color: #fff;
+  }
+}
