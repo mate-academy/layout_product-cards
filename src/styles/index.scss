@@ -1,12 +1,52 @@
+@import 'variables';
+@import 'stars';
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .card {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
   width: 200px;
   height: 408px;
-  border: solid 1px;
-  background-color: #FFF;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  padding: 32 16 16;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__name {
+    margin: 0 0 4px;
+    font-weight: 500;
+    font-size: $font-size;
+    line-height: 18px;
+    color: $main-accent;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    color: $Secondary;
+    margin: 0;
+  }
+
+  &__revews {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 5px;
+     }
 
 }
