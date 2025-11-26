@@ -1,3 +1,139 @@
-body {
+:root {
+  --main-color: #060b35;
+  --second-color: #616070;
+  --link-color: #00acdc;
+  --link-text-color: #fff;
+  --card-border: #f3f3f3;
+}
+
+body,
+h1,
+p,
+a,
+div,
+img {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+
+  &__logo {
+    width: 160px;
+    height: 134px;
+    margin: 32px 20px 40px;
+
+    &-image {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px auto 0;
+    width: 166px;
+    height: 40px;
+    background-color: var(--link-color);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--link-text-color);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--link-color);
+      background-color: var(--link-text-color);
+      border: 1px solid var(--link-color);
+    }
+  }
+}
+
+.product-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: 16px;
+  color: var(--main-color);
+}
+
+.product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin: 4px 0 0 16px;
+  color: var(--second-color);
+}
+
+.product-rating {
+  margin: 16px 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .product-reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--main-color);
+    margin: 0;
+  }
+}
+
+.product-price {
+  margin: 16px 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--second-color);
+  }
+
+  &__amount {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--main-color);
+  }
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.stars--4 .stars__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
 }
