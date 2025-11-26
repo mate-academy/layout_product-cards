@@ -1,0 +1,126 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 200px;
+  margin: 0;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+
+  &__content {
+    width: 166px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+    opacity: 1;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    padding-top: 40px;
+    padding-bottom: 4px;
+    color: $text-color-main;
+  }
+
+  &__code {
+    margin: 0;
+    text-align: start;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $text-color-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 16px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  &__reviews {
+    display: inline-block;
+    margin: 0;
+    padding-top: 2px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+    color: $text-color-main;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 18px;
+    padding-bottom: 16px;
+
+    &-left {
+      display: flex;
+      margin: 0;
+      letter-spacing: 0%;
+      font-weight: 400;
+      font-size: 12px;
+      color: $text-color-secondary;
+    }
+
+    &-right {
+      display: flex;
+      margin: 0;
+      letter-spacing: 0%;
+      font-weight: 700;
+      font-size: 16px;
+      color: $text-color-main;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    opacity: 1;
+    box-sizing: border-box;
+    border: 1px solid $button-color-main;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $button-color-main;
+
+    &-text {
+      color: $button-color-secondary;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      box-sizing: border-box;
+      border: 1px solid $button-color-main;
+      background-color: $button-color-secondary;
+
+      .card__button-text {
+        color: $button-color-main;
+      }
+    }
+  }
+}
