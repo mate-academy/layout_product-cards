@@ -3,6 +3,9 @@
 .card {
   box-sizing: border-box;
   display: flex;
+  width: $card-width;
+  height: $card-height;
+  border-color: $color-border;
   flex-direction: column;
   font-weight: $font-weight-regular;
   &__image {
@@ -28,7 +31,7 @@
     color: $color-text-dark;
   }
 
-  &_product-code {
+  &__product-code {
     font-size: $font-size-code;
     font-weight: $font-weight-regular;
     line-height: 14px;
@@ -67,11 +70,10 @@
     text-transform: uppercase;
     text-align: center;
     border-radius: 5px;
-  }
-
-  &__buy-button:hover {
-    background-color: $color-primary-hover;
-    border: 1px solid $color-primary;
-    color: $color-primary;
+    &:hover {
+      background-color: $color-primary-hover;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+    }
   }
 }

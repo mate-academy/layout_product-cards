@@ -20,15 +20,15 @@ $max-stars: 5;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  &__star:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+      margin-right: 0;
+    }
 
-  @for $i from 1 through $max-stars {
-    &--#{$i} {
-      .stars__star:nth-child(-n + #{$i}) {
-        background-image: url(../images/star-active.svg);
+    @for $i from 1 through $max-stars {
+      &--#{$i} {
+        &:nth-child(-n + #{$i}) {
+          background-image: url(../images/star-active.svg);
+        }
       }
     }
   }
