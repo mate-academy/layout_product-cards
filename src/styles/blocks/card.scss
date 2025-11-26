@@ -9,7 +9,7 @@
 
   border-width: 1px;
   border-style: solid;
-  border-color: #f3f3f3;
+  border-color: $border;
   border-radius: 5px;
 
   &__image {
@@ -98,24 +98,29 @@
   }
 
   &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
     box-sizing: border-box;
     background-color: $blue-accent;
     height: 40px;
     border-radius: 5px;
     border-style: none;
+    border-width: 1px;
 
     font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0%;
-    text-align: center;
     text-transform: uppercase;
     color: white;
   }
 
   &__button:hover {
-    background-color: #fff;
+    background-color: $background-active;
     border-style: solid;
     border-color: $blue-accent;
     color: $blue-accent;
