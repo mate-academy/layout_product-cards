@@ -1,6 +1,7 @@
 .card {
-  width: 200px;
-  height: 408px;
+  box-sizing: border-box;
+  width: 198px;
+  height: 406px;
   border: 1px solid $color-border;
   background: #fff;
   font-family: inherit;
@@ -34,6 +35,7 @@
   &__rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
     padding: 0 17px 0 0;
   }
@@ -42,7 +44,6 @@
     margin: 0;
     font-size: 10px;
     font-weight: 400;
-    line-height: 14px;
     color: $color-text;
   }
 
@@ -50,7 +51,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 18px;
     margin-bottom: 20px;
     padding: 0 17px;
   }
@@ -58,14 +58,12 @@
   &__price-label {
     font-size: 12px;
     font-weight: 400;
-    line-height: 18px;
     color: $color-text;
   }
 
   &__price-value {
     font-size: 16px;
     font-weight: 700;
-    line-height: 18px;
     color: $color-text;
   }
 
@@ -81,21 +79,20 @@
     justify-content: center;
 
     font-size: 14px;
-    line-height: 1px;
     font-weight: 700;
     text-transform: uppercase;
 
     text-decoration: none;
-    border: 1px solid transparent;
+    border: 1px solid $color-primary;
 
     &--buy {
       background: $color-primary;
-      color: #fff;
+      color: $color-white;
 
       &:hover {
         background-color: $color-border;
         color: $color-primary;
-        border: $color-primary;
+        border: 1px solid $color-primary;
       }
     }
   }
