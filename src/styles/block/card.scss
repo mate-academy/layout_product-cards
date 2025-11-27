@@ -51,32 +51,32 @@
     text-align: right;
   }
 
-  .price {
+  &__price {
     @include m.flex-between;
 
     align-items: center;
     margin-bottom: 16px;
     width: 166px;
-
-    &__title {
-      width: 31px;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      color: v.$color-grey;
-    }
-
-    &__number {
-      width: 50px;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      text-align: right;
-      color: v.$color-darkBlue;
-    }
   }
 
-  .button {
+  &__price-title {
+    width: 31px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: v.$color-grey;
+  }
+
+  &__price-number {
+    width: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: v.$color-darkBlue;
+  }
+
+  &__button {
     @include m.flex-center;
 
     width: 100%;
@@ -86,22 +86,23 @@
     border-radius: 5px;
     background-color: v.$color-blue;
     border: 1px solid v.$color-blue;
+  }
 
-    &__text {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      text-transform: uppercase;
-      color: v.$color-white;
-    }
+  &__button-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: v.$color-white;
+  }
 
-    &:hover {
-      background-color: v.$color-white;
+  &__button:hover {
+    background-color: v.$color-white;
+  }
 
-      .button__text {
-        color: v.$color-blue;
-      }
-    }
+  &__button:hover
+  &__button-text {
+    color: v.$color-blue;
   }
 }
