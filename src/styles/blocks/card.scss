@@ -1,0 +1,100 @@
+.card {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  width: $card-width;
+  background-color: $card-main-color;
+  border-radius: $card-all-radius;
+  padding-bottom: $card-padding-bottom;
+  border: $card-border solid $card-main-color;
+
+  &__image {
+    padding-top: $card-padding-top;
+    margin-bottom: $img-margin-bottom;
+    padding-inline: $img-padding;
+    width: $img-size-width;
+    height: $img-size-height;
+  }
+
+  &__title {
+    padding-inline: $card-padding-inline;
+    color: $text-main-color;
+    font-weight: $font-w-title;
+    font-size: $font-s-title-label;
+    line-height: 18px;
+    margin-bottom: $title-margin-bottom;
+  }
+
+  &__product-code {
+    padding-inline: $card-padding-inline;
+    width: $card-all-width;
+    color: $text-less-color;
+    font-size: $font-s-code-reviews;
+    margin-bottom: $space-middle;
+    line-height: 14px;
+  }
+
+  &__rating-row {
+    padding-left: $card-padding-inline;
+    width: $card-all-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-large;
+  }
+
+  &__reviews {
+    padding-right: $reviews-padding-right;
+    color: $text-main-color;
+    font-size: $font-s-code-reviews;
+    line-height: 14px;
+    align-self: flex-end;
+  }
+
+  &__price-row {
+    padding-inline: $card-padding-inline;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $card-all-width;
+    margin-bottom: $space-middle;
+  }
+
+  &__label {
+    color: $text-less-color;
+    font-size: $font-s-title-label;
+    line-height: 18px;
+  }
+
+  &__value {
+    margin-right: $value-margin-right;
+    color: $text-main-color;
+    font-weight: $font-w-bold;
+    font-size: $font-s-price;
+    line-height: 18px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    color: $text-button-color;
+    background-color: $button-main-color;
+    padding: $button-size 0;
+    margin: 0 $space-middle $space-middle;
+    border-radius: $card-all-radius;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: $font-w-bold;
+    font-size: $font-s-button;
+    line-height: 16px;
+
+    &:hover {
+      box-sizing: border-box;
+      background-color: $button-hover-color;
+      color: $text-hover-color;
+      transition: 0.3s ease;
+      border: 1px solid $button-main-color;
+    }
+  }
+}
