@@ -14,8 +14,10 @@
   }
 
   @for $i from 1 through 5 {
-    &__star:nth-child(-n + #{$i}) {
-      background-image: url(../images/star-active.svg);
+    &.stars--#{$i} {
+      &__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
     }
   }
 }
