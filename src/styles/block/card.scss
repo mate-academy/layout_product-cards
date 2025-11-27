@@ -76,6 +76,15 @@
     color: v.$color-darkBlue;
   }
 
+  &__button-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: v.$color-white;
+  }
+
   &__button {
     @include m.flex-center;
 
@@ -86,23 +95,13 @@
     border-radius: 5px;
     background-color: v.$color-blue;
     border: 1px solid v.$color-blue;
-  }
 
-  &__button-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    text-transform: uppercase;
-    color: v.$color-white;
-  }
+    &:hover {
+      background-color: v.$color-white;
 
-  &__button:hover {
-    background-color: v.$color-white;
-  }
-
-  &__button:hover
-  &__button-text {
-    color: v.$color-blue;
+      .product-card__button-text {
+        color: v.$color-blue;
+      }
+    }
   }
 }
