@@ -7,7 +7,7 @@
   background-color: $card-main-color;
   border-radius: 5px;
   padding-bottom: $card-padding-bottom;
-  border: 1px solid #f3f3f3;
+  border: $card-border solid $card-main-color;
 
   &__image {
     padding-top: $card-padding-top;
@@ -51,7 +51,6 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    justify-content: center;
     align-self: flex-end;
   }
 
@@ -91,11 +90,11 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-  }
 
-  &__button:hover {
-    background-color: $button-hover-color;
-    color: $text-hover-color;
-    transition: 0.3s ease;
+    &:hover {
+      background-color: $button-hover-color;
+      color: $text-hover-color;
+      transition: 0.3s ease;
+    }
   }
 }
