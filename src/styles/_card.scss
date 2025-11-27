@@ -2,28 +2,25 @@
   margin: 0;
 }
 
-.product {
+.card {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   margin: auto;
   width: $card-width-full;
   height: 406px;
   border: 1px solid rgba(243, 243, 243, 1);
   border-radius: 5px;
-  background-color: $product-background-color;
+  background-color: $card-background-color;
   padding: 32px 16px 16px;
 
   &__image {
     display: flex;
-    justify-content: center;
-    background-size: cover;
     height: 134px;
     width: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-image: url(../images/imac.jpeg);
     margin-bottom: 40px;
-    padding: 0 3px;
   }
 
   &__name {
@@ -39,11 +36,11 @@
 
   &__code {
     display: flex;
-    justify-content: flex-start;
     font-weight: $font-weight-400;
     font-size: 10px;
     height: 14px;
     margin-bottom: 16px;
+    color: rgba(97, 96, 112, 1);
   }
 
   &__price {
@@ -53,7 +50,7 @@
     height: 18px;
     margin-bottom: 16px;
 
-    &.product__price--name {
+    &--name {
       font-family: Roboto, sans-serif;
       font-weight: $font-weight-400;
       font-size: 12px;
@@ -62,7 +59,7 @@
       margin-right: 0;
     }
 
-    &.product__price--price {
+    &--price {
       justify-content: flex-end;
       font-family: Roboto, sans-serif;
       font-weight: 700;
@@ -77,9 +74,7 @@
     justify-content: center;
     width: 166;
     height: 40;
-    top: 351px;
-    left: 17px;
-    border: none;
+    border: 1px solid transparent;
     outline: none;
     border-radius: 5px;
     background-color: rgba(0, 172, 220, 1);
@@ -90,8 +85,8 @@
     font-size: 14px;
 
     &:hover {
-      background-color: $product-background-color;
-      border: var(--border-width) solid rgba(0, 172, 220, 1);
+      background-color: $card-background-color;
+      border: $border-width solid rgba(0, 172, 220, 1);
       color: rgba(0, 172, 220, 1);
     }
   }
