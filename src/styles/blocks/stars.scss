@@ -1,16 +1,24 @@
 .stars {
   display: flex;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: $star-margin-right;
+  }
 }
 
-.stars__star {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 4px;
-}
+// .stars--4 .stars__star:nth-child(-n + 4) {
+//   background-image: url(../images/star-active.svg);
+// }
 
-.stars--4 .stars__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
+@for $i from 1 through 5 {
+  .stars--#{$i} {
+    .stars__star:nth-child(-n + #{$i}) {
+      background-image: url('/src/images/star-active.svg');
+    }
+  }
 }
