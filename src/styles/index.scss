@@ -1,20 +1,118 @@
-*,
-*::before,
-*::after {
-  margin: 0;
+@import './variables';
+
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: $font-main;
 }
 
-@import './variables';
-@import './card';
-@import './stars';
+html {
+  font-size: $font-size-base;
+}
 
 body {
-  font-family: $font-family;
+  margin: 0;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &:not(:last-child) {
+      margin-right: $star-gap;
+    }
+  }
+
+  &--1 {
+    .stars__star:nth-child(-n + 1) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &--2 {
+    .stars__star:nth-child(-n + 2) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &--3 {
+    .stars__star:nth-child(-n + 3) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &--4 {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &--5 {
+    .stars__star:nth-child(-n + 5) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
+
+.product-card {
+  width: $card-width;
+  border: 1px solid $card-border-color;
+  padding: $card-padding;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-card__image {
+  width: 100%;
+  height: auto;
+}
+
+.product-card__title {
+  font-size: $font-size-base;
+}
+
+.product-card__rating {
+  display: flex;
+}
+
+.product-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-size-base;
+}
+
+.product-card__button {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: $body-background;
+}
+
+.product-card__button button {
+  width: 166px;
+  height: 40px;
+  border-radius: 5px;
+
+  background-color: #00acdc;
+  color: #fff;
+  border: 2px solid #00acdc;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.product-card__button button:hover {
+  background-color: #fff;
+  color: #00acdc;
+  border-color: #00acdc;
 }
