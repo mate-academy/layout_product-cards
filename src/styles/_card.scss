@@ -1,0 +1,93 @@
+.body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  align-items: center;
+  margin: auto;
+  width: $card-width-full;
+  height: 406px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  background-color: $card-background-color;
+  padding: 32px 16px 16px;
+
+  &__image {
+    display: flex;
+    height: 134px;
+    width: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/imac.jpeg);
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    width: 166;
+    height: 36;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    display: flex;
+    font-weight: $font-weight-400;
+    font-size: 10px;
+    height: 14px;
+    margin-bottom: 16px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+    margin-bottom: 16px;
+
+    &--name {
+      font-family: Roboto, sans-serif;
+      font-weight: $font-weight-400;
+      font-size: 12px;
+      vertical-align: bottom;
+      color: rgba(97, 96, 112, 1);
+      margin-right: 0;
+    }
+
+    &--price {
+      justify-content: flex-end;
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166;
+    height: 40;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgba(0, 172, 220, 1);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $card-background-color;
+      border: $border-width solid rgba(0, 172, 220, 1);
+      color: rgba(0, 172, 220, 1);
+    }
+  }
+}

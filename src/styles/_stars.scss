@@ -1,0 +1,34 @@
+.card__rewievs {
+  display: flex;
+  width: 166px;
+  height: 16px;
+  margin-bottom: 24px;
+
+  .stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .stars__star {
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/star.svg);
+      margin: 0 4px 0 0;
+    }
+
+    .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &.card__rewievs--num {
+    font-weight: $font-weight-400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    vertical-align: bottom;
+    justify-content: flex-end;
+  }
+}
