@@ -1,11 +1,6 @@
-$color-main-accent: #060b35;
-$color-secondary: #616070;
-$color-blue-accent: #00acdc;
-$color-gray: #f3f3f3;
-$color-yellow: #ffde6a;
-$border-radius: 5px;
-$card-width: 200px;
-$card-height: 408px;
+@import 'variables';
+@import 'card';
+@import 'stars';
 
 body {
   margin: 0;
@@ -21,107 +16,5 @@ body {
 
   &__cards {
     display: flex;
-  }
-}
-
-.card {
-  width: $card-width;
-  border: 1px solid $color-gray;
-  border-radius: $border-radius;
-  background-color: #fff;
-  box-sizing: border-box;
-
-  &__image {
-    width: auto;
-    height: 132px;
-    object-fit: cover;
-    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
-    margin: 33px 19px 0 19px;
-  }
-
-  &__title {
-    font-size: 12px;
-    font-weight: 500;
-    color: $color-main-accent;
-    line-height: 18px;
-    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
-    margin: 40px 16px 4px 16px;
-  }
-
-  &__code {
-    font-size: 10px;
-    color: $color-secondary;
-    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
-    margin: 4px 0 16px 16px;
-  }
-
-  &__rating {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
-    margin: 0 16px 10px 16px;
-  }
-
-  &__reviews {
-    font-size: 10px;
-    color: $color-secondary;
-  }
-
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    font-weight: 400;
-    color: $color-main-accent;
-    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
-    margin: 24px 16px 16px 16px;
-
-    &-value {
-      display: inline-block;
-      font-size: 16px;
-      font-weight: 700;
-      color: $color-secondary;
-      margin-top: 3px;
-    }
-  }
-
-  &__buy {
-    display: block;
-    margin: 16px;
-    text-align: center;
-    padding: 10px 0;
-    border: 2px solid $color-blue-accent;
-    border-radius: $border-radius;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    background-color: $color-blue-accent;
-    text-decoration: none;
-    transition: 0.25s;
-
-    &:hover {
-      background-color: #fff;
-      color: $color-blue-accent;
-      border: 2px solid $color-blue-accent;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-  gap: 4px;
-
-  &__star {
-    width: 16px;
-    height: 16px;
-    background-image: url('../images/star.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &--active {
-      background-image: url('../images/star-active.svg');
-    }
   }
 }
