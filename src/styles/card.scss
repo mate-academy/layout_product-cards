@@ -1,0 +1,97 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+  padding-top: 32px;
+  border: 1px solid $color-border;
+  box-sizing: border-box;
+
+  &__image {
+    width: $image-width;
+    padding-left: 19px;
+    padding-bottom: 37px;
+  }
+
+  &__title {
+    font-weight: $weight-title;
+    font-size: $size-title;
+    line-height: $line-height-title;
+    margin-top: 0;
+    padding-left: 16px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: $weight-code;
+    font-size: $size-code;
+    line-height: $line-height-code;
+    color: $color-product-code;
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__rating-and-reviews {
+    display: flex;
+    justify-content: space-between;
+    width: $rating-reviews-width;
+    height: $rating-reviews-height;
+    padding-left: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    font-size: $size-reviews;
+    transform: translateY(-2);
+  }
+
+  &__price-section {
+    display: flex;
+    justify-content: space-between;
+    width: $price-section-width;
+    padding-left: 16px;
+    margin-bottom: 14px;
+  }
+
+  &__price-label {
+    font-weight: $weight-label;
+    font-size: $size-label;
+    color: $color-product-code;
+    line-height: $line-height-label;
+    text-align: left;
+  }
+
+  &__price-value {
+    font-weight: $weight-value;
+    font-size: $size-value;
+
+    // color: #060b35;
+    transform: translateY(-1px);
+  }
+
+  &__buy-link {
+    background-color: $color-button;
+    border-radius: 5px;
+    width: $button-width;
+    text-align: center;
+    font-size: $font-size-buy;
+    line-height: $line-height-buy;
+    color: $color-button-text;
+    font-weight: $font-weight-buy;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    transform: translateY(1px);
+  }
+
+  &__buy-link:hover {
+    background-color: transparent;
+    color: $color-button;
+    border: 1px solid $color-button;
+  }
+}
