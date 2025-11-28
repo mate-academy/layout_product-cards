@@ -1,0 +1,123 @@
+@import './variables';
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: $page-bg;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid $border-grey;
+  border-radius: 5px;
+  background-color: $white;
+  padding: 32px 16px 16px;
+
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+
+  &:hover,
+  &.card--hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    align-self: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  &__text-block {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: $size-middle;
+    line-height: $line-height-big;
+    font-weight: $weight-middle;
+    color: $black;
+    margin: 0;
+  }
+
+  &__product-code {
+    font-size: $size-small;
+    line-height: $line-height-middle;
+    font-weight: $weight-regular;
+    color: $grey-dark;
+    margin: 4px 0 0;
+  }
+
+  &__rating-block {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    justify-content: space-between;
+
+    .card__reviews-count {
+      font-size: $size-small;
+      line-height: $line-height-middle;
+      font-weight: $weight-regular;
+      color: $black;
+      margin: 0;
+    }
+  }
+
+  &__price-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .card__price-label {
+      font-size: $size-middle;
+      line-height: $line-height-big;
+      font-weight: $weight-regular;
+      color: $grey-dark;
+      margin: 0;
+    }
+
+    .card__price-value {
+      font-size: $size-big;
+      line-height: $line-height-big;
+      font-weight: $weight-bold;
+      color: $black;
+      margin: 0;
+    }
+  }
+
+  &__button-link {
+    display: block;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    margin-top: auto;
+
+    background-color: $blue-primary;
+    color: $white;
+    border: 1px solid $blue-primary;
+    border-radius: 5px;
+    font-weight: $weight-bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &--hover-state {
+      background-color: $white;
+      color: $blue-hover-border;
+      border-color: $blue-hover-border;
+    }
+  }
+}
