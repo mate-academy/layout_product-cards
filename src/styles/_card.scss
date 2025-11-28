@@ -1,7 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  box-sizing: border-box;
   width: 200px;
   background-color: $white;
   border: 1px solid $border-color;
@@ -9,20 +9,22 @@
   border-radius: 5px;
 
   &__image {
-    display: block;
     width: 160px;
     height: 134px;
-    margin: 0 auto 40px;
-    background-image: url('../images/imac.jpeg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    align-self: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    height: 54px;
+    flex-direction: column;
+    margin-bottom: 16px;
   }
 
   &__name {
+    font-size: 12px;
     margin: 0 0 4px;
     font-weight: 500;
-    font-size: $font-size;
     line-height: 18px;
     color: $main-accent;
   }
@@ -31,12 +33,14 @@
     font-weight: 400;
     font-size: 10px;
     color: $secondary;
-    margin: 0 0 16px;
+    margin: 0;
   }
 
   &__stareview {
     display: flex;
-    height: 16px;
+    margin-bottom: 24px;
+
+    // height: 16px;
     align-items: center;
     justify-content: space-between;
   }
@@ -50,7 +54,7 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    margin: 24px 0 16px;
+    margin: 0 0 16px;
   }
 
   &__price-text {
@@ -69,25 +73,25 @@
   }
 
   &__button {
-    display: flex;
-    width: 100%;
+    display: block;
     height: 40px;
     border-radius: 5px;
     background-color: $blue-accent;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 40px;
+    text-align: center;
     text-transform: uppercase;
-    justify-content: center;
     align-items: center;
     text-decoration: none;
     color: $white;
     border: 1px solid transparent;
-  }
 
-  &__button:hover {
-    color: $blue-accent;
-    background-color: $white;
-    border: 1px solid $blue-accent;
+    &:hover {
+      color: $blue-accent;
+      background-color: $white;
+      border: 1px solid $blue-accent;
+      cursor: pointer;
+    }
   }
 }
