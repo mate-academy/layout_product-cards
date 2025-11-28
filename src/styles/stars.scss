@@ -1,3 +1,33 @@
-&__stars__list {
-  height: $star-height;
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-inline: 16px;
+
+  &__rating {
+    display: flex;
+  }
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/star.svg);
+  }
+
+  &__reviews {
+    line-height: 16px;
+    color: $main-color;
+    text-align: center;
+    font-weight: 400;
+    font-size: 10px;
+  }
+
+@for $i from 1 through 5 {
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
