@@ -13,7 +13,9 @@
     margin-left: 4px;
   }
 
-  &--4 &__star:nth-child(-n + 4) {
-    background-image: url('../images/star-active.svg');
+  @for $active-stars-number from 1 through 5 {
+    &--#{$active-stars-number} &__star:nth-child(-n + #{$active-stars-number}) {
+      background-image: url('../images/star-active.svg');
+    }
   }
 }
