@@ -11,8 +11,9 @@
   &__image {
     width: 160px;
     height: 134px;
-    align-self: center;
-    margin-bottom: 40px;
+
+    display: block;
+    margin: 0 auto 40px;
   }
 
   &__title {
@@ -39,8 +40,6 @@
   &__stareview {
     display: flex;
     margin-bottom: 24px;
-
-    // height: 16px;
     align-items: center;
     justify-content: space-between;
   }
@@ -59,8 +58,8 @@
 
   &__price-text {
     margin: 0;
-    padding-top: 2px;
     font-size: 12px;
+    line-height: 18px;
     font-weight: 400;
     color: $secondary;
   }
@@ -68,11 +67,14 @@
   &__price-number {
     margin: 0;
     font-size: 16px;
+    line-height: 18px;
+
     font-weight: 700;
     color: $main-accent;
   }
 
   &__button {
+    box-sizing: border-box;
     display: block;
     height: 40px;
     border-radius: 5px;
@@ -82,7 +84,10 @@
     line-height: 40px;
     text-align: center;
     text-transform: uppercase;
-    align-items: center;
+
+    // align-items: center;
+
+    width: 100%;
     text-decoration: none;
     color: $white;
     border: 1px solid transparent;
