@@ -15,13 +15,13 @@
     border-color $transition-fast;
 
   &:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: $shadow-card-hover;
     border-color: transparent;
   }
 
   &__image {
-    width: 160px;
-    height: 134px;
+    width: $shadow-card-hover;
+    height: $card-image-height;
     object-fit: cover;
   }
 
@@ -74,21 +74,21 @@
 
   &__price-label {
     font-size: 12px;
-    color: #616070;
+    color: $color-text-muted;
   }
 
   &__price-value {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: #060b35;
+    color: $color-text-main;
   }
 
   &__button {
     margin-top: 16px;
     width: $card-content-width;
     height: 40px;
-    border-radius: 5px;
+    border-radius: $card-radius;
 
     display: inline-flex;
     align-items: center;
@@ -101,15 +101,15 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    color: #fff;
+    color: $color-card-bg;
 
     text-decoration: none;
 
     cursor: pointer;
     transition:
-      background-color 0.2s ease,
-      color 0.2s ease,
-      border-color 0.2s ease;
+      background-color $transition-fast,
+      color $transition-fast,
+      border-color $transition-fast;
 
     &:hover {
       background-color: $color-card-bg;

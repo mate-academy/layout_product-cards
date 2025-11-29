@@ -6,13 +6,11 @@
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
+  }
 
-    &:not(:last-child) {
+  @for $i from 1 through 5 {
+    &--#{$i} &__item:nth-child(-n + #{$i}) {
       background-image: url('../images/star-active.svg');
-    }
-
-    &:last-child {
-      background-image: url('../images/star.svg');
     }
   }
 }
