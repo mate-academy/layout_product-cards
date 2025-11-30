@@ -1,11 +1,11 @@
-@use '../utils/variables' as *;
+@use '../utils/variables';
 
 .card {
   box-sizing: border-box;
   width: 200px;
   height: 404px;
-  background-color: $card-background;
-  border: 1px solid $card-border;
+  background-color: variables.$card-background;
+  border: 1px solid variables.$card-border;
   border-radius: 5px;
 
   display: flex;
@@ -16,7 +16,7 @@
     width: 166px;
     font-weight: 400;
     letter-spacing: 0;
-    color: $main-accent;
+    color: variables.$main-accent;
 
     &--image {
       width: 160px;
@@ -38,7 +38,7 @@
       margin-top: 4px;
       line-height: 14px;
       font-size: 10px;
-      color: $secondary;
+      color: variables.$secondary;
     }
 
     &--rating {
@@ -58,7 +58,7 @@
 
       & > :first-child {
         font-size: 12px;
-        color: $secondary;
+        color: variables.$secondary;
       }
 
       & > :last-child {
@@ -70,26 +70,23 @@
     &--buy {
       margin-top: 16px;
     }
-
-    &--buy > a {
-      text-decoration: none;
-    }
   }
 
   &__link {
     box-sizing: border-box;
-    background-color: $blue-accent;
-    border: 1px solid $blue-accent;
+    text-decoration: none;
+    background-color: variables.$blue-accent;
+    border: 1px solid variables.$blue-accent;
     line-height: 38px;
     border-radius: 5px;
     font-weight: 700;
     font-size: 14px;
-    color: $card-background;
+    color: variables.$card-background;
     text-align: center;
 
     &:hover {
-      background-color: $card-background;
-      color: $blue-accent;
+      background-color: variables.$card-background;
+      color: variables.$blue-accent;
     }
   }
 }

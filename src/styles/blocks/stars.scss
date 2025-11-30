@@ -1,3 +1,5 @@
+@use '../utils/variables';
+
 .stars {
   display: flex;
 
@@ -11,7 +13,7 @@
   }
 
   @for $index from 1 through 5 {
-    &--#{index} > &__star:nth-child(-n + #{index}) {
+    &--#{$index} > &__star:nth-child(-n + #{$index}) {
       background-image: url(#{variables.$star-active});
     }
   }
