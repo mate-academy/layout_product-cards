@@ -17,16 +17,15 @@
     > div {
       height: $star-size;
       width: $star-size;
-      background-image: $star-active-img;
+      background-image: $star-default-img;
       background-repeat: no-repeat;
       background-position: center;
       &:not(:last-child) {
         margin-right: $star-margin;
       }
-    }
-
-    .stars__5 {
-      background-image: $star-default-img;
+      &:nth-child(-n + 4) {
+        background-image: $star-active-img;
+      }
     }
   }
 
