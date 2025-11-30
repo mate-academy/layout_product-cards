@@ -17,6 +17,7 @@ body {
 
 .stars {
   display: flex;
+  
 
   &__star {
     width: $star-size;
@@ -63,56 +64,56 @@ body {
 }
 
 .product-card {
-  width: $card-width;
-  border: 1px solid $card-border-color;
+  width: 198px;
+  border: 1px solid;
+  border-color: #f3f3f3;
   padding: $card-padding;
-  box-sizing: border-box;
-
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+  height: 406px;
+  top: 33px;
 
-.product-card__image {
-  width: 100%;
-  height: auto;
-}
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
 
-.product-card__title {
-  font-size: $font-size-base;
-}
+  &__title {
+    font-size: $font-size-base;
+  }
 
-.product-card__rating {
-  display: flex;
-}
+  &__rating {
+    display: flex;
+  }
 
-.product-card__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: $font-size-base;
-}
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-base;
+  }
 
-.product-card__button {
-  display: flex;
-  justify-content: center;
-}
+  &__button {
+    display: flex;
+    justify-content: center;
 
-.product-card__button button {
-  width: 166px;
-  height: 40px;
-  border-radius: 5px;
+    button {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      background-color: $button-color;
+      color: $button-text-color;
+      border: 2px solid $button-color;
+      cursor: pointer;
+      transition: all 0.25s ease;
 
-  background-color: #00acdc;
-  color: #fff;
-  border: 2px solid #00acdc;
-
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.product-card__button button:hover {
-  background-color: #fff;
-  color: #00acdc;
-  border-color: #00acdc;
+      &:hover {
+        background-color: $button-text-color;
+        color: $button-color;
+        border-color: $button-color;
+      }
+    }
+  }
 }
