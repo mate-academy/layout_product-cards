@@ -19,12 +19,17 @@ Create a page with product card using `flexbox`, `BEM` and `SCSS` based on [this
 *Important note*: In this task, you are allowed to link `*.scss` files directly in HTML `<link>` tags using `href` attribute.
 This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle your solution's source code.
 
+### Common build pitfall ⚠️
+
+If `npm run build` fails with a message like `Failed to resolve './styles/index.css'`, it usually means your `index.html` points to `./styles/index.css` while the source file is `src/styles/index.scss`.
+Parcel expects the file referenced by the HTML — so either reference `./styles/index.scss` (Parcel will compile it) or add a compiled `index.css` in `src/styles` before building.
+
 ## Checklist
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_product-cards/report/html_report/)
+- [DEMO LINK](https://Bufooon.github.io/layout_product-cards/)
+- [TEST REPORT LINK](https://Bufooon.github.io/layout_product-cards/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
