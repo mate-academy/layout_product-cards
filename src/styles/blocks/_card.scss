@@ -1,8 +1,8 @@
 .card {
-  width: 198px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  background-color: #fff;
+  width: $card-width;
+  border: 1px solid $color-card-border;
+  border-radius: $card-radius;
+  background-color: $color-card-bg;
   &__image {
     height: 134px;
     background-image: url('../images/imac.jpeg');
@@ -16,74 +16,74 @@
   &__title {
     display: block;
     margin-top: 40px;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: $indent-16;
+    margin-right: $indent-16;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: #060b35;
-    font-family: Roboto, sans-serif;
+    color: $color-main;
+    font-family: $font-main;
   }
   &__code {
     margin-top: 4px;
-    margin-left: 16px;
-    font-weight: 400;
-    line-height: 14px;
-    color: #616070;
-    font-family: Roboto, sans-serif;
-    font-size: 10px;
+    margin-left: $indent-16;
     margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-secondary;
+    font-family: $font-main;
   }
   &__rating {
     display: flex;
     align-items: center;
-    margin-right: 16px;
     margin-top: 12px;
+    margin-right: $indent-16;
   }
   &__reviews {
     margin-left: auto;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: #060b35;
+    color: $color-main;
   }
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px;
+    margin: $indent-16;
   }
   &__price-label {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    color: #616070;
+    color: $color-secondary;
   }
   &__price-value {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    color: #060b35;
+    color: $color-main;
   }
   &__buy {
     display: block;
-    width: 168px;
-    height: 40px;
-    margin: 16px;
-    background-color: #00acdc;
-    color: #fff;
+    width: $button-width;
+    height: $button-height;
+    margin: $indent-16;
+    background-color: $color-accent;
+    color: $color-card-bg;
     font-size: 14px;
     font-weight: 700;
-    line-height: 40px;
+    line-height: $button-height;
     text-align: center;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: $button-radius;
     border: none;
     cursor: pointer;
   }
   &__buy:hover {
-    background-color: #fff;
-    color: #00acdc;
-    border: 1px solid #00acdc;
+    background-color: $color-card-bg;
+    color: $color-accent;
+    border: 1px solid $color-accent;
   }
 }
