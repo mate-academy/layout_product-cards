@@ -6,15 +6,15 @@
     height: 16px;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     margin-right: 4px;
   }
-}
 
-@for $i from 1 through 5 {
-  .stars--#{$i} {
-    .stars__star:nth-child(-n + #{$i}) {
-      background-image: url(../images/star-active.svg);
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
     }
   }
 }
