@@ -2,8 +2,6 @@
 
 * {
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   font-family: $font-main;
 }
 
@@ -17,7 +15,7 @@ body {
 
 .stars {
   display: flex;
-  
+  align-items: center;
 
   &__star {
     width: $star-size;
@@ -64,50 +62,80 @@ body {
 }
 
 .product-card {
-  width: 198px;
   border: 1px solid;
   border-color: #f3f3f3;
-  padding: $card-padding;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  width: 198px;
   height: 406px;
-  top: 33px;
+  border-radius: 5px;
+  margin-top: 1px;
+  margin-left: 1px;
 
   &__image {
     width: 160px;
     height: 134px;
+    margin-top: 32px;
+    margin-left: 19px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__title {
-    font-size: $font-size-base;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    font-family: $font-main;
+    margin-left: 16px;
+  }
+
+  &__code {
+    font-family: $font-main;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    font-size: 10px;
+    margin-left: 16px;
   }
 
   &__rating {
+    align-items: center;
     display: flex;
+    gap: 22px;
+    margin-left: 16px;
+  }
+
+  &__reviews {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
   }
 
   &__price {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 24px;
     align-items: center;
-    font-size: $font-size-base;
+    display: flex;
+    gap: 85px;
+    margin-left: 16px;
   }
 
   &__button {
-    display: flex;
     justify-content: center;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
 
     button {
-      width: 100%;
-      height: 40px;
+      margin-top: 16px;
       border-radius: 5px;
       background-color: $button-color;
       color: $button-text-color;
       border: 2px solid $button-color;
       cursor: pointer;
       transition: all 0.25s ease;
+      width: 166px;
+      height: 40px;
 
       &:hover {
         background-color: $button-text-color;
