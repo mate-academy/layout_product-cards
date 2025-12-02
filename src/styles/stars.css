@@ -1,3 +1,22 @@
+.rating {
+  display: flex;
+}
 
+.rating__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(/src/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rating__star:last-child {
+  margin-right: 0;
+}
+
+.rating--4-of-5 .rating__star:nth-child(-n + 4) {
+  background-image: url(/src/images/star-active.svg);
+}
 
 /*# sourceMappingURL=stars.css.map */

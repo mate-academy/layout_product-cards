@@ -1,19 +1,117 @@
 .product-card {
   box-sizing: border-box;
-  width: 200px;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
-  border-color: rgba(243, 243, 243, 1);
-
-&__image {
+  background-color: #fff;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 32px 16px 16px;
 
-}
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    object-fit: contain;
+  }
 
-&__photo{
-  width: 160px;
-  height: 134px;
-  margin: 32px 19px 16px 19px;
-}
+  &__photo {
+    max-width: 100%;
+  }
 
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    height: 36px;
+    width: 166px;
+  }
+
+  &__name-product {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__code {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    width: 98px;
+    height: 14px;
+  }
+
+  &__code-name {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 166px;
+    height: 16px;
+  }
+
+  &__reviews {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 53px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    height: 18px;
+  }
+
+  &__price-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 172, 220, 1);
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 172, 220, 1);
+    border: 1px solid;
+    border-color: rgba(0, 172, 220, 1);
+  }
 }
