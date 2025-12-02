@@ -1,0 +1,40 @@
+.stars {
+  display: flex;
+  position: relative;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &::before {
+    content: '';
+    height: 100%;
+
+    background-image: url(../images/star-active.svg);
+    background-repeat: repeat-x;
+    background-size: 20px 11px;
+
+    position: absolute;
+    top: 2px;
+    left: -4px;
+  }
+
+  @for $count from 1 through 5 {
+    &--#{$count}::before {
+      width: calc($count * 20px - 4px);
+    }
+  }
+
+  &--card-rating {
+    margin-top: 16px;
+  }
+}
