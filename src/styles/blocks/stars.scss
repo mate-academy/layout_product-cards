@@ -9,10 +9,10 @@
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: left;
-  }
 
-  &__star:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &::before {
@@ -28,7 +28,13 @@
     left: -4px;
   }
 
-  &--4::before {
-    width: 76px;
+  @for $count from 1 through 5 {
+    &--#{$count}::before {
+      width: calc($count * 20px - 4px);
+    }
+  }
+
+  &--card-rating {
+    margin-top: 16px;
   }
 }
