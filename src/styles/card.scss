@@ -2,36 +2,28 @@
 
 .card {
   width: $card-width;
-  padding: 16px;
-  padding-top: 32px;
-  display: flex;
-  flex-direction: column;
-  background-color: $color-link;
+  padding: 32px 16px 16px;
+  background: $color-link;
   border-radius: $border-radius;
-  border: 1px solid $color-link;
-
-  &:hover {
-    border: 1px solid $color-link-hoverr;
-  }
+  border: 1px solid $color-link-hoverr;
+  box-sizing: border-box;
 
   &__image {
     display: block;
     width: 160px;
     height: 134px;
     margin: 0 auto;
-    border-radius: 6px;
-    box-sizing: border-box;
+    margin-bottom: 40px;
   }
 
   &__title {
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
-    box-sizing: border-box;
     margin: 0;
-    margin-top: 40px;
     margin-bottom: 4px;
     letter-spacing: 0%;
+    color: #060b35;
   }
 
   &__code {
@@ -40,34 +32,32 @@
     line-height: 14px;
     margin: 0;
     margin-bottom: 16px;
-    box-sizing: border-box;
     color: $color-code;
     letter-spacing: 0%;
   }
 
   &__rating {
     display: flex;
-    align-items: center;
-    gap: $star-gap;
-    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
   }
 
   &__reviews {
-    height: 16px;
+    margin: 0;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    box-sizing: border-box;
     letter-spacing: 0%;
+    color: #060b35;
   }
 
   &__label {
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 16px;
-    box-sizing: border-box;
-    margin-top: 24px;
     letter-spacing: 0%;
   }
 
@@ -76,7 +66,6 @@
     font-size: 12px;
     line-height: 18px;
     color: $color-code;
-    box-sizing: border-box;
   }
 
   &__label-price {
@@ -84,14 +73,12 @@
     font-size: 16px;
     line-height: 18px;
     color: $color-text;
-    box-sizing: border-box;
   }
 
   &__buy {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 166px;
     height: 40px;
     background-color: $color-link-hover;
     color: $color-link;
@@ -103,11 +90,11 @@
     box-sizing: border-box;
     text-transform: uppercase;
     letter-spacing: 0%;
+    border: 1px solid $color-link-hover;
 
     &:hover {
       color: $color-link-hover;
       background-color: $color-link;
-      border: 1px solid $color-link-hover;
     }
   }
 }
