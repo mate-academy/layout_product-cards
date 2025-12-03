@@ -1,3 +1,126 @@
 body {
   margin: 0;
+  font-family: Roboto, serif;
+  background-color: rgba(97, 96, 112, 1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  background-color: white;
+}
+
+.card__image {
+  box-sizing: border-box;
+  width: 160px;
+  height: 134px;
+  margin-bottom: 40px;
+
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgba(6, 11, 53, 1);
+}
+
+.card__code {
+  margin: 0;
+  margin-top: 4px;
+
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(97, 96, 112, 1);
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-left: 2px;
+}
+
+.stars__star {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+
+  background-image: url(/src/images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.stars__reviews {
+  margin-left: 18px;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(6, 11, 53, 1);
+}
+
+.stars--1 .stars__star:nth-child(-n + 4) {
+  background-image: url(/src/images/star-active.svg);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.card__price-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(97, 96, 112, 1);
+}
+
+.card__price-money {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(6, 11, 53, 1);
+}
+
+.card__button {
+  width: 166px;
+  margin-top: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid rgba(0, 172, 220, 1);
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: rgba(0, 172, 220, 1);
+
+  transition: 0.2s;
+}
+
+.card__button:hover {
+  color: rgba(0, 172, 220, 1);
+  background-color: white;
 }
