@@ -1,9 +1,10 @@
+@use 'variables' as vars;
 .product-card {
   box-sizing: border-box;
   max-width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: vars.$white-color;
   display: flex;
   flex-direction: column;
   padding: 32px 16px 16px;
@@ -27,13 +28,10 @@
     margin-bottom: 4px;
     height: 36px;
     width: 166px;
-  }
-
-  &__name-product {
     font-weight: 500;
-    font-size: 12px;
+    font-size: vars.$size-medium;
     line-height: 18px;
-    color: rgba(6, 11, 53, 1);
+    color: vars.$text-color;
   }
 
   &__code {
@@ -46,12 +44,12 @@
 
   &__code-name {
     font-weight: 400;
-    font-size: 10px;
+    font-size: vars.$size-small;
     line-height: 14px;
-    color: rgba(97, 96, 112, 1);
+    color: vars.$gray-color;
   }
 
-  &__rating {
+  &__stars {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,9 +66,9 @@
     width: 53px;
     height: 16px;
     font-weight: 400;
-    font-size: 10px;
+    font-size: vars.$size-small;
     line-height: 14px;
-    color: rgba(6, 11, 53, 1);
+    color: vars.$text-color;
   }
 
   &__price {
@@ -83,25 +81,28 @@
 
   &__price-title {
     font-weight: 400;
-    font-size: 12px;
+    font-size: vars.$size-medium;
     line-height: 18px;
-    color: rgba(97, 96, 112, 1);
+    color: vars.$gray-color;
   }
 
   &__price-value {
     font-weight: 700;
-    font-size: 16px;
+    font-size: vars.$size-large;
     line-height: 18px;
-    color: rgba(6, 11, 53, 1);
+    color: vars.$text-color;
   }
 
   &__button {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     height: 40px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(0, 172, 220, 1);
-    color: rgba(255, 255, 255, 1);
+    background-color: vars.$marine-color;
+    color: vars.$white-color;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
@@ -109,9 +110,9 @@
   }
 
   &__button:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 172, 220, 1);
+    background-color: vars.$white-color;
+    color: vars.$marine-color;
     border: 1px solid;
-    border-color: rgba(0, 172, 220, 1);
+    border-color: vars.$marine-color;
   }
 }
