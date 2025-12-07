@@ -23,11 +23,11 @@ body {
   border: 1px solid rgba(243, 243, 243, 1);
 }
 
-.card__conteiner {
+.card__container {
   width: 166px;
 }
 
-.card__conteiner-image {
+.card__container_image {
   position: relative;
   width: 160px;
   margin-top: 32px;
@@ -54,7 +54,7 @@ body {
   letter-spacing: 0%;
 }
 
-.card__product-code {
+.card__product_code {
   display: flex;
   font-family: var(--font);
   width: 100%;
@@ -72,21 +72,21 @@ body {
   margin-top: 16px;
   display: flex;
   font-family: var(--font);
-  width: 166px;
+  width: 100%;
   height: 16px;
   justify-content: space-between;
 }
 
-.card__reviews-number {
-  display: flex;
+.card__reviews_number {
+  display: inline-flex;
   font-family: var(--font);
   font-size: 10px;
-  width: 53px;
+  width: 56px;
   height: 16px;
   color: rgba(6, 11, 53, 1);
   font-weight: 400;
   align-items: center;
-  margin-left: 20.7px;
+  margin-left: 17px;
   letter-spacing: 0%;
   text-align: end;
 }
@@ -98,37 +98,27 @@ body {
   height: 16px;
 }
 
-.star {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat;
-  background-position: left;
+.stars {
+  display: flex;
+
+  .star {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-right: 4px;
+  }
+
+  &--4 {
+    .star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
 
-// as estrelas estao certas
-.star--0 {
-  margin-right: 4px;
-}
-
-.star--1 {
-  margin-right: 4px;
-}
-
-.star--2 {
-  margin-right: 4px;
-}
-
-.star--3 {
-  margin-right: 4px;
-}
-
-.stars_reviews .star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-}
-
-.card__price-conteiner {
+.card__price_container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -138,10 +128,10 @@ body {
 .card__price {
   display: flex;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: var(--font);
   align-items: baseline;
-  width: 166px;
+  width: 100%;
   height: 18px;
   margin-top: 24px;
   color: rgba(97, 96, 112, 1);
@@ -161,13 +151,13 @@ body {
   margin-left: 85px;
 }
 
-.card__button-buy {
+.card__button_buy {
   position: relative;
   margin-top: 16px;
   font-size: 14px;
   font-family: var(--font);
   font-weight: 500;
-  width: 166px;
+  width: 100%;
   height: 40px;
   align-items: center;
   text-align: center;
@@ -178,10 +168,11 @@ body {
   border: 1px solid rgba(0, 172, 220, 1);
   cursor: pointer;
   opacity: 1;
-}
+  text-decoration: none;
 
-.card__button-buy:hover {
-  color: rgba(0, 172, 220, 1);
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(0, 172, 220, 1);
+  &:hover {
+    color: rgba(0, 172, 220, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 172, 220, 1);
+  }
 }
