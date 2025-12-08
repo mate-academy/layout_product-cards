@@ -1,0 +1,33 @@
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+@for $rate from 0 through $max-stars {
+  .stars--#{$rate} {
+    .stars__star {
+      @for $star from 1 through $max-stars {
+        &:nth-child(#{$star}) {
+          @if $star <= $rate {
+            background-image: url(../images/star-active.svg);
+          } @else {
+            background-image: url(../images/star.svg);
+          }
+        }
+      }
+    }
+  }
+}
