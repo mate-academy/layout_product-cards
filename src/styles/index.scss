@@ -1,3 +1,168 @@
+@import 'variables';
+
+// === Base Styles ===
 body {
   margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #060b35;
+  background: #f3f6fb;
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 24px;
+}
+
+// === Stars Block ===
+.stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__star {
+    width: 16px;
+    height: 12px;
+    margin-right: 4px;
+    background: center / contain no-repeat url('../images/star.svg');
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// === Modifier-based star highlighting ===
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background-image: url('../images/star-active.svg');
+  }
+}
+
+// === Card Block ===
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 32px 19px 14px;
+  border: 1px solid $border;
+  background: #fff;
+
+  &__image {
+    display: flex;
+    width: 160px;
+    height: 134px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &__title {
+    width: 166px;
+    height: 36px;
+    overflow: hidden;
+    margin: 0 0 4px 1px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin: 0 0 10px 1px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $muted;
+  }
+
+  &__meta {
+    width: 166px;
+    height: 16px;
+    display: flex;
+    margin: 0 0 24px 1px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    display: inline-flex;
+    align-items: center;
+    width: 53px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #060b35;
+    text-align: right;
+  }
+
+  &__price {
+    width: 166px;
+    height: 18px;
+    margin: 0 0 0 1px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-label {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $muted;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: #060b35;
+      text-align: right;
+    }
+  }
+
+  &__buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid $accent;
+    border-radius: 5px;
+    background: $accent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background: #fff;
+      border-color: #00b8f1;
+      color: $accent;
+    }
+
+    &:active {
+      background: #009ec7;
+      border-color: #009ec7;
+    }
+  }
 }
