@@ -1,12 +1,14 @@
+@use '../utils/_variables' as *;
+
 .stars {
   display: flex;
   gap: 4px;
 
   &__item {
-    width: 16px;
-    height: 16px;
+    width: $star-width;
+    height: $star-height;
 
-    background-image: url('../images/star.svg');
+    background-image: $star-inactive;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -15,7 +17,7 @@
   @for $index from 1 through 5 {
     &--#{$index} {
       & .stars__item:nth-child(-n + #{$index}) {
-        background-image: url('../images/star-active.svg');
+        background-image: $star-active;
       }
     }
   }
