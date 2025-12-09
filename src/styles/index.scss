@@ -1,3 +1,125 @@
+@import './variables';
+
 body {
   margin: 0;
+  background-color: #fff;
+  font-family: $font-family;
+}
+
+.cards {
+  width: 200px;
+  padding: 0 16px 16px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: $border-radius;
+  background-color: #fff;
+
+  &__image img {
+    display: flex;
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+  }
+
+  &__p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $secondary-color;
+    margin: 40px 0 0;
+  }
+
+  &__opis_p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #616070;
+    margin: 4px 0 0;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 16px;
+    margin: 16px 0 0;
+
+    &_inf {
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    margin: 24px 0 0;
+
+    &-title {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.buy-button {
+  display: flex;
+  align-items: center;
+  background-color: #00acdc;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 12px 70px;
+  border: 1px solid #00acdc;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  margin: 16px 0 0;
+  width: 100%;
+  height: 40px;
+
+  &:hover {
+    border: 1px solid #00acdc;
+    color: #00acdc;
+    background-color: #fff;
+  }
+}
+
+.stars {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-position: center;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+
+    &--active {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &--0 {
+    .stars__star {
+      background-image: url('../images/star.svg');
+    }
+  }
 }
