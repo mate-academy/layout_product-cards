@@ -6,10 +6,10 @@
   align-items: center;
 
   box-sizing: border-box;
-  width: $card-width;
-  height: $card-height;
+  width: 200px;
+  height: 408px;
   border: 1px solid $card-border-color;
-  border-radius: $card-border-radius;
+  border-radius: 10px;
 
   background-color: $card-background-color;
 
@@ -19,67 +19,68 @@
 
     box-sizing: border-box;
     width: 100%;
-    padding: 0 17px;
+    padding: 0 16px;
   }
 
   &__img {
-    width: $image-card-width;
-    height: $image-card-height;
-    margin: 33px auto 0;
-
-    background-image: $image-card;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    display: block;
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+    margin-top: 33px;
   }
 
   &__title {
     margin-top: 40px;
     margin-bottom: 4px;
-    font-size: $title-font-size;
+    font-size: 12px;
     font-weight: $font-weight-medium;
-    line-height: $title-line-height;
+    line-height: 18px;
     color: $title-color;
   }
 
   &__code {
-    font-size: $code-font-size;
+    font-size: 10px;
     font-weight: $font-weight-regular;
-    line-height: $code-line-height;
+    line-height: 14px;
     color: $code-color;
   }
 
   &__reviews {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 16px;
     gap: 17px;
 
     > :last-child {
-      font-size: $reviews-font-size;
+      font-size: 10px;
       font-weight: $font-weight-regular;
-      line-height: $reviews-line-height;
+      line-height: 14px;
       color: $reviews-color;
+      margin: 0;
     }
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-top: 24px;
 
     > :first-child {
-      font-size: $price-font-size;
+      font-size: 12px;
       font-weight: $font-weight-regular;
-      line-height: $price-line-height;
+      line-height: 18px;
       color: $price-color;
+      margin: 0;
     }
     > :last-child {
-      font-size: $price-discount-font-size;
+      font-size: 16px;
       font-weight: $font-weight-bold;
-      line-height: $price-discount-line-height;
+      line-height: 18px;
       color: $price-discount-color;
+      margin: 0;
     }
   }
 
@@ -89,19 +90,20 @@
     align-items: center;
 
     box-sizing: border-box;
-    width: $button-width;
-    height: $button-height;
-    border-radius: $button-border-radius;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
     margin: 16px auto;
     padding: 12px;
 
-    font-size: $button-font-size;
+    font-size: 14px;
     font-weight: $font-weight-bold;
-    line-height: $button-line-height;
+    line-height: 16px;
     text-decoration: none;
     text-align: center;
     color: $button-color;
     background-color: $button-background-color;
+    border: 1px solid transparent;
 
     &:hover {
       background-color: $button-hover-background-color;
