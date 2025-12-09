@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use '../utilis/variables' as *;
 
 .stars {
   display: flex;
@@ -15,9 +15,9 @@
   }
 
   @for $i from 1 through 5 {
-    &__#{$i} {
+    &--#{$i} {
       .stars__star:nth-child(-n + #{$i}) {
-        background-image: url('../images/star-adctive.svg');
+        background-image: url('../images/star-active.svg');
       }
     }
   }
