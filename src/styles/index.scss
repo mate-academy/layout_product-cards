@@ -1,3 +1,128 @@
-body {
+body,
+h1,
+h2 {
+  font-family: Roboto, sans-serif;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 5px;
+  padding: 0;
+
+  border: 1px solid rgba(243, 243, 243, 1);
+
+  &__top {
+    padding: 32px 19px 0;
+
+    &-img {
+      display: flex;
+      justify-self: center;
+      width: 160px;
+      height: 134px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__bottom {
+    padding: 0 16px 16px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__text {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(97, 96, 112, 1);
+    margin-bottom: 19px;
+  }
+
+  &__rated {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+
+    &-stars {
+      display: flex;
+      gap: 4px;
+      padding-left: 2px;
+
+      &-star {
+        display: block;
+        width: 16px;
+        height: 16px;
+
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+      }
+
+      &-star:last-child {
+        margin-right: 0;
+      }
+
+      &-star:nth-child(-n + 4) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+
+    &-reviews {
+      font-size: 10px;
+      line-height: 14px;
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-left {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: rgba(97, 96, 112, 1);
+      margin: 0;
+    }
+
+    &-right {
+      margin: 0;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: rgba(6, 11, 53, 1);
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 166px;
+    height: 40px;
+    background-color: rgba(0, 172, 220, 1);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: white;
+      color: rgba(0, 172, 220, 1);
+      border: 1px solid rgba(0, 172, 220, 1);
+    }
+  }
 }
