@@ -1,0 +1,25 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+  width: 96px;
+
+  &__star {
+    width: #{$stars-width};
+    line-height: #{$star-line-height};
+    background-repeat: no-repeat;
+    background-image: url('../images/star.svg');
+    background-position: center;
+    background-size: #{$star-bg-size};
+
+    & + & {
+      margin-left: 4px;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &__star--#{$i} {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}

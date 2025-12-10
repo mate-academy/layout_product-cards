@@ -1,0 +1,135 @@
+@import 'variables';
+
+.card {
+  box-sizing: border-box;
+  height: #{$card-height};
+  width: #{$card-width};
+  padding: 16px 8px;
+  border-radius: 16px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 4px 25px rgba(5, 22, 26, 0.06);
+  margin: 0;
+
+  &__image {
+    height: #{$image-height};
+    width: #{$image-width};
+    position: absolute;
+    top: 33px;
+    left: 20px;
+  }
+
+  &__text {
+    font-family:
+      #{$text-font},
+      sans-serif;
+    font-weight: #{$text-weight-h1};
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    top: 207px;
+    left: 17px;
+    color: #{$main-text-color};
+    margin: 0;
+  }
+
+  &__product-code {
+    font-family:
+      #{$text-font},
+      sans-serif;
+    font-weight: #{$text-weight-h2};
+    font-size: 10px;
+    line-height: 14px;
+    position: absolute;
+    top: 247px;
+    left: 17px;
+    color: #{$text-secondary-color};
+    margin: 0;
+  }
+
+  &__rating {
+    justify-content: space-between;
+    display: flex;
+    width: 166px;
+    position: absolute;
+    top: 277px;
+    left: 17px;
+    height: 16px;
+    margin: 0;
+
+    &-reviews {
+      box-sizing: border-box;
+      font-family:
+        #{$text-font},
+        sans-serif;
+      font-weight: #{$text-weight-h2};
+      font-size: 10px;
+      line-height: 14px;
+      vertical-align: bottom;
+      color: #{$main-text-color};
+      margin: 0;
+      height: 16px;
+      text-align: right;
+      padding: 4px 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    position: absolute;
+    height: 18px;
+    top: 317px;
+    left: 17px;
+    width: 166px;
+    justify-content: space-between;
+    margin: 0;
+
+    &-price {
+      font-family:
+        #{$text-font},
+        sans-serif;
+      font-weight: #{$text-bold};
+      font-size: 16px;
+      line-height: 18px;
+      margin: 0;
+      text-align: right;
+      vertical-align: bottom;
+    }
+
+    &-text {
+      font-family:
+        #{$text-font},
+        sans-serif;
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0;
+      color: #{$text-secondary-color};
+    }
+  }
+
+  &__button {
+    height: #{$button-height};
+    width: #{$button-width};
+    background-color: #{$btn-color};
+    font-family:
+      #{$text-font},
+      sans-serif;
+    font-size: 14px;
+    font-weight: #{$text-bold};
+    color: #fff;
+    position: absolute;
+    top: 351px;
+    left: 17px;
+    border-radius: 5px;
+    border: 1px solid #{$btn-color};
+
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      color: #{$btn-color};
+    }
+  }
+}
