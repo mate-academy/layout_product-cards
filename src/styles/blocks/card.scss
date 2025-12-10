@@ -3,7 +3,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 32px 16px 16px;
 
   box-sizing: border-box;
   width: 200px;
@@ -19,19 +19,17 @@
 
     box-sizing: border-box;
     width: 100%;
-    padding: 0 16px;
   }
 
   &__img {
     display: block;
+    align-self: center;
     width: 160px;
     height: 134px;
-    object-fit: contain;
-    margin-top: 33px;
+    margin-bottom: 40px;
   }
 
   &__title {
-    margin-top: 40px;
     margin-bottom: 4px;
     font-size: 12px;
     font-weight: $font-weight-medium;
@@ -41,6 +39,7 @@
 
   &__code {
     font-size: 10px;
+    margin-bottom: 16px;
     font-weight: $font-weight-regular;
     line-height: 14px;
     color: $code-color;
@@ -49,38 +48,35 @@
   &__reviews {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 16px;
+    align-items: flex-end;
+    margin-bottom: 24px;
     gap: 17px;
 
     > :last-child {
       font-size: 10px;
       font-weight: $font-weight-regular;
-      line-height: 14px;
+      line-height: 13px;
       color: $reviews-color;
-      margin: 0;
     }
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-top: 24px;
+    align-items: center;
+    margin-bottom: 16px;
 
     > :first-child {
       font-size: 12px;
       font-weight: $font-weight-regular;
       line-height: 18px;
       color: $price-color;
-      margin: 0;
     }
     > :last-child {
       font-size: 16px;
       font-weight: $font-weight-bold;
       line-height: 18px;
       color: $price-discount-color;
-      margin: 0;
     }
   }
 
@@ -88,13 +84,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     box-sizing: border-box;
-    width: 166px;
+    border: 1px solid $button-background-color;
     height: 40px;
     border-radius: 5px;
-    margin: 16px auto;
-    padding: 12px;
 
     font-size: 14px;
     font-weight: $font-weight-bold;
@@ -103,7 +98,6 @@
     text-align: center;
     color: $button-color;
     background-color: $button-background-color;
-    border: 1px solid transparent;
 
     &:hover {
       background-color: $button-hover-background-color;
