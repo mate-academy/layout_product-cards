@@ -1,59 +1,46 @@
-.stars {
+.card__review {
   display: flex;
-  flex-direction: row;
+  height: 16px;
+  justify-content: space-between;
+  margin: 0 16px;
   align-items: center;
-  padding: 8px 16px 24px;
-  margin: 0;
 
-  &__reviews-rate p {
+  &-count {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    margin: 0 0 0 14px;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    justify-items: right;
     color: $text-primary;
+    letter-spacing: 0;
+
+    & p {
+      margin: 0;
+      height: 16px;
+    }
   }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
 
   &__star {
-    width: 14px;
-    height: 14px;
-    padding: 0;
-    border-radius: 0.5px;
-    background-size: cover;
+    width: 16px;
+    height: 16px;
     background-image: url('../images/star.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50%;
 
     &:not(:last-child) {
-      margin-right: 6px;
-    }
-  }
-
-  &--1 {
-    .stars__star:nth-child(-n + 1) {
-      background-image: url('../images/star-active.svg');
-    }
-  }
-
-  &--2 {
-    .stars__star:nth-child(-n + 2) {
-      background-image: url('../images/star-active.svg');
-    }
-  }
-
-  &--3 {
-    .stars__star:nth-child(-n + 3) {
-      background-image: url('../images/star-active.svg');
+      margin-right: 4px;
     }
   }
 
   &--4 {
     .stars__star:nth-child(-n + 4) {
-      background-image: url('../images/star-active.svg');
-    }
-  }
-
-  &--5 {
-    .stars__star:nth-child(-n + 5) {
       background-image: url('../images/star-active.svg');
     }
   }
