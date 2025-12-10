@@ -1,0 +1,23 @@
+@use '../utils/variables' as *;
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__item {
+    width: 16px;
+    height: 16px;
+
+    background-image: $star-inactive;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $index from 1 through 5 {
+    &--#{$index} {
+      & .stars__item:nth-child(-n + #{$index}) {
+        background-image: $star-active;
+      }
+    }
+  }
+}
