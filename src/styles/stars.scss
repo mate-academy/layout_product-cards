@@ -1,0 +1,23 @@
+.stars {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 4px;
+  width: 100%;
+
+  span {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: cover;
+    background-image: url('../images/star.svg');
+  }
+
+  &--1 span:nth-child(-n + 1),
+  &--2 span:nth-child(-n + 2),
+  &--3 span:nth-child(-n + 3),
+  &--4 span:nth-child(-n + 4),
+  &--5 span:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
