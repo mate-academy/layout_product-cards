@@ -1,0 +1,96 @@
+/* #region card */
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+  color: $color;
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  width: 200px;
+  height: 408px;
+  flex-direction: column;
+  align-items: center;
+
+  &__top {
+    width: 100%;
+    padding-inline: 19px;
+  }
+
+  &__content {
+    font-size: 12px;
+
+    line-height: 18px;
+    padding-inline: 16px;
+  }
+
+  &__describe {
+    font-weight: 500;
+  }
+
+  &__product-code {
+    color: $grey__color;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  &__reviews {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $color;
+    }
+  }
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      color: $grey__color;
+    }
+    &-cost {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    background-color: $blue__color;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 0 solid transparent;
+
+    &-text {
+      display: flex;
+      color: $white__color;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+    }
+    &:hover {
+      background-color: $white__color;
+      border: 1px solid $blue__color;
+
+      .card__button-text {
+        color: $blue__color;
+      }
+    }
+  }
+}
+
+/* #endregion */
