@@ -1,0 +1,127 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 408px;
+
+  &__img {
+    background-image: url(../images/imac.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 160px;
+    height: 134px;
+    margin-inline: 19px;
+    margin-top: 32px;
+  }
+  &__title {
+    width: 166px;
+    height: 36px;
+    margin-inline: 16px;
+    margin-top: 40px;
+
+    &-text {
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: #060b35;
+    }
+  }
+
+  &__code {
+    margin: 4px 84px 0 16px;
+
+    &-text {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: #616070;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 16px;
+    margin-top: 16px;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+
+    &-star {
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+    }
+
+    &-star:first-child {
+      margin-left: 0;
+    }
+
+    &--4 .card__stars-star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__response-text {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #060b35;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 16px;
+    margin-top: 24px;
+
+    &-text-left {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-cost-right {
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060b35;
+    }
+  }
+
+  &__button {
+    margin: 16px;
+
+    &-text {
+      width: 166px;
+      height: 40px;
+      background-color: #00acdc;
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #00acdc;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #fff;
+        color: #00acdc;
+      }
+    }
+  }
+}
