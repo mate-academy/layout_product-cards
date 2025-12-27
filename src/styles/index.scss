@@ -1,3 +1,126 @@
+@import 'variables';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  width: 198px;
+  height: 408px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  background-color: $white-color;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__product-name {
+    display: flex;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin: 0 16px 4px;
+    color: $main-color;
+  }
+
+  &__code {
+    display: flex;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    align-items: flex-start;
+    color: $second-color;
+    margin: 0 16px 16px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px 24px;
+  }
+
+  &__review-count {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $main-color;
+    text-align: right;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__stars-star {
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  &__stars-star:last-child {
+    margin-right: 0;
+  }
+
+  &__stars .card__stars-star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px 16px;
+  }
+
+  &__price-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    color: $second-color;
+  }
+
+  &__price-amount {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  &__button {
+    display: flex;
+    background-color: $bg-color;
+    width: 164px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 16px;
+    text-decoration: none;
+    border: 1px solid $bg-color;
+    color: $white-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__button:hover {
+    background-color: $border-color;
+    color: $bg-color;
+  }
 }
