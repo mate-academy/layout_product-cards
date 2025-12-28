@@ -1,0 +1,91 @@
+.card {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+  padding: 32px 19px 16px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    line-height: 14px;
+    color: $color-text-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__note {
+    color: $color-text-primary;
+    line-height: 14px;
+    margin-left: 17px;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-text-secondary;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-text-primary;
+  }
+
+  &__button {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    padding: 11px 70px;
+
+    border: 1px solid $color-blue-dark;
+    border-radius: 5px;
+    background-color: $color-blue-light;
+
+    transition:
+      ease-in 0.25s background-color,
+      ease-in 0.25s color;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-blue-dark;
+      background-color: $color-white;
+    }
+  }
+}
