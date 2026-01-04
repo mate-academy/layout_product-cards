@@ -1,0 +1,98 @@
+@import 'variables';
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  background-color: $main-color;
+  margin: 16px;
+  border: $border-width solid #f3f3f3;
+  border-radius: 5px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin: 16px 19px 40px;
+
+    img {
+      width: $card__image-width;
+      height: $card__image-height;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-family: Roboto, sans-serif;
+
+    &-main {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0 0 4px;
+      color: $text-primary-color;
+    }
+
+    &-sub {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      margin: 0;
+      color: $text-secondary-color;
+    }
+  }
+
+  &__price {
+    margin: 24px 0 0;
+    display: flex;
+    align-items: center;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      margin-left: 86px;
+      color: #000;
+    }
+  }
+
+  &__buy {
+    height: 40px;
+    width: 166px;
+    background-color: $accent-color;
+    border-radius: 5px;
+    margin-top: 16px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    &-text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $main-color;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: $main-color;
+      border: 1px solid $accent-color;
+
+      .card__buy-text {
+        color: $accent-color;
+      }
+    }
+  }
+}

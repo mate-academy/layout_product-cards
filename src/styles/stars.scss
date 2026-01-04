@@ -1,0 +1,33 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 16px 0 0;
+
+  &__star {
+    display: block;
+    width: $stars-size;
+    height: $stars-size;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin-left: 17px;
+    white-space: nowrap;
+    color: #060b35;
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
