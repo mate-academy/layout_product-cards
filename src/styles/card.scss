@@ -1,0 +1,61 @@
+@import 'variables';
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+  }
+  &__header {
+    font-size: 12px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  &__code {
+    color: $gray-color;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  &__price {
+    margin-top: 24px;
+    padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+    &-name {
+      color: $gray-color;
+      font-size: 12px;
+    }
+    &-amount {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    margin-top: 16px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    background-color: $blue-color;
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+
+    &:hover,
+    &--active {
+      background-color: $btn-hover;
+      color: $blue-color;
+    }
+  }
+}
