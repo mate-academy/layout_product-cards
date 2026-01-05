@@ -1,0 +1,64 @@
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  width: 200px;
+  height: auto;
+  border: 1px solid #f3f3f3;
+  border-radius: $border-radius-5;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__rating {
+    @include dis-flex-center;
+
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__price {
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    @include dis-flex-center;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__button-buy {
+    @extend %button-style;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      @extend %button-style-hover;
+    }
+  }
+}
