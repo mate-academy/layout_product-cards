@@ -1,0 +1,19 @@
+@use './variables' as vars;
+
+.stars {
+  display: flex;
+  gap: 2px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(vars.$star-inactive);
+    background-size: cover;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
+      background-image: url(vars.$star-active);
+    }
+  }
+}
