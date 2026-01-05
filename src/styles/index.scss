@@ -1,3 +1,119 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+@import 'variables';
+
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: $font-color-dark;
+  line-height: $base-line-height;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: $based-padding;
+  padding-top: calc(#{$based-padding} * 2);
+  border-radius: $based-border-radius;
+  border: $based-border-width solid $border-color;
+  font-size: $base-font-size-sm;
+  color: $font-color-light;
+
+  .card__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  .card__title {
+    margin-top: $based-margin * 2.5;
+    font-size: $base-font-size-md;
+    font-weight: 500;
+    border-bottom: 4px;
+    color: $font-color-dark;
+  }
+
+  .card__product-code {
+    line-height: 14px;
+    margin-bottom: $based-margin;
+    margin-top: 4px;
+  }
+
+  .card__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $based-margin * 1.5;
+    line-height: 14px;
+
+    .card__review-stars {
+      display: flex;
+
+      .card__review-star-stars {
+        background-image: url('../images/star.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+      }
+
+      .card__review-star-stars--active {
+        background-image: url('../images/star-active.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+      }
+    }
+
+    .card__review-count {
+      color: $font-color-dark;
+      font-size: 10px;
+      height: 14px;
+    }
+  }
+
+  .card__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $based-margin;
+
+    .card__price-label {
+      font-size: $base-font-size-md;
+    }
+
+    .card__price-value {
+      font-size: $base-font-size-xl;
+      font-weight: 700;
+      color: $font-color-dark;
+    }
+  }
+}
+
+.card__button {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  border-radius: $based-border-radius;
+  background-color: $primary-color;
+  color: white;
+  font-size: $base-font-size-lg;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: $primary-color;
+    border: $based-border-width solid $primary-color;
+  }
 }
