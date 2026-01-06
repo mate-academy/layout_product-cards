@@ -1,0 +1,119 @@
+@use '../variables/variables.scss' as vars;
+
+.card {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 200px;
+  border: 1px solid vars.$color-border;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  background-color: vars.$color-background;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-bottom: vars.$padding-bottom-img;
+  }
+
+  &__information {
+    display: inline;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: vars.$font-size-medium;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin: 0;
+    color: vars.$color-text-primary;
+  }
+
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: vars.$color-text-secondary;
+    font-size: vars.$font-size-small;
+    line-height: 14px;
+    margin: 4px 0 0;
+  }
+
+  &__starsrew {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 16px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    width: 100%;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: vars.$font-size-small;
+    line-height: 14px;
+    text-align: right;
+    align-self: flex-end;
+    vertical-align: bottom;
+    color: vars.$color-text-primary;
+  }
+
+  &__price {
+    display: flex;
+    gap: 85px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 24px;
+    width: 100%;
+
+    &-text {
+      margin: 0;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: vars.$font-size-medium;
+      line-height: 18px;
+      vertical-align: bottom;
+      color: vars.$color-text-secondary;
+    }
+
+    &-amount {
+      margin: 0;
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: vars.$font-size-large;
+      line-height: 18px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button-buy {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: vars.$button-height;
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: vars.$border-radius;
+    background-color: vars.$color-accent;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: vars.$font-size-button;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: vars.$color-background;
+
+    &:hover {
+      border: solid 1px vars.$color-accent;
+      background-color: vars.$color-background;
+      color: vars.$color-accent;
+    }
+  }
+}
