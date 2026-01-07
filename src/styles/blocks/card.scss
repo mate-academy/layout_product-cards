@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid $border-color;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  &__describe {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $text-color;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $gray-code-color;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &-text {
+      display: flex;
+      align-items: center;
+      color: $text-color;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__stars {
+    display: flex;
+
+    &--4 :nth-child(-n + 4) {
+      background-image: url(/src/images/star-active.svg);
+    }
+  }
+
+  &__star {
+    display: flex;
+    background-position: center;
+    background-image: url(/src/images/star.svg);
+    width: $star-size;
+    height: $star-size;
+
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      color: $gray-code-color;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      vertical-align: bottom;
+    }
+
+    &-amounth {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      vertical-align: bottom;
+      text-align: right;
+      color: $text-color;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    height: 40px;
+    width: 166px;
+    background-color: $l-blue-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $l-blue-color;
+      color: $l-blue-color;
+    }
+  }
+
+  &__content {
+    &--describe {
+      margin-top: 40px;
+      margin-bottom: 4px;
+    }
+
+    &--reviews {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    &--price {
+      margin-bottom: 16px;
+    }
+  }
+}
