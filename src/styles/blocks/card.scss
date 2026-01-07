@@ -1,0 +1,137 @@
+@use '../utils/variables.scss' as vars;
+
+.card {
+  width: vars.$card-width;
+  height: vars.$card-height;
+  box-sizing: border-box;
+
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$radius;
+
+  padding: vars.$padding-top vars.$padding-x vars.$padding-bottom;
+}
+
+.card__image-wrapper {
+  margin-inline: calc(vars.$padding-x * -1);
+  padding-inline: vars.$image-padding-x;
+
+  display: flex;
+  justify-content: center;
+}
+
+.card__image {
+  display: block;
+  width: vars.$image-width;
+  height: vars.$image-height;
+  object-fit: contain;
+}
+
+.card__title {
+  display: block;
+  padding-top: 40px;
+
+  font-weight: 500;
+  font-size: vars.$font-size-base;
+  line-height: vars.$line-height-base;
+
+  color: vars.$color-text;
+  text-decoration: none;
+}
+
+.card__title:hover {
+  color: vars.$color-accent;
+  text-decoration: none;
+}
+
+.card__code {
+  margin: 0;
+  padding-top: 4px;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+
+  color: vars.$color-muted;
+}
+
+.card__rating {
+  padding-top: 16px;
+  width: vars.$content-width;
+
+  display: flex;
+  align-items: center;
+}
+
+.card__reviews {
+  margin-left: auto;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+
+  color: vars.$color-text;
+}
+
+.card__footer {
+  padding-top: 24px;
+  width: vars.$content-width;
+}
+
+.card__price {
+  width: vars.$content-width;
+  height: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card__price-label {
+  font-weight: 400;
+  font-size: vars.$font-size-base;
+  line-height: vars.$line-height-base;
+  color: vars.$color-muted;
+}
+
+.card__price-value {
+  margin-left: auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: vars.$color-text;
+}
+
+.card__buy {
+  margin-top: 16px;
+
+  width: vars.$buy-width;
+  height: vars.$buy-height;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: vars.$color-accent;
+  border: 1px solid vars.$color-accent;
+  border-radius: vars.$radius;
+
+  color: vars.$color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  transition: none;
+}
+
+.card__buy:hover {
+  background-color: vars.$color-white;
+  color: vars.$color-accent;
+  text-decoration: none;
+  transition: none;
+}
