@@ -1,137 +1,133 @@
 @use '../utils/variables.scss' as vars;
 
 .card {
-  width: vars.$card-width;
-  height: vars.$card-height;
-  box-sizing: border-box;
-
   background-color: vars.$color-white;
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
   border: 1px solid vars.$color-border;
-  border-radius: vars.$radius;
+  border-radius: 5px;
 
   padding: vars.$padding-top vars.$padding-x vars.$padding-bottom;
-}
 
-.card__image-wrapper {
-  margin-inline: calc(vars.$padding-x * -1);
-  padding-inline: vars.$image-padding-x;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
 
-  display: flex;
-  justify-content: center;
-}
+  &__image-wrapper {
+    margin-inline: -17px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: center;
+  }
 
-.card__image {
-  display: block;
-  width: vars.$image-width;
-  height: vars.$image-height;
-  object-fit: contain;
-}
+  &__image {
+    box-sizing: content-box;
+    display: block;
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+  }
 
-.card__title {
-  display: block;
-  padding-top: 40px;
+  &__title {
+    display: block;
+    width: vars.$content-width;
+    height: 36px;
+    font-weight: 500;
+    color: vars.$color-text;
+    text-decoration: none;
+    letter-spacing: 0;
+    padding-top: 40px;
 
-  font-weight: 500;
-  font-size: vars.$font-size-base;
-  line-height: vars.$line-height-base;
+    &:hover {
+      color: vars.$color-accent;
+    }
+  }
 
-  color: vars.$color-text;
-  text-decoration: none;
-}
+  &__code {
+    margin: 0;
+    padding-top: 4px;
+    width: 98px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: vars.$color-muted;
+  }
 
-.card__title:hover {
-  color: vars.$color-accent;
-  text-decoration: none;
-}
+  &__rating {
+    padding-top: 16px;
+    width: vars.$content-width;
+    height: 16px;
+    display: flex;
+    align-items: center;
+  }
 
-.card__code {
-  margin: 0;
-  padding-top: 4px;
+  &__reviews {
+    margin-left: auto;
+    width: 53px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
 
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
+  &__footer {
+    padding-top: 24px;
+    width: vars.$content-width;
 
-  color: vars.$color-muted;
-}
+    display: flex;
+    flex-direction: column;
 
-.card__rating {
-  padding-top: 16px;
-  width: vars.$content-width;
+    gap: 16px;
+  }
 
-  display: flex;
-  align-items: center;
-}
+  &__price {
+    width: vars.$content-width;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
-.card__reviews {
-  margin-left: auto;
+  &__price-label {
+    font-weight: 400;
+    color: vars.$color-muted;
+  }
 
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
+  &__price-value {
+    width: 50px;
+    height: 18px;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
 
-  color: vars.$color-text;
-}
+  &__buy {
+    margin: 0 auto;
+    width: vars.$buy-width;
+    height: vars.$buy-height;
 
-.card__footer {
-  padding-top: 24px;
-  width: vars.$content-width;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.card__price {
-  width: vars.$content-width;
-  height: 18px;
+    background-color: vars.$color-accent;
+    color: vars.$color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
+    border-radius: 5px;
 
-.card__price-label {
-  font-weight: 400;
-  font-size: vars.$font-size-base;
-  line-height: vars.$line-height-base;
-  color: vars.$color-muted;
-}
+    border: 1px solid vars.$color-accent;
+    box-sizing: border-box;
 
-.card__price-value {
-  margin-left: auto;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-
-  color: vars.$color-text;
-}
-
-.card__buy {
-  margin-top: 16px;
-
-  width: vars.$buy-width;
-  height: vars.$buy-height;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: vars.$color-accent;
-  border: 1px solid vars.$color-accent;
-  border-radius: vars.$radius;
-
-  color: vars.$color-white;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-
-  transition: none;
-}
-
-.card__buy:hover {
-  background-color: vars.$color-white;
-  color: vars.$color-accent;
-  text-decoration: none;
-  transition: none;
+    &:hover {
+      background-color: vars.$color-white;
+      color: vars.$color-accent;
+    }
+  }
 }
