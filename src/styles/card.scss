@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+
+  font-family: $font-main;
+  background-color: $color;
+  transition: border-color 0.3s;
+  text-align: left;
+  box-sizing: border-box;
+
+  &__image {
+    width: 166px;
+    height: 134px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__review-text {
+    margin: 0;
+  }
+  &__header {
+    &-content {
+      margin: 0;
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+      color: $dark-blue;
+    }
+
+    &-code {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color:$color-code;
+     
+    }
+  }
+
+  &__reviews {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 10px;
+    color: $grey;
+    line-height: 14px;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $grey;
+  }
+
+  &__price-value {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: $dark-blue;
+    line-height: 18px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    height: 40px;
+    font-family: Roboto, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color:$color-white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0%;
+    border-radius: 5px;
+    border: 1px solid $main-blue;
+    background-color: $main-blue;
+
+    &:hover {
+      color: $hover-blue;
+      border-color: $main-blue;
+      background-color:$color-white;
+      transition: 0.5s;
+    }
+  }
+}
