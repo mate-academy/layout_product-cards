@@ -16,19 +16,11 @@
     box-sizing: border-box;
   }
 
-  &__image-wrapper {
-    margin-inline: -17px;
-    padding-inline: 20px;
-    display: flex;
-    justify-content: center;
-  }
-
   &__image {
-    box-sizing: content-box;
     display: block;
+    margin: 0 auto;
     width: 160px;
     height: 134px;
-    object-fit: contain;
   }
 
   &__title {
@@ -56,21 +48,23 @@
     color: vars.$color-muted;
   }
 
-  &__rating {
+  .card__rating {
     padding-top: 16px;
-    width: vars.$content-width;
-    height: 16px;
+    width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end; // низ для всіх елементів у рядку
   }
 
-  &__reviews {
+  .card__reviews {
     margin-left: auto;
-    width: 53px;
-    height: 16px;
+
+    height: 16px; // така ж висота як зірки
+    display: flex; // робимо контейнер
+    align-items: flex-end; // 🔥 текст вниз
+
     font-weight: 400;
     font-size: 10px;
-    line-height: 14px;
+    line-height: 14px; // можна лишити 14 — ми притискаємо флексом
   }
 
   &__footer {
