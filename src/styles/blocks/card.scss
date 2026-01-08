@@ -1,0 +1,127 @@
+@use '../utils/variables.scss' as vars;
+
+.card {
+  background-color: vars.$color-white;
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid vars.$color-border;
+  border-radius: 5px;
+
+  padding: vars.$padding-top vars.$padding-x vars.$padding-bottom;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    display: block;
+    width: vars.$content-width;
+    height: 36px;
+    font-weight: 500;
+    color: vars.$color-text;
+    text-decoration: none;
+    letter-spacing: 0;
+    padding-top: 40px;
+
+    &:hover {
+      color: vars.$color-accent;
+    }
+  }
+
+  &__code {
+    margin: 0;
+    padding-top: 4px;
+    width: 98px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: vars.$color-muted;
+  }
+
+  .card__rating {
+    padding-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end; // низ для всіх елементів у рядку
+  }
+
+  .card__reviews {
+    margin-left: auto;
+
+    height: 16px; // така ж висота як зірки
+    display: flex; // робимо контейнер
+    align-items: flex-end; // 🔥 текст вниз
+
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px; // можна лишити 14 — ми притискаємо флексом
+  }
+
+  &__footer {
+    padding-top: 24px;
+    width: vars.$content-width;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  &__price {
+    width: vars.$content-width;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    color: vars.$color-muted;
+  }
+
+  &__price-value {
+    width: 50px;
+    height: 18px;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__buy {
+    margin: 0 auto;
+    width: vars.$buy-width;
+    height: vars.$buy-height;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: vars.$color-accent;
+    color: vars.$color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    border-radius: 5px;
+
+    border: 1px solid vars.$color-accent;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: vars.$color-white;
+      color: vars.$color-accent;
+    }
+  }
+}
