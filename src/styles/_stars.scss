@@ -1,0 +1,21 @@
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    // Isso se refere a class="stars__star"
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // Quando o PAI tiver a classe stars--4,
+  // ele muda as 4 primeiras estrelas (filhas)
+  &--4 {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
