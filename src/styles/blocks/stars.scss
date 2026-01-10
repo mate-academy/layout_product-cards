@@ -22,8 +22,11 @@
     &:last-child {
       margin-right: 0;
     }
-    .stars--4 &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
+
+    @for $number from 1 through 5 {
+      .stars--#{$number} &:nth-child(-n + #{$number}) {
+        background-image: url(../images/star-active.svg);
+      }
     }
   }
 
