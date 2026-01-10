@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+.card {
+  width: $card-width;
+  background: $bg;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid $gray-accents;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin: 0 auto 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $text-accent-color;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $text-secondary-color;
+  }
+
+  &__review-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__review-count {
+    color: $text-accent-color;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $text-secondary-color;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: $text-accent-color;
+  }
+
+  &__buy-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: $main-color;
+    border-radius: 5px;
+    border: 1px solid $main-color;
+    color: $bg;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $bg;
+      color: $main-color;
+      border: 1px solid $main-color;
+    }
+  }
+}
+
+// NOTE: This container uses the 'stars' component
+// defined in _stars.scss
