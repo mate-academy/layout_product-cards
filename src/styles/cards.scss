@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  margin: 0;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-family: Roboto, sans-serif;
+    color: $main-text-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    margin: 0 0 16px;
+    font-family: Roboto, sans-serif;
+    color: $second-text-color-gray;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    color: $second-text-color-gray;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__price-value {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    color: $main-text-color;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__button {
+    display: flex;
+    width: 166px;
+    height: 40px;
+
+    background-color: $accent-color;
+    color: $bg-color;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+  }
+}
+
