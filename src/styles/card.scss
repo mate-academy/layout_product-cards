@@ -1,0 +1,118 @@
+@use 'variables' as vars;
+.product-card {
+  box-sizing: border-box;
+  max-width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: vars.$white-color;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    object-fit: contain;
+  }
+
+  &__photo {
+    max-width: 100%;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    height: 36px;
+    width: 166px;
+    font-weight: 500;
+    font-size: vars.$size-medium;
+    line-height: 18px;
+    color: vars.$text-color;
+  }
+
+  &__code {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    width: 98px;
+    height: 14px;
+  }
+
+  &__code-name {
+    font-weight: 400;
+    font-size: vars.$size-small;
+    line-height: 14px;
+    color: vars.$gray-color;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 166px;
+    height: 16px;
+  }
+
+  &__reviews {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 53px;
+    height: 16px;
+    font-weight: 400;
+    font-size: vars.$size-small;
+    line-height: 14px;
+    color: vars.$text-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    height: 18px;
+  }
+
+  &__price-title {
+    font-weight: 400;
+    font-size: vars.$size-medium;
+    line-height: 18px;
+    color: vars.$gray-color;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: vars.$size-large;
+    line-height: 18px;
+    color: vars.$text-color;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: vars.$marine-color;
+    color: vars.$white-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__button:hover {
+    background-color: vars.$white-color;
+    color: vars.$marine-color;
+    border: 1px solid;
+    border-color: vars.$marine-color;
+  }
+}
