@@ -1,0 +1,108 @@
+@import './variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: $card-width;
+  padding: $padding-card;
+  border: $border-base $border-color;
+  border-radius: $card-radius;
+
+  font-family: $font-main;
+  color: $main-color;
+
+  background-color: $white;
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+    margin-bottom: $margin-bottom-40;
+
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $background-size;
+  }
+
+  &__description {
+    margin-bottom: $margin-bottom-4;
+    font-size: $font-size-12;
+    font-weight: $font-weight-500;
+    line-height: $line-height-18;
+  }
+
+  &__product-code {
+    align-self: flex-start;
+
+    margin-bottom: $margin-bottom-16;
+
+    font-size: $font-size-10;
+    font-weight: $font-weight-400;
+    line-height: $line-height-14;
+    color: $secondary-color;
+  }
+
+  &__review {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    width: $width-base;
+    margin-bottom: $margin-bottom-24;
+  }
+
+  &__count-review {
+    font-size: $font-size-10;
+    font-weight: $font-weight-400;
+    line-height: $line-height-14;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $width-base;
+    margin-bottom: $margin-bottom-16;
+  }
+
+  &__price-text {
+    font-size: $font-size-12;
+    font-weight: $font-weight-400;
+    line-height: $line-height-18;
+    color: $secondary-color;
+  }
+
+  &__price-value {
+    font-size: $font-size-16;
+    font-weight: $font-weight-700;
+    line-height: $line-height-18;
+    color: $main-color;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: $width-base;
+    height: $height-40;
+    border: $border-base $blue;
+    border-radius: $card-radius;
+
+    font-size: $font-size-14;
+    font-weight: $font-weight-700;
+    line-height: $line-height-16;
+    color: $white;
+    text-decoration: none;
+
+    background-color: $blue;
+
+    &:hover {
+      color: $blue;
+      background-color: $white;
+    }
+  }
+}
