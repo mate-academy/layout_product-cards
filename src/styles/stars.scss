@@ -1,0 +1,44 @@
+.stars {
+  display: flex;
+  gap: 4px; // Відступ між зірками з макета
+  margin-right: 16px; // Відступ праворуч до тексту "Reviews"
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg); // Сіра зірка за замовчуванням
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // Вкладені модифікатори для активних зірок
+  &--1 {
+    .stars__star:nth-child(1) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &--2 {
+    .stars__star:nth-child(-n + 2) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &--3 {
+    .stars__star:nth-child(-n + 3) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &--4 {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &--5 {
+    .stars__star:nth-child(-n + 5) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}

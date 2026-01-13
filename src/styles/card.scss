@@ -1,0 +1,98 @@
+.card {
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $btn-color;
+
+  padding: 32px 16px 16px;
+  width: 200px;
+  min-height: 408px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+  &__title {
+    width: 100%;
+    margin: 0 0 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent-color;
+  }
+  &__code {
+    padding: 0;
+    margin: 0 0 16px;
+    align-self: flex-start;
+
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+  }
+  &__rating {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    color: $main-accent-color;
+    align-self: flex-end;
+  }
+  &__price {
+    align-self: stretch; // Каже саме цьому блоку: "розтягнися на всю ширину батька"
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary-color;
+  }
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    align-items: baseline;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+
+    background-color: $secondary-accent-color;
+    height: 40px;
+    border: solid 1px $secondary-accent-color;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $btn-color;
+
+    transition: all 0.3s ease; // Плавний перехід
+
+    &:hover {
+      background-color: $btn-color;
+      color: $secondary-accent-color;
+    }
+  }
+}
