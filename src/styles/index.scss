@@ -1,3 +1,22 @@
-body {
+@use './variables';
+@use './card';
+@use './stars';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variables.$font-family;
+  background-color: variables.$body-bg;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
