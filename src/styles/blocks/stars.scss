@@ -1,0 +1,22 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    aspect-ratio: 1;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // could be done with gap
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @for $star-index from 1 through $max-stars {
+    &--#{$star-index} .stars__star:nth-child(-n + #{$star-index}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
