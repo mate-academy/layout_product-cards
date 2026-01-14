@@ -1,0 +1,26 @@
+@import './variables';
+
+.stars {
+  display: flex;
+  margin-bottom: 10px;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: $star-spacing;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Aktywne gwiazdki przez pętlę
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n+#{$i}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
