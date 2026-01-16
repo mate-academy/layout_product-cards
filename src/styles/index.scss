@@ -1,3 +1,95 @@
+@import 'variable';
+@import 'stars';
+
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 200px;
+  height: 408px;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: auto;
+  }
+
+  &__product-name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $black-color;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $gray-color;
+    margin: 0;
+    margin-top: 4px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 18px;
+    margin-top: 24px;
+
+    &--name {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      color: $gray-color;
+    }
+
+    &--value {
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: $black-color;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    background-color: $blue-color;
+    width: 166px;
+    height: 40px;
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+    text-align: center;
+
+    margin: 0;
+    margin-top: 16px;
+
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 40px;
+  }
+
+  &__button:hover {
+    background-color: #fff;
+    color: $blue-color;
+  }
 }
