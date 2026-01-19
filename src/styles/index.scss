@@ -1,3 +1,87 @@
-body {
+/* Глобальные настройки */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Карточки продуктов */
+.product-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+  &__item {
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &[data-qa='card'] {
+      border-color: #007bff;
+      animation: highlight 0.5s ease; /* Анимация, которая отключается в тестах */
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+
+  &__price {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  &__buy {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    padding: 16px;
+
+    .star {
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/star-active.svg');
+      background-size: cover;
+      margin: 0 2px;
+      cursor: pointer;
+
+      &:hover,
+      &:hover ~ .star {
+        background-image: url('../images/star.svg');
+      }
+    }
+  }
 }
