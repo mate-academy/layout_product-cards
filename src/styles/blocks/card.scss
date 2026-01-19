@@ -1,0 +1,102 @@
+@use '../utils/variables.scss';
+
+.card {
+  width: 200px;
+  height: 408px;
+  padding: 32px 16px 16px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: variables.$main-accent;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    width: 100%;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: variables.$secondary-accent;
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__stars {
+    margin-right: 17px;
+  }
+
+  &__reviews-count {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    color: variables.$main-accent;
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: variables.$secondary-accent;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: right;
+      color: variables.$main-accent;
+    }
+
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: variables.$blue-accent;
+
+    &:hover {
+      background-color: white;
+      color: variables.$blue-accent;
+      border: 1px solid variables.$blue-accent;
+    }
+  }
+}
