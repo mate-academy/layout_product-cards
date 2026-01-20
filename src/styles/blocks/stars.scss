@@ -1,0 +1,48 @@
+.stars {
+  position: relative;
+  margin-bottom: 16px;
+
+  @include flex-center;
+
+  &::before {
+    content: '';
+    width: 200px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: repeat-x;
+    background-size: 20px 16px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 16px;
+    background-image: url('../images/star-active.svg');
+    background-repeat: repeat-x;
+    background-size: 20px 16px;
+  }
+
+  &--1::after {
+    width: $star-size;
+  }
+  &--2::after {
+    width: $star-size * 2;
+  }
+  &--3::after {
+    width: $star-size * 3;
+  }
+  &--4::after {
+    width: $star-size * 4;
+  }
+  &--5::after {
+    width: $star-size * 5;
+  }
+
+  &__reviews {
+    margin-left: 30px;
+    font-size: 10px;
+    color: $color-text-main;
+  }
+}
