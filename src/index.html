@@ -1,3 +1,4 @@
+<!-- #region head -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,11 +9,73 @@
     />
     <title>Product cards</title>
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
-  <body>
-    <h1>Product cards</h1>
+  <!-- #endregion -->
+  <body class="page">
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <section class="card__top">
+        <img
+          class="card__top-image"
+          src="../src/images/imac.jpeg"
+          alt="computer"
+        />
+
+        <div class="card__top-text">
+          <h1 class="card__top-title">
+            APPLE A1419 iMac 27" Retina
+            <br />
+            5K Monoblock (MNED2UA/A)
+          </h1>
+          <p class="card__top-subtitle">Product code: 195434</p>
+        </div>
+      </section>
+
+      <section class="card__review">
+        <div class="stars stars--4">
+          <div class="stars__star stars__star--1"></div>
+          <div class="stars__star stars__star--2"></div>
+          <div class="stars__star stars__star--3"></div>
+          <div class="stars__star stars__star--4"></div>
+          <div class="stars__star"></div>
+        </div>
+
+        <p class="card__review-text">Reviews: 5</p>
+      </section>
+
+      <section class="price">
+        <div class="price__wrapper">
+          <p class="price__text">Price:</p>
+
+          <p class="price__money">$2,199</p>
+        </div>
+
+        <a
+          href="#"
+          class="price__link"
+          data-qa="hover"
+        >
+          Buy
+        </a>
+      </section>
+    </div>
   </body>
 </html>
