@@ -1,0 +1,34 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 16px;
+  width: 100%;
+  margin-top: 16px;
+
+  &__list {
+    @include center;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    justify-content: space-between;
+    background-image: url('../images/star-active.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__star:nth-child(n + 5) {
+    background-image: url('../images/star.svg');
+  }
+
+  &__reviews {
+    @include roboto400;
+
+    justify-content: space-between;
+    line-height: 14px;
+    color: #060b35;
+    font-size: 10px;
+  }
+}
