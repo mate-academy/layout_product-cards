@@ -1,0 +1,34 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &--0 &__star:nth-child(n),
+  &--1 &__star:nth-child(n + 2),
+  &--2 &__star:nth-child(n + 3),
+  &--3 &__star:nth-child(n + 4),
+  &--4 &__star:nth-child(n + 5) {
+    background-image: $star-bg;
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: $star-bg-active;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
