@@ -1,3 +1,97 @@
-body {
+@import './star';
+@import './variables';
+
+:root {
+  font-family: Roboto, sans-serif;
+}
+
+* {
   margin: 0;
+  padding: 0;
+}
+
+.product-card {
+  position: relative;
+  background-color: $color-with;
+  display: flex;
+  width: 198px;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.img__page {
+  margin-top: 32px;
+  height: 134px;
+  width: 160px;
+}
+
+.name {
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 36px;
+  height: 36px;
+}
+
+.name__header {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.code {
+  margin-right: 68px;
+  padding-top: 4px;
+  font-weight: 400;
+  font-size: 10px;
+  color: $color-grey;
+}
+
+.price {
+  display: flex;
+  height: 18px;
+  margin-top: 24px;
+  margin-left: 22px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.price__text {
+  display: flex;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 12px;
+  margin-left: 5px;
+  color: $color-grey;
+}
+
+.price__number {
+  display: flex;
+  line-height: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 28px;
+}
+
+.button {
+  background-color: $color-blue;
+  text-decoration: none;
+  width: 166px;
+  height: 40px;
+  border: 1px solid $color-blue;
+  border-radius: 5px;
+  color: $color-with;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 16px;
+}
+
+.button:hover {
+  background-color: $color-with;
+  color: $color-blue;
 }
