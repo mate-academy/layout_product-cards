@@ -1,0 +1,95 @@
+@import './styles/variables';
+
+.card {
+  width: 200px;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $card-radius;
+  font-family: $font-main;
+  padding: $card-padding;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin: 16px 0;
+}
+
+.card__info {
+  display: block;
+  color: $color-text;
+  text-align: left;
+  margin: 8px 0 10px;
+}
+
+.card__title {
+  font-size: $card-font-size;
+  margin: 16px 0 2px;
+  font-weight: 500;
+}
+
+.card__code {
+  font-size: $card-code-font-size;
+  color: $color-subtext;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 4px 0 22px;
+}
+
+.rating__reviews {
+  font-size: 10px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  color: $color-subtext;
+  width: 100%;
+}
+
+.card__value {
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-text;
+}
+
+.card__buy {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background-color: $color-button;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: $card-radius;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-button-hover;
+    color: $color-hover-text;
+    border: 1px solid $color-border-hover; // додано явно
+    text-decoration: none;
+  }
+}
+
+.card__label {
+  font-size: $card-font-size;
+  font-weight: 400;
+}
