@@ -1,3 +1,139 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+/* product */
+
+.product {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &__img {
+    width: 100%;
+    height: 134px;
+    object-fit: contain;
+    object-position: center;
+    vertical-align: top;
+  }
+  &__name {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-top: 40px;
+    a {
+      color: #060b35;
+      text-decoration: none;
+    }
+  }
+  &__code {
+    color: #616070;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  &__reit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: #060b35;
+    margin-top: 1px;
+  }
+  &__buy {
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
+    text-decoration: none;
+    background-color: #00acdc;
+    height: 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+    border: 1px solid #00acdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  &__price_text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #616070;
+  }
+  &__price_amount {
+    color: #060b35;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+
+/* product END */
+
+/* stars */
+
+.stars {
+  display: flex;
+
+  &__star {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__star:first-child {
+    margin-left: 0;
+  }
+  .stars--1 &__star:nth-child(1) {
+    background-image: url(../images/star-active.svg);
+  }
+  .stars--2 &__star:nth-child(1),
+  .stars--2 &__star:nth-child(2) {
+    background-image: url(../images/star-active.svg);
+  }
+  .stars--3 &__star:nth-child(1),
+  .stars--3 &__star:nth-child(2),
+  .stars--3 &__star:nth-child(3) {
+    background-image: url(../images/star-active.svg);
+  }
+  .stars--4 &__star:nth-child(1),
+  .stars--4 &__star:nth-child(2),
+  .stars--4 &__star:nth-child(3),
+  .stars--4 &__star:nth-child(4) {
+    background-image: url(../images/star-active.svg);
+  }
+  .stars--5 &__star:nth-child(1),
+  .stars--5 &__star:nth-child(2),
+  .stars--5 &__star:nth-child(3),
+  .stars--5 &__star:nth-child(4),
+  .stars--5 &__star:nth-child(5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+/* stars END */
