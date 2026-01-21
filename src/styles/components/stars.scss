@@ -1,0 +1,17 @@
+@use '../variables' as v;
+
+.stars {
+  display: flex;
+  gap: 2px;
+
+  &__star {
+    width: 14px;
+    height: 14px;
+    background-image: url('../images/star.svg');
+    background-size: contain;
+  }
+
+  &--3 &__star:nth-child(-n + 3) {
+    background-image: url('../images/star-active.svg');
+  }
+}

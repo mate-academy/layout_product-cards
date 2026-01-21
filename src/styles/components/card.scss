@@ -1,0 +1,77 @@
+@use '../variables' as v;
+
+.card {
+  width: 200px;
+  background: #fff;
+  border: 1px solid v.$border-color;
+  border-radius: 4px;
+  padding: 24px 17px 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+  }
+
+  &__title {
+    width: 166px;
+    margin-top: 12px;
+
+    text-align: center;
+    font: 500 12px/18px v.$font-main;
+    color: v.$text-color;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    color: v.$secondary-text-color;
+  }
+
+  &__price-line {
+    margin-top: 16px;
+    width: 166px;
+
+    display: flex;
+    justify-content: space-between;
+    color: v.$secondary-text-color;
+  }
+
+  &__price {
+    font-size: 14px;
+    font-weight: 600;
+    color: v.$text-color;
+  }
+}
+
+.btn {
+  width: 166px;
+  height: 40px;
+  margin-top: 16px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background: v.$button-color;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font: 500 14px v.$font-main;
+  text-decoration: none;
+  transition: background 0.25s;
+
+  &:hover {
+    background: v.$button-hover;
+  }
+}

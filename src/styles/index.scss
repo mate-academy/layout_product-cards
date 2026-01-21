@@ -1,3 +1,28 @@
-body {
+@use './variables' as v;
+@use './components/card';
+@use './components/stars';
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap';
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$font-main;
+  background: v.$bg-color;
+  color: v.$text-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
 }
