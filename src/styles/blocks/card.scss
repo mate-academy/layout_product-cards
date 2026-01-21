@@ -1,0 +1,110 @@
+@import '../variables';
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 198px;
+  height: 406px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  box-sizing: border-box;
+
+  &__title {
+    font-family: $font-stack;
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 40px;
+  }
+
+  &__code {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: $font-stack;
+    color: $color-secundary;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    margin-left: 16px;
+    margin-top: 4px;
+    margin-right: 84px;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 160px 134px;
+    background-repeat: no-repeat;
+    margin-top: 32px;
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+
+  &__button {
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-stack;
+    width: 166px;
+    height: 40px;
+    background-color: $color-terciary;
+    text-decoration: none;
+    text-align: center;
+    color: $color-quartenary;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    border-radius: 5px;
+  }
+  &__price {
+    width: 166px;
+    height: 18px;
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-stack;
+  }
+  &__value {
+    color: $color-secundary;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+  &__currency {
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+  &__button:hover {
+    background-color: $color-button;
+    color: $color-terciary;
+    border: 1px solid $color-terciary;
+  }
+}
