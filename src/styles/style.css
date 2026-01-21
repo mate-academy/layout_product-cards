@@ -1,0 +1,132 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars__item {
+  display: flex;
+  align-items: center;
+}
+
+.stars__reviews {
+  font-size: 10px;
+  line-height: 14px;
+  color: #060b35;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star + .stars__star {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:nth-child(-n + 1),
+.stars--2 .stars__star:nth-child(-n + 2),
+.stars--3 .stars__star:nth-child(-n + 3),
+.stars--4 .stars__star:nth-child(-n + 4),
+.stars--5 .stars__star:nth-child(-n + 5) {
+  background-image: url(../images/star-active.svg);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  margin: 50vh auto;
+}
+
+.card__content {
+  margin: 33px 20px 16px;
+  background-color: #fff;
+}
+
+.card__logo {
+  width: 160px;
+  height: 134px;
+  display: flex;
+  justify-content: center;
+}
+
+.card__title {
+  margin-top: 40px;
+  width: 166px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__code {
+  margin-top: 4px;
+  color: #616070;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__items {
+  width: 166px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__total {
+  font-size: 12px;
+  color: #616070;
+}
+
+.card__volue {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #060b35;
+}
+
+.card__btn {
+  margin-top: 16px;
+  width: 166px;
+  display: flex;
+  justify-content: center;
+  padding: 12px 70px;
+  background-color: #00acdc;
+  border-radius: 5px;
+}
+
+.card__buy {
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__btn:hover {
+  border: 1px solid #00acdc;
+  background-color: #fff;
+}
+
+.card__buy:hover {
+  color: #00acdc;
+}
+
+.card__btn:hover .card__buy {
+  color: #00acdc;
+}
+
+/*# sourceMappingURL=style.css.map */
