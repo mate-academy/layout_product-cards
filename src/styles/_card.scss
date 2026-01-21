@@ -1,0 +1,97 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: #{$card-width};
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+
+  &__media {
+    text-align: center;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: #{$title-font-size};
+    font-weight: 500;
+    line-height: 18px;
+    color: #{$main-text-color};
+  }
+  &__article {
+    margin-top: 4px;
+    color: #{$secondary-text-color};
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    align-self: start;
+  }
+
+  &__reviews {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 24px;
+    &-count {
+      color: #{$main-text-color};
+      font-size: 10px;
+      font-weight: 400;
+      padding-top: 2px;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-label {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: #{$secondary-text-color};
+    }
+    &-value {
+      padding-top: 1px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 700;
+      color: #{$main-text-color};
+    }
+  }
+
+  &__actions {
+    margin: 16px 16px 0;
+  }
+
+  &__button {
+    margin-top: 16px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    background-color: #{$blue-color};
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    width: 166px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #{$blue-color};
+      color: #{$blue-color};
+    }
+  }
+}
