@@ -1,0 +1,29 @@
+@use '../utils/variables' as *;
+
+.stars {
+  display: flex;
+  justify-content: flex-start;
+  width: $paragraph-width;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &__star:last-child {
+    margin: 0;
+  }
+}
+
+.stars--1 .stars__star:first-child,
+.stars--2 .stars__star:nth-last-child(n + 4),
+.stars--3 .stars__star:nth-last-child(n + 3),
+.stars--4 .stars__star:nth-last-child(n + 2),
+.stars--5 .stars__star:nth-last-child(n + 1) {
+  background-image: url('../images/star-active.svg');
+}
