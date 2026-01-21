@@ -1,0 +1,111 @@
+.card {
+  width: $card-width;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: $border-radius-small;
+  font-family: $font-family;
+
+  &__product {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    padding: $card__product-padding;
+  }
+
+  &__image {
+    display: block;
+    width: $card__image-width;
+    height: $card__image-heigth;
+    background-image: url('../images/imac.jpeg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: $card__title-margin;
+    color: $color-dark;
+    line-height: $line-height-medium;
+    align-items: center;
+    font-size: $font-size-mid;
+    font-weight: $font-weight-mid;
+  }
+
+  &__code {
+    display: flex;
+    margin: 4px 0 0;
+    color: $color-grey;
+    width: 100%;
+    line-height: $line-height-small;
+    font-size: $font-size-light;
+    font-weight: $font-weight-light;
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 16px 0 0;
+    width: 166px;
+  }
+
+  &__reviews-count {
+    margin: 0;
+    width: 53px;
+    text-align: right;
+    color: $color-dark;
+    line-height: $line-height-small;
+    font-weight: $font-weight-light;
+    font-size: $font-size-light;
+  }
+
+  &__price {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 0;
+
+    &-label {
+      margin: 0;
+      color: $color-grey;
+      line-height: $line-height-medium;
+      font-size: $font-size-mid;
+      font-weight: $font-weight-mid;
+    }
+
+    &-value {
+      margin: 0;
+      color: $color-dark;
+      line-height: $line-height-medium;
+      font-size: $font-size-large;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 16px;
+    width: 100%;
+    height: $line-height-large;
+    border: 1px solid $color-blue;
+    border-radius: $border-radius-small;
+    background-color: $color-blue;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: $line-height-large;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: $font-size-mid-large;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      color: $color-blue;
+      background-color: #fff;
+    }
+  }
+}
