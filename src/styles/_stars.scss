@@ -1,0 +1,32 @@
+.stars {
+  display: flex;
+  font-size: 0;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $star-size;
+    height: $star-size;
+    margin-right: $spacing-xs;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &--1 &__star:nth-child(-n + 1) {
+    background-image: url('../images/star-active.svg');
+  }
+  &--2 &__star:nth-child(-n + 2) {
+    background-image: url('../images/star-active.svg');
+  }
+  &--3 &__star:nth-child(-n + 3) {
+    background-image: url('../images/star-active.svg');
+  }
+  &--4 &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
