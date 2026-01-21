@@ -1,3 +1,126 @@
-body {
+$main-text-color: #060b35;
+$secondary-text-color: #616070;
+$blue-accent: #00acdc;
+
+.page {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: $main-text-color;
+  font-weight: 400;
+}
+
+.card {
+  width: 200px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__productName {
+    margin-bottom: 16px;
+  }
+
+  &__productNameTitle {
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__productNameText {
+    margin: 0;
+    color: $secondary-text-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 85px;
+    margin-bottom: 16px;
+  }
+
+  &__priceLabel {
+    color: $secondary-text-color;
+    font-weight: bold;
+  }
+
+  &__priceValue {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid transparent;
+    margin-bottom: 16px;
+
+    background-color: $blue-accent;
+    color: #fff;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+      transition: 0.7s;
+    }
+  }
+}
+
+.container-stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 24px;
+}
+
+.stars {
+  display: flex;
+
+  &__star {
+    display: flex;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
+
+.stars-text {
+  font-size: 10px;
+  line-height: 14px;
 }
