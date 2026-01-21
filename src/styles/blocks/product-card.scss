@@ -1,0 +1,87 @@
+.card {
+  margin: auto;
+
+  @include card-size;
+
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    @include image-sizes(160px, 134px);
+
+    margin: 32px auto 40px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__title {
+    @include font-sizes(12px, 500, 18px, $main-text-color);
+
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    margin: 0;
+
+    @include font-sizes(10px, 400, 14px, $second-text-color);
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    .card__reviews {
+      @include font-sizes(10px, 400, 14px, $main-text-color);
+
+      margin-left: auto;
+    }
+  }
+
+  &__price {
+    display: flex;
+
+    &-label {
+      @include font-sizes(12px, 400, 18px, $second-text-color);
+    }
+
+    &-value {
+      @include font-sizes(16px, 700, 18px, $main-text-color);
+
+      margin-left: auto;
+    }
+  }
+}
+
+.buy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 16px auto;
+  border-radius: 5px;
+  background-color: $blue-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  &__text {
+    @include font-sizes(14px, 700, 16px, $white-color);
+
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-sizing: border-box;
+    border: 1px solid $blue-color;
+    background-color: $white-color;
+    outline: none;
+    color: $blue-color;
+  }
+}
