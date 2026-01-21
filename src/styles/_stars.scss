@@ -1,0 +1,19 @@
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 10px auto;
+
+  img {
+    width: 20px;
+  }
+
+  &--1 img:nth-child(n + 2),
+  &--2 img:nth-child(n + 3),
+  &--3 img:nth-child(n + 4),
+  &--4 img:nth-child(n + 5) {
+    content: url('../images/star.svg'); // estrela desativada
+  }
+
+  // &--5 não precisa, pois todas são ativas por padrão
+}
