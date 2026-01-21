@@ -1,0 +1,77 @@
+.card__review {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  max-width: 166px;
+  margin-block: 8px;
+  gap: 17px;
+
+  &-amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 16px;
+    width: 53px;
+    margin: 6px 0 10px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: right;
+    color: $main-text-color;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 8px 0 12px;
+  gap: 4px;
+
+  &__star {
+    display: flex;
+    flex-direction: row;
+    background-image: url(/src/images/star.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:nth-child(-n + 4) {
+      background-image: url(/src/images/star-active.svg);
+    }
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  height: 18px;
+  max-width: 166px;
+  margin: 5px 0 15px;
+  overflow: hidden;
+
+  &-title {
+    height: 18px;
+    width: 31px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $second-text-color;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &-amount {
+    height: 18px;
+    width: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: right;
+    color: $main-text-color;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
