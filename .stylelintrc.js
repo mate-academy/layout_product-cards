@@ -3,5 +3,8 @@ module.exports = {
   plugins: [
     "stylelint-scss"
   ],
-  rules: {}
+  rules: {
+    "scss/at-import-partial-extension": "always",
+    "scss/at-import-partial-extension-blacklist": [""]
+  }
 };
