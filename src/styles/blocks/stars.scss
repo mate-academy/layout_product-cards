@@ -1,0 +1,16 @@
+.stars {
+  display: flex;
+
+  &__star {
+    @include star-size;
+
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @for $i from 1 to 5 {
+    @include stars-modifier($i);
+  }
+}

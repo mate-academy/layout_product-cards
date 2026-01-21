@@ -1,0 +1,93 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__product-image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+    align-self: center;
+  }
+
+  &__product-name {
+    @include text-compact;
+    @include font-weight-medium;
+
+    margin: 0 0 4px;
+    color: $main-card-color;
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+    color: $secondary-card-color;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &-count {
+      color: $main-card-color;
+    }
+  }
+
+  &__product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-label {
+      @include text-compact;
+
+      color: $secondary-card-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 18px;
+
+      @include font-weight-bold;
+
+      color: $main-card-color;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: $main-button-color;
+    border: 0;
+    border-radius: 5px;
+
+    &-text {
+      font-size: 14px;
+      line-height: 16px;
+
+      @include font-weight-bold;
+
+      color: $secondary-button-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $secondary-button-color;
+      border: 1px solid $main-button-color;
+
+      .card__button-text {
+        color: $main-button-color;
+      }
+    }
+  }
+}
