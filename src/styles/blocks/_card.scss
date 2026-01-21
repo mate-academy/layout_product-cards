@@ -1,0 +1,99 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  border-radius: 5px;
+  border: 1px solid var.$border-color;
+
+  background: #fff;
+  font-family: Roboto, sans-serif;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    display: block;
+    margin-inline: auto;
+  }
+
+  &__name {
+    margin-top: 40px;
+
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var.$main-color;
+  }
+
+  &__code {
+    margin-top: 4px;
+
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var.$secondary-color;
+  }
+
+  &__review-wrapper {
+    margin-top: 16px;
+
+    @include mix.flex-layout(space-between, flex-end);
+  }
+
+  &__review-count {
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var.$main-color;
+  }
+
+  &__price-wrapper {
+    margin-top: 24px;
+
+    @include mix.flex-layout(space-between, center);
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var.$secondary-color;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: var.$main-color;
+  }
+
+  &__buy {
+    width: 100%;
+    height: 40px;
+
+    margin-top: 16px;
+
+    @include mix.flex-layout(center, center);
+
+    border-radius: 5px;
+    border: 1px solid var.$btn-color;
+
+    color: #fff;
+    background-color: var.$btn-color;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var.$btn-color;
+      background-color: transparent;
+    }
+  }
+}
