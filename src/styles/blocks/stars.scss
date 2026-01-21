@@ -1,0 +1,42 @@
+@import '../vars';
+
+.stars {
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__review {
+    font-weight: $main-font-weight;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $main-text-color;
+    margin: 0;
+    align-self: flex-end;
+    vertical-align: bottom;
+  }
+
+  &__5 {
+    width: 96.2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 16px;
+
+    &-star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      justify-self: center;
+      background-position: center;
+    }
+
+    &-star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
