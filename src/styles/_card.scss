@@ -1,0 +1,112 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: $width-card;
+  background-color: $color-button-hover-bg;
+  padding: $padding-card;
+  border: 1px solid $color-background;
+  margin: $margin-card;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    font-weight: $title-font-weight;
+    font-size: $title-font-size;
+    color: $color-title;
+    line-height: 18px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  &__code {
+    font-size: $code-font-size;
+    font-weight: $normal-font-weight;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    color: $color-text;
+    padding-right: 68px;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-amount {
+      font-size: $reviews-font-size;
+      line-height: 14px;
+      color: $color-title;
+      font-weight: $normal-font-weight;
+    }
+  }
+  &__star:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+
+    &-star {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: no-repeat url(/src/images/star.svg);
+      background-position: center;
+    }
+
+    &--active-4 {
+      .card__stars-star:nth-child(-n + 4) {
+        background-image: url(/src/images/star-active.svg);
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+  }
+
+  &__price-text {
+    font-size: $price-text-font-size;
+    color: $color-text;
+    font-weight: $normal-font-weight;
+    line-height: 18px;
+  }
+
+  &__price-value {
+    font-size: $price-value-font-size;
+    font-weight: $bold-font-weight;
+    color: $color-title;
+    line-height: 18px;
+  }
+
+  &__button {
+    padding: 11px 69px;
+    background-color: $color-button-bg;
+    border: 1px solid $color-button-bg;
+    text-transform: uppercase;
+    font-weight: $bold-font-weight;
+    color: $color-button-hover-bg;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: $button-font-size;
+    margin-bottom: 16px;
+
+    &:hover {
+      background-color: $color-button-hover-bg;
+      color: $color-button-bg;
+      border: 1px solid $color-button-bg;
+    }
+  }
+}
