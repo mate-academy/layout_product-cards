@@ -1,3 +1,149 @@
+$font-stack: 'Roboto', sans-serif;
+$primary-color: rgba(6, 11, 53, 1);
+$secondary-color: rgba(97, 96, 112, 1);
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 199px;
+  height: 406px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  .card__button {
+    width: 166px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 172, 220, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: $font-stack;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(0, 172, 220, 1);
+      border: 1px solid rgba(0, 172, 220, 1);
+    }
+  }
+}
+
+.product {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; // add vertical space between children
+
+  .product__image {
+    margin-top: 13px;
+    width: 199px; // match .card width
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 160px 134px;
+  }
+
+  .product__text {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 166px;
+    font-family: $font-stack;
+    text-align: left;
+    &--title {
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &--productCode {
+      margin-top: 5px;
+      color: $secondary-color;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .stars__stars-group {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .stars__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .stars__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+
+  .stars__text {
+    font-family: $font-stack;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $primary-color;
+    text-align: right bottom;
+  }
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .price__text {
+    font-family: $font-stack;
+    line-height: 18px;
+    &--label {
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+    &--value {
+      font-size: 16px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
 }
