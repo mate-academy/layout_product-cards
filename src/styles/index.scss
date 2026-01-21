@@ -1,3 +1,135 @@
-body {
+$font-family: 'Roboto', sans-serif;
+$main-color: #060b35;
+$second-color: #616070;
+
+body,
+p {
   margin: 0;
+  font-family: $font-family;
+  color: $main-color;
+}
+
+.product-card {
+  box-sizing: border-box;
+  display: flex;
+  width: 200px;
+  align-items: center;
+  flex-direction: column;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    padding-top: 32px;
+    padding-left: 19px;
+    padding-right: 19px;
+    margin-bottom: 40px;
+  }
+  &__name {
+    width: 166px;
+    height: 36px;
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $main-color;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+  &__code {
+    width: 98px;
+    height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    color: $second-color;
+    text-align: left;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    font-family: $font-family;
+    width: 166px;
+    height: 18px;
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+  &__price-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    width: 31px;
+    height: 18px;
+    color: $second-color;
+    padding-right: 18px;
+  }
+  &__price-value {
+    width: 50px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $main-color;
+  }
+  &__button {
+    width: 166px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-family;
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #00acdc;
+    margin-bottom: 16px;
+  }
+  &__button:hover {
+    color: #00acdc;
+    background-color: #fff;
+    border: 1px solid #00acdc;
+  }
+}
+
+.product-card__info {
+  width: 166px;
+  height: 16px;
+  align-items: center;
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  font-family: $font-family;
+}
+
+.product-card__review {
+  width: 53px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $main-color;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    background-image: url(../images/star-active.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+    background-image: url(../images/star.svg);
+  }
 }
