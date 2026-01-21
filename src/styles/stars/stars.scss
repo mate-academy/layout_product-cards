@@ -1,0 +1,39 @@
+.stars {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.stars__single-star {
+  background-image: url('../../images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars > :nth-child(-n + 4) {
+  background-image: url('../../images/star-active.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.stars__single-star:last-child {
+  margin-right: 0;
+}
+
+// This code gives dynamic highlighting of the stars depending on which one you hover over. Not needed for this assignment.
+
+// .stars__single-star--rating:has(~ .stars__single-star--rating:hover),
+// .stars__single-star--rating:hover {
+//   background-image: url('../../images/star-active.svg');
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   height: 16px;
+//   width: 16px;
+//   margin-right: 4px;
+// }
