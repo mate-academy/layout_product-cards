@@ -1,3 +1,85 @@
+@import 'blocks/card.scss';
+@import 'blocks/stars.scss';
+@import 'vars/variables.scss';
+
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.product__image {
+  margin: 32px 20px 40px 20px;
+
+  height: 134px;
+  background: url(../images/imac.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px 16px;
+}
+
+.product__name {
+  padding-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.product__code {
+  padding-bottom: 16px;
+  color: $product-att-color;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.product__price-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.product__price-label {
+  color: $product-att-color;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.product__price-value {
+  color: rgb(6, 11, 53);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.buy-button {
+  border-radius: 5px;
+  border: 1px solid $button-color;
+  box-sizing: border-box;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+
+  background-color: $button-color;
+  padding: 12px 0;
+  width: 100%;
+  transition: all 0.15s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: $button-color;
 }
