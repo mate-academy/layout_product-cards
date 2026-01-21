@@ -1,3 +1,168 @@
+@mixin content-margin() {
+  margin: 0 16px;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid #e1e1e7;
+  border-radius: 4px;
+  width: 200px;
+  height: 408px;
+}
+
+.image {
+  width: 160px;
+  height: 134px;
+  margin: 32px 19px 40px;
+}
+
+.product {
+  &__name {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #060b35;
+
+    &--position {
+      width: 166px;
+      height: 36px;
+
+      @include content-margin;
+
+      padding-bottom: 4px;
+    }
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #616070;
+
+    &--position {
+      box-sizing: border-box;
+
+      @include content-margin;
+
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.review {
+  display: flex;
+  align-items: center;
+
+  &__stars {
+    height: 16px;
+    align-items: center;
+    list-style-type: none;
+    box-sizing: border-box;
+    display: flex;
+
+    @include content-margin;
+
+    padding-inline-start: 0;
+  }
+
+  &__star {
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    background-image: url(/src/images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 5) {
+      background-image: url(/src/images/star.svg);
+    }
+  }
+
+  &__review {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #060b35;
+    display: block;
+    padding-left: 17px;
+  }
+}
+
+.price {
+  &--position {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    @include content-margin;
+  }
+
+  &__name {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #616070;
+
+    &--position {
+      display: block;
+    }
+  }
+  &__count {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #060b35;
+
+    &--position {
+      display: block;
+      margin-left: 85px;
+    }
+  }
+}
+
+.button {
+  background-color: #00acdc;
+  width: 166px;
+  border-radius: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 16px;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #00acdc;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    background: none;
+    border: none;
+
+    &:hover {
+      color: #00acdc;
+      background: none;
+      border: none;
+    }
+  }
 }
