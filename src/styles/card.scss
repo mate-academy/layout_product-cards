@@ -1,0 +1,87 @@
+.card {
+  border: 1px solid #f3f3f3;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: $mainTextColor;
+    padding-bottom: 4px;
+    @include titleFont;
+  }
+
+  &__code {
+    padding-bottom: 16px;
+    align-self: baseline;
+    color: $secondaryTextColor;
+    @include secondaryFont;
+  }
+
+  &__evaluation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 24px;
+
+    &-review {
+      text-align: right;
+      color: $mainTextColor;
+      @include secondaryFont;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 16px;
+
+    &-title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondaryTextColor;
+    }
+
+    &-num {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: right;
+      color: $mainTextColor;
+    }
+  }
+
+  &__btn {
+    width: 166px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14.55px;
+    text-align: center;
+    color: $whiteColor;
+    background-color: $blueAccent;
+    padding: 12px 70px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid $blueAccent;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      color: $blueAccent;
+      background-color: $whiteColor;
+      border: 1px solid $blueAccent;
+    }
+  }
+
+}
