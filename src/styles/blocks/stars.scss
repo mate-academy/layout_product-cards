@@ -1,0 +1,34 @@
+$star: '../images/star.svg';
+$star-active: '../images/star-active.svg';
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  background-image: url((#{$star}));
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+@mixin highlight-stars($modifier, $count) {
+  .stars--#{$modifier} {
+    @for $i from 1 through $count {
+      .stars__star:nth-child(#{$i}) {
+        background-image: url((#{$star-active}));
+      }
+    }
+  }
+}
+
+@include highlight-stars(1, 1);
+@include highlight-stars(2, 2);
+@include highlight-stars(3, 3);
+@include highlight-stars(4, 4);
+@include highlight-stars(5, 5);
