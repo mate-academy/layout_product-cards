@@ -1,3 +1,35 @@
-body {
+@import 'utils/variables';
+@import 'blocks/card';
+@import 'blocks/page';
+@import 'blocks/stars';
+
+* {
   margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: $font-roboto;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 32px);
+  line-height: 18px;
+  margin-top: 24px;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-secondary;
+  }
+
+  &__amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-tertiary;
+  }
 }
