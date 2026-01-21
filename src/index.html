@@ -6,13 +6,83 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Product Cards</title>
     <link
       rel="stylesheet"
-      href="./styles/index.scss"
+      href="./blocks/index.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <img
+        src="../src/images/imac.jpeg"
+        alt="iMac"
+        class="card__imac"
+      />
+
+      <p class="card__item">
+        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+      </p>
+
+      <p class="card__code">Product code: 195434</p>
+
+      <div class="stars">
+        <div class="stars__starlight stars__starlight--4">
+          <img
+            class="stars__starlight"
+            src="./images/star-active.svg"
+            alt="Star"
+          />
+          <img
+            class="stars__starlight"
+            src="./images/star-active.svg"
+            alt="Star"
+          />
+          <img
+            class="stars__starlight"
+            src="./images/star-active.svg"
+            alt="Star"
+          />
+          <img
+            class="stars__starlight"
+            src="./images/star-active.svg"
+            alt="Star"
+          />
+          <img
+            class="stars__starlight"
+            src="./images/star.svg"
+            alt="Star"
+          />
+        </div>
+      </div>
+      <p class="card__reviews">Reviews: 5</p>
+      <p class="card__price">
+        <span>Price:</span>
+        <span class="card__sum">$2,199</span>
+      </p>
+
+      <button
+        class="card__buy"
+        data-qa="hover"
+      >
+        BUY
+      </button>
+    </div>
   </body>
 </html>
