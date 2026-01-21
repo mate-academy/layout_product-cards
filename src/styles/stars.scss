@@ -1,0 +1,33 @@
+.opinion {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    margin: 16px;
+    align-items: center;
+
+    &-review {
+      width: 53px;
+      height: 16px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+  
+.stars-4 {
+  display: flex;
+}
+
+.star {
+  position: relative;
+  z-index: 1;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.stars-4 .star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
