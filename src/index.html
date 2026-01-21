@@ -1,18 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Product cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
-      href="./styles/index.scss"
     />
+    <link rel="stylesheet" href="./src/styles/index.scss" />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div class="cards">
+      <div class="card" data-qa="card">
+        <div class="card__image" style="background-image: url('../images/product-1.jpg')"></div>
+        <h2 class="card__title">Product Name</h2>
+        <div class="card__price">$99.00</div>
+        <div class="card__rating stars stars--4"></div>
+        <a href="#" class="card__buy" data-qa="hover">BUY</a>
+      </div>
+
+      <!-- Repeat .card for other products -->
+    </div>
   </body>
 </html>
