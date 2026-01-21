@@ -1,0 +1,118 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins';
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $color-card-border;
+  border-radius: 5px;
+
+  background-color: $color-card-background;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 0 0 19px;
+  }
+
+  &__name {
+    margin: 40px 16px 0;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-dark-text;
+  }
+
+  &__code {
+    margin: 4px 16px 0;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-light-text;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 16px 0;
+
+    &-stars {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+
+      &-star {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include mixins.fill-stars(4);
+      }
+    }
+
+    &-count {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $color-dark-text;
+      align-self: flex-end;
+    }
+  }
+
+  &__price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 16px 0;
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $color-light-text;
+    }
+
+    &-number {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color-dark-text;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 166px;
+    height: 40px;
+    margin: 16px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $color-card-background;
+    text-transform: uppercase;
+
+    background-color: $color-button;
+
+    &:hover {
+      box-sizing: border-box;
+
+      background-color: $color-card-background;
+
+      border: solid 1px $color-button;
+
+      color: $color-button;
+    }
+  }
+}
