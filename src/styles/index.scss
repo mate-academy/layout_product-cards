@@ -1,3 +1,137 @@
-body {
+@import 'variables';
+@import 'stars';
+
+// Reset default browser styles
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Include padding and border in the element's total width and height
+}
+
+// Apply Roboto font and center the card on the page
+body {
+  font-family: $font-family-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; // Ensure the body takes at least the full viewport height
+  background-color: $color-background-light; // Basic background for contrast
+  padding: $spacing-l; // Add some padding around the card
+}
+
+// Card styles using BEM and SCSS nesting
+.card {
+  width: $card-width;
+  background: $color-white;
+  border: $card-border-width solid $color-border-light;
+  border-radius: $card-border-radius;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; // Ensure border-radius clips content
+  // data-qa="card" attribute is handled in HTML
+
+  &__image {
+    display: block; // Remove extra space below image
+    width: 160px; // Width from Figma - kept as is, could be a variable if reused
+    height: 134px; // Height from Figma - kept as is, could be a variable if reused
+    margin: $spacing-xl auto $spacing-gutter; // Approximate centering and top/bottom margin based on Figma visual
+    object-fit: cover; // Ensure image covers the area without distortion
+  }
+
+  &__content {
+    padding: 25px $spacing-card-padding-x $spacing-l; // Adjusted top padding based on Figma image-to-title spacing
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; // Allow content to fill remaining space
+    height: 227px; // Adjusted height by -3px based on BackstopJS diff-y
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500; // Consider making a variable if 500 is a common weight
+    font-size: $font-size-sm;
+    line-height: $line-height-md; // or 150%
+    color: $color-secondary;
+    margin-bottom: 4px; // Figma: 4px
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: 400; // Consider making a variable if 400 is a common weight
+    font-size: $font-size-xs;
+    line-height: $line-height-xs; // identical to box height, or 140%
+    color: $color-text-light;
+    margin-bottom: 16px; // Figma: 16px
+  }
+
+  &__review-section {
+    display: flex;
+    justify-content: space-between; // Align stars and text
+    align-items: flex-end; // Match Figma alignment
+    margin-bottom: 24px; // Figma: 24px
+
+    // The .stars block is styled in _stars.scss and imported
+  }
+
+  &__review-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs; // or 140%
+    color: $color-secondary; // Figma specified Main accent
+    text-align: right;
+  }
+
+  &__price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: $line-height-md; // Height from Figma (matches line-height of price-value)
+    margin-bottom: 16px; // Figma: 16px
+  }
+
+  &__price-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size-sm;
+    line-height: $line-height-md; // identical to box height, or 150%
+    color: $color-text-light;
+  }
+
+  &__price-value {
+    font-style: normal;
+    font-weight: 700; // Consider making a variable if 700 is a common weight
+    font-size: $font-size-lg;
+    line-height: $line-height-md; // identical to box height, or 112%
+    color: $color-secondary;
+    text-align: right;
+  }
+
+  &__link {
+    display: flex; // Changed to flex for better text alignment
+    align-items: center; // Vertically center text
+    justify-content: center; // Horizontally center text
+    background: $color-primary; // Blue accent
+    border-radius: $card-border-radius;
+    height: 40px; // Height from Figma
+    margin-top: auto; // Push button to the bottom
+
+    // Text styles
+    font-style: normal;
+    font-weight: 700;
+    font-size: $font-size-md;
+
+    // line-height: $line-height-sm; // Not needed with flex align-items
+    text-transform: uppercase;
+    color: $color-white; // White
+    text-decoration: none;
+    border: $card-border-width solid transparent; // Add transparent border for smooth hover transition
+    // data-qa="hover" attribute is handled in HTML
+
+    &:hover {
+      background: $color-white; // White background
+      color: $color-primary; // Blue accent text
+      border: $card-border-width solid $color-primary; // Blue accent border
+    }
+  }
 }
