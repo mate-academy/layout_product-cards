@@ -1,3 +1,151 @@
+$colorButtonBuy: #00acdc;
+$colorButtonBuyWhite: #fff;
+$colorText: #060b35;
+$colorTextGrey: #616070;
+
 body {
   margin: 0;
+}
+
+.card {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin: 0;
+    width: 100%;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: $colorText;
+    letter-spacing: 0;
+    text-align: left;
+
+    &--position {
+      margin-top: 40px;
+    }
+  }
+
+  &__code {
+    width: 100%;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $colorTextGrey;
+    margin: 0;
+
+    &--position {
+      margin-top: 4px;
+    }
+  }
+
+  &__rate {
+    width: 100%;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .reviews {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0;
+      text-align: right;
+      color: $colorText;
+    }
+
+    &--position {
+      margin: 16px 0 24px;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .price {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-align: left;
+      color: $colorTextGrey;
+    }
+
+    .amount {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-align: right;
+      color: $colorText;
+    }
+  }
+
+  &__buy {
+    width: 100%;
+    background-color: $colorButtonBuy;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: $colorButtonBuyWhite;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      box-sizing: border-box;
+      border: 1px solid $colorButtonBuy;
+      background-color: $colorButtonBuyWhite;
+      color: $colorButtonBuy;
+    }
+
+    &--position {
+      margin-top: 16px;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 96px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.stars--1 :nth-child(-n + 1),
+.stars--2 :nth-child(-n + 2),
+.stars--3 :nth-child(-n + 3),
+.stars--4 :nth-child(-n + 4),
+.stars--5 :nth-child(-n + 5) {
+  background-image: url('../images/star-active.svg');
 }
