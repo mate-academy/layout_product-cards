@@ -1,0 +1,106 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    margin: 0 auto;
+    padding-top: 16px;
+
+    img {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__discription {
+    margin-top: 36px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-text;
+  }
+
+  &__score {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $color-text;
+  }
+
+  &__price-label {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+    margin-top: 24px;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary-text;
+    }
+
+    p:last-child {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: $color-text;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
+    margin-top: 16px;
+    background-color: $secondary-color;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-decoration: none;
+      color: $base-color;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      background-color: $base-color;
+      border: 1px solid $secondary-color;
+
+      a {
+        color: $secondary-color;
+      }
+    }
+  }
+}
