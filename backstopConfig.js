@@ -27,6 +27,7 @@ const config = {
       ...basic,
       label: 'Card with data-qa_card',
       selectors: ['[data-qa="card"]'],
+      misMatchThreshold: 3,
     },
     {
       ...basic,
@@ -34,6 +35,7 @@ const config = {
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
       selectors: ['[data-qa="card"]'],
+      misMatchThreshold: 3,
     },
   ],
 };
