@@ -1,0 +1,20 @@
+@use '../utils/variables' as *;
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    background-image: url(/src/images/star.svg);
+    background-size: calc($main-font-size * 0.81);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: calc($main-font-size / 4);
+    height: $main-font-size;
+    width: $main-font-size;
+  }
+
+  &__star:nth-child(-n + #{$number-of-stars}) {
+    background-image: url(/src/images/star-active.svg);
+  }
+}
