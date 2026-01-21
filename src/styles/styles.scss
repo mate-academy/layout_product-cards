@@ -1,0 +1,143 @@
+@mixin font-size-small {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+@mixin font-size-big {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin star($size) {
+  width: $size;
+  height: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #060b35;
+  font-display: swap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+
+  background-image: url('../images/imac.jpeg');
+  margin: 32px 19px 40px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card__title {
+  @include font-size-big;
+
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.card__code {
+  @include font-size-small;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #616070;
+}
+
+.card__reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  p {
+    @include font-size-small;
+
+    margin: 0;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars .stars__star:not(:last-child) {
+  margin-right: 4px;
+  background-image: url('../images/star-active.svg');
+
+  @include star(16px);
+}
+
+.stars .stars__star:last-child {
+  background-image: url('../images/star.svg');
+
+  @include star(16px);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 18px;
+}
+
+.price-text {
+  @include font-size-big;
+
+  color: #616070;
+}
+
+.price-digit {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 166px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #00acdc;
+  margin-block: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  border-color: #00acdc;
+  color: #00acdc;
+
+  background-color: #fff;
+}
