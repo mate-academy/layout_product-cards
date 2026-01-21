@@ -6,13 +6,57 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Product cards</title>
+    <title>Product Card</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div class="card" data-qa="card">
+      <img
+        src="./images/imac.jpeg"
+        alt="Apple iMac"
+        class="card__image"
+      />
+
+      <h2 class="card__title">
+        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+      </h2>
+
+      <p class="card__code">
+        Product code:
+        <span>195434</span>
+      </p>
+
+      <div class="card__rating">
+        <div class="rating">
+          <div class="rating__container"><div class="rating__star"></div></div>
+          <div class="rating__container"><div class="rating__star"></div></div>
+          <div class="rating__container"><div class="rating__star"></div></div>
+          <div class="rating__container"><div class="rating__star"></div></div>
+          <div class="rating__container">
+            <div class="rating__star rating__star--inactive"></div>
+          </div>
+        </div>
+        <p class="card__reviews">Reviews: 5</p>
+      </div>
+
+      <div class="card__price-block">
+        <p class="card__price-label">Price:</p>
+        <p class="card__price-value">$2,199</p>
+      </div>
+
+      <a href="#"
+        class="card__button"
+        data-qa="hover"
+      >
+        BUY
+      </a>
+    </div>
   </body>
 </html>
