@@ -1,0 +1,125 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $card-height;
+  width: $card-width;
+  border: $card-border;
+  box-sizing: border-box;
+  padding: $card-padding;
+
+  img {
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: $info-width;
+    height: auto;
+    padding: 0 3px;
+    object-fit: contain;
+
+    margin-bottom: $image-margin-bottom;
+  }
+
+  &__area-product-name {
+    box-sizing: border-box;
+    width: $info-width;
+    height: 36px;
+
+    margin-bottom: 4px;
+
+    p {
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: $main-accent;
+    }
+  }
+
+  &__area-product-code {
+    width: 98px;
+    height: 14px;
+
+    margin-bottom: 16px;
+
+    p {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $secondary-accent;
+    }
+  }
+
+  &__area-product-reviews {
+    display: flex;
+    justify-content: space-between;
+    width: $info-width;
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 53px;
+    height: auto;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    vertical-align: bottom;
+    color: $main-accent;
+  }
+
+  &__area-price {
+    width: $info-width;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      color: $secondary-accent;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      vertical-align: bottom;
+    }
+
+    &-value {
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: right;
+      vertical-align: bottom;
+      color: $main-accent;
+    }
+  }
+
+  &__button-area {
+    box-sizing: border-box;
+    border: 1px solid $blue-accent;
+    max-width: $info-width;
+    border-radius: 5px;
+    padding: 11px 70px;
+    background: $blue-accent;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__button-area:hover {
+    border: 1px solid $blue-accent;
+    background: #fff;
+    color: $blue-accent;
+  }
+}
