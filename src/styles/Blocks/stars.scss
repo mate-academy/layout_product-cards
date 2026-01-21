@@ -1,0 +1,25 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+
+  @for $x from 1 through var.$stars-count {
+    &--#{$x} > .stars__star:nth-child(-n + #{$x}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
