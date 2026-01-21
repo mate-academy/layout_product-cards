@@ -1,0 +1,112 @@
+@use '../utilis/variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, arial, sans-serif;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  background: $soft-white;
+  flex-direction: column;
+  text-align: center;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__info {
+    color: $dark-blue;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    font-size: 10px;
+    font-weight: $font-normal;
+    min-height: 14px;
+    text-align: left;
+    color: $grey;
+  }
+    &__reviews-rating {
+      display: flex;
+      align-items: flex-end;
+      font-size: 10px;
+      font-weight: $font-normal;
+      line-height: 14px;
+      color: $dark-blue;
+    }
+
+    &__reviews {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+  &__button {
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    height: 40px;
+    width: 100%;
+    border: 1px solid $blue;
+    border-radius: 5px;
+
+    background-color: $blue;
+    color: $soft-white;
+
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: $font-700;
+    text-decoration: none;
+
+    &:hover {
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid $blue;
+      color: $blue;
+      background-color: $soft-white;
+    }
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-value {
+      font-size: 16px;
+      font-weight: $font-700;
+      text-align: right;
+      color: $dark-blue;
+      line-height: 18px;
+    }
+
+    &-text {
+      text-align: left;
+      color: $grey;
+      font-size: 12px;
+      font-weight: $font-normal;
+    }
+  }
+}
