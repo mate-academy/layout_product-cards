@@ -1,0 +1,119 @@
+@import './variables';
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $card-radius;
+  overflow: hidden;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+    display: block;
+    margin: 32px 19px 0;
+    border-radius: $card-radius;
+    background: $color-bg;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-title;
+    letter-spacing: 0;
+    margin: 40px 16px 0;
+    text-align: left;
+  }
+
+  &__code {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-code;
+    margin: 4px 16px 0;
+    text-align: left;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    margin: 16px 16px 0;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-price;
+    margin-left: 23px;
+    margin-top: 1px;
+  }
+
+  &__price-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 16px 0;
+  }
+
+  &__price-label {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-code;
+    justify-content: flex-start;
+  }
+
+  &__price {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-price;
+    justify-content: flex-end;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $buy-height;
+    width: $buy-width;
+    background-color: $color-accent;
+    color: $color-buy-text;
+    border: 1px solid $color-bg;
+    border-radius: $buy-radius;
+    font-family: $font-main;
+    font-weight: $buy-font-weight;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: $buy-line-height;
+    margin: 16px 16px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-bg;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+}
