@@ -1,3 +1,97 @@
+@import 'variables';
+@import 'stars';
+
+html {
+  font-family: $BodyFont;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+}
+
+.picture {
+  display: flex;
+  margin: 0 auto;
+  height: 134px;
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $font-weight-semi-bold;
+  color: $description-color;
+  margin: 0 0 4px;
+}
+
+.code {
+  font-size: 10px;
+  line-height: 14px;
+  color: $code-color;
+  margin: 0 0 16px;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $description-color;
+  margin-bottom: 24px;
+}
+
+.views {
+  align-self: center;
+  font-size: 10px;
+  margin: 0;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 18px;
+  color: $code-color;
+}
+
+.amount {
+  color: $description-color;
+  font-weight: $font-weight-bold;
+  line-height: 18px;
+}
+
+.button {
+  box-sizing: border-box;
+  display: flex;
+  width: 166px;
+  height: 40px;
+  background-color: $button-color;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: $font-weight-bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-button-text;
+
+  &:hover {
+    background-color: $border-color;
+    color: $button-color;
+    border: 1px solid $button-color;
+  }
 }
