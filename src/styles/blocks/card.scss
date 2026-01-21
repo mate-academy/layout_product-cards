@@ -1,0 +1,106 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: $card-border-color;
+  background-color: $card-color;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__image {
+    @include horizontal-margins($card-photo-margin, $card-photo-margin);
+
+    margin-top: 32px;
+    margin-bottom: 40px;
+    display: block;
+    align-items: center;
+    width: 160px;
+    height: 134px;
+    max-width: 100%;
+  }
+
+  &__title {
+    @include default-horizontal-margins;
+
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $important-text-color;
+  }
+
+  &__product-code {
+    @include default-horizontal-margins;
+
+    margin-bottom: 16px;
+    color: $secondary-text-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__rate {
+    @include default-horizontal-margins;
+
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    color: $important-text-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    @include default-horizontal-margins;
+
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-name {
+    color: $secondary-text-color;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  &__price-amount {
+    color: $important-text-color;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__button {
+    @include default-horizontal-margins;
+
+    margin-bottom: 16px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $button-main-color;
+    color: $button-secondary-color;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: none;
+
+    &:hover {
+      background-color: $button-secondary-color;
+      color: $button-main-color;
+      border-style: solid;
+      border-color: $button-main-color;
+    }
+  }
+}
