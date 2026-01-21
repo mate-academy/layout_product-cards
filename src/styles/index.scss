@@ -1,3 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background: #fff;
+  padding: 32px 16px 16px;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  display: flex;
+  margin-inline: auto;
+}
+
+.card__title {
+  margin: 40px 0 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #060b35;
+}
+
+.card__code {
+  background-color: #fff;
+  margin: 4px 0 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  color: #616070;
+}
+
+.grade {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stars {
+  display: flex;
+  &__star {
+    margin-top: 6px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/star.svg') no-repeat center;
+    margin-right: 4px;
+  }
+  &__star:last-child {
+    margin-right: 0;
+  }
+  &--4 &__star:nth-child(-n + 4) {
+    background-image: url('../images/star-active.svg');
+  }
+}
+
+.reviews {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #060b35;
+  text-align: right;
+  justify-content: right;
+}
+
+.price {
+  margin-top: 24px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.price-title {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+  vertical-align: bottom;
+  color: #616070;
+  margin: 0;
+}
+
+.price-amount {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+  color: #060b35;
+  margin: 0;
+}
+
+.card__button {
+  width: 100%;
+  height: 40px;
+  display: block;
+  margin-top: 16px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+}
+
+.card__button:hover {
+  border: 1px solid #00acdc;
+  color: #00acdc;
+  background-color: #fff;
 }
