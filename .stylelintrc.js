@@ -3,5 +3,9 @@ module.exports = {
   plugins: [
     "stylelint-scss"
   ],
-  rules: {}
+  rules: {
+    'rule-empty-line-before': null,
+    'block-no-empty': true,
+    'color-no-invalid-hex': true
+  }
 };
