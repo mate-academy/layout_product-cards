@@ -1,0 +1,97 @@
+@import '../variables';
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  padding: $spacing-l $spacing-s $spacing-s;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+
+  &__photo {
+    object-fit: cover;
+    width: $card-photo-width;
+    height: $card-photo-height;
+    margin: 0 auto $spacing-xl;
+    display: block;
+  }
+
+  &__title {
+    color: $color-title;
+    margin: 0 0 $spacing-xs;
+    padding: 0;
+    font-size: $font-size-regular;
+    font-weight: 500;
+    line-height: $line-height-large;
+  }
+
+  &__code {
+    color: $color-secondary;
+    margin: 0 0 $spacing-s;
+    padding: 0;
+    font-size: $font-size-small;
+    font-weight: 400;
+    line-height: $line-height-small;
+  }
+
+  &__rating {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 $spacing-m;
+    padding: 0;
+    display: flex;
+  }
+
+  &__price {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 $spacing-s;
+    padding: 0;
+    display: flex;
+
+    &-label {
+      color: $color-title;
+      font-size: $font-size-regular;
+      font-weight: 500;
+      line-height: $line-height-large;
+    }
+
+    &-value {
+      color: $color-title;
+      font-size: $font-size-regular;
+      font-weight: 700;
+      line-height: $line-height-large;
+    }
+  }
+
+  &__reviews {
+    color: $color-secondary;
+    margin: 0;
+    font-size: $font-size-regular;
+    font-weight: 400;
+    line-height: $line-height-regular;
+  }
+
+  &__button {
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background-color: $color-primary;
+    border-radius: $border-radius;
+    justify-content: center;
+    align-items: center;
+    width: $card-button-width;
+    height: $card-button-height;
+    font-size: $font-size-button;
+    font-weight: 700;
+    line-height: $line-height-regular;
+    text-decoration: none;
+    display: flex;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+}
