@@ -1,0 +1,78 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: $main-color;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__preview {
+    width: 160px;
+    align-self: center;
+    height: 134px;
+  }
+
+  &__title {
+    @include only-top-margin(40px);
+    padding: 0;
+    @include text-style(12px, 18px, 500, $primary-text-color);
+  }
+
+  &__product-code {
+    @include only-top-margin(4px);
+    @include text-style(10px, 14px, 400, $secondary-text-color);
+  }
+
+  &__rating {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    @include text-style(10px, 14px, 400, $primary-text-color);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include only-top-margin(24px);
+
+    &-label {
+      @include text-style(12px, 18px, 400, $secondary-text-color);
+      margin: 0;
+    }
+
+    &-value {
+      @include text-style(16px, 18px, 700, $primary-text-color);
+      margin: 0;
+    }
+  }
+
+  &__button {
+    @include only-top-margin(16px);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background-color: $accent-color;
+    padding-block: 12px;
+    text-align: center;
+    @include text-style(14px, 16px, 700, $main-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 40px;
+    text-transform: uppercase;
+
+    &:hover {
+      border: 1px solid $accent-color;
+      background-color: $main-color;
+      color: $accent-color;
+      padding-block: 11px;
+    }
+  }
+}
