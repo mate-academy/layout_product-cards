@@ -1,0 +1,44 @@
+@use '../styles/variables' as *;
+
+.product-card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+.product-card__reviews {
+  margin: 0;
+  color: $color-main-accent;
+  font-weight: 400;
+  font-size: 10px;
+  white-space: nowrap;
+  letter-spacing: 0%;
+}
+
+.stars {
+  display: flex;
+  gap: $star-gap;
+}
+
+.stars__star {
+  background-image: url(../images/star.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: $star-size;
+  height: $star-size;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+}
