@@ -1,0 +1,63 @@
+@use './variables' as vars;
+
+.card {
+  width: vars.$card-width;
+  border: vars.$card-border;
+  border-radius: vars.$card-radius;
+  background: vars.$card-bg;
+  font-family: vars.$font-family;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+
+ &__image {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 12px;
+
+  &--1 {
+    background-image: url('../images/product1.png');
+  }
+
+  &--2 {
+    background-image: url('../images/product2.png');
+  }
+
+  &--3 {
+    background-image: url('../images/product3.png');
+  }
+ }
+
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  &__buy {
+    text-decoration: none;
+    color: vars.$star-color;
+    font-weight: bold;
+    border: 1px solid vars.$star-color;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: vars.$hover-color;
+      color: #fff;
+      border-color: vars.$hover-color;
+    }
+  }
+}

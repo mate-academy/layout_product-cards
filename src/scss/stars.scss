@@ -1,0 +1,26 @@
+@use './variables' as vars;
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc; // колір неактивної зірки
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+      50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+  }
+
+  // Модифікатори на рівні блоків
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-color: vars.$star-color;
+  }
+}
+
