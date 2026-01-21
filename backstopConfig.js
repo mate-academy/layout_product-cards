@@ -1,20 +1,5 @@
-'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
-
-const backstop = require('@mate-academy/backstop-config');
-const { basicScenario } = backstop;
-
-const basic = {
-  ...basicScenario,
-  label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/product-cards/',
-};
-
-const config = {
-  ...backstop,
-  fileNameTemplate: '{scenarioLabel}',
-  onBeforeScript: 'puppet/onBefore.js',
-  onReadyScript: 'puppet/onReady.js',
+module.exports = {
+  id: 'product-cards',
   viewports: [
     {
       name: 'tablet_h',
@@ -24,18 +9,31 @@ const config = {
   ],
   scenarios: [
     {
-      ...basic,
       label: 'Card with data-qa_card',
+      url: 'http://localhost:1234',
       selectors: ['[data-qa="card"]'],
+      delay: 1000,
     },
     {
-      ...basic,
       label: 'Link with data-qa_hover',
+      url: 'http://localhost:1234',
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
-      selectors: ['[data-qa="card"]'],
+      selectors: ['[data-qa="hover"]'],
+      delay: 1000,
     },
   ],
+  paths: {
+    bitmaps_reference: 'backstop_data/bitmaps_reference',
+    bitmaps_test: 'backstop_data/bitmaps_test',
+    engine_scripts: 'backstop_data/engine_scripts',
+    html_report: 'backstop_data/html_report',
+    ci_report: 'backstop_data/ci_report',
+  },
+  report: ['browser'],
+  engine: 'puppeteer',
+  asyncCaptureLimit: 5,
+  asyncCompareLimit: 50,
+  debug: false,
+  debugWindow: false,
 };
-
-module.exports = config;

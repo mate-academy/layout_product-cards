@@ -1,0 +1,126 @@
+@import './variables';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  background-color: $color-white;
+}
+
+h1, p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+
+  &__image {
+    align-self: center;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-dark-blue;
+  }
+
+  &__code {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-light-gray;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-dark-blue;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-text {
+      margin-top: 0;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $color-light-gray;
+    }
+
+    &-value {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color-dark-blue;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid $color-accent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $color-accent;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      color: $color-accent;
+      background-color: $color-white;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  width: 100px;
+  height: 16px;
+  color: $color-star;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
