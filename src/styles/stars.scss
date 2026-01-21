@@ -1,0 +1,33 @@
+@import '../variables/variables';
+
+.stars {
+  display: flex;
+  gap: 2px;
+
+  span {
+    width: $star-size;
+    height: $star-size;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @for $i from 0 through 5 {
+    &--#{$i} {
+      @for $s from 1 through 5 {
+        span:nth-child(#{$s}) {
+          background-image: if(
+            $s <= $i,
+            url($star-active),
+            url($star-inactive)
+          );
+        }
+      }
+    }
+  }
+}
+
+> * {
+  width: $stars-width;
+  height: $stars-height;
+  display: block;
+}
