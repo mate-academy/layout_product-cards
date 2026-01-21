@@ -1,0 +1,104 @@
+.body {
+  margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.product-card {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: var(--border-radius);
+  padding: 16px;
+
+  &__description {
+    color: #060b35;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    align-self: flex-start;
+    margin-top: 40px;
+    margin-bottom: 4px;
+    width: var(--width-content);
+    letter-spacing: 0%;
+  }
+
+  &__product-code {
+    font-size: 10px;
+    font-weight: var(--font-weight-normal);
+    line-height: 14px;
+    color: #616070;
+    align-self: flex-start;
+  }
+
+  &__rate {
+    width: var(--width-content);
+    margin-top: 16px;
+  }
+
+  &__price {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  &__button {
+    background-color: var(--button-color);
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+    line-height: 16px;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    width: var(--width-content);
+    height: 40px;
+    margin: 0 auto;
+    letter-spacing: 0%;
+    border: 1px solid var(--button-color);
+    font-family: inherit;
+  }
+
+  &:hover {
+    .product-card__button {
+      background-color: white;
+      color: var(--button-color);
+      border: 1px solid var(--button-color);
+    }
+  }
+}
+
+.foto {
+  display: flex;
+
+  &__top {
+    width: 160px;
+    height: 134px;
+    margin-top: 16px;
+  }
+}
+
+.price {
+  width: var(--width-content);
+  display: flex;
+
+  &__label {
+    font-size: 12px;
+    font-weight: var(--font-weight-normal);
+    line-height: 18px;
+    vertical-align: bottom;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__amount {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: var(--font-weight-bold);
+    vertical-align: bottom;
+    color: var(--font-dark-color);
+  }
+}
