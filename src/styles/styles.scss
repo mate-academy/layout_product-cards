@@ -1,0 +1,150 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+
+  &__container {
+    width: 100%;
+  }
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 160px;
+    height: 134px;
+    padding-top: 16px;
+  }
+}
+
+.card__info {
+  & .card__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 4px;
+  }
+
+  & .card__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #616070;
+
+    margin: 0;
+  }
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  height: 16px;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+.card__stars {
+  display: flex;
+  flex-flow: row wrap;
+  flex-shrink: 0;
+
+  width: auto;
+  height: 16px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars__star {
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-right: 4px;
+  background-position: center;
+}
+
+.stars--0 {
+  background-color: #fff;
+}
+
+.stars--0 .stars__star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
+}
+
+.card__reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  color: #060b35;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 166px;
+  height: 18px;
+
+  & h3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #616070;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  & span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  background-color: #00acdc;
+  width: 166px;
+  height: 40px;
+  margin-top: 16px;
+
+  & a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.card__button:hover {
+  background-color: #fff;
+  border: 1px solid #00acdc;
+
+  & a {
+    color: #00acdc;
+  }
+}
