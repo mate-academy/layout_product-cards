@@ -1,0 +1,83 @@
+@use "../utils/variables" as *;
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__product {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 0;
+  }
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 40px 16px 0;
+  }
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: $font-weight-normal;
+    line-height: 14px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #616070;
+    margin: 4px 84px 0 16px;
+  }
+  &__buyButton {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #00acdc;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 16px;
+    border: 1px solid #00acdc;
+    &:hover {
+      background-color: white;
+      color: #00acdc;
+    }
+  }
+  &__price {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    &-text {
+      font-family: Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: $font-weight-normal;
+      line-height: 18px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #616070;
+      margin-right: 85px;
+      margin-left: 0;
+    }
+    &-amount {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: $font-weight-bold;
+      line-height: 18px;
+      text-align: right;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-right: 0;
+    }
+  }
+}
