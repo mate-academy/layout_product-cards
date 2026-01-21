@@ -1,0 +1,93 @@
+@use '../utils/variables';
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 404px;
+  background-color: variables.$card-background;
+  border: 1px solid variables.$card-border;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__section {
+    width: 166px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: variables.$main-accent;
+
+    &--image {
+      width: 160px;
+      margin-top: 32px;
+      height: 134px;
+      background-image: url(../images/imac.jpeg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    &--title {
+      margin-top: 40px;
+      line-height: 18px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &--code {
+      margin-top: 4px;
+      line-height: 14px;
+      font-size: 10px;
+      color: variables.$secondary;
+    }
+
+    &--rating {
+      margin-top: 16px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    &--price {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 18px;
+    }
+
+    &--buy {
+      margin-top: 16px;
+    }
+  }
+
+  &__price-label {
+    font-size: 12px;
+    color: variables.$secondary;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* ---------------------- */
+  &__link {
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: variables.$blue-accent;
+    border: 1px solid variables.$blue-accent;
+    line-height: 38px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color: variables.$card-background;
+    text-align: center;
+
+    &:hover {
+      background-color: variables.$card-background;
+      color: variables.$blue-accent;
+    }
+  }
+}
