@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    padding-top: 32px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 16px 16px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-text-color;
+    margin: 0;
+  }
+
+  &__code {
+    margin: 4px 0 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $additional-text-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $additional-text-color;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-text-color;
+    }
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    padding: 0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    background-color: $button-color;
+
+    &-buy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &-buy:hover {
+      color: $button-color;
+    }
+  }
+  &__button:hover {
+    background-color: #fff;
+    border: 1px solid $button-color;
+  }
+}
