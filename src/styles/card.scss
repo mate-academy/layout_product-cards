@@ -1,0 +1,155 @@
+@import './variables';
+
+body {
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  background: rgba(255, 255, 255, 1);
+
+  &__photo {
+    top: 33px;
+    left: 20px;
+    width: 160px;
+    height: 100%;
+    height: 134px;
+    margin: 32px 19px 40px;
+    opacity: 1;
+    object-fit: contain;
+  }
+
+  &__title {
+    top: 207px;
+    left: 17px;
+    width: 166px;
+    height: 36px;
+    margin: 0 16px 4px;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-decoration-color: $bald-font-color;
+    letter-spacing: 0%;
+    opacity: 1;
+  }
+
+  &__code {
+    top: 247px;
+    left: 17px;
+    width: 98px;
+    height: 14px;
+    margin: 0 84px 16px 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-decoration-color: $thin-font-color;
+    letter-spacing: 0%;
+    opacity: 1;
+  }
+
+  &__rating {
+    top: 277px;
+    left: 17px;
+    display: flex;
+    width: 166px;
+    height: 16px;
+    margin: 0 16px 24px;
+    opacity: 1;
+
+    .card__reviews {
+      width: 53px;
+      height: 16px;
+      margin: 0 0 0 17px;
+      font-family: Roboto, sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: right;
+      text-decoration-color: $bald-font-color;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      opacity: 1;
+    }
+  }
+
+  &__price {
+    top: 317px;
+    left: 17px;
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+    margin: 0 16px 16px;
+    opacity: 1;
+
+    &-label {
+      width: 31px;
+      height: 18px;
+      font-family: Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-color: $thin-font-color;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      opacity: 1;
+    }
+
+    &-value {
+      width: 50px;
+      height: 18px;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: right;
+      text-decoration-color: $bald-font-color;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    width: 166px;
+    height: 40px;
+    margin: 0 16px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 1;
+    background-color: $button-color;
+
+    &-text {
+      position: absolute;
+      width: 27px;
+      height: 16px;
+      margin: 12px 70px 12px 69px;
+      font-family: Roboto, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 1);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0%;
+      opacity: 1;
+
+      &:hover {
+        z-index: 4;
+        color: rgba(0, 172, 220, 1);
+      }
+    }
+
+    &:hover {
+      border: 1px solid rgba(0, 172, 220, 1);
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+}
