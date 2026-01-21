@@ -1,0 +1,111 @@
+@import './variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: $card-width;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  background-color: $white;
+  font-family: $font-family;
+  text-align: center;
+
+  &__image {
+    display: block;
+    box-sizing: border-box;
+    padding: 33px 19px 40px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent;
+    margin: 0 16px;
+    text-align: left;
+  }
+
+  &__code {
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary;
+    display: flex;
+    align-content: start;
+    margin: 4px 16px 0;
+  }
+
+  &__price {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 16px 0;
+
+    &-text {
+      box-sizing: border-box;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $secondary;
+    }
+
+    &-num {
+      box-sizing: border-box;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 17px;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    padding: 11px 16px;
+    background-color: $blue-accent;
+    text-decoration: none;
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+    margin: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &-text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $white;
+      box-sizing: border-box;
+      color: $blue-accent;
+
+      &-text {
+        color: $blue-accent;
+      }
+    }
+  }
+
+  &__stars {
+    box-sizing: border-box;
+    margin: 16px 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reviews {
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    align-self: flex-end;
+    margin: 0;
+  }
+}
