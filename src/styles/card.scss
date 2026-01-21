@@ -1,0 +1,79 @@
+@import 'variables';
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  width: $card-width;
+  height: $card-height;
+  border-color: $color-border;
+  flex-direction: column;
+  font-weight: $font-weight-regular;
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-image: url(../images/imac.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__info {
+    padding: $padding-default;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__name {
+    width: 166px;
+    height: 36px;
+    font-size: $font-size-title;
+    line-height: 18px;
+    color: $color-text-dark;
+  }
+
+  &__product-code {
+    font-size: $font-size-code;
+    font-weight: $font-weight-regular;
+    line-height: 14px;
+  }
+
+  &__price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: auto;
+  }
+
+  &__price-label {
+    font-size: $font-size-label;
+    color: $color-text-light;
+  }
+
+  &__price {
+    font-size: $font-size-price;
+    color: $color-text-dark;
+    font-weight: $font-weight-bold;
+  }
+
+  &__buy-button {
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    font-weight: $font-weight-bold;
+    color: $color-primary-hover;
+    background-color: $color-primary;
+
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    &:hover {
+      background-color: $color-primary-hover;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+    }
+  }
+}
