@@ -1,0 +1,50 @@
+.card {
+  width: 200px;
+  border: 1px solid $color-border;
+  border-radius: $radius-card;
+  background-color: #fff;
+  padding: $space-md;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  &__image {
+    width: 100%;
+    height: 140px;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: $radius-img;
+
+    &--alt {
+      background-image: url('../images/imac.jpeg'); // можно заменить на другую картинку
+    }
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__price {
+    font-size: $font-size-lg;
+    font-weight: 700;
+    color: $color-price;
+  }
+
+  &__buy {
+    display: inline-block;
+    padding: $space-sm $space-md;
+    background-color: $color-primary;
+    color: #fff;
+    text-decoration: none;
+    border-radius: $radius-img;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+}
