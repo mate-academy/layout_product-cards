@@ -1,0 +1,110 @@
+// _card.scss
+@import 'variables';
+
+.card {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 200px;
+  height: 408px;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  background-color: $card-background-color;
+  box-sizing: border-box;
+
+  .card__image {
+    border-bottom-width: 40px;
+    padding-bottom: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-top: 32px;
+    max-width: 100%;
+    width: 160px;
+    height: 134px;
+  }
+
+  .card__title {
+    display: flex;
+    margin: 0;
+    position: relative;
+    top: -4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $card-text-color;
+  }
+
+  .card__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $card-secondary-text-color;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .card__rating {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .card__reviews {
+    font-size: 10px;
+    color: $card-text-color;
+    padding-left: 17px;
+  }
+
+  .card__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card__price-label {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: $card-secondary-text-color;
+  }
+
+  .card__price {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $card-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .card__buy {
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    background-color: $button-background-color;
+    color: $button-text-color;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $button-background-color;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
+
+    &:hover {
+      background-color: $button-hover-background-color;
+      border-color: $button-background-color;
+      color: $button-hover-text-color;
+    }
+
+    &:active {
+      background-color: $button-active-background-color;
+      border-color: $button-background-color;
+      color: $button-active-text-color;
+    }
+  }
+}
