@@ -1,0 +1,98 @@
+@use '../utils/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+
+  &__img {
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 4px;
+    font-family: $main-font;
+    font-weight: $medium-font-weight;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    font-family: $main-font;
+    font-weight: $normal-font-weight;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-color;
+  }
+
+  &__rating {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $main-accent;
+  }
+
+  &__reviews {
+    font-family: $main-font;
+    font-weight: $normal-font-weight;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+      font-family: $main-font;
+      font-weight: $normal-font-weight;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary-color;
+    }
+
+    &-value {
+      font-family: $main-font;
+      font-weight: $bold-font-weight;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-accent;
+    }
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    font-family: $main-font;
+    font-weight: $bold-font-weight;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    background-color: $btn-color;
+    color: $btn-text-color;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid $btn-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--colors:hover {
+      background-color: $btn-color-hover;
+      color: $btn-text-color-hover;
+      border: 1px solid $btn-color;
+    }
+  }
+}
