@@ -1,0 +1,38 @@
+@use '../blocks/card.scss';
+
+.stars,
+.stars > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.stars {
+  display: flex;
+  justify-content: left;
+  padding-left: 0;
+
+  &__star {
+    list-style: none;
+    background-image: url(/src/images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+    background-position: center center;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  &__star:last-child {
+    margin: 0;
+  }
+
+  &--1 :nth-child(1),
+  &--2 :nth-child(-n + 2),
+  &--3 :nth-child(-n + 3),
+  &--4 :nth-child(-n + 4),
+  &--5 :nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
