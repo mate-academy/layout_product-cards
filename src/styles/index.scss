@@ -1,3 +1,131 @@
+$color-style: #00acdc;
+$text-size: 10px;
+$text-style: Roboto, sans-serif;
+
 body {
   margin: 0;
+  font-family: #{$text-style};
+}
+
+.card {
+  border: solid 1px;
+  width: 200px;
+  height: 408px;
+  border-color: whitesmoke;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__photo {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    margin: 0 19px;
+    display: flex;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    padding-left: 16px;
+    text-align: left;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__code {
+    font-family: #{$text-style};
+    font-size: #{$text-size};
+    font-weight: 400;
+    line-height: 14px;
+    padding-left: 16px;
+    margin-top: 4px;
+    color: #616070;
+  }
+}
+
+.review {
+  font-size: #{$text-size};
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  margin-right: 16px;
+  color: #060b35;
+}
+
+.stars {
+  margin-top: 16px;
+  display: flex;
+  padding-left: 16px;
+}
+
+.star {
+  background-image: url('../images/star.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  list-style: none;
+  display: flex;
+}
+
+.stars--1 .star:nth-child(-n + 4) {
+  background-image: url('../images/star-active.svg');
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  padding-top: 23px;
+
+  &__item {
+    font-size: 12px;
+    color: #616070;
+  }
+
+  &__item2 {
+    font-weight: bold;
+    color: #060b35;
+  }
+}
+
+.button {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.button__item {
+  font-family: #{$text-style};
+  width: 166px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #{$color-style};
+  border-color: #{$color-style};
+  border-radius: 5px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+}
+
+.button__item:hover {
+  background-color: white;
+  border: 1px solid #{$color-style};
+  border-radius: 5px;
+  color: #{$color-style};
+}
+
+.header {
+  display: flex;
+  justify-content: center;
 }
