@@ -1,0 +1,37 @@
+@import 'variables';
+
+.stars {
+  height: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &__star {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 4px;
+  }
+
+  &__value {
+    font-weight: $font-weight-normal;
+    font-size: 10px;
+    margin-left: auto;
+  }
+
+  &--4 {
+    .stars__star:first-child {
+      margin-left: 0;
+    }
+
+    .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+
+    .stars__star:nth-child(n + 5) {
+      background-image: url(../images/star.svg);
+    }
+  }
+}
