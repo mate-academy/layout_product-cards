@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.card {
+  font-family: Roboto, Arial, sans-serif;
+  color: $white;
+  width: 200px;
+  border: 1px solid $grey-bg;
+  border-radius: 8px;
+  padding: 32px 16px 16px;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 300ms;
+  }
+
+  &__description {
+    font-family: Roboto, Arial, sans-serif;
+    color: $main-dark;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    word-break: break-word;
+    white-space: normal;
+    margin: 0;
+    margin-bottom: 4px;
+
+    &:hover {
+      color: $fon-color;
+    }
+  }
+}
+
+.card__code {
+  font-size: 10px;
+  line-height: 14px;
+  color: $main-grey;
+
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.card__grade {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    display: flex;
+    background-image: url(../images/star.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // &:first-child {
+  //   margin-left: 16px;
+  // }
+
+  &--4 > :nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+}
+
+.card__reviews {
+  color: $main-dark;
+
+  font-size: 10px;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  &-label {
+    color: $main-grey;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  &-value {
+    color: $main-dark;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+
+.card__buy {
+  background-color: $main-color;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $white;
+  font-weight: 700;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+
+  &:hover {
+    background-color: $white;
+    color: $main-color;
+
+    // border: solid 1px $main-color;
+  }
+}
