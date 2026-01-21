@@ -1,0 +1,40 @@
+@import './variables';
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 6.6px;
+  padding-top: 15.6px;
+
+  &__item {
+    display: inline-block;
+    width: 13.5px;
+    height: 13.4px;
+    border-radius: 0.5px;
+    background: $color-star-inactive;
+    mask: url('../images/star.svg') no-repeat center / contain;
+    -webkit-mask: url('../images/star.svg') no-repeat center / contain;
+  }
+
+  &__count {
+    position: relative;
+    left: 1px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-title;
+    height: 16px;
+    padding-left: 17px;
+  }
+
+  // Modifier pre aktívne hviezdy
+  &--1 > .stars__item:nth-child(-n + 1),
+  &--2 > .stars__item:nth-child(-n + 2),
+  &--3 > .stars__item:nth-child(-n + 3),
+  &--4 > .stars__item:nth-child(-n + 4),
+  &--5 > .stars__item:nth-child(-n + 5) {
+    background: $color-star-active;
+  }
+}
