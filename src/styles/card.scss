@@ -1,0 +1,125 @@
+@import './variables';
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  width: $card-width;
+  border-radius: $card-radius;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-size: cover;
+    margin: 32px 19px 0;
+    background-image: url(../images/imac.jpeg);
+  }
+
+  &__title {
+    font-weight: 500;
+    margin: 0;
+    font-size: 12px;
+    padding-top: 40px;
+    padding-inline: $inline-padding;
+    line-height: 18px;
+    box-sizing: border-box;
+  }
+
+  &__code {
+    box-sizing: border-box;
+    color: $gray-color;
+    line-height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 4px;
+    padding-inline: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding-inline: $inline-padding;
+    gap: 4px;
+
+    .card__reviews {
+      color: $dark-text-color;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      margin-left: 19px;
+      margin-top: 2px;
+    }
+  }
+
+  &__price {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline: $inline-padding;
+    width: 100%;
+    height: 18px;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    margin-top: 24px;
+
+    &-title {
+      font-weight: 400;
+      font-size: 12px;
+      color: #616070;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    border: 1px solid $button-color ;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: $button-color;
+    margin-top: 16px;
+    margin-inline: $inline-padding;
+    display: flex;
+    width: calc(100% - 32px);
+    border-radius: 5px;
+
+    &-link {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      box-sizing: border-box;
+      padding-block: 11px;
+      color: #fff;
+      text-decoration: none;
+      width: 100%;
+    }
+
+    &:hover {
+      box-sizing: border-box;
+      background-color: #fff;
+      border: 1px solid $button-color;
+    }
+    &:hover &-link {
+      color: $button-color;
+    }
+  }
+}
