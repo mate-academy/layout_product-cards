@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background-color: gray;
+  font-family: Roboto, sans-serif;
+  color: $default-text-color;
+}
+
+.card {
+  box-sizing: border-box;
+
+  width: 200px;
+  background-color: white;
+  padding: 16px;
+  text-align: center;
+
+  &__photo {
+    margin-top: 16px;
+    width: 160px;
+  }
+
+  &__buy-button {
+    margin-top: 16px;
+
+    font-weight: $bold-font;
+    text-decoration: none;
+    font-size: 14px;
+
+    color: white;
+    background-color: $moyo-blue-color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+
+    &:hover {
+      box-sizing: border-box;
+      border: 2px solid $moyo-blue-color;
+      color: $moyo-blue-color;
+      background-color: white;
+    }
+  }
+}
+
+.rating {
+  @include flex-between-center;
+
+  margin-top: 16px;
+
+  &__reviews {
+    font-size: 10px;
+  }
+}
