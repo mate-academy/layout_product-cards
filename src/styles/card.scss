@@ -1,0 +1,69 @@
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  font-family: $font-family;
+  padding: 32px 16px 16px;
+  background: $main-color;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    margin: 0 auto 40px;
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $text-main-color;
+    display: flex;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $text-secondary-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    &-label {
+      font-size: 12px;
+      line-height: 18px;
+      color: $text-secondary-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 18px;
+      color: $text-main-color;
+      font-weight: 700;
+    }
+  }
+
+  &__buy {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    background: #00acdc;
+    color: $main-color;
+    padding: 16px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 10px;
+
+    &[data-qa='hover']:hover {
+      border: 1px solid #00acdc;
+      background: $main-color;
+      color: #00acdc;
+    }
+  }
+}
