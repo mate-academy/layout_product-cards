@@ -1,0 +1,30 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin button-styles($border-radius: 5px) {
+  @include flex-center;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: $border-radius;
+}
+
+@mixin base-font-description {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+@mixin font($font-size: 10px, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
