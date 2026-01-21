@@ -1,0 +1,38 @@
+@use '../styles/variables.scss' as *;
+
+.stars {
+  width: auto;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__container {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__star {
+    background-repeat: no-repeat;
+    background-image: url('../images/star.svg');
+    width: 16px;
+    height: 16px;
+    background-position: center;
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-text;
+    margin-left: auto;
+  }
+}
