@@ -1,0 +1,105 @@
+.card {
+  box-sizing: border-box;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  &__desc {
+    &-image {
+      margin: 0 auto 40px;
+      width: 160px;
+      height: 134px;
+      background-image: url(../images/imac.jpeg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
+    }
+    &-code {
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $secondary--text--color;
+    }
+  }
+
+  &__reviews {
+    @include justify-space-between;
+
+    &-stars {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &-star {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 50% 50%;
+      }
+
+      @for $i from 0 through $max--stars {
+        &--#{$i} {
+          .card__reviews-stars-star:nth-child(-n + #{$i}) {
+            background-image: url(../images/star-active.svg);
+          }
+        }
+      }
+    }
+
+    &-qty {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &__price {
+    @include justify-space-between;
+
+    line-height: 18px;
+
+    &-title {
+      font-size: 12px;
+      font-weight: 400;
+      color: $secondary--text--color;
+    }
+
+    &-price {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    line-height: 40px;
+    background-color: $accent--color;
+    border-radius: 5px;
+
+    &:hover {
+      color: $accent--color;
+      border: 1px solid $accent--color;
+      background-color: white;
+      transition: all 0.1s ease-in;
+    }
+  }
+}
