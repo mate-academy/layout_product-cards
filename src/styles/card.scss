@@ -1,0 +1,93 @@
+.card {
+  width: $card-width;
+  border: 1px solid $color-border;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__image-container {
+    margin-top: 32px;
+    margin-bottom: 36px;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-text-main;
+    line-height: $line-height-large;
+  }
+
+  &__code {
+    font-size: $font-size-small;
+    color: $color-text-muted;
+    margin-bottom: 8px;
+    margin-top: 4px;
+  }
+
+  &__review {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__review-count {
+    font-size: $font-size-small;
+    color: $color-text-main;
+  }
+
+  &__price {
+    font-size: $font-size-large;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price-label {
+    font-size: $font-size-base;
+    color: $color-text-muted;
+    font-weight: $font-weight-regular;
+  }
+
+  &__price-current {
+    font-weight: $font-weight-bold;
+  }
+
+  &__button {
+    margin-top: auto;
+    margin-bottom: 16px;
+    width: $button-width;
+    height: $button-height;
+    background-color: $color-primary;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    border: none;
+    border-radius: $card-button-radius;
+    cursor: pointer;
+    font-size: $font-size-medium;
+    font-family: $font-main;
+    line-height: $line-height-base;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+      border: 1px solid;
+      border-color: $color-primary;
+    }
+  }
+}
