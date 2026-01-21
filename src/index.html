@@ -8,11 +8,139 @@
     />
     <title>Product cards</title>
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div class="wrapper">
+      <header class="header"></header>
+      <main class="main">
+        <article
+          class="card"
+          data-qa="card"
+          itemscope
+          itemtype="https://schema.org/Product"
+        >
+          <div class="card__image-block"></div>
+          <h3
+            class="card__title"
+            itemprop="name"
+          >
+            APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+          </h3>
+
+          <dl class="card__meta">
+            <dt class="card__meta-term">Product code:</dt>
+            <dd class="card__meta-def">
+              <data
+                class="card__code"
+                value="195434"
+                itemprop="sku"
+              >
+                195434
+              </data>
+            </dd>
+          </dl>
+
+          <div
+            class="card__rating"
+            itemscope
+            itemprop="aggregateRating"
+            itemtype="https://schema.org/AggregateRating"
+          >
+            <div
+              class="card__rating-stars"
+              role="img"
+              aria-label="Rated 4.6 out of 5"
+            >
+              <div
+                class="stars stars--4"
+                aria-hidden="true"
+              >
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+                <div class="stars__star"></div>
+              </div>
+            </div>
+
+            <meta
+              itemprop="ratingValue"
+              content="4.6"
+            />
+            <meta
+              itemprop="bestRating"
+              content="5"
+            />
+            <meta
+              itemprop="worstRating"
+              content="1"
+            />
+            <meta
+              itemprop="reviewCount"
+              content="5"
+            />
+            <meta
+              itemprop="ratingCount"
+              content="18"
+            />
+
+            <a
+              href="#"
+              class="card__rating-count"
+            >
+              Reviews: 5
+            </a>
+          </div>
+
+          <div
+            class="card__price"
+            itemscope
+            itemprop="offers"
+            itemtype="https://schema.org/Offer"
+          >
+            <span class="card__price-word">Price:</span>
+            <span
+              class="card__price-value"
+              itemprop="price"
+              content="2199"
+            >
+              $2,199
+            </span>
+            <link
+              itemprop="availability"
+              href="https://schema.org/InStock"
+            />
+            <meta
+              itemprop="priceCurrency"
+              content="USD"
+            />
+          </div>
+
+          <a
+            href="#"
+            class="card__buy-link"
+            data-qa="hover"
+          >
+            Buy
+          </a>
+        </article>
+      </main>
+      <footer class="footer"></footer>
+    </div>
   </body>
 </html>
