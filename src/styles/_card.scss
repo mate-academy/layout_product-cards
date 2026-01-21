@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  flex-direction: column;
+  width: #{$card-width};
+  height: calc($card-width * 2);
+  display: flex;
+  align-items: center;
+
+  &__image {
+    display: flex;
+    width: calc($card-width * 0.8);
+    height: calc($card-width * 0.67);
+    padding-top: 33px;
+  }
+
+  &__name {
+    text-align: left;
+    width: calc($card-width * 0.83);
+    height: 36px;
+    padding-top: 30px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: #{$primary-color};
+  }
+
+  &__code {
+    text-align: left;
+    align-items: center;
+    margin-top: -6px;
+    font-size: 10px;
+    width: calc($card-width * 0.83);
+    font-weight: 400;
+    color: #{$secondary-color};
+    line-height: 14px;
+  }
+
+  &__buybutton {
+    background-color: #{$button-main-color};
+    color: white;
+    width: calc($card-width * 0.83);
+    height: calc($card-width * 0.2);
+    border: 2px solid #{$button-main-color};
+    border-radius: 5px;
+    outline: none;
+    margin-top: -1px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+
+    &:hover {
+      color: #{$button-main-color};
+      background-color: white;
+      border-color: #{$button-main-color};
+      cursor: pointer;
+    }
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc($card-width * 0.83);
+  padding-top: 3px;
+  color: #{$primary-color};
+
+  &__text {
+    font-size: 10px;
+  }
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc($card-width * 0.83);
+  margin-top: -2px;
+
+  &__price {
+    font-size: 12px;
+    color: #{$secondary-color};
+  }
+
+  &__price_tag {
+    font-weight: 700;
+    font-size: 16px;
+    color: #{$primary-color};
+  }
+}
