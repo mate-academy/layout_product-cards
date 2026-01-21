@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: $main-font-family;
+  font-size: $main-font-size;
+  color: $main-text-color;
+  line-height: $main-line-height;
+  font-weight: $main-font-weight;
+  width: $main-width;
+  box-sizing: border-box;
+}
+
+.card {
+  width: $main-width;
+  display: flex;
+  flex-direction: column;
+  padding-inline: $main-padding-inline;
+  align-items: center;
+  border: 1px solid $color-light-gray;
+  box-sizing: border-box;
+  border-radius: $main-border-radius;
+
+  background-color: $color-white;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+    margin-top: 32px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: $second-font-size;
+    line-height: $line-height-eighteen;
+    margin-bottom: $margin-four;
+  }
+
+  &__code {
+    color: $second-text-color;
+    margin-right: auto;
+    margin-bottom: $main-margin-botton;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &-text {
+      align-items: center;
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: $main-margin-botton;
+
+    &__text {
+      font-size: $second-font-size;
+      line-height: $line-height-eighteen;
+      color: $second-text-color;
+    }
+
+    &__value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: $line-height-eighteen;
+    }
+  }
+
+  &-button {
+    display: flex;
+    width: 166px;
+    height: 40px;
+    border-radius: $main-border-radius;
+    background-color: #00acdc;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $main-margin-botton;
+
+    &__link {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $color-white;
+
+      &:hover {
+        color: $color-blue;
+
+        display: flex;
+        background-color: $color-light-gray;
+        border: 1px solid $color-blue;
+        border-radius: $main-border-radius;
+        width: 164px;
+        height: 38px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
