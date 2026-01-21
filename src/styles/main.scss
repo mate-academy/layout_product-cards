@@ -1,0 +1,143 @@
+@import './variables';
+
+.body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  width: $cardWidth;
+  height: $cardHeight;
+
+  &__display {
+    margin-top: 33px;
+
+    &-image {
+      width: 160px;
+      height: 134px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 36px;
+  }
+
+  &__paragraph1 {
+    font-weight: 500;
+    font-size: 12px;
+    width: 166px;
+    line-height: 18px;
+    color: $mainAccent-color;
+  }
+
+  &__paragraph2 {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $mainSecondary-color;
+  }
+
+  &__response {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 16px;
+    margin-top: 16px;
+    gap: 17px;
+  }
+
+  &__starlist {
+    display: flex;
+    justify-content: space-between;
+    height: 16px;
+    width: 96px;
+    align-items: center;
+  }
+
+  &__star {
+    width: 13px;
+    height: 12px;
+    border-radius: 0.5px;
+    background-image: url(../images/star.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__starlist .main__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+    width: 13px;
+    height: 12px;
+  }
+
+  &__review {
+    display: flex;
+    font-weight: 400;
+    color: $mainAccent-color;
+    font-size: 10px;
+    align-items: center;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+    width: 166px;
+    margin-top: 24px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 400;
+    color: $mainSecondary-color;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__sum {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: $mainAccent-color;
+  }
+
+  &__buttonlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $mainBlueAccent-color;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__buttonlink:hover {
+    box-sizing: border-box;
+    color: $mainBlueAccent-color;
+    background-color: #fff;
+    border: 1px solid #00acdc;
+  }
+}
