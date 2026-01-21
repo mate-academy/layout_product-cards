@@ -1,0 +1,125 @@
+@import './variables';
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  border-radius: $border-radius;
+  border: 1px solid $color-border;
+  padding: 32px 16px 16px;
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 18px;
+  }
+
+  &__title,
+  &__code {
+    margin: 0;
+    font-style: normal;
+  }
+
+  &__title {
+    font-size: $font-size-medium;
+    color: $color-text;
+    font-weight: 500;
+    line-height: $line-height-large;
+    text-decoration: none;
+  }
+
+  &__code {
+    font-size: $font-size-small;
+    color: $color-secondary-text;
+    font-weight: 400;
+    line-height: $line-height-small;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-text;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    font-size: $font-size-medium;
+    color: $color-secondary-text;
+    line-height: $line-height-large;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    color: $color-text;
+    line-height: $line-height-large;
+    font-size: $font-size-large;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 40px;
+    width: 166px;
+    margin-top: 16px;
+    font-size: $font-size-middle;
+    font-style: normal;
+    font-weight: 700;
+    line-height: $line-height-medium;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    background-color: $color-button;
+    color: $color-basic;
+    text-decoration: none;
+  }
+}
+
+.product-card__btn:hover {
+  box-sizing: border-box;
+  border: 1px solid $color-button;
+  background-color: $color-basic;
+  color: $color-button;
+}
