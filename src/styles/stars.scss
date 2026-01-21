@@ -1,0 +1,30 @@
+.rate {
+  padding-left: $padding-left;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--stars {
+    display: flex;
+    &__star {
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 4px;
+    }
+  }
+
+  &--stars-4 .rate--stars__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &--reviews {
+    color: $text-color-strong;
+    font-weight: 400;
+    font-size: 10px;
+    margin-right: 16px;
+  }
+}
