@@ -1,0 +1,21 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+
+  &__star {
+    background-image: url('../images/star.svg');
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+
+  &--N {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
