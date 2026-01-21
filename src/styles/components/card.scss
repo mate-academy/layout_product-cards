@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+
+  &__photo {
+    margin: 32px auto 0;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__photo-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__model {
+    color: $secondary-color;
+    margin-left: 16px;
+    margin-top: 40px;
+
+    @include font-style(Roboto, 500, 12px, 18px);
+
+    width: 166px;
+    height: 36px;
+  }
+
+  &__code {
+    max-width: 98px;
+    height: 14px;
+    color: #616070;
+    margin-left: 16px;
+    margin-top: 4px;
+
+    @include font-style(Roboto, 400, 10px, 14px);
+  }
+
+  &__conteiner-stars {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-top: 16px;
+    width: 166px;
+    height: 16px;
+  }
+
+  &__reviews {
+    color: $secondary-color;
+    margin-left: 17px;
+
+    @include font-style(Roboto, 400, 10px, 14px);
+  }
+
+  &__price-block {
+    margin-left: 16px;
+    margin-top: 24px;
+    display: flex;
+    width: 166px;
+    height: 18px;
+    justify-content: space-between;
+  }
+
+  &__price {
+    color: #616070;
+
+    @include font-style(Roboto, 400, 12px, 18px);
+  }
+
+  &__price-value {
+    margin-left: 85px;
+
+    @include font-style(Roboto, 700, 16px, 18px);
+  }
+
+  &__buy {
+    @include font-style(Roboto, 700, 14px, 16px);
+
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    width: 166px;
+    min-height: 40px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: white;
+  }
+
+  &__buy:hover {
+    box-sizing: border-box;
+    border: 1px solid #00acdc;
+    background-color: white;
+    color: $primary-color;
+  }
+}
