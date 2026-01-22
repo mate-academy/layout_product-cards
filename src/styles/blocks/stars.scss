@@ -1,0 +1,59 @@
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 2px;
+  margin-top: 18px;
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .stars__star {
+      background-image: url(../images/star.svg);
+      background-repeat: no-repeat;
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  .stars__reviews {
+    display: flex;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    vertical-align: bottom;
+    color: $black-color;
+  }
+
+  .stars__star:not(:first-child) {
+    margin-left: 4px;
+  }
+
+  &--1 {
+    .stars__star:nth-child(-n + 1) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+  &--2 {
+    .stars__star:nth-child(-n + 2) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+  &--3 {
+    .stars__star:nth-child(-n + 3) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+  &--4 {
+    .stars__star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+  &--5 {
+    .stars__star:nth-child(-n + 5) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
