@@ -1,0 +1,111 @@
+.card {
+  box-sizing: border-box;
+  background-color: $color-white;
+  border: 1px solid $border-color;
+  border-radius: $card-border-radius;
+  height: $card-height;
+  width: $card-width;
+  padding: $card-padding;
+  position: relative;
+
+  &__img img {
+    width: $card-img-width;
+    height: $card-img-height;
+    display: block;
+    margin: 0 auto $margin-large;
+  }
+
+  &__name {
+    margin-top: 0;
+    font-size: $font-size-small;
+    font-weight: 500;
+    line-height: $line-height-small;
+    color: $text-main-color;
+    margin-bottom: $margin-small;
+  }
+
+  &__code {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: $font-size-xsmall;
+    color: $text-secondary-color;
+    line-height: $line-height-xsmall;
+    text-align: left;
+    position: relative;
+  }
+
+  &__reviews {
+    margin-top: 0;
+    color: $text-main-color;
+    font-size: $font-size-xsmall;
+    line-height: $line-height-xsmall;
+    font-weight: 400;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: $margin-large;
+  }
+
+  &__cost {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $margin-medium;
+  }
+
+  &__price {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    color: $text-secondary-color;
+    text-align: left;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  &__total {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: $font-size-medium;
+    line-height: $line-height-small;
+    color: $text-main-color;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0;
+  }
+
+  &__buy {
+    display: flex;
+    text-decoration: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: $button-width;
+    height: $button-height;
+    right: $button-right;
+    background: $color-blue-accent;
+    border: 1px solid $color-blue-accent;
+    background-size: cover;
+    border-radius: $card-border-radius;
+    font-weight: 700;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+    text-transform: uppercase;
+    color: $color-white;
+    box-sizing: border-box;
+    text-align: center;
+
+    &:hover {
+      color: $color-blue-accent;
+      background-color: $color-white;
+    }
+  }
+
+  &__stars {
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+}
