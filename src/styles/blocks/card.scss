@@ -1,0 +1,105 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &__image {
+    display: flex;
+    width: 160px;
+    margin-bottom: 40px;
+    height: 134px;
+  }
+
+  &__title {
+    color: $color-text-main;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    color: $color-text-secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    align-self: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__code-value {
+    color: $color-text-secondary;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $color-text-main;
+      text-decoration: none;
+    }
+  }
+
+  &__price {
+    color: $color-text-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__price-value {
+    color: $color-text-main;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__button {
+    color: $button-color-white;
+    background-color: $button-color-blue;
+    border: 1px solid $button-color-blue;
+    font-family: inherit;
+    height: 38px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    width: 100%;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.3s;
+      color: $button-color-blue;
+      border: 1px solid $button-color-blue;
+      background-color: $button-color-white;
+    }
+  }
+}
