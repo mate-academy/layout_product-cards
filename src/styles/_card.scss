@@ -1,0 +1,133 @@
+@import 'variables';
+
+.body {
+  font-family: $font-family !important;
+}
+
+.product-card {
+  width: $card-width;
+  height: $card-height;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  background-color: $color-white;
+  margin-left: $card-margin-left;
+  box-sizing: border-box;
+
+  &__img {
+    width: $img-box-width;
+    height: $img-box-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px auto 40px;
+
+    &-tag {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  &__title {
+    width: 166px;
+    height: 36px;
+    margin: 0 auto;
+
+    &-text {
+      font-family: $font-family;
+      font-weight: 500;
+      letter-spacing: 0%;
+      display: flex;
+      margin: 0;
+      font-size: 12px;
+      line-height: 18px;
+      color: #060b35;
+    }
+  }
+
+  &__code {
+    display: flex;
+    width: 98px;
+    height: 14px;
+    padding-left: 16px;
+    padding-top: 4px;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 15px;
+
+    &-text {
+      font-family: $font-family;
+      font-weight: $font-weight-regular;
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-gray;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    width: $price-section-width;
+    height: 18px;
+    margin: 23px auto 16px;
+
+    &-text {
+      font-family: $font-family;
+      width: 31px;
+      margin-right: auto;
+      font-weight: $font-weight-regular;
+      font-size: 12px;
+      color: #060b35;
+    }
+  }
+
+  &__value {
+    height: 18px;
+    width: 50px;
+    margin-left: auto;
+    font-weight: 700;
+    font-family: $font-family;
+    font-size: 16px;
+    text-align: right;
+    padding-bottom: 2px;
+    color: #060b35;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 38px;
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 16px;
+    border: 1px solid $color-primary;
+    border-radius: 5px;
+    background-color: $color-primary;
+    transition: background-color 0.3s ease;
+
+    &-text {
+      width: 27px;
+      height: 16px;
+      font-family: $font-family;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-white;
+      text-decoration: none;
+      justify-content: center;
+    }
+
+    &:hover {
+      background-color: $color-white;
+
+      .product-card__button-text {
+        color: $color-primary;
+      }
+    }
+  }
+}

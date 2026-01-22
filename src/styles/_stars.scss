@@ -1,0 +1,50 @@
+@import 'variables';
+
+.product-card__stars {
+  display: flex;
+  align-items: center;
+  width: 168px;
+  height: 18px;
+  margin: 0 auto;
+  margin-left: 18px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  &__star {
+    width: 13px;
+    height: 13px;
+    margin-right: 2px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../images/star.svg'); // Szara gwiazdka domyślnie
+
+    &:nth-child(-n + 4) {
+      // Pierwsze 4 gwiazdki będą aktywne
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &__reviews {
+    justify-content: flex-end;
+    align-items: center;
+    width: auto; // 🔥 Zmienione, żeby nie narzucać szerokości
+    min-width: 56px;
+    height: 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    display: flex;
+    margin-right: 4px;
+  }
+}
