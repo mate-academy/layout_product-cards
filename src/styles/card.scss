@@ -1,0 +1,95 @@
+.card {
+  width: $card-width;
+  box-sizing: border-box;
+  background-color: $main-background-color;
+  border: 1px solid $border-color;
+  padding: 32px $card-margin $card-margin;
+
+  @include card-border-radius;
+
+  &__photo {
+    width: 160px;
+    height: 134px;
+    padding-inline: 3px;
+    margin-bottom: 34.5px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 12px;
+    color: $main-text-color;
+    margin-bottom: 4px;
+  }
+
+  &__product-code {
+    color: $text-grey-color;
+    line-height: 14px;
+    margin-bottom: $card-margin;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    align-items: center;
+
+    &-amount {
+      line-height: 14px;
+      color: $main-text-color;
+      height: 16px;
+      width: 53px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $card-margin;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    background-color: $button-color;
+
+    @include card-border-radius;
+
+    width: 166px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-color: $button-color;
+    color: $main-background-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    &:hover {
+      background-color: $main-background-color;
+      border: 1px solid $button-color;
+      color: $button-color;
+    }
+  }
+
+  &__price-description {
+    font-weight: 400;
+    font-size: 12px;
+    color: $text-grey-color;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
