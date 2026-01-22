@@ -1,0 +1,103 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 198px;
+  height: 406px;
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: $border-radius;
+  padding: 0;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__device-name {
+    color: $dark-blue;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: 18px;
+    width: 166px;
+    text-align: left;
+    margin: 0 16px 4px;
+  }
+
+  &__device-code {
+    display: block;
+    width: calc(100% - 32px);
+    text-align: left;
+    font-size: $font-size-small;
+    line-height: 14px;
+    font-weight: $font-weight-normal;
+    color: $gray;
+    margin: 0 16px 16px;
+    box-sizing: border-box;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 166px;
+    height: 16px;
+    margin: 0 16px 24px;
+  }
+
+  &__text {
+    font-size: $font-size-small;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+    margin-bottom: 16px;
+
+    &-price {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-medium;
+      line-height: 18px;
+      color: $gray;
+    }
+
+    &-price_2199 {
+      color: $dark-blue;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xl;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-large;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $blue;
+    border-radius: $border-radius;
+    color: $white;
+    width: 166px;
+    height: 40px;
+    margin-bottom: 16px;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+      border: 1px solid $blue;
+    }
+  }
+}
