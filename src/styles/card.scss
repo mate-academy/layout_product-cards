@@ -1,0 +1,95 @@
+.page__body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  font-family: Roboto, sans-serif;
+  color: $main__color;
+  font-weight: $main__weight;
+  letter-spacing: 0;
+
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+
+  border: 1px solid $grey;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  width: 200px;
+  height: 408px;
+
+  &__photo {
+    margin: 0 3px;
+    margin-bottom: 40px;
+    height: 134px;
+    width: 160px;
+    background-size: 100% 100%;
+  }
+
+  &__description {
+    @include font-styling(12px, $main__weight, 18px);
+
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include font-styling(10px, $secondary__weight, 14px);
+
+    color: $secondary__color;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    @include font-styling(10px, $secondary__weight, 14px);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__priceText {
+    @include font-styling(12px, $secondary__weight, 18px);
+
+    color: $secondary__color;
+  }
+
+  &__priceInDollars {
+    @include font-styling(16px, $max__weight, 18px);
+  }
+
+  &__buyButton {
+    display: flex;
+    padding: 0;
+
+    @include font-styling(14px, $max__weight, 16px);
+
+    height: $buyButton__height;
+
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    width: $buyButton__width;
+    border-radius: 5px;
+    border: 1px solid $blue;
+    color: #fff;
+    background-color: $blue;
+
+    &:hover {
+      color: $blue;
+      background-color: #fff;
+    }
+  }
+}
