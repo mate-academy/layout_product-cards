@@ -1,3 +1,134 @@
-body {
+@import './variables';
+
+.page-body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  width: $card-width;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-size: 160px 134px;
+    height: 134px;
+    width: 160px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    width: 100%;
+    color: $main-color;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: inherit;
+    line-height: 14px;
+    width: 100%;
+    margin-bottom: 16px;
+    color: $second-color;
+  }
+
+  &__review {
+    height: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    align-items: center;
+    height: 18px;
+
+    &-text {
+      font-size: 12px;
+      font-family: inherit;
+      color: $second-color;
+    }
+
+    &-sum {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      color: $main-color;
+      line-height: 18px;
+    }
+  }
+
+  &__buy {
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: $third-color;
+    border: 1px solid $third-color;
+    color: $fourth-color;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $fourth-color;
+      color: $third-color;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    font-size: 10px;
+    display: block;
+  }
+
+  &__group {
+    display: flex;
+
+    &-star {
+      height: 16px;
+      width: 16px;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: 4px;
+    }
+
+    &-star:first-child {
+      margin-left: 0;
+    }
+
+    &-star:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
 }
