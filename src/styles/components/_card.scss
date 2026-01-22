@@ -1,0 +1,123 @@
+@use '../abstract/variables' as var;
+
+.card {
+  box-sizing: border-box;
+  height: var.$card-height;
+  width: var.$card-width;
+  display: flex;
+  flex-direction: column;
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: var.$color-gray;
+
+    width: 98px;
+    height: 14px;
+
+    margin-top: 4px;
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 15px;
+    box-sizing: border-box;
+  }
+
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: var.$color-dark-blue;
+  }
+
+  &__image {
+    margin-top: 33px;
+    margin-left: 20px;
+    height: 134px;
+    width: 160px;
+    background-image: url('../images/imac.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    width: 166px;
+    height: 36px;
+    margin-top: 40px;
+    margin-left: 17px;
+    overflow: hidden;
+  }
+
+  &__price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 166px;
+    height: 18px;
+    margin-top: 15px;
+    opacity: 1;
+    margin-left: 17px;
+  }
+
+  &__price-label {
+    width: 31px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: var.$color-gray;
+  }
+
+  &__price-value {
+    width: 50px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: right;
+    color: var.$color-black;
+  }
+
+  &__buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    width: 166px;
+    height: 40px;
+    opacity: 1;
+    border-radius: 5px;
+    background-color: var.$color-light-blue;
+    border: none;
+    color: var.$color-white;
+    margin-left: 17px;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: var.$color-white;
+      color: var.$color-light-blue;
+      opacity: 1;
+      border: 1px solid var.$color-light-blue;
+    }
+  }
+}

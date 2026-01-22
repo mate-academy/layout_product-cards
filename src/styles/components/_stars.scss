@@ -1,0 +1,28 @@
+@use '../abstract/variables' as var;
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    margin-top: 2px;
+
+    background-image: url('../images/star.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+}
