@@ -1,0 +1,19 @@
+@mixin fontFamily($weight, $size, $lineHeight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+@mixin textColor($txtColor: #060b35) {
+  color: $txtColor;
+}
+
+@mixin blockMargins($margTop: 0, $margBottom: 0) {
+  @if $margTop != 0 {
+    margin-top: $margTop;
+  }
+
+  @if $margBottom != 0 {
+    margin-bottom: $margBottom;
+  }
+}
