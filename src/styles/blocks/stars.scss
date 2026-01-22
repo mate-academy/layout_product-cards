@@ -1,0 +1,41 @@
+.stars {
+  @include flex(flex-start, center);
+
+  &__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include image-size(16px, 16px);
+
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--0 {
+    @include stars-active(0);
+  }
+
+  &--1 {
+    @include stars-active(1);
+  }
+
+  &--2 {
+    @include stars-active(2);
+  }
+
+  &--3 {
+    @include stars-active(3);
+  }
+
+  &--4 {
+    @include stars-active(4); // use now
+  }
+
+  &--5 {
+    @include stars-active(5);
+  }
+}
