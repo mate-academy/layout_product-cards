@@ -1,3 +1,113 @@
+@import "./variables";
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
+@import "./stars";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  padding: 0;
   margin: 0;
 }
+
+.card {
+  padding: 32px 16px 16px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #F3F3F3;
+
+  &_image {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+  }
+
+  &_product-name {
+    margin-block: 0 4px;
+    color: $main-text-color;
+    font-weight: 500;
+    font-family: $main-font-family;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &_product-code {
+    margin-block: 0 16px;
+    align-self: baseline;
+    color: $secondary-text-color;
+    font-family: $main-font-family;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &_reviews {
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-count {
+      margin: 0;
+      color: $main-text-color;
+      text-align: right;
+      font-family: $main-font-family;
+      font-size: 10px;
+    }
+  }
+
+  &_price {
+    margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      margin: 0;
+      color: $secondary-text-color;
+      font-family: $main-font-family;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-cost {
+      margin: 0;
+      text-align: right;
+      font-family: $main-font-family;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: $main-text-color;
+    }
+  }
+
+  &_buy-button {
+    width: 100%;
+    padding-block: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+
+    font-family: $main-font-family;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      color: $button-color;
+    }
+  }
+}
+
