@@ -1,0 +1,87 @@
+@import 'mixins';
+@import 'variables';
+
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid $grey-elements;
+  border-radius: $border-radius;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 20px 0;
+  }
+
+  &__name {
+    width: $whidth;
+    height: 36px;
+    font-family: Robto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $main-accent;
+    margin: 36px 16px 0;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $secondary-accent;
+    margin: 4px 16px 0;
+  }
+
+  &__price {
+    @include flex-box(space-between, center);
+
+    width: $whidth;
+    height: 18px;
+    margin: 22px 16px 0;
+
+    &-tag {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $secondary-accent;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    @include flex-box(center, center);
+
+    margin: 16px;
+
+    background-color: $blue-accent;
+    color: $white-background;
+
+    width: $whidth;
+    height: 40px;
+    border: none;
+    border-radius: $border-radius;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+    }
+  }
+}
