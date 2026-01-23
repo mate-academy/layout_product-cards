@@ -2,15 +2,23 @@
   display: flex;
 
   .card__star {
-    background-image: url(../images/star.svg);
-    background-size: cover;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
     background-position: center;
-    width: 12px;
-    height: 12px;
-    margin-right: 8px;
-  }
-}
 
-.card__stars--active .card__star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--active-1 .card__star:nth-child(-n + 1),
+  &--active-2 .card__star:nth-child(-n + 2),
+  &--active-3 .card__star:nth-child(-n + 3),
+  &--active-4 .card__star:nth-child(-n + 4),
+  &--active-5 .card__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
 }
