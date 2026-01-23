@@ -1,0 +1,30 @@
+.cards__stars {
+  @include flex-between;
+
+  margin-bottom: 24px;
+
+  &-list {
+    display: flex;
+  }
+
+  .cards__star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: block;
+
+    @include bg-center('../images/star.svg');
+  }
+
+  .cards__reviews {
+    color: $color-dark;
+  }
+
+  &-list .cards__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  .cards__star:last-child {
+    margin-right: 0;
+  }
+}
