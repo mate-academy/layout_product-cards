@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    height: 134px;
+    width: 160px;
+  }
+
+  &__header {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-standard;
+    margin-bottom: 4px;
+    line-height: 18px;
+  }
+
+  &__productcode {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    margin-bottom: 16px;
+    line-height: 14px;
+  }
+
+  &__review {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__review-count {
+    font-size: $font-size-sm;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    color: $color-text-secondary;
+  }
+
+  &__price-value {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    line-height: 18px;
+  }
+
+  &__button {
+    @include make-button($color-blue-accent);
+
+    &:hover {
+      color: $color-blue-accent;
+      border: 1px solid $color-blue-accent;
+      background-color: $color-background;
+    }
+  }
+}
