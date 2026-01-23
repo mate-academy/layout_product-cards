@@ -1,0 +1,126 @@
+@use './variables' as var;
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: var.$cardWidth;
+  height: 404px;
+  border: 1px solid var.$borderColor;
+  border-radius: 5px;
+  background-color: var.$mainColor;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 134px;
+    width: 160px;
+    margin-top: 32px;
+    margin-left: 19px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    color: var.$mainTextColor;
+    width: var.$cardWidth - 32;
+    height: 36px;
+    margin-left: 16px;
+    margin-top: 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    display: flex;
+    align-items: center;
+    width: 98px;
+    height: 14px;
+    margin-left: 16px;
+    margin-top: 4px;
+  }
+
+  &__code {
+    color: var.$secondaryTextColor;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var.$cardWidth - 32;
+    height: 16px;
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+
+  &__reviews-text {
+    color: var.$mainTextColor;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__pricebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var.$cardWidth - 32;
+    height: 18px;
+    margin-left: 16px;
+    margin-top: 24px;
+  }
+
+  &__price-text {
+    color: var.$secondaryTextColor;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price {
+    color: var.$mainTextColor;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var.$cardWidth - 32;
+    height: 38px;
+    margin-left: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    background-color: var.$secondaryColor;
+    border: 1px solid var.$secondaryColor;
+    cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: var.$mainColor;
+  }
+
+  &__buy-button:hover {
+    background-color: var.$mainColor;
+
+    .card__link {
+      color: var.$secondaryColor;
+    }
+  }
+}
