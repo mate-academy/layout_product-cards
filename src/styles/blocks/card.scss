@@ -1,0 +1,92 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Regular_1.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Bold_1.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Medium_1.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__image {
+    margin-top: 32px;
+    margin-bottom: 40px;
+
+    height: 134px;
+
+    @include bg-center('../images/imac.jpeg');
+
+    background-size: 160px 134px;
+  }
+
+  &__body {
+    padding: 0 16px 16px;
+  }
+
+  &__description {
+    @include text-style(12px, 18px, 500, $color-dark);
+
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    @include flex-between;
+
+    margin-bottom: 16px;
+
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-value {
+      @include text-style(16px, 18px, 700, $color-dark);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 12px 69px;
+    background-color: $color-primary;
+    color: $color-white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  }
+}
