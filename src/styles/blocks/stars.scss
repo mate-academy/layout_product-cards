@@ -1,0 +1,32 @@
+.stars {
+  @include flex-between;
+
+  margin-bottom: 24px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: block;
+
+    @include bg-center('../images/star.svg');
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__reviews {
+    color: $color-dark;
+  }
+
+  @for $n from 1 through $stars-max {
+    &--#{$n} .stars__item:nth-child(-n + #{$n}) {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}

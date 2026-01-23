@@ -1,3 +1,16 @@
-body {
+@import './utils/variables';
+@import './utils/mixins';
+@import 'blocks/card';
+@import 'blocks/stars';
+@import 'blocks/fonts';
+
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+
+  @include text-style(10px, 14px, 400, $color-text);
 }
