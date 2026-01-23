@@ -15,10 +15,6 @@
 
     @include bg-center('../images/star.svg');
 
-    &--active {
-      background-image: url(../images/star-active.svg);
-    }
-
     &:last-child {
       margin-right: 0;
     }
@@ -26,5 +22,11 @@
 
   &__reviews {
     color: $color-dark;
+  }
+
+  @for $n from 1 through $stars-max {
+    &--#{$n} .stars__item:nth-child(-n + #{$n}) {
+      background-image: url('../images/star-active.svg');
+    }
   }
 }
