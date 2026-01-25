@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Roboto, 'Courier New', Courier, monospace;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 0 17px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border: 1px solid;
+  border-color: #f3f3f3;
+  background-color: $main-background-color;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    padding: +2px;
+  }
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: $main-text-color;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 33px;
+}
+
+.product-code {
+  font-size: 10px;
+  font-weight: 400;
+  padding-block: 5px;
+  color: $secondary-text-color;
+}
+
+.product-rate {
+  padding-top: 13px;
+  padding-bottom: 12px;
+  gap: 20px;
+  display: flex;
+}
+
+.stars {
+  display: flex;
+  width: 96px;
+  height: 16px;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/star.svg);
+}
+
+.stars--5 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.review-number {
+  display: flex;
+  align-items: center;
+  color: $main-text-color;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 13px;
+}
+
+.price-text {
+  display: flex;
+  align-items: center;
+  color: $secondary-text-color;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.price-number {
+  display: flex;
+  align-items: center;
+  color: $main-text-color;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.button-to-buy {
+  display: inline-block;
+  text-decoration: none;
+  color: $main-background-color;
+  padding: 11px 68px;
+  border-radius: 5px;
+  background-color: $blue-accents;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-color: $blue-accents;
+}
+
+.button-to-buy:hover {
+  background-color: transparent;
+  color: $blue-accents;
+}
