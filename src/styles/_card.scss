@@ -17,7 +17,7 @@
   }
 
   &__name {
-    width: $whidth;
+    width: $width;
     height: 36px;
     font-weight: 500;
     font-size: 12px;
@@ -39,7 +39,7 @@
   &__price {
     @include flex-box(space-between, center);
 
-    width: $whidth;
+    width: $width;
     height: 18px;
     margin: 22px 16px 0;
 
@@ -64,23 +64,24 @@
     @include flex-box(center, center);
 
     margin: 16px;
+    padding: 12px 69px;
 
     background-color: $blue-accent;
     color: $white-background;
 
-    width: $whidth;
-    height: 40px;
     border: none;
     border-radius: $border-radius;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0%;
-    text-transform: uppercase;
+    &-text {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+    }
 
     &:hover {
-      background-color: #fff;
+      background-color: $white-background;
       color: $blue-accent;
       border: 1px solid $blue-accent;
     }
