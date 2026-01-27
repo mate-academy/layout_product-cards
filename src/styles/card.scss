@@ -1,0 +1,91 @@
+@import './variable';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: $card-width;
+  border: 1px solid $color-border;
+  border-radius: $radius-5;
+  background-color: $color-white;
+  padding: $space-32 $space-16 $space-16;
+  font-family: Roboto, sans-serif;
+
+  &__image {
+    width: 100%;
+    height: $image-height;
+    object-fit: contain;
+    margin-bottom: $space-40;
+  }
+
+  &__title {
+    color: $color-text-main;
+    font-size: $font-size-12;
+    font-weight: 500;
+    line-height: $line-height-18;
+    margin-bottom: $space-4;
+  }
+
+  &__code {
+    color: $color-text-secondary;
+    font-size: $font-size-10;
+    font-weight: 400;
+    line-height: $line-height-14;
+    margin-bottom: $space-16;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-24;
+  }
+
+  &__reviews {
+    color: $color-text-main;
+    font-size: $font-size-10;
+    line-height: 1;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-16;
+    color: $color-text-main;
+
+    &-label {
+      color: $color-text-secondary;
+      font-size: $font-size-12;
+      font-weight: 400;
+    }
+
+    &-value {
+      font-size: $font-size-16;
+      line-height: $line-height-18;
+      font-weight: 700;
+    }
+  }
+
+  &__buy {
+    box-sizing: border-box;
+    height: $button-height;
+    display: block;
+    margin-top: auto;
+    border: 1px solid $color-accent;
+    border-radius: $radius-6;
+    padding: 10px 0;
+    background-color: $color-accent;
+    color: $color-white;
+    text-align: center;
+    text-decoration: none;
+    font-size: $font-size-14;
+    font-weight: 700;
+    transition: all $transition-02;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-accent;
+    }
+  }
+}
