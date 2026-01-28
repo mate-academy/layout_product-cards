@@ -1,0 +1,35 @@
+@use "../utils.scss";
+
+.stars {
+  display: flex;
+  justify-content: flex-start;
+  gap: utils.$star-gap;
+
+  width: calc(5 * utils.$star-width + 4 * utils.$star-gap);
+  height: utils.$star-height;
+
+  &__star {
+  flex: 0 0 utils.$star-width;
+  background-image: url(../images/star.svg);
+  background-repeat: no-repeat;
+
+  background-position: center;
+  height: utils.$star-height;
+  width: utils.$star-width;
+
+  display: block;
+  background-size: 14px 14px;
+  }
+
+  &__star--active {
+  background-image: url(../images/star-active.svg);
+  }
+}
+
+@for $i from 1 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n+#{$i}) {
+    background-image: url(../images/star-active.svg);
+  }
+
+}
+
