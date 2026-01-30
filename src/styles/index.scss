@@ -1,3 +1,114 @@
+@import 'variables';
+@import 'stars';
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  height: $card-height;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+
+  &__image {
+    margin: 32px 19px 40px;
+    width: $image-width;
+    height: $image-height;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0 $spacing-md $spacing-xs;
+    font-family: $font-main;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    line-height: $line-height;
+    color: $color-text-title;
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+    margin: 0 0 $spacing-md $spacing-md;
+    font-family: $font-main;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    color: $color-text;
+    line-height: 14px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $rating-width;
+    height: $star-size;
+    margin: 0 0 $spacing-lg $spacing-md;
+
+    &-reviews {
+      font-family: $font-main;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-xs;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $price-width;
+    height: $price-height;
+    margin: 0 0 $spacing-md $spacing-md;
+
+    &-label {
+      font-family: $font-main;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-sm;
+      color: $color-text;
+    }
+
+    &-value {
+      font-family: $font-main;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-lg;
+      line-height: $line-height;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $price-width;
+    height: $button-height;
+    margin: 0 0 $spacing-md $spacing-md;
+
+    box-sizing: border-box;
+
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: $border-radius;
+
+    font-family: $font-main;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md;
+    line-height: $button-height;
+
+    color: $color-white;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
 }
