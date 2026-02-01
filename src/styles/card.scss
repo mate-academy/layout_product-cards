@@ -1,0 +1,96 @@
+.card {
+  height: $card-height;
+  width: $card-width;
+  border: $border-width solid rgba(243, 243, 243, 1);
+  border-radius: $radius;
+  padding: $card-padding-y $card-padding-x;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    background-size: $image-width $image-height;
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 40px;
+
+    display: block;
+    height: $image-height;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    color: $color-muted;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-muted;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__buy {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    background-color: $color-accent;
+    color: $white;
+    border: $border-width solid transparent;
+    border-radius: $radius;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $white;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+}
