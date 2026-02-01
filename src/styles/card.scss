@@ -1,0 +1,96 @@
+.card {
+  height: $card-height;
+  width: $card-width;
+  border: $border-width solid $color-border;
+  border-radius: $radius;
+  padding: $card-padding-y $card-padding-x;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    background-size: $image-width $image-height;
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: $space-xl;
+
+    display: block;
+    height: $image-height;
+  }
+
+  &__title {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
+    margin-bottom: $space-xxs;
+  }
+
+  &__code {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    color: $color-muted;
+    line-height: $line-height-xs;
+    margin-bottom: $space-sm;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $space-md;
+  }
+
+  &__reviews {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    position: relative;
+    top: 1px;
+  }
+
+  &__price {
+    margin-bottom: $space-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+      font-size: $font-size-sm;
+      line-height: $line-height-md;
+      color: $color-muted;
+    }
+
+    &-value {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-lg;
+      line-height: $line-height-md;
+    }
+  }
+
+  &__buy {
+    text-decoration: none;
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+    font-weight: $font-weight-bold;
+    background-color: $color-accent;
+    color: $white;
+    border: $border-width solid transparent;
+    border-radius: $radius;
+    height: $button-height;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $white;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+}
