@@ -1,0 +1,40 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  width: 100%;
+
+  &__list {
+    height: 16px;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    gap: 4px;
+    list-style: none;
+  }
+
+  &__item {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+
+  &__reviews {
+    line-height: 14px;
+    font-size: 10px;
+    color: $color-title;
+    font-weight: 400;
+  }
+}
