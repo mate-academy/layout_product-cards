@@ -1,7 +1,7 @@
 .stars {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 8px;
   margin: 0;
   width: 100%;
@@ -18,23 +18,22 @@
   &__item {
     width: 16px;
     height: 16px;
-    background-image: url('../images/star.svg');
+    background-image: url('/src/images/star.svg');
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &--4 {
-    .stars__item:nth-child(-n + 4) {
-      background-image: url('../images/star-active.svg');
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url('/src/images/star-active.svg');
+      }
     }
   }
 
   &__reviews {
     line-height: 14px;
-    height: 16px;
     font-size: 10px;
-    display: flex;
-    align-items: center;
     color: $color-title;
     font-weight: 400;
   }
