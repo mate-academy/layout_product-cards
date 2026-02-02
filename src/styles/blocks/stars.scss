@@ -1,0 +1,40 @@
+.card__stars-row {
+  @include flex-btw;
+
+  align-items: flex-end;
+  margin-bottom: 24px;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  padding: 0;
+
+  &__star {
+    display: block;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+}
+
+.card__stars-reviews {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+}
