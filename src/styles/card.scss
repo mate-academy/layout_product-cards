@@ -1,0 +1,109 @@
+@use './variables' as *;
+
+.card {
+  box-sizing: border-box;
+
+  width: $card-width;
+  padding: $card-padding;
+
+  background-color: $color-white;
+  border-radius: $card-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &__computer {
+    width: 160px;
+    height: 134px;
+
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: $font-family;
+    font-size: $font-small;
+    font-weight: 500;
+    color: $color-black;
+  }
+
+  &__code {
+    margin: 0;
+
+    font-family: $font-family;
+    font-size: $font-small;
+    font-weight: 400;
+    color: $color-gray;
+  }
+
+  &__rating {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    margin: 0;
+
+    font-family: $font-family;
+    font-size: $font-small;
+    color: $color-black;
+  }
+
+  &__price {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-title {
+    font-family: $font-family;
+    font-size: $font-small;
+    color: $color-gray;
+  }
+
+  &__price-value {
+    font-family: $font-family;
+    font-size: $font-small;
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-blue;
+    border-radius: 5px;
+
+    font-family: $font-family;
+    font-weight: 700;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-blue;
+      border: 1px solid $color-blue;
+    }
+  }
+}

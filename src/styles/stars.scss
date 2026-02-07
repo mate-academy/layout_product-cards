@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+.stars {
+  width: calc(#{$star-size} * 5 + #{$star-gap} * 4);
+  height: $star-size;
+
+  background-image: url('../images/star.svg');
+  background-repeat: repeat-x;
+  background-size: $star-size $star-size;
+
+  &--1 {
+    background-image:
+      url('../images/star-active.svg'),
+      url('../images/star.svg');
+
+    background-position: 0 0, $star-size 0;
+  }
+
+  &--2 {
+    background-image:
+      url('../images/star-active.svg'),
+      url('../images/star.svg');
+
+    background-position: 0 0, calc(#{$star-size} * 2) 0;
+  }
+
+  &--3 {
+    background-image:
+      url('../images/star-active.svg'),
+      url('../images/star.svg');
+
+    background-position: 0 0, calc(#{$star-size} * 3) 0;
+  }
+
+  &--4 {
+    background-image:
+      url('../images/star-active.svg'),
+      url('../images/star.svg');
+
+    background-position: 0 0, calc(#{$star-size} * 4) 0;
+  }
+
+  &--5 {
+    background-image: url('../images/star-active.svg');
+  }
+}

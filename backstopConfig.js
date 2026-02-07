@@ -1,13 +1,13 @@
-'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
-
 const backstop = require('@mate-academy/backstop-config');
 const { basicScenario } = backstop;
 
+const BASE_URL = 'https://johannpdaniel.github.io/layout_product-cards/';
+
 const basic = {
   ...basicScenario,
-  label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/product-cards/',
+  url: BASE_URL,
+  referenceUrl: BASE_URL,
+  testUrl: BASE_URL,
 };
 
 const config = {
