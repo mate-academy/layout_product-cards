@@ -1,0 +1,42 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $stars-width;
+  height: $stars-item-size;
+  margin: $stars-margin;
+
+  &__list {
+    display: flex;
+    gap: $stars-gap;
+    width: $stars-width-list;
+  }
+
+  &__item {
+    width: $stars-item-size;
+    height: $stars-item-size;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+
+  &__reviews {
+    font-family: R$font-family-base;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    color: $color-primary;
+    white-space: nowrap;
+    text-align: right;
+    width: $stars-reviews-width;
+    transform: translateY(2px);
+  }
+}
