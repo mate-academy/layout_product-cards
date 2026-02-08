@@ -1,0 +1,110 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-main;
+  width: $card-width;
+  padding: 32px 0 16px;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+
+  &__image {
+    display: flex;
+    background-image: url('../images/imac.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 134px;
+    margin-inline: 19px;
+    margin-bottom: 40px;
+    align-self: center;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    margin-inline: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $color-text-main;
+  }
+
+  &__code {
+    margin-bottom: 16px;
+    margin-inline: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $color-text-muted;
+  }
+
+  &__rating {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    height: 16px;
+    margin-inline: 16px;
+  }
+
+  &__reviews {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $color-text-muted;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $color-text-muted;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      color: $color-text-muted;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+      color: $color-text-main;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    background-color: $color-accent;
+    color: white;
+    height: $button-height;
+    border-radius: $radius-main;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: white;
+      color: $color-accent;
+      border: 1px solid $color-accent;
+    }
+  }
+}
