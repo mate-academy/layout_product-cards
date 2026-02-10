@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    // Creates classes: &--1, &--2, ... &--5
+    &--#{$i} {
+      // Selects the first $i elements inside that modifier
+      // e.g., if $i is 3, it selects the first 3 stars
+      > :nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+}
