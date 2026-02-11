@@ -1,0 +1,46 @@
+@import './variables';
+
+.stars {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0;
+
+  &__list {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    height: 16px;
+
+    line-height: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    width: 16px;
+    height: 16px;
+
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__item:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-title;
+  }
+}
