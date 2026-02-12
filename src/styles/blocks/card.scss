@@ -1,0 +1,94 @@
+.card {
+  height: 408px;
+  width: 200px;
+  background-color: $card-background-color;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+
+  &__image {
+    height: 134px;
+    width: 160px;
+    margin-top: 32px;
+    margin-inline: 19px;
+  }
+
+  &__name {
+    color: $main-text-color;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-top: 36px;
+    margin-bottom: 0;
+
+    @include content-margin-inline;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary-text-color;
+
+    @include content-margin-inline;
+  }
+
+  &__reviews {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include content-margin-inline;
+
+    font-size: 10px;
+    line-height: 14px;
+    color: $main-text-color;
+  }
+
+  &__price {
+    margin-top: 24px;
+
+    @include content-margin-inline;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary-text-color;
+
+    &-value {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $main-text-color;
+    }
+  }
+
+  &__button {
+    display: flex;
+    box-sizing: border-box;
+    margin: 16px;
+
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $card-background-color;
+    background-color: $button-color;
+    border-radius: 5px;
+    width: 166px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 14px;
+
+    font-weight: 700;
+
+    &:hover {
+      background-color: $card-background-color;
+      border: 1px solid $button-color;
+      color: $button-color;
+    }
+  }
+}
