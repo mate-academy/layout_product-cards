@@ -1,0 +1,115 @@
+@use 'variables' as *;
+
+.card {
+  width: 200px;
+  height: 408px;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    width: 160px;
+    height: 134px;
+    top: 33px;
+    left: calc(50% - 160px / 2);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    position: absolute;
+    width: 166px;
+    left: calc(50% - 166px / 2);
+    bottom: 165px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-main;
+    font-family: $font-main;
+    margin: 0;
+    line-height: 18px;
+  }
+  &__code {
+    position: absolute;
+    width: 98px;
+    height: 14px;
+    left: calc(50% - 98px / 2 - 34px);
+    bottom: 147px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $color-secondary;
+    font-family: $font-main;
+    margin: 0;
+    line-height: 14px;
+  }
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: flex-end;
+    width: 166px;
+    left: calc(50% - 166px / 2);
+    bottom: 115px;
+  }
+  &__review-count {
+    font-size: 10px;
+    font-weight: 400;
+    color: $color-main;
+    font-family: $font-main;
+    line-height: 14px;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: flex-end;
+    width: 166px;
+    left: calc(50% - 166px / 2);
+    bottom: 73px;
+  }
+  &__price-title {
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-secondary;
+    font-family: $font-main;
+    line-height: 18px;
+  }
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-main;
+    font-family: $font-main;
+    line-height: 18px;
+  }
+  &__buy {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    left: calc(50% - 166px / 2);
+    bottom: 17px;
+    background-color: $color-accent;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 14px;
+    font-family: $font-main;
+    box-sizing: border-box;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid $color-accent;
+      color: $color-accent;
+    }
+  }
+}
