@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+/* #region stars */
+.stars {
+  display: flex;
+  align-items: center;
+  width: $stars-width;
+  height: $star-size;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: $stars-spacing;
+    }
+  }
+
+  &--1 .stars__star:nth-child(-n + 1),
+  &--2 .stars__star:nth-child(-n + 2),
+  &--3 .stars__star:nth-child(-n + 3),
+  &--4 .stars__star:nth-child(-n + 4),
+  &--5 .stars__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__text {
+    width: 53px;
+    color: $color-text;
+    font-size: $font-size-small;
+    font-weight: 400;
+    text-align: right;
+    margin-left: auto;
+  }
+}
