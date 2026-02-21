@@ -1,3 +1,162 @@
+html {
+  box-sizing: border-box;
+}
+
+body,
+div,
+h2,
+p,
+a,
+span {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #fff;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  color: #060b35;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+  background-position: center;
+  background-image: url(../images/imac.jpeg);
+  background-repeat: no-repeat;
+
+  background-size: 100% 100%;
+}
+
+.card__rating,
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 40px;
+
+  margin-top: 16px;
+  padding: 0;
+
+  border: 1px solid #00acdc;
+  background: #00acdc;
+  color: #fff;
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #fff;
+    color: #00acdc;
+  }
+}
+
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  display: block;
+  margin-right: 4px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 0.5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.stars--4 > .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
+
+.card__product-code,
+.card__price-name {
+  color: #616070;
+}
+
+.card__product-name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+  margin-bottom: 4px;
+}
+
+.card__product-code {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+
+.card__review {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+.card__price-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.card__price-count {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.card__product {
+  margin-bottom: 16px;
+}
+
+.card__rating {
+  margin-bottom: 24px;
+}
+
+.card__price {
+  margin-bottom: 16px;
 }
