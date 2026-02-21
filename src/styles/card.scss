@@ -1,0 +1,108 @@
+.card {
+  width: 200px;
+  background-color: $whiteColor;
+  padding: 33px 20px 17px;
+  border: 1px solid $borderColor;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__info {
+    flex: 1 1 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    color: $mainColor;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__code {
+    color: $greyColor;
+    font-size: 10px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__value {
+    color: $mainColor;
+    font-size: 10px;
+  }
+
+  &__cost {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+  }
+
+  &__text {
+    color: $greyColor;
+  }
+
+  &__price {
+    color: $mainColor;
+    font-weight: 700;
+  }
+
+  &__button {
+    border-radius: 5px;
+    background: $accentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $whiteColor;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 40px;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    border: 1px solid transparent;
+    &:hover {
+      border-color: $accentColor;
+      background-color: transparent;
+      color: $accentColor;
+    }
+  }
+}
