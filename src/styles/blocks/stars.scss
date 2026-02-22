@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+
+  &__star {
+    display: block;
+    margin-right: 4px;
+
+    width: 16px;
+    height: 16px;
+
+    background-image: $star-default;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 0.5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @each $name, $number in $numbers {
+    &--#{$name} > &__star:nth-child(-n + #{$number}) {
+      background-image: $star-active;
+    }
+  }
+}
