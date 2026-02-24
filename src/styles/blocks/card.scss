@@ -1,0 +1,103 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+
+  padding: $card-padding;
+
+  background: $color-white;
+
+  border: $card-border;
+  border-radius: $card-border-radius;
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+
+    width: $image-widh;
+    height: $image-height;
+
+    background-image: url(../images/imac.jpeg);
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  &__info {
+    margin: 0;
+    margin-top: $info-margin-t;
+
+    font-weight: $info-weight;
+    font-size: $info-size;
+    line-height: $info-line-height;
+  }
+
+  &__code {
+    margin: 0;
+    margin-top: $code-margin;
+
+    width: $code-width;
+    height: $code-height;
+    color: $color-grey;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $review-margin-top;
+
+    &-count {
+      align-self: flex-end;
+      font-style: inherit;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $pricing-height;
+
+    margin-top: $pricing-margin;
+
+    &-price {
+      font-size: $price-size;
+      color: $color-grey;
+    }
+
+    &-value {
+      font-weight: $price-val-weight;
+      font-size: $price-val-size;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $buttton-width;
+    height: $button-height;
+    border-radius: $button-radius;
+
+    color: $color-white;
+    background-color: $color-blue;
+    border: $button-border;
+    margin-top: $button-margin;
+
+    font-weight: $button-weight;
+    font-size: $button-f-size;
+    line-height: $button-line-height;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+}

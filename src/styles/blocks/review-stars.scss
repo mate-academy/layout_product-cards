@@ -1,0 +1,36 @@
+@use '../utils/variables' as *;
+
+.stars {
+  display: flex;
+  width: $stars-width;
+
+  &__star {
+    height: $star-size;
+    width: $star-size;
+
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: $star-gap;
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  // use data-rating='4' into block of stars.
+  // &[data-rating='1'] &__star:nth-child(-n + 1),
+  // &[data-rating='2'] &__star:nth-child(-n + 2),
+  // &[data-rating='3'] &__star:nth-child(-n + 3),
+  // &[data-rating='4'] &__star:nth-child(-n + 4),
+  // &[data-rating='5'] &__star:nth-child(-n + 5) {
+  //   background-image: url(../images/star-active.svg);
+  // }
+}
