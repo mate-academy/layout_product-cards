@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+.stars {
+  display: flex;
+  flex-direction: row;
+
+  &__star {
+    height: $stars-height;
+    width: $stars-width;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        height: $stars-height;
+        width: $stars-width;
+        background-image: url(../images/star-active.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

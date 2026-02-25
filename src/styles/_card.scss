@@ -1,0 +1,145 @@
+@use 'variables' as *;
+
+.product {
+  width: $card-width;
+  height: $card-height;
+  display: flex;
+
+  &-card {
+    position: relative;
+    box-sizing: border-box;
+    width: $card-width;
+    height: $card-height;
+
+    &__image {
+      position: absolute;
+      top: 33px;
+      left: 20px;
+      align-items: center;
+      width: $image-width;
+      height: $image-height;
+      background-image: url('../images/imac.jpeg');
+      background-size: 100% 100%;
+      background-position: center;
+      image-rendering: optimizeQuality;
+    }
+
+    &__item {
+      position: absolute;
+      top: 207px;
+      left: $spacing-base;
+      margin: 0;
+      font-size: 12px;
+      font-weight: 500;
+      width: $objects-width;
+      height: 36px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      color: $color-main-text;
+      vertical-align: bottom;
+    }
+
+    &__code {
+      position: absolute;
+      top: 247px;
+      color: $color-code-text;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0%;
+      width: 98px;
+      height: 14px;
+      margin-left: $spacing-base;
+    }
+
+    &__rating {
+      position: absolute;
+      top: 277px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $objects-width;
+      height: 16px;
+      margin-left: $spacing-base;
+
+      &-reviews {
+        display: inline-block;
+        font-size: 10px;
+        white-space: nowrap;
+        margin: 0;
+        vertical-align: bottom;
+        color: $color-main-text;
+      }
+    }
+
+    &__price {
+      position: absolute;
+      font-weight: 400;
+      top: 317px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: $spacing-base;
+      width: $objects-width;
+      height: 18px;
+
+      &-word {
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0;
+        line-height: 18px;
+        color: $color-code-text;
+        vertical-align: bottom;
+      }
+
+      &-amount {
+        font-weight: 700;
+        font-size: 16px;
+        display: inline-block;
+        margin: 0;
+        line-height: 18px;
+        letter-spacing: 0%;
+        vertical-align: bottom;
+        color: $color-main-text;
+      }
+    }
+
+    &__button {
+      position: absolute;
+      top: 351px;
+      display: block;
+      background-color: $color-button;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+      text-align: center;
+      width: $objects-width;
+      height: 40px;
+      border-radius: 5px;
+      margin-left: $spacing-base;
+
+      &:hover {
+        position: absolute;
+        top: 351px;
+        display: block;
+        box-sizing: border-box;
+        background-color: $color-white;
+        border: 1px solid $color-button;
+        text-decoration: none;
+        color: $color-button;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        text-align: center;
+        width: $objects-width;
+        height: 40px;
+        border-radius: 5px;
+        margin-left: $spacing-base;
+      }
+    }
+  }
+}
