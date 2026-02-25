@@ -1,0 +1,113 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: $card-width;
+  height: 408px;
+  max-height: 408px;
+  padding: 32px 16px 16px;
+  background-color: #fff;
+  border: 1px solid $color-border-default;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+
+  &__media-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__media {
+    width: 160px;
+    height: 134px;
+    margin-inline: auto;
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-text-main;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-text-light;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-text-light;
+    align-self: flex-end;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__label {
+    width: 31px;
+    height: 18px;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: $line-height-label;
+    color: $color-text-light;
+    display: inline-block;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $color-text-main;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    margin-top: 16px;
+    background-color: $color-accent;
+    color: #fff;
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #fff;
+      color: $color-accent;
+      border-color: $color-accent;
+      text-decoration: none;
+    }
+  }
+}
