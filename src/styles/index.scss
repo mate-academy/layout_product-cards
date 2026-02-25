@@ -1,3 +1,104 @@
+$font-family: 'Roboto', sans-serif;
+$card-width: 200px;
+$card-border: 1px solid #ddd;
+$primary: #00acdc;
+$star-size: 13px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: $font-family;
+}
+
+.card {
+  width: $card-width;
+  border: $card-border;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  padding-top: 20px;
+  &__img {
+    background-image: url(../images/imac.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 134px;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+  }
+  &__title {
+    font-size: 14px;
+    margin: 30px 0 6px;
+    line-height: 18px;
+  }
+  &__code {
+    font-size: 10px;
+    color: #616070;
+    margin-bottom: 8px;
+  }
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  &__actions {
+    margin-left: auto;
+  }
+  &__reviews {
+    font-weight: 100;
+    font-size: 10px;
+  }
+  &__buy {
+    background-color: $primary;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid $primary;
+    cursor: pointer;
+    &:hover {
+      background-color: #f3f3f3;
+      color: $primary;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('../images/star.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &--1 .stars__star:nth-child(-n + 1)::before,
+  &--2 .stars__star:nth-child(-n + 2)::before,
+  &--3 .stars__star:nth-child(-n + 3)::before,
+  &--4 .stars__star:nth-child(-n + 4)::before,
+  &--5 .stars__star:nth-child(-n + 5)::before {
+    background-image: url('../images/star-active.svg');
+  }
 }
