@@ -1,0 +1,97 @@
+@use 'variables' as *;
+
+.card {
+  width: $card-width;
+  padding: 0 $card-padding;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+
+  background-color: $color-white;
+
+  &__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $computer-width;
+    height: $computer-height;
+    margin: 0 auto;
+    margin-top: $computer-margin;
+  }
+
+  &__imac {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  &__productname {
+    margin-top: $productname-margin;
+
+    font-size: $normal-fontsize;
+    font-weight: $normal-fontweight;
+    line-height: $normal-lineheight;
+    color: $color-productname;
+  }
+
+  &__productcode {
+    margin-top: $productcode-margin;
+    font-size: $small-fontsize;
+    line-height: $small-lineheight;
+    opacity: 50%;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $rating-margin;
+  }
+
+  &__reviews-text {
+    font-size: $small-fontsize;
+    line-height: $small-lineheight;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $price-margin;
+    line-height: $normal-lineheight;
+
+    &-label {
+      font-size: $normal-fontsize;
+      opacity: 50%;
+    }
+
+    &-value {
+      font-size: $extranormall-fontsize;
+      font-weight: $large-fontweight;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: $button-height;
+    margin-top: $button-margin;
+    margin-bottom: $button-margin;
+    border: 1px solid $color-blue;
+    border-radius: $border-radius;
+
+    font-size: $button-fontsize;
+    font-weight: $large-fontweight;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $color-blue;
+
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+  }
+}
