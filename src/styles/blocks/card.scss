@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  padding: 32px 16px 16px;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $borderCardColor;
+  border-radius: 5px;
+
+  &__img {
+    display: block;
+    align-self: center;
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    @include font-standard;
+
+    font-weight: 500;
+    color: $standardTextColor;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  &__code {
+    @include font-small;
+
+    color: $greyTextColor;
+    align-self: start;
+    margin-top: 4px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  &__review-text {
+    @include font-small;
+
+    color: $standardTextColor;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-text {
+    @include font-standard;
+
+    font-weight: 400;
+    color: $greyTextColor;
+  }
+
+  &__price-amount {
+    @include font-price;
+
+    color: $standardTextColor;
+  }
+
+  &__button {
+    margin-top: 16px;
+    background-color: $bgButtonColor;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    padding: 11px 0;
+    text-align: center;
+
+    @include font-button;
+
+    color: $textButtonColor;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $textButtonColor;
+      border: 1px solid $bgButtonColor;
+      color: $bgButtonColor;
+    }
+  }
+}
