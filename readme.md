@@ -21,6 +21,8 @@ This is possible because [we use the Parcel library](https://parceljs.org/langua
 
 ## Checklist
 
+Changes
+
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
 - [DEMO LINK](https://<your_account>.github.io/layout_product-cards/)

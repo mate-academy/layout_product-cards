@@ -1,0 +1,98 @@
+@use 'base' as *;
+
+.card {
+  width: $card-width;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-border;
+  padding: $card-padding;
+  padding-top: $card-padding-top;
+
+  &__title {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
+    letter-spacing: 0%;
+    margin-bottom: $card-title-margin-bottom;
+    color: $color-dark;
+  }
+
+  &__code {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    letter-spacing: 0%;
+    color: $color-muted;
+    margin-bottom: $card-code-margin-bottom;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto $card-image-margin-bottom;
+    width: $card-image-width;
+    height: $card-image-height;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $card-review-margin-bottom;
+    align-items: flex-end;
+  }
+
+  &__review-count {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    text-align: right;
+    vertical-align: bottom;
+    color: $color-dark;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $card-padding;
+  }
+
+  &__price-price {
+    font-weight: bold;
+    font-size: $font-size-lg;
+    line-height: $line-height-md;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: bottom;
+    color: $color-dark;
+  }
+
+  &__price-label {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    color: $color-muted;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: $card-button-height;
+    border: 1px solid $color-accent;
+    background: $color-accent;
+    border-radius: $card-button-border-radius;
+    font-size: $font-size-md;
+    line-height: $line-height-sm;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-accent;
+      background-color: $color-white;
+    }
+  }
+}
