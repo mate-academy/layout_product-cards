@@ -1,0 +1,24 @@
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-color: $gray-elements;
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%,
+      68% 57%, 79% 91%, 50% 70%,
+      21% 91%, 32% 57%, 2% 35%,
+      39% 35%
+    );
+  }
+
+  &--1 &__star:nth-child(-n+1),
+  &--2 &__star:nth-child(-n+2),
+  &--3 &__star:nth-child(-n+3),
+  &--4 &__star:nth-child(-n+4),
+  &--5 &__star:nth-child(-n+5) {
+    background-color: $yellow-stars;
+  }
+}
