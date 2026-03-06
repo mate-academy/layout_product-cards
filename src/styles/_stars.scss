@@ -1,0 +1,45 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+
+  &__star {
+    display: inline-flex;
+    width: 13px;
+    height: 13px;
+    margin-right: 2px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__review {
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 56px;
+    display: flex;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    height: 16px;
+    width: auto;
+    margin-right: 4px;
+  }
+
+  &__board {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+}
