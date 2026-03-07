@@ -1,0 +1,111 @@
+@use '../utils/variables.scss' as *;
+
+body {
+  margin: 0;
+}
+
+.card {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  color: $main-text-color;
+  background-color: $main-bg-color;
+  width: 200px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+  }
+
+  &__main {
+    padding-inline: $card-padding-inline;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__code {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-title-text-color;
+    margin-top: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 16px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+
+    &-title {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $secondary-title-text-color;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: $main-bg-color;
+    background-color: $button-bg-color;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 70px;
+    border-radius: 5px;
+
+    &:hover {
+      color: $button-hover-color;
+      background-color: inherit;
+      outline: 1px solid $button-bg-color;
+      outline-offset: -1px;
+    }
+  }
+}
