@@ -1,0 +1,92 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 16px;
+  width: 200px;
+
+  @include border(1px, getcolor('border-light-color'));
+
+  border-radius: 5px;
+  background-color: getcolor('background-light-color');
+  &__image {
+    display: block;
+    width: 100%;
+  }
+  &__image img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: auto;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
+
+.product {
+  &__title {
+    @include font(500, 12px, 18px);
+
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    @include font(400, 10px, 14px);
+
+    color: getcolor('secondary-text-color');
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include font(400, 10px, 14px);
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-label {
+      @include font(400, 12px, 18px);
+
+      color: getcolor('secondary-text-color');
+    }
+
+    &-value {
+      @include font(700, 16px, 18px);
+
+      color: getcolor('primary-text-color');
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+
+    @include border(1px, getcolor('blue-accent-color'));
+
+    border-radius: 5px;
+    background-color: getcolor('blue-accent-color');
+    color: getcolor('primary-white-color');
+
+    @include font(700, 14px, 16px);
+
+    text-transform: uppercase;
+    &:hover {
+      background-color: getcolor('primary-white-color');
+      color: getcolor('blue-accent-color');
+    }
+  }
+}
