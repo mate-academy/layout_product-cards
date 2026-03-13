@@ -1,0 +1,118 @@
+@use './variables' as *;
+
+.card {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  height: 406px;
+
+  background-color: $card-bg-color;
+
+  border-color: $card-border-color;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+
+  gap: 40px;
+
+  &__img {
+    width: 160px;
+    min-height: 134px;
+    margin: 32px 19px 0;
+  }
+
+  &__container {
+    margin: 0 16px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $card-text-color;
+
+    margin: 0;
+  }
+
+  &__code {
+    color: $card-secondary-text-color;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 4px;
+    margin-right: 68px;
+    margin-bottom: 0;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  &__review-count {
+    font-weight: 400;
+    font-size: 10px;
+
+    color: $card-text-color;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 18px;
+
+    margin-top: 24px;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      color: $card-secondary-text-color;
+      margin: 0;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      color: $card-text-color;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    width: 166px;
+    height: 40px;
+
+    border-radius: 5px;
+    background-color: $card-button-bg-color;
+
+    color: $card-bg-color;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $card-button-bg-color;
+      border-color: $card-button-bg-color;
+      border-style: solid;
+      border-width: 1px;
+      background-color: transparent;
+    }
+  }
+}
