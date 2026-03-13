@@ -8,13 +8,31 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #fff;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: 12px;
+    height: 12px;
+    background-color: #e5e8ed;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  &--4 {
+    .stars__star:nth-child(-n+4) {
+      background-color: #ffde6a;
+    }
+  }
 }
 
 .product-card {
   width: 200px;
   height: 406px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   padding-bottom: 24px;
@@ -43,7 +61,7 @@ body {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: rgba(97, 96, 112, 1);
+    color: #616070;
     padding: 0 16px;
     margin: 0 0 16px;
   }
@@ -55,18 +73,12 @@ body {
     padding: 0 16px 16px;
   }
 
-  &__stars {
-    color: rgba(255, 222, 106, 1);
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-
   &__reviews {
     font-family: Roboto, sans-serif;
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
-    color: rgba(6, 11, 53, 1);
+    color: #060b35;
   }
 
   &__price-row {
@@ -81,7 +93,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    color: rgba(97, 96, 112, 1);
+    color: #616070;
   }
 
   &__price-value {
@@ -89,7 +101,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    color: rgba(6, 11, 53, 1);
+    color: #060b35;
   }
 
   &__button {
@@ -98,17 +110,18 @@ body {
     margin: 0 auto;
     background-color: #00aeef;
     color: #fff;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    transition: all 0.2s;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 1);
-      border: 1px solid rgba(0, 172, 220, 1);
-      color: rgba(0, 172, 220, 1);
+      background-color: #fff;
+      border-color: #00acdc;
+      color: #00acdc;
     }
   }
 }
