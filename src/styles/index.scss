@@ -1,3 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.product-card {
+  width: 200px;
+  height: 406px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px auto 40px;
+    display: block;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #060b35;
+    padding: 0 16px;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(97, 96, 112, 1);
+    padding: 0 16px;
+    margin: 0 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 16px;
+  }
+
+  &__stars {
+    color: rgba(255, 222, 106, 1);
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  &__reviews {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 16px;
+  }
+
+  &__price-label {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__price-value {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: rgba(6, 11, 53, 1);
+  }
+
+  &__button {
+    width: calc(100% - 32px);
+    height: 40px;
+    margin: 0 auto;
+    background-color: #00aeef;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(0, 172, 220, 1);
+      color: rgba(0, 172, 220, 1);
+    }
+  }
 }
