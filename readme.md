@@ -17,7 +17,7 @@ Create a page with product card using `flexbox`, `BEM` and `SCSS` based on [this
 - Find the required font on [google fonts](https://fonts.google.com/) and use.
 
 *Important note*: In this task, you are allowed to link `*.scss` files directly in HTML `<link>` tags using `href` attribute.
-This is possible because [we use the Parcel library](https://en.parceljs.org/scss.html) to bundle your solution's source code.
+This is possible because [we use the Parcel library](https://parceljs.org/languages/sass/) to bundle your solution's source code.
 
 ## Checklist
 
