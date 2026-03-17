@@ -1,4 +1,4 @@
-@use '../utils/variables.scss' as v;
+@use "../utils/variables.scss" as v;
 
 .card {
   box-sizing: border-box;
@@ -47,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 18px;
+    margin-top: 20px;
   }
 
   &__price-label {
@@ -64,5 +64,25 @@
 
   &__button {
     margin-top: 16px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 114%;
+    text-transform: uppercase;
+    text-align: center;
+    color: v.$white;
+    background: v.$blue-accent;
+    border: 1px solid v.$blue-accent;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    &:hover {
+      color: v.$blue-accent;
+      background: v.$white;
+    }
   }
 }
