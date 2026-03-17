@@ -1,26 +1,27 @@
+@import "variables";
+
 .stars {
   display: flex;
-  height: 16px;
+  height: $star-size;
   line-height: 0;
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: $star-size;
+    height: $star-size;
     flex-shrink: 0;
-    background-image: url('../images/star.svg');
+    background-image: url("../images/star.svg");
     background-repeat: no-repeat;
-    background-size: 16px 16px;
+    background-size: $star-size $star-size;
 
     & + & {
-      margin-left: 4px;
+      margin-left: $spacing-xs;
     }
   }
 
-  // Цикл для генерації модифікаторів активних зірок
   @for $i from 1 through 5 {
     &--#{$i} {
       .stars__star:nth-child(-n + #{$i}) {
-        background-image: url('../images/star-active.svg');
+        background-image: url("../images/star-active.svg");
       }
     }
   }
