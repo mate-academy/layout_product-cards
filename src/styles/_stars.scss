@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+  height: 16px;
+  line-height: 0;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+
+    & + & {
+      margin-left: 4px;
+    }
+  }
+
+  // Цикл для генерації модифікаторів активних зірок
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+}
