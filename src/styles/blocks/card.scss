@@ -1,0 +1,88 @@
+@use "../utils/variables.scss" as v;
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 16px;
+  background: v.$white;
+  border: 1px solid v.$gray-elements;
+  border-radius: 5px;
+  &__image {
+    max-width: 100%;
+    padding-inline: 3px;
+  }
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: v.$main-accent;
+    margin: 0;
+  }
+
+  &__code {
+    font-size: 10px;
+    color: v.$secondary;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__reviews-count {
+    font-size: 10px;
+    color: v.$main-accent;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 150%;
+    color: v.$secondary;
+  }
+
+  &__price-count {
+    font-weight: 700;
+    line-height: 113%;
+    color: v.$main-accent;
+  }
+
+  &__button {
+    margin-top: 16px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 114%;
+    text-transform: uppercase;
+    text-align: center;
+    color: v.$white;
+    background: v.$blue-accent;
+    border: 1px solid v.$blue-accent;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    &:hover {
+      color: v.$blue-accent;
+      background: v.$white;
+    }
+  }
+}
