@@ -1,27 +1,32 @@
 @import 'variables';
 
 .stars {
-  font-size: 20px;
-  line-height: 1px;
+  display: flex;
+}
 
-  &--1::before {
-    content: '★☆☆☆☆';
-    color: $color-stars;
-  }
-  &--2::before {
-    content: '★★☆☆☆';
-    color: $color-stars;
-  }
-  &--3::before {
-    content: '★★★☆☆';
-    color: $color-stars;
-  }
-  &--4::before {
-    content: '★★★★☆';
-    color: $color-stars;
-  }
-  &--5::before {
-    content: '★★★★★';
-    color: $color-stars;
-  }
+.stars__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.stars__star {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.stars .stars__star + .stars__star {
+  margin-left: 4px;
+}
+
+.stars--1 .stars__star:nth-child(1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url('../images/star-active.svg');
 }
