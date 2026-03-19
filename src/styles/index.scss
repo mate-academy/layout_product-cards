@@ -1,3 +1,52 @@
+@import 'variables';
+@import 'cards';
+@import 'stars';
+
+html {
+  font-family: $font-family-main;
+  font-size: 10px;
+  line-height: 14px;
+  color: $color-text-secondary;
+}
+
 body {
   margin: 0;
+}
+
+.page {
+  padding: 50px 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, $card-width);
+    gap: $page-row-gap $page-column-gap;
+    justify-content: center;
+    width: $page-grid-width;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .page__content {
+    width: auto;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 930px) {
+  .page__content {
+    grid-template-columns: repeat(3, $card-width);
+  }
+}
+
+@media (max-width: 720px) {
+  .page__content {
+    grid-template-columns: repeat(2, $card-width);
+  }
+}
+
+@media (max-width: 480px) {
+  .page__content {
+    grid-template-columns: $card-width;
+  }
 }
