@@ -1,0 +1,107 @@
+@import 'variables';
+
+.card {
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  font-family: $font-main;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 33px auto 32px;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    width: 166px;
+    margin: 0 auto 16px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    width: 166px;
+    margin: 0 auto 16px;
+    color: $color-secondary-text;
+  }
+
+  &__stars-block {
+    display: flex;
+    align-items: center;
+    width: 166px;
+    margin: 0 auto 24px;
+  }
+
+  &__reviews {
+    margin-left: auto;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-text;
+  }
+
+  &__price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    margin: 0 auto 16px;
+    color: $color-text;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-secondary-text;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__buy {
+    display: block;
+    width: 166px;
+    height: 40px;
+    margin: 0 auto 16px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: $color-button;
+    color: $color-button-hover;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: $color-button-hover;
+      color: $color-button-hover-text;
+      border: 1px solid $color-button-hover-text;
+    }
+  }
+}

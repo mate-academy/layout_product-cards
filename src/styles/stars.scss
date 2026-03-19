@@ -1,0 +1,32 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/star.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    & + & {
+      margin-left: 4px;
+    }
+  }
+
+  &--1 &__star:nth-child(1),
+  &--2 &__star:nth-child(-n+2),
+  &--3 &__star:nth-child(-n+3),
+  &--4 &__star:nth-child(-n+4),
+  &--5 &__star:nth-child(-n+5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
