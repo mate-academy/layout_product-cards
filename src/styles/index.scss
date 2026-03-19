@@ -1,3 +1,102 @@
+@import 'variables';
+
 body {
   margin: 0;
+  font-family: $font-family-main;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 408px;
+  border-radius: 5px;
+  border: 1px solid $color-border;
+  background-color: $color-white;
+  font-family: $font-family-main;
+
+  &__code {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 10px;
+    color: $color-text-secondary;
+    line-height: 14px;
+    font-weight: $font-weight-regular;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: $font-weight-medium;
+    color: $color-text-main;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__reviews {
+    margin: 0;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $color-text-main;
+  }
+  &__image {
+    height: 134px;
+    width: 160px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 32px;
+  }
+
+  &__content {
+    padding: 40px 16px 16px;
+  }
+  &__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  &__price-label {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-text-secondary;
+    font-weight: $font-weight-regular;
+  }
+  &__price-value {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: $font-weight-bold;
+    color: $color-text-main;
+    margin: 0;
+  }
+
+  &__buy {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 40px;
+    font-size: 14px;
+    background-color: $color-primary;
+    color: $color-white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid $color-primary;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
 }
