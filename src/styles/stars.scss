@@ -1,0 +1,28 @@
+@import 'variables';
+
+.stars {
+  display: flex;
+
+  &__star {
+    width: $star-size;
+    height: $star-size;
+    display: block;
+    background-image: url(#{$star-inactive});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: $star-gap;
+    }
+  }
+
+  
+  @for $i from 1 through $max-stars {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(#{$star-active});
+      }
+    }
+  }
+}

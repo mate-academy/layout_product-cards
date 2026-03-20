@@ -1,0 +1,94 @@
+@import 'variables';
+
+.card {
+  width: $card-width;
+  background-color: $color-white;
+  border: $border-width solid $color-border;
+  border-radius: $border-radius;
+  padding: $card-padding-top $card-padding-horizontal $card-padding-bottom;
+
+  &__image {
+    width: $card-image-width;
+    height: $card-image-height;
+    margin: 0 auto $card-image-margin-bottom;
+    display: flex;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__title {
+    margin: $card-title-margin-bottom;
+    color: $color-text-main;
+    line-height: $line-height-title;
+    font-weight: 500;
+    font-size: $font-size-title;
+  }
+
+  &__code {
+    margin: $card-code-margin-bottom;
+    font-weight: 400;
+    line-height: $line-height-code;
+    font-size: $font-size-code;
+    color: $color-text-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $card-rating-margin-bottom;
+  }
+
+  &__reviews {
+    margin: 0;
+    color: $color-text-main;
+    font-weight: 400;
+    font-size: $font-size-code;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-text {
+      font-weight: 400;
+      font-size: $font-size-price;
+      line-height: $line-height-price;
+      color: $color-text-secondary;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: $font-size-price-value;
+      line-height: $line-height-price;
+      color: $color-text-main;
+    }
+  }
+
+  &__buy {
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 700;
+    font-size: $font-size-buy;
+    line-height: $line-height-buy;
+    border-radius: $border-radius;
+    height: $buy-height;
+    border: 1px solid $color-primary;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-border;
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+}
