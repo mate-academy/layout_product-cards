@@ -15,6 +15,12 @@ const config = {
   fileNameTemplate: '{scenarioLabel}',
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
+  engineOptions: {
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    ignoreHTTPSErrors: true,
+    slowMo: 100,
+    timeout: 120000,
+  },
   viewports: [
     {
       name: 'tablet_h',

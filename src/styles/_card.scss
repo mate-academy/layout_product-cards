@@ -1,0 +1,108 @@
+@import './variables';
+
+.card {
+  width: $card-width;
+  border: $card-border-width solid $color-border;
+  border-radius: $border-radius;
+  padding: $card-padding;
+  font-family: $font-family;
+  background-color: $color-white;
+  box-sizing: border-box;
+
+  &__image {
+    width: $card-image-width;
+    height: $card-image-height;
+    object-fit: contain;
+    display: block;
+    margin: $spacing-image-top auto $spacing-image-bottom auto;
+  }
+
+  &__title {
+    font-size: $font-size-title;
+    font-weight: $font-weight-title;
+    color: $color-main-accent;
+    margin: $spacing-title-top 0 $spacing-title-bottom 0;
+    line-height: $line-height-title;
+  }
+
+  &__code {
+    font-size: $font-size-product-code;
+    font-weight: $font-weight-product-code;
+    color: $color-secondary;
+    margin: 0 0 $spacing-code-bottom;
+    line-height: $line-height-product-code;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 $spacing-reviews-bottom;
+  }
+
+  &__reviews-count {
+    font-size: $font-size-reviews;
+    font-weight: $font-weight-reviews;
+    color: $color-main-accent;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 $spacing-price-bottom;
+  }
+
+  &__price-label {
+    font-size: $font-size-price-label;
+    font-weight: $font-weight-price-label;
+    color: $color-secondary;
+  }
+
+  &__price-current {
+    font-size: $font-size-price-current;
+    font-weight: $font-weight-price-current;
+    color: $color-main-accent;
+    text-align: right;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $button-gap;
+    margin: 0 0 $spacing-button-bottom;
+  }
+
+  &__button {
+    flex: 1;
+    height: $button-height;
+    border: 1px solid transparent;
+    border-radius: $button-radius;
+    font-family: $font-family;
+    font-size: $font-size-button;
+    font-weight: $font-weight-button;
+    line-height: $line-height-button;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      background-color $transition-speed,
+      color $transition-speed,
+      border-color $transition-speed;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &--buy {
+      background-color: $color-buy-button;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-buy-button;
+        border-color: $color-buy-button;
+      }
+    }
+  }
+}
