@@ -1,3 +1,49 @@
+@import './variables';
+@import './stars';
+@import './card';
+
+html {
+  box-sizing: border-box;
+  font-family: $main-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $color-secondary-text;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
 body {
   margin: 0;
+  padding: 0;
 }
+
+body {
+  padding: 0 $page-padding $page-padding;
+  background-color: $page-background-color;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $catalog-gap;
+  max-width: $catalog-max-width;
+  margin: 0 auto;
+}
+
+.page__title {
+  display: none;
+}
+
+// entrega final mate academy
