@@ -1,0 +1,84 @@
+.card {
+  flex: 0 0 $card-width;
+  width: $card-width;
+  background-color: $color-background;
+  border: $card-border-width solid $color-border;
+  border-radius: $radius-border;
+  padding: $card-padding-top $card-padding-horizontal $card-padding-bottom;
+
+  &__image {
+    display: block;
+    width: $card-image-width;
+    height: $card-image-height;
+    margin: 0 auto $card-image-gap;
+  }
+
+  &__title {
+    margin: 0 0 $card-title-gap;
+    font-size: $card-title-font-size;
+    line-height: $card-title-line-height;
+    font-weight: $font-weight-medium;
+    color: $color-main-text;
+  }
+
+  &__code {
+    margin-bottom: $card-code-gap;
+  }
+
+  &__review-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $card-review-gap;
+  }
+
+  &__review-count {
+    color: $color-main-text;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $card-price-gap;
+  }
+
+  &__price-label {
+    font-size: $card-title-font-size;
+    line-height: $card-title-line-height;
+  }
+
+  &__price {
+    font-size: $card-price-font-size;
+    line-height: $card-title-line-height;
+    font-weight: $font-weight-bold;
+    color: $color-main-text;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $card-button-height;
+    background-color: $color-button;
+    border: $card-border-width solid $color-button;
+    border-radius: $radius-border;
+    color: $color-background;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $card-button-font-size;
+    line-height: $card-button-line-height;
+    font-weight: $font-weight-bold;
+  }
+
+  &__buy:hover,
+  &__buy--hovered {
+    background-color: $color-background;
+    color: $color-button;
+  }
+
+  &__buy:focus {
+    outline: $card-border-width solid $color-button;
+    outline-offset: $card-border-width;
+  }
+}
