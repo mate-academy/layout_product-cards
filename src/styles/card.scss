@@ -1,10 +1,10 @@
 .card {
   box-sizing: border-box;
-  width: 200px;
+  width: $card-width;
 
-  text-align: center;
   padding: 16px;
-  border: 1px solid #e1e7ed;
+  text-align: center;
+  border: 1px solid $border-color;
 
   &__image {
     display: block;
@@ -16,7 +16,7 @@
     margin: 10px 0;
     font-size: 16px;
     font-weight: 500;
-    color: #333;
+    color: $main-color;
   }
 
   &__price {
@@ -27,16 +27,16 @@
 
   &__buy {
     display: block;
-
     width: 100%;
     padding: 10px;
 
-    text-decoration: none;
     color: #fff;
-    background-color: #00acdc;
+    text-decoration: none;
+
+    background-color: $accent-color;
 
     &:hover {
-      background-color: #008bb5;
+      background-color: color.adjust($accent-color, $lightness: -5%);
     }
   }
 }
