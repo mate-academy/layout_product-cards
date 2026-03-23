@@ -1,0 +1,30 @@
+.stars {
+  display: flex;
+  justify-content: center;
+
+  margin: 10px 0;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+
+    margin-right: 4px;
+
+    background-image: url("../images/star.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__star:last-child {
+    margin-right: 0;
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(98%)
+      saturate(747%) hue-rotate(1deg) brightness(104%) contrast(101%);
+  }
+}
