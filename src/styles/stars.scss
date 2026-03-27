@@ -1,0 +1,24 @@
+@use './variables.scss' as *;
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-image: url('../images/star.svg');
+    background-position: center;
+  }
+
+  @for $N from 0 through 5 {
+    &--#{$N} &__star:nth-child(-n + #{$N}) {
+      margin-right: 4px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('../images/star-active.svg');
+    }
+  }
+}
