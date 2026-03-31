@@ -1,3 +1,144 @@
+// Variables
+$card-width: 200px;
+$color-primary: #00bcd4;
+$color-text-dark: #1a1a2e;
+$color-text-gray: #999;
+$color-star-active: #f5a623;
+$color-star-inactive: #ddd;
+$color-border: #e0e0e0;
+$color-price: #1a1a2e;
+$font-family: 'Roboto', sans-serif;
+
 body {
   margin: 0;
+  font-family: $font-family;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+// Card Block
+.card {
+  width: $card-width;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  // Card Image Wrapper Element
+  &__image-wrapper {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  // Card Image Element
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // Card Info Container Element
+  &__info {
+    padding: 8px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+
+  // Card Title Element
+  &__title {
+    font-size: 11px;
+    font-weight: 700;
+    color: $color-text-dark;
+    line-height: 1.4;
+  }
+
+  // Card Product Code Element
+  &__code {
+    font-size: 10px;
+    color: $color-text-gray;
+  }
+
+  // Card Stars Container Element
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  // Card Star Element
+  &__star {
+    width: 14px;
+    height: 14px;
+
+    // Modifier: Active star
+    &--active {
+      filter: none;
+    }
+  }
+
+  // Card Reviews Element
+  &__reviews {
+    font-size: 10px;
+    color: $color-text-gray;
+    margin-left: 2px;
+  }
+
+  // Card Price Row Element
+  &__price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+  }
+
+  // Card Price Label Element
+  &__price-label {
+    font-size: 11px;
+    color: $color-text-gray;
+  }
+
+  // Card Price Element
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-price;
+  }
+
+  // Card Buy Button Element
+  &__buy {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-top: 4px;
+
+    // Hover state - changes link styles on :hover
+    &:hover {
+      background-color: #fff;
+      color: $color-primary;
+    }
+  }
 }
