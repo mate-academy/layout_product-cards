@@ -1,80 +1,103 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  padding: 32px 16px 16px;
   width: 200px;
 
-  &__picture {
-    width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $border-white;
+  background-color: $text-white;
+  padding: 32px 16px 16px;
+  opacity: 1;
+
+  &__image {
+    display: block;
+
+    max-width: 160px;
     height: 134px;
-    background-image: url('../images/imac.jpeg');
-    background-size: cover;
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
   }
 
   &__title {
+    margin-bottom: 4px;
+    color: $text-black;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: $main-accent;
   }
 
-  &__code {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  &__product-code {
+    color: $text-gray;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     margin-bottom: 16px;
-    color: $secondary;
   }
 
   &__stars {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+    margin-bottom: 24px;
   }
 
-  &__stars-reviews {
-    color: $main-accent;
+  &__reviews {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
   }
 
   &__price {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-
-    &-text {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 0%;
-      color: $secondary;
-    }
-
-    &-value {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 18px;
-      letter-spacing: 0%;
-    }
+    margin-bottom: 16px;
   }
 
-  &__button {
-    padding: 12px 0;
+  &__price-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $text-gray;
+  }
+
+  &__price-number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__buy {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 11px 12px;
+    background-color: $text-blue;
+    color: $text-white;
+    width: 100%;
+
+    border-radius: 5px;
+    border: 1px solid $text-blue;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0%;
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: $blue-accent;
-    border-radius: 5px;
 
+    text-transform: uppercase;
+
+    transition: background-color 0.3s ease;
     &:hover {
-      background-color: #fff;
-      color: $blue-accent;
+      color: $text-blue;
+      background-color: $text-white;
     }
   }
 }
