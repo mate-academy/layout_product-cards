@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+
+  &__star {
+    width: 14px;
+    height: 14px;
+    filter: grayscale(100%) brightness(1.8);
+  }
+
+  &__reviews {
+    font-size: 10px;
+    color: $color-text-gray;
+    margin-left: 2px;
+  }
+
+  // Modifier: highlight first N stars as active
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        filter: none;
+      }
+    }
+  }
+}

@@ -1,13 +1,5 @@
-// Variables
-$card-width: 200px;
-$color-primary: #00bcd4;
-$color-text-dark: #1a1a2e;
-$color-text-gray: #999;
-$color-star-active: #f5a623;
-$color-star-inactive: #ddd;
-$color-border: #e0e0e0;
-$color-price: #1a1a2e;
-$font-family: 'Roboto', sans-serif;
+@use 'variables' as *;
+@use 'stars';
 
 body {
   margin: 0;
@@ -19,9 +11,9 @@ body {
   min-height: 100vh;
 }
 
-// Card Block
 .card {
   width: $card-width;
+  box-sizing: border-box;
   border: 1px solid $color-border;
   border-radius: 4px;
   background-color: #fff;
@@ -29,7 +21,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  // Card Image Wrapper Element
   &__image-wrapper {
     width: 100%;
     height: 130px;
@@ -40,14 +31,12 @@ body {
     padding: 8px;
   }
 
-  // Card Image Element
   &__image {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  // Card Info Container Element
   &__info {
     padding: 8px 10px 10px;
     display: flex;
@@ -56,7 +45,6 @@ body {
     flex: 1;
   }
 
-  // Card Title Element
   &__title {
     font-size: 11px;
     font-weight: 700;
@@ -64,39 +52,11 @@ body {
     line-height: 1.4;
   }
 
-  // Card Product Code Element
   &__code {
     font-size: 10px;
     color: $color-text-gray;
   }
 
-  // Card Stars Container Element
-  &__stars {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    flex-wrap: wrap;
-  }
-
-  // Card Star Element
-  &__star {
-    width: 14px;
-    height: 14px;
-
-    // Modifier: Active star
-    &--active {
-      filter: none;
-    }
-  }
-
-  // Card Reviews Element
-  &__reviews {
-    font-size: 10px;
-    color: $color-text-gray;
-    margin-left: 2px;
-  }
-
-  // Card Price Row Element
   &__price-row {
     display: flex;
     align-items: center;
@@ -104,20 +64,17 @@ body {
     margin-top: 2px;
   }
 
-  // Card Price Label Element
   &__price-label {
     font-size: 11px;
     color: $color-text-gray;
   }
 
-  // Card Price Element
   &__price {
     font-size: 16px;
     font-weight: 700;
     color: $color-price;
   }
 
-  // Card Buy Button Element
   &__buy {
     display: block;
     width: 100%;
@@ -135,7 +92,6 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
     margin-top: 4px;
 
-    // Hover state - changes link styles on :hover
     &:hover {
       background-color: #fff;
       color: $color-primary;
