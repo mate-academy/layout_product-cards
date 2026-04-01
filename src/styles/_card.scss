@@ -1,0 +1,103 @@
+.card {
+  width: 12.5rem;
+  box-sizing: border-box;
+
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: 2rem 1rem 1rem;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 40px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 0.25rem;
+    font-weight: 500;
+    font-size: $font-size-sm;
+    line-height: 18px;
+    color: $color-black;
+    text-align: left;
+    letter-spacing: 0;
+  }
+
+  &__code {
+    margin: 0 0 1rem;
+    font-weight: 400;
+    font-size: $font-size-xs;
+    line-height: 14px;
+    color: $color-gray;
+    text-align: left;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    font-size: $font-size-sm;
+    line-height: 18px;
+    color: $color-gray;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: $font-size-lg;
+    line-height: 18px;
+    color: $color-black;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: 400;
+    font-size: $font-size-xs;
+    line-height: 14px;
+    color: $color-black;
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: $button-height;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 700;
+    font-size: $font-size-md;
+    line-height: 16px;
+    border: 1px solid $color-primary;
+    border-radius: $radius-sm;
+    transition:
+      background-color 0.3s,
+      color 0.3s,
+      border-color 0.3s;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+}
