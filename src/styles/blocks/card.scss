@@ -1,0 +1,72 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+.card {
+  width: 200px;
+  border: 1px solid $border-color;
+  padding: 32px 16px 16px;
+  border-radius: 5px;
+  background-color: $background-color;
+
+  font-family: $font;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    @include text(12px, 500, 18px, $text-accent-color);
+
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    @include text(10px, 400, 14px, $text-secondary-color);
+
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    @include flex-container(24px);
+  }
+
+  &__reviews {
+    @include text(10px, 400, 14px, $text-accent-color);
+  }
+
+  &__footer {
+    @include flex-container(16px);
+  }
+
+  &__price-label {
+    @include text(12px, 400, 18px, $text-secondary-color);
+  }
+
+  &__price {
+    @include text(16px, 700, 18px, $text-accent-color);
+  }
+
+  &__button {
+    @include text(14px, 700, 16px, #fff);
+
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: $main-color;
+
+    width: 100%;
+    padding-block: 11px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: $background-color;
+      border: 1px solid $main-color;
+      color: $main-color;
+    }
+  }
+}
