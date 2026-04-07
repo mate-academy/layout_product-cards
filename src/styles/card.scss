@@ -1,0 +1,76 @@
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: auto;
+  }
+
+  &__title {
+    margin: 40px auto 4px;
+
+    @include card-font(12px, 18px, 500, $primary-color);
+  }
+
+  &__code {
+    margin-bottom: 16px;
+
+    @include card-font(10px, 14px, 400, $secondary-color);
+  }
+
+  &__review {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__review-quantity {
+    align-self: flex-end;
+
+    @include card-font(10px, 14px, 400, $primary-color);
+  }
+
+  &__price-block {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-label {
+    @include card-font(12px, 18px, 400, $secondary-color);
+  }
+
+  &__price {
+    @include card-font(16px, 18px, 700, $primary-color);
+  }
+
+  &__button {
+    height: 40px;
+    text-transform: uppercase;
+    color: $button-secondary-color;
+    background-color: $button-primary-color;
+    border: 1px solid $button-primary-color;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    @include card-font(14px, 18px, 700, #fff);
+
+    &:hover {
+      color: $button-primary-color;
+      background-color: $button-secondary-color;
+    }
+  }
+}
