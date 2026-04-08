@@ -1,0 +1,19 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+.price {
+  @include mixins.flex($justify: space-between);
+
+  line-height: 18px;
+
+  &__name {
+    font-size: 12px;
+    color: vars.$secondary-color;
+  }
+
+  &__value {
+    font-size: 16px;
+    font-weight: 700;
+    color: vars.$main-color;
+  }
+}
