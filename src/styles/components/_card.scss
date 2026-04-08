@@ -28,7 +28,6 @@
 
   &__product-code {
     font-size: 10px;
-    font-weight: 400;
     line-height: 14px;
     color: $secondary;
     margin-top: 4px;
@@ -42,27 +41,38 @@
 
   &__reviews {
     font-family: Roboto, sans-serif;
-    font-weight: 400;
     font-size: 10px;
     color: $main-accent;
     align-self: center;
   }
 
+  /* ✅ FIX: pricing tylko layout */
   &__pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  /* ✅ FIX: prawdziwy button */
+  &__buy-button {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
+    margin-top: 16px;
+
     border: 1px solid $blue-accent;
     border-radius: $button-radius;
     background-color: $blue-accent;
     color: $white;
-    margin-top: 16px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
 
     &:hover {
       background-color: $white;
       color: $blue-accent;
-      border: 1px solid $blue-accent;
       cursor: pointer;
     }
   }
