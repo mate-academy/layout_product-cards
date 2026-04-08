@@ -1,3 +1,47 @@
+@import './variables';
+@import './stars';
+@import './card';
+
+html {
+  box-sizing: border-box;
+  font-family: $main-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $color-secondary-text;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
 body {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: $page-padding;
+  background-color: $page-background-color;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $catalog-gap;
+    max-width: $catalog-max-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    display: none;
+  }
 }
