@@ -1,0 +1,13 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+.reviews {
+  @include mixins.flex($justify: space-between, $align: end);
+
+  &__count {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    color: vars.$main-color;
+  }
+}
