@@ -1,0 +1,99 @@
+.card {
+  width: 200px;
+  border: 1px solid $card-border-color;
+  box-sizing: border-box;
+
+  &__image {
+    display: block;
+    background-image: url(../images/imac.jpeg);
+    width: $image-width;
+    height: $image-height;
+    background-position: center;
+    background-size: $image-width $image-height;
+
+    margin-inline: 19px;
+    margin-top: $margin-top-proportion * 8;
+  }
+
+  &__info {
+    padding-inline: $card-info-padding-inline;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 500;
+    font-size: $medium-font-size;
+    margin-top: $margin-top-proportion * 10;
+  }
+
+  &__code {
+    line-height: $smaller-line-height;
+    font-size: $small-font-size;
+    color: $secondary-text-color;
+
+    margin-top: $margin-top-proportion;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $margin-top-proportion * 4;
+    height: $rating-height;
+  }
+
+  &__reviews {
+    line-height: $smaller-line-height;
+    font-size: $small-font-size;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  &__price {
+    display: flex;
+    margin-top: $margin-top-proportion * 6;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      margin: 0;
+      font-size: $medium-font-size;
+      color: $secondary-text-color;
+    }
+
+    &-value {
+      margin: 0;
+      font-weight: 700;
+      font-size: $huge-font-size;
+    }
+  }
+
+  &__button {
+    background-color: $button-main-color;
+    border: none;
+    border-radius: $button-border-radius;
+    margin-block: $button-margin-block;
+    text-align: center;
+    line-height: $button-line-height;
+
+    &-link {
+      display: block;
+      width: 166px;
+      height: $button-line-height;
+      color: #fff;
+      line-height: $button-line-height;
+      font-size: $big-font-size;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid $button-main-color;
+        color: $button-main-color;
+        border-radius: $button-border-radius;
+      }
+    }
+  }
+}
