@@ -1,0 +1,32 @@
+.stars {
+  display: inline-block;
+  position: relative;
+  width: 96px;
+  height: 16px;
+  background-image: url('../images/star.svg');
+  background-repeat: repeat-x;
+  background-size: 20px 12px;
+  margin-top: -4px;
+  margin-left: -2px;
+  transform: translateY(-1px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: url('../images/star-active.svg');
+    background-repeat: repeat-x;
+    background-size: 20px 12px;
+    width: 0;
+  }
+
+  &--4::before {
+    width: 82px;
+  }
+
+  &--5::before {
+    width: 102px;
+  }
+}

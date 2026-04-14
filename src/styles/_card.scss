@@ -1,0 +1,122 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  padding: 24px 16px 15px;
+  margin: 0 auto;
+  position: relative;
+  top: 1px;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  font-family: Roboto, sans-serif;
+  transition: border-color 0.1s ease;
+
+  &:hover {
+    border-color: #00acdc;
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+
+  &__image {
+    display: block;
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    display: -webkit-box;
+    height: 32px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #060b35;
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &__code {
+    height: 14px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    line-height: 1;
+    color: #616070;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 16px;
+    margin-bottom: auto;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 1;
+    color: #060b35;
+  }
+
+  &__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 18px;
+    margin-top: 8px;
+    margin-bottom: 17px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    color: #616070;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #060b35;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00acdc;
+    border: 1px solid #00acdc;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #f3f3f3;
+      color: #00acdc;
+    }
+  }
+}
