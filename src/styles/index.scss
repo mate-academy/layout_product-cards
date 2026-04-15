@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
@@ -6,95 +11,104 @@ body {
 
 .card {
   display: flex;
-  box-sizing: border-box;
-  justify-content: space-between;
   width: 200px;
   height: 406px;
-  background-color: #FFF;
-  border: 1px solid #F3F3F3;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
   margin: 100px;
   padding: 32px 17px;
   margin-left: 200px;
   flex-direction: column;
+  align-items: center;
 
+  &_image {
+    flex-shrink: 0;
+    margin: 0 19px;
+    width: 160px;
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
 
   &_top {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: auto;
+    gap: 40px;
+  }
+
+  &_info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
   }
 
   &_name {
-  color: #060B35;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0%;
+    color: #060b35;
+    font-weight: 500;
+    font-size: 12px;
+    height: 36px;
+    line-height: 18px;
+    letter-spacing: 0%;
   }
 
   &_code {
-  font-weight: 400;
-  color: #616070;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 0%;
+    font-weight: 400;
+    color: #616070;
+    font-size: 10px;
+    height: 14px;
+    line-height: 14px;
+    letter-spacing: 0%;
   }
 
   &_reviews {
-  gap: 17px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 166px;
-  height: 16px;
-  margin-top: auto;
-  margin-bottom: 24px;
-
+    gap: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 166px;
+    height: 16px;
+    margin-top: auto;
   }
 
   &_reviews_list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  gap: 2px;
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    height: 16px;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &_reviews_list,
-  &_reviews_content {
-  margin: 0;
-  padding: 0;
-}
-
   &_reviews_star {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-  background-image: url('../images/star-active.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-}
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background-image: url('../images/star-active.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+  }
 
-li:last-child {
-  background-image: url('../images/star.svg');
-}
+  li:last-child {
+    background-image: url('../images/star.svg');
+  }
 
- &_reviews_content {
-  margin: 0;
-  font-size: 10px;
-  line-height: 14px;
-  font-weight: 400;
-  color: #060B35;
- }
+  &_reviews_content {
+    margin: 0;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #060b35;
+  }
 
   &_price {
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &_price-text {
     font-size: 12px;
@@ -111,25 +125,28 @@ li:last-child {
     font-weight: 700;
   }
 
-
   &_button {
-  margin-top: 17px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 166px;
-  height: 40px;
-  color: #FFF;
-  border: 1px solid #00ACDC;
-  border-radius: 5px;
-  background-color: #00ACDC;
-  text-transform: uppercase;
+    margin-top: 17px;
+    padding: 0;
+    font-size: 14px;
+    letter-spacing: 0%;
+    line-height: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    color: #fff;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+    background-color: #00acdc;
+    text-transform: uppercase;
 
-  &:hover {
-  background-color: #fff;
-  color: #00ACDC;
-  outline: none;
- }
-}
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      outline: none;
+    }
+  }
 }
