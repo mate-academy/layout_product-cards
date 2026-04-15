@@ -1,0 +1,25 @@
+.stars {
+  display: flex;
+  align-items: center;
+  width: 96px;
+
+  &__star {
+    background-image: $stars-image;
+    background-size: $stars-width $stars-height;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $stars-width;
+    height: $stars-height;
+    cursor: pointer;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: $stars-gap;
+  }
+
+  @for $i from 1 through $stars-count {
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background-image: $stars-active-image;
+    }
+  }
+}
