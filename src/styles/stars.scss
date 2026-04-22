@@ -1,0 +1,50 @@
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 24px;
+  margin: 0 auto;
+
+  &__rating {
+    display: flex;
+  }
+
+  &__rating-text {
+    font-weight: $text-thin;
+    font-size: $text-small;
+    line-height: $line-small;
+    margin: auto 0;
+  }
+
+  &__star {
+    height: $star;
+    width: $star;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__star + &__star {
+    margin-left: 4px;
+  }
+
+  &__rating--1 > &__star:first-child {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__rating--2 > &__star:nth-child(-n + 2) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__rating--3 > &__star:nth-child(-n + 3) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__rating--4 > &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__rating--5 > &__star:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+}
