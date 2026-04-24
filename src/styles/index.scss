@@ -1,3 +1,118 @@
+@import 'variables';
+@import 'stars';
+
 body {
   margin: 0;
+  font-family: Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.product-card {
+  width: 200px;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: $white;
+
+  border-radius: 5px;
+  border: 1px solid $gray-elements;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    margin: 16px auto;
+  }
+
+  &__title {
+    margin: 40px 0 4px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $main-accent;
+    line-height: 18px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    color: $secondary;
+    margin: 0;
+    line-height: 14px;
+  }
+
+  &__rating-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+    margin: 16px 0 24px;
+    align-items: flex-end;
+  }
+
+  &__stars {
+    height: 16px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  &__price-block {
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 85px;
+  }
+
+  &__price-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $main-accent;
+  }
+
+  &__buy-btn {
+    background-color: $blue-accent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $white;
+    font-family: inherit;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+      cursor: pointer;
+    }
+  }
 }
