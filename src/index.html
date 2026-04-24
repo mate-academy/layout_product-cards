@@ -6,13 +6,73 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Product cards</title>
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
-  <body>
-    <h1>Product cards</h1>
+  <body class="page">
+    <article
+      class="product-card page__product-card"
+      data-qa="card"
+    >
+      <img
+        src="./images/imac.jpeg"
+        alt="Imac"
+        class="product-card__image"
+        width="160"
+        height="134"
+      />
+      <h2 class="product-card__title">
+        APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+      </h2>
+      <p class="product-card__code">
+        Product code:
+        <data value="195434">195434</data>
+      </p>
+      <div class="review product-card__review">
+        <div class="stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+        <p class="review__value">
+          Reviews:
+          <data value="5">5</data>
+        </p>
+      </div>
+      <p class="product-card__price">
+        Price:
+        <data
+          class="product-card__price-value"
+          value="2199"
+        >
+          $2,199
+        </data>
+      </p>
+      <a
+        data-qa="hover"
+        href="#"
+        class="product-card__buy"
+      >
+        Buy
+      </a>
+    </article>
   </body>
 </html>
