@@ -1,8 +1,5 @@
-$main-accent: #060b35;
-$secondary: #616070;
-$white: #fff;
-$blue-accent: #00acdc;
-$gray-elements: #f3f3f3;
+@import 'variables';
+@import 'stars';
 
 body {
   margin: 0;
@@ -59,21 +56,6 @@ body {
 
   &__stars {
     height: 16px;
-    display: flex;
-    gap: 4px;
-  }
-
-  &__star {
-    background-image: url(../images/star.svg);
-    height: 16px;
-    width: 16px;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &--active {
-      background-image: url(../images/star-active.svg);
-    }
   }
 
   &__reviews {
@@ -124,6 +106,7 @@ body {
     color: $white;
     font-family: inherit;
     box-sizing: border-box;
+    text-decoration: none;
 
     &:hover {
       background-color: $white;
