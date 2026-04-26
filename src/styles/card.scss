@@ -1,0 +1,102 @@
+@use 'variables';
+
+.card {
+  width: 200px;
+  height: 408px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.card__image {
+  width: 160px;
+  height: 134px;
+  margin-top: 32px;
+  margin-left: 19px;
+  margin-bottom: 0;
+}
+
+.card__title {
+  width: 166px;
+  height: 36px;
+  margin-top: 36px;
+  margin-left: variables.$margin-left;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: variables.$color-primary;
+}
+
+.card__productCode {
+  width: 98px;
+  height: 14px;
+  margin-top: 4px;
+  margin-left: variables.$margin-left;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0%;
+  color: variables.$color-secondary;
+}
+
+.card__price {
+  width: 166px;
+  height: 16px;
+  margin-top: 25px;
+  margin-left: variables.$margin-left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__price__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: bottom;
+  color: variables.$color-secondary;
+}
+
+.card__price__value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.card__button {
+  margin-top: 17px;
+  margin-left: variables.$margin-left;
+  width: 166px;
+  height: 40px;
+  background-color: variables.$button-color;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.card:hover {
+  .card__button {
+    width: 164px;
+    height: 38px;
+    background-color: #fff;
+    color: variables.$button-color;
+    border: 1px solid variables.$button-color;
+  }
+}
