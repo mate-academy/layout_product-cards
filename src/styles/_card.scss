@@ -1,0 +1,98 @@
+@use './variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $card-width;
+  height: $card-height;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  &__image-one {
+    width: $card-image-width;
+    height: $card-image-height;
+    margin-left: $card-image-margin;
+    margin-right: $card-image-margin;
+    margin-bottom: 40px;
+    display: flex;
+  }
+
+  &__product {
+    display: flex;
+    height: auto;
+    width: $card-content-width;
+    flex-direction: column;
+
+    &-text {
+      color: $color-text;
+      font-size: $font-size-medium;
+      line-height: $line-height-medium;
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+    &-code {
+      color: $color-secondary;
+      font-weight: 400;
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+      height: 14px;
+      width: 98px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+  }
+  &__price {
+    display: flex;
+    width: $card-content-width;
+    height: 18px;
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    &-label {
+      color: $color-secondary;
+      font-size: $font-size-medium;
+      font-weight: 400;
+    }
+    &-value {
+      color: $color-text;
+      font-size: $font-size-large;
+      font-weight: 700;
+
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    &--buy {
+      background-color: $color-primary;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      width: $btn-width;
+      height: $btn-height;
+      border-radius: $btn-radius;
+      border: 1px solid $color-primary;
+      text-decoration: none;
+      text-align: center;
+      line-height: $btn-height;
+    }
+
+    &--buy:hover {
+      border: 1px solid $color-primary;
+      background-color: #f3f3f3;
+      color: $color-primary;
+    }
+  }
+}
