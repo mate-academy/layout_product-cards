@@ -7,12 +7,62 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Product cards</title>
+
+    <!-- Шрифти -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ВАЖЛИВО: підключаємо CSS, не SCSS -->
     <link
       rel="stylesheet"
       href="./styles/index.scss"
     />
   </head>
   <body>
-    <h1>Product cards</h1>
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <img
+        class="card__img"
+        src="./images/imac.jpeg"
+        alt="imac apple"
+      />
+
+      <div class="card__info">
+        <h3 class="card__name">
+          APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+        </h3>
+
+        <span class="card__code">Product code: 195434</span>
+      </div>
+
+      <div class="card__meta">
+        <div class="stars stars--4">
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+          <div class="stars__star"></div>
+        </div>
+
+        <span class="card__reviews">Reviews: 5</span>
+      </div>
+
+      <div class="card__price">
+        <span class="card__price-label">Price:</span>
+        <span class="card__price-value">$2199</span>
+      </div>
+
+      <button
+        type="button"
+        class="card__button"
+        data-qa="hover"
+      >
+        Buy
+      </button>
+    </div>
   </body>
 </html>
