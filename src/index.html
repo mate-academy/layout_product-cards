@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class="page"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -11,8 +14,69 @@
       rel="stylesheet"
       href="./styles/index.scss"
     />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <h1>Product cards</h1>
+  <body class="page__body">
+    <div
+      class="card"
+      data-qa="card"
+    >
+      <img
+        src="./images/imac.jpeg"
+        alt="imac-image"
+        class="card__image"
+      />
+
+      <div class="card__description">
+        <div class="card__container">
+          <div class="model">
+            <div class="model__name">
+              APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+            </div>
+            <div class="model__code">Product code: 195434</div>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <div class="reviews__stars">
+            <div class="stars stars--1">
+              <div class="stars__star"></div>
+              <div class="stars__star"></div>
+              <div class="stars__star"></div>
+              <div class="stars__star"></div>
+              <div class="stars__star"></div>
+            </div>
+
+            <div class="reviews__count">Reviews: 5</div>
+          </div>
+        </div>
+
+        <div class="price">
+          <div class="price__info">
+            <div class="price__word">Price:</div>
+            <div class="price__sum">$2,199</div>
+          </div>
+        </div>
+        <button
+          class="buy"
+          data-qa="hover"
+        >
+          buy
+        </button>
+      </div>
+    </div>
   </body>
 </html>
