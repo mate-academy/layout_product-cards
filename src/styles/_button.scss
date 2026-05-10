@@ -1,0 +1,31 @@
+@import "./variables";
+
+.button {
+  // 1. Dimensiones de Figma
+  width: 100%;             // O usa 166px si quieres que sea fijo, pero 100% es mejor para cards
+  height: 40px;            // Podemos definir height directamente...
+  display: flex;           // ...y usar flex para centrar el texto perfectamente
+  justify-content: center;
+  align-items: center;
+
+  // 2. Estética
+  background-color: $color-primary;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;      // El valor exacto de tu captura
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  font-family: $font-main;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #fff;       // El #ffff que viste en Figma
+    color: $color-primary;        // Texto ahora es color primario
+    border: 1px solid $color-primary; // Borde color primario
+    text-decoration: none;
+  }
+}
