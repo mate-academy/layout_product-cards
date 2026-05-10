@@ -1,0 +1,71 @@
+@import "./variables";
+
+.card {
+  width: $card-width;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  padding: 16px 8px;
+  font-family: $font-main;
+  color: $color-text;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+
+  // El contenedor de la imagen. Pedir a la IA que me explique mejor esto
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin-top: 17px;
+    margin-bottom: 40px;
+
+    // La etiqueta img dentro de su contenedor
+    img {
+      width: 160px;
+      height: 134px;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0;                // Reset para el h3
+    font-family: $font-main;  // Roboto
+    font-size: 12px;
+    font-weight: 500;         // El valor exacto de Figma
+    line-height: 1.5;         // Equivale a los 18px (12 * 1.5)
+    color: $color-text;
+    letter-spacing: 0;
+  }
+
+  &__sku {
+    margin: 0;                // Reset para el h3
+    font-family: $font-main;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: $color-text-secondary;
+    letter-spacing: 0;
+  }
+
+
+  &__reviews {
+    margin-bottom: 24px; // Su único trabajo es empujar el precio hacia abajo
+  }
+
+  &__price {
+    margin-bottom: 16px;
+  }
+
+}
