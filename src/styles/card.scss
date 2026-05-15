@@ -1,0 +1,113 @@
+@use './variables';
+
+.product-card {
+  box-sizing: border-box;
+  width: 200px;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 5px;
+  border: rgba(255, 255, 255, 1) solid 1px;
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: variables.$font-weight-bolded;
+    font-size: variables.$font-normal;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: rgba(6, 11, 53, 1);
+    margin-top: 40px;
+    margin-bottom: 4;
+  }
+
+  &__code {
+    font-weight: variables.$font-weight-normal;
+    color: rgba(97, 96, 112, 1);
+    font-size: variables.$font-small;
+    line-height: variables.$font-big;
+    letter-spacing: 0%;
+    margin: 0 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: variables.$font-normal;
+    font-size: variables.$font-small;
+    line-height: variables.$font-big;
+    letter-spacing: 0%;
+    color: rgba(6, 11, 53, 1);
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    display: flex;
+    align-items: center;
+    font-weight: variables.$font-weight-normal;
+    font-size: variables.$font-normal;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: rgba(97, 96, 112, 1);
+    margin: 0;
+  }
+
+  &__price-value {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 1);
+    margin: 0;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    width: 166px;
+    height: 40px;
+    color: variables.$button-color-hover;
+    background-color: variables.$button-color;
+    font-size: variables.$font-big;
+    font-weight: 700px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    text-transform: uppercase;
+    border: 1px solid variables.$button-color;
+  }
+
+  &__button:hover {
+    background-color: variables.$button-color-hover;
+    color: variables.$button-color;
+  }
+}
