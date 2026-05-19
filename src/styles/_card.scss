@@ -1,0 +1,102 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #e0e0e0;
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+    align-self: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__name {
+    font-weight: 500;
+    color: $color-dark;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-gray;
+    margin-bottom: 16px;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-gray;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $color-dark;
+    }
+  }
+
+  .card__button {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid $color-blue;
+    border-radius: $border-radius;
+    background-color: $color-blue;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 11px 70px;
+    width: calc(166px - 2px);
+    font-size: 14px;
+    font-weight: 700;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
+    align-self: center;
+    margin-bottom: 16px;
+
+    &:hover {
+      background-color: #fff;
+      color: $color-blue;
+      border: 1px solid $color-blue;
+    }
+  }
+}
