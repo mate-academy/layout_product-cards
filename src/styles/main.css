@@ -1,0 +1,18 @@
+/* Error: A top-level selector may not contain a parent selector with a suffix.
+ *   ,
+ * 5 | &__star {
+ *   | ^^^^^^^
+ *   '
+ *   src\styles\_stars.scss 5:1  @import
+ *   src\styles\main.scss 2:9    root stylesheet */
+
+body::before {
+  font-family: 'Source Code Pro', 'SF Mono', Monaco, Inconsolata, 'Fira Mono',
+    'Droid Sans Mono', monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: A top-level selector may not contain a parent selector with a suffix.\a   \2577 \a 5 \2502  &__star {\a   \2502  ^^^^^^^\a   \2575 \a   src\\styles\\_stars.scss 5:1  @import\a   src\\styles\\main.scss 2:9    root stylesheet';
+}
