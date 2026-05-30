@@ -1,0 +1,136 @@
+@use './variables' as v;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 200px;
+  height: 408px;
+  margin: 32px auto; // Centralizado no fluxo
+  padding: 23px;
+  border: 1px solid v.$gray-border;
+  border-radius: 8px;
+
+  font-family: roboto, sans-serif;
+  font-display: swap;
+
+  background-color: v.$white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 149px;
+    height: 134px;
+    margin: 8px auto 38px;
+    border: 1px solid v.$gray-border;
+    border-radius: 5px;
+
+    background-color: v.$gray-border;
+  }
+
+  &__title {
+    width: 166px;
+    height: 35px;
+    margin: 1 auto 4px;
+    margin-left: -7px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: v.$main-accent;
+    text-align: flex-start;
+  }
+
+  &__code {
+    width: 166px;
+    margin: 1px auto 19px;
+    margin-left: -7px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: v.$secondary;
+    text-align: left; // Mantém o texto à esquerda como solicitado
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Estrelas e Texto nos extremos
+
+    width: 166px;
+    margin: 2px auto 20px;
+    margin-left: -8px;
+
+    font-size: 10px;
+    color: v.$secondary;
+  }
+
+  &__reviews-text {
+    margin-top: -5px;
+    margin-right: -1px;
+    margin-bottom: -1px; // Ajustado para alinhar com o container pai
+
+    font-size: 10px;
+    font-weight: 400;
+    color: v.$main-accent;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 166px;
+    margin: 2px -4px;
+    margin-left: -4px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: v.$main-accent;
+  }
+
+  &__price-label {
+    margin: 3px 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(97, 96, 112, 1);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 166px;
+    height: 60px;
+    margin: 11px 0 -6px; // Centralizado via aut
+    margin-left: -5px;
+    border: 1px solid v.$blue-accent;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: v.$white;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+
+    background-color: v.$blue-accent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: v.$blue-accent;
+      background-color: v.$white;
+
+    }
+  }
+}

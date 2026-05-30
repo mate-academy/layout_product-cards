@@ -36,6 +36,8 @@ const config = {
       selectors: ['[data-qa="card"]'],
     },
   ],
-};
+  // 👇 Adicione isso
+
+  };
 
 module.exports = config;

@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  height: 14px;
+  margin-top: -4px;
+  margin-bottom: 0;
+  margin-left: -1px;
+
+  &__item {
+    width: 16px;
+    height: 12px;
+    margin: 2px;
+
+    background-color: v.$yellow;
+
+    -webkit-mask: url('../images/star.svg') no-repeat center / contain;
+    mask: url('../images/star.svg') no-repeat center / contain;
+  }
+
+  &--4 .stars__item:nth-child(n + 5) {
+    background-color: v.$gray-border;
+  }
+}
