@@ -1,0 +1,27 @@
+.stars {
+  height: 16px;
+  display: flex;
+
+  &__star {
+    width: 16px;
+    margin-inline: 2px;
+
+    background-image: $star-inactive-image;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $rating from 0 through 5 {
+    &--#{$rating} &__star:nth-child(-n + #{$rating}) {
+      background-image: $star-active-image;
+    }
+  }
+}
