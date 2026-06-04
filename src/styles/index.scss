@@ -1,3 +1,92 @@
+@import './variables';
+@import './card';
+@import './stars';
+
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card__code {
+  margin-left: 17px;
+  text-align: left;
+  align-self: start;
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: $spacing-letter;
+  color: #616070;
+  margin-bottom: 16px;
+}
+
+.card__rev {
+  display: flex;
+  gap: 17px;
+  &-text {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: $spacing-letter;
+    text-align: right;
+    vertical-align: bottom;
+    color: $text-color;
+    margin-bottom: 24px;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 18px;
+  margin-bottom: 16px;
+  &_text {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: $spacing-letter;
+    vertical-align: bottom;
+  }
+  &_dolars {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: $spacing-letter;
+    text-align: right;
+    vertical-align: bottom;
+    color: $text-color;
+  }
+}
+
+.button_buy {
+  width: 166px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background: $primary-color;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: $spacing-letter;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid $primary-color;
+
+  &:hover {
+    background: #fff;
+    color: $primary-color;
+  }
 }
