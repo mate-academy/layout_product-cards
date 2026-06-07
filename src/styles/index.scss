@@ -1,3 +1,108 @@
-body {
+@import './variables';
+@import './card';
+@import './stars';
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card__code {
+  margin: 0 16px 16px;
+
+  width: auto;
+  text-align: left;
+  align-self: start;
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: $spacing-letter;
+  color: #616070;
+  white-space: nowrap;
+}
+
+.card__rev {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  height: 16px;
+  margin-bottom: 24px;
+  &-text {
+    margin-top: 3px;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: $spacing-letter;
+    text-align: right;
+    vertical-align: bottom;
+    color: $text-color;
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
+  height: 18px;
+  margin-bottom: 16px;
+  &-text {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: $spacing-letter;
+    vertical-align: bottom;
+    color: #616070;
+  }
+  &-dolars {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: $spacing-letter;
+    text-align: right;
+    vertical-align: bottom;
+    color: $text-color;
+  }
+}
+
+.card__button {
+  display: block;
+  align-self: center;
+  width: 166px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background: $primary-color;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: $spacing-letter;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid $primary-color;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+
+  &:hover {
+    background: #fff;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
 }
