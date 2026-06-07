@@ -2,17 +2,23 @@
 @import './card';
 @import './stars';
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .card__code {
-  margin-left: 17px;
+  margin: 0 16px 16px;
+
+  width: auto;
   text-align: left;
   align-self: start;
   font-family: $font-main;
@@ -21,13 +27,18 @@ body {
   line-height: 14px;
   letter-spacing: $spacing-letter;
   color: #616070;
-  margin-bottom: 16px;
+  white-space: nowrap;
 }
 
 .card__rev {
   display: flex;
-  gap: 17px;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  height: 16px;
+  margin-bottom: 24px;
   &-text {
+    margin-top: 3px;
     font-family: $font-main;
     font-weight: 400;
     font-size: 10px;
@@ -36,7 +47,6 @@ body {
     text-align: right;
     vertical-align: bottom;
     color: $text-color;
-    margin-bottom: 24px;
   }
 }
 
@@ -53,6 +63,7 @@ body {
     line-height: 18px;
     letter-spacing: $spacing-letter;
     vertical-align: bottom;
+    color: #616070;
   }
   &_dolars {
     font-family: $font-main;
@@ -67,9 +78,13 @@ body {
 }
 
 .button_buy {
+  display: block;
+  align-self: center;
   width: 166px;
   height: 40px;
-  display: flex;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
   align-items: center;
   justify-content: center;
   text-decoration: none;
@@ -78,15 +93,16 @@ body {
   font-family: $font-main;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
   letter-spacing: $spacing-letter;
-  text-align: center;
   text-transform: uppercase;
   color: #fff;
-  border: 2px solid $primary-color;
+  border: 1px solid $primary-color;
+  box-sizing: border-box;
+  margin-bottom: 16px;
 
   &:hover {
     background: #fff;
+    border: 1px solid $primary-color;
     color: $primary-color;
   }
 }
