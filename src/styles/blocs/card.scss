@@ -1,12 +1,36 @@
 .product-card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 
-  width: 200px;
-  height: 408px;
+  width: 198px;
+  height: 406px;
 
   background-color: #fff;
 
   border: 1px solid #f3f3f3;
   border-radius: 5px;
+
+  .product-card {
+    &__reviews {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+
+      height: 16px;
+      width: $width-deafult;
+
+      margin-left: $margin-default;
+      margin-top: 6px;
+      margin-bottom: 22px;
+    }
+
+    &__reviews-text {
+      color: $color-main;
+      margin-left: 17px;
+      font-size: 10px;
+      width: 53px;
+      line-height: 16px;
+    }
+  }
 }
