@@ -1,3 +1,6 @@
+@import './variables';
+@import './stars';
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -11,19 +14,19 @@ a {
 }
 
 .card {
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 408px;
+  width: $card-width;
+  height: $card-height;
   box-sizing: border-box;
 
   &__image {
     display: block;
     margin: 32px auto 0;
-    width: 160px;
-    height: 134px;
+    width: $image-width;
+    height: $image-height;
   }
 
   &__name {
@@ -33,7 +36,7 @@ a {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0%;
-    color: #060b35;
+    color: $text-main;
   }
 
   &__code {
@@ -44,29 +47,12 @@ a {
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 0%;
-    color: #616070;
+    color: $text-secondary;
   }
 
   &__response {
     display: flex;
     padding: 16px 16px 24px;
-  }
-
-  &__star {
-    margin-right: 4px;
-    width: 16px;
-    height: 16px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../images/star.svg);
-
-    &__star:last-child {
-      margin-right: 0;
-    }
-
-    &--active {
-      background-image: url(../images/star-active.svg);
-    }
   }
 
   &__reviews {
@@ -93,7 +79,7 @@ a {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0%;
-    color: #616070;
+    color: $text-secondary;
   }
 
   &__price-value {
@@ -103,32 +89,32 @@ a {
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0%;
-    color: #060b35;
+    color: $text-main;
     margin-left: auto;
     justify-content: flex-end;
   }
 
   &__button {
-    background-color: #00acdc;
-    width: 166px;
-    height: 40px;
+    background-color: $accent;
+    width: $button-width;
+    height: $button-height;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0%;
     text-transform: uppercase;
-    color: #fff;
+    color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 16px;
     border-radius: 5px;
-    border: 1px solid #00acdc;
+    border: 1px solid $accent;
     box-sizing: border-box;
 
     &:hover {
-      background-color: #fff;
-      color: #00acdc;
+      background-color: $white;
+      color: $accent;
     }
   }
 }
