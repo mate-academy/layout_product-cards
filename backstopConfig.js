@@ -35,6 +35,7 @@ const config = {
       postInteractionWait: 1000,
       selectors: ['[data-qa="card"]'],
     },
+
   ],
 };
 
