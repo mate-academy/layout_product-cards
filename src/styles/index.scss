@@ -1,3 +1,86 @@
+@import './utils/variables';
+@import 'stars';
+@import 'button';
+
+html {
+  letter-spacing: 0%;
+}
+
 body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  box-sizing: border-box;
+  max-width: 200px;
+  border-radius: 5px;
+  border: 1px solid rgba(243, 243, 243, 1);
+  background-color: rgba(255, 255, 255, 1);
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    margin-bottom: 40px;
+    align-self: center;
+  }
+
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-color;
+    margin-bottom: 4px;
+    white-space: wrap;
+  }
+
+  &__code {
+    font-family: Roboto, sans-serif;
+    color: $secondary-color;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: Roboto, sans-serif;
+    color: $main-color;
+    line-height: 14px;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  &__price-title {
+    color: $secondary-color;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Roboto, sans-serif;
+  }
+  &__price-price {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $main-color;
+    font-family: Roboto, sans-serif;
+  }
 }
