@@ -1,9 +1,3 @@
-@import 'variables';
-
-body {
-  margin: 0;
-}
-
 .card {
   box-sizing: border-box;
   width: 200px;
@@ -11,38 +5,46 @@ body {
   border-radius: 5px;
   padding: 32px 16px 16px;
   background: $color-bg-white;
-}
 
-.card__image {
-  display: block;
-  margin: 0 auto 40px;
-  width: 160px;
-  height: 134px;
-}
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
 
-.card__title {
-  font-family: $font-main;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: $color-dark;
-}
+  &__title {
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-dark;
+  }
 
-.card__code {
-  font-family: $font-main;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 0%;
-  color: $color-muted;
-  margin-top: 4px;
-  margin-bottom: 16px;
-}
+  &__code {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $color-muted;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
 
-.card__review {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
 }
 
 .review {
@@ -53,14 +55,6 @@ body {
   color: $color-dark;
   text-align: right;
   vertical-align: bottom;
-}
-
-.card__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  margin-bottom: 16px;
 }
 
 .price {
@@ -97,9 +91,10 @@ body {
   text-transform: uppercase;
   background-color: $color-primary;
   transition: all 0.3s ease;
-}
 
-.but:hover {
-  background-color: $color-bg-white;
-  color: $color-primary;
+  &:hover {
+    /* НЕСТИНГ ХОВЕРА КНОПКИ */
+    background-color: $color-bg-white;
+    color: $color-primary;
+  }
 }
