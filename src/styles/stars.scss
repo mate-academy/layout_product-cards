@@ -1,0 +1,23 @@
+$stars-active: 5;
+
+.stars {
+    @include flex-between;
+
+    height: 16px;
+    width: 96px;
+
+  &__star{
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+
+  @for $i from 1 through $stars-active{
+    &--#{$i} .stars__star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}
+
