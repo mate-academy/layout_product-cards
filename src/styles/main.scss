@@ -1,0 +1,118 @@
+@import './stars/stars';
+@import './variables/variables';
+@import './reset/reset';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $card-width;
+  min-height: $card-height;
+  background-color: $white;
+  font-family: $font-main;
+  border: 1px solid $gray-elements;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 16px 16px;
+
+  &__image {
+    display: block;
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    margin-top: 32px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    width: 100%;
+    height: 36px;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent;
+    text-align: left;
+  }
+
+  &__code {
+    margin-top: 4px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary;
+    text-align: left;
+  }
+
+  &__reviews {
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+    height: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &_stars {
+      flex-shrink: 0;
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $main-accent;
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    height: 18px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: auto;
+
+    &_label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+    }
+
+    &_value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    background-color: $blue-accent;
+    color: $white;
+    border-radius: 5px;
+    border: none;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-accent;
+      box-shadow: inset 0 0 0 1px $blue-accent;
+      cursor: pointer;
+    }
+  }
+}
