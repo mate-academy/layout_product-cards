@@ -19,6 +19,70 @@ Create a page with product card using `flexbox`, `BEM` and `SCSS` based on [this
 *Important note*: In this task, you are allowed to link `*.scss` files directly in HTML `<link>` tags using `href` attribute.
 This is possible because [we use the Parcel library](https://parceljs.org/languages/sass/) to bundle your solution's source code.
 
+## Suggested folder structure
+
+```text
+src/
+	index.html
+	main.js
+	images/
+	styles/
+		index.scss
+		utils/
+			_variables.scss
+		blocks/
+			_card.scss
+			_stars.scss
+```
+
+## What should be done in each part
+
+### `src/index.html`
+
+- add the semantic markup for the card layout
+- keep the `card` block ready for styling with BEM
+- add `data-qa="card"` to the main card block
+- add `data-qa="hover"` to the `BUY` link
+
+### `src/main.js`
+
+- keep this file as the entry point for the page
+- import the styles that are used by Parcel
+
+### `src/styles/index.scss`
+
+- reset the browser default margin
+- import shared variables and block styles
+- keep only global styles here
+
+### `src/styles/utils/_variables.scss`
+
+- store the main colors, font values and spacing tokens
+- reuse these values across the card and stars blocks
+
+### `src/styles/blocks/_card.scss`
+
+- build the `card` block styles with SCSS nesting
+- set the card width to `200px` including the border
+- handle hover states for the link styles
+- use the product image from `src/images`
+
+### `src/styles/blocks/_stars.scss`
+
+- rewrite the `stars` block from the separate task
+- keep the block reusable and split into modifiers
+- make all `stars--N` modifiers highlight the first `N` stars
+
+### `src/images/`
+
+- keep all source images here
+- use the product and star assets from this folder
+
+### Font and assets
+
+- choose the required font from Google Fonts
+- use relative paths like `../images/...` inside `index.scss`
+
 ## Checklist
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
