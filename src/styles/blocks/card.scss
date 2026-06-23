@@ -1,0 +1,100 @@
+@use '../utils/variables';
+
+.card {
+  font-family: Roboto, sans-serif;
+  width: variables.$card-width;
+  height: variables.$card-height;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: variables.$main-color;
+    margin: 40px 16px 0;
+  }
+
+  &__description {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: variables.$secondary-color;
+    margin-top: 4px;
+    margin-left: 16px;
+  }
+
+  &__image {
+    width: 160px;
+    min-height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: 160px 134px;
+    background-position: center center;
+    margin: 32px 19px 0;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px 16px 0;
+    align-items: center;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: variables.$secondary-color;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: variables.$main-color;
+  }
+
+  &__review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 16px 0;
+    align-items: center;
+  }
+
+  &__review-label {
+    font-weight: 400;
+    font-size: 10px;
+    color: variables.$main-color;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    text-align: center;
+    background-color: variables.$action-color;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    height: 40px;
+
+    &:hover {
+      background-color: white;
+      border: 1px solid variables.$action-color;
+      color: variables.$action-color;
+    }
+  }
+}
