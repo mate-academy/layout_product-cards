@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: $mainText;
+}
+
+.card {
+  width: 200px;
+  padding: 32px 16px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(243, 243, 243, 1);
+  border-radius: 5px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: 160px 134px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+
+    &--indent {
+      margin-top: 40px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondaryText;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-viewers {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    &--indent {
+      margin: 16px 0 24px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-title {
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondaryText;
+    }
+
+    &-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+
+    background-color: rgba(0, 172, 220, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &--indent {
+      margin-top: 16px;
+    }
+
+    &:hover {
+      border: 1px solid rgba(0, 172, 220, 1);
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(0, 172, 220, 1);
+    }
+  }
+}
+
+
