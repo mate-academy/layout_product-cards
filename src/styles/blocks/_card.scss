@@ -5,13 +5,13 @@ body {
 }
 
 html {
-  font-family: Roboto, serif;
+  font-family: $font-family;
 }
 
 .card {
   box-sizing: border-box;
-  width: 200px;
-  border: 1px solid #f3f3f3;
+  width: $card-width;
+  border: $card-border;
   border-radius: 5px;
   padding: 32px 16px 16px;
 
@@ -28,9 +28,9 @@ html {
     margin: 0 0 4px;
     font-size: 12px;
     line-height: 18px;
-    font-weight: 500;
+    font-weight: $font-w5;
     color: $text-color;
-    font-family: Roboto, sans-serif;
+    font-family: $font-family;
     margin-bottom: 4px;
   }
 
@@ -43,7 +43,7 @@ html {
     line-height: 14px;
     color: $text-secondary;
     margin-bottom: 16px;
-    font-weight: 400;
+    font-weight: $font-w4;
   }
   &__review {
     display: flex;
@@ -56,7 +56,7 @@ html {
       font-family: $font-family;
       font-size: 10px;
       line-height: 14px;
-      font-weight: 400;
+      font-weight: $font-w4;
     }
   }
   &__price {
@@ -64,19 +64,19 @@ html {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    font-family: Roboto, sans-serif;
+    font-family: $font-family;
 
     &-text {
       font-size: 12px;
-      font-weight: 400;
+      font-weight: $font-w4;
       line-height: 18px;
       color: $text-secondary;
     }
     &-mount {
       font-size: 16px;
       line-height: 18px;
-      font-weight: 700;
-      color: #060b35;
+      font-weight: $font-w7;
+      color: $text-color;
     }
   }
   &__buy {
@@ -86,21 +86,25 @@ html {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
-    border: 1px solid $accent-color;
+    border: $Bottom-border;
     border-radius: 5px;
     font-size: 14px;
     line-height: 16px;
     color: #fff;
-    font-weight: 700;
+    font-weight: $font-w7;
     text-decoration: none;
     text-transform: uppercase;
     background-color: $accent-color;
     font-family: $font-family;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: $accent-color;
+    }
+
+
   }
 
-  &__buy:hover {
-    cursor: pointer;
-    background-color: #fff;
-    color: #00acdc;
-  }
+
 }
