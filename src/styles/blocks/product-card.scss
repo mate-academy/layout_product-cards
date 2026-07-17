@@ -1,0 +1,113 @@
+.product-card {
+  box-sizing: border-box;
+  width: 200px;
+
+  background-color: $white;
+
+  padding: 32px 16px 16px;
+  border: solid 1px $grey-elements;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  &__image {
+    display: block;
+    height: 134px;
+    width: 160px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include product-name;
+
+    margin: 0 0 4px;
+
+    text-decoration: none;
+  }
+
+  &__code {
+    @include product-code;
+
+    margin: 0 0 16px;
+  }
+
+  &__reviews {
+    margin-bottom: 24px;
+
+    display: flex;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__star {
+    height: 16px;
+    width: 16px;
+
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--active {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__reviews-count {
+    @include product-reviews-count;
+
+    margin-left: auto;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-label {
+    @include price-label;
+  }
+
+  &__price-value {
+    @include price-value;
+  }
+
+  &__cta-button {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: 1px solid $blue-accent;
+    border-radius: 5px;
+
+    background-color: $blue-accent;
+
+    @include cta-button-label;
+
+    &:hover {
+      background-color: transparent;
+      color: $blue-accent;
+    }
+  }
+}
