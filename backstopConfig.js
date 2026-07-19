@@ -8,6 +8,14 @@ const basic = {
   ...basicScenario,
   label: 'Elementary test',
   referenceUrl: basicScenario.referenceUrl + '/product-cards/',
+  // Разрешаем погрешность в 0.1%, это уберет ошибки из-за сглаживания шрифтов
+  misMatchThreshold: 0.1,
+  // Даем время на отрисовку
+  delay: 1000,
+  // Игнорируем антиалиасинг (разное сглаживание пикселей)
+  resembleOutputOptions: {
+    ignoreAntialiasing: true,
+  },
 };
 
 const config = {

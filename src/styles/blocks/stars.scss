@@ -1,0 +1,29 @@
+@import '../utils/variables';
+
+.stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__star {
+    display: block;
+    width: $star-size;
+    height: $star-size;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: $star-gap;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+}
