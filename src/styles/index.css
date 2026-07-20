@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   display: flex;
   font-family: Roboto, sans-serif;
@@ -38,6 +39,7 @@ body {
   color: #060b35;
   font-weight: 500;
   margin: 38px 0 0;
+  flex: 0;
 }
 
 .card__title-line {
@@ -49,62 +51,43 @@ body {
 .card__description {
   font-size: 10px;
   color: #616070;
-  margin: px 0 0;
+  margin: 4px 0 0;
 }
 
 .card__rate {
   display: flex;
-  align-items: center;
 }
 
 .card__star {
-  width: 13px;
-  height: 12px;
-}
-
-.card__star::before {
-  content: '';
-  display: block;
-  width: 13px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../images/star.svg');
-  background-size: 13px 12px;
 }
 
 .card__star:not(:first-child) {
-  margin-left: 7px;
+  margin-left: 4px;
 }
 
-.card__rate--rating-1 .card__star:nth-child(-n + 1)::before {
+.card__rate--rating-1 .card__star:nth-child(-n + 1) {
   background-image: url('../images/star-active.svg');
-  background-size: 13px 12px;
-  image-rendering: crisp-edges;
 }
 
-.card__rate--rating-2 .card__star:nth-child(-n + 2)::before {
+.card__rate--rating-2 .card__star:nth-child(-n + 2) {
   background-image: url('../images/star-active.svg');
-  background-size: 13px 12px;
-  image-rendering: crisp-edges;
 }
 
-.card__rate--rating-3 .card__star:nth-child(-n + 3)::before {
+.card__rate--rating-3 .card__star:nth-child(-n + 3) {
   background-image: url('../images/star-active.svg');
-  background-size: 13px 12px;
-  image-rendering: crisp-edges;
 }
 
-.card__rate--rating-4 .card__star:nth-child(-n + 4)::before {
+.card__rate--rating-4 .card__star:nth-child(-n + 4) {
   background-image: url('../images/star-active.svg');
-  background-size: 13px 12px;
-  image-rendering: crisp-edges;
 }
 
-.card__rate--rating-5 .card__star:nth-child(-n + 5)::before {
+.card__rate--rating-5 .card__star:nth-child(-n + 5) {
   background-image: url('../images/star-active.svg');
-  background-size: 13px 12px;
-  image-rendering: crisp-edges;
 }
 
 .card__rating {
@@ -124,18 +107,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 12px 0 0;
+  margin: 24px 0 0;
 }
 
 .card__price-label {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: #616070;
 }
 
 .card__price-value {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
   color: #060b35;
 }
 
