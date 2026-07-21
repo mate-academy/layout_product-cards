@@ -1,0 +1,111 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+  height: $card-height;
+  padding: 32px 16px 16px;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  background-color: $color-white;
+  font-family: $font-main;
+  overflow: hidden;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../images/imac.jpeg');
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-dark;
+  }
+
+  &__title-line {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    margin: 4px 0 0;
+    height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-grey;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 0;
+  }
+
+  &__review {
+    width: 53px;
+    height: 14px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+    align-self: flex-end;
+    color: $color-dark;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 0;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-grey;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 18px;
+    color: $color-dark;
+  }
+
+  &__buy {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    margin-top: 16px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-blue;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      padding: 11px 0;
+      border: 1px solid $color-blue;
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+}
