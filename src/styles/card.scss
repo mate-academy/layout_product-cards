@@ -1,0 +1,108 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  font-family: $main-font;
+
+  &__photo {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+    background-image: url(../images/imac.jpeg);
+    background-size: 158px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__name,
+  &__code,
+  &__rating,
+  &__bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $main-text-color;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $secondary-text-color;
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    color: $main-text-color;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-bottom: 16px;
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $secondary-text-color;
+    margin-right: 0;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $main-text-color;
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: $accent-color;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid $accent-color;
+
+    &:hover {
+      background-color: #fff;
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+  }
+}
