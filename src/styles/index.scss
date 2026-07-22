@@ -1,3 +1,126 @@
+@import './blocks/stars';
+@import './variables';
+
+@mixin roboto-style($weight) {
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
 body {
   margin: 0;
+}
+
+.card {
+  margin: 100px auto;
+  text-align: center;
+  width: 200px;
+  height: 406px;
+  border: solid 1px $borderColor;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &_imac {
+    margin: 32px 0 36px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &_title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    display: block;
+    width: 166px;
+
+    padding: 0 $padInline 4px;
+    margin: 0;
+    color: $blackText;
+
+    @include roboto-style(500);
+  }
+
+  &_code {
+    color: $greyText;
+    display: block;
+
+    padding-inline: $padInline;
+    padding-bottom: 16px;
+
+    margin: 0;
+    text-align: left;
+    line-height: 14px;
+    font-size: 10px;
+
+    @include roboto-style(400);
+  }
+
+  &_block_stars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-inline: $padInline;
+    padding-bottom: 24px;
+
+    &-reviews {
+      color: $blackText;
+      font-size: 10px;
+      line-height: 14px;
+
+      @include roboto-style(400);
+    }
+  }
+
+  &_block_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: $padInline;
+    padding-bottom: 16px;
+
+    &-text {
+      color: $greyText;
+      font-size: 12px;
+      line-height: 18px;
+
+      @include roboto-style(400);
+    }
+
+    &-value {
+      color: $blackText;
+      font-size: 16px;
+      line-height: 18px;
+
+      @include roboto-style(700);
+    }
+  }
+
+  .card_buy {
+    box-sizing: border-box;
+    width: 166px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $blue;
+    color: #fff;
+    text-transform: uppercase;
+    border: $blue 1px solid;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    @include roboto-style(700);
+
+    &:hover {
+      background-color: #fff;
+      border: $blue 1px solid;
+      color: $blue;
+    }
+  }
 }
