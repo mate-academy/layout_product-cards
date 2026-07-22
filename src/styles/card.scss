@@ -1,0 +1,98 @@
+@import './variables';
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  background-color: $card-background-color;
+  display: flex;
+  border: $card-border-width solid $card-border-color;
+  border-radius: $card-border-radius;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    display: block;
+    height: $card-image-height;
+    width: $card-image-width;
+    margin: $image-top-margin $card-side-margin $image-bottom-margin;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 $section-spacing $star-spacing;
+    color: $main-text-color;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    width: $card-content-width;
+    margin: 0 0 $section-spacing;
+    color: $secondary-text-color;
+  }
+
+  &__review-container {
+    display: flex;
+    width: $card-content-width;
+    height: $star-size;
+    margin-bottom: $review-section-spacing;
+  }
+
+  &__review-count {
+    margin-left: auto;
+    margin-top: 2px;
+    color: $main-text-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: $card-content-width;
+  }
+
+  &__price-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $secondary-text-color;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $main-text-color;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__button {
+    background-color: #00acdc;
+    width: $card-content-width;
+    height: $card-button-height;
+    border-radius: $card-border-radius;
+    border: $card-border-width solid $primary-color;
+    box-sizing: border-box;
+    margin: $section-spacing;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $card-background-color;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__button:hover {
+    background-color: $card-background-color;
+    color: $primary-color;
+  }
+}
