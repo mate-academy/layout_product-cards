@@ -1,3 +1,6 @@
+@import './stars';
+@import './variables';
+
 @mixin roboto-style($weight) {
   font-family: Roboto, sans-serif;
   font-optical-sizing: auto;
@@ -5,12 +8,6 @@
   font-style: normal;
   font-variation-settings: 'wdth' 100;
 }
-
-$blue: #00acdc;
-$blackText: #060b35;
-$greyText: #616070;
-$borderColor: #f3f3f3;
-$padInline: 16px;
 
 body {
   margin: 0;
@@ -76,27 +73,6 @@ body {
 
       @include roboto-style(400);
     }
-
-    .stars {
-      display: flex;
-
-      &__star {
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 16px;
-        height: 16px;
-
-        &:not(:last-child) {
-          margin-right: 4px;
-        }
-
-        &:nth-child(-n + 4) {
-          background-image: url(../images/star-active.svg);
-          background-repeat: no-repeat;
-        }
-      }
-    }
   }
 
   &_block_price {
@@ -104,7 +80,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-inline: $padInline;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
 
     &-text {
       color: $greyText;
