@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+.stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    list-style: none;
+    background-image: url('../images/star.svg');
+    background-size: 13px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
+    background-image: url('../images/star-active.svg');
+  }
+}
