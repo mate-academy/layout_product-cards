@@ -1,0 +1,120 @@
+.card {
+  width: $card-width;
+
+  padding: $card-padding;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $color-border;
+  border-radius: $card-border-radius;
+  background-color: $color-white;
+
+  &__image-wrap {
+    height: $image-wrap-height;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: $spacing-md;
+  }
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+
+    display: block;
+  }
+
+  &__title {
+    margin: 0 0 $spacing-xs;
+
+    font-size: $font-size-title;
+    font-weight: 500;
+    line-height: $line-height-title;
+
+    color: $color-dark;
+  }
+
+  &__code {
+    margin: 0 0 $spacing-sm;
+
+    font-size: $font-size-code;
+    line-height: $line-height-code;
+
+    color: $color-secondary;
+  }
+
+  &__rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: $spacing-md;
+  }
+
+  &__reviews {
+    font-size: $font-size-code;
+    line-height: $line-height-code;
+
+    color: $color-dark;
+  }
+
+  &__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: $spacing-sm;
+  }
+
+  &__price-label {
+    font-size: $font-size-title;
+    line-height: $line-height-title;
+
+    color: $color-secondary;
+  }
+
+  &__price-value {
+    font-size: $font-size-price;
+    font-weight: 700;
+    line-height: $line-height-title;
+
+    color: $color-dark;
+  }
+
+  &__button {
+    width: 100%;
+    height: $button-height;
+
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $color-primary;
+    border-radius: $card-border-radius;
+
+    background-color: $color-primary;
+
+    color: $color-white;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: $font-size-button;
+    font-weight: 700;
+    line-height: $line-height-button;
+
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+}
