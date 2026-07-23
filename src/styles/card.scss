@@ -7,24 +7,21 @@
   border: 1px solid $card-border-color;
   border-radius: 5px;
   font-family: $main-font;
+  padding: 16px;
 
   &__photo {
     width: 160px;
     height: 134px;
-    margin: 32px 19px 40px;
-    background-image: url(../images/imac.jpeg);
-    background-size: 158px auto;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin: 16px auto 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__name,
-  &__code,
-  &__rating,
-  &__bottom {
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 
   &__name {
@@ -58,8 +55,8 @@
   &__bottom {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     margin-top: auto;
-    padding-bottom: 16px;
   }
 
   &__price-container {
