@@ -1,15 +1,11 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 @import 'variables';
 
 .card {
   width: $card-width;
   height: 408px;
   position: relative;
+  display: flex;
+  align-items: center;
 
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +27,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    color: #060b35;
+    color: $black-color;
     position: absolute;
     opacity: 1;
     display: inline-block;
@@ -48,7 +44,7 @@
     font-size: 10px;
     line-height: 14px;
     position: absolute;
-    color: #616070;
+    color: $grey-color;
     display: inline-block;
     transform: translate(-0.2px, 0);
   }
@@ -74,7 +70,7 @@
     line-height: 19px;
     letter-spacing: 0;
     text-align: right;
-    color: #060b35;
+    color: $black-color;
   }
 
   &__price-block {
@@ -96,7 +92,7 @@
     font-size: 12px;
     line-height: 18px;
     vertical-align: bottom;
-    color: #616070;
+    color: $grey-color;
     display: inline-block;
     transform: translate(-0.2px, 0);
   }
@@ -110,7 +106,7 @@
     line-height: 18px;
     text-align: right;
     vertical-align: bottom;
-    color: #060b35;
+    color: $black-color;
     display: inline-block;
     transform: translate(0.11px, 0);
   }
@@ -134,12 +130,6 @@
     &--bg:hover {
       background: none;
       border: 1px solid $primary-color;
-      width: 166px;
-      height: 40px;
-      top: 351px;
-      left: 17px;
-      border-radius: 5px;
-      border-width: 1px;
       display: flex;
       justify-content: center;
       align-items: center;
