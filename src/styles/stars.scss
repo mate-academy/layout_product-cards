@@ -8,10 +8,10 @@
   margin: 16px 0 0;
 }
 
-.reviews-stars {
+.stars {
   display: flex;
 
-  .star {
+  &__star {
     background-image: url(../images/star.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -19,12 +19,14 @@
     height: 16px;
     margin-right: 4px;
   }
-}
 
-.reviews-stars .star:nth-child(-n + 4) {
-  background-image: url(../images/star-active.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
 }
 
 .card__review {
