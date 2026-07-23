@@ -1,27 +1,32 @@
 .card {
-  padding: 17px;
+  // padding: 17px;
   width: 200px;
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
+  text-align: center;
 
   &__image {
     width: 160px;
     height: 134px;
-    background-image: url(../images/imac.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 3px;
-    margin-top: 16px;
+    margin: 32px 0 36px;
   }
 
   &__title {
     margin: 0;
-    font-family: $main-font;
+    text-align: left;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    margin-top: 40px;
+    padding-inline: 16px;
+    display: block;
+    width: 166px;
+    color: $main-color;
+
+    font-family: $main-font;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: 'wdth' 100;
   }
 
   &__code {
@@ -32,27 +37,32 @@
     font-size: 10px;
     line-height: 14px;
     color: $second-text-color;
+    text-align: left;
+    padding-inline: 16px;
   }
 
-  &__rating {
+  &_block_stars {
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    padding-inline: 16px;
+    padding-bottom: 24px;
 
-  &__reviews {
-    margin: 0;
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: $second-text-color;
+    &-reviews {
+      font-family: $main-font;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: 'wdth' 100;
+
+      color: $main-color;
+      font-size: 10px;
+      padding-top: 1px;
+    }
   }
 
   &__price {
     margin: 0;
-    margin-top: 24px;
     font-family: $main-font;
     color: $second-text-color;
     font-weight: 400;
@@ -60,32 +70,33 @@
     line-height: 18px;
     display: flex;
     justify-content: space-between;
+    padding-inline: 16px;
   }
 
   &__price-value {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    color: #000;
+    color: $main-color;
   }
 
   &__button {
     border-radius: 5px;
     border: 1px solid $accent-color;
     background-color: $accent-color;
-    margin-top: 16px;
     width: 166px;
     height: 40px;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     text-decoration: none;
-    display: flex;
     font-family: $main-font;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
+    margin: 16px auto;
 
     &:hover {
       background-color: #fff;
