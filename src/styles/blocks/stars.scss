@@ -18,9 +18,17 @@
     margin-right: 4px;
   }
 
-  &--4 {
+  @for $column from 0 through 5 {
+    &--#{$column} {
+      .stars__star:nth-child(-n + #{$column}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+
+  /* &--4 {
     .stars__star:nth-child(-n + 4) {
       background-image: url('../images/star-active.svg');
     }
-  }
+  } */
 }
