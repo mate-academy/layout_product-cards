@@ -1,0 +1,122 @@
+@import 'variables';
+
+.card {
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background: #fff;
+
+  width: $card-width;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__image {
+    margin: 0 auto 40px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__commodity-name {
+    margin: 0 auto 4px;
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $black-color;
+  }
+
+  &__product-code {
+    margin: 0 68px 0 0;
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $grey-color;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin: 16px auto 24px;
+  }
+
+  &__review-number {
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $black-color;
+    text-align: right;
+    letter-spacing: 0;
+  }
+
+  &__price-block {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 auto 16px;
+  }
+
+  &__price-sign {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $grey-color;
+  }
+
+  &__price-amount {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $black-color;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 166px;
+    height: 40px;
+    border-width: 1px;
+    border-radius: 5px;
+
+    &--bg {
+      background: $primary-color;
+    }
+
+    &--bg:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &__buy {
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__button:hover {
+    .card__buy {
+      color: $primary-color;
+    }
+  }
+}
