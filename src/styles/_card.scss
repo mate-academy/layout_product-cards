@@ -1,50 +1,47 @@
 .card {
-  background: $background-color;
-  height: $card-height;
-  width: $card-width;
-  box-sizing: $box-sizing;
-  display: $display;
-  background-size: $size-of-image;
-  background-position: $position-of-image;
-  background-repeat: $background-repeating;
-  border: $style-of-border;
-  background-image: $background-image;
-  border-radius: $border-radius;
-  flex-direction: $flex-direction;
-  padding: $card-padding;
+  background: $primary-color;
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  flex-direction: column;
+  padding: 0 16px 16px;
+
+  &__image {
+    margin: 32px auto 0;
+    height: 134px;
+    width: 160px;
+  }
 
   &__text {
-    margin-top: $margin-card-margin-top;
+    margin-top: 40px;
     font-family: $font-style;
     font-weight: $font-weight-medium;
     line-height: $line-height-big;
-    width: $box-width;
-    height: 36px;
-    font-size: 12px;
+    font-size: $font-size-medium;
     color: $color-maintext;
   }
 
   &__code {
     margin-top: 4px;
-    height: 14px;
     color: $color-text-regular;
     font-family: $font-style;
+    line-height: $line-height-regular;
     font-weight: $font-weight-regular;
     font-size: $font-size-regular;
   }
 
   &__reviews {
-    margin-top: $margin-review-top;
-    height: 16px;
-    width: $box-width;
+    margin-top: 16px;
     font-family: $font-style;
     font-weight: $font-weight-regular;
-    display: $display;
+    display: flex;
     font-size: $font-size-regular;
     line-height: $line-height-regular;
     letter-spacing: 0%;
     color: $color-maintext;
-    justify-content: $justify-content;
+    justify-content: space-between;
   }
 
   &__reviews_review {
@@ -60,18 +57,13 @@
 
   &__pricebox {
     margin-top: 24px;
-    margin-right: 16px;
-    height: 18px;
-    width: $box-width;
-    justify-content: $justify-content;
-    display: $display;
+    justify-content: space-between;
+    display: flex;
 
     &-text {
-      height: 18px;
-      width: 31px;
       font-family: $font-style;
       font-weight: $font-weight-regular;
-      font-size: 12px;
+      font-size: $font-size-medium;
       letter-spacing: 0%;
       line-height: $line-height-big;
       vertical-align: bottom;
@@ -85,18 +77,15 @@
       line-height: $line-height-big;
       letter-spacing: 0%;
       text-align: right;
-      vertical-align: bottom;
-      margin-top: auto;
     }
   }
   &__button {
-    width: $box-width;
     height: 40px;
     opacity: 1;
-    display: $display;
+    display: flex;
     margin-top: 16px;
     border-radius: 5px;
-    background-color: $button-color;
+    background-color: $secondary-color;
     align-items: center;
     text-decoration: none;
     justify-content: center;
@@ -106,12 +95,12 @@
     line-height: $line-height-medium;
     letter-spacing: 0%;
     text-transform: uppercase;
-    color: $button-text-color;
+    color: $primary-color;
     box-sizing: border-box;
     &:hover {
-      background-color: $button-hover-background-color;
-      border: $button-hover-border;
-      color: $button-hover-text-color;
+      background-color: $primary-color;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
     }
   }
 }
