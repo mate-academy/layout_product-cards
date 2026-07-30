@@ -1,3 +1,154 @@
+@import './variables';
+
 body {
   margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  height: $card-height;
+  border: 1px solid #fff;
+  padding-top: 32px;
+
+  &__image {
+    box-sizing: border-box;
+    width: 160px;
+    height: 134px;
+    margin-left: 19px;
+    margin-bottom: 0;
+    background-image: url(images/imac.jpeg);
+    background-size: 160px 134px;
+  }
+
+  &__name {
+    box-sizing: border-box;
+    width: 166px;
+    height: 36px;
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-bottom: 0;
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $dark-color;
+  }
+
+  &__code {
+    box-sizing: border-box;
+    width: 98px;
+    height: 14px;
+    margin-top: 4px;
+    margin-left: 16px;
+    margin-bottom: 0;
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $gray-color;
+  }
+
+  &__rate {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    width: 166px;
+    height: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__rate-review {
+    box-sizing: border-box;
+    margin-left: auto;
+
+    font-family: $font-family;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $dark-color;
+  }
+
+  &__price {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    width: 166px;
+    height: 18px;
+    margin-top: 24px;
+    margin-left: 16px;
+    margin-bottom: 0;
+  }
+
+  &__price-label {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $gray-color;
+  }
+
+  &__price-value {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $dark-color;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 166px;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 16px;
+
+    border: 1px solid $blue-color;
+    border-radius: 5px;
+    background-color: $blue-color;
+
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $white-color;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
+    color: $blue-color;
+    background-color: $white-color;
+  }
+
+  .stars {
+    display: flex;
+    gap: 4px;
+
+    &__star {
+      width: 16px;
+      height: 16px;
+
+      background-image: url(images/star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__star--active {
+      background-image: url(images/star-active.svg);
+    }
+  }
 }
