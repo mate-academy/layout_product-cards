@@ -1,0 +1,128 @@
+@use '../utils/variables' as *;
+
+.card {
+   box-sizing: border-box;
+   width: 200px;
+   padding: 32px 16px 16px;
+   border-radius: 5px;
+   border: 1px solid $border-color;
+
+   display: flex;
+   flex-direction: column;
+
+  &__image {
+    background-image: url(../images/imac.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+  }
+
+  &__description {
+    height: 36px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $text-color;
+    letter-spacing: 0;
+    margin-top: 40px;
+  }
+
+  &__code {
+    color: $secondary-color;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    margin: 0 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $text-color;
+    margin: 0;
+
+    position: relative;
+    top: 1px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__price-text {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $secondary-color;
+    margin: 0;
+  }
+
+  &__price-value {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $text-color;
+    margin: 0;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 166px;
+    height: 40px;
+
+    margin: 0 auto;
+
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+
+    background-color: $accent-color;
+    color: $white-color;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    text-decoration: none;
+  }
+
+  &__buy:hover {
+    background-color: $white-color;
+    color: $accent-color;
+
+    text-decoration: underline;
+
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+  }
+}
