@@ -1,3 +1,24 @@
+@import './card';
+
 body {
-  margin: 0;
+  margin: 50px;
 }
+/* #region body */
+.stars {
+  display: flex;
+}
+
+.stars__star {
+  margin-right: 4px;
+  background-image: url(images/star.svg);
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url('./images/star-active.svg');
+}
+
+/* #endregion */
