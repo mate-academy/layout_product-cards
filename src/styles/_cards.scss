@@ -12,27 +12,27 @@
   flex-direction: column;
   align-items: center;
 
-
-
-  &__image{
+  &__image {
     margin-top: $image-margin-top;
     width: $image-width;
   }
 
-  &__title{
-    margin-top: $title-margin-top;
-    margin-left: $text-margin-sides;
-    margin-right: $text-margin-sides;
+  &__title {
+    margin: $title-margin-top $text-margin-sides $title-margin-bottom;
+
+    // margin-left: $text-margin-sides;
+    // margin-right: $text-margin-sides;
 
     font-size: $font-size-big;
     font-weight: $font-weight-medium;
     line-height: $text-line-height;
     letter-spacing: 0%;
-    margin-bottom: $title-margin-bottom;
+
+    // margin-bottom: $title-margin-bottom;
   }
 
-  &__id{
-    color:#616070;
+  &__id {
+    color: #616070;
     font-weight: $font-weight-regular;
     font-size: $font-size-small;
     margin-left: $text-margin-sides;
@@ -40,7 +40,7 @@
     line-height: $font-size-bigger;
     letter-spacing: 0%;
   }
-  &__rating{
+  &__rating {
     margin-top: $text-margin-sides;
     margin-bottom: $text-margin-sides;
     display: flex;
@@ -53,11 +53,11 @@
     font-size: $font-size-small;
     line-height: $font-size-bigger;
     letter-spacing: 0%;
-    &-text{
+    &-text {
       text-align: end;
     }
   }
-  &__price{
+  &__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,15 +68,14 @@
     font-size: $font-size-small;
     line-height: $font-size-bigger;
     letter-spacing: 0%;
-    &-word{
+    &-word {
       color: #616070;
-      font-family: Roboto;
       font-weight: $font-weight-regular;
       font-size: $font-size-big;
       line-height: $text-line-height;
       letter-spacing: 0%;
     }
-    &-tag{
+    &-tag {
       color: $price-tag-colour;
       font-weight: $font-weight-bold;
       font-size: $font-size-large;
@@ -92,7 +91,7 @@
     justify-content: center;
     align-items: center;
     background-color: $button-colour;
-    color: #FFFF;
+    color: #ffff;
     margin-left: $text-margin-sides;
     margin-right: $text-margin-sides;
     border: none;
@@ -107,13 +106,10 @@
     line-height: $font-size-large;
     letter-spacing: 0%;
     text-transform: uppercase;
-    &:hover{
+    &:hover {
       background-color: #fff;
       color: $button-colour;
       border: $button-colour solid 1px;
-      transition-duration: 0.3s;
     }
   }
-
-
 }
