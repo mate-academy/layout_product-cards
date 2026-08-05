@@ -1,4 +1,5 @@
 @import './variables';
+@import './stars';
 
 .card {
   width: $card-width;
@@ -8,31 +9,111 @@
   margin-left: $margin-left;
   margin-top: $margin-top;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
 
 
   &__image{
-    width: 160px;
-    justify-content: center;
+    margin-top: $image-margin-top;
+    width: $image-width;
   }
 
   &__title{
-    justify-content: center;
     margin-top: $title-margin-top;
-    margin-left: $title-margin-left;
+    margin-left: $text-margin-sides;
+    margin-right: $text-margin-sides;
 
     font-size: $font-size-big;
     font-weight: $font-weight-medium;
-    line-height: 18px;
+    line-height: $text-line-height;
     letter-spacing: 0%;
     margin-bottom: $title-margin-bottom;
   }
 
   &__id{
-    justify-content: center;
+    color:#616070;
     font-weight: $font-weight-regular;
     font-size: $font-size-small;
-    line-height: 14px;
+    margin-left: $text-margin-sides;
+    align-self: start;
+    line-height: $font-size-bigger;
     letter-spacing: 0%;
   }
+  &__rating{
+    margin-top: $text-margin-sides;
+    margin-bottom: $text-margin-sides;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding-left: $text-margin-sides;
+    padding-right: $text-margin-sides;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: $font-size-bigger;
+    letter-spacing: 0%;
+    &-text{
+      text-align: end;
+    }
+  }
+  &__price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding-left: $text-margin-sides;
+    padding-right: $text-margin-sides;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: $font-size-bigger;
+    letter-spacing: 0%;
+    &-word{
+      color: #616070;
+      font-family: Roboto;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-big;
+      line-height: $text-line-height;
+      letter-spacing: 0%;
+    }
+    &-tag{
+      color: $price-tag-colour;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-large;
+      line-height: $text-line-height;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $button-colour;
+    color: #FFFF;
+    margin-left: $text-margin-sides;
+    margin-right: $text-margin-sides;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: $text-margin-sides;
+    cursor: pointer;
+    width: 166px;
+    height: 40px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-bigger;
+    line-height: $font-size-large;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    &:hover{
+      background-color: #fff;
+      color: $button-colour;
+      border: $button-colour solid 1px;
+      transition-duration: 0.3s;
+    }
+  }
+
 
 }
