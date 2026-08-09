@@ -3,7 +3,7 @@
   box-sizing: border-box;
 
   &__image {
-    width: 160px;
+    max-width: 160px;
     height: 134px;
     padding-top: 32px;
   }
@@ -13,9 +13,11 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;
+    min-width: 160px;
 
     &--count {
       font-size: 10px;
+      color: #060b35;
     }
   }
 
@@ -37,9 +39,16 @@
 
   &__price {
     display: flex;
+    min-width: 160px;
     margin-top: 24px;
+    margin-bottom: 16px;
     justify-content: space-between;
     align-items: center;
+
+    &--numbers {
+      font-weight: 700;
+      font-size: 16px;
+    }
   }
 
   &__link {
