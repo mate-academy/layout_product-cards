@@ -1,0 +1,115 @@
+@import './variables';
+@import './stars';
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  border-radius: $border-radius;
+  border: $border;
+  margin-left: $margin-left;
+  margin-top: $margin-top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    margin-top: $image-margin-top;
+    width: $image-width;
+  }
+
+  &__title {
+    margin: $title-margin-top $text-margin-sides $title-margin-bottom;
+
+    // margin-left: $text-margin-sides;
+    // margin-right: $text-margin-sides;
+
+    font-size: $font-size-big;
+    font-weight: $font-weight-medium;
+    line-height: $text-line-height;
+    letter-spacing: 0%;
+
+    // margin-bottom: $title-margin-bottom;
+  }
+
+  &__id {
+    color: #616070;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    margin-left: $text-margin-sides;
+    align-self: start;
+    line-height: $font-size-bigger;
+    letter-spacing: 0%;
+  }
+  &__rating {
+    margin-top: $text-margin-sides;
+    margin-bottom: $text-margin-sides;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding-left: $text-margin-sides;
+    padding-right: $text-margin-sides;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: $font-size-bigger;
+    letter-spacing: 0%;
+    &-text {
+      text-align: end;
+    }
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding-left: $text-margin-sides;
+    padding-right: $text-margin-sides;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: $font-size-bigger;
+    letter-spacing: 0%;
+    &-word {
+      color: #616070;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-big;
+      line-height: $text-line-height;
+      letter-spacing: 0%;
+    }
+    &-tag {
+      color: $price-tag-colour;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-large;
+      line-height: $text-line-height;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $button-colour;
+    color: #ffff;
+    margin-left: $text-margin-sides;
+    margin-right: $text-margin-sides;
+    border: none;
+    border-radius: $border-radius;
+    text-decoration: none;
+    margin-top: $text-margin-sides;
+    cursor: pointer;
+    width: 166px;
+    height: 40px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-bigger;
+    line-height: $font-size-large;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #fff;
+      color: $button-colour;
+      border: $button-colour solid 1px;
+    }
+  }
+}
