@@ -1,27 +1,31 @@
 @use 'sass:color';
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   box-sizing: border-box;
   width: $card-width;
   padding: 16px;
   border: 1px solid $color-border;
   border-radius: 4px;
-  background-color: $color-bg;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   font-family: $font-family-main;
+
+  background-color: $color-bg;
 
   &__image {
     width: 160px;
     height: 160px;
-    object-fit: contain;
     margin-bottom: 16px;
+    object-fit: contain;
   }
 
   &__title {
-    margin: 0 0 8px;
-    font-size: 14px;
+    margin: 0 0 12px;
+
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: $color-text-main;
@@ -34,31 +38,34 @@
 
   &__price-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
   }
 
   &__price {
     font-size: 16px;
     font-weight: 700;
-    line-height: 20px;
     color: $color-text-main;
   }
 
   &__button {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     width: 60px;
     height: 32px;
-    background-color: $color-primary;
-    color: #fff;
+    border-radius: 4px;
+
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
+    color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    text-transform: uppercase;
+
+    background-color: $color-primary;
+
     transition: background-color 0.2s ease;
 
     &:hover {
