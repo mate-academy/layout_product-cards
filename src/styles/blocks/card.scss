@@ -2,10 +2,12 @@
   box-sizing: border-box;
   width: 200px;
   padding: 16px;
+  padding-top: 32px;
+  border: 1px solid #f3f3f3;
 
   &__picture {
-    background-image: url(../images/imac.jpeg);
-    background-size: cover;
+    display: block;
+
     height: 134px;
     width: 160px;
 
@@ -33,6 +35,7 @@
   &__rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     margin-bottom: 24px;
   }
@@ -40,6 +43,7 @@
   &__review-counter {
     font-size: 10px;
     line-height: 14px;
+    text-align: center;
     color: $main-text-color;
   }
 
@@ -76,12 +80,13 @@
     font-size: 14px;
     line-height: 40px;
     text-transform: uppercase;
-    color: #FFF;
+    color: #fff;
+
+    border: 1px solid $button-color;
 
     &:hover {
-      background-color: #FFF;
+      background-color: #fff;
       color: $button-color;
-      border: 1px solid $button-color;
     }
   }
 }
