@@ -1,3 +1,147 @@
-body {
+@import './variables';
+
+.page__body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px 19px 40px;
+  }
+
+  &__title {
+    width: $content-width;
+    height: 36px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin: 0 16px 4px;
+    color: #060b35;
+  }
+
+  &__code {
+    width: 98px;
+    height: 14px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    color: #616070;
+  }
+
+  &__rating {
+    margin: 0 16px;
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 17px;
+    width: $content-width;
+  }
+
+  &__stars {
+    width: 96px;
+    height: $content-height;
+  }
+
+  &__reviews {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 16px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+
+    &-price {
+      color: #616070;
+    }
+
+    &-cost {
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+    }
+  }
+
+  &__button {
+    margin: 16px;
+    width: $content-width;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #00acdc;
+    box-sizing: border-box;
+
+    &-text {
+      width: 27px;
+      height: $content-height;
+
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      color: #fff;
+    }
+
+    &:hover {
+      background: #fff;
+      border: 1px solid #00acdc;
+
+      .card__button-text {
+        color: #00acdc;
+      }
+    }
+  }
 }
