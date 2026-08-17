@@ -1,4 +1,115 @@
-@import './variables';
-@import './mixins';
-@import './index';
-@import './stars';
+$font: $font-family-main;
+
+body {
+  margin: 0;
+
+  @include font;
+}
+
+.card {
+  background-color: $color-card-bg;
+  width: $card-width;
+  height: 406px;
+  box-sizing: border-box;
+  padding: 32px 0 0;
+
+  &__image-wrapper {
+    overflow: hidden;
+
+    width: 160px;
+    height: 134px;
+    margin: 0 19px;
+
+    background-image: $path-card-bg-image;
+
+    background-size: cover;
+    background-position: center;
+    justify-self: center;
+  }
+
+  &__content {
+    margin: 40px 16px 16px;
+  }
+
+  &__title {
+    color: $color-text-main;
+
+    @include font(500);
+
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    color: $color-text-muted;
+
+    @include font(400);
+
+    margin: 4px 0 16px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    margin: 0 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews-count {
+    margin: 0;
+
+    @include font(400);
+
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    margin: 0 0 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-text {
+    color: $color-text-muted;
+
+    @include font(400);
+
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price-value {
+    @include font(700);
+
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__button {
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    color: $color-btn-text;
+    font-size: 14px;
+    line-height: 16px;
+
+    @include font(700);
+
+    background: $color-btn-bg;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
+
+  &__button:hover {
+    background: $color-btn-bg-hover;
+    color: $color-btn-text-hover;
+    border-color: $color-btn-border;
+  }
+}
