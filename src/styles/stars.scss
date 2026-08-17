@@ -1,0 +1,28 @@
+.stars {
+  display: flex;
+  margin: 0;
+
+  &__star {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+
+    background-image: $path-star;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  // Генерація всіх модифікаторів stars--1...stars--5 через SCSS цикл
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      .stars__star:nth-child(-n + #{$i}) {
+        background-image: $path-star-active;
+      }
+    }
+  }
+}
