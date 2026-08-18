@@ -1,0 +1,36 @@
+.stars {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 16px 0 24px;
+
+  &__icons {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 16px;
+    width: 16px;
+
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--1 &__icon:first-child,
+  &--2 &__icon:nth-child(-n + 2),
+  &--3 &__icon:nth-child(-n + 3),
+  &--4 &__icon:nth-child(-n + 4),
+  &--5 &__icon:nth-child(-n + 5) {
+    background-image: url(../images/star-active.svg);
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+    color: $main-text-color;
+  }
+}
