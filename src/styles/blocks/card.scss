@@ -1,0 +1,101 @@
+.card {
+  font-family: Roboto, sans-serif;
+  font-size: $default-font-size;
+  font-weight: $regular-font-weight;
+  letter-spacing: 0%;
+  line-height: 18px;
+
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  max-width: $card-width;
+  display: flex;
+  flex-direction: column;
+
+  &__product-image {
+    margin-top: 16px;
+    margin-bottom: 40px;
+
+    background-image: url('../images/imac.jpeg');
+    width: 160px;
+    height: 134px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-self: center;
+  }
+
+  &__product-name {
+    margin-bottom: 4px;
+
+    width: $elem-width;
+
+    color: $main-color;
+    font-weight: $medium-font-weight;
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+
+    color: $sub-color;
+    font-size: $small-font-size;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    margin-bottom: 24px;
+
+    @include flex-row-between;
+  }
+
+  &__reviews-number {
+    color: $main-color;
+    font-size: $small-font-size;
+    line-height: 14px;
+
+    align-self: flex-end;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+
+    @include flex-row-between;
+  }
+
+  &__price-label {
+    color: $sub-color;
+  }
+
+  &__price-value {
+    color: $main-color;
+    font-weight: $bold-font-weight;
+    font-size: $large-font-size;
+  }
+
+  &__buy-button {
+    display: flex;
+    width: $elem-width;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    color: #fff;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    text-decoration: none;
+    font-weight: $bold-font-weight;
+    font-size: $big-font-size;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $button-color;
+      background-color: #fff;
+    }
+  }
+}
