@@ -1,0 +1,83 @@
+@use './variables' as *;
+
+.card {
+  width: $card-width;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+
+  &__image {
+    max-width: $card-min-width;
+    height: 134px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    min-width: $card-min-width;
+
+    &-count {
+      font-size: 10px;
+      color: $card-color-primary;
+    }
+  }
+
+  &__content {
+    font-weight: 500;
+    color: $card-color-primary;
+    align-items: center;
+    width: 166px;
+    height: 36px;
+    margin-top: 40px;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+
+  &__code {
+    font-size: 10px;
+    width: 98px;
+    height: 14px;
+    color: $card-color-secondary;
+    margin-top: 4px;
+  }
+
+  &__price {
+    display: flex;
+    min-width: $card-min-width;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    align-items: center;
+    color: $card-color-secondary;
+
+    &-numbers {
+      font-weight: 700;
+      font-size: 16px;
+      color: $card-color-primary;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 166px;
+    height: $card-height;
+    border-radius: 5px;
+    background-color: $accent-color;
+
+    &--buy {
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $color-white;
+      font-weight: 700;
+      font-size: 14px;
+
+      &:hover {
+        color: $accent-color;
+        border: 1px solid $accent-color;
+        background-color: $color-white;
+      }
+    }
+  }
+}
