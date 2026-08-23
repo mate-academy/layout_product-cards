@@ -1,0 +1,117 @@
+@use 'variables.scss';
+
+.card {
+  max-width: $width;
+  min-height: $height;
+  border: 1px solid $grayElement;
+  border-radius: 5px;
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 32px auto 0;
+  }
+
+  &__text-block {
+    margin: 40px auto 0;
+    width: 100%;
+  }
+
+  &__heading {
+    width: 100%;
+    height: 36px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $mainColor;
+  }
+
+  &__desc {
+    width: 100%;
+    margin-top: 4px;
+    color: $secondColor;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align-last: left;
+  }
+
+  &__reviews {
+    margin: 16px auto 0;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 166px;
+  }
+
+  &__stars {
+    width: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  &__total-count {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $mainColor;
+  }
+
+  &__buy-info {
+    margin: 24px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 166px;
+    height: 18px;
+  }
+
+  &__text {
+    color: $secondColor;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $mainColor;
+  }
+
+  &__button {
+    margin: 16px auto;
+    width: 166px;
+  }
+
+  &__link {
+    background-color: $blueAccent;
+    border: 1px solid $blueAccent;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $blueAccent;
+      background-color: $whiteColor;
+    }
+  }
+}
