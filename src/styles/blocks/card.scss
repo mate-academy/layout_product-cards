@@ -1,0 +1,107 @@
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+
+    padding-top: 32px;
+    padding-inline: 19px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+
+    @include text-main-features;
+
+    padding-top: 40px;
+
+    @include padding-inline-standart;
+  }
+
+  &__product-code {
+    @include text-addit-features;
+    @include padding-inline-standart;
+
+    padding-top: 4px;
+
+    color: $text-color-addit;
+  }
+
+  &__rev-block {
+    @include padding-inline-standart;
+
+    padding-top: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    @include text-addit-features;
+  }
+
+  &__price-block {
+    @include padding-inline-standart;
+
+    padding-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 12px;
+    font-weight: 400;
+
+    @include text-main-features;
+
+    color: $text-color-addit;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+
+    @include text-main-features;
+  }
+
+  &__button-block {
+    @include padding-inline-standart;
+
+    padding-block: 16px;
+  }
+
+  &__button {
+    padding: 0;
+    width: 166px;
+    height: 40px;
+
+    color: $button-color-addit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+
+    background-color: $button-color-main;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+      box-sizing: border-box;
+      background-color: $button-color-addit;
+      border: 1px solid $button-color-main;
+
+      color: $button-color-main;
+    }
+  }
+}
