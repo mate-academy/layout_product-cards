@@ -1,0 +1,106 @@
+@use '../variables' as variables;
+
+.card {
+  width: variables.$card-width;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$color-background;
+  border: 1px solid variables.$color-border;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    margin: 0 0 4px;
+    color: variables.$color-text-main;
+  }
+
+  &__code {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    margin: 0 0 16px;
+    color: variables.$color-text-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 24px;
+  }
+
+  &__reviews {
+    align-self: flex-end;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: variables.$color-text-main;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 16px;
+
+    &-label {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: variables.$color-text-secondary;
+    }
+
+    &-value {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      color: variables.$color-text-main;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: variables.$color-primary;
+    border: 1px solid variables.$color-primary;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: variables.$color-background;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: variables.$color-background;
+      color: variables.$color-primary;
+    }
+  }
+}
