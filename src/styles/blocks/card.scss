@@ -1,0 +1,76 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.card {
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+  width: $card-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    width: $image-width;
+    height: $image-height;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    @include text(500, 12px, 18px, 0%, $main-accent);
+
+    margin-bottom: 4px;
+  }
+
+  &__productCode {
+    align-self: flex-start;
+
+    @include text(400, 10px, 14px, 0%, $secondary);
+
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__price :first-child {
+    display: flex;
+    align-items: flex-end;
+
+    @include text(400, 12px, 18px, 0%, $secondary);
+  }
+
+  &__price :last-child {
+    @include text(700, 16px, 18px, 0%, $main-accent);
+  }
+
+  &__link {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $blue-accent;
+    text-transform: uppercase;
+
+    @include text(700, 14px, 16px, 0%, #fff);
+
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+    border: 1px solid $blue-accent;
+    color: $blue-accent;
+  }
+}

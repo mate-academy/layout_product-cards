@@ -1,0 +1,34 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.card__stars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+
+  .stars {
+    display: flex;
+
+    @for $i from 0 through 5 {
+      &--#{$i} {
+        .stars__star:nth-child(-n + #{$i}) {
+        background-image: url(../images/star-active.svg);
+        }
+      }
+    }
+  }
+
+  .stars__star {
+    background: url(../images/star.svg) no-repeat center;
+    width: $star-width;
+    height: $star-height;
+    margin-right: 4px;
+  }
+
+  p:first-of-type {
+    @include text(400, 10px, 14px, 0%, $main-accent);
+  }
+
+  margin-bottom: 24px;
+}
