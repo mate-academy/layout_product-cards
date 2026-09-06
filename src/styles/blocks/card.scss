@@ -1,0 +1,117 @@
+.card {
+  width: $card-width;
+  min-height: $card-height;
+  box-sizing: border-box;
+  padding: 0 16px;
+  border: 1px solid $color-border;
+  background: $color-white;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 32px auto 0;
+    display: block;
+  }
+
+  &__title {
+    width: $card-content-width;
+    margin: 40px auto 0;
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $color-main-accent;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $color-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $card-content-width;
+    height: 16px;
+    margin-top: 16px;
+  }
+
+  &__reviews {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: $color-main-accent;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $card-content-width;
+    height: 18px;
+    margin-top: 24px;
+    &-label {
+      font-family: $font-main;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      color: $color-secondary;
+    }
+
+    &-value {
+      font-family: $font-main;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-align: right;
+      color: $color-main-accent;
+    }
+  }
+
+  &__buy-btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $card-content-width;
+    height: 40px;
+    margin: 16px auto 0;
+    background: $color-accent;
+    color: $color-white;
+    text-decoration: none;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      border-color 0.2s;
+
+    &:hover {
+      background: transparent;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+}
