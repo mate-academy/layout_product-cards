@@ -1,8 +1,6 @@
 .stars {
-  &__frame {
-    display: flex;
-    gap: 4px;
-  }
+  display: flex;
+  gap: 4px;
 
   &__star {
     background-image: url(../images/star.svg);
@@ -12,9 +10,12 @@
     height: 16px;
   }
 
-  :nth-child(-n + 4) {
+  &--0 &__star:nth-child(-n + 0),
+  &--1 &__star:nth-child(-n + 1),
+  &--2 &__star:nth-child(-n + 2),
+  &--3 &__star:nth-child(-n + 3),
+  &--4 &__star:nth-child(-n + 4),
+  &--5 &__star:nth-child(-n + 5) {
     background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
