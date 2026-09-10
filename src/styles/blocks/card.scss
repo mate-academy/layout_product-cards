@@ -1,12 +1,13 @@
-/* card.scss */
+@import '../variables';
+
 .card {
   box-sizing: border-box;
   width: 200px;
   padding: 32px 16px 16px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $c-light;
   border-radius: 5px;
 
-  background: #fff;
+  background: $c-white;
 
   &__image {
     display: block;
@@ -21,7 +22,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: #060b35;
+    color: $c-dark;
   }
 
   &__code {
@@ -36,7 +37,7 @@
   }
 
   &__reviews-text {
-    color: #060b35;
+    color: $c-dark;
   }
 
   &__price-wrapper {
@@ -55,7 +56,7 @@
     font-size: 16px;
     font-weight: bold;
     line-height: 18px;
-    color: #060b35;
+    color: $c-dark;
   }
 
   &__button {
@@ -65,22 +66,21 @@
 
     box-sizing: border-box;
     height: 40px;
-    border: 1px solid #00acdc;
+    border: 1px solid $c-primary;
     border-radius: 5px;
 
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
-    color: #fff;
-    text-decoration: none; /* Tira o sublinhado do link */
+    color: $c-white;
+    text-decoration: none;
     text-transform: uppercase;
 
-    background-color: #00acdc;
+    background-color: $c-primary;
 
-    /* Regra de Hover solicitada na atividade */
     &:hover {
-      color: #00acdc;
-      background-color: #fff;
+      color: $c-primary;
+      background-color: $c-white;
     }
   }
 }
