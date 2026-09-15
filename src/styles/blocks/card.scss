@@ -1,0 +1,117 @@
+@import 'variables';
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background: #fff;
+  padding: 32px 16px 16px;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+
+  &__name {
+    width: 166px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    margin-bottom: 4px;
+    color: $main-color;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    margin-bottom: 16px;
+    color: $secondary-color;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    height: 16px;
+  }
+
+  &__reviews {
+    align-content: end;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+    align-self: flex-end;
+    color: $main-color;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+    margin-bottom: 16px;
+
+    &--text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      color: $secondary-color;
+    }
+
+    &--number {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: bottom;
+      color: $main-color;
+    }
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 166px;
+    height: 40px;
+    opacity: 1;
+    border-radius: 5px;
+    background: $button-main;
+    border: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $button-secondary;
+
+    &:hover {
+      border: 1px solid $button-main;
+      background-color: $button-secondary;
+      color: $button-main;
+    }
+  }
+}
