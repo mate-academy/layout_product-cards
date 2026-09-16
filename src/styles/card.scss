@@ -1,0 +1,89 @@
+/* card.scss */
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    display: block;
+    margin: 0 auto 40px;
+
+    height: 134px;
+    width: 160px;
+
+    object-fit: cover;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
+  }
+
+  &__post-code {
+    margin-bottom: 16px;
+    color: #616070;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 4px;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-label {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #616070;
+  }
+
+  &__price-value {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #060b35;
+  }
+}
+
+.link {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00acdc;
+  height: 40px;
+  border-radius: 5px;
+
+  &__button {
+    color: #fff;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #00acdc;
+    color: #00acdc;
+  }
+
+  &:hover &__button {
+    color: #00acdc;
+  }
+}
