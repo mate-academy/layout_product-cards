@@ -1,0 +1,116 @@
+$color-white: #fff;
+$color-border-grey: #f3f3f3;
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $color-border-grey;
+  border-radius: 5px;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  font-family: $main-font;
+  padding: 32px 16px 16px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    text-align: left;
+    color: $color-text-main;
+    margin: 0 0 4px;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__code {
+    width: 100%;
+    height: 14px;
+    margin: 0 0 16px;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $color-text-muted;
+  }
+
+  &__rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 24px;
+    height: 16px;
+  }
+
+  &__reviews {
+    align-self: flex-end;
+    color: $color-text-main;
+    margin: 0;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: $color-text-muted;
+  }
+
+  &__price-value {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-text-main;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-button;
+    margin: 0;
+    transition: all 0.3s ease;
+    border: 1px solid $color-button;
+    border-radius: 6px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+}
+
+.card:hover .card__button {
+  background-color: transparent;
+  color: $color-button;
+  border-color: $color-button;
+}
