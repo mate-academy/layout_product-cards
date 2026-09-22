@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+}
+
+.body {
+  font-family: $font-body;
+  line-height: $line-height-body;
+  color: $main-text-color;
+}
+
+.card {
+  box-sizing: border-box;
+  width: $card-width;
+  border: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    background-image: url(../images/imac.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    width: $card-content-width;
+    font-weight: 500;
+    font-size: $font-size-title;
+    line-height: $line-height-title;
+    margin-bottom: 4px;
+  }
+
+  &__code {
+    font-weight: 400;
+    font-size: $smallest-font-size;
+    color: $secondary-color;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    align-self: start;
+  }
+
+  &__rating {
+    width: $card-content-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    font-weight: 400;
+    font-size: $smallest-font-size;
+  }
+
+  &__price {
+    width: $card-content-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-label {
+      font-weight: 400;
+      font-size: $font-size-title;
+      line-height: $line-height-title;
+      color: $secondary-color;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: $font-size-price;
+      line-height: $line-height-title;
+    }
+  }
+
+  &__button {
+    width: $card-content-width;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: $font-size-button;
+    line-height: $line-height-button;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $color-button;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button:hover {
+    color: $color-button;
+    background-color: $color-white;
+    border: 1px solid $color-button;
+    line-height: $line-height-button;
+  }
+}
