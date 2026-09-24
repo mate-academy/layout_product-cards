@@ -23,8 +23,9 @@
     margin-top: 32px;
     margin-bottom: 40px;
     background-image: url(../images/imac.jpeg);
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__title {
@@ -88,17 +89,19 @@
     color: $color-white;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: $color-button;
+
     margin-bottom: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: $color-button;
   }
 
   &__button:hover {
     color: $color-button;
     background-color: $color-white;
     border: 1px solid $color-button;
-    line-height: $line-height-button;
+    box-sizing: border-box;
   }
 }
