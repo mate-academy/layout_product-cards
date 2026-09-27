@@ -1,0 +1,88 @@
+@use 'sass:color';
+
+.card {
+ width: $card-width;
+  box-sizing: border-box;
+  padding: 33px 17px 17px;
+  background-color: $color-white;
+  box-shadow: inset 0 0 0 1px $color-border;
+  border-radius: 4px;
+  font-family: $font-family-base;
+
+  &__img {
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #060835;
+    margin: 0 0 4px;
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-code;
+    margin: 0 0 16px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 24px;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $color-text;
+    margin: 0 0 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $color-code;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    color: $color-code;
+  }
+
+  &__buy {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
+  color: #fff;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+    &:hover {
+    color: #00acdc;
+    background-color: #fff;
+    }
+  }
+}
