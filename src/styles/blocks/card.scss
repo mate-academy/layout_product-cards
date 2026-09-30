@@ -1,0 +1,100 @@
+@use '../utils/variables' as vars;
+
+.card {
+  box-sizing: border-box;
+  width: vars.$card-width;
+  padding: 32px 16px 16px;
+  border: 1px solid vars.$card-border-color;
+  border-radius: 5px;
+
+  font-family: Roboto, sans-serif;
+  color: vars.$main-color;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__code {
+    margin: 0 0 16px;
+
+    color: vars.$secondary-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    color: vars.$main-color;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    color: vars.$secondary-color;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    box-sizing: border-box;
+
+    border: 1px solid vars.$accent-color;
+    border-radius: 5px;
+
+    background-color: vars.$accent-color;
+    color: #fff;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    &:hover {
+      background-color: #fff;
+      color: vars.$accent-color;
+    }
+  }
+}
