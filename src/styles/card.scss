@@ -1,0 +1,129 @@
+@use './variables' as *;
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  width: $card-width;
+  padding: 32px 16px 16px;
+
+  border: 1px solid $color-border;
+  border-radius: 5px;
+
+  background-color: #fff;
+  font-family: $font-family;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+
+    color: $color-primary;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__product-code {
+    margin-bottom: 16px;
+
+    color: $color-secondary;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: $color-primary;
+
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__reviews {
+    color: $color-primary;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 18px;
+    margin-top: 24px;
+  }
+
+  &__price-label {
+    color: $color-secondary;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__price-amount {
+    color: $color-primary;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__buy {
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+
+    border: 1px solid $color-buy;
+    border-radius: 5px;
+
+    background-color: $color-buy;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease,
+      color 150ms ease;
+
+    &:hover {
+      border-color: $color-buy;
+      background-color: #fff;
+      color: $color-buy;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+}

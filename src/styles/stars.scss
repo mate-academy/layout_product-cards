@@ -1,0 +1,24 @@
+@use './variables' as *;
+
+.stars {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @for $rating from 0 through $stars-count {
+    &--#{$rating} {
+      .stars__star:nth-child(-n + #{$rating}) {
+        background-image: url('../images/star-active.svg');
+      }
+    }
+  }
+}
