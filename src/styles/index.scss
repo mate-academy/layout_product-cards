@@ -1,3 +1,110 @@
+@import './variables';
+@import './stars';
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  height: 408px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  background-color: $color-white;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    width: 166px;
+    font-family: Roboto, sans-serif;
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-title;
+  }
+
+  &__code {
+    margin: 0 0 16px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-code;
+    font-weight: 400;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 166px;
+    height: 16px;
+  }
+
+  &__reviews-count {
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-reviews;
+    width: 53px;
+    height: 16px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-price-label;
+  }
+
+  &__price-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $color-price-value;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    border: 1px solid $color-buy-background;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    background-color: $color-buy-background;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-buy-text;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+    }
+  }
 }
