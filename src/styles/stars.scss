@@ -5,21 +5,21 @@
   margin-bottom: 24px;
 
   &__star {
-    width: 98px;
+    width: 16px;
     height: 16px;
     margin-right: 4px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../images/star.svg);
   }
+}
 
-  &__stars--4:last-child {
-    margin-right: 0;
-  }
+.stars--4 .stars__star:nth-child(-n + 4) {
+  background-image: url(../images/star-active.svg);
+}
 
-  &__stars--4:nth-child(-n + 4) {
-    background-image: url(../images/star-active.svg);
-  }
+.stars--4 {
+  margin: 0;
 }
 
 .stars_review {
@@ -29,5 +29,5 @@
   font-size: 10px;
   text-align: right;
   vertical-align: bottom;
-  color: #060b35;
+  color: $color-dark-blue;
 }
