@@ -1,20 +1,18 @@
 .stars {
   display: flex;
-    justify-content: space-between;
-    align-items: left;
-    padding: 16px 16px 24px;
-
-  &--4 &__star:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
-      color: $stars-color;
-      gap: 4px;
-    }
+  justify-content: flex-start;
 
   &__star {
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     width: 16px;
     height: 16px;
+    gap: 4px;
+  }
+
+  &--4 &__star:nth-child(-n + 4) {
+    background-image: url(../images/star-active.svg);
   }
 }
