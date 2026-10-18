@@ -1,0 +1,103 @@
+@use '../variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-inline: $card-padding-inline;
+  width: $card-width;
+  border: 1px solid $color-border;
+  border-radius: $card-border-radius;
+
+  &__image {
+    background-size: contain;
+    width: $card-image-width;
+    height: $card-image-height;
+    margin: $card-image-margin;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-text;
+    margin: 0;
+  }
+
+  &__code {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-secondary;
+    padding: $spacing-xs 0 $spacing-md;
+    margin: 0;
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $card-reviews-margin-bottom;
+  }
+
+  &__reviews-count {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;
+    color: $color-text;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: $spacing-md;
+  }
+
+  &__price-label {
+    margin: 0;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-secondary;
+  }
+
+  &__price-value {
+    margin: 0;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-text;
+  }
+
+  &__buy {
+    box-sizing: border-box;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-accent;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    height: $card-button-height;
+    margin-bottom: $spacing-md;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+      background-color: #fff;
+      border: 1px solid $color-accent;
+    }
+  }
+}
