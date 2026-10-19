@@ -1,11 +1,13 @@
 @mixin star($active) {
   width: 16px;
   height: 16px;
+
   @if $active {
     background: url('../images/star-active.svg') no-repeat center;
   } @else {
     background: url('../images/star.svg') no-repeat center;
   }
+
   margin-right: 4px;
 }
 
@@ -13,8 +15,7 @@
   .card__review-stars_star:nth-child(#{$i}) {
     @if $i <= 4 {
       @include star($active: true);
-    }
-    @else {
+    } @else {
       @include star($active: false);
     }
   }
