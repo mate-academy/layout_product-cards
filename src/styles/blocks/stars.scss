@@ -1,26 +1,15 @@
-@mixin star($active) {
-  width: 16px;
-  height: 16px;
-
-  @if $active {
-    background: url('../images/star-active.svg') no-repeat center;
-  } @else {
+.stars {
+  display: flex;
+  &__star {
+    width: 16px;
+    height: 16px;
     background: url('../images/star.svg') no-repeat center;
-  }
-
-  margin-right: 4px;
-}
-
-@for $i from 1 through 5 {
-  .card__review-stars_star:nth-child(#{$i}) {
-    @if $i <= 4 {
-      @include star($active: true);
-    } @else {
-      @include star($active: false);
-    }
+    margin-right: 4px;
   }
 }
 
-.card__review-stars {
-      display: flex;
-    }
+@for $i from 0 through 5 {
+  .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
+    background: url('../images/star-active.svg') no-repeat center;
+  }
+}
