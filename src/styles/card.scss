@@ -1,6 +1,6 @@
-@import './variables.scss';
+@import './variables';
 
-.productCard {
+.card {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   }
 
   &__details {
-    margin: 0px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     font-family: $defaultFont;
@@ -36,7 +36,7 @@
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0%;
-    color: #060b35;
+    color: $mainTextColor;
     margin-bottom: 4px;
   }
 
@@ -48,29 +48,13 @@
     color: #616070;
   }
 
-  &__raitingContainer {
+  &__raiting {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: $defaultMarginBottom;
-  }
-
-  &__ratingStars {
-    display: flex;
-    align-self: flex-start;
-    :last-child {
-      background-image: url(../images/star.svg);
-    }
-  }
-
-  &__ratingStars--star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star-active.svg);
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &__reviews {
@@ -82,15 +66,16 @@
     line-height: 14px;
     letter-spacing: 0%;
     text-align: right;
-    color: #060b35;
+    color: $mainTextColor;
   }
 
   &__price {
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: inherit;
     margin-bottom: $defaultMarginBottom;
   }
 
@@ -101,8 +86,8 @@
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0%;
-    vertical-align: bottom;
     color: #616070;
+    width: fit-content;
   }
 
   &__price--value {
@@ -112,9 +97,8 @@
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0%;
-    text-align: right;
-    vertical-align: bottom;
-    color: #060b35;
+    color: $mainTextColor;
+    width: fit-content;
   }
 
   &__button {
@@ -129,14 +113,17 @@
     border-radius: 5px;
     background-color: $buttonColor;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     font-family: $defaultFont;
     font-weight: 700;
     font-size: 14px;
-    leading-trim: NONE;
     line-height: 16px;
     letter-spacing: 0%;
-    text-align: center;
+
+    &:hover {
+      background-color: #f3f3f3;
+      color: #00acdc;
+    }
   }
 }
