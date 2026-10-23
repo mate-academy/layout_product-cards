@@ -1,7 +1,7 @@
 @import './variables';
 
 .card {
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,17 +9,15 @@
   padding: $mainPaddings;
   width: $cardWidth;
   border: 1px solid #f3f3f3;
+  border-radius: 5px;
 
   &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     background-image: url('../images/imac.jpeg');
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    width: 160px;
+    background-repeat: no-repeat;
     height: 134px;
+    width: 160px;
     margin-bottom: 40px;
   }
 
@@ -28,7 +26,6 @@
     display: flex;
     flex-direction: column;
     font-family: $defaultFont;
-    margin-bottom: $defaultMarginBottom;
   }
 
   &__details--name {
@@ -46,15 +43,16 @@
     line-height: 14px;
     letter-spacing: 0%;
     color: #616070;
+    margin-bottom: $defaultMarginBottom;
   }
 
   &__raiting {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: last baseline;
     width: 100%;
-    margin-bottom: $defaultMarginBottom;
+    margin-bottom: 24px;
   }
 
   &__reviews {
@@ -70,16 +68,14 @@
   }
 
   &__price {
-    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: inherit;
+    width: 100%;
     margin-bottom: $defaultMarginBottom;
   }
 
-  &__price--price {
+  &__price_price {
     margin: 0;
     font-family: $defaultFont;
     font-weight: 400;
@@ -87,10 +83,9 @@
     line-height: 18px;
     letter-spacing: 0%;
     color: #616070;
-    width: fit-content;
   }
 
-  &__price--value {
+  &__price_value {
     margin: 0;
     font-family: $defaultFont;
     font-weight: 700;
@@ -98,18 +93,16 @@
     line-height: 18px;
     letter-spacing: 0%;
     color: $mainTextColor;
-    width: fit-content;
   }
 
   &__button {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 40px;
     opacity: 1;
-    top: 351px;
-    left: 17px;
     border-radius: 5px;
     background-color: $buttonColor;
     text-transform: uppercase;
@@ -121,9 +114,14 @@
     line-height: 16px;
     letter-spacing: 0%;
 
+    &--link {
+      text-decoration: none;
+    }
+
     &:hover {
-      background-color: #f3f3f3;
-      color: #00acdc;
+      background-color: #fff;
+      color: $buttonColor;
+      border: 1px solid $buttonColor;
     }
   }
 }
