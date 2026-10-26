@@ -1,0 +1,29 @@
+@use './variables' as vars;
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__star {
+    flex-shrink: 0;
+    width: vars.$star-size;
+    height: vars.$star-size;
+    margin-right: vars.$star-spacing;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $count from 1 through 5 {
+    &--#{$count} {
+      .stars__star:nth-child(-n + #{$count}) {
+        background-image: url(../images/star-active.svg);
+      }
+    }
+  }
+}
