@@ -1,0 +1,124 @@
+@import './variables';
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $mainPaddings;
+  width: $cardWidth;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    background-image: url('../images/imac.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 134px;
+    width: 160px;
+    margin-bottom: 40px;
+  }
+
+  &__details {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: $defaultFont;
+  }
+
+  &__name {
+    margin: 0 0 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $mainTextColor;
+  }
+
+  &__code {
+    margin: 0 0 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: #616070;
+    margin-bottom: $defaultMarginBottom;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__reviews {
+    display: flex;
+    margin: 0;
+    font-family: $defaultFont;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: $mainTextColor;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: $defaultMarginBottom;
+  }
+
+  &__cost {
+    margin: 0;
+    font-family: $defaultFont;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: #616070;
+  }
+
+  &__value {
+    margin: 0;
+    font-family: $defaultFont;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: $mainTextColor;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    opacity: 1;
+    border-radius: 5px;
+    background-color: $buttonColor;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-family: $defaultFont;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-decoration: none;
+    border: 1px solid $buttonColor;
+
+    &:hover {
+      background-color: #fff;
+      color: $buttonColor;
+    }
+  }
+}
