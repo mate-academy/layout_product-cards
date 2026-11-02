@@ -1,0 +1,117 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &__image-wrapper {
+    padding-top: 32px;
+    padding-inline: 19px;
+    height: 166px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 160px;
+    height: 134px;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__title {
+    @include content-padding-inline;
+
+    padding-top: 40px;
+
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $text-color;
+  }
+
+  &__code {
+    padding-top: 4px;
+
+    @include content-padding-inline;
+
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $subtext-color;
+  }
+
+  &__rating {
+    padding-top: 16px;
+
+    @include content-padding-inline;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__reviews {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    color: $text-color;
+  }
+
+  &__price-row {
+    padding-top: 24px;
+
+    @include content-padding-inline;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__price-label {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $subtext-color;
+  }
+
+  &__price {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: $text-color;
+  }
+
+  &__button {
+    display: block;
+    margin: 16px;
+
+    padding: 12px 0;
+    border-radius: 5px;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $button-text-color;
+  }
+  &__button:hover {
+    color: $button-color;
+    background-color: $button-text-color;
+  }
+}
