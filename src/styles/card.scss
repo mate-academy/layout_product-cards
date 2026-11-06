@@ -1,0 +1,108 @@
+@use './blocks/stars.scss';
+
+$color-main-accent: #060b35;
+$color-secondary: #616070;
+$color-blue-accent: #00acdc;
+$color-white: #fff;
+
+body {
+  margin: 0;
+}
+
+article {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 200px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
+  font-family: Roboto, sans-serif;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    display: block;
+    width: 160px;
+    height: 134px;
+    margin: 0 auto 40px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-main-accent;
+  }
+
+  &__product-code {
+    margin: 0 0 16px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-secondary;
+  }
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    &-count {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-main-accent;
+      margin: 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &-label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-secondary;
+      margin: 0;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060b35;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-white;
+    background-color: $color-blue-accent;
+    border-radius: 5px;
+
+    &:hover {
+      color: #00acdc;
+      background-color: $color-white;
+      border: 1px solid $color-blue-accent;
+    }
+  }
+}
