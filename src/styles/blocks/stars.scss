@@ -1,21 +1,23 @@
+@use '../utils/variables.scss';
+
 .stars {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 4px;
+  gap: variables.$star-gap;
 
   &__star {
-    height: 16px;
-    width: 16px;
-    background-image: url(../images/star.svg);
+    height: variables.$star-size;
+    width: variables.$star-size;
+    background-image: #{variables.$star-image};
     background-position: center;
     background-repeat: no-repeat;
   }
 
   @for $i from 1 through 5 {
     &--#{$i} .stars__star:nth-child(-n + #{$i}) {
-      background-image: url(../images/star-active.svg);
+      background-image: #{variables.$star-image-active};
     }
   }
 }
