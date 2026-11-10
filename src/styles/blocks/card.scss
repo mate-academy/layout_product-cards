@@ -1,0 +1,100 @@
+@use '../utils/variables';
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 32px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f3f3;
+
+  &__image {
+    display: block;
+    height: 134px;
+    width: 160px;
+    margin: 0 3px 40px;
+    background-image: url(../images/imac.jpeg);
+    background-size: 160px 134px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: inherit;
+    margin-bottom: 4px;
+    text-decoration: none;
+
+    &:hover {
+      color: variables.$accent-color;
+    }
+  }
+
+  &__code {
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    color: variables.$secondary-text-color;
+  }
+
+  &__stars {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-label {
+    font-size: 12px;
+    line-height: 18px;
+    color: variables.$secondary-text-color;
+  }
+
+  &__price-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__buy {
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px;
+
+    background-color: variables.$accent-color;
+    border: 1px solid variables.$accent-color;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      color: variables.$accent-color;
+    }
+  }
+}
