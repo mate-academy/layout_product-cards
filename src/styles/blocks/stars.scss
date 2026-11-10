@@ -10,13 +10,9 @@
     height: 16px;
   }
 
-  @for $i from 1 through 4 {
-    &__star--#{$i} {
+  @for $i from 1 through 5 {
+    &--#{$i} &__star:nth-child(-n + #{$i}) {
       background-image: url(../images/star-active.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 16px;
-      height: 16px;
     }
   }
 }
