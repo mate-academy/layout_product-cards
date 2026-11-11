@@ -1,83 +1,135 @@
-@use 'sass:color';
-@import 'variables';
-
 .card {
-  width: 200px;
+  width: $card-width;
+  min-width: $card-width;
+  height: $card-height;
   box-sizing: border-box;
-  border: 1px solid $color-border;
-  padding: 16px; // Можна збільшити до 16px зверху/знизу та з боків, або налаштувати окремо
-  font-family: $main-font, sans-serif;
-  background-color: #fff;
+  padding: 33px 16px 16px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // Розподіляє внутрішні блоки по всій висоті картки
+  background-color: $card-bg;
+  border: 1px solid $card-border-color;
+  border-radius: $card-radius;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &__image-wrapper {
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__image {
-    width: 100%;
-    height: 140px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    margin-bottom: 12px;
   }
 
   &__title {
-    font-size: 11px;
-    line-height: 14px;
-    color: #222;
-    margin: 0 0 6px;
-    font-weight: 400;
+    width: 166px;
+    height: 36px;
+    margin: 32px 0 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: #060b35;
   }
 
   &__code {
+    margin: 4px 0 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
     font-size: 10px;
-    color: #999;
-    margin-bottom: 20px; // Збільшуємо відступ, щоб розтягнути висоту
+    line-height: 14px;
+    color: $color-text-secondary;
   }
 
   &__rating {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 24px;
+    align-items: center;
+    margin-top: 16px;
   }
 
   &__reviews {
+    font-family: Roboto, sans-serif;
     font-size: 10px;
-    color: #666;
+    line-height: 14px;
+    font-weight: 400;
+    color: $color-text-dark;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
   }
 
   &__price-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px; // Збільшуємо відступ перед кнопкою
+    align-items: baseline;
   }
 
   &__price-label {
+    font-family: Roboto, sans-serif;
     font-size: 12px;
-    color: #666;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-text-secondary;
   }
 
   &__price {
+    margin-left: 4px;
+    font-family: Roboto, sans-serif;
     font-size: 16px;
-    font-weight: bold;
-    color: $color-text;
+    line-height: 18px;
+    font-weight: 700;
+    color: $color-text-dark;
   }
 
-  &__buy-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__button {
+    width: 166px;
     height: 40px;
-    background-color: #00acff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
+    margin-top: 16px;
+    box-sizing: border-box;
+    display: block;
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
     font-size: 14px;
-    transition: background-color 0.3s;
+    line-height: 16px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
 
     &:hover {
-      background-color: color.adjust(#00acff, $lightness: -10%);
+      background-color: #fff;
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  &[data-qa='hover'],
+  &:hover {
+    border-color: $color-accent;
+    box-shadow: 0 4px 12px rgba(0, 172, 220, 0.15);
+
+    .card__button {
+      background-color: #fff;
+      color: $color-accent;
+      border-color: $color-accent;
     }
   }
 }
