@@ -1,21 +1,19 @@
-.card {
+card {
   width: $card-width;
-  min-width: $card-width;
   height: $card-height;
   box-sizing: border-box;
-  padding: 33px 16px 16px;
+  padding: 24px 16px 16px;
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
   background-color: $card-bg;
   border: 1px solid $card-border-color;
   border-radius: $card-radius;
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
 
   &__image-wrapper {
-    width: 160px;
+    width: 134px;
     height: 134px;
     margin: 0 auto;
     display: flex;
@@ -32,43 +30,45 @@
   &__title {
     width: 166px;
     height: 36px;
-    margin: 32px 0 0;
-    font-family: Roboto, sans-serif;
+    margin: 16px 0 0;
+    font-family: $main-font;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0;
-    color: #060b35;
+    color: $color-text-dark;
+    overflow: hidden;
   }
 
   &__code {
+    width: 166px;
     margin: 4px 0 0;
-    font-family: Roboto, sans-serif;
+    font-family: $main-font;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: $color-text-secondary;
+    color: $color-secondary;
   }
 
   &__rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
   &__reviews {
-    font-family: Roboto, sans-serif;
+    font-family: $main-font;
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
-    color: $color-text-dark;
+    color: $color-text-muted;
   }
 
   &__footer {
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
+    margin-top: auto;
   }
 
   &__price-wrapper {
@@ -78,16 +78,16 @@
   }
 
   &__price-label {
-    font-family: Roboto, sans-serif;
+    font-family: $main-font;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-    color: $color-text-secondary;
+    color: $color-text-muted;
   }
 
   &__price {
     margin-left: 4px;
-    font-family: Roboto, sans-serif;
+    font-family: $main-font;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
@@ -97,17 +97,19 @@
   &__button {
     width: 166px;
     height: 40px;
-    margin-top: 16px;
     box-sizing: border-box;
     display: block;
-    background-color: $color-accent;
-    border: 1px solid $color-accent;
+    margin-top: 12px;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
     border-radius: 5px;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 700;
     color: #fff;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition:
       background-color 0.3s ease,
@@ -116,20 +118,8 @@
 
     &:hover {
       background-color: #fff;
-      color: $color-accent;
-      border-color: $color-accent;
-    }
-  }
-
-  &[data-qa='hover'],
-  &:hover {
-    border-color: $color-accent;
-    box-shadow: 0 4px 12px rgba(0, 172, 220, 0.15);
-
-    .card__button {
-      background-color: #fff;
-      color: $color-accent;
-      border-color: $color-accent;
+      color: $color-primary;
+      border-color: $color-primary;
     }
   }
 }
