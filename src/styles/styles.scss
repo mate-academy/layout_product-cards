@@ -7,7 +7,11 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: $color-card-bg;
+  color: $color-text-main;
   width: $card-width;
   height: auto;
   box-sizing: border-box;
@@ -17,16 +21,14 @@ body {
 
   &__image-wrapper {
     overflow: hidden;
-
     width: 160px;
     height: 134px;
     margin: 0 19px;
 
     background-image: $path-card-bg-image;
-
     background-size: cover;
     background-position: center;
-    justify-self: center;
+    scale: fit;
   }
 
   &__content {
@@ -61,7 +63,7 @@ body {
   }
 
   &__reviews-count {
-    margin: 0;
+    margin: 2px 0 0 17px;
 
     @include font(400);
 
@@ -69,7 +71,6 @@ body {
     line-height: 14px;
     letter-spacing: 0%;
     text-align: right;
-    vertical-align: bottom;
   }
 
   &__price {
