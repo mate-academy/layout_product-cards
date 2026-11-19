@@ -1,0 +1,106 @@
+@use './vars' as vars;
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid vars.$cardBorder;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 32px 16px 16px;
+
+  width: 200px;
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 134px;
+    object-fit: cover;
+  }
+
+  &__title {
+    color: vars.$dark;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 40px 0 4px;
+  }
+
+  &__code {
+    color: vars.$gray;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 8px;
+    margin: 16px 0 24px;
+  }
+  &__stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__stars-count {
+    color: vars.$dark;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &__price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 8px;
+    margin-bottom: 16px;
+  }
+  &__subprice {
+    color: vars.$gray;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__price {
+    color: vars.$dark;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__cta {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    min-height: 40px;
+    border: 1px solid vars.$lightBlue;
+    background-color: vars.$lightBlue;
+    color: #fff;
+    border-radius: 5px;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
+  }
+  &__cta[data-qa='hover']:hover,
+  &__cta:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: vars.$lightBlue;
+  }
+}
